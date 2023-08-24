@@ -47,3 +47,4 @@ elif escolhas == 2:
     monstros()
 else:
     print("Erro: Opção inválida.")
+

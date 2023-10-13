@@ -1,6 +1,6 @@
 a = gets.chomp
-#puts "ola #{a}"
-#.to_i f b s
+puts "ola #{a}"
+.to_i f b s
 case a
 when "ola"
   puts "1"

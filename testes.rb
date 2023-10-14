@@ -11,3 +11,10 @@ when "vindo"
 else
   puts "4"
 end
+module Opa
+  Class Sabado
+    Def oi
+    yield
+    end
+  end
+end

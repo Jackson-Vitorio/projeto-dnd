@@ -1,0 +1,923 @@
+{
+	"monster": [
+		{
+			"name": "Coral",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 4,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60,
+				"swim": 60
+			},
+			"str": 20,
+			"dex": 13,
+			"con": 15,
+			"int": 14,
+			"wis": 18,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+6",
+				"wis": "+8",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Sylvan"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Coral tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Coral faz dois ataques de casco e usa Tail Thump."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano de concussão."
+					]
+				},
+				{
+					"name": "Tail Thump",
+					"entries": [
+						"Coral abaixa o rabo, liberando uma explosão de força mágica em direção a uma criatura que ela pode ver a até 18 metros dela. O alvo deve fazer um teste de resistência de Destreza {@dc 16}. Em caso de falha no salvamento, o alvo sofre 22 ({@damage 4d10}) de dano de força e tem a condição {@condition prone}. Em um teste bem-sucedido, o alvo sofre apenas metade do dano. Se este dano reduzir o alvo a 0 pontos de vida, o alvo morre e seu corpo é reduzido a pó fino."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubbles of Whimsy (2/Day)",
+					"entries": [
+						"Coral produces a stream of magical bubbles from her horn. These bubbles float toward a creature Coral can see within 60 feet of herself. Roll a {@dice d6} to determine the bubbles' effect:",
+						{
+							"type": "list",
+							"items": [
+								{
+									"name": "1-2: Bolstering Treat",
+									"type": "item",
+									"entries": [
+										"The bubbles transform into {@dice 1d4} cookies that appear in the target's space. The target gains 11 ({@dice 2d8 + 2}) temporary hit points if it immediately uses its reaction to eat one of the cookies. Any leftover cookies are delicious but confer no benefits."
+									]
+								},
+								{
+									"name": "3-4: Sparkle Burst",
+									"type": "item",
+									"entries": [
+										"The bubbles transform into glitter that swirls around the target before bursting outward. Each creature within 5 feet of the target must succeed on a {@dc 16} Constitution saving throw or have the {@condition blinded} condition until the start of Coral's next turn."
+									]
+								},
+								{
+									"name": "5-6: Stink Bomb Shield",
+									"type": "item",
+									"entries": [
+										"The bubbles transform into a foul-smelling cloud of gas that surrounds and shields the target. The target has {@quickref Cover||3||half cover} until the gas disappears at the start of Coral's next turn."
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gift of Speech (1/Day)",
+					"entries": [
+						"Coral targets one Beast she can see within 10 feet of herself. The target gains the ability to understand and speak Common or Sylvan (Coral's choice) for 10 minutes."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dandylion",
+			"source": "MisMV1",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 22,
+			"dex": 19,
+			"con": 14,
+			"int": 16,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"str": "+9",
+				"cha": "+7"
+			},
+			"skill": {
+				"nature": "+9",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The dandylion casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell purify food and drink}"
+					],
+					"daily": {
+						"1": [
+							"{@spell speak with plants}"
+						],
+						"2e": [
+							"{@spell entangle}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O dente-de-leão tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O dente-de-leão tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do dente-de-leão estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dente-de-leão faz um ataque de mordida e um ataque de garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d6 + 6}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 4d6 + 6}) dano cortante. Se o dente-de-leão se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do acerto, o alvo deve ter sucesso em um teste de resistência de Força {@dc 17} ou ter a condição {@condition prone}. Se o alvo tiver a condição {@condition prone}, o dente-de-leão pode realizar um ataque de Mordida contra ele como uma ação bônus."
+					]
+				},
+				{
+					"name": "Rejuvenating Seedpods (2/Day)",
+					"entries": [
+						"O dente-de-leão libera uma explosão de vagens de sua cauda, preenchendo uma esfera de 3 metros de raio centrada em si mesmo. Cada criatura à escolha do dente-de-leão na esfera pode encerrar imediatamente uma das seguintes condições em si mesma (à escolha da criatura): {@condition blinded}, {@condition deafened}, {@condition paralyzed} ou {@condition poisoned}. Além disso, todo o solo na área da esfera é enriquecido, restaurando a vegetação murcha da área à plena saúde e fazendo com que todas as culturas na área produzam o dobro da colheita normal para o próximo ano."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Roar of Pride",
+					"entries": [
+						"When a creature within 60 feet of the dandylion hits it with an attack roll, the dandylion can unleash a furious roar. The creature that triggered this reaction must succeed on a {@dc 15} Wisdom saving throw or have the {@condition frightened} condition until the end of the dandylion's next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rain",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 8,
+			"size": [
+				"S"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d6 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 14,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"dex": "+3",
+				"con": "+5",
+				"wis": "+7"
+			},
+			"skill": {
+				"acrobatics": "+3",
+				"insight": "+7",
+				"stealth": "+3"
+			},
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison",
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fiery Wings",
+					"entries": [
+						"As asas da chuva são feitas de chamas e emitem luz brilhante até 4,5 metros e luz fraca por mais 4,5 metros adicionais. No início de cada turno de Rain, cada criatura à escolha de Rain a até 1,5 metro dela sofre 3 ({@damage 1d6}) de dano de fogo. Uma criatura que atinge Rain com um ataque corpo a corpo sofre 3 ({@damage 1d6}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Rain tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rain faz dois ataques de casco."
+					]
+				},
+				{
+					"name": "Hoof",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 2d4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Haloed Horn Burst {@recharge 5}",
+					"entries": [
+						"Rain usa seu chifre com halo para produzir um dos seguintes efeitos mágicos:"
+					]
+				},
+				{
+					"name": "Glitterstorm",
+					"entries": [
+						"A chuva emite um feixe de arco-íris em uma linha de 9 metros com 1,5 metro de largura. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 21 ({@damage 6d6}) de dano radiante em um teste de resistência falhado, ou metade do dano em um teste bem-sucedido; criaturas de tendência maligna têm desvantagem neste teste de resistência. Se o dano deste efeito reduzir uma criatura a 0 pontos de vida, a criatura morre e seu corpo se transforma em flores brilhantes."
+					]
+				},
+				{
+					"name": "Healing Rainbows",
+					"entries": [
+						"A chuva libera uma onda de luz multicolorida rejuvenescedora em um cone de 9 metros. Cada criatura à escolha de Rain naquela área recupera 18 ({@dice 4d8}) pontos de vida."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Rain takes either the Disengage or the Hide action."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scrapper",
+			"source": "MisMV1",
+			"page": 10,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "12d10 + 60"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 20,
+			"int": 3,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"lightning"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Electrified Chassis",
+					"entries": [
+						"Uma criatura que atingir o sucateiro com um ataque corpo a corpo enquanto estiver a 1,5 metro dele sofre 19 ({@damage 3d12}) de dano elétrico."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O scrapper faz dois ataques Spike Punch. Ele pode substituir um deles por um ataque Wires."
+					]
+				},
+				{
+					"name": "Spike Punch",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) de dano por concussão mais 5 ({@damage 1d10}) de dano perfurante."
+					]
+				},
+				{
+					"name": "Wires",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 6 metros, uma criatura grande ou menor. {@h}O alvo tem a condição {@condition grappled} (escapar {@dc 16}) e deve ter sucesso em um teste de resistência de Força {@dc 16} ou será puxado para um espaço desocupado a 1,5 metro do sucateiro e sofrerá 19 ({@damage 3d12}) de dano elétrico. O scrapper pode ter apenas uma criatura {@condition grappled} desta forma por vez."
+					]
+				},
+				{
+					"name": "Eye Beam {@recharge 5}",
+					"entries": [
+						"O raspador dispara um raio mágico de seu olho estendido em uma criatura que ele possa ver a até 36 metros de si mesmo. O alvo deve realizar um teste de resistência de Destreza {@dc 16}, sofrendo 44 ({@damage 8d10}) de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Seth the Shapeshifting Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 16,
+			"dex": 25,
+			"con": 19,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"str": "+7",
+				"dex": "+11",
+				"con": "+8"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"grappled",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Seth pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"Seth tem a condição {@condition invisible} enquanto está totalmente imerso em água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Seth faz um ataque de mordida e dois ataques de garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}10 ({@damage 1d6 + 7}) de dano perfurante mais 9 ({@damage 2d8}) de dano de frio."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d6 + 7}) dano cortante."
+					]
+				},
+				{
+					"name": "Riptide Breath {@recharge 5}",
+					"entries": [
+						"Seth exala uma torrente de água gelada em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 16}. Se falhar na resistência, a criatura sofre 36 ({@damage 8d8}) de dano de frio e tem a condição {@condition incapacitated} até o final do próximo turno. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Seth magically transforms into a Small Humanoid or a Beast that is Tiny or Small, while retaining his game statistics (other than his size). This transformation ends if Seth is reduced to 0 hit points or uses another bonus action to end it."
+					]
+				},
+				{
+					"name": "Superspeed (2/Day)",
+					"entries": [
+						"Seth's speed is doubled for as long as he maintains {@status concentration} (as if {@status concentration||concentrating} on a spell). While his speed is increased in this way, all attack rolls against him are made with disadvantage, and he becomes partially incorporeal, allowing him to move through creatures and objects as if they were difficult terrain. Seth takes 5 ({@damage 1d10}) force damage if he ends his turn inside an object."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sheldon the Blueberry Dragon",
+			"isNamedCreature": true,
+			"source": "MisMV1",
+			"page": 14,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"con": "+7",
+				"int": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+7",
+				"performance": "+6"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Sheldon casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Space Dweller",
+					"entries": [
+						"Sheldon pode respirar normalmente no vácuo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sheldon faz dois ataques de mordida, dois ataques de arremesso de mirtilo ou um de cada."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante mais 4 ({@damage 1d8}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Blueberry Fling",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance de 9 metros, uma criatura. {@h}11 ({@damage 2d6 + 4}) dano de mirtilo."
+					]
+				},
+				{
+					"name": "Jetstream Breath {@recharge 5}",
+					"entries": [
+						"Sheldon exala uma linha de vento mágico com 18 metros de comprimento e 1,5 metro de largura. Cada criatura naquela área deve realizar um teste de resistência de Força {@dc 15}. Se falhar no salvamento, a criatura sofre 21 ({@damage 6d6}) de dano de força, é empurrada a 4,5 metros de distância de Sheldon e tem a condição {@condition prone}. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Wind Dash (2/Day)",
+					"entries": [
+						"Sheldon summons a powerful gust of wind and flies up to his speed. This movement doesn't provoke opportunity attacks. At the end of this movement, each creature within 5 feet of Sheldon must succeed on a {@dc 15} Strength saving throw or have the {@condition prone} condition, as the wind bursts around Sheldon."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

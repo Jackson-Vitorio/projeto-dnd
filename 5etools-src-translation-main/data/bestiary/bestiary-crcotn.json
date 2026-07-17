@@ -1,0 +1,6961 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "CRCotN",
+				"EGW": "CRCotN"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Aboleth Spawn",
+			"source": "CRCotN",
+			"page": 135,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 18,
+			"int": 7,
+			"wis": 12,
+			"cha": 9,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Deep Speech",
+				"telepathy 60 ft."
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Abolethic Vessel",
+					"entries": [
+						"A cria deve obedecer ao seu mestre aboleth."
+					]
+				},
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A semente pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Water Dependency",
+					"entries": [
+						"O spawn sofre 6 ({@damage 1d12}) de dano ácido a cada 10 minutos sem ser imerso em água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O spawn faz um ataque de lança, dois ataques de tentáculo e um ataque de chicote psíquico."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante ou 8 ({@damage 1d8 + 4}) de dano perfurante quando usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, uma criatura. {@h}O alvo é {@condition grappled} (escape {@dc 14}) e sofre 9 ({@damage 2d8}) de dano psíquico no início de cada um de seus turnos até o agarrão terminar. A desova tem quatro tentáculos, cada um dos quais pode agarrar uma criatura."
+					]
+				},
+				{
+					"name": "Psychic Lash",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 36 metros, uma criatura. {@h}18 ({@damage 4d8}) de dano psíquico."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"C",
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Agathe Silverspoon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 21,
+			"_copy": {
+				"name": "Orc",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the orc",
+						"with": "Agathe",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aloysia Telfan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 61,
+			"_copy": {
+				"name": "Occult Initiate",
+				"source": "CRCotN",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the initiate",
+						"with": "Aloysia",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf",
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian Aboleth",
+			"source": "CRCotN",
+			"page": 195,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d10 + 36"
+			},
+			"speed": {
+				"walk": 10,
+				"swim": 30
+			},
+			"str": 21,
+			"dex": 9,
+			"con": 15,
+			"int": 18,
+			"wis": 18,
+			"cha": 18,
+			"save": {
+				"con": "+6",
+				"int": "+8",
+				"wis": "+8"
+			},
+			"skill": {
+				"history": "+12",
+				"perception": "+12"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 22,
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O aboleth pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Mucous Cloud",
+					"entries": [
+						"Enquanto está debaixo d'água, o aboleth é cercado por uma nuvem de muco pegajoso. Uma criatura que tocar o aboleth ou acertá-lo com um ataque corpo a corpo enquanto estiver a 1,5 metro dele deve ter sucesso em um teste de resistência de Força {@dc 14} ou será {@condition restrained} até o final do próximo turno do aboleth."
+					]
+				},
+				{
+					"name": "Probing Telepathy",
+					"entries": [
+						"Se uma criatura que o aboleth pode ver se comunicar telepaticamente com o aboleth, o aboleth aprende os maiores desejos da criatura."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O aboleth faz dois ataques de Tentáculo."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 3 metros, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano de concussão mais 3 ({@damage 1d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 10 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) dano de concussão."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Enslave {@recharge 4}",
+					"entries": [
+						"The aboleth targets one creature it can see within 30 feet of itself. The target must succeed on a {@dc 14} Wisdom saving throw or be magically {@condition charmed} by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The {@condition charmed} target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.",
+						"The {@condition charmed} target can repeat the saving throw whenever it takes damage, ending the effect on itself on a success. No more than once every 24 hours, the target can repeat the saving throw when it is at least 1 mile away from the aboleth."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail Swipe",
+					"entries": [
+						"The aboleth makes one Tail attack."
+					]
+				},
+				{
+					"name": "Psychic Drain (Costs 2 Actions)",
+					"entries": [
+						"One creature {@condition charmed} by the aboleth takes 10 ({@damage 3d6}) psychic damage, and the aboleth regains hit points equal to the damage dealt."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian the Absolved",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 182,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 161,
+				"formula": "19d8 + 76"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 18,
+			"int": 13,
+			"wis": 14,
+			"cha": 19,
+			"save": {
+				"str": "+9",
+				"con": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"athletics": "+9",
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Alyxian casts one of the following spells, requiring no material components and using Charisma as the spellcasting modifier (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell lesser restoration}",
+							"{@spell remove curse}",
+							"{@spell water breathing}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Divinely Blessed",
+					"entries": [
+						"Alyxian não pode ser {@status surprised} e não pode ser alterado para outra forma contra sua vontade."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Alyxian falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Alyxian faz dois ataques de lança."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante ou 8 ({@damage 1d8 + 4}) de dano perfurante quando usado com as duas mãos para fazer um ataque corpo a corpo, mais 9 ({@damage 2d8}) de dano radiante."
+					]
+				},
+				{
+					"name": "Force Wave (1/Day)",
+					"entries": [
+						"Alyxian atinge o chão, criando uma explosão de energia que se espalha. Cada criatura que ele escolher dentro de uma esfera de 9 metros de raio centrada em si mesmo deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou sofrerá 35 ({@damage 10d6}) de dano de força e será derrubado {@condition prone}. Uma criatura bem-sucedida no teste de resistência sofre metade do dano e não é derrubada {@condition prone}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Alyxian adds 3 to his AC against one attack roll that would hit him. To do so, Alyxian must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Arch Heart's Strike",
+					"entries": [
+						"Alyxian makes one Spear attack, and all damage from this attack is radiant."
+					]
+				},
+				{
+					"name": "Change Bringer's Dance",
+					"entries": [
+						"Alyxian moves up to his speed. This movement doesn't provoke opportunity attacks."
+					]
+				},
+				{
+					"name": "Moon Weaver's Veil (Costs 2 Actions)",
+					"entries": [
+						"Alyxian becomes {@condition invisible} until the end of his next turn. Any equipment he is wearing or carrying becomes {@condition invisible} with him."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Alyxian the Absolved",
+				"source": "CRCotN"
+			},
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian the Callous",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 179,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item half plate armor|PHB|half plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "15d10 + 75"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 90
+			},
+			"str": 23,
+			"dex": 18,
+			"con": 21,
+			"int": 15,
+			"wis": 16,
+			"cha": 20,
+			"save": {
+				"str": "+10",
+				"con": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"restrained",
+				"stunned"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish",
+				"telepathy 120 ft."
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Apotheonic Rejuvenation",
+					"entries": [
+						"Quando Alyxian, o Insensível, chega a 0 pontos de vida, seu corpo morre e perde as asas, e ele se levanta em sua terceira forma, Alyxian, o Despossuído. Sua contagem de iniciativa não muda."
+					]
+				},
+				{
+					"name": "Divinely Blessed",
+					"entries": [
+						"Alyxian não pode ser {@status surprised} e não pode ser alterado para outra forma contra sua vontade."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Alyxian falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Alyxian faz dois ataques de Lança Radiante. Ele pode substituir um desses ataques por Blinding Teleport."
+					]
+				},
+				{
+					"name": "Radiant Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 10} para acertar, alcance 5 pés ou alcance 120 pés, um alvo. {@h}15 ({@damage 2d8 + 6}) dano radiante."
+					]
+				},
+				{
+					"name": "Blinding Teleport",
+					"entries": [
+						"Alyxian se teletransporta, junto com qualquer equipamento que esteja usando ou carregando, para um espaço desocupado que ele possa ver a até 36 metros de si mesmo. Cada criatura a até 1,5 metro de seu novo local deve ser bem sucedida em um teste de resistência de Constituição {@dc 17} ou será {@condition blinded} até o final de seu próximo turno."
+					]
+				},
+				{
+					"name": "Heavenly Destruction (1/Day)",
+					"entries": [
+						"Alyxian libera energia divina em um cone de 18 metros. Cada criatura de sua escolha naquela área deve realizar um teste de resistência de Constituição {@dc 17}. Se falhar no teste de resistência, a criatura sofre 31 ({@damage 7d8}) de dano radiante e é derrubada {@condition prone}. Em um teste bem sucedido, uma criatura sofre metade do dano e não é derrubada {@condition prone}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Alyxian makes one Radiant Spear attack."
+					]
+				},
+				{
+					"name": "Celestial Chains",
+					"entries": [
+						"Alyxian targets one creature he can see within 120 feet of himself. The target must succeed on a {@dc 17} Strength saving throw or be {@condition restrained} by magical chains for 1 minute. While {@condition restrained} in this way, the target can't leave the space by any means. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				},
+				{
+					"name": "Flare (Costs 2 Actions)",
+					"entries": [
+						"Alyxian targets one creature he can see within 30 feet of himself. Light flares around the target, dealing 17 ({@damage 5d6}) radiant damage to it and creatures within 10 feet of it."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Alyxian the Callous",
+				"source": "CRCotN"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E",
+				"TP"
+			],
+			"damageTags": [
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian the Dispossessed",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 180,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 153,
+				"formula": "18d8 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 18,
+			"int": 13,
+			"wis": 14,
+			"cha": 20,
+			"save": {
+				"str": "+9",
+				"con": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"insight": "+7",
+				"perception": "+7",
+				"persuasion": "+10"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"stunned"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish",
+				"telepathy 120 ft."
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Divinely Blessed",
+					"entries": [
+						"Alyxian não pode ser {@status surprised} e não pode ser alterado para outra forma contra sua vontade."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Alyxian falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Alyxian carrega uma adaga mágica que ele usa para fazer ataques com a Adaga Stoneheart. Nas mãos de outras criaturas além de Alyxian, a adaga não é mágica e não possui propriedades especiais."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Alyxian faz dois ataques de lança."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante ou 8 ({@damage 1d8 + 4}) de dano perfurante quando usado com as duas mãos para fazer um ataque corpo a corpo, mais 9 ({@damage 2d8}) de dano radiante."
+					]
+				},
+				{
+					"name": "Stoneheart Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}11 ({@damage 3d4 + 4}) dano de força, e se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou se tornar {@condition petrified} quando a adaga se alojar no corpo do alvo. Enquanto a adaga estiver alojada no alvo, a magia não pode encerrar a condição {@condition petrified} nela e Alyxian não pode fazer ataques com a Adaga Stoneheart. Uma criatura ao alcance do alvo {@condition petrified} pode usar uma ação para tentar remover a adaga, fazendo isso com um teste de Força {@dc 17} bem-sucedido."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Summon Dagger",
+					"entries": [
+						"Alyxian's Stoneheart Dagger teleports into his free hand, provided he has one."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Alyxian adds 3 to his AC against one attack roll that would hit him. To do so, Alyxian must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Alyxian makes one Spear or Stoneheart Dagger attack."
+					]
+				},
+				{
+					"name": "Warrior's Stride",
+					"entries": [
+						"Alyxian moves up to his speed. This movement doesn't provoke opportunity attacks."
+					]
+				},
+				{
+					"name": "Ruidium Shard (Costs 2 Actions)",
+					"entries": [
+						"A gem-sized shard of ruidium appears at a point Alyxian can see within 120 feet of himself and explodes. Each creature, other than Alyxian, in a 10-foot-radius sphere centered on that point must succeed on a {@dc 18} Charisma saving throw or gain 1 level of {@condition exhaustion}. If a creature isn't suffering from ruidium corruption, it becomes corrupted when it fails the saving throw."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Alyxian the Dispossessed",
+				"source": "CRCotN"
+			},
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"exhaustion",
+				"petrified"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian the Hunter",
+			"source": "CRCotN",
+			"page": 160,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 178,
+				"formula": "17d10 + 85"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 22,
+			"dex": 9,
+			"con": 20,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"O golem é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O golem tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas do golem são mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O golem faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Ruidium Dart",
+					"entries": [
+						"O golem pode conjurar um dardo mágico feito de ruídio e lançá-lo em outra criatura que ele possa ver a até 36 metros de si mesmo. O dardo atinge o alvo com precisão e desaparece com o contato. O alvo deve fazer um teste de resistência de {@dc 17} Carisma. Se falhar no teste de resistência, o alvo sofre 24 ({@damage 7d6}) de dano psíquico e ganha 1 nível de {@condition exhaustion}. Além disso, se o alvo ainda não estiver sofrendo de corrupção de ruídio, ele será corrompido quando falhar no teste de resistência. Em um teste de resistência bem-sucedido, o alvo sofre metade do dano e não sofre outros efeitos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}19 ({@damage 3d8 + 6}) dano de concussão."
+					]
+				},
+				{
+					"name": "Slow {@recharge 5}",
+					"entries": [
+						"O golem tem como alvo uma ou mais criaturas que ele possa ver a até 3 metros dele. Cada alvo deve fazer um teste de resistência de {@dc 17} Sabedoria contra esta magia. Se falhar, o alvo não pode usar reações, sua velocidade é reduzida à metade e ele não pode realizar mais de um ataque por turno. Além disso, o alvo pode realizar uma ação ou uma ação bônus no seu turno, não ambas. Esses efeitos duram 1 minuto. Um alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alyxian the Tormented",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 178,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "12d12 + 72"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 21,
+			"dex": 18,
+			"con": 22,
+			"int": 15,
+			"wis": 16,
+			"cha": 20,
+			"save": {
+				"str": "+9",
+				"con": "+10",
+				"wis": "+7"
+			},
+			"skill": {
+				"deception": "+9",
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"stunned"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish",
+				"telepathy 120 ft."
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Apotheonic Rejuvenation",
+					"entries": [
+						"Quando Alyxian cai para 0 pontos de vida, seu corpo morre e se abre como um casulo. Alyxian emerge instantaneamente do casulo em sua segunda forma, Alyxian the Callous, no espaço onde sua forma anterior morreu. Sua contagem de iniciativa não muda."
+					]
+				},
+				{
+					"name": "Divinely Blessed",
+					"entries": [
+						"Alyxian não pode ser {@status surprised} e não pode ser alterado para outra forma contra sua vontade."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Alyxian falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Alyxian faz dois ataques de Mão Agarrada."
+					]
+				},
+				{
+					"name": "Grasping Hand",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}15 ({@damage 3d6 + 5}) dano de força, e se o alvo for uma criatura Média ou menor, é {@condition grappled} (escape {@dc 15}). Alyxian tem seis mãos, cada uma das quais pode agarrar um alvo."
+					]
+				},
+				{
+					"name": "Void Eyes {@recharge 5}",
+					"entries": [
+						"Alyxian tem como alvo até duas criaturas que ele possa ver a até 36 metros de si mesmo. Cada alvo deve realizar um teste de resistência de Constituição {@dc 17}, sofrendo 28 ({@damage 8d6}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Alyxian makes one Grasping Hand attack."
+					]
+				},
+				{
+					"name": "Weapons of Yore (Costs 2 Actions)",
+					"entries": [
+						"Ancient weapons embedded in Alyxian's hide detach from Alyxian and fly about in a 10-foot-radius sphere centered on a point Alyxian can see within 60 feet of himself. A creature takes 18 ({@damage 4d8}) slashing damage when it enters that area for the first time on a turn or starts its turn there. The effect lasts until the end of Alyxian's next turn, when the weapons return to Alyxian and embed themselves in his hide once again (causing him no harm)."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Alyxian the Tormented",
+				"source": "CRCotN"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Glass Statue",
+			"source": "CRCotN",
+			"page": 109,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d10 + 6"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 15,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but can't speak it"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Keen Sight and Smell",
+					"entries": [
+						"A estátua tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem da visão ou do olfato."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"A estátua tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados da estátua estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A estátua faz dois ataques: um com o bico e outro com as garras."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) cortando dano."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Aradrine the Owl",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 82,
+			"_copy": {
+				"name": "Occult Silvertongue",
+				"source": "CRCotN",
+				"_templates": [
+					{
+						"name": "Goliath",
+						"source": "VGM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the silvertongue",
+						"with": "Aradrine",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goliath",
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashann",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 115,
+			"_copy": {
+				"name": "Occult Initiate",
+				"source": "CRCotN",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the initiate",
+						"with": "Ashann",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome",
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ayo Jabe (Tier 1)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"ranger",
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 12,
+			"cha": 12,
+			"save": {
+				"str": "+4",
+				"dex": "+4"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+3",
+				"survival": "+3"
+			},
+			"passive": 13,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ayo casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 11}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell animal friendship}",
+							"{@spell goodberry}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Ayo pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ayo faz dois ataques de Arpão ou Arco Longo."
+					]
+				},
+				{
+					"name": "Harpoon",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 150/600 pés, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ayo Jabe (Tier 2)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"ranger",
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 97,
+				"formula": "15d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"str": "+5",
+				"dex": "+6"
+			},
+			"skill": {
+				"athletics": "+5",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ayo casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell animal friendship}",
+							"{@spell goodberry}",
+							"{@spell pass without trace}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Ayo pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ayo faz três ataques de Arpão ou Arco Longo."
+					]
+				},
+				{
+					"name": "Harpoon",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 150/600 pés, um alvo. {@h}12 ({@damage 2d8 + 3}) dano perfurante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Reposition",
+					"entries": [
+						"Ayo issues orders to one ally she can see within 30 feet of herself. If the target can see or hear Ayo, it can spend its reaction to move up to its speed. This movement doesn't provoke opportunity attacks."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Ayo Jabe (Tier 3)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 192,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"ranger",
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 20,
+			"con": 16,
+			"int": 10,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"str": "+6",
+				"dex": "+8"
+			},
+			"skill": {
+				"athletics": "+6",
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"resist": [
+				"acid"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ayo casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell animal friendship}",
+							"{@spell freedom of movement}",
+							"{@spell goodberry}",
+							"{@spell pass without trace}",
+							"{@spell protection from energy}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Ayo pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Ayo empunha um arpão de ruídio (ver apêndice B). Se Ayo obtiver 1 em uma jogada de ataque feita com o arpão, ela deve ter sucesso em um teste de resistência de Carisma {@dc 20} ou ganhar 1 nível de {@condition exhaustion}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ayo faz três ataques de Arpão ou Arco Longo."
+					]
+				},
+				{
+					"name": "Ruidium Harpoon",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d8 + 3}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 8} para acertar, alcance 150/600 pés, um alvo. {@h}18 ({@damage 3d8 + 5}) dano perfurante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Reposition",
+					"entries": [
+						"Ayo issues orders to one ally she can see within 30 feet of herself. If the target can see or hear Ayo, it can spend its reaction to move up to its speed. This movement doesn't provoke opportunity attacks."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Celeste",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 150,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ghost",
+						"with": "Celeste",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corrupted Giant Shark",
+			"source": "CRCotN",
+			"page": 196,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 126,
+				"formula": "11d12 + 55"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 50
+			},
+			"str": 23,
+			"dex": 11,
+			"con": 21,
+			"int": 1,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 14,
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Psychic Maelstrom",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 4,5 metros do tubarão deve ser bem sucedida em um teste de resistência de {@dc 17} Sabedoria ou sofrerá 11 ({@damage 2d10}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O tubarão recupera 10 pontos de vida no início do seu turno. Se o tubarão sofrer dano radiante ou sofrer um acerto crítico, esta característica não funciona no início do próximo turno. O tubarão morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O tubarão só consegue respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar (com vantagem se o alvo for uma criatura sem pontos de vida), alcance 1,5 m, um alvo. {@h}22 ({@damage 3d10 + 6}) dano perfurante, e se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Carisma {@dc 17} ou ganhar 1 nível de {@condition exhaustion}."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration",
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dancing Flame",
+			"source": "CRCotN",
+			"page": 68,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 8,
+			"dex": 17,
+			"con": 13,
+			"int": 15,
+			"wis": 12,
+			"cha": 20,
+			"skill": {
+				"deception": "+9",
+				"insight": "+5",
+				"perception": "+5",
+				"persuasion": "+9",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				"poison",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal",
+				"telepathy 60 ft."
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Telepathic Bond",
+					"entries": [
+						"A chama ignora a restrição de alcance de sua telepatia ao se comunicar com uma criatura que possui {@condition charmed}. Os dois nem precisam estar no mesmo plano de existência."
+					]
+				},
+				{
+					"name": "Flame",
+					"entries": [
+						"A chama emite luz brilhante em um raio de 6 metros e luz fraca por mais 6 metros adicionais. Se ele sair do salão ou for reduzido a 0 pontos de vida, ele será destruído e não poderá se formar novamente por 24 horas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano de fogo."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Um humanóide que a chama possa ver a até 9 metros dela deve ter sucesso em um teste de resistência de Sabedoria {@dc 15} ou será magicamente {@condition charmed} por 1 dia. O alvo {@condition charmed} obedece aos comandos verbais ou telepáticos da chama. Se o alvo sofrer algum dano ou receber um comando suicida, ele pode repetir o teste de resistência, encerrando o efeito em caso de sucesso. Se o alvo resistir com sucesso contra o efeito, ou se o efeito sobre ele terminar, o alvo ficará imune ao Feitiço desta chama pelas próximas 24 horas.",
+						"A chama pode ter apenas um alvo {@condition charmed} por vez. Se encantar outro, o efeito no alvo anterior termina."
+					]
+				},
+				{
+					"name": "Draining Kiss",
+					"entries": [
+						"A chama beija uma criatura {@condition charmed} por ela ou uma criatura voluntária. O alvo deve fazer um teste de resistência de Constituição {@dc 15} contra esta magia, sofrendo 32 ({@damage 5d10 + 5}) de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso. O máximo de pontos de vida do alvo é reduzido em uma quantidade igual ao dano recebido. Esta redução dura até o alvo terminar um descanso longo. O alvo morre se este efeito reduzir seu máximo de pontos de vida a 0."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Death Embrace",
+			"source": "CRCotN",
+			"page": 197,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 147,
+				"formula": "14d12 + 56"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 20
+			},
+			"str": 23,
+			"dex": 15,
+			"con": 19,
+			"int": 6,
+			"wis": 9,
+			"cha": 4,
+			"save": {
+				"str": "+10",
+				"wis": "+3"
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 9,
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"prone"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Petrifying Tendrils",
+					"entries": [
+						"Qualquer criatura que comece seu turno no espaço do abraço mortal deve realizar um teste de resistência de Constituição {@dc 16}. Em uma falha no teste de resistência, a criatura é {@condition restrained}. Uma criatura {@condition restrained} desta forma deve repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha no teste de resistência ou encerrando o efeito em caso de sucesso. A condição {@condition petrified} dura até que o efeito seja encerrado por um feitiço de restauração maior ou magia semelhante."
+					]
+				},
+				{
+					"name": "Reel",
+					"entries": [
+						"No início de cada um de seus turnos, o abraço mortal pode puxar cada criatura que está agarrando até 6 metros em sua direção (nenhuma ação necessária)."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O abraço mortal só pode respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O abraço mortal faz dois ataques de tentáculos."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 60 pés, um alvo. {@h}13 ({@damage 2d6 + 6}) de dano perfurante mais 11 ({@damage 2d10}) de dano psíquico. Se o alvo for Grande ou menor, também será {@condition grappled} (escape {@dc 16}). O abraço mortal tem seis tentáculos, cada um dos quais pode atingir um alvo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Body Shield",
+					"entries": [
+						"When the death embrace is hit by an attack, one creature the death embrace is grappling (chosen by the death embrace) takes the damage instead."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dermot Wurder (Tier 1)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 188,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cleric",
+					"goblin",
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d6 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 16,
+			"cha": 10,
+			"save": {
+				"wis": "+5",
+				"cha": "+2"
+			},
+			"skill": {
+				"medicine": "+5",
+				"religion": "+2",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Dermot casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell spare the dying}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell bless}",
+							"{@spell cure wounds}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dermot faz um ataque Warhammer e um ataque Searing Wrath."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano por concussão ou 8 ({@damage 1d10 + 3}) de dano por concussão quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Searing Wrath",
+					"entries": [
+						"{@atk rs} {@hit 5} para acertar, alcance de 60 pés, uma criatura. {@h}9 ({@damage 2d8}) de dano radiante, e o alvo é {@condition blinded} até o final do próximo turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dermot Wurder (Tier 2)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 191,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cleric",
+					"goblin",
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"splint mail",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d6 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 18,
+			"cha": 10,
+			"save": {
+				"wis": "+7",
+				"cha": "+3"
+			},
+			"skill": {
+				"medicine": "+7",
+				"religion": "+3",
+				"survival": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Dermot casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell spare the dying}"
+					],
+					"daily": {
+						"1": [
+							"{@spell revivify}"
+						],
+						"2e": [
+							"{@spell bless} (at 2nd level)",
+							"{@spell cure wounds} (at 3rd level)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dermot faz um ataque Warhammer e um ataque Searing Wrath."
+					]
+				},
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano por concussão ou 9 ({@damage 1d10 + 4}) de dano por concussão quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Searing Wrath",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 18 metros, uma criatura. {@h}18 ({@damage 4d8}) de dano radiante, e o alvo é {@condition blinded} até o final do próximo turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Dermot Wurder (Tier 3)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 193,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cleric",
+					"goblin",
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "17d6 + 34"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": {
+					"number": 30,
+					"condition": "(mariner's armor)"
+				}
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 20,
+			"cha": 10,
+			"save": {
+				"wis": "+8",
+				"cha": "+3"
+			},
+			"skill": {
+				"medicine": "+8",
+				"religion": "+3",
+				"survival": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Dermot casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell spare the dying}"
+					],
+					"daily": {
+						"1": [
+							"{@spell revivify}"
+						],
+						"2e": [
+							"{@spell bless} (at 3rd level)",
+							"{@spell cure wounds} (at 3rd level)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Dermot usa {@item mariner's armor} e empunha um martelo de guerra de ruídio (veja o apêndice B). Se Dermot obtiver 1 em uma jogada de ataque feita com o martelo de guerra, ele deve ter sucesso em um teste de resistência de Carisma {@dc 20} ou ganhar 1 nível de {@condition exhaustion}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dermot faz um ataque Ruidium Warhammer e um ataque Searing Wrath."
+					]
+				},
+				{
+					"name": "Ruidium Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano de concussão ou 9 ({@damage 1d10 + 4}) de dano de concussão quando usado com as duas mãos, mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Searing Wrath",
+					"entries": [
+						"{@atk rs} {@hit 8} para acertar, alcance de 18 metros, uma criatura. {@h}22 ({@damage 5d8}) de dano radiante, e o alvo é {@condition blinded} até o final do próximo turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"ruidium warhammer|crcotn"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"B",
+				"R",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fiendish Orc",
+			"source": "CRCotN",
+			"page": 71,
+			"_copy": {
+				"name": "Orc War Chief",
+				"source": "MM"
+			},
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"orc"
+				]
+			},
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Orc"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Foghome",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 58,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Firbolg",
+						"source": "VGM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Foghome",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galeokaerda",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 130,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf",
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 14,
+			"int": 16,
+			"wis": 15,
+			"cha": 18,
+			"save": {
+				"wis": "+5",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"deception": "+7",
+				"history": "+9",
+				"perception": "+5",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Elvish"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The extollant casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell mage armor}",
+							"{@spell major image}",
+							"{@spell phantasmal force}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Galeokaerda tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-la dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O exaltante faz dois ataques de Crimson Bolt."
+					]
+				},
+				{
+					"name": "Crimson Bolt",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 1,5 m ou alcance de 18 m, uma criatura. {@h}20 ({@damage 3d10 + 4}) de dano psíquico."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reflect Agony",
+					"entries": [
+						"When the extollant is damaged by a creature within 60 feet of it, the creature must make a {@dc 15} Wisdom saving throw, taking 16 ({@damage 3d10}) psychic damage on a failed saving throw, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"E"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galsariad Ardyth (Tier 1)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 49,
+				"formula": "14d8 - 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 8,
+			"int": 16,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+5",
+				"investigation": "+5",
+				"nature": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Undercommon"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Galsariad casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell mage armor}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1": [
+							"{@spell longstrider}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Galsariad tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Drain Potential",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para acertar, alcance 1,5 m ou alcance de 9 m, uma criatura. {@h}16 ({@damage 3d10}) de dano necrótico e Galsariad ganha 5 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Gravity Wave {@recharge 5}",
+					"entries": [
+						"Galsariad faz com que uma onda ondulante de gravidade mágica preencha uma esfera de 3 metros de raio centrada em um ponto que ele possa ver a até 36 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Força {@dc 13}. Se falhar no teste de resistência, a criatura sofre 17 ({@damage 5d6}) de dano de força e é puxada até 3 metros em direção ao centro da esfera. Se obtiver sucesso, a criatura sofre metade do dano e não é puxada."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Distort Gravity (1/Day)",
+					"entries": [
+						"Galsariad targets himself or one willing creature that he can see within 60 feet of himself, magically distorting gravity around the target. Any creature within 5 feet of the target takes 3 ({@damage 1d6}) force damage. In addition, the target can use a reaction to float upward, up to 20 feet, without provoking opportunity attacks. When this effect ends at the start of Galsariad's next turn, the target floats gently down up to 20 feet."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"U"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Galsariad Ardyth (Tier 2)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 67,
+				"formula": "15d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 18,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"investigation": "+7",
+				"nature": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Undercommon"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Galsariad casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell mage armor}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell longstrider}",
+							"{@spell scrying} (as an action)",
+							"{@spell slow}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Galsariad tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Drain Potential",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 1,5 m ou alcance de 18 m, uma criatura. {@h}22 ({@damage 4d10}) de dano necrótico e Galsariad ganha 5 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Gravity Wave {@recharge 5}",
+					"entries": [
+						"Galsariad faz com que uma onda ondulante de gravidade mágica preencha uma esfera de 6 metros de raio centrada em um ponto que ele possa ver a até 30 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Força {@dc 15}. Se falhar no teste de resistência, a criatura sofre 35 ({@damage 10d6}) de dano de força e é puxada até 6 metros em direção ao centro da esfera, sendo derrubada {@condition prone}. Em um teste bem-sucedido, a criatura sofre metade do dano e não é puxada ou derrubada {@condition prone}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Distort Gravity (1/Day)",
+					"entries": [
+						"Galsariad targets himself or one willing creature that he can see within 60 feet of himself, magically distorting gravity around the target. Any creature within 5 feet of the target takes 7 ({@damage 2d6}) force damage. In addition, the target can use a reaction to float upward, up to 20 feet, without provoking opportunity attacks. When this effect ends at the start of Galsariad's next turn, the target floats gently down up to 20 feet."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"U"
+			],
+			"damageTags": [
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Galsariad Ardyth (Tier 3)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"deflection"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "20d8"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"swim": {
+					"number": 40,
+					"condition": "(ring of swimming)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 20,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"int": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+8",
+				"investigation": "+8",
+				"nature": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Undercommon"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Galsariad casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell longstrider}",
+							"{@spell scrying} (as an action)",
+							"{@spell slow}",
+							"{@spell telekinesis}",
+							"{@spell water breathing}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Deflection",
+					"entries": [
+						"Galsariad distorce a gravidade ao seu redor para desviar magicamente os ataques. Embora Galsariad não esteja usando armadura e nem {@condition incapacitated}, sua CA inclui seu modificador de Inteligência."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Galsariad tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Galsariad usa um {@item ring of swimming} e carrega uma adaga de ruídio (veja o apêndice B). Se ele obtiver 1 em uma jogada de ataque feita com a adaga, ele deve ter sucesso em um teste de resistência de Carisma {@dc 20} ou ganhar 1 nível de {@condition exhaustion}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Galsariad faz um ataque de Drenagem de Potencial e um ataque de Adaga de Ruidium."
+					]
+				},
+				{
+					"name": "Drain Potential",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} para acertar, alcance 1,5 m ou alcance de 36 m, uma criatura. {@h}22 ({@damage 4d10}) de dano necrótico e Galsariad ganha 10 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Ruidium Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Gravity Wave {@recharge 5}",
+					"entries": [
+						"Galsariad faz com que uma onda ondulante de gravidade mágica preencha uma esfera de 9 metros de raio centrada em um ponto que ele possa ver a até 30 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Força {@dc 16}. Se falhar no teste de resistência, a criatura sofre 42 ({@damage 12d6}) de dano de força e fica {@condition restrained} por 1 minuto. Em um teste bem-sucedido, a criatura sofre metade do dano e não é {@condition restrained}. Uma criatura {@condition restrained} pode repetir o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Distort Gravity (1/Day)",
+					"entries": [
+						"Galsariad targets himself or one willing creature that he can see within 60 feet of himself, magically distorting gravity around the target. Any creature within 5 feet of the target takes 14 ({@damage 4d6}) force damage. In addition, the target can use a reaction to float upward, up to 20 feet, without provoking opportunity attacks. When this effect ends at the start of Galsariad's next turn, the target floats gently down up to 20 feet."
+					]
+				}
+			],
+			"attachedItems": [
+				"ruidium dagger|crcotn"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"U"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"exhaustion",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gryz Alakritos",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 81,
+			"_copy": {
+				"name": "Scholarly Mastermind",
+				"source": "CRCotN",
+				"_templates": [
+					{
+						"name": "Goblin",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mastermind",
+						"with": "Gryz",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblin",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Insight Acuere",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 126,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 18,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"int": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"history": "+7",
+				"insight": "+6",
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Infernal",
+				"Orc"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"{@skill Insight} casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell alter self}",
+						"{@spell light}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell comprehend languages}",
+							"{@spell mage armor}",
+							"{@spell zone of truth}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"{@skill Insight} realiza dois ataques de Choque Arcano ou Adaga da Mente Envenenada."
+					]
+				},
+				{
+					"name": "Arcane Shock",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}26 ({@damage 4d10 + 4}) dano elétrico. Se o alvo for uma criatura, ele não poderá realizar reações até o início do próximo turno."
+					]
+				},
+				{
+					"name": "Dagger of the Poisoned Mind",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) de dano perfurante mais 10 ({@damage 3d6}) de dano psíquico. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Sabedoria {@dc 15} ou permanecerá {@condition frightened} até o final do próximo turno."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"I",
+				"O"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Irvan Wastewalker (Tier 1)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 12,
+			"int": 12,
+			"wis": 12,
+			"cha": 12,
+			"save": {
+				"dex": "+4",
+				"con": "+3"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"deception": "+3",
+				"stealth": "+6",
+				"survival": "+3"
+			},
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Fortitude (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se o dano reduzir Irvan a 0 pontos de vida, ele pode fazer um teste de resistência de Constituição com CD igual a 5 + o dano sofrido. Em um teste bem-sucedido, Irvan cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Irvan faz dois ataques de adaga."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) de dano perfurante mais 7 ({@damage 2d6}) de dano venenoso."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Irvan Wastewalker (Tier 2)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 99,
+				"formula": "18d8 + 18"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 14,
+			"wis": 14,
+			"cha": 14,
+			"save": {
+				"dex": "+6",
+				"con": "+4"
+			},
+			"skill": {
+				"acrobatics": "+6",
+				"deception": "+5",
+				"stealth": "+9",
+				"survival": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Fortitude (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se o dano reduzir Irvan a 0 pontos de vida, ele pode fazer um teste de resistência de Constituição com CD igual a 5 + o dano sofrido. Em um teste bem-sucedido, Irvan cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Irvan faz dois ataques de adaga."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano perfurante mais 14 ({@damage 4d6}) de dano venenoso."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Irvan Wastewalker (Tier 3)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 123,
+				"formula": "19d8 + 38"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": {
+					"number": 40,
+					"condition": "(see special equipment)"
+				}
+			},
+			"str": 10,
+			"dex": 20,
+			"con": 14,
+			"int": 16,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"con": "+5"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"deception": "+9",
+				"stealth": "+11",
+				"survival": "+6"
+			},
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Goblin",
+				"Orc"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Fortitude (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se o dano reduzir Irvan a 0 pontos de vida, ele pode fazer um teste de resistência de Constituição com CD igual a 5 + o dano sofrido. Em um teste bem-sucedido, Irvan cai para 1 ponto de vida."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Irvan usa {@item gloves of swimming and climbing} e empunha uma espada curta de ruídio (veja o apêndice B). Se Irvan obtiver 1 em uma jogada de ataque feita com a espada curta, ele deve ter sucesso em um teste de resistência de Carisma {@dc 20} ou ganhar 1 nível de {@condition exhaustion}.",
+						"Além disso, Irvan possui um braço protético mágico. Enquanto o braço está preso a ele, ele funciona da mesma forma que a parte do corpo que está substituindo. Irvan pode anexar ou desconectar o braço com uma ação e ele não pode ser removido por mais ninguém."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Irvan faz um ataque de adaga e dois ataques de espada curta de Ruidium."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 8} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d4 + 5}) de dano perfurante mais 17 ({@damage 5d6}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Ruidium Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d6 + 5}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"ruidium shortsword|crcotn"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"O"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "James Cryon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 81,
+			"_copy": {
+				"name": "Scholarly Mastermind",
+				"source": "CRCotN",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mastermind",
+						"with": "James",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jamil A'alithiya",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 83,
+			"_copy": {
+				"name": "Monastic High Curator",
+				"source": "CRCotN",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the high curator",
+						"with": "Jamil",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"monk",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Koris",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 106,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Tiefling",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the assassin",
+						"with": "Koris",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"alignment": [
+				"L",
+				"N"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Laurin Ophidas",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 112,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 13,
+			"cha": 14,
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4",
+				"religion": "+2"
+			},
+			"passive": 11,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The fanatic is a 4th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). The fanatic has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell command}",
+								"{@spell inflict wounds}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell spiritual weapon}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dark Devotion",
+					"entries": [
+						"O fanático tem vantagem em testes de resistência contra {@condition charmed} ou {@condition frightened}."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Laurin empunha um {@item staff of the adder} e está sintonizado com ele como se fosse um clérigo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O fanático faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, uma criatura. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Light Devourer",
+			"source": "CRCotN",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 119,
+				"formula": "14d8 + 56"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 2,
+			"wis": 10,
+			"cha": 3,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"radiant"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Light Absorption",
+					"entries": [
+						"Se o devorador de luz passar qualquer parte de seu turno em uma área de luz brilhante ou for sujeito a dano radiante, ele irradia luz fraca em um raio de 3 metros por 1 hora."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O devorador de luz só pode respirar debaixo d’água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O devorador de luz faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}21 ({@damage 5d6 + 4}) dano perfurante ou dano radiante se o devorador de luz estiver irradiando luz (consulte Absorção de Luz)."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Radiant Discharge",
+					"entries": [
+						"If the light devourer is radiating light (see Light Absorption), it releases the light stored in its body in a 20-foot-radius sphere centered on itself, then ceases to radiate light. Each creature in the sphere must make a {@dc 15} Constitution saving throw, taking 24 ({@damage 7d6}) radiant damage on a failed saving throw, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Water Breathing"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Maggie Keeneyes (Tier 1)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"ogre"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 16,
+			"int": 14,
+			"wis": 14,
+			"cha": 8,
+			"save": {
+				"str": "+6",
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+6",
+				"insight": "+4",
+				"perception": "+4",
+				"persuasion": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Tactical Readiness",
+					"entries": [
+						"Maggie e aliados a até 9 metros dela têm vantagem nas jogadas de iniciativa, desde que Maggie não seja {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Giant Maul",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão, e se o alvo for uma criatura, Maggie pode forçá-lo a fazer um teste de resistência de Força {@dc 14}; em caso de falha no salvamento, o alvo é empurrado a 1,5 metro de Maggie e derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Hammer Toss",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 20/60 pés, um alvo. {@h}9 ({@damage 2d4 + 4}) dano de concussão, e se o alvo for uma criatura, Maggie pode forçá-lo a fazer um teste de resistência de Força {@dc 14}; em caso de falha no salvamento, o alvo é empurrado a 1,5 metro de Maggie e derrubado {@condition prone}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Maggie Keeneyes (Tier 2)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 191,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"ogre"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 14,
+			"wis": 16,
+			"cha": 8,
+			"save": {
+				"str": "+7",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+7",
+				"insight": "+6",
+				"perception": "+6",
+				"persuasion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Push",
+					"entries": [
+						"Uma vez durante cada um de seus turnos, após atingir uma criatura com um ataque, Maggie pode forçar o alvo a fazer um teste de resistência de Força {@dc 15}; em caso de falha no salvamento, o alvo é empurrado até 3 metros horizontalmente para longe de Maggie e derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Tactical Readiness",
+					"entries": [
+						"Maggie e aliados a até 9 metros dela têm vantagem nas jogadas de iniciativa, desde que Maggie não seja {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Maggie faz dois ataques Giant Maul ou Hammer Toss."
+					]
+				},
+				{
+					"name": "Giant Maul",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Hammer Toss",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 20/60 pés, um alvo. {@h}9 ({@damage 2d4 + 4}) dano de concussão."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Rally (1/Day)",
+					"entries": [
+						"Maggie targets one creature she can see within 30 feet of herself and bolsters it with words of encouragement. The target gains 15 temporary hit points if it can see or hear Maggie."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Maggie Keeneyes (Tier 3)",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 194,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"ogre"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": {
+					"number": 30,
+					"condition": "(ruidium armor)"
+				}
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 18,
+			"int": 14,
+			"wis": 14,
+			"cha": 8,
+			"save": {
+				"str": "+8",
+				"con": "+7"
+			},
+			"skill": {
+				"athletics": "+8",
+				"insight": "+5",
+				"perception": "+5",
+				"persuasion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				{
+					"resist": [
+						"psychic"
+					],
+					"note": "(granted by ruidium armor)"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Push",
+					"entries": [
+						"Uma vez durante cada um de seus turnos, após atingir uma criatura com um ataque, Maggie pode forçar o alvo a fazer um teste de resistência de Força {@dc 16}; em caso de falha no salvamento, o alvo é empurrado até 4,5 metros horizontalmente para longe de Maggie e derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Maggie usa uma armadura de ruídio (placa; veja o apêndice B). Se Maggie obtiver 1 em um teste de resistência enquanto estiver usando a armadura, ela deverá ter sucesso em um teste de resistência de Carisma {@dc 20} ou ganhará 1 nível de {@condition exhaustion}."
+					]
+				},
+				{
+					"name": "Tactical Readiness",
+					"entries": [
+						"Maggie e aliados a até 9 metros dela têm vantagem nas jogadas de iniciativa, desde que Maggie não seja {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Maggie faz dois ataques Heavy Greataxe ou Hammer Toss."
+					]
+				},
+				{
+					"name": "Heavy Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}16 ({@damage 2d12 + 5}) dano cortante."
+					]
+				},
+				{
+					"name": "Hammer Toss",
+					"entries": [
+						"{@atk rw} {@hit 8} para acertar, alcance 20/60 pés, um alvo. {@h}15 ({@damage 4d4 + 5}) dano de concussão."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Rally (1/Day)",
+					"entries": [
+						"Maggie targets one creature she can see within 60 feet of herself and bolsters it with words of encouragement. The target gains 30 temporary hit points if it can see or hear Maggie."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"exhaustion",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Marisa",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 150,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ghost",
+						"with": "Marisa",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Meri",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 150,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ghost",
+						"with": "Meri",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastic High Curator",
+			"source": "CRCotN",
+			"page": 201,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"monk",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 130,
+				"formula": "20d8 + 40"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 14,
+			"int": 18,
+			"wis": 22,
+			"cha": 17,
+			"save": {
+				"dex": "+7",
+				"wis": "+10"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8",
+				"investigation": "+8",
+				"perception": "+10"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common plus four other languages"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The high curator casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 18}):"
+					],
+					"will": [
+						"{@spell detect magic}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell detect thoughts}",
+							"{@spell identify} (as an action)",
+							"{@spell scrying} (as an action)"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Embora o Alto Curador não esteja usando armadura e sem escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O curador superior faz três ataques Force Strike e usa Brain Burn (se disponível)."
+					]
+				},
+				{
+					"name": "Force Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 10} para acertar, alcance 5 pés ou alcance 10 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) dano de força."
+					]
+				},
+				{
+					"name": "Brain Burn {@recharge 4}",
+					"entries": [
+						"O curador superior tem como alvo até duas criaturas que possa ver a até 9 metros de si mesmo. Cada alvo deve fazer um teste de resistência de Constituição {@dc 18}. Se falhar no teste de resistência, o alvo sofre 28 ({@damage 8d6}) de dano psíquico e não pode realizar reações até o início do próximo turno. Se obtiver sucesso, o alvo sofre metade do dano e não sofre nenhum outro efeito."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastic Infiltrator",
+			"source": "CRCotN",
+			"page": 202,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"monk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 13,
+			"dex": 20,
+			"con": 16,
+			"int": 15,
+			"wis": 17,
+			"cha": 16,
+			"save": {
+				"dex": "+8",
+				"wis": "+6"
+			},
+			"skill": {
+				"acrobatics": "+8",
+				"deception": "+9",
+				"perception": "+6",
+				"stealth": "+11"
+			},
+			"passive": 16,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common plus three other languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The infiltrator casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell disguise self}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell detect thoughts}",
+							"{@spell invisibility}"
+						],
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell zone of truth}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Guarded Mind",
+					"entries": [
+						"Feitiços e outros efeitos não podem ler os pensamentos do infiltrado nem determinar se ele está mentindo. As criaturas podem se comunicar telepaticamente com o infiltrado somente se ele permitir tal contato."
+					]
+				},
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Enquanto o infiltrador não estiver usando armadura e não empunhando escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O infiltrador realiza três ataques de Ataque Desarmado."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 1d10 + 5}) dano de força."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"The infiltrator takes the Dash or Disengage action."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Retaliating Strike",
+					"entries": [
+						"When a creature within 5 feet of the infiltrator hits or misses the infiltrator with a melee attack, the infiltrator makes one Unarmed Strike attack against the attacker."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Monastic Operative",
+			"source": "CRCotN",
+			"page": 202,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"monk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 18,
+			"con": 14,
+			"int": 14,
+			"wis": 17,
+			"cha": 11,
+			"save": {
+				"dex": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"insight": "+6",
+				"investigation": "+8",
+				"stealth": "+7"
+			},
+			"passive": 13,
+			"languages": [
+				"Common plus two other languages"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Enquanto o agente não estiver usando armadura e sem escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O agente realiza três ataques Unarmed Strike, três ataques Cobalt Dart ou uma combinação deles."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Cobalt Dart",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) de dano perfurante mais 3 ({@damage 1d6}) de dano de força."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Retaliating Strike",
+					"entries": [
+						"When a creature within 5 feet of the operative hits or misses the operative with a melee attack, the operative makes one Unarmed Strike attack against the attacker."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Moonshark",
+			"source": "CRCotN",
+			"page": 33,
+			"_copy": {
+				"name": "Giant Shark",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Silver Spear",
+							"entries": [
+								"A character within 5 feet of the shark can use an action to try to dislodge the spear, doing so with a successful {@dc 13} Strength (Athletics) check. While the spear is lodged in the shark, the shark glows with silvery illumination, shedding bright light in a 10-foot radius and dim light for an additional 10 feet."
+							]
+						}
+					}
+				}
+			},
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}22 ({@damage 3d10 + 6}) dano perfurante. Se o tubarão errar, ele poderá usar uma ação bônus para nadar até 7,5 metros. Este movimento não provoca ataques de oportunidade."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Occult Extollant",
+			"source": "CRCotN",
+			"page": 204,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 14,
+			"int": 16,
+			"wis": 15,
+			"cha": 18,
+			"save": {
+				"wis": "+5",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"deception": "+7",
+				"history": "+9",
+				"perception": "+5",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus two other languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The extollant casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell mage armor}",
+							"{@spell major image}",
+							"{@spell phantasmal force}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O exaltante faz dois ataques de Crimson Bolt."
+					]
+				},
+				{
+					"name": "Crimson Bolt",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 1,5 m ou alcance de 18 m, uma criatura. {@h}20 ({@damage 3d10 + 4}) de dano psíquico."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Reflect Agony",
+					"entries": [
+						"When the extollant is damaged by a creature within 60 feet of it, the creature must make a {@dc 15} Wisdom saving throw, taking 16 ({@damage 3d10}) psychic damage on a failed saving throw, or half as much damage on a successful one."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Occult Initiate",
+			"source": "CRCotN",
+			"page": 205,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"arcana": "+6",
+				"deception": "+5",
+				"history": "+4",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common plus one other language"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The initiate casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell detect magic}",
+							"{@spell levitate}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Arcane Blast {@recharge 5}",
+					"entries": [
+						"O iniciado cria uma explosão de força mágica em uma esfera de 6 metros de raio centrada em um ponto que ele possa ver a até 36 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de {@dc 13} Destreza. Se falhar no teste de resistência, a criatura sofre 10 ({@damage 3d6}) de dano de força e é empurrada 3 metros para longe do centro da área. Em um teste bem-sucedido, ele sofre metade do dano e não é empurrado."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Occult Silvertongue",
+			"source": "CRCotN",
+			"page": 205,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 127,
+				"formula": "17d8 + 51"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 16,
+			"int": 15,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"wis": "+6",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+8",
+				"deception": "+11",
+				"history": "+5",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common plus three other languages",
+				"telepathy 60 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The silvertongue casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"daily": {
+						"1": [
+							"{@spell dimension door}"
+						],
+						"2e": [
+							"{@spell charm person}",
+							"{@spell mage armor}",
+							"{@spell sending}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Alien Mind",
+					"entries": [
+						"Se uma criatura tentar ler os pensamentos do língua prateada ou causar dano psíquico ao língua prateada, essa criatura deve ser bem sucedida em um teste de resistência de Inteligência {@dc 16} ou será {@condition stunned} até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O língua prateada tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Crimson Bolt",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} para acertar, alcance 1,5 m ou alcance de 18 m, uma criatura. {@h}27 ({@damage 4d10 + 5}) de dano psíquico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Elemental Servitor (1/Day)",
+					"entries": [
+						"The silvertongue magically summons an earth elemental, which appears in an unoccupied space the silvertongue can see within 60 feet of itself. The earth elemental takes its turn immediately after the silvertongue on the same initiative count and obeys the silvertongue's commands. The earth elemental disappears after 1 minute or when it or the silvertongue dies."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Olara",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 129,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"nature": "+4",
+				"perception": "+5",
+				"stealth": "+6",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Olara pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Olara tem vantagem em testes de resistência para acabar com a condição {@condition charmed} em si mesma, e a magia não pode fazê-la dormir."
+					]
+				},
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"O batedor tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Olara realiza dois ataques corpo a corpo ou dois ataques à distância."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 150/600 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Fey Ancestry",
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Perigee",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 168,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the deva",
+						"with": "Perigee",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Prolix Yusaf",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 54,
+			"_copy": {
+				"name": "Scholarly Agent",
+				"source": "CRCotN",
+				"_templates": [
+					{
+						"name": "Tiefling",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the agent",
+						"with": "Prolix",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tiefling",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I",
+				"O"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruidium Elephant",
+			"source": "CRCotN",
+			"page": 95,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 24,
+			"dex": 9,
+			"con": 21,
+			"int": 3,
+			"wis": 11,
+			"cha": 6,
+			"passive": 10,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Trampling Charge",
+					"entries": [
+						"Se o elefante se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque Gore no mesmo turno, esse alvo deve ter sucesso em um teste de resistência de Força {@dc 16} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o elefante pode realizar um ataque Stomp contra ele como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar (com vantagem se o alvo for uma criatura sem pontos de vida), alcance 3 metros, um alvo. {@h}25 ({@damage 4d8 + 7}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Stomp",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 1,5 m, uma criatura {@condition prone}. {@h}29 ({@damage 4d10 + 7}) de dano por concussão mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scholarly Agent",
+			"source": "CRCotN",
+			"page": 206,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 12,
+			"int": 16,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"int": "+5"
+			},
+			"skill": {
+				"arcana": "+5",
+				"history": "+5",
+				"investigation": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Common plus one other language"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The agent casts one of the following spells, using Intelligence as the spellcasting ability:"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell comprehend languages}",
+							"{@spell identify} (as an action)",
+							"{@spell mage armor}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Arcane Shock",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para acertar, alcance 5 pés ou alcance 30 pés, um alvo. {@h}14 ({@damage 2d10 + 3}) dano elétrico. Se o alvo for uma criatura, ele não poderá realizar reações até o início do próximo turno."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Glyph of Shielding",
+					"entries": [
+						"The agent adds 2 to its AC against one attack that would hit it. To do so, the agent must be able to see the attacker and have a free hand."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"L"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scholarly Excavator",
+			"source": "CRCotN",
+			"page": 206,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 16,
+			"int": 14,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"con": "+5",
+				"int": "+4"
+			},
+			"skill": {
+				"arcana": "+4",
+				"athletics": "+4",
+				"history": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Common plus two other languages"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Siege Expert",
+					"entries": [
+						"A escavadeira causa dano duplo a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A escavadeira faz três ataques Thunderous Warhammer."
+					]
+				},
+				{
+					"name": "Thunderous Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d10 + 2}) dano trovejante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Telekinetic Toss {@recharge 5}",
+					"entries": [
+						"The excavator targets one Medium or smaller creature or an object weighing 300 pounds or less that isn't being worn or carried. The target, which must be within 30 feet of the excavator and visible to it, is magically pushed up to 20 feet horizontally in a direction of the excavator's choice. If the target is a creature, it can make a {@dc 13} Strength saving throw to resist the effect and is not pushed on a successful save."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"T"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scholarly Mastermind",
+			"source": "CRCotN",
+			"page": 207,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 13,
+			"int": 18,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"int": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"history": "+7",
+				"insight": "+6",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Common plus three other languages"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mastermind casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell alter self}",
+						"{@spell light}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell comprehend languages}",
+							"{@spell mage armor}",
+							"{@spell zone of truth}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O mentor realiza dois ataques de Choque Arcano ou Adaga da Mente Envenenada."
+					]
+				},
+				{
+					"name": "Arcane Shock",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}26 ({@damage 4d10 + 4}) dano elétrico. Se o alvo for uma criatura, ele não poderá realizar reações até o início do próximo turno."
+					]
+				},
+				{
+					"name": "Dagger of the Poisoned Mind",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) de dano perfurante mais 10 ({@damage 3d6}) de dano psíquico. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Sabedoria {@dc 15} ou permanecerá {@condition frightened} até o final do próximo turno."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"L",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scribble",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 126,
+			"_copy": {
+				"name": "Scholarly Agent",
+				"source": "CRCotN",
+				"_templates": [
+					{
+						"name": "Kenku",
+						"source": "VGM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the agent",
+						"with": "Scribble",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kenku",
+					"wizard"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scuttling Serpentmaw",
+			"source": "CRCotN",
+			"page": 208,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d6 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 3,
+			"wis": 11,
+			"cha": 3,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O serpentmaw pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O Serpentmaw tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do Serpentmaw estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A Serpentmaw faz um ataque de mordida e dois ataques de garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 15 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) de dano perfurante ou 17 ({@damage 4d6 + 3}) de dano perfurante se a boca da serpente tivesse vantagem na jogada de ataque."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) cortando dano."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shira",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 105,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Any one language (usually Common)"
+			],
+			"cr": "0",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shira casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 10}, {@hit 2} to hit with spell attacks):"
+					],
+					"will": [
+						"{@spell chill touch}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blindness/deafness}",
+							"{@spell ray of sickness}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"poisoned"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Skeletal Bloodfin",
+			"source": "CRCotN",
+			"page": 159,
+			"_copy": {
+				"name": "Slithering Bloodfin",
+				"source": "CRCotN",
+				"_mod": {
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Water Breathing",
+						"items": {
+							"name": "Unusual Nature",
+							"entries": [
+								"The skeletal bloodfin requires no food, drink, air, or sleep."
+							]
+						}
+					}
+				}
+			},
+			"type": "undead",
+			"resist": [
+				"piercing",
+				"slashing"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"deafened",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"traitTags": [
+				"Death Burst",
+				"Unusual Nature"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Slithering Bloodfin",
+			"source": "CRCotN",
+			"page": 209,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d10 + 33"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 50
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 16,
+			"int": 2,
+			"wis": 10,
+			"cha": 3,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"blindsight 100 ft. (blind beyond this radius)"
+			],
+			"passive": 14,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Death Burst",
+					"entries": [
+						"Quando a barbatana sangrenta morre, ela explode em uma nuvem de sangue tóxico. Cada criatura em uma esfera de 3 metros de raio centrada na barbatana sangrenta explosiva, incluindo qualquer criatura engolida pela barbatana sangrenta, deve ser bem sucedida em um teste de resistência de Constituição {@dc 15} ou sofrerá 10 ({@damage 3d6}) de dano de veneno. Uma criatura dentro do bloodfin quando explode cai {@condition prone} no espaço anteriormente ocupado pelo bloodfin e não é mais {@condition blinded} ou {@condition restrained} por ele."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"A barbatana sanguínea só pode respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O bloodfin faz um ataque de mordida e um ataque de cauda."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar (com vantagem se o alvo for uma criatura sem pontos de vida), alcance 1,5 m, um alvo. {@h}14 ({@damage 2d8 + 5}) dano perfurante, e se o alvo for uma criatura, é {@condition grappled} (escape {@dc 15}). Até que esta luta termine, o alvo é {@condition restrained}, e o bloodfin não pode morder outro alvo."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar (com vantagem se o alvo for uma criatura sem pontos de vida), alcance 3 metros, um alvo. {@h}19 ({@damage 4d6 + 5}) dano de concussão."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swallow",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one Medium or smaller creature the bloodfin is grappling. {@h}The bloodfin swallows the target. The swallowed creature is no longer {@condition grappled} but is {@condition blinded} and {@condition restrained}. It has {@quickref Cover||3||total cover} against attacks and other effects outside the bloodfin, it takes 14 ({@damage 4d6}) necrotic damage at the start of each of its turns, and the bloodfin regains hit points equal to the necrotic damage dealt. A bloodfin can have only one creature swallowed at a time.",
+						"If the bloodfin takes 30 damage or more on a single turn from the swallowed creature, the bloodfin must succeed on a {@dc 15} Constitution saving throw at the end of that turn or regurgitate the creature, which falls {@condition prone} in a space within 5 feet of the bloodfin and is no longer {@condition blinded} or {@condition restrained} by it."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst",
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sorrowfish",
+			"source": "CRCotN",
+			"page": 210,
+			"size": [
+				"T"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 40
+			},
+			"str": 2,
+			"dex": 16,
+			"con": 9,
+			"int": 1,
+			"wis": 7,
+			"cha": 2,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"psychic"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"O peixe-tristeza tem vantagem em jogadas de ataque corpo a corpo contra qualquer criatura que não tenha todos os seus pontos de vida."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O Sorrowfish só consegue respirar debaixo d’água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}1 dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Swarm of Sorrowfish",
+			"source": "CRCotN",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 104,
+				"formula": "16d8 + 32"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 19,
+			"con": 14,
+			"int": 1,
+			"wis": 11,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"immune": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de uma abertura tão estreita quanto 30 centímetros de largura. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Virulent Sorrow",
+					"entries": [
+						"Cada vez que o enxame sofre dano, qualquer criatura a até 1,5 metro dele deve realizar um teste de resistência de {@dc 13} Sabedoria. Se falhar no teste de resistência, a criatura sofre os seguintes efeitos até o final do próximo turno: ela tem desvantagem em suas jogadas de ataque, não pode realizar reações e sua velocidade é reduzida pela metade."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O enxame só consegue respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Swarm of Bites",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 0 pés, um alvo no espaço do enxame. {@h}21 ({@damage 6d6}) de dano perfurante ou 10 ({@damage 3d6}) de dano perfurante se o enxame tiver metade de seus pontos de vida ou menos."
+					]
+				},
+				{
+					"name": "Desolate Drain {@recharge 5}",
+					"entries": [
+						"Cada criatura no espaço do enxame deve realizar um teste de resistência de {@dc 13} Sabedoria. Se falhar no teste de resistência, uma criatura sofre 24 ({@damage 7d6}) de dano psíquico e fica {@condition stunned} até o final de seu próximo turno. O efeito termina em uma criatura se o enxame sair do espaço da criatura ou se outra criatura a até 1,5 metro do enxame usar uma ação para realizar um teste de Força {@dc 14}, puxando a criatura afetada para fora do enxame em um teste bem-sucedido. Em um teste de resistência bem-sucedido, a criatura sofre metade do dano e não sofre outros efeitos."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Verin Thelyss",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 51,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item half plate armor|PHB|half plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 14,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"str": "+7",
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"history": "+4",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Verin casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}",
+							"{@spell levitate} (self only)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Verin tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, Verin tem desvantagem em jogadas de ataque, bem como em testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Verin faz três ataques Glaive."
+					]
+				},
+				{
+					"name": "Glaive",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, um alvo. {@h}9 ({@damage 1d10 + 4}) cortando dano."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante mais 22 ({@damage 4d10}) de dano venenoso."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Manifest Echo",
+					"entries": [
+						"Verin magically creates an echo—a translucent, gray object that looks like him. The echo appears in an unoccupied space Verin can see within 15 feet of himself. While the echo exists, Verin chooses whether each of his attacks originates from his space or the echo's space. On Verin's turn, the echo can move in accordance with Verin's wishes. The echo has AC 17 and 1 hit point. It otherwise uses Verin's statistics. The echo lasts for 1 minute or until it is destroyed, until Verin ends his turn more than 30 feet away from it, until Verin manifests another echo, or until Verin is {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Reposition",
+					"entries": [
+						"Verin magically swaps places with his echo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Verin adds 3 to his AC against one melee attack that would hit him. To do so, he must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"glaive|phb",
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Xot",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CRCotN",
+			"page": 126,
+			"_copy": {
+				"name": "Scholarly Excavator",
+				"source": "CRCotN",
+				"_templates": [
+					{
+						"name": "Goliath",
+						"source": "VGM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the excavator",
+						"with": "Xot",
+						"flags": "i"
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Horizonback Tortoise",
+			"source": "CRCotN",
+			"page": 26,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d12 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 15,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"passive": 11,
+			"languages": [
+				"understands Goblin but can't speak"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A jovem tartaruga horizonte pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 10 pés, um alvo. {@h}18 ({@damage 4d6 + 4}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 14} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"languageTags": [
+				"CS",
+				"GO"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true
+		}
+	]
+}

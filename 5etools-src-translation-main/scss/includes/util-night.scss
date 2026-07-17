@@ -1,0 +1,33 @@
+@use "../vars/vars-night";
+
+.ve-night-mode {
+	// region Fix Chrome
+	input[type="checkbox"]:checked,
+	input[type="checkbox"]:indeterminate {
+		filter: grayscale(100%) brightness(85%) contrast(200%);
+	}
+
+	input[type="radio"]:checked,
+	input[type="radio"]:indeterminate {
+		filter: grayscale(100%) brightness(85%) contrast(200%);
+	}
+
+	input[type="range"] {
+		filter: grayscale(100%) brightness(85%) contrast(200%);
+	}
+	// endregion
+
+	.ve-muted {
+		color: vars-night.$rgb-font--muted-night !important;
+
+		a,
+		.roller {
+			color: vars-night.$rgb-link-blue--muted-night;
+		}
+	}
+
+	.ve-highlight {
+		color: vars-night.$rgb-bg--night;
+		background-color: vars-night.$rgb-bg-highlight--night;
+	}
+}

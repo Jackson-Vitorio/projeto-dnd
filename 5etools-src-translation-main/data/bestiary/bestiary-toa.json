@@ -1,0 +1,6998 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VGM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "ToA"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Acererak",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 209,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 285,
+				"formula": "30d8 + 150"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 20,
+			"int": 27,
+			"wis": 21,
+			"cha": 20,
+			"save": {
+				"con": "+12",
+				"int": "+15",
+				"wis": "+12"
+			},
+			"skill": {
+				"arcana": "+22",
+				"history": "+22",
+				"insight": "+12",
+				"perception": "+12"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"necrotic",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Giant",
+				"Infernal",
+				"Primordial",
+				"Undercommon"
+			],
+			"cr": "23",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Acererak is a 20th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 23}, {@hit 15} to hit with spell attacks). Acererak has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell ray of frost}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell ray of sickness}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"spells": [
+								"{@spell arcane lock}",
+								"{@spell knock}"
+							]
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell ice storm}",
+								"{@spell phantasmal killer}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell hold monster}",
+								"{@spell wall of force}"
+							]
+						},
+						"6": {
+							"slots": 3,
+							"spells": [
+								"{@spell chain lightning}",
+								"{@spell circle of death}",
+								"{@spell disintegrate}"
+							]
+						},
+						"7": {
+							"slots": 3,
+							"spells": [
+								"{@spell finger of death}",
+								"{@spell plane shift}",
+								"{@spell teleport}"
+							]
+						},
+						"8": {
+							"slots": 2,
+							"spells": [
+								"{@spell maze}",
+								"{@spell mind blank}"
+							]
+						},
+						"9": {
+							"slots": 2,
+							"spells": [
+								"{@spell power word kill}",
+								"{@spell time stop}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Acererak carrega o {@item Staff of the Forgotten One|ToA}. Ele usa um {@item Talisman of the Sphere} e tem um {@item Sphere of Annihilation} sob seu controle."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Acererak falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"O corpo de Acererak vira pó quando ele chega a 0 pontos de vida e seu equipamento é deixado para trás. Acererak ganha um novo corpo após {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativo novamente. O novo corpo aparece a 1,5 metro do filactério de Acererak, cuja localização está oculta."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Acererak tem vantagem em testes de resistência contra qualquer efeito que expulsa mortos-vivos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Paralyzing Touch",
+					"entries": [
+						"{@atk ms} {@hit 15} para acertar, alcance 1,5 m, uma criatura. {@h}10 ({@damage 3d6}) dano de frio, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Staff (+3 Quarterstaff)",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano de concussão mais 10 ({@damage 3d6}) de dano necrótico ou 8 ({@damage 1d8 + 4}) de dano de concussão mais 10 ({@damage 3d6}) de dano necrótico quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Invoke Curse",
+					"entries": [
+						"Enquanto segura o Cajado do Esquecido, Acererak gasta 1 carga dele e tem como alvo uma criatura que ele possa ver a até 18 metros dele. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 23} ou será amaldiçoado. Até que a maldição acabe, o alvo não pode recuperar pontos de vida e fica vulnerável a danos necróticos. {@spell Greater restoration}, {@spell remove curse} ou magia semelhante encerra a maldição no alvo."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "At-Will Spell",
+					"entries": [
+						"Acererak casts one of his at-will spells."
+					]
+				},
+				{
+					"name": "Melee Attack",
+					"entries": [
+						"Acererak uses Paralyzing Touch or makes one melee attack with his staff."
+					]
+				},
+				{
+					"name": "Frightening Gaze (Costs 2 Actions)",
+					"entries": [
+						"Acererak fixes his gaze on one creature he can see within 10 feet of him. The target must succeed on a {@dc 20} Wisdom saving throw against this magic or become {@condition frightened} for 1 minute. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target its immune to Acererak's gaze for the next 24 hours."
+					]
+				},
+				{
+					"name": "Talisman of the Sphere (Costs 2 Actions)",
+					"entries": [
+						"Acererak uses his {@item Talisman of the Sphere} to move the {@item Sphere of Annihilation} under his control up to 90 feet."
+					]
+				},
+				{
+					"name": "Disrupt Life (Costs 3 Actions)",
+					"entries": [
+						"Each creature within 20 feet of Acererak must make a {@dc 20} Constitution saving throw against this magic, taking 42 ({@damage 12d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"D",
+				"DR",
+				"E",
+				"GI",
+				"I",
+				"P",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"N"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"CUR",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Albino Dwarf Spirit Warrior",
+			"source": "ToA",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 30,
+				"formula": "4d8 + 12"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 13,
+			"dex": 13,
+			"con": 17,
+			"int": 12,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The dwarf's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell hunter's mark}",
+							"{@spell jump}",
+							"{@spell pass without trace}",
+							"{@spell speak with animals}",
+							"{@spell speak with plants}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"O anão tem vantagem em testes de resistência contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Handaxe",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano cortante."
+					]
+				}
+			],
+			"attachedItems": [
+				"handaxe|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Albino Dwarf Warrior",
+			"source": "ToA",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 30,
+				"formula": "4d8 + 12"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 13,
+			"dex": 13,
+			"con": 17,
+			"int": 12,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"O anão tem vantagem em testes de resistência contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Handaxe",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano cortante."
+					]
+				}
+			],
+			"attachedItems": [
+				"handaxe|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aldani (Lobsterfolk)",
+			"source": "ToA",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 30
+			},
+			"str": 13,
+			"dex": 8,
+			"con": 12,
+			"int": 10,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O Aldani pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Aldani faz dois ataques com suas garras."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) dano cortante, e o alvo é {@condition grappled} (escape {@dc 11}). O Aldani possui duas garras, cada uma das quais pode agarrar apenas um alvo."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Almiraj",
+			"source": "ToA",
+			"page": 211,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 2,
+			"dex": 16,
+			"con": 10,
+			"int": 2,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 14,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Keen Senses",
+					"entries": [
+						"O almiraj tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou visão."
+					]
+				},
+				{
+					"name": "Familiar",
+					"entries": [
+						"Com a permissão do Mestre, o feitiço {@spell find familiar} pode invocar um almiraj."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Horn",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ankylosaurus Zombie",
+			"source": "ToA",
+			"page": 240,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d12 + 16"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 19,
+			"dex": 9,
+			"con": 15,
+			"int": 2,
+			"wis": 6,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo {@h}18 ({@damage 4d6 + 4}) de dano de concussão. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 14} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Artus Cimber",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d8 + 15"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 13,
+			"int": 17,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"dex": "+5",
+				"cha": "+7"
+			},
+			"skill": {
+				"deception": "+7",
+				"history": "+9",
+				"insight": "+6",
+				"survival": "+9"
+			},
+			"passive": 13,
+			"immune": [
+				{
+					"immune": [
+						"cold"
+					],
+					"preNote": "While wearing the Ring of Winter:"
+				}
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Goblin"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Artus usa o {@item Ring of Winter|toa}. Ele e o anel não podem ser alvo de magia de adivinhação ou percebidos através de sensores mágicos de vidência. Enquanto estiver sintonizado e usando o anel, Artus deixa de envelhecer e fica imune aos danos do frio e aos efeitos do frio extremo.",
+						"Artus empunha {@item Bookmark|toa} uma adaga +3 com propriedades mágicas adicionais. Como uma ação bônus, Artus pode ativar qualquer uma das seguintes propriedades enquanto estiver sintonizado com a adaga, desde que esteja com a arma em punho:",
+						{
+							"type": "list",
+							"items": [
+								"Cause a blue gem set into the dagger's pommel to shed bright light in a 20-foot radius and dim light for an additional 20 feet, or make the gem go dark.",
+								"Turn the dagger into a compass that, while resting on your palm, points north.",
+								"Cast {@spell dimension door} from the dagger. Once this property is used, it can't be used again until the next dawn.",
+								"Cast {@spell compulsion} (save {@dc 15}) from the dagger. The range of the spell increases to 90 feet but it targets only spiders that are beasts. Once this property is used, it can't be used again until the next dawn."
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Artus faz três ataques com Bookmark ou seu arco longo."
+					]
+				},
+				{
+					"name": "Bookmark (+3 Dagger)",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d4 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 150/600 pés, um alvo {@h}6 ({@damage 1d8 + 2}) de dano perfurante."
+					]
+				},
+				{
+					"name": "Ring of Winter",
+					"entries": [
+						"O Anel do Inverno tem 12 cargas e recupera todas as cargas gastas diariamente ao amanhecer. Enquanto estiver sintonizado e usando o anel, Artus pode gastar o número necessário de cargas para ativar uma das seguintes propriedades:",
+						{
+							"type": "list",
+							"items": [
+								"Artus can expend 1 charge and use the ring to lower the temperature in a 120-foot-radius sphere centered on a point he can see within 300 feet of him. The temperature in that area drops 20 degrees per minute, to a minimum of −30 degrees Fahrenheit. Frost and ice begin to form on surfaces once the temperature drops below 32 degrees. This effect is permanent unless Artus uses the ring to end the effect as an action, at which point the temperature in the area returns to normal at a rate of 10 degrees per minute.",
+								"Artus can cast one of the following spells from the ring (spell save {@dc 17}) by expending the necessary number of charges: {@spell Bigby's hand} (2 charges) the hand is made of ice, is immune to cold damage, and deals bludgeoning damage instead of force damage as a clenched fist, {@spell cone of cold} (2 charges), {@spell flesh to stone||flesh to ice} (3 charges); as flesh to stone except that the target turns to solid ice with the density and durability of stone, {@spell ice storm} (2 charges), {@spell Otiluke's freezing sphere} (3 charges), {@spell sleet storm} (1 charge), {@spell spike growth} (1 charge) the spikes are made of ice, or {@spell wall of ice} (2 charges).",
+								"Artus can expend the necessary number of charges and use the ring to create either an inanimate ice object (2 charges) or an animated ice creature (4 charges). The ice object can't have any moving parts, must be able to fit inside a 10-foot cube, and has the density and durability of metal or stone (Artus's choice). The ice creature must be modeled after a beast with a challenge rating of 2 or less. The ice creature has the same statistics as the beast it models, with the following changes: the creature is a construct with vulnerability to fire damage, immunity to cold and poison damage, and immunity to the following conditions: {@condition charmed}, {@condition exhaustion}, {@condition frightened}, {@condition paralyzed}, {@condition petrified}, and {@condition poisoned}. The ice creature obeys only its creator's commands. The object or creature appears in an unoccupied space within 60 feet of Artus. It melts into a pool of normal water after 24 hours or when it drops to 0 hit points. In extreme heat, it loses 5 ({@dice 1d10}) hit points per minute as it melts. Use the guidelines in chapter 8 of the Dungeon Master's Guide to determine the hit points of an inanimate object if they become necessary."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"bookmark|toa",
+				"longbow|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"GO"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Asharra",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 69,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"aarakocra"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 50
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 14,
+			"wis": 17,
+			"cha": 11,
+			"skill": {
+				"history": "+4",
+				"insight": "+5",
+				"perception": "+7"
+			},
+			"passive": 17,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Asharra is a 5th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). Asharra has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell mending}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell faerie fire}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell call lightning}",
+								"{@spell wind wall}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dive Attack",
+					"entries": [
+						"Se o aarakocra estiver voando e mergulhar pelo menos 9 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de arma corpo a corpo, o ataque causa 3 ({@dice 1d6}) de dano extra ao alvo."
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Dance of the Seven Winds",
+					"entries": [
+						"Asharra conhece um ritual chamado Dança dos Sete Ventos, que concede temporariamente voo mágico a até dez criaturas não voadoras. O ritual, que leva 10 minutos para ser concluído, só pode ser realizado por um ancião aarakocra e requer uma orquídea negra como componente material.",
+						"Asharra deve moer a orquídea até virar pó, inalá-la e dançar em círculos ao redor dos beneficiários do ritual ininterruptamente enquanto outros sete aarakocra entoam orações aos Duques do Vento de Aaqa. Quando a dança termina, as asas de Asharra desaparecem e ela perde a capacidade de voar. Cada beneficiário do ritual ganha uma velocidade de vôo mágico de 9 metros (permitindo-lhes voar 6,4 quilômetros por hora). Este benefício dura 3 dias, após os quais as asas de Asharra reaparecem e ela recupera a capacidade de voar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Talon",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano cortante."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Summon Air Elemental",
+					"entries": [
+						"Cinco aarakocra a até 9 metros um do outro podem invocar magicamente um {@creature air elemental}. Cada um dos cinco deve usar sua ação e movimento em três turnos consecutivos para realizar uma dança aérea e deve manter {@status concentration} enquanto faz isso (como se {@status concentration||concentrating} estivesse em um feitiço). Quando todos os cinco terminarem o terceiro turno da dança, o elemental aparece em um espaço desocupado a até 18 metros deles. É amigável com eles e obedece aos seus comandos falados. Ele permanece por 1 hora, até que ele ou todos os seus invocadores morram, ou até que qualquer um dos seus invocadores o dispense como uma ação bônus. Um invocador não pode executar a dança novamente até terminar um breve descanso. Quando o elemental retorna ao Plano Elemental do Ar, qualquer aarakocra a até 1,5 metro dele pode retornar com ele."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Assassin Vine",
+			"source": "ToA",
+			"page": 213,
+			"otherSources": [
+				{
+					"source": "GoS"
+				},
+				{
+					"source": "SDW"
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d10 + 30"
+			},
+			"speed": {
+				"walk": 5,
+				"climb": 5
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 1,
+			"wis": 10,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"prone"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a videira assassina permaneça imóvel, ela é indistinguível de uma planta normal."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 6 metros, uma criatura. {@h}O alvo sofre 11 ({@damage 2d6 + 4}) de dano de concussão e é {@condition grappled} (escape {@dc 14}). Até que esta luta termine, o alvo é {@condition restrained} e sofre 21 ({@damage 6d6}) de dano de veneno no início de cada um de seus turnos. A videira pode contrair apenas um alvo por vez."
+					]
+				},
+				{
+					"name": "Entangling Vines",
+					"entries": [
+						"A videira assassina pode animar vinhas e raízes normais no solo em um quadrado de 4,5 metros a até 9 metros dela. Essas plantas transformam o solo daquela área em {@quickref difficult terrain||3}. Uma criatura naquela área quando o efeito começa deve ter sucesso em um teste de resistência de Força {@dc 13} ou será {@condition restrained} ao enredar vinhas e raízes. Uma criatura {@condition restrained} das plantas pode usar sua ação para fazer um teste de Força {@dc 13} ({@skill Athletics}), libertando-se em um teste bem-sucedido. O efeito termina após 1 minuto ou quando a videira assassina morre ou usa Entangling Vines novamente."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B",
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Atropal",
+			"source": "ToA",
+			"page": 214,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"titan"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				7
+			],
+			"hp": {
+				"average": 225,
+				"formula": "18d12 + 108"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 19,
+			"dex": 5,
+			"con": 22,
+			"int": 25,
+			"wis": 19,
+			"cha": 24,
+			"save": {
+				"con": "+11",
+				"wis": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"cold",
+				"necrotic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"vulnerable": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"understands Celestial but utters only obscene nonsense"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O atropal tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Negative Energy Aura",
+					"entries": [
+						"Criaturas a até 9 metros do atropal não podem recuperar pontos de vida, e qualquer criatura que comece seu turno a até 9 metros do atropal sofre 10 ({@damage 3d6}) de dano necrótico. Se o atropal for atingido por {@item vorpal sword}, o usuário poderá cortar o cordão umbilical do atropal em vez de causar dano. Se o cordão umbilical for cortado, o atropal perde essa característica."
+					]
+				},
+				{
+					"name": "Turn Resistance Aura",
+					"entries": [
+						"O atropal e qualquer outra criatura morta-viva a até 9 metros dele tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Touch",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 3d6}) dano necrótico."
+					]
+				},
+				{
+					"name": "Ray of Cold",
+					"entries": [
+						"{@atk rs} {@hit 12} para acertar, alcance de 120 pés, um alvo. {@h}21 ({@damage 6d6}) dano de frio."
+					]
+				},
+				{
+					"name": "Life Drain",
+					"entries": [
+						"O atropal tem como alvo uma criatura que ele possa ver a até 36 metros dele. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 19}, sofrendo 36 ({@damage 8d8}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. O atropal recupera um número de pontos de vida igual à metade do dano causado."
+					]
+				},
+				{
+					"name": "Summon Wraith {@recharge}",
+					"entries": [
+						"O atropal invoca um {@creature wraith} que se materializa a até 9 metros dele em um espaço desocupado que ele pode ver. O espectro obedece aos comandos de seu invocador e não pode ser controlado por nenhuma outra criatura. O Wraith desaparece quando chega a 0 pontos de vida ou quando seu invocador morre."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Touch",
+					"entries": [
+						"The atropal makes a touch attack."
+					]
+				},
+				{
+					"name": "Ray of Cold (Costs 2 Actions)",
+					"entries": [
+						"The atropal uses its Ray of Cold."
+					]
+				},
+				{
+					"name": "Wail (Costs 3 Actions)",
+					"entries": [
+						"The atropal lets out a withering wail. Any creature within 120 feet of the atropal that can hear the wail must succeed on a {@dc 19} Constitution saving throw or gain 1 level of {@condition exhaustion}."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"languageTags": [
+				"CE"
+			],
+			"damageTags": [
+				"C",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Azaka Stormfang",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 33,
+			"_copy": {
+				"name": "Weretiger",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "weretiger",
+						"with": "Azaka",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bag of Nails",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 102,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tabaxi"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 14,
+			"int": 13,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"dex": "+6",
+				"int": "+4"
+			},
+			"skill": {
+				"acrobatics": "+6",
+				"deception": "+3",
+				"perception": "+3",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Thieves' cant",
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Feline Agility",
+					"entries": [
+						"Quando Bag of Nails se move em seu turno de combate, ele pode dobrar sua velocidade até o final do turno. Depois de usar essa característica, Saco de Pregos não poderá usá-la novamente até que se mova 0 metro em um de seus turnos."
+					]
+				},
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Durante seu primeiro turno, Bag of Nails tem vantagem nas jogadas de ataque contra qualquer criatura que não tenha jogado um turno. Qualquer pontuação de Saco de Pregos acertada contra uma criatura {@status surprised} é um acerto crítico."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Se Saco de Pregos for sujeito a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, Saco de Pregos não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Saco de Pregos causa 14 ({@dice 4d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado seu que não seja {@condition incapacitated} e Saco de Pregos não tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Bag of Nails faz dois ataques com espadas curtas."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano cortante."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 15}, sofrendo 24 ({@damage 7d6}) de dano de veneno em caso de falha na resistência, ou metade do dano em caso de sucesso."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 150/600 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 15}, sofrendo 24 ({@damage 7d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"TC"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blind Artist",
+			"isNpc": true,
+			"source": "ToA",
+			"page": 164,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "zombie",
+						"with": "artist"
+					}
+				}
+			},
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"conditionImmune": [
+				"blinded",
+				"poisoned"
+			],
+			"cr": "0",
+			"action": null,
+			"senseTags": [
+				"B"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bosco Daggerhand",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 68,
+			"_copy": {
+				"name": "Thug",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the thug",
+						"with": "Bosco",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Bosco wears a {@item ring of animal influence}."
+							]
+						}
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Chwinga",
+			"source": "ToA",
+			"page": 216,
+			"size": [
+				"T"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 5,
+				"formula": "2d4"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20,
+				"swim": 20
+			},
+			"str": 1,
+			"dex": 20,
+			"con": 10,
+			"int": 14,
+			"wis": 16,
+			"cha": 16,
+			"skill": {
+				"acrobatics": "+7",
+				"perception": "+7",
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 17,
+			"cr": "0",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The chwinga's innate spellcasting ability is Wisdom. It can innately cast the following spells, requiring no material or verbal components:"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell guidance}",
+						"{@spell pass without trace}",
+						"{@spell resistance}"
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O chwinga não precisa de ar, comida ou bebida. Quando morre, ele se transforma em um punhado de pétalas de flores, uma nuvem de pólen, uma estatueta de pedra parecida com o que era, uma pequena esfera de pedra lisa ou uma poça de água doce (você escolhe)."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Quando o chwinga é submetido a um efeito que permite que ele faça um teste de resistência de Destreza para sofrer apenas metade do dano, ele não sofre nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Magical Gift (1/Day)",
+					"entries": [
+						"O chwinga tem como alvo um humanóide que possa ver a até 1,5 metro dele. O alvo ganha {@filter supernatural charm|rewards|type=charm} à escolha do Mestre. Consulte {@book chapter 7|DMG|7|Other Rewards} do Dungeon Masters Guide para obter mais informações sobre encantos sobrenaturais."
+					]
+				},
+				{
+					"name": "Natural Shelter",
+					"entries": [
+						"O chwinga abriga-se magicamente dentro de uma rocha, de uma planta viva ou de uma fonte natural de água doce em seu espaço. O chwinga não pode ser alvo de nenhum ataque, feitiço ou outro efeito enquanto estiver dentro deste abrigo, e o abrigo não prejudica a visão cega do chwinga. O chwinga pode usar sua ação para sair de um abrigo. Se seu abrigo for destruído, o chwinga é forçado a sair e aparece no espaço do abrigo, mas sai ileso."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Clay Gladiator",
+			"source": "ToA",
+			"page": 100,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"str": "+7",
+				"dex": "+5",
+				"con": "+6"
+			},
+			"skill": {
+				"athletics": "+10",
+				"intimidation": "+5"
+			},
+			"passive": 11,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Climbing",
+					"entries": [
+						"O gladiador pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Steadfast",
+					"entries": [
+						"O gladiador não pode ser desarmado e não pode realizar ataques à distância."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"Uma arma corpo a corpo causa um dado extra de dano quando o gladiador a acerta (incluído no ataque)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O gladiador faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano perfurante ou 13 ({@damage 2d8 + 4}) de dano perfurante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}9 ({@damage 2d4 + 4}) dano de concussão. Se o alvo for uma criatura Média ou menor, ele deverá ter sucesso em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Dragonbait",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 218,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"saurial"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item breastplate|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 17,
+			"int": 14,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"wis": "+6",
+				"cha": "+7"
+			},
+			"skill": {
+				"athletics": "+5",
+				"medicine": "+6"
+			},
+			"passive": 13,
+			"conditionImmune": [
+				"disease"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Divine Health",
+					"entries": [
+						"Dragonbait é imune a doenças."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Enquanto segura seu {@item holy avenger longsword}, Dragonbait cria uma aura em um raio de 3 metros ao seu redor. Enquanto esta aura estiver ativa, Dragonbait e todas as criaturas amigáveis ​​a ele na aura têm vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dragonbait faz dois ataques com armas corpo a corpo."
+					]
+				},
+				{
+					"name": "Holy Avenger (+3 Longsword)",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 5}) de dano cortante ou 10 ({@damage 1d10 + 5}) de dano cortante quando usado com as duas mãos. Se o alvo for um demônio ou um morto-vivo, ele sofrerá 11 ({@damage 2d10}) de dano radiante extra."
+					]
+				},
+				{
+					"name": "Sense Alignment",
+					"entries": [
+						"Dragonbait escolhe uma criatura que ele possa ver a até 18 metros dele e determina seu alinhamento, desde que a criatura não esteja escondida da magia de adivinhação por um feitiço ou outro efeito mágico."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drufi",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 64,
+			"_copy": {
+				"name": "Frost Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Drufi",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Eblis",
+			"source": "ToA",
+			"page": 219,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d10 + 4"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 12,
+			"int": 12,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The eblis's innate spellcasting ability is Intelligence (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blur}",
+							"{@spell hypnotic pattern}",
+							"{@spell minor illusion}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O eblis ataca duas vezes com o bico."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo {@h}5 ({@damage 1d4 + 3}) de dano perfurante."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ekene-Afa",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 25,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gladiator",
+						"with": "Ekene-Afa",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eku",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 34,
+			"_copy": {
+				"name": "Couatl",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the couatl",
+						"with": "Eku",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Elok Jaharwon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 67,
+			"_copy": {
+				"name": "Wereboar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereboar",
+						"with": "Elok",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Faroul",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 34,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Faroul",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fenthaza",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 113,
+			"_copy": {
+				"name": "Yuan-ti Nightmare Speaker",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the yuan-ti",
+						"with": "Fenthaza",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flask of Wine",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Tabaxi Hunter",
+				"source": "ToA",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the tabaxi",
+						"with": "Flask of Wine",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flying Monkey",
+			"source": "ToA",
+			"page": 220,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20,
+				"fly": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 11,
+			"int": 5,
+			"wis": 12,
+			"cha": 6,
+			"passive": 11,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O macaco voador tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do macaco estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Familiar",
+					"entries": [
+						"Com a permissão do Mestre, o feitiço {@spell find familiar} pode invocar um macaco voador."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 1} para acertar, alcance 5 pés, um alvo {@h}1 ({@damage 1d4 - 1}) de dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Four-Armed Gargoyle",
+			"source": "ToA",
+			"page": 221,
+			"size": [
+				"L"
+			],
+			"type": "elemental",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 147,
+				"formula": "14d10 + 70"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 20,
+			"int": 6,
+			"wis": 11,
+			"cha": 9,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with adamantine weapons",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Terran"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a gárgula permaneça imóvel, ela é indistinguível de uma estátua inanimada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A gárgula faz cinco ataques: um com a mordida e quatro com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d4 + 4}) cortando dano."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"T"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Snapping Turtle",
+			"source": "ToA",
+			"page": 222,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				},
+				{
+					"ac": 12,
+					"condition": "while prone"
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 40
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 14,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A tartaruga pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Stable",
+					"entries": [
+						"Sempre que um efeito derruba a tartaruga {@condition prone}, ela pode fazer um teste de resistência de Constituição {@dc 10} para evitar ser derrubada {@condition prone}. Uma tartaruga {@condition prone} está de cabeça para baixo. Para se levantar, ele deve ter sucesso em um teste de Destreza {@dc 10} em seu turno e então usar todo o seu movimento naquele turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}18 ({@damage 4d6 + 4}) dano cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Girallon Zombie",
+			"source": "ToA",
+			"page": 240,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d10 + 21"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 3,
+			"wis": 7,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"Como uma ação bônus, o zumbi pode se mover até sua velocidade em direção a uma criatura hostil que ele possa ver."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O zumbi faz cinco ataques: um com a mordida e quatro com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) cortando dano."
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive",
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gondolo",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 34,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Stout Halfling",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Gondolo",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d6 + 3"
+			},
+			"languageTags": [
+				"C",
+				"H",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Grabstab",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 89,
+			"_copy": {
+				"name": "Goblin Boss",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goblin",
+						"with": "Grabstab",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grandfather Zitembe",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 20,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Zitembe",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Hew Hackinstone",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 33,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"Hew tem resistência a dano de veneno e vantagem em testes de resistência contra {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"No início de seu turno, Hew pode ganhar vantagem em todas as jogadas de ataque com armas corpo a corpo durante esse turno, mas as jogadas de ataque contra ele têm vantagem até o início de seu próximo turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) cortando dano."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"traitTags": [
+				"Reckless"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ifan Talro'a",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 25,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Ifan",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jaculi",
+			"source": "ToA",
+			"page": 225,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d10"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 11,
+			"int": 2,
+			"wis": 8,
+			"cha": 3,
+			"skill": {
+				"athletics": "+4",
+				"perception": "+1",
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 11,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Camouflage",
+					"entries": [
+						"O jaculi tem vantagem em testes de Destreza ({@skill Stealth}) feitos para se esconder."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"O jaculi tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Spring",
+					"entries": [
+						"O jaculi salta até 9 metros em linha reta e desfere um ataque de mordida contra um alvo ao seu alcance. Este ataque tem vantagem se o jaculi saltar pelo menos 3 metros. Se o ataque acertar, a mordida causa 7 ({@damage 2d6}) de dano perfurante extra."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jessamine",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 26,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Ifan",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jobal",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 26,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Jobal",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kamadan",
+			"source": "ToA",
+			"page": 225,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d10 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+7"
+			},
+			"passive": 14,
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"O Kamadan tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"Se o kamadan se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, o alvo deve ter sucesso em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}. Se o alvo for derrubado {@condition prone}, o kamadan pode realizar dois ataques – um com sua mordida e outro com suas cobras – contra ele como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Kamadan faz dois ataques: um com sua mordida ou garra e outro com suas cobras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) cortando dano."
+					]
+				},
+				{
+					"name": "Snakes",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}6 ({@damage 1d6 + 3}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 12}, sofrendo 21 ({@damage 6d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Sleep Breath (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O Kamadan exala gás do sono em um cone de 9 metros. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Constituição {@dc 12} ou cairá {@condition unconscious} por 10 minutos. Este efeito termina para uma criatura se ela sofrer dano ou se alguém usar uma ação para acordá-la."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pounce"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "King of Feathers",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 106,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 200,
+				"formula": "19d12 + 52"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 25,
+			"dex": 10,
+			"con": 19,
+			"int": 2,
+			"wis": 12,
+			"cha": 9,
+			"skill": {
+				"perception": "+4"
+			},
+			"passive": 14,
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The King of Feathers's innate spellcasting ability is Wisdom. It can innately cast the following spell, requiring no material components:"
+					],
+					"will": [
+						"{@spell misty step}"
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Detect Invisibility",
+					"entries": [
+						"O Rei das Penas pode ver {@condition invisible} criaturas e objetos como se fossem visíveis."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o Rei das Penas falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Rei das Penas faz dois ataques: um com a mordida e outro com a cauda. Não pode realizar ambos os ataques contra o mesmo alvo."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}33 ({@damage 4d12 + 7}) dano perfurante. Se o alvo for uma criatura Média ou menor, é {@condition grappled} (escape {@dc 17}). Até que esta luta termine, o alvo é {@condition restrained}, e o tiranossauro não pode morder outro alvo."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 10 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) dano de concussão."
+					]
+				},
+				{
+					"name": "Summon Swarm {@recharge 5}",
+					"entries": [
+						"O Rei das Penas exala um {@creature swarm of wasps||swarm of insects (wasps)} que se forma em um espaço a até 6 metros dele. O enxame atua como aliado do Rei das Penas e realiza seu turno imediatamente após ele. O enxame se dispersa após 1 minuto. Ele não pode usar a ação Convocar Enxame enquanto estiver agarrando uma criatura com suas mandíbulas."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kupalué",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Vegepygmy",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vegepygmy",
+						"with": "Kupalué",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Kwayothé",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 26,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Kwayothé",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Laskilar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 67,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Laskilar",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Laskilar wears a {@item cape of the mountebank}."
+							]
+						}
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Liara Portyr",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 227,
+			"otherSources": [
+				{
+					"source": "BGDIA"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 14,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+4",
+				"wis": "+4"
+			},
+			"skill": {
+				"athletics": "+5",
+				"deception": "+5",
+				"insight": "+4",
+				"intimidation": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"Liara tem vantagem em testes de resistência contra ser {@condition frightened}."
+					]
+				},
+				{
+					"name": "Flaming Fury",
+					"entries": [
+						"Uma vez por turno, quando Liara atinge uma criatura com uma arma corpo a corpo, ela pode fazer com que o fogo irrompa magicamente de sua arma e cause 10 ({@damage 3d6}) de dano de fogo extra ao alvo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Liara faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 100/400 pés, um alvo. {@h}6 ({@damage 1d10 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb",
+				"heavy crossbow|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mantrap",
+			"source": "ToA",
+			"page": 227,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d10 + 7"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 12,
+			"int": 1,
+			"wis": 10,
+			"cha": 2,
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"prone"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Attractive Pollen (1/Day)",
+					"entries": [
+						"Quando a armadilha detecta qualquer criatura próxima, ela pode usar sua reação para liberar pólen em um raio de 9 metros. Qualquer besta ou humanóide dentro da área deve ter sucesso em um teste de resistência de {@dc 11} Sabedoria ou será forçado a usar todo o seu movimento em seus turnos para chegar o mais próximo possível da armadilha. Um alvo afetado pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a armadilha permaneça imóvel, ela é indistinguível de uma planta tropical comum."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Engulf",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura Média ou menor. {@h}O alvo está preso dentro das mandíbulas frondosas da armadilha. Enquanto preso desta forma, o alvo é {@condition blinded} e {@condition restrained}, recebe {@quickref Cover||3||total cover} de ataques e outros efeitos fora da armadilha e sofre 14 ({@damage 4d6}) de dano ácido no início de cada um dos turnos do alvo. Se a armadilha morrer, a criatura dentro dela não estará mais perto dela. Uma armadilha pode engolir apenas uma criatura por vez."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"T"
+			],
+			"damageTags": [
+				"A"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Mister Threadneedle",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 183,
+			"_copy": {
+				"name": "Scarecrow",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scarecrow",
+						"with": "Mister Threadneedle",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Musharib",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 34,
+			"_copy": {
+				"name": "Albino Dwarf Spirit Warrior",
+				"source": "ToA",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dwarf",
+						"with": "Musharib",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Mwaxanaré",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 228,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 6,
+			"dex": 10,
+			"con": 11,
+			"int": 13,
+			"wis": 12,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"nature": "+3",
+				"persuasion": "+5",
+				"religion": "+3"
+			},
+			"passive": 11,
+			"languages": [
+				"Auran",
+				"Common",
+				"telepathy 30 ft."
+			],
+			"cr": "1/8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Mwaxanaré is a 2nd-level spellcaster. Her spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). She regains her expended spell slots when she finishes a short or long rest. She knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast}",
+								"{@spell mage hand}"
+							]
+						},
+						"1": {
+							"lower": 1,
+							"slots": 2,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell protection from evil and good}",
+								"{@spell unseen servant}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} para acertar. alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}2 ({@damage 1d4}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Na",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 228,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "0",
+			"languageTags": [
+				"C"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Nanny Pu'pu",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 72,
+			"_copy": {
+				"name": "Green Hag",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the hag",
+						"with": "Pu'pu",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nepartak",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 137,
+			"_copy": {
+				"name": "Flameskull",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the flameskull",
+						"with": "Nepartak",
+						"flags": "i"
+					}
+				}
+			},
+			"languages": [
+				"Common",
+				"telepathy 30 ft."
+			],
+			"languageTags": [
+				"C",
+				"TP"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Niles Breakbone",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 47,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Niles",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ortimay Swift and Dark",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 21,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Rock Gnome",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Ortimay",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"G",
+				"X"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Orvex Ocrammas",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 96,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Orvex",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"languages": [
+				"Common",
+				"Grung"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pterafolk",
+			"source": "ToA",
+			"page": 229,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d10 + 4"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 50
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 12,
+			"int": 9,
+			"wis": 10,
+			"cha": 11,
+			"skill": {
+				"perception": "+2",
+				"survival": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Terror Dive",
+					"entries": [
+						"Se o pterafolk estiver voando e mergulhar pelo menos 9 metros em linha reta em direção a um alvo, e então atingir esse alvo com um ataque de arma corpo a corpo, o alvo será {@condition frightened} até o final de seu próximo turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O povo ptera faz três ataques: um com a mordida e dois com as garras. Alternativamente, ele faz dois ataques corpo a corpo com seu dardo."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano cortante."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 30/120 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Qawasha",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the druid",
+						"with": "Qawasha",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ras Nsi",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 230,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"shapechanger",
+					"yuan-ti"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item bracers of defense}"
+					]
+				}
+			],
+			"hp": {
+				"special": "127 ({@dice 17d8 + 51}) reduced to 107; subtract 1 for each day that passes during the adventure"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 16,
+			"con": 17,
+			"int": 18,
+			"wis": 18,
+			"cha": 21,
+			"save": {
+				"con": "+6",
+				"wis": "+7"
+			},
+			"skill": {
+				"deception": "+8",
+				"persuasion": "+8",
+				"religion": "+7",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ras Nsi's innate spellcasting ability is Charisma (spell save {@dc 16}). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell animal friendship} (snakes only)"
+					],
+					"daily": {
+						"3": [
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ras Nsi is an 11th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 15}, {@hit 7} to hit with spell attacks).",
+						"Ras Nsi has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell mending}",
+								"{@spell poison spray}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell expeditious retreat}",
+								"{@spell false life}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell hold person}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell fireball}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell contact other plane}",
+								"{@spell geas}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell create undead}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Ras Nsi usa {@item bracers of defense}, empunha um {@item flame tongue longsword} e carrega um {@item sending stones||sending stone} correspondente ao carregado pelo guia Salida (veja o capítulo 1)."
+					]
+				},
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Ras Nsi pode usar sua ação para se transformar em uma cobra Média ou voltar à sua forma yuan-ti. Suas estatísticas são as mesmas em cada formulário. Qualquer equipamento que ele esteja usando ou carregando não é transformado. Ele não muda de forma se morrer."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Ras Nsi tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ras Nsi faz três ataques corpo a corpo, mas só pode usar Constrict uma vez."
+					]
+				},
+				{
+					"name": "Bite (Snake Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano perfurante mais 7 ({@damage 2d6}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 1,5 m, uma criatura. {@h}10 ({@damage 2d6 + 3}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 14}). Até que esta luta termine, o alvo é {@condition restrained} e Ras Nsi não pode restringir outro alvo."
+					]
+				},
+				{
+					"name": "Flame Tongue Longsword (Yuan-ti Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante quando usado com as duas mãos, mais 7 ({@damage 2d6}) de dano de fogo."
+					]
+				}
+			],
+			"attachedItems": [
+				"flame tongue longsword|dmg"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Shapechanger"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"I",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "River Mist",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Tabaxi Hunter",
+				"source": "ToA",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the tabaxi",
+						"with": "River Mist",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Salida",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Yuan-ti Pureblood",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the yuan-ti",
+						"with": "Salida",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"skill": {
+				"deception": "+6",
+				"perception": "+3",
+				"stealth": "+3",
+				"survival": "+5"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sekelok",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 120,
+			"_copy": {
+				"name": "Champion",
+				"source": "VGM",
+				"_templates": [
+					{
+						"name": "Yuan-ti Pureblood",
+						"source": "VGM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the champion",
+						"with": "Sekelok",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTagsSpell": [
+				"I"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Shago",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 35,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gladiator",
+						"with": "Shago",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"skill": {
+				"athletics": "+10",
+				"intimidation": "+5",
+				"survival": "+7"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Skeleton Key",
+			"source": "ToA",
+			"page": 126,
+			"_copy": {
+				"name": "Skeleton",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Spider Climb",
+							"entries": [
+								"The skeleton can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"U"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O esqueleto faz dois ataques de adaga."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spiked Tomb Guardian",
+			"source": "ToA",
+			"page": 154,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 9,
+			"con": 18,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"lightning",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Berserk",
+					"entries": [
+						"Sempre que o guardião da tumba começar seu turno com 40 pontos de vida ou menos, role um {@dice d6}. Com um 6, o guardião da tumba fica furioso. Em cada um de seus turnos enquanto estiver furioso, o guardião da tumba ataca a criatura mais próxima que puder ver. Se nenhuma criatura estiver próxima o suficiente para se mover e atacar, o guardião da tumba ataca um objeto, com preferência por um objeto menor que ele. Uma vez que o guardião da tumba enlouquece, ele continua assim até ser destruído ou recuperar todos os seus pontos de vida. O criador do golem, se estiver a até 18 metros do guardião da tumba furioso, pode tentar acalmá-lo falando com firmeza e persuasão. O guardião da tumba deve ser capaz de ouvir seu criador, que deve realizar uma ação para realizar um teste de {@dc 15} Carisma ({@skill Persuasion}). Se o teste for bem sucedido, o guardião da tumba deixa de estar furioso. Se sofrer dano enquanto ainda estiver com 40 pontos de vida ou menos, o guardião da tumba pode ficar furioso novamente."
+					]
+				},
+				{
+					"name": "Aversion of Fire",
+					"entries": [
+						"Se o guardião da tumba sofrer dano de fogo, ele terá desvantagem nas jogadas de ataque e testes de habilidade até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"O guardião da tumba é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Lightning Absorption",
+					"entries": [
+						"Sempre que o guardião da tumba for sujeito a dano elétrico, ele não sofrerá nenhum dano e, em vez disso, recuperará um número de pontos de vida igual ao dano elétrico causado."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O guardião da tumba tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas do golem são mágicos."
+					]
+				},
+				{
+					"name": "Chained",
+					"entries": [
+						"{@note This trait applies when two guardians are chained together.}",
+						"Uma corrente mágica com pontas que une um par de guardiões impede que eles se afastem mais de 4,5 metros. Além disso, enquanto a corrente estiver intacta, o dano causado a qualquer um dos guardiões será dividido igualmente entre eles. A corrente com espinhos pode ser atacada separadamente e tem CA 18, limite de dano de 10, 5 pontos de vida e imunidade a veneno e dano psíquico. Se a corrente quebrar, ambos os guardiões da tumba enlouquecerão instantaneamente."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O guardião da tumba faz dois ataques com manoplas com espinhos."
+					]
+				},
+				{
+					"name": "Spiked Gauntlet",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) de dano por concussão mais 9 ({@damage 2d6}) de dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Stone Juggernaut",
+			"source": "ToA",
+			"page": 231,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 157,
+				"formula": "15d10 + 75"
+			},
+			"speed": {
+				"walk": {
+					"number": 50,
+					"condition": "(in one direction chosen at the start of its turn)"
+				}
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 15,
+			"int": 14,
+			"wis": 14,
+			"cha": 16,
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks not made with adamantine weapons",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Devastating Roll",
+					"entries": [
+						"O rolo compressor pode se mover pelo espaço de uma criatura {@condition prone}. Uma criatura cujo espaço o rolo compressor entra pela primeira vez em um turno deve realizar um teste de resistência de {@dc 17} de Destreza, sofrendo 55 ({@damage 10d10}) de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"O rolo compressor é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Enquanto tiver 1 ponto de vida restante, o rolo compressor recupera magicamente todos os seus pontos de vida diariamente ao amanhecer. O rolo compressor é destruído e não se regenera se chegar a 0 pontos de vida."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"O rolo compressor causa o dobro de dano a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}25 ({@damage 3d12 + 6}) dano de concussão. Se o alvo for uma criatura Grande ou menor, ele deverá ter sucesso em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Immutable Form",
+				"Regeneration",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Su-monster",
+			"source": "ToA",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 12,
+			"int": 9,
+			"wis": 13,
+			"cha": 9,
+			"skill": {
+				"athletics": "+6",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O su-monstro faz dois ataques: um com a mordida e outro com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) de dano cortante, ou 12 ({@damage 4d4 + 2}) de dano cortante se o su-monstro estiver pendurado pela cauda e todos os quatro membros estiverem livres."
+					]
+				},
+				{
+					"name": "Psychic Crush {@recharge 5}",
+					"entries": [
+						"O su-monstro tem como alvo uma criatura que ele possa ver a até 9 metros dele. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou sofrerá 17 ({@damage 5d6}) de dano psíquico e ficará {@condition stunned} por 1 minuto. O alvo {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Syndra Silvane",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 8,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the archmage",
+						"with": "Syndra",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish",
+				"Halfling"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E",
+				"H"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Tabaxi Hunter",
+			"source": "ToA",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tabaxi"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 40,
+				"formula": "9d8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 11,
+			"int": 13,
+			"wis": 14,
+			"cha": 15,
+			"skill": {
+				"athletics": "+2",
+				"perception": "+4",
+				"stealth": "+5",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common plus any one language"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Feline Agility",
+					"entries": [
+						"Quando o tabaxi se move em seu turno de combate, ele pode dobrar sua velocidade até o final do turno. Depois de usar esta habilidade, o tabaxi não poderá usá-la novamente até que se mova 0 metro em um de seus turnos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tabaxi faz dois ataques com suas garras, sua espada curta ou seu arco curto."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano cortante."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 80/320 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Tabaxi Minstrel",
+			"source": "ToA",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tabaxi"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 11,
+			"int": 14,
+			"wis": 12,
+			"cha": 16,
+			"skill": {
+				"perception": "+3",
+				"performance": "+7",
+				"persuasion": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common plus any two languages"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Feline Agility",
+					"entries": [
+						"Quando o tabaxi se move em seu turno de combate, ele pode dobrar sua velocidade até o final do turno. Depois de usar esta habilidade, o tabaxi não poderá usá-la novamente até que se mova 0 metro em um de seus turnos."
+					]
+				},
+				{
+					"name": "Inspire (1/Day)",
+					"entries": [
+						"Enquanto descansa um pouco, o tabaxi pode passar 1 minuto cantando, tocando um instrumento, contando uma história ou recitando um poema para acalmar e inspirar outras criaturas além dele. Até cinco criaturas à escolha do tabaxi que possam ver e ouvir seu desempenho ganham 8 pontos de vida temporários ao final do breve descanso do tabaxi."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tabaxi faz dois ataques de garras ou dois ataques de dardos."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) cortando dano."
+					]
+				},
+				{
+					"name": "Dart",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dart|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Terracotta Warrior",
+			"source": "ToA",
+			"page": 161,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "armor",
+						"with": "terracotta warrior"
+					},
+					"trait": [
+						{
+							"mode": "replaceArr",
+							"replace": "False Appearance",
+							"items": {
+								"name": "False Appearance",
+								"entries": [
+									"While the terracotta warrior remains motionless, it is indistinguishable from a terracotta statue."
+								]
+							}
+						},
+						{
+							"mode": "prependArr",
+							"items": {
+								"name": "Fragile",
+								"entries": [
+									"If a critical hit is scored against the terracotta warrior, it shatters and is destroyed."
+								]
+							}
+						}
+					],
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Slam",
+						"items": {
+							"name": "Shortsword",
+							"entries": [
+								"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+							]
+						}
+					}
+				}
+			},
+			"damageTags": [
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Tomb Dwarf",
+			"source": "ToA",
+			"page": 135,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o anão da tumba tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O anão da tumba faz dois ataques com espada longa ou dois ataques com besta. Ele pode usar seu Life Drain no lugar de um ataque de espada longa."
+					]
+				},
+				{
+					"name": "Life Drain",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura. {@h}5 ({@damage 1d6 + 2}) dano necrótico. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou seu máximo de pontos de vida será reduzido em uma quantidade igual ao dano recebido. Esta redução dura até o alvo terminar um descanso longo. O alvo morre se este efeito reduzir seu máximo de pontos de vida para 0. Um humanóide morto por este ataque ressuscita 24 horas depois como um zumbi sob o controle do anão da tumba, a menos que o humanóide seja restaurado à vida ou seu corpo seja destruído. O anão da tumba não pode ter mais do que doze zumbis sob seu controle ao mesmo tempo."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano cortante ou 7 ({@damage 1d10 + 2}) de dano cortante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 80/320 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb",
+				"light crossbow|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"HPR",
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tomb Guardian",
+			"source": "ToA",
+			"page": 127,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 9,
+			"con": 18,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"lightning",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Berserk",
+					"entries": [
+						"Sempre que o guardião da tumba começar seu turno com 40 pontos de vida ou menos, role um {@dice d6}. Com um 6, o guardião da tumba fica furioso. Em cada um de seus turnos enquanto estiver furioso, o guardião da tumba ataca a criatura mais próxima que puder ver. Se nenhuma criatura estiver próxima o suficiente para se mover e atacar, o guardião da tumba ataca um objeto, com preferência por um objeto menor que ele. Uma vez que o guardião da tumba enlouquece, ele continua assim até ser destruído ou recuperar todos os seus pontos de vida. O criador do golem, se estiver a até 18 metros do guardião da tumba furioso, pode tentar acalmá-lo falando com firmeza e persuasão. O guardião da tumba deve ser capaz de ouvir seu criador, que deve realizar uma ação para realizar um teste de {@dc 15} Carisma ({@skill Persuasion}). Se o teste for bem sucedido, o guardião da tumba deixa de estar furioso. Se sofrer dano enquanto ainda estiver com 40 pontos de vida ou menos, o guardião da tumba pode ficar furioso novamente."
+					]
+				},
+				{
+					"name": "Aversion of Fire",
+					"entries": [
+						"Se o guardião da tumba sofrer dano de fogo, ele terá desvantagem nas jogadas de ataque e testes de habilidade até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"O guardião da tumba é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Lightning Absorption",
+					"entries": [
+						"Sempre que o guardião da tumba for sujeito a dano elétrico, ele não sofrerá nenhum dano e, em vez disso, recuperará um número de pontos de vida igual ao dano elétrico causado."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O guardião da tumba tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas do golem são mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O guardião da tumba faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tri-flower Frond",
+			"source": "ToA",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 5
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 12,
+			"int": 9,
+			"wis": 13,
+			"cha": 9,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"prone"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A folhagem de três flores usa a flor de laranjeira, depois a flor amarela e depois a flor vermelha."
+					]
+				},
+				{
+					"name": "Orange Blossom",
+					"entries": [
+						"A folhagem de três flores escolhe uma criatura que possa ver a até 1,5 metro dela. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 11} ou será {@condition poisoned} por 1 hora. Enquanto {@condition poisoned} desta forma, o alvo é {@condition unconscious}. No final de cada minuto, o alvo {@condition poisoned} pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				},
+				{
+					"name": "Yellow Blossom",
+					"entries": [
+						"A folhagem de três flores escolhe uma criatura que possa ver a até 1,5 metro dela. O alvo deve ter sucesso em um teste de resistência de Destreza {@dc 11} ou será coberto com seiva corrosiva e sofrerá 5 de dano ácido no início de cada um de seus turnos. Molhar o alvo com água reduz o dano ácido em 1 ponto por litro ou frasco de água usado."
+					]
+				},
+				{
+					"name": "Red Blossom",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 1,5 m, uma criatura. {@h}2 ({@damage 1d4}) dano perfurante, e o alvo é {@condition grappled} (escape {@dc 11}). Até que esta luta termine, o alvo sofre 5 ({@damage 2d4}) de dano venenoso no início de cada um de seus turnos. A flor vermelha pode atacar apenas um alvo por vez. Outra criatura ao alcance da folhagem de três flores pode usar sua ação para encerrar o ataque ao alvo."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"poisoned",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tyrannosaurus Zombie",
+			"source": "ToA",
+			"page": 241,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "13d12 + 52"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 25,
+			"dex": 6,
+			"con": 19,
+			"int": 1,
+			"wis": 3,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 6,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Disgorge Zombie",
+					"entries": [
+						"Como uma ação bônus, o zumbi tiranossauro pode vomitar um {@creature zombie} normal, que aparece em um espaço desocupado a até 3 metros dele. O {@creature zombie} expelido age por sua própria contagem de iniciativa. Depois que um zumbi for expelido, role um {@dice d6}. Se obtiver 1, o zumbi tiranossauro fica sem zumbis para vomitar e perde essa característica. Se o zumbi tiranossauro ainda tiver essa característica quando morrer, {@dice 1d4} zumbis normais irromperão de seu cadáver no início do próximo turno. Esses zumbis agem de acordo com sua própria contagem de iniciativa."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi tiranossauro a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O zumbi tiranossauro faz dois ataques: um com a mordida e outro com a cauda. Não pode realizar ambos os ataques contra o mesmo alvo."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}33 ({@damage 4d12 + 7}) dano perfurante. Se o alvo for uma criatura Média ou menor, é {@condition grappled} (escape {@dc 17}). Até que esta luta termine, o alvo é {@condition restrained} e o zumbi tiranossauro não pode morder outro alvo ou vomitar zumbis."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}20 ({@damage 3d8 + 7}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Valindra Shadowmantle",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 58,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d8 + 54"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 20,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+10",
+				"int": "+12",
+				"wis": "+9"
+			},
+			"skill": {
+				"arcana": "+19",
+				"history": "+12",
+				"insight": "+9",
+				"perception": "+9"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"cold",
+				"lightning",
+				"necrotic"
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Abyssal",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Infernal"
+			],
+			"cr": "21",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Valindra is an 18th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). Valindra has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell invisibility}",
+								"{@spell Melf's acid arrow}",
+								"{@spell mirror image}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell fireball}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell dimension door}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell disintegrate}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell finger of death}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate monster}",
+								"{@spell power word stun}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word kill}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Mask",
+					"entries": [
+						"Como uma ação bônus, Valindra pode mascarar sua carne enrugada e parecer um elfo vivo. Esta ilusão mágica dura até que ela termine como uma ação bônus ou até que ela use sua ação lendária Olhar Assustador. O efeito também termina se Valindra cair para 30 pontos de vida ou menos, ou se {@spell dispel magic} for lançado sobre ela."
+					]
+				},
+				{
+					"name": "Preparation",
+					"entries": [
+						"Ao preparar suas magias, Valindra pode trocar qualquer magia de sua lista de magias preparadas por outra magia de mago do mesmo nível."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Valindra falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Se destruída, Valindra ganha um novo corpo em {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativa novamente. O novo corpo aparece a 1,5 metro do filactério."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"Valindra tem vantagem em testes de resistência contra qualquer efeito que expulsa mortos-vivos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Paralyzing Touch",
+					"entries": [
+						"{@atk ms} {@hit 12} para acertar, alcance 1,5 m, uma criatura. {@h}10 ({@damage 3d6}) dano de frio. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 18} ou ser {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Cantrip",
+					"entries": [
+						"Valindra casts a cantrip."
+					]
+				},
+				{
+					"name": "Paralyzing Touch (Costs 2 Actions)",
+					"entries": [
+						"Valindra uses her Paralyzing Touch."
+					]
+				},
+				{
+					"name": "Frightening Gaze (Costs 2 Actions)",
+					"entries": [
+						"Valindra fixes her gaze on one creature she can see within 10 feet of her. The target must succeed on a {@dc 18} Wisdom saving throw against this magic or become {@condition frightened} for 1 minute. The {@condition frightened} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to the Valindra's gaze for the next 24 hours."
+					]
+				},
+				{
+					"name": "Disrupt Life (Costs 3 Actions)",
+					"entries": [
+						"Each non-undead creature within 20 feet of Valindra must make a {@dc 18} Constitution saving throw against this magic, taking 21 ({@damage 6d6}) necrotic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Turn Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"D",
+				"DR",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"C",
+				"N"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"N",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Volothamp \"Volo\" Geddarm",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 235,
+			"otherSources": [
+				{
+					"source": "WDH"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 12,
+			"con": 10,
+			"int": 15,
+			"wis": 11,
+			"cha": 16,
+			"save": {
+				"con": "+2",
+				"wis": "+2"
+			},
+			"skill": {
+				"animal handling": "+4",
+				"arcana": "+4",
+				"deception": "+5",
+				"history": "+4",
+				"insight": "+2",
+				"investigation": "+4",
+				"perception": "+2",
+				"performance": "+7",
+				"persuasion": "+7",
+				"sleight of hand": "+3",
+				"survival": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Elvish"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Volo is a 1st-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 12}, {@hit 4} to hit with spell attacks). He has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell friends}",
+								"{@spell mending}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell comprehend languages}",
+								"{@spell detect magic}",
+								"{@spell disguise self}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Wakanga O'tamu",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 27,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Wakanga",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wild Dog",
+			"source": "ToA",
+			"page": 96,
+			"_copy": {
+				"name": "Jackal",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "jackal",
+						"with": "dog"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Wine Weird",
+			"source": "ToA",
+			"page": 141,
+			"_copy": {
+				"name": "Water Weird",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "water weird",
+						"with": "wine weird"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Withers",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 145,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 16,
+			"int": 16,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"the languages he knew in life"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Withers is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). Withers has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell expeditious retreat}",
+								"{@spell feather fall}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 4,
+							"spells": [
+								"{@spell darkness}",
+								"{@spell hold person}",
+								"{@spell rope trick}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell telekinesis}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Withers carrega o {@item amulet of the black skull|ToA}."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, Withers tem desvantagem em jogadas de ataque, bem como em testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Withers faz dois ataques com espada longa. Ele pode usar seu Life Drain no lugar de um ataque de espada longa."
+					]
+				},
+				{
+					"name": "Life Drain",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura. {@h}5 ({@damage 1d6 + 2}) dano necrótico. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou seu máximo de pontos de vida será reduzido em uma quantidade igual ao dano recebido. Esta redução dura até o alvo terminar um descanso longo. O alvo morre se este efeito reduzir seu máximo de pontos de vida a 0.",
+						"Um humanóide morto por este ataque ressuscita 24 horas depois como um zumbi sob o controle de Withers, a menos que o humanóide seja restaurado à vida ou seu corpo seja destruído. Withers não pode ter mais do que doze zumbis sob seu controle ao mesmo tempo."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano cortante ou 7 ({@damage 1d10 + 2}) de dano cortante se usado com as duas mãos."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"L",
+				"N",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"HPR",
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Xandala",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 236,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "11d8 + 22"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 18,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"int": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+10",
+				"history": "+7",
+				"insight": "+6",
+				"survival": "+6"
+			},
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Halfling"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Xandala is a 9th-level spellcaster. Her spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). Xandala has the following sorcerer spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell chromatic orb}",
+								"{@spell feather fall}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 4,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell fireball}",
+								"{@spell fly}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell ice storm}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate person}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Quickened Spell (3/Day)",
+					"entries": [
+						"Quando ela conjura um feitiço que tem tempo de lançamento de 1 ação, Xandala altera o tempo de lançamento para 1 ação bônus para aquele lançamento."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) de dano por concussão ou 4 ({@damage 1d8}) de dano por concussão quando usado com as duas mãos."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"E",
+				"H"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yellow Musk Creeper",
+			"source": "ToA",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				6
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d8 + 11"
+			},
+			"speed": {
+				"walk": 5,
+				"climb": 5
+			},
+			"str": 12,
+			"dex": 3,
+			"con": 12,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"blinded",
+				"deafened",
+				"exhaustion",
+				"prone"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a trepadeira permaneça imóvel, ela é indistinguível de uma videira florida comum."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"A trepadeira recupera 10 pontos de vida no início do seu turno. Se a trepadeira sofrer dano de fogo, necrótico ou radiante, esta característica não funciona no início do próximo turno. A trepadeira morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Touch",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 1,5 m, uma criatura. {@h}13 ({@damage 3d8}) de dano psíquico. Se o alvo for um humanóide que cai a 0 pontos de vida como resultado deste dano, ele morre e recebe um bulbo de trepadeira almiscarado amarelo. A menos que a lâmpada seja destruída, o cadáver se anima como um zumbi almiscarado amarelo após morrer por 24 horas. A lâmpada é destruída se a criatura ressuscitar dos mortos antes de se transformar em um zumbi almiscarado amarelo, ou se o cadáver for alvo de um feitiço {@spell remove curse} ou magia semelhante antes de ser animado."
+					]
+				},
+				{
+					"name": "Yellow Musk (3/Day)",
+					"entries": [
+						"As flores da trepadeira liberam um almíscar forte que atinge todos os humanóides em um raio de 9 metros dela. Cada alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou será {@condition charmed} do rastejador por 1 minuto. Uma criatura {@condition charmed} desta forma não faz nada em seu turno, exceto mover-se o mais próximo possível da trepadeira. Uma criatura {@condition charmed} da trepadeira pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Regeneration"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yellow Musk Zombie",
+			"source": "ToA",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 13,
+			"dex": 9,
+			"con": 12,
+			"int": 1,
+			"wis": 6,
+			"cha": 3,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 8,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano sofrido, a menos que o dano seja de fogo ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yorb",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 108,
+			"_copy": {
+				"name": "Grung Elite Warrior",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the grung",
+						"with": "Yorb",
+						"flags": "i"
+					}
+				},
+				"_preserve": {
+					"variant": true
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yuan-ti Priest",
+			"source": "ToA",
+			"page": 118,
+			"_copy": {
+				"name": "Yuan-ti Malison (Type 3)",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "removeArr",
+						"names": "Longbow (Yuan-ti Form Only)"
+					}
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Yuan-ti Form Only)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The yuan-ti's innate spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). The yuan-ti can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell animal friendship} (snakes only)",
+						"{@spell eldritch blast} (2 beams)",
+						"{@spell minor illusion}",
+						"{@spell poison spray}"
+					],
+					"daily": {
+						"3": [
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"damageTagsSpell": [
+				"I",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Zalkoré",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 79,
+			"_copy": {
+				"name": "Medusa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the medusa",
+						"with": "Zalkoré",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Zaroum Al-Saryak",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 67,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Zaroum",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zebra",
+			"source": "ToA",
+			"page": 106,
+			"_copy": {
+				"name": "Riding Horse",
+				"source": "MM"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Zhanthi",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 27,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Zhanthi",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zindar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "ToA",
+			"page": 239,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-dragon"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 110,
+				"formula": "17d8 + 34"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 14,
+			"int": 16,
+			"wis": 15,
+			"cha": 18,
+			"save": {
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+9",
+				"insight": "+5",
+				"investigation": "+9"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Primordial"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Zindar is a 14th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). Zindar knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell friends}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell mending}",
+								"{@spell message}"
+							]
+						},
+						"1": {
+							"slots": 6,
+							"spells": [
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell knock}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell clairvoyance}",
+								"{@spell tongues}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dominate beast}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold monster}",
+								"{@spell telekinesis}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell fire storm}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dragon Wings",
+					"entries": [
+						"Como uma ação bônus em seu turno, Zindar pode fazer brotar um par de asas de dragão em suas costas, ganhando deslocamento de voo de 9 metros até dispensá-las como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano por concussão ou 6 ({@damage 1d8 + 2}) de dano por concussão quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"Zindar usa uma das seguintes opções:"
+					]
+				},
+				{
+					"name": "Fire Breath",
+					"entries": [
+						"Zindar exala fogo em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 22 ({@damage 4d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Weakening Breath",
+					"entries": [
+						"Zindar exala gás em um cone de 4,5 metros. Cada criatura naquela área deve ter sucesso em um teste de resistência de Força {@dc 15} ou terá desvantagem em jogadas de ataque baseadas em Força, testes de Força e testes de resistência de Força por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"P"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zorbo",
+			"source": "ToA",
+			"page": 241,
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"see Natural Armor feature"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 13,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 11,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O zorbo tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Natural Armor",
+					"entries": [
+						"O zorbo absorve magicamente a força natural de seu entorno, ajustando sua Classe de Armadura com base no material em que está em pé ou escalando: CA 15 para madeira ou osso, CA 17 para terra ou pedra, ou CA 19 para metal. Se o zorbo não estiver em contato com nenhuma dessas substâncias, sua CA é 10."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Destructive Claws",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 2d6 + 1}) dano cortante, e se o alvo for uma criatura vestindo armadura, carregando um escudo ou possuindo um item mágico que melhore sua CA, ele deve fazer um teste de resistência de {@dc 11} de Destreza. Se falhar na resistência, um desses itens usado ou carregado pela criatura (à escolha do alvo) se deteriora magicamente, sofrendo uma penalidade permanente e cumulativa de -1 na CA que oferece, e o zorbo ganha um bônus de +1 na CA até o início de seu próximo turno. A armadura reduzida para uma CA de 10 ou um escudo ou item mágico que cai para um aumento de CA de 0 é destruído."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

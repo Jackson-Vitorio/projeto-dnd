@@ -1,0 +1,5660 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"MTF"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MTF": "OotA"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Aljanor Keenblade",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 149,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the knight",
+						"with": "Aljanor",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				10
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Amarith Coppervein",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 142,
+			"_copy": {
+				"name": "Veteran",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Mountain Dwarf",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the veteran",
+						"with": "Amarith",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Longsword",
+						"items": {
+							"name": "Warhammer",
+							"entries": [
+								"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage, or 8 ({@damage 1d10 + 3}) bludgeoning damage if used with two hands."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Drow Statue",
+			"source": "OotA",
+			"page": 96,
+			"_copy": {
+				"name": "Animated Armor",
+				"source": "MM",
+				"_mod": {
+					"*": [
+						{
+							"mode": "replaceTxt",
+							"replace": "suit of armor",
+							"with": "statue"
+						},
+						{
+							"mode": "replaceTxt",
+							"replace": "armor",
+							"with": "statue"
+						}
+					]
+				}
+			},
+			"type": "elemental",
+			"hasToken": true
+		},
+		{
+			"name": "Asha Vandree",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 9,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Asha",
+						"flags": "i"
+					}
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Awakened Zurkhwood",
+			"source": "OotA",
+			"page": 230,
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d12 + 14"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 19,
+			"dex": 6,
+			"con": 15,
+			"int": 10,
+			"wis": 10,
+			"cha": 7,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"languages": [
+				"one language known by its creator"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Enquanto a árvore permanece imóvel, ela é indistinguível de um cogumelo zurkhwood normal."
+					]
+				},
+				{
+					"name": "Mute",
+					"entries": [
+						"Se o zurkhwood desperto foi criado por um soberano miconídeo, ele não pode falar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}14 ({@damage 3d6 + 4}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Blurg",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 29,
+			"_copy": {
+				"name": "Orog",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the orog",
+						"with": "Blurg",
+						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Blurg can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bridesmaid of Zuggtmoy",
+			"source": "OotA",
+			"page": 230,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 11,
+			"int": 14,
+			"wis": 8,
+			"cha": 18,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"understands Abyssal but can't speak"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Fungus Stride",
+					"entries": [
+						"Uma vez em seu turno, a dama de honra pode usar 3 metros de seu movimento para pisar magicamente em um cogumelo vivo ou área de fungo a até 1,5 metros e emergir de outra a até 18 metros do primeiro, aparecendo em um espaço desocupado a 1,5 metros do segundo local de cogumelo ou fungo. Os cogumelos e manchas devem ser grandes ou maiores."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hallucination Spores",
+					"entries": [
+						"A dama de honra ejeta esporos em uma criatura que ela possa ver a até 1,5 metro dela. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou será {@condition poisoned} por 1 minuto. Enquanto {@condition poisoned} desta forma, a meta é {@condition incapacitated}. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Infestation Spores (1/Day)",
+					"entries": [
+						"A dama de honra libera esporos que explodem em uma nuvem que preenche uma esfera de 3 metros de raio centrada nela, e a nuvem permanece por 1 minuto. Qualquer criatura de carne e osso na nuvem quando ela aparecer, ou que entrar nela mais tarde, deve fazer um teste de resistência de Constituição {@dc 10}. Se obtiver sucesso, a criatura não pode ser infectada por esses esporos por 24 horas. Se falhar na resistência, a criatura é infectada com uma doença chamada esporos de Zuggtmoy e também ganha uma forma aleatória de loucura indefinida (determinada rolando na tabela Loucura de Zuggtmoy no apêndice D) que dura até a criatura ser curada da doença ou morrer. Enquanto estiver infectada desta forma, a criatura não pode ser reinfectada e deve repetir o teste de resistência ao final de cada 24 horas, encerrando a infecção com sucesso. Em caso de falha, o corpo da criatura infectada é lentamente tomado pelo crescimento de fungos, e após três tentativas falhadas, a criatura morre e é reanimada como um servo de esporos se for um tipo de criatura que pode ser (veja a entrada \"Myconids\" no Manual dos Monstros)."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"CS"
+			],
+			"miscTags": [
+				"AOE",
+				"DIS"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Buppido",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 6,
+			"_copy": {
+				"name": "Derro",
+				"source": "MTF",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the derro",
+						"with": "Buppido",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cave Badger",
+			"source": "OotA",
+			"page": 96,
+			"_copy": {
+				"name": "Giant Badger",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Tunneler",
+							"entries": [
+								"When the badger burrows, it leaves tunnels behind."
+							]
+						}
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"speed": {
+				"walk": 30,
+				"burrow": 15
+			},
+			"senses": [
+				"darkvision 30 ft.",
+				"tremorsense 60 ft."
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Tunneler"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Chamberlain of Zuggtmoy",
+			"source": "OotA",
+			"page": 230,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 17,
+			"dex": 7,
+			"con": 14,
+			"int": 11,
+			"wis": 8,
+			"cha": 12,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"languages": [
+				"Abyssal",
+				"Undercommon"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Mushroom Portal",
+					"entries": [
+						"O camareiro conta como um cogumelo para o traço Fungus Stride da dama de honra de Zuggtmoy."
+					]
+				},
+				{
+					"name": "Poison Spores",
+					"entries": [
+						"Sempre que o camareiro sofre dano, ele libera uma nuvem de esporos. Quando isso acontecer, as criaturas a até 1,5 metro do camareiro devem ter sucesso em um teste de resistência de Constituição {@dc 12} ou ficarão {@condition poisoned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito se obtiver sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O camareiro faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano de concussão."
+					]
+				},
+				{
+					"name": "Infestation Spores (1/Day)",
+					"entries": [
+						"O camareiro libera esporos que explodem em uma nuvem que preenche uma esfera de 3 metros de raio centrada nela, e a nuvem permanece por 1 minuto. Qualquer criatura de carne e osso na nuvem quando ela aparecer, ou que entrar nela mais tarde, deve fazer um teste de resistência de Constituição {@dc 12}. Se obtiver sucesso, a criatura não pode ser infectada por esses esporos por 24 horas. Se falhar na resistência, a criatura é infectada com uma doença chamada esporos de Zuggtmoy e também ganha uma forma aleatória de loucura indefinida (determinada rolando na tabela Loucura de Zuggtmoy no apêndice D) que dura até a criatura ser curada da doença ou morrer. Enquanto estiver infectada desta forma, a criatura não pode ser reinfectada e deve repetir o teste de resistência ao final de cada 24 horas, encerrando a infecção com sucesso. Em caso de falha, o corpo da criatura infectada é lentamente tomado pelo crescimento de fungos, e após três tentativas falhadas, a criatura morre e é reanimada como um servo de esporos se for um tipo de criatura que pode ser (veja a entrada \"Myconids\" no Manual dos Monstros)."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"U"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"AOE",
+				"DIS",
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Chuul Spore Servant",
+			"source": "OotA",
+			"page": 228,
+			"size": [
+				"L"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d10 + 33"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 16,
+			"int": 2,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O servo do esporo faz dois ataques de pinça."
+					]
+				},
+				{
+					"name": "Pincer",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}11 ({@damage 2d6 + 4}) dano de concussão. O alvo é {@condition grappled} (Escape {@dc 14}) se for uma criatura grande ou menor e o servo do esporo não tiver outras duas criaturas {@condition grappled}."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Deepking Horgar Steelshadow V",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 82,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item dwarven plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 11,
+			"cha": 15,
+			"save": {
+				"con": "+4",
+				"wis": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Draconic",
+				"Giant",
+				"Dwarvish"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"Horgar tem vantagem em testes de resistência contra venenos, feitiços e ilusões, bem como para resistir a ser {@condition charmed} ou {@condition paralyzed}."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, Horgar tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				},
+				{
+					"name": "Gauntlets of Ogre Power",
+					"entries": [
+						"Horgar empunha {@item Gauntlets of Ogre Power}, dando-lhe uma pontuação de Força de 19 (+4)."
+					]
+				},
+				{
+					"name": "Brave",
+					"entries": [
+						"Horgar tem vantagem em testes de resistência contra ser {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Por 1 minuto, Horgar aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, Horgar é Grande, dobra seus dados de dano em ataques com armas baseados em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se Horgar não tiver espaço para se tornar Grande, ele atinge o tamanho máximo possível no espaço disponível."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Horgar transforma magicamente {@condition invisible} até que ele ataque, lance um feitiço ou use seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} em um feitiço). Qualquer equipamento que Horgar use ou carregue estará {@condition invisible} com ele."
+					]
+				},
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Horgar faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "+2 Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 1d8 + 6}) de dano por concussão ou 11 ({@damage 1d10 + 6}) de dano por concussão se usado com as duas mãos. Enquanto Horgar é ampliado, o dano aumenta para 15 ({@dice 2d8 + 6}) ou 17 ({@damage 2d10 + 6}) de dano por concussão, respectivamente."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 2} para acertar, alcance 100/400 pés, um alvo. {@h}5 ({@damage 1d10}) dano perfurante."
+					]
+				},
+				{
+					"name": "Leadership (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Por 1 minuto, Horgar pode emitir um comando especial ou aviso sempre que uma criatura não hostil que ele possa ver a até 9 metros de Horgar fizer uma jogada de ataque ou teste de resistência. A criatura pode adicionar {@dice d4} ao seu teste, desde que possa ouvir e compreender Horgar. Uma criatura só pode se beneficiar de um dado de Liderança por vez. Este efeito termina se Horgar for {@condition incapacitated}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Horgar adds 2 to its AC against one melee attack that would hit him. To do so, Horgar must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"+2 warhammer|dmg",
+				"gauntlets of ogre power|dmg",
+				"heavy crossbow|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Derro",
+			"source": "OotA",
+			"page": 224,
+			"reprintedAs": [
+				"Derro|MTF"
+			],
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"derro"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d6 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 5,
+			"cha": 9,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Insanity",
+					"entries": [
+						"O derro tem vantagem em testes de resistência contra {@condition charmed} ou {@condition frightened}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O derro tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o derro tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooked Shortspear",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}1 ({@damage 1d4 - 1}) dano perfurante. Se o alvo for uma criatura, o derro pode optar por não causar dano e tentar tropeçar no alvo, caso em que o alvo deve ter sucesso em um teste de resistência de Força {@dc 9} ou cairá {@condition prone}."
+					]
+				},
+				{
+					"name": "Light Repeating Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 40/160 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"hooked shortspear|oota",
+				"light repeating crossbow|oota"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Derro Savant",
+			"source": "OotA",
+			"page": 224,
+			"reprintedAs": [
+				"Derro Savant|MTF"
+			],
+			"_copy": {
+				"name": "Derro",
+				"source": "OotA"
+			},
+			"hp": {
+				"average": 49,
+				"formula": "11d6 + 11"
+			},
+			"cha": 14,
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The derro savant is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). The derro knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell chromatic orb}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell spider climb}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell blink}",
+								"{@spell lightning bolt}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Droki",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 231,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"derro"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d6 + 7"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(60 ft. with boots of speed)"
+				}
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 13,
+			"int": 10,
+			"wis": 5,
+			"cha": 16,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Droki's innate spellcasting ability is Charisma (spell save {@dc 13}). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell fear}",
+							"{@spell shatter}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Droki usa {@item boots of speed}."
+					]
+				},
+				{
+					"name": "Insanity",
+					"entries": [
+						"Droki tem vantagem em testes de resistência contra ser {@condition charmed} ou {@condition frightened}."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"Droki causa 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado de Droki que não seja {@condition incapacitated} e Droki não tem desvantagem na jogada de ataque."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O derro tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o derro tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Droki faz dois ataques com sua espada curta"
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante. A espada é revestida com veneno de serpente que desaparece após o primeiro golpe. Um alvo sujeito ao veneno deve realizar um teste de resistência de Constituição {@dc 11}, sofrendo 10 ({@damage 3d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Droki adds 3 to his AC against one melee attack that would hit him. To do so, Droki must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sneak Attack",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"damageTagsSpell": [
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drow Acolyte",
+			"source": "OotA",
+			"page": 201,
+			"_copy": {
+				"name": "Acolyte",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Bandit",
+			"source": "OotA",
+			"page": 194,
+			"_copy": {
+				"name": "Bandit",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Commoner",
+			"source": "OotA",
+			"page": 194,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Cultist",
+			"source": "OotA",
+			"page": 196,
+			"_copy": {
+				"name": "Cultist",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Guard",
+			"source": "OotA",
+			"page": 195,
+			"_copy": {
+				"name": "Guard",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Noble",
+			"source": "OotA",
+			"page": 196,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Scout",
+			"source": "OotA",
+			"page": 191,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Keen Senses",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Spore Servant",
+			"source": "OotA",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 2,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Drow Spy",
+			"source": "OotA",
+			"page": 195,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				]
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Duergar Alchemist",
+			"source": "OotA",
+			"page": 76,
+			"_copy": {
+				"name": "Duergar",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Javelin",
+						"items": [
+							{
+								"name": "Acid Vial",
+								"entries": [
+									"{@atk rw} {@hit 4} to hit, range 20 ft., one target. {@h}7 ({@damage 2d6}) acid damage."
+								]
+							},
+							{
+								"name": "Alchemist's Fire",
+								"entries": [
+									"{@atk rw} {@hit 4} to hit, range 20 ft., one target. {@h}2 ({@damage 1d4}) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a successful {@dc 10} Dexterity check to extinguish the flames."
+								]
+							}
+						]
+					}
+				}
+			},
+			"damageTags": [
+				"A",
+				"F",
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Duergar Darkhaft",
+			"source": "OotA",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The darkhaft's innate spellcasting ability is Intelligence (spell save {@dc 10}) it can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell friends}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell disguise self}",
+							"{@spell sleep}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"O duergar tem vantagem em testes de resistência contra venenos, feitiços e ilusões, bem como para resistir a ser {@condition charmed} ou {@condition paralyzed}."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o duergar tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Por 1 minuto, o duergar aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, o duergar é Grande, dobra seus dados de dano em ataques com armas baseados em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o duergar não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
+					]
+				},
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano perfurante ou 11 ({@damage 2d8 + 2}) de dano perfurante enquanto ampliado."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante ou 9 ({@damage 2d6 + 2}) de dano perfurante enquanto ampliado."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O duergar transforma {@condition invisible} magicamente até atacar, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} estivesse em um feitiço). Qualquer equipamento que o duergar use ou carregue estará {@condition invisible} com ele."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"unconscious"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Duergar Keeper of the Flame",
+			"source": "OotA",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Keeper of the Flame's innate spellcasting ability is Wisdom (spell save {@dc 12}.) It can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell friends}",
+						"{@spell message}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell command}"
+						]
+					},
+					"ability": "wis"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Keeper of the Flame is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). The Keeper of the Flame has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell mending}",
+								"{@spell sacred flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bane}",
+								"{@spell inflict wounds}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell enhance ability}",
+								"{@spell spiritual weapon}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duergar Resilience",
+					"entries": [
+						"O duergar tem vantagem em testes de resistência contra venenos, feitiços e ilusões, bem como para resistir a ser {@condition charmed} ou {@condition paralyzed}."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o duergar tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Enlarge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Por 1 minuto, o duergar aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, o duergar é Grande, dobra seus dados de dano em ataques com armas baseados em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o duergar não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
+					]
+				},
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano perfurante ou 11 ({@damage 2d8 + 2}) de dano perfurante enquanto ampliado."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante ou 9 ({@damage 2d6 + 2}) de dano perfurante enquanto ampliado."
+					]
+				},
+				{
+					"name": "Invisibility (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O duergar magicamente transforma {@condition invisible} até atacar, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} estivesse em um feitiço). Qualquer equipamento que o duergar use ou carregue será {@condition invisible} com ele."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb",
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Duergar Spore Servant",
+			"source": "OotA",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 15
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 14,
+			"int": 2,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"war pick|phb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Eldeth Feldrun",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 6,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Mountain Dwarf",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Eldeth",
+						"flags": "i"
+					}
+				}
+			},
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"X"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Emerald Enclave Scout",
+			"source": "OotA",
+			"page": 130,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 14,
+			"int": 11,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"nature": "+4",
+				"perception": "+5",
+				"stealth": "+6",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"O batedor tem vantagem nos testes de resistência contra veneno."
+					]
+				},
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"O batedor tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O batedor faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 100/400 pés, um alvo. {@h}5 ({@damage 1d10}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fiendish Giant Spider",
+			"source": "OotA",
+			"page": 97,
+			"_copy": {
+				"name": "Giant Wolf Spider",
+				"source": "MM"
+			},
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "1/2",
+			"hasToken": true
+		},
+		{
+			"name": "Four-Armed Statue",
+			"source": "OotA",
+			"page": 206,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "statue"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"The statue makes four sword attacks."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Slam",
+							"items": {
+								"name": "Sword",
+								"entries": [
+									"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) slashing damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gash",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 181,
+			"_copy": {
+				"name": "Gnoll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gnoll",
+						"with": "Gash",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Wretched",
+							"entries": [
+								"Gash has disadvantage on Wisdom checks and Wisdom saving throws because of the physical and mental abuse he has suffered. A {@spell lesser restoration} spell rids him of these effects."
+							]
+						}
+					}
+				}
+			},
+			"hp": {
+				"average": 11,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ghazrim DuLoc",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 141,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Ghazrim",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Riding Lizard",
+			"source": "OotA",
+			"page": 131,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d10 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O lagarto pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Giant Rocktopus",
+			"source": "OotA",
+			"page": 28,
+			"_copy": {
+				"name": "Giant Octopus",
+				"source": "MM",
+				"_mod": {
+					"trait": [
+						{
+							"mode": "replaceArr",
+							"replace": "Underwater Camouflage",
+							"items": {
+								"name": "Camouflage",
+								"entries": [
+									"The octopus has advantage on Dexterity ({@skill Stealth}) checks."
+								]
+							}
+						},
+						{
+							"mode": "removeArr",
+							"names": [
+								"Hold Breath",
+								"Water Breathing"
+							]
+						}
+					]
+				}
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 10
+			},
+			"traitTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Glabbagool",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 35,
+			"_copy": {
+				"name": "Gelatinous Cube",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the cube",
+						"with": "Glabbagool",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 10,
+			"languages": [
+				"telepathy 60 ft."
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grazilaxx",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 29,
+			"_copy": {
+				"name": "Mind Flayer",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mind flayer",
+						"with": "Grazilaxx",
+						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Grazilaxx can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grisha",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "human",
+						"prefix": "Damaran"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 12,
+			"int": 11,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"wis": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"persuasion": "+5",
+				"religion": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Grisha is a 6th-level-spellcaster. His spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). He has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell divine favor}",
+								"{@spell inflict wounds}",
+								"{@spell protection from evil and good}",
+								"{@spell shield of faith}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell continual flame}",
+								"{@spell hold person}",
+								"{@spell magic weapon}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell bestow curse}",
+								"{@spell dispel magic}",
+								"{@spell spirit guardians}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Grisha faz dois ataques com seu mangual +1."
+					]
+				},
+				{
+					"name": "+1 Flail",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano de concussão"
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 flail|dmg"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"U"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Hanne Hallen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 171,
+			"_copy": {
+				"name": "Drow",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Hanne",
+						"flags": "i"
+					},
+					"spellcasting": [
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Spellcasting",
+								"headerEntries": [
+									"Hanne is a 1st-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). She has the following wizard spells prepared:"
+								],
+								"spells": {
+									"0": {
+										"spells": [
+											"{@spell minor illusion}",
+											"{@spell ray of frost}"
+										]
+									},
+									"1": {
+										"slots": 4,
+										"spells": [
+											"{@spell shield}",
+											"{@spell mage armor}"
+										]
+									}
+								},
+								"ability": "int"
+							}
+						}
+					]
+				}
+			},
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"int": 17,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4",
+				"arcana": "+5",
+				"investigation": "+5"
+			},
+			"languages": [
+				"Elvish",
+				"Undercommon",
+				"Common"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Hook Horror Spore Servant",
+			"source": "OotA",
+			"page": 68,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 10"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 15,
+			"int": 2,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"paralyzed"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O servo do esporo faz dois ataques de gancho."
+					]
+				},
+				{
+					"name": "Hook",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}11 ({@damage 2d6 + 4}) dano perfurante."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ilvara Mizzrym",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 9,
+			"_copy": {
+				"name": "Drow Priestess of Lolth",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Ilvara",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Ilvara wields a {@item tentacle rod} in addition to her scourge."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infant Basilisk",
+			"source": "OotA",
+			"page": 100,
+			"_copy": {
+				"name": "Basilisk",
+				"source": "MM"
+			},
+			"size": [
+				"T"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d4 + 2"
+			},
+			"speed": {
+				"walk": 10
+			},
+			"str": 10,
+			"cr": "0",
+			"trait": null,
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}1 dano perfurante mais 1 dano venenoso."
+					]
+				}
+			],
+			"conditionInflict": [],
+			"hasToken": true
+		},
+		{
+			"name": "Infant Hook Horror",
+			"source": "OotA",
+			"page": 34,
+			"_copy": {
+				"name": "Hook Horror",
+				"source": "MM"
+			},
+			"size": [
+				"T"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d4 + 2"
+			},
+			"speed": {
+				"walk": 10,
+				"climb": 10
+			},
+			"str": 9,
+			"cr": "0",
+			"action": null,
+			"actionTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Ixitxachitl",
+			"source": "OotA",
+			"page": 225,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d6 + 4"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ixitxachitl Cleric",
+			"source": "OotA",
+			"page": 225,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d6 + 4"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ixitxachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (spell save {@dc 11}, {@hit 3} to hit with spell attacks). The ixitxachitl has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell create or destroy water}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell silence}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell tongues}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Jade Giant Spider",
+			"source": "OotA",
+			"page": 201,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "golem",
+						"with": "spider",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 250,
+				"formula": "17d10 + 85"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Jimjar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 6,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Jimjar",
+						"flags": "i"
+					}
+				}
+			},
+			"languages": [
+				"Common",
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Juvenile Hook Horror",
+			"source": "OotA",
+			"page": 34,
+			"_copy": {
+				"name": "Hook Horror",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Hook",
+						"items": {
+							"name": "Hook",
+							"entries": [
+								"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+							]
+						}
+					}
+				}
+			},
+			"size": [
+				"M"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 15,
+			"cr": "2",
+			"hasToken": true
+		},
+		{
+			"name": "Khalessa Draga",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 149,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "High Elf",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Khalessa",
+						"flags": "i"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "Undercommon"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Khalessa owns a {@item hat of disguise}, which she uses to appear as a female drow while in the company of drow."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Khalessa can innately cast the following spell, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"ability": "int"
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kinyel Druu'giir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 134,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the assassin",
+						"with": "Kinyel",
+						"flags": "i"
+					}
+				}
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kurr",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 179,
+			"_copy": {
+				"name": "Gnoll Fang of Yeenoghu",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gnoll",
+						"with": "Kurr",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lords' Alliance Guard",
+			"source": "OotA",
+			"page": 131,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain shirt|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"O guarda tem vantagem em testes de resistência contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Halberd",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 3 metros, um alvo. {@h}7 ({@damage 1d10 + 2}) cortando dano."
+					]
+				}
+			],
+			"attachedItems": [
+				"halberd|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Lords' Alliance Spy",
+			"source": "OotA",
+			"page": 131,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 10,
+			"int": 12,
+			"wis": 14,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"insight": "+4",
+				"investigation": "+5",
+				"perception": "+6",
+				"persuasion": "+5",
+				"sleight of hand": "+4",
+				"stealth": "+4"
+			},
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"Em cada um de seus turnos, o espião pode usar uma ação bônus para realizar a ação Correr, Desengajar ou Esconder-se."
+					]
+				},
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"O espião causa 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado do espião que não seja {@condition incapacitated} e o espião não tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espião faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Lorthuun",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 141,
+			"_copy": {
+				"name": "Beholder",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the beholder",
+						"with": "Lorthuun",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Eye Rays",
+						"items": {
+							"name": "Eye Rays",
+							"entries": [
+								"The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:",
+								{
+									"type": "list",
+									"style": "list-hang-notitle",
+									"items": [
+										{
+											"type": "item",
+											"name": "1. Charm Ray",
+											"style": "italic",
+											"entry": "The targeted creature must succeed on a {@dc 16} Wisdom saving throw or be {@condition charmed} by the beholder for 1 hour, or until the beholder harms the creature."
+										},
+										{
+											"type": "item",
+											"name": "2. Paralyzing Ray",
+											"style": "italic",
+											"entry": "The targeted creature must succeed on a {@dc 16} Constitution saving throw or be {@condition paralyzed} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+										},
+										{
+											"type": "item",
+											"name": "3. Fear Ray",
+											"style": "italic",
+											"entry": "The targeted creature must succeed on a {@dc 16} Wisdom saving throw or be {@condition frightened} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+										},
+										{
+											"type": "item",
+											"name": "4. Slowing Ray",
+											"style": "italic",
+											"entry": "The targeted creature must succeed on a {@dc 16} Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+										},
+										{
+											"type": "item",
+											"name": "5. Enervation Ray",
+											"style": "italic",
+											"entry": "The targeted creature must make a {@dc 16} Constitution saving throw, taking 36 ({@damage 8d8}) necrotic damage on a failed save, or half as much damage on a successful one."
+										},
+										{
+											"type": "item",
+											"name": "6. Telekinetic Ray",
+											"style": "italic",
+											"entries": [
+												"If the target is a creature, it must succeed on a {@dc 16} Strength saving throw or the beholder moves it up to 30 feet in any direction. It is {@condition restrained} by the ray's telekinetic grip until the start of the beholder's next turn or until the beholder is {@condition incapacitated}.",
+												"If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container."
+											]
+										}
+									]
+								}
+							]
+						}
+					}
+				}
+			},
+			"cr": "9",
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Mev Flintknapper",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 103,
+			"_copy": {
+				"name": "Veteran",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the veteran",
+						"with": "Mev",
+						"flags": "i"
+					}
+				}
+			},
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Narrak",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 232,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"derro"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 40,
+				"formula": "9d6 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 13,
+			"int": 14,
+			"wis": 5,
+			"cha": 16,
+			"skill": {
+				"arcana": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Narrak is a 5th-level spellcaster. His spellcasting ability is Charisma (Save {@dc 13}, {@hit 5} to hit with spell attacks) Narrak has two 2nd-level spell slots, which he regains after finishing a short or long rest, and knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast}",
+								"{@spell friends}",
+								"{@spell poison spray}"
+							]
+						},
+						"2": {
+							"lower": 1,
+							"slots": 2,
+							"spells": [
+								"{@spell armor of Agathys}",
+								"{@spell charm person}",
+								"{@spell hex}",
+								"{@spell hold person}",
+								"{@spell ray of enfeeblement}",
+								"{@spell spider climb}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Insanity",
+					"entries": [
+						"Narrak tem vantagem em testes de resistência contra ser {@condition charmed} ou {@condition frightened}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Narrak tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, Narrak tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Armor of Shadows (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Narrak lança {@spell mage armor} em si mesmo"
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "One with Shadows",
+					"entries": [
+						"Enquanto estiver na penumbra ou na escuridão, Narrak pode se tornar {@condition invisible}. Ele permanece assim até que se mova ou tome uma ação ou reação."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"I",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ougalop",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 142,
+			"_copy": {
+				"name": "Kuo-Toa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the kuo-toa",
+						"with": "Ougalop",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Peebles",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 134,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Peebles",
+						"flags": "i"
+					}
+				}
+			},
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Prince Derendil",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 6,
+			"_copy": {
+				"name": "Quaggoth",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the quaggoth",
+						"with": "Prince Derendil",
+						"flags": "i"
+					}
+				}
+			},
+			"languages": [
+				"Elvish",
+				"Undercommon"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Princess Ebonmire",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 111,
+			"_copy": {
+				"name": "Black Pudding",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the pudding",
+						"with": "Princess Ebonmire",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 6,
+			"action": [
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou 30 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano por concussão mais 18 ({@damage 4d8}) de dano ácido. Além disso, a armadura não-mágica usada pelo alvo é parcialmente dissolvida e sofre uma penalidade permanente e cumulativa de -1 na CA que oferece. A armadura é destruída se a penalidade reduzir sua CA para 10."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Quenthel Baenre",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 204,
+			"_copy": {
+				"name": "Drow Priestess of Lolth",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Quenthel",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Quenthel wields a {@item tentacle rod}."
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Throne Activation",
+							"entries": [
+								"While seated on her throne, Quenthel can use an action on her turn to cast {@spell disintegrate} (save {@dc 19}). A target that fails its saving throw takes {@dice 10d6 + 40} force damage. If this damage reduces the target to 0 hit points, it is disintegrated."
+							]
+						}
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +3 scale mail}"
+					]
+				}
+			],
+			"hp": {
+				"average": 132,
+				"formula": "24d8 + 24"
+			},
+			"int": 18,
+			"wis": 20,
+			"save": {
+				"con": "+8",
+				"wis": "+12",
+				"cha": "+11"
+			},
+			"skill": {
+				"insight": "+12",
+				"perception": "+12",
+				"religion": "+11",
+				"stealth": "+9"
+			},
+			"cr": "22",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Quenthel's spellcasting ability is Charisma (spell save {@dc 19}). She can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}",
+							"{@spell levitate} (self only)"
+						]
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Quenthel is a 20th-level spellcaster. Her spellcasting ability is Wisdom (save {@dc 20}, {@hit 12} to hit with spell attacks). The drow has the following cleric spells prepared:"
+					],
+					"will": [
+						"Any {@filter cleric spell up to 9th level|spells|level=0;1;2;3;4;5;6;7;8;9|class=cleric}."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell poison spray}",
+								"{@spell resistance}",
+								"{@spell spare the dying}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell animal friendship}",
+								"{@spell cure wounds}",
+								"{@spell detect poison and disease}",
+								"{@spell ray of sickness}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell protection from poison}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals} (2 giant spiders)",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell divination}",
+								"{@spell freedom of movement}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell insect plague}",
+								"{@spell mass cure wounds}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Regenerating Black Pudding",
+			"source": "OotA",
+			"page": 211,
+			"_copy": {
+				"name": "Black Pudding",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Regeneration",
+							"entries": [
+								"The pudding regains 10 hit points at the start of its turn. If the pudding takes fire damage, this trait doesn't function at the start of the pudding's next turn. The pudding dies only if it starts its turn with 0 hit points and doesn't regenerate."
+							]
+						}
+					}
+				}
+			},
+			"int": 6,
+			"cr": "5",
+			"traitTags": [
+				"Amorphous",
+				"Regeneration",
+				"Spider Climb"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ront",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 7,
+			"_copy": {
+				"name": "Orc",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the orc",
+						"with": "Ront",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rumpadump",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 72,
+			"_copy": {
+				"name": "Myconid Sprout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the myconid",
+						"with": "Rumpadump",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rystia Zav",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 135,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the spy",
+						"with": "Rystia",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sarith Kzekarit",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 7,
+			"_copy": {
+				"name": "Drow",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Sarith",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shedrak of the Eyes",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 176,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Shedrak",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"trait": [
+				{
+					"name": "Eye Tattoos",
+					"entries": [
+						"Shedrak tem dez pequenos olhos tatuados em sua cabeça careca que lhe permitem ver {@condition invisible} criaturas e objetos como se fossem visíveis."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shuushar the Awakened",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 7,
+			"_copy": {
+				"name": "Kuo-Toa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the kuo-toa",
+						"with": "Shuushar",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skriss",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 29,
+			"_copy": {
+				"name": "Troglodyte",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the troglodyte",
+						"with": "Skriss",
+						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Skriss can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sladis Vadir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 135,
+			"_copy": {
+				"name": "Druid",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "High Elf",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the druid",
+						"with": "Sladis",
+						"flags": "i"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "Undercommon"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sloopidoop",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 29,
+			"_copy": {
+				"name": "Kuo-toa Archpriest",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the kuo-toa",
+						"with": "Sloopidoop",
+						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Sloopidoop can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sovereign Basidia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 88,
+			"_copy": {
+				"name": "Myconid Sovereign",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the myconid",
+						"with": "Basidia",
+						"flags": "i"
+					}
+				}
+			},
+			"damageTags": [
+				"B",
+				"I"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"poisoned",
+				"stunned"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spider King",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 74,
+			"_copy": {
+				"name": "Giant Spider",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Two Heads",
+							"entries": [
+								"Because of its two heads, the Spider King has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, and knocked {@condition unconscious}."
+							]
+						}
+					}
+				}
+			},
+			"hp": {
+				"average": 44,
+				"formula": "4d10 + 4"
+			},
+			"save": {
+				"con": "+3",
+				"wis": "+2"
+			},
+			"skill": {
+				"stealth": "+7",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Spiderbait",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 31,
+			"_copy": {
+				"name": "Goblin",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goblin",
+						"with": "Spiderbait",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3",
+				"stealth": "+6"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Stool",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 7,
+			"_copy": {
+				"name": "Myconid Sprout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the myconid",
+						"with": "Stool",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Svirfneblin Wererat",
+			"source": "OotA",
+			"page": 97,
+			"_copy": {
+				"name": "Wererat",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				]
+			},
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "The Pudding King",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 233,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d6 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 14,
+			"int": 12,
+			"wis": 8,
+			"cha": 17,
+			"save": {
+				"con": "+6",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"perception": "+2",
+				"stealth": "+6",
+				"survival": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Pudding King's innate spellcasting ability is Intelligence (spell save {@dc 12}). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell nondetection} (self only)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blindness/deafness}",
+							"{@spell blur}",
+							"{@spell disguise self}"
+						]
+					},
+					"ability": "int"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Pudding King is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 14}, {@hit 6} to hit with spell attacks). The Pudding King knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell poison spray}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell ray of sickness}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell crown of madness}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell gaseous form}",
+								"{@spell stinking cloud}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell confusion}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cloudkill}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Stone Camouflage",
+					"entries": [
+						"O Rei Pudim tem vantagem em testes de Destreza ({@skill Stealth}) feitos para se esconder em terreno rochoso."
+					]
+				},
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"O Rei Pudim tem vantagem em testes de resistência de Inteligência, Sabedoria e Carisma contra magia."
+					]
+				},
+				{
+					"name": "Insanity",
+					"entries": [
+						"O Rei Pudim tem vantagem em testes de resistência contra {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d8}) dano perfurante."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"O Rei Pudim se transforma magicamente em {@filter ooze|bestiary|type=ooze}, ou volta à sua verdadeira forma. Ele volta à sua verdadeira forma se morrer. Qualquer equipamento que ele esteja vestindo ou carregando é absorvido pela nova forma. Na forma de gosma, o Rei Pudim mantém seu alinhamento, pontos de vida, Dados de Vida e pontuações de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades são substituídas pelas da nova forma."
+					]
+				},
+				{
+					"name": "Create Green Slime (Recharges after a Long Rest)",
+					"entries": [
+						"O Pudding King cria uma mancha de gosma verde (veja “Dungeon Hazards” no capítulo 5 do Dungeon Master’s Guide). O lodo aparece em uma seção da parede, teto ou chão a até 9 metros do Rei Pudim."
+					]
+				}
+			],
+			"attachedItems": [
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Camouflage"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AB",
+				"G",
+				"T",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"I",
+				"N"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"poisoned"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Themberchaud",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 53,
+			"_copy": {
+				"name": "Adult Red Dragon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragon",
+						"with": "Themberchaud",
+						"flags": "i"
+					}
+				}
+			},
+			"damageTagsLegendary": [],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Topsy",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 8,
+			"_copy": {
+				"name": "Wererat",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wererat",
+						"with": "Topsy",
+						"flags": "i"
+					}
+				}
+			},
+			"languages": [
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Troglodyte Champion of Laogzed",
+			"source": "OotA",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"troglodyte"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 59,
+				"formula": "7d8 + 28"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 18,
+			"int": 8,
+			"wis": 12,
+			"cha": 12,
+			"skill": {
+				"athletics": "+6",
+				"intimidation": "+3",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Troglodyte"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Chameleon Skin",
+					"entries": [
+						"O troglodita tem vantagem em testes de Destreza ({@skill Stealth}) feitos para se esconder."
+					]
+				},
+				{
+					"name": "Stench",
+					"entries": [
+						"Qualquer criatura que não seja um troglodita que comece seu turno a até 1,5 metro do troglodita deve ter sucesso em um teste de resistência de Constituição {@dc 14} ou permanecerá {@condition poisoned} até o início do próximo turno da criatura. Em um teste de resistência bem-sucedido, a criatura fica imune ao fedor de todos os trogloditas por 1 hora."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o troglodita tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O troglodita faz três ataques: um com sua mordida e dois com suas garras ou sua clava."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) cortando dano."
+					]
+				},
+				{
+					"name": "Greatclub",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Acid Spray {@recharge}",
+					"entries": [
+						"O troglodita cospe ácido em uma linha de 4,5 metros de comprimento e 1,5 metro de largura. Cada criatura nessa linha deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 10 ({@damage 3d6}) de dano ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"greatclub|phb"
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Turvy",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 8,
+			"_copy": {
+				"name": "Wererat",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Deep Gnome",
+						"source": "DMG"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wererat",
+						"with": "Turvy",
+						"flags": "i"
+					}
+				}
+			},
+			"languages": [
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampiric Ixitxachitl",
+			"source": "OotA",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Vampiric Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 11} ou seu máximo de pontos de vida será reduzido em uma quantidade igual ao dano recebido, e o ixitxachitl recupera pontos de vida iguais a essa quantidade. A redução dura até o alvo terminar um descanso longo. O alvo morre se seu máximo de pontos de vida for reduzido a 0."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Vampiric Ixitxachitl Cleric",
+			"source": "OotA",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ixitxachitl is a 5th-level spellcaster that uses Wisdom as its spellcasting ability (Spell save {@dc 11}, {@hit 3} to hit with spell attacks). The ixitxachitl has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell create or destroy water}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell silence}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell tongues}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Vampiric Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 11} ou seu máximo de pontos de vida será reduzido em uma quantidade igual ao dano recebido, e o ixitxachitl recupera pontos de vida iguais a essa quantidade. A redução dura até o alvo terminar um descanso longo. O alvo morre se seu máximo de pontos de vida for reduzido a 0."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Veldyskar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 151,
+			"_copy": {
+				"name": "Basilisk",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the basilisk",
+						"with": "Veldyskar",
+						"flags": "i"
+					}
+				}
+			},
+			"int": 10,
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Giant",
+				"Undercommon"
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Veldyskar can innately cast the following spell, requiring no material components:"
+					],
+					"daily": {
+						"1": [
+							"{@spell greater restoration}"
+						]
+					}
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Veteran of the Gauntlet",
+			"source": "OotA",
+			"page": 130,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O veterano faz dois ataques com espada longa. Se tiver uma espada curta empunhada, também pode fazer um ataque com espada curta."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 100/400 pés, um alvo. {@h}6 ({@damage 1d10 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb",
+				"shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Viln Tirin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 202,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Viln",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"Viln carries a {@item scimitar of speed} and can make one attack with it as a bonus action on her turn. Viln also carries four {@item dagger|PHB|daggers} coated with {@item purple worm poison}. The poison on a dagger's blade is good for one hit only, whether the poison takes effect or not."
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Scimitar",
+						"items": {
+							"name": "Scimitar",
+							"entries": [
+								"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) slashing damage."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"cr": "5",
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Vizeran DeVir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 155,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Drow",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the archmage",
+						"with": "Vizeran",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Xazax the Eyemonger",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 142,
+			"_copy": {
+				"name": "Beholder",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the beholder",
+						"with": "Xazax",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Y",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 29,
+			"_copy": {
+				"name": "Derro Savant",
+				"source": "MTF",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the derro savant",
+						"with": "Y",
+						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Y can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yestabrod",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 233,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 14,
+			"int": 13,
+			"wis": 15,
+			"cha": 10,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"telepathy 60 ft."
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"Se Yestabrod falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 3d4 + 1}) de dano de concussão mais 7 ({@damage 3d4}) de dano de veneno."
+					]
+				},
+				{
+					"name": "Caustic Spores (1/Day)",
+					"entries": [
+						"Yestabrod libera esporos em um cone de 9 metros. Cada criatura naquela área deve ser bem-sucedida em um teste de resistência de Destreza {@dc 12} ou sofrerá {@dice 1d6} de dano ácido no início de cada turno de Yestabrod. Uma criatura pode repetir o teste de resistência no final de cada turno, encerrando o efeito sobre si mesma se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Infestation Spores (1/Day)",
+					"entries": [
+						"Yestabrod libera esporos que explodem em uma nuvem que preenche uma esfera de 3 metros de raio centrada nela, e a nuvem permanece por 1 minuto. Qualquer criatura de carne e osso na nuvem quando ela aparecer, ou que entrar nela mais tarde, deve fazer um teste de resistência de Constituição {@dc 12}. Se obtiver sucesso, a criatura não pode ser infectada por esses esporos por 24 horas. Se falhar na resistência, a criatura é infectada com uma doença chamada esporos de Zuggtmoy e também ganha uma forma aleatória de loucura indefinida (determinada rolando na tabela Loucura de Zuggtmoy no apêndice D) que dura até a criatura ser curada da doença ou morrer. Enquanto estiver infectada desta forma, a criatura não pode ser reinfectada e deve repetir o teste de resistência ao final de cada 24 horas, encerrando a infecção com sucesso. Em caso de falha, o corpo da criatura infectada é lentamente tomado pelo crescimento de fungos, e após três tentativas falhadas, a criatura morre e é reanimada como um servo de esporos se for um tipo de criatura que pode ser (veja a entrada \"Myconids\" no Manual dos Monstros)."
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "Corpse Burst",
+					"entries": [
+						"Gore, offal, and acid erupt from a corpse within 20 feet of Yestabrod. Creatures within 10 feet of the corpse must succeed on a {@dc 12} Dexterity saving throw or take 7 ({@damage 2d6}) acid damage."
+					]
+				},
+				{
+					"name": "Foul Absorption",
+					"entries": [
+						"Yestabrod absorbs putrescence from a corpse within 5 feet of it, regaining {@dice 1d8 + 2} hit points"
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"AB",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"DIS",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Basilisk",
+			"source": "OotA",
+			"page": 100,
+			"_copy": {
+				"name": "Basilisk",
+				"source": "MM"
+			},
+			"size": [
+				"S"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d6 + 8"
+			},
+			"speed": {
+				"walk": 15
+			},
+			"str": 13,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Petrifying Gaze",
+					"entries": [
+						"Se uma criatura começar seu turno a até 4,5 metros do basilisco e os dois puderem se ver, o basilisco pode forçar a criatura a fazer um teste de resistência de Constituição {@dc 12} se o basilisco não for {@condition incapacitated}. Se falhar, a criatura magicamente começa a se transformar em pedra e é {@condition restrained}. Ele deve repetir o teste de resistência no final do próximo turno. Com um sucesso, o efeito termina. Em caso de falha, a criatura é {@condition petrified} até ser libertada pelo feitiço {@spell greater restoration} ou outra magia.",
+						"Uma criatura que não seja {@status surprised} pode desviar os olhos para evitar o teste de resistência no início de seu turno. Se fizer isso, ele não poderá ver o basilisco até o início do próximo turno, quando poderá desviar os olhos novamente. Se entretanto olhar para o basilisco, deverá fazer o salvamento imediatamente.",
+						"Se o basilisco vir seu reflexo a até 9 metros dele sob luz brilhante, ele se confundirá com um rival e mirará em si mesmo com seu olhar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) de dano perfurante mais 2 ({@damage 1d4}) de dano venenoso."
+					]
+				}
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Hook Horror",
+			"source": "OotA",
+			"page": 34,
+			"_copy": {
+				"name": "Hook Horror",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Hook",
+						"items": {
+							"name": "Hook",
+							"entries": [
+								"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage."
+							]
+						}
+					}
+				}
+			},
+			"size": [
+				"S"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d6 + 4"
+			},
+			"speed": {
+				"walk": 15,
+				"climb": 15
+			},
+			"str": 12,
+			"cr": "1/4",
+			"hasToken": true
+		},
+		{
+			"name": "Yuk Yuk",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 31,
+			"_copy": {
+				"name": "Goblin",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goblin",
+						"with": "Yuk Yuk",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3",
+				"stealth": "+6"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zhentarim Thug",
+			"source": "OotA",
+			"page": 131,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 11,
+			"skill": {
+				"intimidation": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O bandido tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do bandido estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O bandido faz dois ataques corpo a corpo"
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 2} para acertar, alcance 100/400 pés, um alvo. {@h}5 ({@damage 1d10}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"mace|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Zilchyn Q'Leptin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "OotA",
+			"page": 137,
+			"_copy": {
+				"name": "Drow Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Zilchyn",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

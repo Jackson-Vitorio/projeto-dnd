@@ -1,0 +1,251 @@
+{
+	"monster": [
+		{
+			"name": "Alax Jadescales",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LRDT",
+			"page": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dragonborn"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 16,
+			"cha": 15,
+			"skill": {
+				"animal handling": "+5",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Alax casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell Druidcraft}",
+						"{@spell Resistance}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Cure Wounds}",
+							"{@spell Faerie Fire}",
+							"{@spell Purify Food and Drink}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Alax faz dois ataques Fire Strike."
+					]
+				},
+				{
+					"name": "Fire Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano de fogo."
+					]
+				},
+				{
+					"name": "Breath Weapon (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Alax exala um cone de fogo de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 12}, sofrendo 14 ({@damage 4d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ervan Soulfallen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LRDT",
+			"page": 11,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 14,
+			"int": 11,
+			"wis": 8,
+			"cha": 17,
+			"skill": {
+				"arcana": "3",
+				"deception": "+6"
+			},
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ervan casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell Light}",
+						"{@spell Mage Hand}"
+					],
+					"daily": {
+						"2": [
+							"{@spell Dimension Door}"
+						],
+						"1e": [
+							"{@spell Disguise Self}",
+							"{@spell Levitate}",
+							"{@spell Mage Armor}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ervan usa seu cajado para fazer três ataques Arcane Blast."
+					]
+				},
+				{
+					"name": "Arcane Blast",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para acertar, alcance 5 pés ou alcance 120 pés, um alvo. {@h}13 ({@damage 3d6 + 3}) dano de força."
+					]
+				},
+				{
+					"name": "Acid Rain (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O ácido cai em um cilindro de 3 metros de raio e 6 metros de altura centrado em um ponto que Ervan pode ver a até 36 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 22 ({@damage 4d10}) de dano ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"A",
+				"O"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

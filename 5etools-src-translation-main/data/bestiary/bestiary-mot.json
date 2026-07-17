@@ -1,0 +1,6581 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "MOT",
+				"VGM": "MOT",
+				"EGW": "MOT",
+				"GGR": "MOT",
+				"GoS": "MOT",
+				"TftYP": "MOT",
+				"MTF": "MOT"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Abhorrent Overlord",
+			"source": "MOT",
+			"page": 219,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "16d10 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 20,
+			"dex": 18,
+			"con": 16,
+			"int": 15,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"deception": "+7",
+				"intimidation": "+7",
+				"persuasion": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"cold",
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The abhorrent overlord's spellcasting ability is Charisma (spell save {@dc 15}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell confusion}",
+							"{@spell crown of madness}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Insatiable Greed",
+					"entries": [
+						"O abominável suserano pode sentir a presença de ouro a até 300 metros de si mesmo. Ele pode determinar qual local tem a maior quantidade de ouro e pode sentir a direção desse local. Se o ouro estiver sendo movido, ele conhece a direção do movimento. Ele não consegue localizar ouro se qualquer espessura de argila ou chumbo, mesmo uma folha fina, bloquear o caminho direto entre ele e o ouro."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O abominável senhor supremo tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O abominável senhor supremo faz dois ataques com suas garras."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) de dano cortante mais 14 ({@damage 4d6}) de dano necrótico. O abominável overlord recupera pontos de vida iguais à metade da quantidade de dano necrótico causado se o alvo for uma criatura."
+					]
+				},
+				{
+					"name": "Storm of Crows {@recharge}",
+					"entries": [
+						"O abominável suserano conjura um enxame de corvos e harpias espectrais em uma esfera de 6 metros de raio centrada em um ponto que o suserano possa ver a até 36 metros dele. A esfera permanece por 1 minuto ou até que o overlord perca {@status concentration} (como se {@status concentration||concentrating} em um feitiço), e sua área esteja levemente obscurecida e {@quickref difficult terrain||3}.",
+						"Qualquer criatura que se mova para a área pela primeira vez em um turno ou comece seu turno lá deve realizar um teste de resistência de Constituição {@dc 15}. Uma criatura sofre 16 ({@damage 3d10}) de dano cortante mais 16 ({@damage 3d10}) de dano psíquico se falhar na resistência, ou metade desse dano se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Akroan Hoplite",
+			"source": "MOT",
+			"page": 228,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 14,
+			"int": 11,
+			"wis": 14,
+			"cha": 13,
+			"save": {
+				"str": "+5",
+				"dex": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Hold the Line",
+					"entries": [
+						"Enquanto o hoplita estiver segurando uma lança, outras criaturas provocam um ataque de oportunidade do hoplita quando se movem a até 1,5 metro dele. Quando o hoplita atinge uma criatura com um ataque de oportunidade usando sua lança, a criatura sofre 4 ({@damage 1d8}) de dano perfurante extra e a velocidade da criatura se torna 0 pelo resto do turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O hoplita realiza três ataques corpo a corpo ou dois ataques à distância."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para atingir, alcançar 5 pés ou alcançar 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				},
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}5 ({@damage 1d4 + 3}) dano de concussão. Se o alvo for uma criatura Média ou menor, ele deverá ter sucesso em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Alseid",
+			"group": [
+				"Nymph"
+			],
+			"source": "MOT",
+			"page": 235,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 12,
+			"int": 13,
+			"wis": 14,
+			"cha": 18,
+			"skill": {
+				"persuasion": "+6"
+			},
+			"passive": 12,
+			"resist": [
+				"radiant"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The alseid's spellcasting ability is Charisma (spell save {@dc 14}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"3e": [
+							"{@spell cure wounds}",
+							"{@spell charm person}",
+							"{@spell sleep}"
+						],
+						"1e": [
+							"{@spell calm emotions}",
+							"{@spell lesser restoration}",
+							"{@spell plant growth}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hide in Plain Sight",
+					"entries": [
+						"O alseid tem vantagem em testes de Destreza ({@skill Stealth}) feitos para se esconder enquanto estiver em pastagens."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O alseid tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O alseid faz dois ataques de toque radiante."
+					]
+				},
+				{
+					"name": "Radiant Touch",
+					"entries": [
+						"{@atk ms} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano radiante."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"unconscious"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Anvilwrought Raptor",
+			"source": "MOT",
+			"page": 209,
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d4 + 8"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 14,
+			"cha": 1,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one language of its creator but can't speak"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"O raptor tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				},
+				{
+					"name": "Recorded Mimicry",
+					"entries": [
+						"O raptor pode imitar qualquer som, incluindo vozes, que tenha ouvido nas últimas 24 horas. Uma criatura que ouve os sons pode dizer que são imitações com um teste bem-sucedido de {@dc 12} Sabedoria ({@skill Insight})."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O raptor faz dois ataques com o bico."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Anvilwrought Raptor Familiar",
+					"entries": [
+						"Some anvilwrought raptors are created expressly to be familiars. Such creatures have the following trait.",
+						{
+							"type": "entries",
+							"name": "Familiar",
+							"entries": [
+								"The anvilwrought can serve another creature as a familiar, forming a magical, telepathic bond with its willing master. While the two are bonded, the master can sense what the anvilwrought senses, as long as they are within 1 mile of each other."
+							]
+						}
+					],
+					"_version": {
+						"addHeadersAs": "trait"
+					}
+				}
+			],
+			"familiar": true,
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aphemia",
+			"source": "MOT",
+			"page": 226,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 50
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 13,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"intimidation": "+6",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Aphemia falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Aphemia tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Aphemia faz dois ataques: um com a mordida e outro com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 2d4 + 3}) de dano perfurante mais 13 ({@damage 3d8}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) cortando dano."
+					]
+				},
+				{
+					"name": "Discordant Song",
+					"entries": [
+						"Aphemia grita uma cacofonia de sons mágicos. Cada humanóide a até 36 metros dela deve ter sucesso em um teste de resistência de {@dc 14} Sabedoria ou será {@condition frightened} dela até a música terminar. Uma criatura {@condition frightened} sofre 7 ({@damage 2d6}) de dano psíquico no início de seu turno enquanto Aphemia está cantando. Uma criatura {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso. Se o teste de resistência de uma criatura for bem-sucedido ou o efeito terminar, a criatura ficará imune à Canção Discordante de Aphemia pelas próximas 24 horas. Aphemia deve realizar uma ação bônus em seus turnos subsequentes para continuar cantando. Ela pode parar de cantar a qualquer momento. A música termina se Aphemia for {@condition incapacitated} ou morrer."
+					]
+				},
+				{
+					"name": "Grave Calling Song",
+					"entries": [
+						"Aphemia entoa uma melodia mágica baixa e rosnante. Todos os mortos-vivos a até 90 metros dela devem ter sucesso em um teste de resistência de {@dc 14} Sabedoria ou cairão sob seu controle até a música terminar. Aphemia deve realizar uma ação bônus em seus turnos subsequentes para continuar cantando, e ela pode comandar mentalmente os mortos-vivos sob seu controle como parte da mesma ação bônus. Ela pode parar de cantar a qualquer momento. A música termina se Aphemia for {@condition incapacitated} ou morrer."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Arasta",
+			"isNamedCreature": true,
+			"source": "MOT",
+			"page": 248,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 300,
+				"formula": "24d12 + 144"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 24,
+			"dex": 16,
+			"con": 23,
+			"int": 15,
+			"wis": 22,
+			"cha": 17,
+			"save": {
+				"dex": "+10",
+				"con": "+13",
+				"wis": "+13"
+			},
+			"skill": {
+				"arcana": "+9",
+				"deception": "+10",
+				"intimidation": "+10",
+				"nature": "+9",
+				"perception": "+13",
+				"stealth": "+10"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Common",
+				"Sylvan"
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Armor of Spiders (Mythic Trait; Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se Arasta for reduzido a 0 pontos de vida, ela não morre nem cai {@condition unconscious}. Em vez disso, ela recupera 200 pontos de vida. Além disso, os filhos de Arasta imediatamente atacam seu corpo para protegê-la, concedendo-lhe 100 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Arasta falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Arasta tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Arasta pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Arasta ignora as restrições de movimento causadas pelas teias."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Arasta faz três ataques: um com a mordida e dois com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 1,5 m, uma criatura. {@h}20 ({@damage 3d8 + 7}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 21}, sofrendo 32 ({@damage 5d12}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso. Se o dano reduzir o alvo a 0 pontos de vida, o alvo permanece estável, mas {@condition poisoned} por 1 hora, mesmo após recuperar pontos de vida, e é {@condition paralyzed} enquanto {@condition poisoned} desta forma."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 3d6 + 7}) cortando dano."
+					]
+				},
+				{
+					"name": "Web of Hair {@recharge 4}",
+					"entries": [
+						"Arasta solta seu cabelo em forma de teia que preenche um cubo de 9 metros próximo a ela. A teia é {@quickref difficult terrain||3}, sua área está levemente obscurecida e dura 1 minuto. Qualquer criatura que se mova para a teia ou que comece seu turno lá deve realizar um teste de resistência de {@dc 21} Destreza. Em caso de falha no salvamento, a criatura é {@condition restrained} enquanto está na teia. Uma criatura pode usar uma ação para fazer um teste de Força {@dc 21}. Se obtiver sucesso, ele pode libertar a si mesmo ou a uma criatura a até 1,5 metro dele que esteja {@condition restrained} presa pela teia. Esta teia é imune a todos os danos, exceto fogo mágico. Um cubo de 1,5 metro de teia é destruído se sofrer pelo menos 20 de dano de fogo de um feitiço ou outra fonte mágica em um único turno."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Claws",
+					"entries": [
+						"Arasta makes one attack with her claws."
+					]
+				},
+				{
+					"name": "Swarm (Costs 2 Actions)",
+					"entries": [
+						"Arasta causes two {@creature swarm of spiders||swarms of spiders} to appear in unoccupied spaces within 5 feet of her."
+					]
+				},
+				{
+					"name": "Toxic Web (Costs 3 Actions)",
+					"entries": [
+						"Each creature {@condition restrained} by Arasta's Web of Hair takes 18 ({@damage 4d8}) poison damage."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If Arasta's mythic trait is active, she can use the options below as legendary actions, as long as she has temporary hit points from her Armor of Spiders."
+			],
+			"mythic": [
+				{
+					"name": "Swipe",
+					"entries": [
+						"Arasta makes two attacks with her claws."
+					]
+				},
+				{
+					"name": "Web of Hair (Costs 2 Actions)",
+					"entries": [
+						"Arasta recharges Web of Hair and uses it."
+					]
+				},
+				{
+					"name": "Nyx Weave (Costs 2 Actions)",
+					"entries": [
+						"Each creature {@condition restrained} by Arasta's Web of Hair must succeed on a {@dc 21} Constitution saving throw, or the creature takes 26 ({@damage 4d12}) force damage and any spell of 6th level or lower on it ends."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Arasta",
+				"source": "MOT"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"S"
+			],
+			"damageTags": [
+				"F",
+				"I",
+				"O",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedLegendary": [
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Archon of Falling Stars",
+			"source": "MOT",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 144,
+				"formula": "17d8 + 68"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 15,
+			"con": 19,
+			"int": 15,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"str": "+9",
+				"con": "+8",
+				"wis": "+9",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"insight": "+9",
+				"perception": "+9"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 19,
+			"immune": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The archon's spellcasting ability is Wisdom (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The archon can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell command}",
+						"{@spell guiding bolt}",
+						"{@spell spare the dying}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell crusader's mantle}",
+							"{@spell spirit guardians}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O arconte tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Mount",
+					"entries": [
+						"Se o arconte não estiver montado, ele pode usar uma ação bônus para se teletransportar magicamente para a criatura que serve como sua montaria, desde que o arconte e sua montaria estejam no mesmo plano de existência. Quando se teletransporta, o arconte aparece montado na montaria, junto com qualquer equipamento que esteja vestindo ou carregando. Embora montado e não {@condition incapacitated}, o arconte não pode ser {@status surprised}, e tanto ele quanto sua montaria têm vantagem em testes de resistência de Destreza. Se o arconte for reduzido a 0 pontos de vida enquanto monta sua montaria, a montaria também será reduzida a 0 pontos de vida."
+					]
+				},
+				{
+					"name": "Radiant Rebirth (Recharges after a Long Rest)",
+					"entries": [
+						"Se o arconte for reduzido a 0 pontos de vida, ele recupera 30 pontos de vida e se levanta com uma explosão de brilho. Cada criatura, à escolha do arconte, a até 9 metros dele, deve ser bem-sucedida em um teste de resistência de Constituição {@dc 16}, ou a criatura sofrerá 13 ({@damage 3d8}) de dano radiante e ficará {@condition blinded} até o início do turno do arconte."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O arconte faz dois ataques com sua lança radiante."
+					]
+				},
+				{
+					"name": "Radiant Spear",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 3 metros, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano perfurante mais 10 ({@damage 3d6}) de dano radiante."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"The archon makes a radiant spear attack or casts {@spell guiding bolt}."
+					]
+				},
+				{
+					"name": "Coordinated Assault (Costs 2 Actions)",
+					"entries": [
+						"The archon makes a radiant spear attack, and then its mount can use its reaction to make a melee weapon attack."
+					]
+				},
+				{
+					"name": "Return to Nyx (Costs 3 Actions)",
+					"entries": [
+						"The archon causes a corpse it can see within 30 feet of it to burst into a shower of radiant stars leaving no trace of it behind. Everything it is wearing or carrying remains. Each creature within 10 feet of the corpse when it bursts must succeed on a {@dc 16} Dexterity saving throw or take 22 ({@damage 4d10}) radiant damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashen Rider",
+			"source": "MOT",
+			"page": 213,
+			"size": [
+				"M"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 178,
+				"formula": "21d8 + 84"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 16,
+			"con": 19,
+			"int": 15,
+			"wis": 21,
+			"cha": 18,
+			"save": {
+				"str": "+10",
+				"con": "+9",
+				"wis": "+10",
+				"cha": "+9"
+			},
+			"skill": {
+				"history": "+7",
+				"insight": "+10",
+				"perception": "+10"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 20,
+			"immune": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "16",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ashen rider's spellcasting ability is Wisdom (spell save {@dc 18}). The rider can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell command}",
+						"{@spell compelled duel}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell banishment}",
+							"{@spell blade barrier}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Silence",
+					"entries": [
+						"Quando uma criatura começa seu turno a até 9 metros do cavaleiro cinza, o cavaleiro pode forçar aquela criatura a fazer um teste de resistência de {@dc 18} Sabedoria se o cavaleiro puder vê-la. Se obtiver sucesso, a criatura fica imune a esta aura pelas próximas 24 horas. Se falhar no salvamento, a criatura não pode falar e fica {@condition deafened} até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Mount",
+					"entries": [
+						"Se o cavaleiro cinza não estiver montado, ele pode usar uma ação bônus para se teletransportar magicamente para a criatura que serve como sua montaria, desde que o cavaleiro cinza e sua montaria estejam no mesmo plano de existência. Quando se teletransporta, o cavaleiro cinza aparece montado na montaria junto com qualquer equipamento que esteja vestindo ou carregando.",
+						"Embora montado e não {@condition incapacitated}, o cavaleiro cinza não pode ser {@status surprised}, e tanto ele quanto sua montaria têm vantagem nos testes de resistência de Destreza. Se o cavaleiro cinza for reduzido a 0 pontos de vida enquanto monta sua montaria, a montaria também será reduzida a 0 pontos de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Cavaleiro Cinzento faz três ataques com sua lâmina cinzenta ou dois ataques com seu raio de cinzas."
+					]
+				},
+				{
+					"name": "Ashen Blade",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}14 ({@damage 2d8 + 5}) de dano cortante mais 13 ({@damage 2d12}) de dano radiante."
+					]
+				},
+				{
+					"name": "Bolt of Ash",
+					"entries": [
+						"{@atk rs} {@hit 10} para acertar, alcance de 36 metros, uma criatura. {@h}22 ({@damage 4d10}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do cavaleiro cinza."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"The ashen rider makes an attack using its ashen blade or bolt of ash."
+					]
+				},
+				{
+					"name": "Coordinated Assault (Costs 2 Actions)",
+					"entries": [
+						"The ashen rider makes an attack using its ashen blade or bolt of ash, and then its mount can use its reaction to make a melee weapon attack."
+					]
+				},
+				{
+					"name": "Reduce to Ash (Costs 3 Actions)",
+					"entries": [
+						"The ashen rider targets a creature it can see within 60 feet of it. The target must succeed on a {@dc 18} Constitution saving throw, or it takes 27 ({@damage 5d10}) necrotic damage and its hit point maximum is reduced by an amount equal to the necrotic damage taken. This reduction lasts until the target finishes a long rest. If the target's hit point maximum is reduced to 0, its body and everything it is wearing and carrying, except for magic items, are reduced to ash. A creature reduced to ash can't be revived by any means short of a {@spell wish} spell."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"N",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"HPR",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"conditionInflictSpell": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blood-Toll Harpy",
+			"source": "MOT",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 10,
+			"int": 6,
+			"wis": 11,
+			"cha": 13,
+			"skill": {
+				"intimidation": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"A harpia tem vantagem em jogadas de ataque corpo a corpo contra qualquer criatura que não tenha todos os seus pontos de vida."
+					]
+				},
+				{
+					"name": "Dark Devotion",
+					"entries": [
+						"A harpia tem vantagem em testes de resistência contra {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A harpia faz dois ataques corpo a corpo: um com a mordida e outro com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano cortante."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Broken King Antigonos",
+			"source": "MOT",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 38,
+				"formula": "9d10 + 27"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 6,
+			"wis": 16,
+			"cha": 9,
+			"skill": {
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Se Antigonos se mover pelo menos 3 metros em linha reta em direção a um alvo e então acertá-lo com um ataque sangrento no mesmo turno, o alvo sofre 9 ({@damage 2d8}) de dano perfurante extra. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Força {@dc 14} ou será empurrado até 3 metros de distância e derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Labyrinthine Recall",
+					"entries": [
+						"Antigonos lembra-se perfeitamente de qualquer caminho que tenha percorrido."
+					]
+				},
+				{
+					"name": "Reckless",
+					"entries": [
+						"No início de seu turno, Antigonos pode ganhar vantagem em todas as jogadas de ataque com armas brancas que fizer durante aquele turno, mas as jogadas de ataque contra ele têm vantagem até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Decrepit State",
+					"entries": [
+						"Antigonos tem desvantagem em suas jogadas de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d12 + 4}) dano cortante."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 1,5 m, um alvo. {@h}13 ({@damage 2d8 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Amphora",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 1,5 m, uma criatura Média ou menor. {@h}8 ({@damage 1d8 + 4}) dano de concussão. Se ainda não houver uma criatura dentro da ânfora, o alvo estará {@condition restrained} dentro dela. Como uma ação, a criatura {@condition restrained} pode fazer um teste de {@dc 14} Destreza ({@skill Acrobatics}), escapando da ânfora com sucesso. O efeito também termina se a ânfora for destruída. A ânfora tem CA 8, 20 pontos de vida e imunidade a veneno e dano psíquico."
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Charge",
+				"Reckless"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Bronze Sable",
+			"source": "MOT",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 3,
+			"wis": 14,
+			"cha": 1,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one language of its creator but can't speak"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Enquanto a zibelina permanece imóvel, é indistinguível de uma estátua normal."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"A zibelina tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados da zibelina estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Surprise Attack",
+					"entries": [
+						"Se a zibelina surpreender uma criatura e acertá-la com um ataque durante a primeira rodada de combate, o alvo sofre 10 ({@damage 3d6}) de dano extra do ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A zibelina faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Burnished Hart",
+			"source": "MOT",
+			"page": 211,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 16,
+			"int": 3,
+			"wis": 15,
+			"cha": 1,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one language of its creator but can't speak"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o cervo se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de chifres no mesmo turno, o alvo sofre 7 ({@damage 2d6}) de dano de fogo extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Heated Body",
+					"entries": [
+						"Uma criatura que tocar o cervo ou acertá-lo com um ataque corpo a corpo enquanto estiver a 1,5 metro dele sofre 5 ({@damage 1d10}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"O cervo tem vantagem nos testes de resistência de Força e Destreza feitos contra efeitos que o derrubariam {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cervo faz dois ataques: um com os chifres e outro com os cascos."
+					]
+				},
+				{
+					"name": "Antlers",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano de concussão mais 2 ({@damage 1d4}) de dano de fogo."
+					]
+				}
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Colossus of Akros",
+			"source": "MOT",
+			"page": 218,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 350,
+				"formula": "20d20 + 140"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 28,
+			"dex": 10,
+			"con": 25,
+			"int": 3,
+			"wis": 11,
+			"cha": 1,
+			"save": {
+				"str": "+16",
+				"con": "+14"
+			},
+			"skill": {
+				"athletics": "+16",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"fire",
+				"poison",
+				"psychic",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned",
+				"unconscious"
+			],
+			"languages": [
+				"understands Common and Celestial but can't speak"
+			],
+			"cr": "23",
+			"trait": [
+				{
+					"name": "Crumbling Destruction",
+					"entries": [
+						"Quando o colosso chega a 0 pontos de vida, ele desmorona e é destruído. Qualquer criatura no chão a até 9 metros da estátua em ruínas deve fazer um teste de resistência de Destreza de {@dc 22}, sofrendo 22 ({@damage 4d10}) de dano de concussão e 22 ({@damage 4d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Fire Absorption",
+					"entries": [
+						"Sempre que o colosso for sujeito a dano de fogo, ele não sofrerá nenhum dano e, em vez disso, recuperará um número de pontos de vida igual ao dano de fogo causado."
+					]
+				},
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"O colosso é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas do colosso são mágicos."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"O colosso causa dano duplo a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O colosso de Akros realiza dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 16} para atingir, atingir 15 pés ou alcançar 200/600 pés, um alvo. {@h}23 ({@damage 4d6 + 9}) de dano perfurante ou 27 ({@damage 4d8 + 9}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo. Se o colosso fizer um ataque à distância com esta lança, a lança retorna magicamente para sua mão após o ataque."
+					]
+				},
+				{
+					"name": "Sword",
+					"entries": [
+						"{@atk mw} {@hit 16} para acertar, alcance 15 pés, um alvo. {@h}36 ({@damage 6d8 + 9}) cortando dano."
+					]
+				},
+				{
+					"name": "Flames of Akros {@recharge}",
+					"entries": [
+						"Chamas mágicas saem do colosso em direção a até três criaturas que o colosso possa ver a até 27 metros dele. Cada alvo deve realizar um teste de resistência de Destreza {@dc 24}, sofrendo 36 ({@damage 8d8}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso. Se falhar na resistência, um alvo também pega fogo magicamente por 1 minuto. No final de cada um dos seus turnos seguintes, o alvo em chamas repete o teste de resistência. Recebe 18 ({@damage 4d8}) de dano de fogo se falhar no salvamento e o efeito termina se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Weapons",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Doomwake Giant",
+			"source": "MOT",
+			"page": 224,
+			"size": [
+				"H"
+			],
+			"type": "giant",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 162,
+				"formula": "13d12 + 78"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 24,
+			"dex": 12,
+			"con": 22,
+			"int": 12,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"con": "+10",
+				"wis": "+6"
+			},
+			"skill": {
+				"intimidation": "+7",
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Giant"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Aura of Erebos",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 3 metros do gigante deve ser bem-sucedida em um teste de resistência de Constituição {@dc 18} ou sofrerá 10 ({@damage 3d6}) de dano necrótico e não poderá recuperar pontos de vida até o início de seu próximo turno. Em um teste de resistência bem-sucedido, a criatura fica imune à Aura de Érebos do gigante por 24 horas."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O gigante tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O gigante faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 15 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) de dano por concussão mais 10 ({@damage 3d6}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Noxious Gust {@recharge 5}",
+					"entries": [
+						"O gigante exala uma rajada poderosa que cria uma rajada de névoa mortal em uma linha de 18 metros e 3 metros de largura. Cada criatura nessa linha deve realizar um teste de resistência de Constituição {@dc 18}. Se falhar na resistência, a criatura sofre 36 ({@damage 8d8}) de dano necrótico e é derrubada {@condition prone}. Em um teste bem sucedido, uma criatura sofre metade do dano e não é derrubada {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eater of Hope",
+			"source": "MOT",
+			"page": 220,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d10 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 17,
+			"con": 14,
+			"int": 12,
+			"wis": 11,
+			"cha": 16,
+			"save": {
+				"con": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"intimidation": "+6",
+				"persuasion": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Insatiable Greed",
+					"entries": [
+						"O devorador de esperança pode sentir a presença de ouro a até 300 metros de si mesmo. Ele pode determinar qual local tem a maior quantidade de ouro e pode sentir a direção desse local. Se o ouro estiver sendo movido, ele conhece a direção do movimento. Ele não consegue localizar ouro se qualquer espessura de argila ou chumbo, mesmo uma folha fina, bloquear o caminho direto entre ele e o ouro."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O devorador de esperança tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O devorador de esperança faz dois ataques com suas garras."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante mais 7 ({@damage 2d6}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Breath of Hopelessness {@recharge 5}",
+					"entries": [
+						"O devorador de esperança exala um miasma de ventos do Submundo em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de {@dc 14} Carisma. Se falhar no salvamento, o alvo sofre 26 ({@damage 4d12}) de dano necrótico e é amaldiçoado por 1 minuto. Enquanto amaldiçoado desta forma, o alvo sofre 6 ({@damage 1d12}) de dano necrótico extra sempre que o devorador de esperança o atinge com um ataque. Se obtiver sucesso, o alvo sofre metade do dano e não é amaldiçoado."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fleecemane Lion",
+			"source": "MOT",
+			"page": 223,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 19,
+			"dex": 16,
+			"con": 14,
+			"int": 6,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"str": "+6",
+				"con": "+4"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"passive": 14,
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"O leão tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"Se o leão se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, o alvo deverá ter sucesso em um teste de resistência de Força {@dc 14} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o leão pode fazer um ataque de mordida contra ele como uma ação bônus."
+					]
+				},
+				{
+					"name": "Running Leap",
+					"entries": [
+						"Com uma corrida de 3 metros, o leão pode saltar em distância até 7,5 metros."
+					]
+				},
+				{
+					"name": "Spell Turning",
+					"entries": [
+						"O leão tem vantagem nos testes de resistência contra qualquer magia que atinja apenas o leão (não uma área). Se o teste de resistência do leão for bem-sucedido e o feitiço for de 4º nível ou inferior, o feitiço não terá efeito no leão e, em vez disso, terá como alvo o lançador."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O leão faz dois ataques: um com a mordida e outro com a garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano cortante."
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "Claw",
+					"entries": [
+						"The lion makes one claw attack."
+					]
+				},
+				{
+					"name": "Roar (Costs 2 Actions)",
+					"entries": [
+						"The lion emits a magical roar. Each creature within 60 feet of the lion that can hear the roar must succeed on a {@dc 12} Wisdom saving throw or be {@condition frightened} of the lion until the end of the lion's next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pounce"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flitterstep Eidolon",
+			"source": "MOT",
+			"page": 222,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 8,
+			"dex": 18,
+			"con": 13,
+			"int": 11,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+8"
+			},
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Blurred Form",
+					"entries": [
+						"As jogadas de ataque contra o eidolon são feitas com desvantagem, a menos que o eidolon seja {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"Se o eidolon for submetido a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, o eidolon não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar. Não pode usar esta característica se for {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"O eidolon pode se mover através de outras criaturas e objetos como se fossem {@quickref difficult terrain||3}. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O eidolon tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O eidolon faz dois ataques corpo a corpo. Imediatamente antes ou depois de um de seus ataques, ele pode usar o Flitterstep, se estiver disponível."
+					]
+				},
+				{
+					"name": "Flickering Dagger",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) de dano perfurante mais 3 ({@damage 1d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Flitterstep {@recharge 5}",
+					"entries": [
+						"O eidolon se teletransporta magicamente para um espaço desocupado que pode ver a até 9 metros dele. Se realizar um ataque imediatamente após o teletransporte, ele terá vantagem na jogada de ataque."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Turn Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Ghostblade Eidolon",
+			"source": "MOT",
+			"page": 222,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 12,
+			"int": 13,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+6",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blurred Form",
+					"entries": [
+						"As jogadas de ataque contra o eidolon são feitas com desvantagem, a menos que o eidolon seja {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"O eidolon pode se mover através de outras criaturas e objetos como se fossem {@quickref difficult terrain||3}. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O eidolon tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O eidolon faz dois ataques de lâmina fantasma."
+					]
+				},
+				{
+					"name": "Ghostblade",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 3}) de dano cortante mais 11 ({@damage 2d10}) de dano de força."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Turn Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gold-Forged Sentinel",
+			"source": "MOT",
+			"page": 211,
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 76,
+				"formula": "8d10 + 32"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 19,
+			"int": 3,
+			"wis": 16,
+			"cha": 10,
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands one language of its creator but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o sentinela se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de aríete no mesmo turno, o alvo sofre 10 ({@damage 3d6}) de dano de concussão extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Spell Turning",
+					"entries": [
+						"O sentinela tem vantagem em testes de resistência contra qualquer magia que atinja apenas o sentinela (não uma área). Se o teste de resistência do sentinela for bem-sucedido e o feitiço for de 4º nível ou inferior, o feitiço não terá efeito no sentinela e, em vez disso, terá como alvo o conjurador."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A sentinela faz dois ataques de aríete."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Fire Breath {@recharge 5}",
+					"entries": [
+						"A sentinela exala fogo em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 27 ({@damage 6d8}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hippocamp",
+			"source": "MOT",
+			"page": 227,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d10"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 50
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 11,
+			"int": 5,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O hipocampo pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o hipocampo se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de aríete no mesmo turno, o alvo sofre 7 ({@damage 2d6}) de dano de concussão extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 12} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) dano de concussão."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Charge"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hundred-Handed One",
+			"source": "MOT",
+			"page": 225,
+			"size": [
+				"H"
+			],
+			"type": "giant",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 243,
+				"formula": "18d12 + 126"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 26,
+			"dex": 15,
+			"con": 25,
+			"int": 14,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"con": "+12",
+				"wis": "+8"
+			},
+			"skill": {
+				"intimidation": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 18,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"Giant"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Reactive",
+					"entries": [
+						"O gigante pode realizar uma reação a cada turno de combate."
+					]
+				},
+				{
+					"name": "Vigilant",
+					"entries": [
+						"O gigante não pode ser {@status surprised}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O gigante faz quatro ataques de espada longa ou dois ataques de pedra."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 13} para acertar, alcance 15 pés, um alvo. {@h}21 ({@damage 3d8 + 8}) dano cortante."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 13} para acertar, alcance 60/240 pés, um alvo. {@h}30 ({@damage 4d10 + 8}) dano de concussão. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 21} ou será derrubado {@condition prone}."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect Attack",
+					"entries": [
+						"The giant adds 5 to its AC against one weapon attack that would hit it. To do so, the giant must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hythonia",
+			"isNamedCreature": true,
+			"source": "MOT",
+			"page": 252,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 199,
+				"formula": "21d10 + 84"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"swim": 40
+			},
+			"str": 21,
+			"dex": 17,
+			"con": 19,
+			"int": 14,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"str": "+11",
+				"con": "+10",
+				"cha": "+10"
+			},
+			"skill": {
+				"deception": "+10",
+				"insight": "+9",
+				"perception": "+9",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 19,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Hythonia's spellcasting ability is Charisma (spell save {@dc 18}). She can innately cast {@spell animate objects} once per day requiring no material components."
+					],
+					"daily": {
+						"1": [
+							"{@spell animate objects}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Hythonia falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Petrifying Gaze",
+					"entries": [
+						"Quando uma criatura que pode ver os olhos de Hythonia começa seu turno a até 9 metros dela, Hythonia pode forçá-la a fazer um teste de resistência de Constituição {@dc 18} se ela não estiver {@condition incapacitated} e puder ver a criatura. Se o teste de resistência falhar por 5 ou mais, a criatura é instantaneamente {@condition petrified}. Caso contrário, se falhar na resistência, a criatura começa a virar pedra e é {@condition restrained}. A criatura {@condition restrained} deve repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que a criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia. A menos que {@status surprised}, uma criatura pode desviar os olhos para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá ver Hythonia até o início de seu próximo turno, quando poderá desviar os olhos novamente. Se a criatura olhar para Hythonia nesse meio tempo, ela deverá fazer o teste imediatamente. Se Hythonia se vir refletida em uma superfície polida a até 9 metros de distância dela e em uma área de luz brilhante, ela será afetada por seu próprio olhar."
+					]
+				},
+				{
+					"name": "Shed Skin (Mythic Trait; Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se Hythonia for reduzida a 0 pontos de vida, ela não morre nem cai {@condition unconscious}. Em vez disso, ela muda de pele, recupera 199 pontos de vida e avança em sua velocidade sem provocar ataques de oportunidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hythonia faz três ataques: um com suas garras, um para contrair e outro com seu cabelo de cobra."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 5}) dano cortante mais 4 ({@damage 1d8}) dano venenoso."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 4,5 metros, uma criatura grande ou menor. {@h}16 ({@damage 2d10 + 5}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 19}). Até que esta luta termine, o alvo é {@condition restrained} e sofre 15 ({@damage 3d6 + 5}) de dano de concussão no início de cada um de seus turnos, e Hythonia não pode restringir outro alvo."
+					]
+				},
+				{
+					"name": "Snaky Hair",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}31 ({@damage 4d12 + 5}) de dano de concussão e Hythonia pode puxar o alvo até 1,5 metro para mais perto dela se for uma criatura Grande ou menor."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Hythonia moves up to her speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Snaky Hair",
+					"entries": [
+						"Hythonia makes one attack with her snaky hair."
+					]
+				},
+				{
+					"name": "Petrified Earth (Costs 2 Actions)",
+					"entries": [
+						"Hythonia causes stone spikes to erupt from the ground in a 30-foot radius centered on her. The area becomes {@quickref difficult terrain||3} until the start of her next turn. Any creature, other than Hythonia, takes 9 ({@damage 2d8}) piercing damage for every 5 feet it moves on those spikes."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If Hythonia's mythic trait is active, she can use the options below as legendary actions for 1 hour after using Shed Skin."
+			],
+			"mythic": [
+				{
+					"name": "Numbing Claws",
+					"entries": [
+						"Hythonia makes two attacks with her claws. If both attacks hit the same creature, it takes an extra 7 ({@damage 2d6}) poison damage and must succeed on a {@dc 18} Constitution saving throw or become {@condition paralyzed} until the start of her next turn."
+					]
+				},
+				{
+					"name": "Look at Me (Costs 3 Actions)",
+					"entries": [
+						"Hythonia can force a sighted creature she has {@condition grappled} to see her eyes and be affected by her gaze."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Hythonia",
+				"source": "MOT"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P",
+				"S"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"petrified",
+				"restrained"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ironscale Hydra",
+			"source": "MOT",
+			"page": 231,
+			"size": [
+				"G"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 181,
+				"formula": "11d20 + 66"
+			},
+			"speed": {
+				"walk": 40,
+				"swim": 40
+			},
+			"str": 22,
+			"dex": 10,
+			"con": 22,
+			"int": 2,
+			"wis": 10,
+			"cha": 7,
+			"skill": {
+				"perception": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"acid"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Acidic Blood",
+					"entries": [
+						"Quando a hidra sofre dano perfurante ou cortante, cada criatura a até 1,5 metro da hidra sofre 9 ({@damage 2d8}) de dano ácido."
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"A hidra pode prender a respiração por 1 hora."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"A hidra tem cinco cabeças. Embora tenha mais de uma cabeça, a hidra tem vantagem em testes de resistência contra ser {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, ou nocauteada {@condition unconscious}. Sempre que a hidra sofre 35 ou mais de dano em um único turno, uma de suas cabeças morre. Se todas as suas cabeças morrerem, a hidra morre. No final do seu turno, surgem duas cabeças para cada uma das cabeças que morreram desde o último turno, a menos que tenha sofrido dano de fogo desde o último turno. A hidra recupera 10 pontos de vida para cada cabeça regenerada dessa forma."
+					]
+				},
+				{
+					"name": "Reactive Heads",
+					"entries": [
+						"Para cada cabeça que a hidra tiver além de uma, ela obtém uma reação extra que pode ser usada apenas para ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Wakeful",
+					"entries": [
+						"Enquanto a hidra dorme, pelo menos uma de suas cabeças fica acordada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A hidra faz tantos ataques de mordida quanto cabeças."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 15 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lampad",
+			"group": [
+				"Nymph"
+			],
+			"source": "MOT",
+			"page": 235,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 14,
+			"int": 11,
+			"wis": 12,
+			"cha": 18,
+			"skill": {
+				"deception": "+6",
+				"intimidation": "+6"
+			},
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The lampad's spellcasting ability is Charisma ({@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell chill touch} (see \"Actions\" below)",
+						"{@spell gentle repose}"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Corpse Stride",
+					"entries": [
+						"Uma vez em seu turno, o lampad pode usar 3 metros de seu movimento para entrar magicamente no cadáver de uma criatura ao seu alcance e emergir do cadáver de uma segunda criatura a até 18 metros do primeiro cadáver, aparecendo em um espaço desocupado a 1,5 metros do segundo cadáver. Ambos os cadáveres devem ser Médios ou maiores."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O lampad tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O lampad ataca duas vezes com seu toque necrótico ou toque frio."
+					]
+				},
+				{
+					"name": "Necrotic Touch",
+					"entries": [
+						"{@atk ms} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano necrótico."
+					]
+				},
+				{
+					"name": "Chill Touch (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} para acertar, alcance de 36 metros, uma criatura. {@h}9 ({@damage 2d8}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do lampad. Se o alvo for um morto-vivo, ele terá desvantagem nas jogadas de ataque contra o lampad até o final do próximo turno do lampad."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Leonin Iconoclast",
+			"source": "MOT",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"leonin"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"Unarmored Defense"
+					]
+				}
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 16,
+			"int": 13,
+			"wis": 17,
+			"cha": 10,
+			"save": {
+				"dex": "+7",
+				"wis": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"insight": "+6",
+				"intimidation": "+3",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Leonin"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The leonin's spellcasting ability is Wisdom (spell save {@dc 14}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell banishment}",
+							"{@spell detect evil and good}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Se o leonino for submetido a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar. Não pode usar esta característica se for {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Embora o leonino não esteja usando armadura e sem escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O leonino faz três ataques com armas."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano cortante mais 7 ({@damage 2d6}) dano de força."
+					]
+				},
+				{
+					"name": "Dart",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dart|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Medusa",
+			"source": "MOT",
+			"page": 206,
+			"_copy": {
+				"name": "Medusa",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"The medusa makes either three melee attacks—one with its snake hair, one to constrict, and one with its shortsword—or two ranged attacks with its longbow."
+								]
+							}
+						},
+						{
+							"mode": "appendArr",
+							"items": {
+								"name": "Constrict",
+								"entries": [
+									"{@atk mw} {@hit 3} to hit, reach 10 ft., one target. {@h}7 ({@damage 2d6}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 11}). Until this grapple ends, the target is {@condition restrained}, and the medusa can't constrict another target."
+								]
+							}
+						}
+					]
+				}
+			},
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Meletian Hoplite",
+			"source": "MOT",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item breastplate|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 12,
+			"int": 16,
+			"wis": 13,
+			"cha": 11,
+			"save": {
+				"dex": "+4",
+				"int": "+5"
+			},
+			"skill": {
+				"arcana": "+5",
+				"history": "+5",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The hoplite is a 3rd-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell ray of frost} (see \"Actions\" below)"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell color spray}",
+								"{@spell expeditious retreat}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell blur}",
+								"{@spell cloud of daggers}",
+								"{@spell invisibility}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O hoplita realiza três ataques com arma. Pode substituir um ataque de arma por raio de gelo."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				},
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}5 ({@damage 1d4 + 3}) dano de concussão. Se o alvo for uma criatura Média ou menor, ele deverá ter sucesso em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Ray of Frost (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 5} para acertar, alcance de 18 metros, uma criatura. {@h}4 ({@damage 1d8}) dano de frio e a velocidade do alvo é reduzida em 3 metros até o início do próximo turno do hoplita."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"S"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Naiad",
+			"group": [
+				"Nymph"
+			],
+			"source": "MOT",
+			"page": 236,
+			"otherSources": [
+				{
+					"source": "CM"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 11,
+			"int": 15,
+			"wis": 10,
+			"cha": 18,
+			"skill": {
+				"persuasion": "+6",
+				"sleight of hand": "+5"
+			},
+			"passive": 10,
+			"resist": [
+				"psychic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The naiad's spellcasting ability is Charisma (spell save {@dc 14}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"3": [
+							"{@spell phantasmal force}"
+						],
+						"1e": [
+							"{@spell fly}",
+							"{@spell hypnotic pattern}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A náiade pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"A náiade é {@condition invisible} enquanto está totalmente imersa em água."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A náiade tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A náiade realiza dois ataques de toque psíquico."
+					]
+				},
+				{
+					"name": "Psychic Touch",
+					"entries": [
+						"{@atk ms} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) de dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious",
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nightmare Shepherd",
+			"source": "MOT",
+			"page": 221,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 133,
+				"formula": "14d10 + 56"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 18,
+			"int": 14,
+			"wis": 17,
+			"cha": 20,
+			"save": {
+				"con": "+8",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+6",
+				"deception": "+9",
+				"perception": "+7",
+				"persuasion": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The shepherd's spellcasting ability is Charisma (spell save {@dc 17}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell confusion}",
+							"{@spell dispel magic}",
+							"{@spell hold person}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Nightmares",
+					"entries": [
+						"Criaturas mortas-vivas a até 9 metros do pastor ganham +5 de bônus nas jogadas de ataque e dano. Quando qualquer outra criatura que não seja morta-viva ou um constructo inicia seu turno a até 9 metros do pastor, aquela criatura deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou sofrerá 11 ({@damage 2d10}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O pastor tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O pastor faz dois ataques: um com as garras e outro com o cajado."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) de dano cortante mais 16 ({@damage 3d10}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano de concussão ou 13 ({@damage 2d8 + 4}) de dano de concussão se usado com as duas mãos, mais 26 ({@damage 4d12}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Herd the Underworld (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O pastor puxa almas distorcidas do Submundo; {@dice 1d6} {@creature shadow||shadows} (sem Fraqueza à Luz Solar) surgem em espaços desocupados a até 6 metros do pastor. As sombras agem logo após o pastor na mesma contagem de iniciativa e lutam até serem destruídas. Eles desaparecem quando o pastor morre."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nyx-Fleece Ram",
+			"source": "MOT",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 12,
+			"int": 3,
+			"wis": 13,
+			"cha": 10,
+			"passive": 11,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o aríete se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de aríete no mesmo turno, o alvo sofre 5 ({@damage 2d4}) de dano de concussão extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O carneiro tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"O carneiro tem vantagem nos testes de resistência de Força e Destreza contra efeitos que o derrubariam {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 2d4 + 3}) de dano de concussão mais 3 ({@damage 1d6}) de dano de força."
+					]
+				}
+			],
+			"traitTags": [
+				"Charge",
+				"Magic Resistance"
+			],
+			"damageTags": [
+				"B",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oracle",
+			"source": "MOT",
+			"page": 238,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"Blessings Of The Gods"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 13,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"wis": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"insight": "+5",
+				"persuasion": "+4",
+				"religion": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The oracle's spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell guidance}",
+						"{@spell light}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell bless}",
+							"{@spell guiding bolt}",
+							"{@spell healing word}",
+							"{@spell hold person}"
+						],
+						"1e": [
+							"{@spell augury}",
+							"{@spell scrying}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Blessings of the Gods",
+					"entries": [
+						"Enquanto o oráculo não estiver usando armadura e não empunhando escudo, sua CA inclui seu modificador de Sabedoria. Além disso, uma criatura que atingir o oráculo com um ataque corpo a corpo enquanto estiver a 1,5 metro dele sofre 9 ({@damage 2d8}) de dano de força."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Eldritch Touch",
+					"entries": [
+						"{@atk ms} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano de força."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Divine Insight (3/Day)",
+					"entries": [
+						"When the oracle or a creature it can see makes an attack roll, a saving throw, or an ability check, the oracle can cause the roll to be made with advantage or disadvantage."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oread",
+			"group": [
+				"Nymph"
+			],
+			"source": "MOT",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 18,
+			"skill": {
+				"acrobatics": "+4",
+				"athletics": "+4",
+				"performance": "+6"
+			},
+			"passive": 11,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The oread's spellcasting ability is Charisma (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell fire bolt} (see \"Actions\" below)"
+					],
+					"daily": {
+						"3": [
+							"{@spell burning hands}"
+						],
+						"1e": [
+							"{@spell hellish rebuke} (see \"Reactions\" below)",
+							"{@spell scorching ray}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Invisible in Fire",
+					"entries": [
+						"O oread é {@condition invisible} enquanto está totalmente imerso no fogo."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O oread tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O oread ataca duas vezes com seu toque de fogo ou raio de fogo."
+					]
+				},
+				{
+					"name": "Fiery Touch",
+					"entries": [
+						"{@atk ms} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano de fogo."
+					]
+				},
+				{
+					"name": "Fire Bolt (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} para acertar, alcance 120 pés, um alvo. {@h}5 ({@damage 1d10}) dano de fogo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Hellish Rebuke (2nd-Level Spell; 1/Day)",
+					"entries": [
+						"When the oread is damaged by a creature within 60 feet of the oread that it can see, the creature that damaged the oread must make a {@dc 14} Dexterity saving throw, taking 16 ({@damage 3d10}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phylaskia",
+			"source": "MOT",
+			"page": 239,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB|plate}"
+					]
+				}
+			],
+			"hp": {
+				"average": 104,
+				"formula": "11d10 + 44"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 15,
+			"con": 18,
+			"int": 10,
+			"wis": 16,
+			"cha": 14,
+			"save": {
+				"con": "+8",
+				"wis": "+7"
+			},
+			"skill": {
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"all"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Gatekeeper's Aura",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 3 metros do phylaskia deve realizar um teste de resistência de {@dc 15} Sabedoria. Se obtiver sucesso, a criatura fica imune a esta aura pelas próximas 24 horas. Se falhar, a criatura tem desvantagem nos testes de resistência e sua velocidade é reduzida à metade até o início do próximo turno."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o phylaskia a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD igual a 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, a phylaskia cai para 1 ponto de vida."
+					]
+				},
+				{
+					"name": "Vigilant",
+					"entries": [
+						"A phylaskia não pode ser {@status surprised}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O phylaskia faz dois ataques com espada longa e usa seu Dreno de Força uma vez."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 3 metros, um alvo. {@h}14 ({@damage 2d8 + 5}) de dano cortante ou 16 ({@damage 2d10 + 5}) de dano cortante se usado com as duas mãos, mais 11 ({@damage 2d10}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Strength Drain",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 1,5 m, uma criatura. {@h}12 ({@damage 2d6 + 5}) dano necrótico. A menos que o alvo seja imune a dano necrótico, seu valor de Força é reduzido em {@dice 1d4}. O alvo morre se isso reduzir sua Força a 0. Caso contrário, a redução dura até que o alvo termine um descanso curto ou longo."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"XX"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Polukranos",
+			"isNamedCreature": true,
+			"source": "MOT",
+			"page": 231,
+			"size": [
+				"G"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 232,
+				"formula": "15d20 + 75"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 50
+			},
+			"str": 25,
+			"dex": 15,
+			"con": 21,
+			"int": 4,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+14"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 24,
+			"immune": [
+				"acid"
+			],
+			"cr": "19",
+			"trait": [
+				{
+					"name": "Acidic Blood",
+					"entries": [
+						"Quando Polukranos sofre dano perfurante ou cortante, cada criatura a até 1,5 metro de Polukranos sofre 10 ({@damage 3d6}) de dano ácido."
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"Polukranos pode prender a respiração por 1 hora."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Polukranos falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"Polukranos tem cinco cabeças. Embora tenha mais de uma cabeça, Polukranos tem vantagem em testes de resistência contra ser {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned} ou {@condition unconscious} nocauteado. Sempre que Polukranos sofre 40 ou mais de dano em um único turno, uma de suas cabeças morre. Se todas as suas cabeças morrerem, Polukranos morre. No final do seu turno, surgem duas cabeças para cada uma das cabeças que morreram desde o último turno, a menos que tenha sofrido 40 ou mais danos de fogo desde o último turno. Polukranos recupera 20 pontos de vida para cada cabeça regenerada dessa forma."
+					]
+				},
+				{
+					"name": "Reactive Heads",
+					"entries": [
+						"Para cada cabeça que Polukranos tiver além de uma, ele obtém uma reação extra que só pode ser usada para fazer ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"Polukranos causa dano duplo a objetos e estruturas."
+					]
+				},
+				{
+					"name": "Wakeful",
+					"entries": [
+						"Enquanto Polukranos dorme, pelo menos uma de suas cabeças está acordada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Polukranos faz tantos ataques de mordida quanto cabeças."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 13} para acertar, alcance 15 pés, um alvo. {@h}18 ({@damage 2d10 + 7}) dano perfurante."
+					]
+				},
+				{
+					"name": "Stomp",
+					"entries": [
+						"{@atk mw} {@hit 13} para acertar, alcance 15 pés, um alvo. {@h}16 ({@damage 2d8 + 7}) dano de concussão."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 13} para acertar, alcance 15 pés, um alvo. {@h}18 ({@damage 2d10 + 7}) dano de concussão. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 21} ou será empurrado até 6 metros de distância de Polukranos."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"Polukranos makes a Wisdom ({@skill Perception}) check."
+					]
+				},
+				{
+					"name": "Tail Swipe",
+					"entries": [
+						"Polukranos makes a tail attack."
+					]
+				},
+				{
+					"name": "Trampling Charge (Costs 3 Actions)",
+					"entries": [
+						"Polukranos moves up to 50 feet in a straight line and can move through the space of any creature Huge or smaller. The first time it enters each creature's space during this move, it can make a stomp attack against that creature."
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath",
+				"Legendary Resistances",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Returned Drifter",
+			"source": "MOT",
+			"page": 240,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 12,
+			"int": 10,
+			"wis": 12,
+			"cha": 11,
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O Retornado tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				},
+				{
+					"name": "Unreadable Face",
+					"entries": [
+						"O Retornado é imune a qualquer efeito que possa sentir suas emoções ou ler seus pensamentos. Testes de Sabedoria ({@skill Insight}) para verificar as intenções ou sinceridade do Retornado são feitos com desvantagem."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano cortante mais 3 ({@damage 1d6}) dano venenoso."
+					]
+				},
+				{
+					"name": "Sling",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 30/120 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb",
+				"sling|phb"
+			],
+			"traitTags": [
+				"Turn Resistance"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Returned Kakomantis",
+			"source": "MOT",
+			"page": 240,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 14,
+			"int": 13,
+			"wis": 12,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+2",
+				"stealth": "+5"
+			},
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Fleeting Anger",
+					"entries": [
+						"Se outra criatura causar dano ao Retornado, o Retornado realizará jogadas de ataque com vantagem até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O Retornado tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				},
+				{
+					"name": "Unreadable Face",
+					"entries": [
+						"O Retornado é imune a qualquer efeito que possa sentir suas emoções ou ler seus pensamentos. Testes de Sabedoria ({@skill Insight}) para verificar as intenções ou sinceridade do Retornado são feitos com desvantagem."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Underworld Bolt",
+					"entries": [
+						"{@atk rs} {@hit 4} para acertar, alcance de 36 metros, uma criatura. {@h}13 ({@damage 2d8 + 2}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do Retornado. Se o alvo estiver faltando algum de seus pontos de vida, ele sofrerá 17 ({@damage 2d12 + 2}) de dano necrótico."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Turn Resistance"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"I",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Returned Palamnite",
+			"source": "MOT",
+			"page": 241,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 14,
+			"int": 13,
+			"wis": 12,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+2",
+				"stealth": "+5"
+			},
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Fleeting Anger",
+					"entries": [
+						"Se outra criatura causar dano ao Retornado, o Retornado realizará jogadas de ataque com vantagem até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O Retornado tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				},
+				{
+					"name": "Unreadable Face",
+					"entries": [
+						"O Retornado é imune a qualquer efeito que possa sentir suas emoções ou ler seus pensamentos. Testes de Sabedoria ({@skill Insight}) para verificar as intenções ou sinceridade do Retornado são feitos com desvantagem."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Retornado faz dois ataques com espadas curtas."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano venenoso."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Turn Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Returned Sentry",
+			"source": "MOT",
+			"page": 241,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 12,
+			"int": 10,
+			"wis": 12,
+			"cha": 11,
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O Retornado tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do Retornado estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Turn Resistance",
+					"entries": [
+						"O Retornado tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
+					]
+				},
+				{
+					"name": "Unreadable Face",
+					"entries": [
+						"O Retornado é imune a qualquer efeito que possa sentir suas emoções ou ler seus pensamentos. Testes de Sabedoria ({@skill Insight}) para verificar as intenções ou sinceridade do Retornado são feitos com desvantagem."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo, mais 7 ({@damage 2d6}) de dano de veneno."
+					]
+				},
+				{
+					"name": "Sling",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 30/120 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"sling|phb",
+				"spear|phb"
+			],
+			"traitTags": [
+				"Pack Tactics",
+				"Turn Resistance"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Satyr Reveler",
+			"source": "MOT",
+			"page": 242,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"acrobatics": "+5",
+				"performance": "+7",
+				"stealth": "+5"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Enthralling Performance",
+					"entries": [
+						"Se o sátiro atuar por pelo menos 1 minuto, ele escolhe até quatro humanóides a até 18 metros dele que assistiram ou ouviram a apresentação inteira. Cada alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 13} ou será {@condition charmed}. Enquanto {@condition charmed} estiver dessa forma, o alvo idolatrará o sátiro e participará de suas festas. A condição {@condition charmed} termina para a criatura após 1 hora, se ela sofrer algum dano, se o sátiro atacar o alvo ou se o alvo testemunhar o sátiro atacando ou causando dano a qualquer um dos aliados do alvo."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O sátiro tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sleepless Reveler",
+					"entries": [
+						"A magia não consegue fazer o sátiro dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O sátiro faz dois ataques de aríete ou dois ataques de arco curto."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 2d4 + 1}) dano de concussão."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 80/320 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Satyr Thornbearer",
+			"source": "MOT",
+			"page": 243,
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 38,
+				"formula": "7d8 + 7"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 14,
+			"skill": {
+				"perception": "+5",
+				"performance": "+6",
+				"stealth": "+6"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O sátiro tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Sleepless Reveler",
+					"entries": [
+						"A magia não consegue fazer o sátiro dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O sátiro faz três ataques de aríete ou três ataques de arco curto."
+					]
+				},
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 2d4 + 1}) dano de concussão."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 80/320 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Hail of Arrows (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O sátiro dispara uma flecha que magicamente se transforma em uma rajada de mísseis em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza de {@dc 14}, sofrendo 17 ({@damage 5d6}) de dano perfurante se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Setessan Hoplite",
+			"source": "MOT",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item leather armor|PHB|leather}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 13,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O hoplita tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do hoplita estiver a até 1,5 metro do hoplita e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O hoplita faz dois ataques de cimitarra ou dois ataques de arco longo."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante mais 10 ({@damage 3d6}) dano venenoso."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 150/600 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano venenoso."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Theran Chimera",
+			"source": "MOT",
+			"page": 216,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 19,
+			"int": 3,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"con": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"understands Draconic but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Spell Turning",
+					"entries": [
+						"A quimera tem vantagem em testes de resistência contra qualquer magia que atinja apenas a quimera (não uma área). Se o teste de resistência da quimera for bem-sucedido e a magia for de 4º nível ou inferior, a magia não terá efeito na quimera e, em vez disso, terá como alvo o lançador."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A quimera faz três ataques: um com as garras, um com a cabeça e outro com a cauda. Quando seu sopro está disponível, ele pode usar o sopro no lugar da cabeça ou das garras."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano cortante."
+					]
+				},
+				{
+					"name": "Head",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 1d12 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, um alvo. {@h}11 ({@damage 2d6 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"A quimera exala fogo em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 32 ({@damage 5d12}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Triton Master of Waves",
+			"source": "MOT",
+			"page": 245,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"triton"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d8 + 42"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 16,
+			"int": 10,
+			"wis": 12,
+			"cha": 19,
+			"save": {
+				"dex": "+3",
+				"int": "+3",
+				"cha": "+7"
+			},
+			"skill": {
+				"athletics": "+6",
+				"nature": "+6",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Primordial"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The triton's spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell ray of frost} (see \"Actions\" below)"
+					],
+					"daily": {
+						"2": [
+							"{@spell cone of cold}"
+						],
+						"1e": [
+							"{@spell fog cloud}",
+							"{@spell gust of wind}",
+							"{@spell wind wall}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O tritão pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Summon Water Weird (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Como uma ação bônus, o tritão invoca magicamente {@dice 1d4} {@creature water weird||water weirds}. Os estranhos invocados aparecem em espaços desocupados na água a até 18 metros do tritão. Os esquisitos da água agem imediatamente após o tritão na mesma contagem de iniciativa e lutam até serem destruídos. Eles desaparecem se o tritão morrer."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tritão faz dois ataques usando Wave Touch e lança {@spell ray of frost}."
+					]
+				},
+				{
+					"name": "Wave Touch",
+					"entries": [
+						"{@atk ms} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}22 ({@damage 4d10}) dano de frio."
+					]
+				},
+				{
+					"name": "Ray of Frost (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 18 metros, uma criatura. {@h}13 ({@damage 3d8}) dano de frio e a velocidade do alvo é reduzida em 3 metros até o início do próximo turno do tritão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Frigid Shield",
+					"entries": [
+						"When a creature the triton can see targets the triton with an attack, the triton gains 10 temporary hit points. If the attack hits and reduces the temporary hit points to 0, each creature within 5 feet of the triton takes 9 ({@damage 2d8}) cold damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P"
+			],
+			"damageTags": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Triton Shorestalker",
+			"source": "MOT",
+			"page": 244,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"triton"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"nature": "+4",
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Common",
+				"Primordial"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The triton's spellcasting ability is Wisdom (spell save {@dc 12}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell fog cloud}",
+							"{@spell gust of wind}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O tritão pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"O tritão pode realizar as ações Desengajar ou Esconder-se como ação bônus em cada um de seus turnos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tritão faz dois ataques de espada curta com espinha de ouriço."
+					]
+				},
+				{
+					"name": "Urchin-Spine Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano venenoso. Se o dano reduzir uma criatura a 0 pontos de vida, essa criatura permanecerá estável, mas {@condition poisoned} por 1 hora, mesmo depois de recuperar pontos de vida, e estará {@condition paralyzed} enquanto {@condition poisoned} desta forma."
+					]
+				},
+				{
+					"name": "Poisoned Spine",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 30/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano venenoso."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"P"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tromokratis",
+			"isNamedCreature": true,
+			"source": "MOT",
+			"page": 254,
+			"size": [
+				"G"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"titan"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 409,
+				"formula": "21d20 + 189"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 80
+			},
+			"str": 30,
+			"dex": 11,
+			"con": 29,
+			"int": 22,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"int": "+14",
+				"wis": "+8"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"lightning",
+				"thunder"
+			],
+			"immune": [
+				"fire",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"restrained"
+			],
+			"cr": "26",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Tromokratis pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Hearts of the Kraken (Mythic Trait; Recharges after a Short or Long Rest)",
+					"entries": [
+						"Quando Tromokratis é reduzido a 0 pontos de vida, ele não morre nem cai {@condition unconscious}. Em vez disso, o dano cria rachaduras em sua carapaça, revelando seus corações. Tromokratis tem quatro corações: dois no peito, um nas costas e um na base da cauda. Um coração tem CA de 22 e 100 pontos de vida. É imune a danos de concussão, perfurantes e cortantes de ataques não mágicos e é imune a todas as condições. Se ele for forçado a fazer um teste de resistência, considere seus valores de habilidade como 10 (+0). Se terminar um descanso curto ou longo, a carapaça se cura, quaisquer corações destruídos se regeneram e os corações são cobertos novamente. Tromokratis morre quando todos os corações são destruídos."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Tromokratis falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas de Tromokratis são mágicos."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"Tromokratis causa dano duplo a objetos e estruturas."
+					]
+				},
+				{
+					"name": "Spell-Resistant Carapace",
+					"entries": [
+						"Tromokratis tem vantagem em testes de resistência contra magias, e qualquer criatura que faça um ataque de magia contra Tromokratis tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Tromokratis faz três ataques: um com a pinça, um com a cauda e outro com o tentáculo."
+					]
+				},
+				{
+					"name": "Pincer",
+					"entries": [
+						"{@atk mw} {@hit 18} para acertar, alcance 20 pés, um alvo. {@h}20 ({@damage 3d6 + 10}) dano de concussão, e se o alvo for uma criatura, é {@condition grappled} (escape {@dc 26}). Até o agarrão terminar, o alvo é {@condition restrained}, e Tromokratis não pode usar este ataque em mais ninguém."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 18} para acertar, alcance 20 pés, um alvo. {@h}23 ({@damage 3d8 + 10}) dano de concussão e, se o alvo for uma criatura, ela será derrubada {@condition prone}."
+					]
+				},
+				{
+					"name": "Tentacle Grasp",
+					"entries": [
+						"{@atk mw} {@hit 18} para acertar, alcance 6 metros, uma criatura. {@h}20 ({@damage 3d6 + 10}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 26}). Se o alvo não escapar até o final do próximo turno, Tromokratis arremessa o alvo até 18 metros em linha reta. O alvo atinge {@condition prone} e sofre 21 ({@damage 6d6}) de dano de concussão."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 18} para acertar, alcance 5 pés, um alvo. {@h}29 ({@damage 3d12 + 10}) dano perfurante. Se o alvo for uma criatura grande ou menor {@condition grappled} de Tromokratis, essa criatura é engolida e a luta termina. Enquanto engolida, a criatura é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora de Tromokratis, e sofre 42 ({@damage 12d6}) de dano ácido no início de cada um dos turnos de Tromokratis. Se Tromokratis sofrer 50 de dano ou mais em um único turno de uma criatura dentro dele, Tromokratis deve ser bem sucedido em um teste de resistência de Constituição {@dc 20} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros de Tromokratis. Se Tromokratis morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 4,5 metros de movimento, saindo de {@condition prone}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Tromokratis moves up to half its speed."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"Tromokratis makes one tail attack."
+					]
+				},
+				{
+					"name": "Bite (Costs 3 Actions)",
+					"entries": [
+						"Tromokratis makes one bite attack."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If Tromokratis's mythic trait is active, it can use the options below as legendary actions for 1 hour after using Hearts of the Kraken."
+			],
+			"mythic": [
+				{
+					"name": "Rampage",
+					"entries": [
+						"Tromokratis makes two attacks: one with its tail and one with its tentacle grasp."
+					]
+				},
+				{
+					"name": "Coral Growth (Costs 2 Actions)",
+					"entries": [
+						"Each creature within 10 feet of Tromokratis must make a {@dc 25} Dexterity saving throw, taking 13 ({@damage 3d8}) slashing damage on a failed save, or half as much damage on a successful one. Until the start of its next turn, Tromokratis and its hearts gain a +2 bonus to AC."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Tromokratis",
+				"source": "MOT"
+			},
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances",
+				"Magic Weapons",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Two-Headed Cerberus",
+			"source": "MOT",
+			"page": 215,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 3,
+			"wis": 13,
+			"cha": 6,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"fire",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"stunned"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"Como uma ação bônus, o cerberus pode se mover até sua velocidade em direção a uma criatura hostil que ele possa ver."
+					]
+				},
+				{
+					"name": "Multiheaded",
+					"entries": [
+						"O cerberus não pode ser {@status surprised} e tem vantagem em testes de resistência contra ser derrubado {@condition unconscious}."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O cerberus tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do cerberus estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cerberus faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante mais 2 ({@damage 1d4}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"O cerberus exala um cone de rocha derretida de 4,5 metros. Cada criatura no cone deve realizar um teste de resistência de Destreza de {@dc 12}, sofrendo 10 ({@damage 3d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso. Em caso de falha no salvamento, uma criatura também é {@condition restrained} atingida pela rocha endurecida. Uma criatura pode fazer um teste de {@dc 12} de Força ({@skill Athletics}) como uma ação, libertando a si mesma ou a uma criatura ao alcance da rocha em caso de sucesso. A rocha tem CA 17 e 10 pontos de vida e é imune a fogo, veneno e dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Typhon",
+			"source": "MOT",
+			"page": 246,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "17d12 + 85"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 24,
+			"dex": 10,
+			"con": 20,
+			"int": 7,
+			"wis": 12,
+			"cha": 13,
+			"save": {
+				"con": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"acid",
+				"necrotic"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "15",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"O tufão tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O tufão recupera 20 pontos de vida no início do seu turno. Se sofrer dano radiante, esta característica não funciona no início do próximo turno. O tufão morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tufão faz três ataques: um com sua Rajada de Mordidas, um para contrair e outro com sua bocarra."
+					]
+				},
+				{
+					"name": "Flurry of Bites",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 3 metros, um alvo. {@h}35 ({@damage 8d6 + 7}) dano perfurante."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 15 pés, uma criatura grande ou menor. {@h}17 ({@damage 3d6 + 7}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 19}). Até que esta luta termine, o alvo é {@condition restrained} e sofre 17 ({@damage 3d6 + 7}) de dano de concussão no início de cada um de seus turnos. O tufão pode ter até duas criaturas contraídas."
+					]
+				},
+				{
+					"name": "Maw",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 10 pés, um alvo. {@h}26 ({@damage 3d12 + 7}) de dano perfurante mais 19 ({@damage 3d12}) de dano ácido."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Underworld Cerberus",
+			"source": "MOT",
+			"page": 215,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 104,
+				"formula": "11d10 + 44"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 19,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 16,
+			"cha": 9,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+9",
+				"stealth": "+4"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 19,
+			"immune": [
+				"fire",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"stunned"
+			],
+			"languages": [
+				"understands all languages but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"Como uma ação bônus, o cerberus pode se mover até sua velocidade em direção a uma criatura hostil que ele possa ver."
+					]
+				},
+				{
+					"name": "Multiheaded",
+					"entries": [
+						"O cerberus não pode ser {@status surprised} e tem vantagem em testes de resistência contra ser derrubado {@condition unconscious}."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O cerberus tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do cerberus estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cerberus faz três ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano perfurante mais 3 ({@damage 1d6}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Breath Weapon {@recharge 5}",
+					"entries": [
+						"O cerberus exala um cone de rocha derretida de 9 metros. Cada criatura no cone deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 21 ({@damage 6d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso. Em caso de falha no salvamento, uma criatura também é {@condition restrained} pela rocha endurecida. Uma criatura pode fazer um teste de {@dc 15} Força ({@skill Athletics}) como uma ação, libertando a si mesma ou a uma criatura ao alcance da rocha em caso de sucesso. A rocha tem CA 17 e 20 pontos de vida e é imune a fogo, veneno e dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"XX"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Winged Bull",
+			"source": "MOT",
+			"page": 214,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 60
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 18,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"passive": 10,
+			"languages": [
+				"understands Celestial but can't speak"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o touro se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque sangrento no mesmo turno, o alvo sofre 19 ({@damage 3d12}) de dano perfurante extra."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}18 ({@damage 2d12 + 5}) dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"languageTags": [
+				"CE",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Winged Lion",
+			"source": "MOT",
+			"page": 214,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d10 + 48"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 60
+			},
+			"str": 20,
+			"dex": 16,
+			"con": 18,
+			"int": 6,
+			"wis": 14,
+			"cha": 5,
+			"passive": 12,
+			"languages": [
+				"understands Celestial but can't speak"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Pounce",
+					"entries": [
+						"Se o leão se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, esse alvo deve ter sucesso em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o leão pode fazer um ataque de mordida contra ele como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) cortando dano."
+					]
+				}
+			],
+			"traitTags": [
+				"Pounce"
+			],
+			"languageTags": [
+				"CE",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Woe Strider",
+			"source": "MOT",
+			"page": 247,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 110,
+				"formula": "13d10 + 39"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 8,
+			"wis": 14,
+			"cha": 14,
+			"skill": {
+				"intimidation": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Antimagic Cone",
+					"entries": [
+						"A boca aberta do strider cria uma área de antimagia, como no feitiço {@spell antimagic field}, em um cone de 18 metros. No início de cada um de seus turnos, o strider decide para que lado o cone fica e se sua boca está aberta ou fechada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O strider ai faz dois ataques de garra e um ataque de mordida. Se ambas as garras atingirem a mesma criatura, o alvo será {@condition grappled} (escape {@dc 14})."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano cortante mais 3 ({@damage 1d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para atingir, alcance 1,5 m, uma criatura que seja {@condition grappled}, {@condition incapacitated} ou {@condition restrained}. {@h}13 ({@damage 2d8 + 4}) de dano perfurante mais 16 ({@damage 3d10}) de dano psíquico. Além disso, cada item mágico que a criatura carrega e que não seja um artefato tem suas propriedades mágicas suprimidas por 1 minuto."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,1025 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"VGM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"GoS": "LR",
+				"MM": "LR",
+				"VGM": "LR",
+				"MTF": "LR",
+				"TftYP": "LR"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amble",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tortle"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor",
+						"{@item ring of protection}"
+					]
+				}
+			],
+			"hp": {
+				"average": 90,
+				"formula": "12d8 + 36"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 16,
+			"int": 10,
+			"wis": 18,
+			"cha": 14,
+			"save": {
+				"str": "+6",
+				"dex": "+4",
+				"con": "+7",
+				"int": "+4",
+				"wis": "+8",
+				"cha": "+6"
+			},
+			"skill": {
+				"animal handling": "+8",
+				"insight": "+8",
+				"medicine": "+8",
+				"perception": "+8",
+				"survival": "+8"
+			},
+			"passive": 18,
+			"languages": [
+				"Aquan",
+				"Common",
+				"Druidic"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Amble is a 12th-level spellcaster. Their spellcasting ability is Wisdom (spell save {@dc 16}, {@hit 8} to hit with spell attacks). Amble has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell mending}",
+								"{@spell shape water|XGE}",
+								"{@spell shillelagh}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell absorb elements|XGE}",
+								"{@spell cure wounds}",
+								"{@spell entangle}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell lesser restoration}",
+								"{@spell moonbeam}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell dispel magic}",
+								"{@spell water breathing}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell charm monster|XGE}",
+								"{@spell freedom of movement}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell greater restoration}",
+								"{@spell mass cure wounds}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell conjure fey}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hearth of Moonlight and Shadow",
+					"entries": [
+						"No início de um descanso curto ou longo, Amble pode tocar um ponto no espaço, e uma esfera de magia {@condition invisible} de 9 metros de raio aparece, centrada naquele ponto. {@quickref Cover||3||Total cover} bloqueia a esfera.",
+						"Enquanto dentro da esfera, Amble e seus aliados ganham um bônus de +5 em testes de Destreza ({@skill Stealth}) e Sabedoria ({@skill Perception}), e qualquer luz de chamas abertas na esfera não é visível fora dela.",
+						"A esfera desaparece no final do descanso ou quando Amble sai da esfera."
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"Amble pode prender a respiração por até 1 hora por vez."
+					]
+				},
+				{
+					"name": "Balm of the Summer Court (12d6)",
+					"entries": [
+						"(Como uma ação bônus) Amble pode escolher uma criatura que possa ver a até 36 metros deles e gastar até {@dice 6d6} de sua reserva de dados. Jogue os dados gastos e adicione-os. O alvo recupera um número de pontos de vida igual ao total. O alvo também ganha 1 ponto de vida temporário por dado gasto. Amble recupera todos os dados gastos ao terminar um descanso longo."
+					]
+				},
+				{
+					"name": "Hidden Paths (4/Day)",
+					"entries": [
+						"(Como uma ação bônus) Amble pode se teletransportar até 18 metros para um espaço desocupado que possa ver."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Change Shape (2/Day)",
+					"entries": [
+						"Amble se transforma magicamente em uma fera com nível de desafio de 1 ou menos e pode permanecer nesta forma por até 6 horas. O equipamento de Amble combina com sua nova forma. Amble volta à sua forma verdadeira se morrer ou cair {@condition unconscious}. Amble pode voltar à sua forma verdadeira usando uma ação bônus em seu turno.",
+						"As estatísticas do jogo de Amble são substituídas pelas estatísticas da besta, mas elas mantêm seu alinhamento, personalidade e pontuações de Inteligência, Sabedoria e Carisma. Amble também mantém todas as suas habilidades e proficiências em testes de resistência, além de ganhar as da criatura. Se a criatura tiver a mesma proficiência que Amble e o bônus em seu bloco de estatísticas for maior, use o bônus da criatura em vez do de Amble.",
+						"Quando Amble se transforma, eles assumem os pontos de vida e os dados de vida da fera. Quando Amble volta à sua forma normal, eles retornam ao número de pontos de vida que tinham antes de se transformarem. No entanto, se Amble reverter como resultado de cair para 0 pontos de vida, qualquer dano excessivo será transferido para sua forma normal.",
+						"Amble não pode lançar feitiços e sua capacidade de falar ou realizar qualquer ação que exija mãos é limitada às capacidades de sua forma animal. A transformação não quebra o {@status concentration} de Amble em um feitiço que eles já lançaram, nem os impede de realizar ações que fazem parte de um feitiço."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano cortante."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar ({@hit 8} para acertar com shillelagh), alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano por concussão ou 8 ({@damage 1d8 + 4}) de dano por concussão com shillelagh."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Fhenimore",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 20,
+			"_copy": {
+				"name": "Kraken Priest",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Fhenimore",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "replaceSpells",
+						"daily": {
+							"1e": [
+								{
+									"replace": "{@spell call lightning}",
+									"with": "{@spell lightning bolt}"
+								}
+							]
+						}
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Blood Frenzy",
+							"entries": [
+								"Fhenimore has advantage on melee attack rolls against any creature that doesn't have all its hit points."
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Voice of the Kraken (Recharges after a Short or Long Rest)",
+						"items": [
+							{
+								"name": "Multiattack",
+								"entries": [
+									"Fhenimore can attack once with her bite attack and once with Thunderous Touch."
+								]
+							},
+							{
+								"name": "Bite",
+								"entries": [
+									"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
+								]
+							}
+						]
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"str": 16,
+			"languages": [
+				"Common",
+				"Aquan"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"T"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gar Shatterkeel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 18,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 144,
+				"formula": "17d8 + 68"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 18,
+			"int": 12,
+			"wis": 20,
+			"cha": 14,
+			"skill": {
+				"nature": "+11",
+				"perception": "+10",
+				"survival": "+10"
+			},
+			"passive": 20,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Gar is a 13th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 18}, {@hit 10} to hit with spell attacks). He has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell frostbite|XGE}",
+								"{@spell mending}",
+								"{@spell resistance}",
+								"{@spell shape water|XGE}",
+								"{@spell thunderclap|XGE}*"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell create or destroy water}",
+								"{@spell charm person}",
+								"{@spell cure wounds}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell mirror image}*",
+								"{@spell misty step}*",
+								"{@spell pass without trace}",
+								"{@spell protection from poison}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell conjure animals}",
+								"{@spell dispel magic}",
+								"{@spell tidal wave|XGE}",
+								"{@spell water breathing}*",
+								"{@spell water walk}*"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell charm monster|XGE}",
+								"{@spell control water}*",
+								"{@spell dominate beast}",
+								"{@spell freedom of movement}*",
+								"{@spell watery sphere|XGE}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell conjure elemental}*",
+								"{@spell maelstrom|XGE}",
+								"{@spell scrying}*",
+								"{@spell tree stride}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell heal}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell plane shift}"
+							]
+						}
+					},
+					"footerEntries": [
+						"*Circle spells don't count against spells prepared."
+					],
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Gar pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Gar falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Water Walk",
+					"entries": [
+						"Gar pode ficar de pé e se mover em superfícies líquidas como se fossem solo sólido."
+					]
+				},
+				{
+					"name": "Watery Fall",
+					"entries": [
+						"Quando Gar cai para 0 pontos de vida, seu corpo entra em colapso em uma poça de água escura que se dispersa rapidamente. Exceto {@item Wave} e sua garra, tudo o que ele estava vestindo ou carregando foi deixado para trás."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gar faz dois ataques corpo a corpo, um com sua garra e outro com {@item Wave}."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 16}). Até que a luta termine, Gar não pode atacar outras criaturas com sua garra."
+					]
+				},
+				{
+					"name": "Wave",
+					"entries": [
+						"{@atk mw,rw} {@hit 11} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}9 ({@damage 1d6 + 6}) de dano perfurante ou 10 ({@damage 1d8 + 6}) de dano perfurante quando usado com as duas mãos. Se Gar obtiver um acerto crítico com esta arma, o alvo sofre dano necrótico extra igual à metade do seu ponto de vida máximo."
+					]
+				},
+				{
+					"name": "Umberlee's Wake {@recharge 5}",
+					"entries": [
+						"O poder se espalha em uma esfera de raio de 18 metros a partir de um ponto dentro do alcance (45 metros), conforme a vontade de Umberlee afeta todos em seu abraço aquático. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Constituição {@dc 18}. Se falhar, a criatura não pode usar reações, sua velocidade é reduzida à metade e ela não pode realizar mais de um ataque por turno. Além disso, a criatura pode usar uma ação ou uma ação bônus no seu turno, mas não ambas. Esses efeitos duram 1 minuto. A criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma com um teste de resistência bem-sucedido. Isso afeta apenas alvos que estão submersos ou flutuando na água. Gar Shatterkeel e qualquer morto-vivo que o sirva são imunes a este efeito."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Gar moves up to his speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"Gar makes one attack with his claw."
+					]
+				},
+				{
+					"name": "Wave (Costs 2 Actions)",
+					"entries": [
+						"Gar makes one attack with {@item Wave} with advantage."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gar Shatterkeel",
+				"source": "LR"
+			},
+			"attachedItems": [
+				"wave|dmg"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"conditionInflictLegendary": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shoalar Quanderil",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 23,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 14,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 12,
+			"con": 16,
+			"int": 14,
+			"wis": 10,
+			"cha": 18,
+			"skill": {
+				"arcana": "+6",
+				"deception": "+8",
+				"insight": "+4",
+				"persuasion": "+8"
+			},
+			"passive": 10,
+			"resist": [
+				"acid",
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shoalar's innate spellcasting ability is Constitution (spell save {@dc 14}, {@hit 6} to hit with spell attacks). He can innately cast the following spells:"
+					],
+					"will": [
+						"{@spell shape water|XGE}"
+					],
+					"daily": {
+						"1": [
+							"{@spell create or destroy water}"
+						]
+					},
+					"ability": "con"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shoalar is a 7th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). He knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell chill touch}",
+								"{@spell light}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell disguise self}",
+								"{@spell mage armor}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell lightning bolt}",
+								"{@spell tidal wave|XGE}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell watery sphere|XGE}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Shoalar pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"N"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Whymsee",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LR",
+			"page": 20,
+			"_copy": {
+				"name": "Kraken Priest",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Whymsee",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "replaceSpells",
+						"daily": {
+							"1e": [
+								{
+									"replace": "{@spell call lightning}",
+									"with": "{@spell lightning bolt}"
+								}
+							]
+						}
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Voice of the Kraken (Recharges after a Short or Long Rest)",
+						"items": [
+							{
+								"name": "Ink Cloud",
+								"entries": [
+									"While underwater, Whymsee can expel an ink cloud in a 20-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than kraken priests or a kraken. Each creature other than a kraken priest or a kraken that ends its turn there must succeed on a {@dc 14} Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end of Whymsee's next turn."
+								]
+							},
+							{
+								"name": "Shell Defense",
+								"entries": [
+									"Whymsee withdraws into her shell. Until she emerges, she gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in her shell, Whymsee is {@condition prone}, her speed is 0 and can't increase, she has disadvantage on Dexterity saving throws, it can't take reactions, and the only action she can take is a bonus action to emerge."
+								]
+							}
+						]
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"languages": [
+				"Common",
+				"Aquan"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"I",
+				"T"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Kraken",
+			"source": "LR",
+			"page": 21,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"titan"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 207,
+				"formula": "18d12 + 90"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 50
+			},
+			"str": 24,
+			"dex": 11,
+			"con": 20,
+			"int": 19,
+			"wis": 15,
+			"cha": 17,
+			"save": {
+				"str": "+12",
+				"dex": "+5",
+				"con": "+10",
+				"int": "+9",
+				"wis": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"lightning",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"Abyssal",
+				"Celestial",
+				"Infernal",
+				"Primordial",
+				"telepathy 60 ft. but can't speak"
+			],
+			"cr": "14",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O kraken pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O kraken faz dois ataques de tentáculos, cada um dos quais pode ser substituído por um uso de Arremesso."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) dano perfurante.",
+						"Se o alvo for uma criatura Média ou menor {@condition grappled} do kraken, essa criatura é engolida e o agarrão termina. Enquanto engolida, a criatura é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do kraken e sofre 21 ({@damage 6d6}) de dano ácido no início de cada um dos turnos do kraken. Uma criatura média ou duas criaturas menores podem ser engolidas ao mesmo tempo.",
+						"Se o kraken sofrer 35 de dano ou mais em um único turno de uma criatura dentro dele, o kraken deve ter sucesso em um teste de resistência de Constituição {@dc 23} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em espaços a até 3 metros do kraken. Se o kraken morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 3 metros de movimento, saindo de {@condition prone}."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 20 pés, um alvo. {@h}17 ({@damage 3d6 + 7}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 20}). Até que a luta termine, o alvo é {@condition restrained}. O kraken tem dez tentáculos, cada um dos quais pode agarrar um alvo."
+					]
+				},
+				{
+					"name": "Fling",
+					"entries": [
+						"Um objeto ou criatura médio ou menor segurado {@condition grappled} pelo kraken é lançado até 12 metros em uma direção aleatória e derrubado {@condition prone}. Se um alvo arremessado atingir uma superfície sólida, o alvo sofre 3 ({@damage 1d6}) de dano de concussão para cada 3 metros que foi arremessado. Se o alvo for lançado em outra criatura, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 13} ou sofrerá o mesmo dano e será derrubada {@condition prone}."
+					]
+				},
+				{
+					"name": "Lightning Strike",
+					"entries": [
+						"O kraken cria magicamente um raio, que pode atingir um alvo que o kraken possa ver a até 27 metros dele. O alvo deve realizar um teste de resistência de Destreza {@dc 18}, sofrendo 22 ({@damage 4d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"AB",
+				"CE",
+				"CS",
+				"I",
+				"P",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

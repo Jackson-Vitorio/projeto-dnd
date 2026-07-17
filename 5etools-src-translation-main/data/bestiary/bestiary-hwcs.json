@@ -1,0 +1,8443 @@
+{
+	"monster": [
+		{
+			"name": "Ardwyn, Elder of Meadowfen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"huden gallus"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 12,
+			"int": 13,
+			"wis": 18,
+			"cha": 13,
+			"skill": {
+				"medicine": "+8",
+				"persuasion": "+3",
+				"religion": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ardwyn is a 5th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). Ardwyn has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}",
+								"{@spell sanctuary}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell spirit guardians}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Ardwyn pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ela cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ela não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Ardwyn pode usar seus poderosos braços emplumados para se impulsionar para cima a uma distância igual à metade de sua velocidade de movimento. Ela pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Seedspeech",
+					"entries": [
+						"Ardwyn pode comunicar ideias simples às plantas vivas e é capaz de interpretar suas respostas em linguagem simples."
+					]
+				},
+				{
+					"name": "Divine Eminence",
+					"entries": [
+						"Como uma ação bônus, Ardwyn pode gastar um espaço de magia para fazer com que seus ataques com armas corpo a corpo causem magicamente 10 ({@damage 3d6}) de dano radiante extra a um alvo ao acertar. Este benefício dura até o final do turno. Se Ardwyn gastar um espaço de magia de 2º nível ou superior, o dano extra aumenta em {@damage 1d6} para cada nível acima do 1º."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ashsnake",
+			"source": "HWCS",
+			"page": 177,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				},
+				{
+					"ac": 18,
+					"condition": "while under ash",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "7d12 + 21",
+				"average": 67
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 4,
+			"wis": 12,
+			"cha": 4,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)",
+				"tremorsense 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"fire"
+			],
+			"vulnerable": [
+				"cold"
+			],
+			"languages": [
+				"understands Ignan",
+				"but can't speak"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Ash Cover",
+					"entries": [
+						"A cobra das cinzas tem vantagem em testes de Destreza ({@skill Stealth}) feitos quando está escavando nas cinzas, bem como um bônus de +4 em sua classe de armadura."
+					]
+				},
+				{
+					"name": "Eruption",
+					"entries": [
+						"Quando a cobra das cinzas emerge da escavação, qualquer criatura a até 1,5 metro dela que seja pelo menos um tamanho menor que a cobra das cinzas deve fazer um teste de resistência de Destreza {@dc 14} ou será derrubada {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A Cobra Cinzenta pode realizar um ataque de mordida e um ataque de Constrição ou Esmagamento a cada rodada."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}8 ({@damage 1d10 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}8 ({@damage 2d8 + 3}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 14}). Até que a luta termine, o alvo é {@condition restrained} e a cobra cinza não pode contrair ou esmagar outro alvo. A cobra cinza pode liberar o alvo a qualquer momento durante seu turno."
+					]
+				},
+				{
+					"name": "Crush",
+					"entries": [
+						"A cobra cinza esmaga seu alvo {@condition grappled}, causando 11 ({@damage 2d8 + 3}) de dano de concussão."
+					]
+				},
+				{
+					"name": "Ashen Breath {@recharge 5}",
+					"entries": [
+						"A cobra cinza exala uma nuvem de cinzas superaquecidas em um cone de 4,5 metros. Cada criatura na área deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 11 ({@damage 2d10}) de dano de fogo se falhar na resistência, ou metade se obtiver sucesso."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"T"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"IG"
+			],
+			"damageTags": [
+				"B",
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aspect of Fire",
+			"source": "HWCS",
+			"page": 179,
+			"size": [
+				"G"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d20 + 48",
+				"average": 174
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 13,
+			"con": 18,
+			"int": 6,
+			"wis": 15,
+			"cha": 14,
+			"save": {
+				"wis": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"special": "bludgeoning, piercing, and slashing from nonmagical weapons"
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"Ignan"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o Aspecto do Fogo falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Molten Skin",
+					"entries": [
+						"Qualquer criatura que toque, faça um ataque corpo a corpo a até 1,5 metro ou termine seu turno a 1,5 metro do aspecto sofre 11 ({@damage 2d10}) de dano de fogo. Objetos inflamáveis ​​a até 1,5 metro do aspecto explodem em chamas."
+					]
+				},
+				{
+					"name": "Natural Light",
+					"entries": [
+						"O aspecto emite luz brilhante em um raio de 18 metros e luz fraca por mais 18 metros."
+					]
+				},
+				{
+					"name": "Cooling",
+					"entries": [
+						"Se o aspecto do fogo sofrer 50 ou mais de dano de frio em uma rodada, sua velocidade será reduzida a 0 até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Fuel for the Fire",
+					"entries": [
+						"O aspecto do fogo não trata a vida vegetal como um terreno difícil. Sempre que o aspecto começa seu turno em um espaço de vida vegetal que fornece cobertura, ele queima a vida vegetal de todos os espaços que está ocupando no momento, curando {@dice 1d4} pontos de vida para cada 1,5 metro quadrado dessa vida vegetal que consumiu. Se ele curar 17 ou mais danos dessa forma, ele se inflama, recarregando sua ação de lançamento de magma."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O aspecto realiza dois ataques de punho derretido."
+					]
+				},
+				{
+					"name": "Molten Fist",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 15 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) dano de fogo."
+					]
+				},
+				{
+					"name": "Stomp",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 3d10 + 5}) dano de fogo. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Magma Throw {@recharge 5}",
+					"entries": [
+						"O aspecto lança uma bola de rocha derretida. Escolha um local a até 18 metros do aspecto. Todas as criaturas a até 4,5 metros do local alvo devem realizar um teste de resistência de {@dc 17} de Destreza. Em caso de falha, uma criatura sofre 22 ({@damage 4d10}) de dano de fogo. Se obtiver sucesso, a criatura sofre metade do dano."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"The aspect of fire can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time, and only at the end of another creature's turn. The aspect regains spent legendary actions at the start of its turn."
+			],
+			"legendary": [
+				{
+					"name": "Detect",
+					"entries": [
+						"The aspect makes a Wisdom ({@skill Perception}) check."
+					]
+				},
+				{
+					"name": "Molten Fist",
+					"entries": [
+						"The aspect makes a molten fist attack."
+					]
+				},
+				{
+					"name": "Magma Barrage (Costs 2 Actions)",
+					"entries": [
+						"The aspect of fire uses its magma throw action. It may use this ability if it has not yet been recharged by dealing 17 points of cold damage to itself. "
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"IG"
+			],
+			"damageTags": [
+				"F"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Benna Seridan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cervan"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 14,
+			"int": 14,
+			"wis": 11,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"Cervan"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Surge of Vigor (Recharges after a Long Rest)",
+					"entries": [
+						"Se um ataque causar mais da metade dos pontos de vida restantes atuais de Benna Seridan em dano (mesmo que seus pontos de vida sejam reduzidos a 0 pelo ataque), ela imediatamente recupera 8 ({@dice 1d12 + 2}) pontos de vida."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância de Benna Seridan tem 30 pés e seu salto em altura base tem 15 pés, com ou sem corrida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Benna Seridan faz três ataques corpo a corpo, dois com sua cimitarra e um com sua adaga. Alternativamente, Benna Seridan pode fazer dois ataques à distância com suas adagas."
+					]
+				},
+				{
+					"name": "Scimitar of the Wood",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) cortando dano. A espada tem 2 cargas. Benna Seridan pode gastar uma carga e falar a palavra de comando para lançar {@spell spike growth} (salvar {@dc 16}) centrado em si mesma. Ela pode passar por este terreno sem ser afetada. A espada recupera uma carga por dia ao amanhecer."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Benna Seridan adds 2 to her AC against one melee attack that would hit her. Benna Seridan must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Dockmaster",
+			"shortName": "dockmaster",
+			"source": "HWCS",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 10",
+				"average": 55
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 13,
+			"int": 8,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"perception": "+5",
+				"persuasion": "+4",
+				"athletics": "+2"
+			},
+			"passive": 15,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o doca pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Confidence",
+					"entries": [
+						"O dockmaster adiciona seu modificador de Carisma às suas jogadas de iniciativa."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"Uma vez por turno, o dockmaster causa 3 ({@dice 1d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 m de um aliado do dockmaster que não seja {@condition incapacitated} e o dockmaster não tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dockmaster faz dois ataques de sabre e um ataque de adaga."
+					]
+				},
+				{
+					"name": "Saber",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Farmer",
+			"shortName": "farmer",
+			"source": "HWCS",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"nature": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o fazendeiro pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pitchfork",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano cortante."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Guard",
+			"shortName": "guard",
+			"source": "HWCS",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"L",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain shirt|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o guarda pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados ​​ou armas pesadas (embora possam deixar cair qualquer item segurado como parte de sua reação)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) de dano perfurante ou 5 ({@damage 1d8 + 1}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Militia",
+			"shortName": "militia",
+			"source": "HWCS",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, a milícia pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam deixar cair qualquer item",
+						"parte de sua reação)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Sailor",
+			"shortName": "sailor",
+			"source": "HWCS",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o marinheiro pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 80/320 pés, um alvo. {@h}5 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"light crossbow|phb",
+				"shortsword|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Skeleton",
+			"source": "HWCS",
+			"page": 180,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 4",
+				"average": 13
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 15,
+			"con": 14,
+			"int": 7,
+			"wis": 8,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Auran and Birdfolk",
+				"but can't speak"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Talons",
+					"entries": [
+						"O esqueleto do povo pássaro tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Birdfolk Skirmisher",
+			"shortName": "skirmisher",
+			"source": "HWCS",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any birdfolk"
+				]
+			},
+			"alignment": [
+				"L",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"athletics": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o escaramuçador pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Drop Attack",
+					"entries": [
+						"O escaramuçador pode fazer um ataque durante o planeio. Se fizerem isso, causarão 4 ({@dice 1d8}) pontos extras de dano."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante ou 6 ({@damage 1d8 + 2}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bita, the Council Speaker",
+			"shortName": "Bita",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"bright gallus"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 11,
+			"int": 12,
+			"wis": 16,
+			"cha": 17,
+			"skill": {
+				"deception": "+5",
+				"insight": "+6",
+				"persuasion": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Bita pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ela cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ela não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Bita pode usar seus poderosos braços emplumados para se impulsionar para cima uma distância igual à metade de sua velocidade de movimento. Ela pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Inspiring",
+					"entries": [
+						"Como ação, Bita inspira um aliado que pode vê-la e ouvi-la. O aliado pode rolar um {@dice d4} e adicionar o número obtido em seu próximo teste de habilidade, jogada de ataque ou teste de resistência."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Bita adds 2 to her AC against one melee attack that would hit her. To do so, Bita must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"actionTags": [
+				"Parry"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cara Stormsinger",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"swift strig"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Cara Stormsinger pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ela cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ela não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Cara Stormsinger tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Patterned Feathers",
+					"entries": [
+						"Cara Stormsinger tem vantagem em testes de Destreza ({@skill Stealth}) quando tenta se esconder em uma floresta."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Caustic Slime",
+			"source": "HWCS",
+			"page": 186,
+			"size": [
+				"M"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"formula": "3d8 + 9",
+				"average": 22
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 15,
+			"dex": 6,
+			"con": 16,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"immune": [
+				"acid"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"O Caustic Slime pode se mover através de um espaço estreito de até 2,5 cm de largura sem ser comprimido."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O Caustic Slime pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem a necessidade de fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Caustic",
+					"entries": [
+						"Qualquer criatura que tocar o lodo ou acertá-lo com um ataque corpo a corpo enquanto estiver a 1,5 metro dele deve ser bem sucedida em um teste de resistência de Destreza {@dc 12} ou sofrerá 2 ({@dice 1d4}) pontos de dano ácido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Psuedopod",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano ácido."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Split",
+					"entries": [
+						"When a slime that is Medium or larger and has 10 or more hit points is hit with slashing damage, it splits into two new slimes. Each new slime has hit points equal to half the original slime's, rounded down. New slimes are one size smaller than the previous size."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"A"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cervan Bandit General",
+			"shortName": "the general",
+			"source": "HWCS",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cervan"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 14,
+			"int": 14,
+			"wis": 11,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"Cervan"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Surge of Vigor (Recharges after a Long Rest)",
+					"entries": [
+						"Se um ataque causar mais da metade dos pontos de vida restantes atuais do general em dano (mesmo que seus pontos de vida sejam reduzidos a 0 pelo ataque), eles imediatamente recuperam 8 ({@dice 1d12 + 2}) pontos de vida."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância do general é de 30 pés, e seu salto em altura básico é de 15 pés, com ou sem corrida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O general faz três ataques corpo a corpo, dois com a cimitarra e um com a adaga. Alternativamente, o general pode fazer dois ataques à distância com suas adagas."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The general adds 2 to their AC against one melee attack that would hit them. The general must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"scimitar|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cervan Priest",
+			"source": "HWCS",
+			"page": 193,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cervan"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 14,
+			"int": 10,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"religion": "+2",
+				"medicine": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Birdfolk",
+				"Cervan"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 3rd-level spellcaster. Their spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). The priest has the following cleric spells prepared: "
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|PHB}",
+								"{@spell light|PHB}",
+								"{@spell spare the dying|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bless|PHB}",
+								"{@spell cure wounds|PHB}",
+								"{@spell guiding bolt|PHB}",
+								"{@spell shield of faith|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell calm emotions|PHB}",
+								"{@spell warding bond|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Surge of Vigor (Recharges after a Long Rest)",
+					"entries": [
+						"Se o sacerdote sofrer dano igual a metade ou mais de seus pontos de vida restantes atuais (mesmo que seu HP seja reduzido a 0 pelo ataque), ele imediatamente recupera 8 ({@dice 1d12 + 2}) pontos de vida."
+					]
+				},
+				{
+					"name": "Charge",
+					"entries": [
+						"Se o sacerdote se mover pelo menos 6 metros em linha reta em direção a um inimigo, seu ataque de chifre causa 3 ({@dice 1d6}) pontos extras de dano perfurante. Se o alvo da investida for Grande ou menor, ele deverá realizar um teste de resistência de Força {@dc 11} ou será empurrado a 3 metros de distância do sacerdote."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Antlers",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) de dano de concussão ou 5 ({@damage 1d8 + 1}) de dano de concussão se for segurado com as duas mãos."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"traitTags": [
+				"Charge"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cobblefright",
+			"source": "HWCS",
+			"page": 180,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d10 + 36",
+				"average": 102
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 16,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"save": {
+				"con": "+6",
+				"wis": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Auran",
+				"Birdfolk",
+				"and any other languages it knew in life",
+				"but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Berserk",
+					"entries": [
+						"Sempre que o cobblefright começar seu turno com 40 pontos de vida ou menos, role um {@dice d6}. Com um 6, o cobblefright fica furioso. Em cada um de seus turnos enquanto estiver furioso, o cobblefright ataca a criatura mais próxima que puder ver. Se nenhuma criatura estiver próxima o suficiente para se mover e atacar, o cobblefright ataca um objeto, com preferência por um objeto menor que ele. Uma vez que o cobblefright enlouquece, ele continua assim até ser destruído ou recuperar todos os seus pontos de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cobblefright faz três ataques de garras. Um desses ataques pode ser substituído por um ataque de agarrar."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Grab",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}O alvo é {@condition grappled} (escape {@dc 15}). O cobblefright pode agarrar até 2 alvos ao mesmo tempo. Uma vez no início de seu turno, para cada alvo, ele possui {@condition grappled}, o cobblefright pode espremer sua vítima. O alvo deve realizar um teste de resistência de Força {@dc 15}, sofrendo 13 ({@damage 2d8 + 4}) de dano de concussão se falhar na resistência."
+					]
+				},
+				{
+					"name": "Soul Siphon",
+					"entries": [
+						"Uma criatura que o cobblefright possui {@condition grappled} deve realizar um teste de resistência de Constituição {@dc 14}, sofrendo 11 ({@damage 2d10}) de dano necrótico em caso de falha na resistência, ou metade dessa quantidade em caso de sucesso. O máximo de pontos de vida do alvo é reduzido pela quantidade de dano necrótico recebido, e o cobblefright recupera pontos de vida iguais a essa quantidade. A redução dura até que o alvo termine um descanso curto ou longo."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corvax Revayne",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"corvum"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8",
+				"average": 40
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"religion": "+6"
+			},
+			"passive": 11,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Corvax Revayne is a 9th level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 14}, +6 to hit with spell attacks). Corvax has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell detect magic|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}",
+								"{@spell shield|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury|PHB}",
+								"{@spell misty step|PHB}"
+							],
+							"slots": 2
+						},
+						"3": {
+							"spells": [
+								"{@spell clairvoyance|PHB}",
+								"{@spell counterspell|PHB}",
+								"{@spell fly|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell greater invisibility|PHB}",
+								"{@spell locate creature|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell scrying|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Corvax Revayne pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Corvax cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Corvax não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item que esteja segurando como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Corvax Revayne tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"Corvax Revayne tem vantagem em testes de Destreza ({@skill Stealth}) feitos em penumbra ou escuridão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano cortante."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corvum Assassin",
+			"shortName": "assassin",
+			"source": "HWCS",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"corvum"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8",
+				"average": 54
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 11,
+			"int": 14,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"dex": "+6",
+				"int": "+5"
+			},
+			"skill": {
+				"insight": "+5",
+				"nature": "+5",
+				"perception": "+8",
+				"stealth": "+9"
+			},
+			"passive": 18,
+			"languages": [
+				"Birdfolk",
+				"Thieves' Cant",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o assassino pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O assassino tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Durante seu primeiro turno, o assassino tem vantagem nas jogadas de ataque contra qualquer criatura que não tenha jogado o turno. Qualquer acerto obtido pelo assassino contra uma criatura surpresa é um acerto crítico."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"Uma vez por turno, o assassino causa 10 ({@dice 3d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado do assassino que não seja {@condition incapacitated} e o assassino não tem desvantagem na jogada de ataque."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"O assassino tem vantagem em testes de Destreza ({@skill Stealth}) feitos em penumbra ou escuridão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O assassino faz dois ataques corpo a corpo: um com a espada curta e outro com a adaga. Ou o assassino faz dois ataques à distância com suas adagas."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 3}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 13}, sofrendo 10 ({@damage 3d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 13}, sofrendo 10 ({@damage 3d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corvum Diviner",
+			"shortName": "diviner",
+			"source": "HWCS",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"corvum"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8",
+				"average": 40
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"religion": "+6"
+			},
+			"passive": 11,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The diviner is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save {@dc 14}, +6 to hit with spell attacks). The diviner has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell detect magic|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}",
+								"{@spell shield|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury|PHB}",
+								"{@spell misty step|PHB}"
+							],
+							"slots": 2
+						},
+						"3": {
+							"spells": [
+								"{@spell clairvoyance|PHB}",
+								"{@spell counterspell|PHB}",
+								"{@spell fly|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell greater invisibility|PHB}",
+								"{@spell locate creature|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell scrying|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o adivinho pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. O adivinho pousa em um espaço desocupado ao final de seu movimento e não sofre dano de queda. O adivinho não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O adivinho tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"O adivinho tem vantagem em testes de Destreza ({@skill Stealth}) feitos em penumbra ou escuridão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) cortando dano."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corvum Necromancer",
+			"source": "HWCS",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"corvum"
+				]
+			},
+			"alignment": [
+				"L",
+				"NX",
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 9",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"int": "+7",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+5",
+				"medicine": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"any two other languages",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The necromancer is a 9th-level spellcaster. Their spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). The necromancer has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell disguise self|PHB}",
+								"{@spell false life|PHB|false life†}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell misty step|PHB}",
+								"{@spell ray of enfeeblement|PHB|ray of enfeeblement†}",
+								"{@spell suggestion|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|PHB|animate dead†}",
+								"{@spell counterspell|PHB}",
+								"{@spell fear|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell blight|PHB|blight†}",
+								"{@spell greater invisibility|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dominate person|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"footerEntries": [
+						"†necromancy spell of 1st level or higher"
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o necromante pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O necromante tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Convincing",
+					"entries": [
+						"O necromante tem vantagem em todos os testes de Carisma usados para convencer alguém de seu conhecimento do assunto pertencente à perícia Arcana."
+					]
+				},
+				{
+					"name": "Life Leech",
+					"entries": [
+						"Uma vez por turno, quando o necromante mata uma ou mais criaturas com uma magia de 1º nível ou superior, eles podem recuperar pontos de vida iguais a duas vezes o nível da magia, ou três vezes o nível se for uma magia de necromancia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) de dano por concussão ou 3 ({@damage 1d8 - 1}) de dano por concussão se empunhado com as duas mãos."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano cortante."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eliza Pennygleam",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"eluran"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"Eluran"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Emberbat",
+			"source": "HWCS",
+			"page": 182,
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "1d4",
+				"average": 2
+			},
+			"speed": {
+				"walk": 5,
+				"fly": 30
+			},
+			"str": 2,
+			"dex": 15,
+			"con": 10,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 11,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Echolocation",
+					"entries": [
+						"O Emberbat não pode usar sua visão cega enquanto {@condition deafened}."
+					]
+				},
+				{
+					"name": "Keen Hearing",
+					"entries": [
+						"O Emberbat tem vantagem em testes de Sabedoria (%%Tbfef19f%%) que dependem de audição."
+					]
+				},
+				{
+					"name": "Ember Flame",
+					"entries": [
+						"O emberbat pode criar uma chama com seu nariz à vontade. Ele emite luz brilhante em um raio de 1,5 metro e luz fraca em outros 1,5 metro além deste. Este efeito dura até ser dispensado, o que o emberbat pode fazer a qualquer momento. Quando acesa, a chama também fornece um pequeno aumento de dano à mordida do emberbat (já incluído no bloco de estatísticas)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 0} para acertar, alcance 5 pés, um alvo. {@h}1 dano perfurante mais 1 dano de fogo."
+					]
+				}
+			],
+			"familiar": true,
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Figory Figgins",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 196,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"jerbeen"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 11,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"Jerbeen"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância de um jerbeen tem 30 pés e seu salto em altura básico tem 15 pés, com ou sem corrida."
+					]
+				},
+				{
+					"name": "Team Tactics",
+					"entries": [
+						"Jerbeens pode realizar a ação {@action Help} como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				}
+			],
+			"tokenCredit": "Andrea Mazzocchetti",
+			"attachedItems": [
+				"club|phb"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Forest Prowler",
+			"source": "HWCS",
+			"page": 183,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d10 + 20",
+				"average": 75
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 14,
+			"int": 4,
+			"wis": 14,
+			"cha": 9,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Natural Camouflage",
+					"entries": [
+						"O gatuno tem vantagem em testes de Destreza ({@skill Stealth}) feitos na floresta. Criaturas que atacam um alvo que não pode vê-lo têm vantagem em sua jogada de ataque."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"Se o Forest Prowler se mover pelo menos 3 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, esse alvo deve ser bem sucedido em um teste de resistência de Força {@dc 14} ou será derrubado {@condition prone}. O ladrão pode usar sua ação bônus para realizar outro ataque de garra contra o alvo."
+					]
+				},
+				{
+					"name": "Ambuscade",
+					"entries": [
+						"O ladrão pode usar a ação correr ou esconder-se como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ladrão faz dois ataques de garra e um ataque de mordida."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) dano cortante."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano perfurante. Se o alvo do ataque de mordida for {@condition prone}, ele sofrerá 4 ({@damage 1d8}) de dano perfurante adicional."
+					]
+				}
+			],
+			"traitTags": [
+				"Camouflage",
+				"Pounce"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fray Merridan",
+			"shortName": "Fray",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"vulpin"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 12,
+			"int": 14,
+			"wis": 14,
+			"cha": 12,
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Birdfolk",
+				"Vulpin"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Evasive",
+					"entries": [
+						"Fray inclui seu modificador de Inteligência como um bônus em seus testes de resistência de Destreza."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Fray faz dois ataques."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Short sword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Short bow",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 80/320 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Fray adds 2 to their AC against one melee attack that would hit her per round. Fray must see the attacker and be wielding a melee weapon. "
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gabe Windsworth",
+			"shortName": "Gabe",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"luma"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "13d6 + 13",
+				"average": 58
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"int": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+7",
+				"history": "+7"
+			},
+			"passive": 11,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Auran",
+				"Birdfolk",
+				"any three other languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Gabe is a 10th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). Gabe has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell fire bolt|PHB}",
+								"{@spell minor illusion|PHB}",
+								"{@spell prestidigitation|PHB}",
+								"{@spell ray of frost|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|PHB}",
+								"{@spell detect magic|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell shield|PHB}",
+								"{@spell sleep|PHB}",
+								"{@spell thunderwave|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell darkness|PHB}",
+								"{@spell hold person|PHB}",
+								"{@spell ray of enfeeblement|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell counterspell|PHB}",
+								"{@spell fireball|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell banishment|PHB}",
+								"{@spell stellar bodies|HWCS}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell conjure elemental|PHB}",
+								"{@spell mislead|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Gabe pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ele cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ele não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Gabe pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. Gabe pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"Gabe pode escolher rolar novamente qualquer ataque, teste de habilidade ou teste de resistência."
+					]
+				},
+				{
+					"name": "Resilience",
+					"entries": [
+						"Gabe tem vantagem em testes de resistência contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Charming (3/Day)",
+					"entries": [
+						"When a creature makes an attack against Gabe, the creature must succeed on a {@dc 14} Wisdom saving throw or target the next closest creature within range. If multiple creatures are closest, the attacker chooses. This feature does not work if there are no other creatures within range"
+					]
+				}
+			],
+			"languageTags": [
+				"AU"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"N",
+				"T"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gallus Druid",
+			"shortName": "druid",
+			"source": "HWCS",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gallus"
+				]
+			},
+			"alignment": [
+				"NX",
+				"NY",
+				"N"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 16,
+					"condition": "with barkskin",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 18,
+			"cha": 10,
+			"skill": {
+				"insight": "+6",
+				"nature": "+2",
+				"medicine": "+6",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Birdfolk",
+				"Druidic",
+				"Sylvan",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The druid is a 6th-level spellcaster. Their spellcasting ability is Wisdom (spell save {@dc 14}, +6 to hit with spell attacks). The druid has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft|PHB}",
+								"{@spell produce flame|PHB}",
+								"{@spell shillelagh|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell animal friendship|PHB}",
+								"{@spell cure wounds|PHB}",
+								"{@spell entangle|PHB}",
+								"{@spell fog cloud|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell barkskin|PHB}",
+								"{@spell gust of wind|PHB}",
+								"{@spell moonbeam|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell conjure animals|PHB}",
+								"{@spell dispel magic|PHB}",
+								"{@spell wind wall|PHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o druida pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, o druida pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. O druida pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Seedspeech",
+					"entries": [
+						"O druida pode comunicar ideias simples às plantas vivas e é capaz de interpretar suas respostas em linguagem simples."
+					]
+				},
+				{
+					"name": "Spirit Totem (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Como uma ação bônus, o druida evoca um espírito da natureza. O espírito aparece em um ponto que o druida pode ver a até 18 metros. O espírito cria uma aura de 9 metros de raio. O espírito não é um objeto nem uma criatura, mas uma besta espectral. Como uma ação bônus, o druida pode mover o espírito para outro local em um raio de 18 metros. O espírito dura 1 minuto.",
+						{
+							"name": "Bear Spirit",
+							"entries": [
+								"The druid and allies within the aura gain 9 temporary hit points and have advantage on Strength checks and saving throws."
+							],
+							"type": "entries"
+						},
+						{
+							"name": "Hawk Spirit",
+							"entries": [
+								"The druid can use their reaction to grant advantage to an ally's attack roll against a target in the aura. The druid and allies within the aura have advantage on Wisdom ({@skill Perception}) checks."
+							],
+							"type": "entries"
+						},
+						{
+							"name": "Unicorn Spirit",
+							"entries": [
+								"If a spell that requires a spell slot heals the druid or allies in the aura, each creature of the druid's choice also gains 4 hit points"
+							],
+							"type": "entries"
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano de concussão."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"DU",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"R"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gallus Monk",
+			"shortName": "monk",
+			"source": "HWCS",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gallus"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 24",
+				"average": 78
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 11,
+			"dex": 18,
+			"con": 14,
+			"int": 11,
+			"wis": 16,
+			"cha": 10,
+			"save": {
+				"dex": "+7"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"insight": "+6",
+				"perception": "+6",
+				"stealth": "+7"
+			},
+			"passive": 16,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o monge pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, o monge pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. O monge pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Wind's Grace",
+					"entries": [
+						"Enquanto se move, o monge pode mover-se ao longo de superfícies verticais e através de líquidos sem cair."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O monge faz quatro ataques, cada um dos quais pode ser um ataque desarmado ou um ataque de dardo. Eles também podem usar seu Graceful Step uma vez, antes ou depois de um dos ataques."
+					]
+				},
+				{
+					"name": "Unarmed Attack",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Dart",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Graceful Step",
+					"entries": [
+						"O monge se move 40 pés. Este movimento não provoca {@action opportunity attack|phb|opportunity attacks}."
+					]
+				},
+				{
+					"name": "Inspiring",
+					"entries": [
+						"O monge inspira um aliado que pode vê-los e ouvi-los. O aliado pode lançar um {@dice d4} e adicionar o número obtido em seu próximo teste de habilidade, jogada de ataque ou teste de resistência."
+					]
+				}
+			],
+			"attachedItems": [
+				"dart|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gallus Necromancer",
+			"shortName": "necromancer",
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gallus"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 9",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+3",
+				"medicine": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Birdfolk",
+				"Hedge",
+				"Sylvan",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The necromancer is a 9th level spellcaster. Their spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). The necromancer has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell false life|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}",
+								"{@spell sleep|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell misty step|PHB}",
+								"{@spell ray of enfeeblement|PHB}",
+								"{@spell web|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|PHB}",
+								"{@spell counterspell|PHB}",
+								"{@spell fear|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell blight|PHB}",
+								"{@spell evard's black tentacles|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell passwall|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o necromante pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. O necromante cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. O necromante não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, o necromante pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. O necromante pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Seedspeech",
+					"entries": [
+						"O necromante pode comunicar ideias simples às plantas vivas e é capaz de interpretar suas respostas em linguagem simples."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) de dano por concussão ou 3 ({@damage 1d8 - 1}) de dano por concussão se usado com as duas mãos."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Glinda Nightseed",
+			"shortName": "Glinda",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gallus"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 9",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+3",
+				"medicine": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"Birdfolk",
+				"Hedge",
+				"Sylvan",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Glinda is a 9th level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). Glinda has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell false life|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}",
+								"{@spell sleep|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell misty step|PHB}",
+								"{@spell ray of enfeeblement|PHB}",
+								"{@spell web|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|PHB}",
+								"{@spell counterspell|PHB}",
+								"{@spell fear|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell blight|PHB}",
+								"{@spell evard's black tentacles|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell passwall|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Glinda pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Glinda cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Glinda não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora ela possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Glinda pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. Glinda pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Seedspeech",
+					"entries": [
+						"Glinda pode comunicar ideias simples às plantas vivas e é capaz de interpretar as suas respostas em linguagem simples."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) de dano por concussão ou 3 ({@damage 1d8 - 1}) de dano por concussão se usado com as duas mãos."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"S"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gregor Thornspur, Magistrate of Alderheart",
+			"shortName": "Gregor",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sable luma"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d6 + 2"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 12,
+			"int": 12,
+			"wis": 14,
+			"cha": 18,
+			"skill": {
+				"deception": "+6",
+				"insight": "+6",
+				"persuasion": "+6"
+			},
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Gregor pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ele cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ele não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Gregor pode usar seus poderosos braços emplumados para se impulsionar para cima a uma distância igual à metade de sua velocidade de movimento. Ele pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"Gregor pode escolher rolar novamente qualquer jogada de ataque, teste de habilidade ou teste de resistência."
+					]
+				},
+				{
+					"name": "Damage Resistance",
+					"entries": [
+						"Gregor é resistente a danos venenosos."
+					]
+				},
+				{
+					"name": "Resilience",
+					"entries": [
+						"Gregor tem vantagem em testes de resistência contra ser {@condition poisoned}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Gregor adds 2 to his AC against one melee attack that would hit him. To do so, Gregor must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"tokenCredit": "Anna Christenson",
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"actionTags": [
+				"Parry"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Havel of the Autumn Moon",
+			"shortName": "Havel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gallus"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 16,
+					"condition": "with barkskin",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 4",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 6,
+			"dex": 10,
+			"con": 12,
+			"int": 10,
+			"wis": 16,
+			"cha": 10,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"nature": "+4",
+				"medicine": "+5",
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Birdfolk",
+				"Druidic",
+				"Sylvan",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Havel is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). He has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft|PHB}",
+								"{@spell gust barrier|HWCS}",
+								"{@spell produce flame|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|PHB}",
+								"{@spell elevated sight|HWCS}",
+								"{@spell entangle|PHB}",
+								"{@spell thunderwave|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell barkskin|PHB}",
+								"{@spell gust of wind|PHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Havel pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ele cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Havel não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Havel pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. Ele pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Seedspeech",
+					"entries": [
+						"Havel pode comunicar ideias simples às plantas vivas e é capaz de interpretar as suas respostas em linguagem simples."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"DU",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hedge Bard",
+			"shortName": "bard",
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"hedge"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d6 + 8",
+				"average": 36
+			},
+			"speed": {
+				"walk": 25,
+				"burrow": 15
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 13,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+5",
+				"performance": "+7"
+			},
+			"passive": 15,
+			"languages": [
+				"Birdfolk",
+				"Hedge",
+				"can also speak with beasts of any size which represent spiders, insects, worms, or other bugs"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The bard is a 4th-level spellcaster. Their spellcasting ability is Charisma (spell save {@dc 13}, +5 to hit with spell attacks). They have the following bard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell gust barrier|HWCS}",
+								"{@spell prestidigitation|PHB}",
+								"{@spell vicious mockery|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|PHB}",
+								"{@spell healing word|PHB}",
+								"{@spell tasha's hideous laughter|PHB}",
+								"{@spell thunderwave|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell invisibility|PHB}",
+								"{@spell shatter|PHB}",
+								"{@spell suggestion|PHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Taunt (2/Day)",
+					"entries": [
+						"O bardo pode usar uma ação bônus em seu turno para atingir uma criatura a até 9 metros dele. Se o alvo puder ouvir o bardo, o alvo deve ter sucesso em um teste de resistência de Carisma de {@dc 13} ou terá desvantagem em testes de habilidade, jogadas de ataque e testes de resistência até o início do próximo turno do bardo"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O bardo faz dois ataques com arma, um com seu florete e outro com sua adaga."
+					]
+				},
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Curl Up",
+					"entries": [
+						"O bardo se enrola em uma bola espinhosa. Enquanto enrolados dessa maneira, eles não podem se mover, atacar ou lançar feitiços com componentes somáticos, e sua classe de armadura básica se torna 19. Qualquer criatura que erra o bardo com um ataque corpo a corpo enquanto está enrolado recebe {@dice 2d4} pontos de dano perfurante de suas penas afiadas. Entretanto, se uma criatura atingir o bardo enquanto ele estiver enrolado, o bardo será derrubado {@condition prone} em seu espaço no final do turno. O bardo pode se desenrolar a qualquer momento durante seu turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"rapier|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"invisible",
+				"prone"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hedge Witch",
+			"shortName": "witch",
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"hedge"
+				]
+			},
+			"alignment": [
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6",
+				"average": 21
+			},
+			"speed": {
+				"walk": 25,
+				"burrow": 15
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 10,
+			"int": 14,
+			"wis": 15,
+			"cha": 16,
+			"skill": {
+				"arcana": "+4",
+				"survival": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Abyssal",
+				"Birdfolk",
+				"Hedge",
+				"can also speak with beasts of any size which represent spiders insects worms or other bugs"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The witch is a 2nd-level spellcaster. Their spellcasting ability is Charisma (spell save {@dc 13}, +5 to hit with spell attacks). The witch has the following warlock spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast|PHB}",
+								"{@spell minor illusion|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|PHB}",
+								"{@spell hellish rebuke|PHB}",
+								"{@spell unseen servant|PHB}"
+							],
+							"slots": 2,
+							"lower": 1
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dark One's Blessing",
+					"entries": [
+						"Quando a bruxa reduz uma criatura hostil a 0 pontos de vida, a bruxa ganha 5 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Repelling Blast",
+					"entries": [
+						"Quando a bruxa atinge uma criatura com uma explosão sobrenatural, ela pode empurrar a criatura até 3 metros de distância em linha reta."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 1} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) dano de concussão."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Fiendish Vigor",
+					"entries": [
+						"A bruxa pode lançar {@spell false life} à vontade como um feitiço de 1º nível."
+					]
+				},
+				{
+					"name": "Curl Up",
+					"entries": [
+						"A bruxa se enrola em uma bola espinhosa. Enquanto enrolados dessa forma, eles não podem se mover, atacar ou lançar feitiços com componentes somáticos, e sua classe de armadura básica se torna 19. Qualquer criatura que erra a bruxa com um ataque corpo a corpo enquanto está enrolada recebe {@dice 2d4} pontos de dano perfurante de suas penas afiadas. Se uma criatura atingir a bruxa enquanto ela estiver enrolada, entretanto, a bruxa será derrubada {@condition prone} em seu espaço no final do turno. A bruxa pode se desenrolar a qualquer momento durante seu turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jell Platena",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 199,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sera luma"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 11,
+			"cha": 12,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"Jell pode escolher rolar novamente qualquer jogada de ataque, teste de habilidade ou teste de resistência."
+					]
+				},
+				{
+					"name": "Songbird (Recharges after a Long Rest)",
+					"entries": [
+						"Jell pode lançar {@spell charm person}. Carisma é sua habilidade de lançar feitiços e o feitiço não requer nenhum componente somático para ser lançado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				}
+			],
+			"tokenCredit": "Aireesse",
+			"attachedItems": [
+				"club|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Jerbeen Swashbuckler",
+			"shortName": "swashbuckler",
+			"source": "HWCS",
+			"page": 200,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"jerbeen"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d6 + 6",
+				"average": 34
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 12,
+			"int": 14,
+			"wis": 11,
+			"cha": 15,
+			"skill": {
+				"acrobatics": "+8",
+				"athletics": "+5",
+				"persuasion": "+6"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"Jerbeen"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância base do espadachim é de 30 pés, e seu salto em altura base é de 15 pés, com ou sem corrida."
+					]
+				},
+				{
+					"name": "Team Tactics",
+					"entries": [
+						"O espadachim pode realizar a ação {@action Help} como uma ação bônus."
+					]
+				},
+				{
+					"name": "Sharp Witted Defense",
+					"entries": [
+						"Enquanto o espadachim estiver usando armadura leve ou nenhuma armadura e não empunhar escudo, sua CA inclui seu modificador de Carisma."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espadachim faz três ataques, um com uma adaga e dois com seu florete."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Riposte",
+					"entries": [
+						"The swashbuckler reduces the damage dealt by one melee attack that would hit them by 4 ({@dice 1d8}), and deals that much piercing damage to their attacker. The swashbuckler must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"rapier|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jerbeen Thief",
+			"shortName": "thief",
+			"source": "HWCS",
+			"page": 200,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"jerbeen"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d6",
+				"average": 14
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 10,
+			"int": 8,
+			"wis": 14,
+			"cha": 14,
+			"skill": {
+				"acrobatics": "+4",
+				"sleight of hand": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Birdfolk",
+				"Jerbeen"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância do ladrão é de até 30 pés e seu salto em altura é de até 15 pés, com ou sem corrida."
+					]
+				},
+				{
+					"name": "Team Tactics",
+					"entries": [
+						"O ladrão pode realizar a ação {@action Help} como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ladrão faz dois ataques de adaga."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Opportunist",
+					"entries": [
+						"When a creature fails a melee attack roll against the thief, the thief can make a Dexterity ({@skill Sleight of Hand}) check against a DC equal to 10 + the target creature's Dexterity modifier. On a success, the thief steals one item of the GMs choosing from the target. It cannot be an item actively held or worn by the target."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kenna Brightspark",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dusk corvum"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 10,
+			"int": 12,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Kenna pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Kenna cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Kenna não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora ela possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Kenna tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Learned",
+					"entries": [
+						"Kenna ganha proficiência em uma das seguintes habilidades: {@skill Arcana}, {@skill History}, {@skill Nature} ou {@skill Religion}."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"Kenna tem vantagem em testes de Destreza ({@skill Stealth}) feitos em penumbra ou escuridão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano cortante."
+					]
+				}
+			],
+			"tokenCredit": "Ubergank",
+			"attachedItems": [
+				"club|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Krall, the Scavenger King",
+			"shortName": "Krall",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 202,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mapach"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 30",
+				"average": 75
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"Mapach"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Resilience",
+					"entries": [
+						"Krall tem vantagem em testes de resistência contra ser {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"Krall tem vantagem em testes de {@skill Stealth} feitos em penumbra ou escuridão total."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Krall faz três ataques corpo a corpo, dois com seu florete e um com sua adaga."
+					]
+				},
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Parrying Dagger",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance de 1,5 m, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Krall adds 2 to his AC against one melee attack that would hit him. Krall must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lesser Demon",
+			"source": "HWCS",
+			"page": 184,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d6 + 8",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 15,
+			"con": 14,
+			"int": 5,
+			"wis": 8,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O demônio faz dois ataques, um com a mordida e outro com as garras."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) cortando dano."
+					]
+				},
+				{
+					"name": "Foul Odor (1/day)",
+					"entries": [
+						"O demônio emite uma nuvem de gás venenoso que preenche uma esfera de 6 metros e persiste por 1 minuto até se dispersar no ar circundante. A nuvem se espalha pelos cantos e a área afetada fica fortemente obscurecida. Qualquer criatura que esteja completamente dentro da nuvem no início de seu turno deve realizar um teste de resistência de Constituição {@dc 11} contra o veneno. Se falhar na resistência, a criatura gasta sua ação naquele turno vomitando e cambaleando. Criaturas imunes a veneno são imunes a este efeito. Um vento moderado (pelo menos 16 quilômetros por hora) dispersa a nuvem após 4 rodadas. Um vento forte (pelo menos 20 milhas por hora) irá dispersá-lo após 1 rodada."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Luma Cleric of Ardea",
+			"shortName": "cleric",
+			"source": "HWCS",
+			"page": 201,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"luma"
+				]
+			},
+			"alignment": [
+				"L",
+				"NX",
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6 + 6",
+				"average": 27
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 13,
+			"con": 12,
+			"int": 10,
+			"wis": 16,
+			"cha": 14,
+			"skill": {
+				"medicine": "+7",
+				"persuasion": "+4",
+				"religion": "+2"
+			},
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"one other language",
+				"can understand Auran but can't speak it"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The cleric is a 5th-level spellcaster. Their spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). The cleric has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light|PHB}",
+								"{@spell sacred flame|PHB}",
+								"{@spell thaumaturgy|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bless|PHB}",
+								"{@spell cure wounds|PHB}",
+								"{@spell guiding bolt|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration|PHB}",
+								"{@spell spiritual weapon|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell beacon of hope|PHB}",
+								"{@spell dispel magic|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o clérigo pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, ou armas pesadas, ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, o clérigo pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. O clérigo pode usar isso em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"O clérigo luma pode escolher rolar novamente qualquer jogada de ataque, teste de perícia ou teste de resistência."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) de dano por concussão ou 4 ({@damage 1d8}) de dano por concussão se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Ardea's Vigor (1/Day)",
+					"entries": [
+						"O clérigo invoca os poderes de Ardea para imbuir seus aliados com sua força vital protetora. O clérigo luma e até 3 aliados em um raio de 9 metros ganham 5 ({@dice 2d4}) pontos de vida temporários. Por um minuto, qualquer pessoa sob este efeito ganha 5 pontos de vida temporários no início de cada turno."
+					]
+				},
+				{
+					"name": "Songbird (Recharges after a Long Rest)",
+					"entries": [
+						"O clérigo pode lançar {@spell charm person}. Carisma é sua habilidade de lançamento de feitiços (proteção de feitiço {@dc 12}) e o feitiço não requer nenhum componente somático para ser lançado."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Luma Wizard",
+			"shortName": "wizard",
+			"source": "HWCS",
+			"page": 202,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"luma"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "13d6 + 13",
+				"average": 58
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 12,
+			"int": 18,
+			"wis": 12,
+			"cha": 15,
+			"save": {
+				"int": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+7",
+				"history": "+7"
+			},
+			"passive": 11,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Auran",
+				"Birdfolk",
+				"any three other languages"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The wizard is a 10th-level spellcaster. Their spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). The wizard has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell fire bolt|PHB}",
+								"{@spell minor illusion|PHB}",
+								"{@spell prestidigitation|PHB}",
+								"{@spell ray of frost|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|PHB}",
+								"{@spell detect magic|PHB}",
+								"{@spell mage armor|PHB}",
+								"{@spell shield|PHB}",
+								"{@spell sleep|PHB}",
+								"{@spell thunderwave|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell darkness|PHB}",
+								"{@spell hold person|PHB}",
+								"{@spell ray of enfeeblement|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell counterspell|PHB}",
+								"{@spell fireball|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell banishment|PHB}",
+								"{@spell stellar bodies|HWCS}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell conjure elemental|PHB}",
+								"{@spell mislead|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o mago pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, o mago pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. O mago pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"O mago pode escolher rolar novamente qualquer ataque, teste de habilidade ou teste de resistência."
+					]
+				},
+				{
+					"name": "Resilience",
+					"entries": [
+						"O mago tem vantagem em testes de resistência contra veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Charming (3/Day)",
+					"entries": [
+						"When a creature makes an attack against the wizard, the creature must succeed on a {@dc 14} Wisdom saving throw or target the next closest creature within range. If multiple creatures are closest, the attacker chooses. This feature does not work if there are no other creatures within range"
+					]
+				}
+			],
+			"languageTags": [
+				"AU"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"N",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mapach Bandit",
+			"shortName": "bandit",
+			"source": "HWCS",
+			"page": 202,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mapach"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 10,
+			"int": 8,
+			"wis": 12,
+			"cha": 12,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"Mapach"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Resilience",
+					"entries": [
+						"O bandido tem vantagem em testes de resistência contra ser {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"O bandido tem vantagem em testes de {@skill Stealth} feitos em penumbra ou escuridão total."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 80/320 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mapach Brute",
+			"shortName": "brute",
+			"source": "HWCS",
+			"page": 202,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mapach"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 30",
+				"average": 75
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"Mapach"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Resilience",
+					"entries": [
+						"O bruto tem vantagem em testes de resistência contra {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"O bruto tem vantagem em testes de {@skill Stealth} feitos em penumbra ou escuridão total."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O bruto faz três ataques corpo a corpo, dois com seu florete e um com sua adaga de defesa."
+					]
+				},
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Parrying Dagger",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance de 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The brute adds 2 to his AC against one melee attack that would hit them. The brute must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mapach Tinkerer",
+			"shortName": "tinkerer",
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mapach"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "3d8",
+				"average": 13
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 13,
+			"wis": 12,
+			"cha": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"Mapach"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Resilience",
+					"entries": [
+						"O consertador tem vantagem em testes de resistência contra ser {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Skulker",
+					"entries": [
+						"O consertador tem vantagem em testes de {@skill Stealth} feitos em penumbra ou escuridão total."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance de 1,5 m, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Tinker's Toys",
+					"entries": [
+						"O consertador usa uma das seguintes opções (role um {@dice d4} ou escolha uma); o consertador não pode usar cada um deles mais do que uma vez por dia:",
+						{
+							"type": "entries",
+							"name": "1. Cogwork Bird",
+							"entries": [
+								"The tinkerer winds and releases a small mechanical bird that flies to a target creature within 30 feet and distracts it. The next attack against that creature is made with advantage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "2. Flash-bangs",
+							"entries": [
+								"The tinkerer targets a space up to 10 ft. away, and throws some small explosive shells that flare up in a blinding light. All creatures within 10 ft. of the target space must make a {@dc 11} Constitution saving throw or be {@condition blinded} until the start of the tinkerer's next turn."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "3. Nettle Gun",
+							"entries": [
+								"The tinkerer turns the crank on a small gadget that sprays nettles at a target. {@atk rw} {@hit 4} to hit, range 10/20 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage. All creatures within 5 ft. of the target must make a {@dc 11} Dexterity saving throw or take 5 ({@damage 1d10}) piercing damage."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "4. Grease Balloon",
+							"entries": [
+								"The tinkerer targets a 10-foot by 10-foot area up to 15 feet away, and makes it slick with grease. The area is considered difficult terrain, and each creature standing in the area must succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}. A creature that enters the area or ends its turn there must also succeed on a {@dc 11} Dexterity saving throw or fall {@condition prone}."
+							]
+						}
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mordane Swiftgale",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"swift strig"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 12,
+			"dex": 11,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Patterned Feathers",
+					"entries": [
+						"Mordane tem vantagem em testes de Destreza ({@skill Stealth}) quando tenta se esconder em uma floresta."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Mordane tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano de concussão."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) cortando dano."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mountain Lion",
+			"source": "HWCS",
+			"page": 184,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d10 + 10",
+				"average": 37
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 14,
+			"int": 3,
+			"wis": 14,
+			"cha": 6,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"passive": 14,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"O Leão da Montanha tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+					]
+				},
+				{
+					"name": "Pounce (Lion)",
+					"entries": [
+						"Se o Leão da Montanha se mover pelo menos 6 metros em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, o alvo deverá ter sucesso em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}. O leão da montanha pode fazer um ataque de mordida contra um alvo {@condition prone} como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) cortando dano."
+					]
+				},
+				{
+					"name": "Call Avalanche (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Com um rugido místico, o leão da montanha pode invocar até as rochas. Enquanto estiver em terreno montanhoso, ele pode usar sua ação para causar um deslizamento de rochas a um raio de 4,5 metros de um espaço que ele possa ver a até 18 metros. As criaturas nesta área devem realizar um teste de resistência de Destreza {@dc 12}, sofrendo 13 ({@damage 3d8}) de dano de concussão em caso de falha e metade desse valor em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pounce"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oakheart",
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d12 + 30",
+				"average": 69
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 8,
+			"con": 21,
+			"int": 12,
+			"wis": 16,
+			"cha": 12,
+			"passive": 13,
+			"resist": [
+				"bludgeoning",
+				"fire",
+				"piercing"
+			],
+			"languages": [
+				"Birdfolk",
+				"Druidic",
+				"Ignan",
+				"Sylvan"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "False Appearance (Treant)",
+					"entries": [
+						"Enquanto Oakheart permanece imóvel, ele aparece como um grande carvalho com casca carbonizada que arde em alguns lugares e chamas no lugar das folhas."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"O Oakheart causa o dobro de dano a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Oakheart faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}16 ({@damage 3d6 + 5}) dano de fogo."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 8} para acertar, alcance 60/180 pés, um alvo. {@h}28 ({@damage 4d10 + 5}) dano de concussão."
+					]
+				},
+				{
+					"name": "Animate Trees (1/Day)",
+					"entries": [
+						"Oakheart anima magicamente uma ou duas árvores que ele pode ver a até 18 metros dele. Essas árvores têm as mesmas estatísticas de Oakheart, exceto que possuem valores de Inteligência e Carisma de 1, não podem falar e têm apenas a opção de ação Slam. Uma árvore animada atua como aliada de Oakheart. A árvore permanece animada por 1 dia ou até morrer; até que Oakheart morra ou esteja a mais de 36 metros da árvore; ou até que Oakheart realize uma ação bônus para transformá-lo novamente em uma árvore inanimada. A árvore então cria raízes, se possível."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Siege Monster"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DU",
+				"IG",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Odwald Ebonhart",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 194,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"corvum"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with mage armor",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 9",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 18,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"int": "+7",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+5",
+				"medicine": "+3"
+			},
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"any two other languages",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Odwald is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). Odwald has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|PHB}",
+								"{@spell light|PHB}",
+								"{@spell mage hand|PHB}",
+								"{@spell prestidigitation|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell disguise self|PHB}",
+								"{@spell false life|PHB|false life†}",
+								"{@spell mage armor|PHB}",
+								"{@spell magic missile|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell misty step|PHB}",
+								"{@spell ray of enfeeblement|PHB|ray of enfeeblement†}",
+								"{@spell suggestion|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|PHB|animate dead†}",
+								"{@spell counterspell|PHB}",
+								"{@spell fear|PHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell blight|PHB|blight†}",
+								"{@spell greater invisibility|PHB}"
+							],
+							"slots": 3
+						},
+						"5": {
+							"spells": [
+								"{@spell dominate person|PHB}"
+							],
+							"slots": 1
+						}
+					},
+					"footerEntries": [
+						"†necromancy spell of 1st level or higher"
+					],
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Odwald pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Odwald cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Odwald não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item que esteja segurando como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Odwald tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Convincing",
+					"entries": [
+						"Odwald tem vantagem em todos os testes de Carisma usados para convencer alguém de seu conhecimento do assunto pertencente à perícia Arcanismo."
+					]
+				},
+				{
+					"name": "Life Leech",
+					"entries": [
+						"Uma vez por turno, quando Odwald mata uma ou mais criaturas com uma magia de 1º nível ou superior, ele pode recuperar pontos de vida iguais a duas vezes o nível da magia, ou três vezes o nível se for uma magia de necromancia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) de dano por concussão ou 3 ({@damage 1d8 - 1}) de dano por concussão se empunhado com as duas mãos."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano cortante."
+					]
+				}
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Raptor Explorer",
+			"shortName": "explorer",
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"raptor"
+				]
+			},
+			"alignment": [
+				"NX",
+				"NY",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d6 + 4",
+				"average": 18
+			},
+			"speed": {
+				"walk": 25,
+				"swim": 25
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 15,
+			"cha": 11,
+			"skill": {
+				"history": "+2",
+				"perception": "+6",
+				"stealth": "+4",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o explorador pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O explorador rola vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Patient",
+					"entries": [
+						"Quando o explorador reage com uma ação preparada, ele tem vantagem na primeira jogada de ataque, teste de perícia ou teste de habilidade que fizer como parte dessa ação."
+					]
+				},
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"O explorador tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou visão."
+					]
+				},
+				{
+					"name": "Sure Footing",
+					"entries": [
+						"O explorador ignora terrenos difíceis não mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O explorador faz dois ataques corpo a corpo ou dois ataques com a besta de mão."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Saber",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano cortante."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Raptor Ranger",
+			"shortName": "ranger",
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"raptor"
+				]
+			},
+			"alignment": [
+				"NX",
+				"NY",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d6 + 24",
+				"average": 66
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 16,
+			"cha": 8,
+			"skill": {
+				"stealth": "+7",
+				"athletics": "+3",
+				"survival": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"Mapach",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ranger is a 3rd-level spellcaster. Their spellcasting ability is ",
+						"Wisdom (spell save {@dc 13}, + 5 to hit with spell attacks). The ranger has the following spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell cure wounds|PHB}",
+								"{@spell fog cloud|PHB}",
+								"{@spell hunter's mark|PHB}",
+								"{@spell protection from evil and good|PHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o ranger pode gastar",
+						"uma reação para voar até sua velocidade em uma direção enquanto descem. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O ranger rola vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Aerial Defense",
+					"entries": [
+						"Criaturas que atacam o ranger enquanto ele está caindo, planando ou pulando têm desvantagem em suas jogadas de ataque."
+					]
+				},
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"O explorador tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou visão."
+					]
+				},
+				{
+					"name": "Arrow Sight (3/Day)",
+					"entries": [
+						"Quando o ranger ataca com seu arco de penas vermelhas, ele pode usar sua ação bônus para ver do ponto em que a flecha atingiu como se estivesse lá. Se a flecha atingir uma criatura, o ranger poderá ver da perspectiva da criatura. Este efeito dura 1 minuto."
+					]
+				},
+				{
+					"name": "Hunter (3/Day)",
+					"entries": [
+						"Como uma ação bônus, o ranger pode causar {@dice 1d10} de dano extra em seu próximo ataque feito com um arco curto ou longo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ranger faz dois ataques com arco de penas vermelhas."
+					]
+				},
+				{
+					"name": "Red-Feather Bow",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 80/320 pés, um alvo. {@h}6 ({@damage 1d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw, rw} {@hit 5} para acertar, alcance 5 pés, alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rhys Birchwalker",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 203,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mistral raptor"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 10,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Hunter's Training",
+					"entries": [
+						"Rhys tem proficiência com {@item longbow|phb}, {@item shortbow|phb} e {@item spear|phb}. Além disso, sua familiaridade com o arco longo significa que não é considerado uma arma pesada para ela."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Rhys tem vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Aerial Defense",
+					"entries": [
+						"Criaturas que atacam Rhys enquanto o ranger está caindo, planando ou pulando têm desvantagem em suas jogadas de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) cortando dano."
+					]
+				}
+			],
+			"tokenCredit": "Jaqdaw",
+			"attachedItems": [
+				"club|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Riffin, the Ash-Knight",
+			"shortName": "Riffin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 204,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"strig"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item half plate armor|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 24",
+				"average": 60
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 16,
+			"int": 8,
+			"wis": 13,
+			"cha": 12,
+			"save": {
+				"con": "+5",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Riffin pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ele cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ele não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Riffin rola vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Maneuver (2/Day)",
+					"entries": [
+						"Quando Riffin acerta com um ataque, ele pode optar por manobrar o inimigo para fora de posição, concedendo a um aliado a até 1,5 metro do alvo a oportunidade de usar sua reação para se afastar deste inimigo com metade de sua velocidade de movimento sem provocar um {@action opportunity attack|phb|attack of opportunity}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Riffin faz dois ataques de espada curta."
+					]
+				},
+				{
+					"name": "Short Sword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante. O cavaleiro pode escolher agarrar um alvo atingido por este ataque como uma ação bônus."
+					]
+				},
+				{
+					"name": "Wing Crest Shield (1/Day)",
+					"entries": [
+						"Riffin lança o feitiço {@spell gust of wind} (salve {@dc 15})."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shifting Slime",
+			"source": "HWCS",
+			"page": 187,
+			"size": [
+				"L"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"formula": "3d10 + 15",
+				"average": 31
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 14,
+			"dex": 8,
+			"con": 20,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"immune": [
+				{
+					"special": "Special; see Adaptive ability"
+				}
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"O Caustic Slime pode se mover através de um espaço estreito de até 2,5 cm de largura sem ser comprimido."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O Caustic Slime pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem a necessidade de fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Psuedopod",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano ácido. O alvo é {@condition grappled} (escape {@dc 13}). Até que esta luta termine, o alvo é {@condition restrained} e o lodo mutante não pode fazer um ataque de pseudópode contra outro alvo."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"O lodo mutável faz um ataque de pseudópode contra um alvo que está lutando e que é pelo menos um tamanho menor que ele. Se o ataque acertar, o alvo é engolido e a luta termina. O alvo engolido é {@condition restrained}, ele tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do lodo mutável e deve realizar um teste de resistência de Constituição {@dc 13} no início de cada um de seus turnos, sofrendo 3 ({@damage 1d6}) de dano ácido em caso de falha. Se o lodo mutante usou sua habilidade adaptativa para se tornar imune a um tipo de dano, o dano causado ao alvo em uma falha no teste se torna daquele tipo. O lodo mutável pode ter apenas um alvo engolido por vez.",
+						"Se o lodo mutável morrer, a criatura engolida não será mais {@condition restrained} por ele e poderá se mover livremente enquanto o corpo do lodo estremece e se neutraliza em uma poça inerte de gosma."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Split",
+					"entries": [
+						"When a slime that is Medium or larger and has 10 or more hit points is hit with slashing damage, it splits into two new slimes. Each new slime has hit points equal to half the original slime's, rounded down. New slimes are one size smaller than the previous size. New shifting slimes each have the same damage type immunity as their parent slime and retain the Adaptive ability."
+					]
+				},
+				{
+					"name": "Adaptive",
+					"entries": [
+						"Each time the slime is hit by a spell that deals damage, it can become immune to that damage type for 1 hour. When the slime changes the damage type it's immune to, its color changes based on the table on the below. The slime can only be immune to one damage type at a time. Normally, shifting slimes are iridescent, shimmering with all the colors of the rainbow.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Damage Type",
+								"Slime Color"
+							],
+							"colStyles": [
+								"col-5",
+								"col-5"
+							],
+							"rows": [
+								[
+									"Acid",
+									"Lime Green"
+								],
+								[
+									"Cold",
+									"Ice Blue"
+								],
+								[
+									"Fire",
+									"Bright Crimson"
+								],
+								[
+									"Force",
+									"Clear"
+								],
+								[
+									"Lightning",
+									"Vibrant Yellow"
+								],
+								[
+									"Necrotic",
+									"Dark Black"
+								],
+								[
+									"Poison",
+									"Dark Green"
+								],
+								[
+									"Psychic",
+									"Bright Violet"
+								],
+								[
+									"Radiant",
+									"Warm Orange"
+								],
+								[
+									"Thunder",
+									"Bright White"
+								]
+							]
+						}
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"damageTags": [
+				"A"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shyla Denn",
+			"shortName": "Shyla",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"vulpin"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 16,
+			"cha": 13,
+			"skill": {
+				"medicine": "+7",
+				"persuasion": "+3",
+				"religion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"Celestial",
+				"Vulpin"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shyla is a 5th level spellcaster, her spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). Shyla has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light|PHB}",
+								"{@spell sacred flame|PHB}",
+								"{@spell thaumaturgy|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|PHB}",
+								"{@spell disguise self|PHB}",
+								"{@spell guiding bolt|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration|PHB}",
+								"{@spell mirror image|PHB}",
+								"{@spell spiritual weapon|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell blink|PHB}",
+								"{@spell spirit guardians|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasive",
+					"entries": [
+						"Shyla inclui seu modificador de Inteligência como bônus em todos os testes de resistência de Destreza."
+					]
+				},
+				{
+					"name": "Divine Eminence",
+					"entries": [
+						"Como uma ação bônus, Shyla pode gastar um espaço de magia para fazer com que seus ataques com armas corpo a corpo causem magicamente 10 ({@damage 3d6}) de dano de veneno extra a um alvo ao acertar. Este benefício dura até o final do turno. Se Shyla gastar um espaço de magia de 2º nível ou superior, o dano extra aumenta em {@damage 1d6} para cada nível acima do 1º."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sticky Slime",
+			"source": "HWCS",
+			"page": 188,
+			"size": [
+				"M"
+			],
+			"type": "ooze",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				6
+			],
+			"hp": {
+				"formula": "2d8 + 4",
+				"average": 13
+			},
+			"speed": {
+				"walk": 15,
+				"climb": 15
+			},
+			"str": 12,
+			"dex": 3,
+			"con": 14,
+			"int": 1,
+			"wis": 6,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 8,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"prone"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"O Caustic Slime pode se mover através de um espaço estreito de até 2,5 cm de largura sem ser comprimido."
+					]
+				},
+				{
+					"name": "Slime Trail",
+					"entries": [
+						"O limo deixa um rastro de gosma que permanece pegajoso por até 15 minutos. Uma criatura que pisa na lama deve ter sucesso em um teste de resistência de Força {@dc 12} ou se tornará {@condition restrained}. Uma criatura pode tentar o teste de resistência novamente no final de cada um de seus turnos, encerrando o efeito se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Mucus",
+					"entries": [
+						"Quando o slime é atingido por um ataque corpo a corpo, o atacante deve ter sucesso em um teste de resistência de Força {@dc 12} ou sua arma ficará presa no slime. A arma pode ser arrancada usando uma ação para fazer um teste de Força ({@skill Athletics}) contra a mesma CD, liberando a arma em caso de sucesso. Todas as armas presas no lodo podem ser recuperadas assim que o lodo for morto."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Psuedopod",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Strig Knight",
+			"shortName": "knight",
+			"source": "HWCS",
+			"page": 204,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"strig"
+				]
+			},
+			"alignment": [
+				"L",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item half plate armor|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 24",
+				"average": 60
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 16,
+			"int": 8,
+			"wis": 13,
+			"cha": 12,
+			"save": {
+				"con": "+5",
+				"wis": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o cavaleiro pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O cavaleiro rola vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Maneuver (2/Day)",
+					"entries": [
+						"Quando o cavaleiro acerta um ataque, ele pode optar por manobrar o inimigo para fora de posição, concedendo a um aliado a até 1,5 metro do alvo a oportunidade de usar sua reação para se afastar desse inimigo com metade de sua velocidade de movimento sem provocar um {@action opportunity attack|phb|attack of opportunity}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cavaleiro faz dois ataques de espada curta."
+					]
+				},
+				{
+					"name": "Short Sword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante. O cavaleiro pode escolher agarrar um alvo atingido por este ataque como uma ação bônus."
+					]
+				},
+				{
+					"name": "Wing Crest Shield (1/Day)",
+					"entries": [
+						"O cavaleiro lança o feitiço {@spell gust of wind} (salve {@dc 15})."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Strig Tracker",
+			"shortName": "tracker",
+			"source": "HWCS",
+			"page": 206,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"strig"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 11,
+			"wis": 15,
+			"cha": 10,
+			"skill": {
+				"acrobatics": "+6",
+				"perception": "+4",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The tracker is a 3rd-level spellcaster. Their spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). The strig tracker has the following ranger spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell elevated sight|HWCS}",
+								"{@spell hunter's mark|PHB}",
+								"{@spell longstrider|PHB}",
+								"{@spell speak with animals|PHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, o rastreador pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Eles pousam em um espaço desocupado ao final de seu movimento e não sofrem dano de queda. Eles não podem planar enquanto carregam objetos pesados, armas pesadas ou escudos (embora possam derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"O rastreador obtém vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Patterned Feathers",
+					"entries": [
+						"O rastreador tem vantagem em testes de Destreza ({@skill Stealth}) quando tenta se esconder em uma floresta."
+					]
+				},
+				{
+					"name": "Reya's Keen Eye",
+					"entries": [
+						"O rastreador pode fazer testes de Sabedoria ({@skill Perception}) como uma ação bônus para tentar encontrar criaturas escondidas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O rastreador faz dois ataques corpo a corpo, um com a espada longa e outro com o machado de mão. Ou eles fazem dois ataques à distância com o machado de mão."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante se empunhado com as duas mãos."
+					]
+				},
+				{
+					"name": "Hand Axe",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Susan of the Swamp",
+			"shortName": "Susan",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 198,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"hedge"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6",
+				"average": 21
+			},
+			"speed": {
+				"walk": 25,
+				"burrow": 15
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 10,
+			"int": 14,
+			"wis": 15,
+			"cha": 16,
+			"skill": {
+				"arcana": "+4",
+				"survival": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Abyssal",
+				"Birdfolk",
+				"Hedge",
+				"can also speak with beasts of any size which represent spiders, insects, worms, or other bugs"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Susan is a 2nd-level spellcaster. Her spellcasting ability is Charisma (spell save {@dc 13}, +5 to hit with spell attacks). Susan has the following warlock spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell eldritch blast|PHB}",
+								"{@spell minor illusion|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|PHB}",
+								"{@spell hellish rebuke|PHB}",
+								"{@spell unseen servant|PHB}"
+							],
+							"slots": 2,
+							"lower": 1
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dark One's Blessing",
+					"entries": [
+						"Quando Susan reduz uma criatura hostil a 0 pontos de vida, ela ganha 5 pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Repelling Blast",
+					"entries": [
+						"Quando Susan atinge uma criatura com uma explosão sobrenatural, ela pode empurrar a criatura até 3 metros de distância em linha reta."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 1} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d6 - 1}) dano de concussão."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Fiendish Vigor",
+					"entries": [
+						"Susan pode lançar {@spell false life} à vontade como um feitiço de 1º nível."
+					]
+				},
+				{
+					"name": "Curl Up",
+					"entries": [
+						"Susan se enrola em uma bola espinhosa. Enquanto enrolada desta forma, ela não pode se mover, atacar ou lançar feitiços com componentes somáticos, e sua classe de armadura básica se torna 19. Qualquer criatura que erra Susan com um ataque corpo a corpo enquanto ela está enrolada recebe {@dice 2d4} pontos de dano perfurante de suas penas afiadas. Entretanto, se uma criatura atingir Susan enquanto ela estiver enrolada, Susan será derrubada {@condition prone} em seu espaço no final do turno. Susan pode se desenrolar a qualquer momento durante seu turno."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AB"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarm of Emberbats",
+			"source": "HWCS",
+			"page": 182,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "beast",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "5d8",
+				"average": 22
+			},
+			"speed": {
+				"walk": 0,
+				"fly": 30
+			},
+			"str": 5,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Echolocation",
+					"entries": [
+						"O enxame não pode usar sua visão cega enquanto {@condition deafened}."
+					]
+				},
+				{
+					"name": "Keen Hearing",
+					"entries": [
+						"O enxame tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição."
+					]
+				},
+				{
+					"name": "Flame Essence",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 1,5 metro do enxame de morcegos embers deve realizar um teste de resistência de Constituição {@dc 10}, sofrendo 2 ({@dice 1d4}) pontos de dano de fogo em caso de falha."
+					]
+				},
+				{
+					"name": "Swarm",
+					"entries": [
+						"O Enxame de Emberbats pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para um Morcego Minúsculo. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bites",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 0 pé, uma criatura no espaço do enxame. {@h}5 ({@damage 2d4}) de dano perfurante ou 2 ({@damage 1d4}) de dano perfurante se o enxame tiver metade de seus pontos de vida ou menos."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tevor of the Spring Path",
+			"shortName": "Tevor",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"luma"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d6 + 5",
+				"average": 22
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 14,
+			"cha": 12,
+			"skill": {
+				"athletics": "+4"
+			},
+			"passive": 12,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"Birdfolk",
+				"Druidic",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Tevor pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ele cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ele não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Wing Flap",
+					"entries": [
+						"Como uma ação bônus, Tevor pode usar seus poderosos braços emplumados para se impulsionar para cima até metade de sua velocidade de movimento. Ele pode usá-lo em conjunto com um salto normal, mas não enquanto plana."
+					]
+				},
+				{
+					"name": "Fated (Recharges after a Long Rest)",
+					"entries": [
+						"Tevor pode escolher rolar novamente qualquer jogada de ataque, teste de habilidade ou teste de resistência."
+					]
+				},
+				{
+					"name": "Resilience",
+					"entries": [
+						"Tevor rola com vantagem em testes de resistência contra ser {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Drop Attack",
+					"entries": [
+						"Tevor pode fazer um ataque durante seu planeio. Se o fizer, ele causará 4 ({@dice 1d8}) pontos extras de dano."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante ou 6 ({@damage 1d8 + 2}) de dano perfurante se usado com ambas as mãos."
+					]
+				},
+				{
+					"name": "Tender Healing (Recharges after a Long Rest)",
+					"entries": [
+						"Tevor lança o feitiço {@spell cure wounds} no 1º nível. Sabedoria é sua habilidade de lançar feitiços para este feitiço."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"languageTags": [
+				"AU",
+				"CS",
+				"DU"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vulpin Captain",
+			"shortName": "captain",
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"vulpin"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 12,
+			"int": 14,
+			"wis": 14,
+			"cha": 12,
+			"skill": {
+				"acrobatics": "+4",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Birdfolk",
+				"Vulpin"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Evasive",
+					"entries": [
+						"O capitão inclui seu modificador de Inteligência como bônus em seus testes de resistência de Destreza."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O capitão faz dois ataques."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Short sword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Short bow",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 80/320 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The captain adds 2 to their AC against one melee attack that would hit them per round. The captain must see the attacker and be wielding a melee weapon. "
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vulpin Noble",
+			"shortName": "noble",
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"vulpin"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 11,
+			"int": 14,
+			"wis": 12,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"history": "+4",
+				"insight": "+3",
+				"persuasion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Birdfolk",
+				"Vulpin"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Evasive",
+					"entries": [
+						"O nobre inclui seu modificador de Inteligência como um bônus em seus testes de resistência de Destreza."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Short sword",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Disparaging Remark",
+					"entries": [
+						"When a creature the noble can see makes an attack roll against an ally, the noble can use their reaction to impose disadvantage on that roll. The target of this effect must be able to hear and understand the noble."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vulpin Priest of Kren",
+			"shortName": "priest",
+			"source": "HWCS",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"vulpin"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 16,
+			"cha": 13,
+			"skill": {
+				"medicine": "+7",
+				"persuasion": "+3",
+				"religion": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"Celestial",
+				"Vulpin"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 5th level spellcaster, their spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). The priest has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light|PHB}",
+								"{@spell sacred flame|PHB}",
+								"{@spell thaumaturgy|PHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|PHB}",
+								"{@spell disguise self|PHB}",
+								"{@spell guiding bolt|PHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration|PHB}",
+								"{@spell mirror image|PHB}",
+								"{@spell spiritual weapon|PHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell blink|PHB}",
+								"{@spell spirit guardians|PHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Evasive",
+					"entries": [
+						"O sacerdote inclui seu modificador de Inteligência como bônus em todos os testes de resistência de Destreza."
+					]
+				},
+				{
+					"name": "Divine Eminence",
+					"entries": [
+						"Como uma ação bônus, o sacerdote pode gastar um espaço de magia para fazer com que seus ataques com armas corpo a corpo causem magicamente 10 ({@damage 3d6}) de dano de veneno extra a um alvo ao acertar. Este benefício dura até o final do turno. Se o sacerdote gastar um espaço de magia de 2º nível ou superior, o dano extra aumenta em {@damage 1d6} para cada nível acima do 1º."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CE"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wakewyrm",
+			"source": "HWCS",
+			"page": 187,
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "13d12 + 52",
+				"average": 136
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 50
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 18,
+			"int": 3,
+			"wis": 12,
+			"cha": 3,
+			"passive": 11,
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"O Wakewyrm pode prender a respiração por 1 hora."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dragão desperta faz dois ataques, um com a mordida e outro com a cauda, ou dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 20 pés, um alvo. {@h}15 ({@damage 3d6 + 5}) dano perfurante. O alvo deve ter sucesso em um teste de resistência de Força {@dc 16} ou ser {@condition grappled} (escapar {@dc 16}). O dragão só pode agarrar uma criatura por vez e não pode fazer ataques de mordida contra outras criaturas enquanto tiver uma criatura {@condition grappled}."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 25 pés, um alvo. {@h}18 ({@damage 3d8 + 5}) dano de concussão."
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"O dragão-despertador faz um ataque de mordida contra uma criatura Grande ou menor que ele está agarrando e, se o ataque atingir o alvo, ele é engolido e o agarrar termina. O alvo engolido é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do wakewyrm, e sofre 11 ({@damage 3d6}) de dano ácido no início de cada um dos turnos do wakewyrm. Se o wakewyrm sofrer 18 ou mais pontos de dano de uma criatura dentro dele, o wakewyrm deve ter sucesso em um teste de resistência de Constituição {@dc 15} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do wakewyrm. Se o dragão-despertador morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 6 metros de movimento. Após a morte, os gases internos mantêm o corpo do Serpente à tona por várias horas, antes que ele comece a afundar gradualmente até uma sepultura aquosa."
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Walden Krane, Magistrate of Winnowing Reach",
+			"shortName": "Walden",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HWCS",
+			"page": 209,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"kindled corvum"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 11,
+			"int": 14,
+			"wis": 14,
+			"cha": 17,
+			"skill": {
+				"deception": "+5",
+				"insight": "+6",
+				"persuasion": "+5"
+			},
+			"passive": 13,
+			"languages": [
+				"Birdfolk",
+				"can also understand Auran but can't speak it"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Glide",
+					"entries": [
+						"Ao cair pelo menos 3 metros, Bita pode gastar uma reação para voar até sua velocidade em uma direção enquanto desce. Ela cai em um espaço desocupado ao final de seu movimento e não sofre dano de queda. Ela não pode planar enquanto carrega objetos pesados, armas pesadas ou escudos (embora possa derrubar qualquer item segurado como parte de sua reação)."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"Walden rola vantagem em testes de Força ({@skill Athletics}) feitos para escalar qualquer superfície que suas garras possam agarrar razoavelmente."
+					]
+				},
+				{
+					"name": "Learned",
+					"entries": [
+						"Walden ganha proficiência em uma das seguintes habilidades: {@skill Arcana}, {@skill History}, {@skill Nature} ou {@skill Religion}."
+					]
+				},
+				{
+					"name": "Convincing",
+					"entries": [
+						"Walden ganha proficiência em sua escolha da habilidade {@skill Deception} ou {@skill Persuasion}. Além disso, ele tem vantagem em todos os testes de Carisma usados ​​para convencer alguém de seu conhecimento sobre qualquer coisa relacionada à perícia na qual ele ganhou proficiência com sua habilidade Aprendida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Walden adds 2 to his AC against one melee attack that would hit him. To do so, Walden must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"tokenCredit": "Kiruko_Kun",
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"actionTags": [
+				"Parry"
+			],
+			"languageTags": [
+				"AU",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		}
+	]
+}

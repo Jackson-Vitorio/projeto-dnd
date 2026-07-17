@@ -1,0 +1,4602 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "PaBTSO",
+				"DoSI": "PaBTSO",
+				"MOT": "PaBTSO",
+				"MPMM": "PaBTSO"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Aberrant Zealot",
+			"source": "PaBTSO",
+			"page": 203,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "17d8 + 17"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 12,
+			"int": 13,
+			"wis": 8,
+			"cha": 19,
+			"save": {
+				"dex": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 10 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"grappled",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Deep Speech"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The zealot casts one of the following spells, requiring no components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell arcane gate}",
+							"{@spell hunger of Hadar}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aberrant Form",
+					"entries": [
+						"O fanático exala o caos do Reino Distante. Qualquer criatura não-Aberração que comece seu turno a até 1,5 metro do fanático deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 15} ou sofrerá 7 ({@damage 2d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Weirdly Pliable",
+					"entries": [
+						"O fanático, junto com qualquer equipamento que esteja usando ou carregando, é anormalmente flexível. O fanático pode se mover por qualquer espaço estreito de até 2,5 cm sem apertar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O fanático faz um ataque Psychic Rend e dois ataques Shortword."
+					]
+				},
+				{
+					"name": "Psychic Rend",
+					"entries": [
+						"{@atk ms,rs} {@hit 7} para acertar, alcance 15 pés ou alcance 120 pés, um alvo. {@h}14 ({@damage 3d6 + 4}) de dano psíquico, e o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 15} ou ter a condição {@condition stunned} até o início do próximo turno do fanático."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 15 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Void Warp {@recharge 5}",
+					"entries": [
+						"The zealot teleports, along with any equipment it is wearing or carrying, to an unoccupied space it can see within 120 feet of itself, leaving a churning void in the space it left. Immediately after it teleports, each creature within 30 feet of the void other than the zealot must make a {@dc 15} Strength saving throw. On a failed save, a creature takes 18 ({@damage 4d8}) force damage and is pulled to the unoccupied space closest to the void. On a successful save, the creature takes half as much damage only. The void then disappears."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DS"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aberrant Zealot (Tentacled)",
+			"source": "PaBTSO",
+			"page": 181,
+			"_copy": {
+				"name": "Aberrant Zealot",
+				"source": "PaBTSO",
+				"_mod": {
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Mind Blast {@recharge 5}",
+							"entries": [
+								"The zealot magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a {@dc 15} Intelligence saving throw or take 22 ({@damage 4d8 + 4}) psychic damage and have the {@condition stunned} condition for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the {@condition stunned} condition on itself on a success."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Ash Zombie",
+			"source": "PaBTSO",
+			"page": 52,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Ash Cloud",
+							"entries": [
+								"When the zombie dies, it leaves a cloud of ash that lasts for 5 minutes but does not obscure vision."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brain Breaker",
+			"source": "PaBTSO",
+			"page": 199,
+			"_copy": {
+				"name": "Infected Elder Brain",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "elder brain",
+						"with": "brain breaker"
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item ring mail|PHB}"
+					]
+				}
+			],
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"cr": "12",
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Chishinix",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 194,
+			"_copy": {
+				"name": "Mind Flayer Clairvoyant",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mind flayer",
+						"with": "Chishinix",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Severed Head",
+							"entries": [
+								"Chishinix is always accompanied by a {@creature Chishinix' Head|PaBTSO|severed head}."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chishinix' Head",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 194,
+			"_copy": {
+				"name": "Encephalon Gemmule",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "gemmule",
+						"with": "head"
+					},
+					"trait": {
+						"mode": "removeArr",
+						"names": "Encephalon Progeny"
+					}
+				}
+			},
+			"speed": {
+				"walk": 10
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Cloaker Mutate",
+			"source": "PaBTSO",
+			"page": 212,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 143,
+				"formula": "22d10 + 22"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 30
+			},
+			"str": 19,
+			"dex": 15,
+			"con": 12,
+			"int": 18,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 60 ft.",
+				"Undercommon"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Avoidance",
+					"entries": [
+						"Se o mutante for submetido a um efeito que lhe permita fazer um teste de resistência para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+					]
+				},
+				{
+					"name": "Light Sensitivity",
+					"entries": [
+						"Enquanto estiver sob luz forte, o mutante tem desvantagem nas jogadas de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O mutante faz um ataque Corpse Swipe e dois ataques Tail, ou faz quatro ataques Tail."
+					]
+				},
+				{
+					"name": "Corpse Swipe",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 3d10 + 4}) dano de concussão. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Constituição {@dc 16} ou ter a condição {@condition poisoned} por 1 minuto. Enquanto {@condition poisoned} estiver dessa forma, uma criatura não pode recuperar pontos de vida."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}13 ({@damage 2d8 + 4}) cortando dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Phantasmal Duplicates",
+					"entries": [
+						"The mutate magically projects up to four illusory copies of itself. These duplicates make it difficult to ascertain the mutate's true location and last until the end of the mutate's next turn. While the copies exist, attack rolls against the mutate are made with disadvantage."
+					]
+				},
+				{
+					"name": "Psychic Moan {@recharge}",
+					"entries": [
+						"The mutate lets out a moan charged with psychic energy. Each creature within 60 feet of the mutate that isn't an Aberration must succeed on a {@dc 16} Wisdom saving throw or take 17 ({@damage 5d6}) psychic damage and have the {@condition frightened} condition until the end of the mutate's next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Light Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dwarf Skeleton",
+			"source": "PaBTSO",
+			"page": 123,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Dwarvish but can't speak"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Sure-Footed",
+					"entries": [
+						"O esqueleto tem vantagem nos testes de resistência de Força e Destreza feitos contra efeitos que o fazem ter a condição {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante se usado com as duas mãos."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Encephalon Cluster",
+			"source": "PaBTSO",
+			"page": 205,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 110,
+				"formula": "17d10 + 17"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 23,
+			"dex": 10,
+			"con": 13,
+			"int": 5,
+			"wis": 17,
+			"cha": 7,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o cluster falhar em um teste de resistência, ele poderá optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O grupo tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cluster faz dois ataques Slam. Ele pode substituir um desses ataques por Spawn Progeny, se disponível."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) de dano de concussão mais 10 ({@damage 3d6}) de dano psíquico, e se o alvo for uma criatura, o alvo deve ter sucesso em um teste de resistência de Força de {@dc 18} ou ter a condição {@condition prone}. Se este ataque reduzir o alvo a 0 pontos de vida, o alvo morre imediatamente e é consumido pelo cluster."
+					]
+				},
+				{
+					"name": "Spawn Progeny (Recharges after a Short or Long Rest)",
+					"entries": [
+						"O cacho incha e vomita {@dice 1d4} ovos maduros. Cada ovo cai em um espaço desocupado, à escolha do grupo, a até 9 metros de si mesmo e imediatamente se transforma em {@creature encephalon gemmule|PaBTSO}. As gêmulas obedecem aos comandos do cluster e se revezam imediatamente após ele."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Aggressive Hunger",
+					"entries": [
+						"Immediately after being hit by an attack, the cluster moves up to its speed toward the attacker. This movement doesn't provoke opportunity attacks. If the cluster ends this movement within 5 feet of the attacker, it then makes one Slam attack against that attacker."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Encephalon Gemmule",
+			"source": "PaBTSO",
+			"page": 206,
+			"size": [
+				"T"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 54,
+				"formula": "12d4 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 1,
+			"dex": 18,
+			"con": 14,
+			"int": 5,
+			"wis": 12,
+			"cha": 7,
+			"senses": [
+				"blindsight 30 ft. (can't see beyond this radius)"
+			],
+			"passive": 11,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Encephalon Progeny",
+					"entries": [
+						"A gêmula amadurece em um aglomerado de encéfalo se não for morta dentro de 30 ({@dice 4d12 + 4}) dias após sua criação."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A gêmula tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Psychic Slam",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}16 ({@damage 3d10}) de dano psíquico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Leech",
+					"entries": [
+						"The gemmule targets one creature within 5 feet of itself and forces the target to make a {@dc 14} Dexterity saving throw. On a failed save, the gemmule enters the target's space and attaches to the target. While the gemmule is attached, the target takes 7 ({@damage 3d4}) piercing damage at the start of each of its turns, and the gemmule can't use Leech again until it detaches. It can detach itself by spending 5 feet of its movement. As an action, the target or a creature within 5 feet of the target can detach the gemmule by succeeding on a {@dc 15} Strength check."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Feral Ashenwight",
+			"source": "PaBTSO",
+			"page": 204,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 15,
+			"int": 4,
+			"wis": 14,
+			"cha": 6,
+			"save": {
+				"str": "+7",
+				"con": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ashenwight faz dois ataques de Fragmentos Necróticos."
+					]
+				},
+				{
+					"name": "Necrotic Shard",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano necrótico. Se o alvo for uma criatura, ele terá desvantagem na próxima jogada de ataque que realizar antes do final do próximo turno."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fiendish Auger",
+			"source": "PaBTSO",
+			"page": 206,
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "9d12 + 27"
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": 30
+			},
+			"str": 23,
+			"dex": 10,
+			"con": 17,
+			"int": 6,
+			"wis": 12,
+			"cha": 5,
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 11,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"unconscious"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"A broca causa dano duplo a objetos e estruturas."
+					]
+				},
+				{
+					"name": "Tunneler",
+					"entries": [
+						"A broca pode escavar rocha sólida com metade de sua velocidade de escavação e deixar um túnel de 3 metros de diâmetro em seu rastro."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Flaming Drill",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) de dano perfurante mais 7 ({@damage 2d6}) de dano de fogo. Se a broca se mover pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo sofre 11 ({@damage 2d10}) de dano perfurante adicional e, se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Força {@dc 17} ou ter a condição {@condition prone}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Burst of Heat {@recharge 5}",
+					"entries": [
+						"The auger releases an intense burst of heat in a 30-foot-radius sphere centered on itself. This heat spreads around corners. Each creature in this area must make a {@dc 17} Constitution saving throw, taking 13 ({@damage 3d8}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Siege Monster",
+				"Tunneler"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flesh Meld",
+			"source": "PaBTSO",
+			"page": 207,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d12 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 21,
+			"dex": 14,
+			"con": 17,
+			"int": 7,
+			"wis": 13,
+			"cha": 5,
+			"save": {
+				"str": "+8",
+				"dex": "+5"
+			},
+			"senses": [
+				"blindsight 60 ft. (can't see beyond this radius)"
+			],
+			"passive": 11,
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"understands all but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"A fusão de carne pode se mover através de um espaço tão estreito quanto 1 polegada sem apertar."
+					]
+				},
+				{
+					"name": "Aura of Death",
+					"entries": [
+						"No início de cada turno da fusão de carne, cada criatura a até 1,5 metro dele deve ter sucesso em um teste de resistência de Constituição {@dc 15} ou sofrerá 3 ({@damage 1d6}) de dano necrótico e terá a condição {@condition poisoned} até o início do próximo turno da fusão de carne."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A fusão de carne tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"A fusão de carne pode escalar superfícies difíceis, incluindo tetos, sem a necessidade de fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A fusão de carne realiza dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 30 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) dano perfurante, e se o alvo for uma criatura Grande ou menor, ele tem a condição {@condition grappled} (escape {@dc 15}) e é puxado até 4,5 metros em direção à fusão de carne."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Consume Creature",
+					"entries": [
+						"The flesh meld targets one Large or smaller creature within 5 feet of itself that it's grappling. The target must succeed on a {@dc 15} Dexterity saving throw or be swallowed by the flesh meld. The flesh meld can have one creature swallowed at a time.",
+						"A swallowed creature no longer has the {@condition grappled} condition. While swallowed, it has the {@condition blinded} and {@condition restrained} conditions, has {@quickref Cover||3||total cover} against attacks and other effects outside the flesh meld, and takes 10 ({@damage 3d6}) necrotic damage at the start of each of the flesh meld's turns. If this damage reduces a swallowed creature to 0 hit points, the creature dies, and the flesh meld consumes its body.",
+						"If the flesh meld takes 30 damage or more on a single turn from the swallowed creature, the flesh meld must succeed on a {@dc 15} Constitution saving throw at the end of that turn or regurgitate the creature, which falls with the {@condition prone} condition in a space within 5 feet of the flesh meld. If the flesh meld dies, the swallowed creature is no longer {@condition restrained} by it and can escape from the corpse by using 10 feet of movement, exiting with the {@condition prone} condition."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous",
+				"Magic Resistance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"XX"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goblin Boss Archer",
+			"source": "PaBTSO",
+			"page": 60,
+			"_copy": {
+				"name": "Goblin Boss",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Javelin",
+						"items": {
+							"name": "Shortbow",
+							"entries": [
+								"{@atk rw} {@hit 4} to hit, range 80 ft./320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Goblin Psi Brawler",
+			"source": "PaBTSO",
+			"page": 215,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d6 + 7"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 17,
+			"con": 12,
+			"int": 16,
+			"wis": 15,
+			"cha": 10,
+			"save": {
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"telepathy 30 ft."
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Mental Burst",
+					"entries": [
+						"Quando o goblin morre, sua energia mental reprimida explode em uma explosão psíquica. Cada criatura a até 1,5 metro dele deve ser bem sucedida em um teste de resistência de Inteligência de {@dc 13} ou sofrerá 5 ({@damage 2d4}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Mental Fortitude",
+					"entries": [
+						"O goblin tem vantagem em testes de resistência contra efeitos que o fariam ter a condição {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O goblin realiza dois ataques de Ataque Desarmado."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) de dano de concussão mais 3 ({@damage 1d6}) de dano psíquico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"The goblin takes the Disengage or Hide action."
+					]
+				},
+				{
+					"name": "Telekinetic Shove",
+					"entries": [
+						"The goblin targets one creature it can see within 30 feet of itself with a thrust of telekinetic force. The target must succeed on a {@dc 13} Strength saving throw or have the {@condition prone} condition."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goblin Psi Commander",
+			"source": "PaBTSO",
+			"page": 216,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item studded leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "13d6 + 13"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 19,
+			"con": 13,
+			"int": 17,
+			"wis": 15,
+			"cha": 10,
+			"save": {
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"telepathy 60 ft."
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The goblin casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell mage hand} (the hand is invisible)",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell charm person}",
+							"{@spell dissonant whispers}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Mental Burst",
+					"entries": [
+						"Quando o goblin morre, sua energia mental reprimida explode em uma explosão psíquica. Cada criatura a até 1,5 metro dele deve ser bem sucedida em um teste de resistência de Inteligência {@dc 13} ou sofrerá 10 ({@damage 4d4}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Mental Fortitude",
+					"entries": [
+						"O goblin tem vantagem em testes de resistência contra efeitos que o fariam ter as condições {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O goblin faz três ataques de Lâmina Psíquica."
+					]
+				},
+				{
+					"name": "Psychic Blade",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 1,5 m ou alcance de 18 m, uma criatura. {@h}11 ({@damage 2d6 + 4}) de dano psíquico, e o alvo deve subtrair {@dice 1d4} da próxima jogada de ataque ou teste de resistência que fizer antes do final do próximo turno do goblin."
+					]
+				},
+				{
+					"name": "Synaptic Rend {@recharge 5}",
+					"entries": [
+						"O goblin libera uma esfera de energia psíquica com 9 metros de raio, centrada em um ponto que o goblin pode ver a até 18 metros de si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Inteligência {@dc 13}. Se falhar na resistência, uma criatura sofre 14 ({@damage 4d6}) de dano psíquico e tem a condição {@condition incapacitated} até o final do próximo turno do goblin. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"The goblin takes the Disengage or Hide action."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Psionic Shield",
+					"entries": [
+						"When the goblin or one of its allies within 15 feet of it is hit by an attack roll, the goblin conjures a shield of force. The target of the attack gains a +3 bonus to its AC against the triggering attack roll, potentially causing it to miss."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"TP"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grandlejaw",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 121,
+			"_copy": {
+				"name": "Hydra",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the hydra",
+						"with": "Grandlejaw",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grell Psychic",
+			"source": "PaBTSO",
+			"page": 145,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 14,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 14,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech",
+				"Grell"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The grell psychic casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell mage armor}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell confusion}",
+							"{@spell fear}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O psíquico Grell faz um ataque de Tentáculo e um ataque de Bico."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 3d4 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 10 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 11} ou ter a condição {@condition poisoned} por 1 minuto. Embora o alvo seja {@condition poisoned}, ele também possui a condição {@condition paralyzed}. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. O alvo também possui a condição {@condition grappled} (escape {@dc 16}). Enquanto agarra o alvo, o Grell não pode realizar ataques de Tentáculo contra outros alvos. Quando o Grell se move, qualquer alvo Médio ou menor que ele esteja lutando se move com ele."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gundren Rockseeker",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 10,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Mountain Dwarf",
+						"source": "PHB"
+					}
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gwyn Oresong",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 8,
+			"_copy": {
+				"name": "Acolyte",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Mountain Dwarf",
+						"source": "PHB"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the acolyte",
+						"with": "Gwyn",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hashutu",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 194,
+			"_copy": {
+				"name": "Mind Flayer Clairvoyant",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mind flayer",
+						"with": "Hashutu",
+						"flags": "i"
+					}
+				}
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft.",
+				"truesight 15 ft."
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hjoldak Hollowhelm",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 93,
+			"_copy": {
+				"name": "Psionic Ashenwight",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ashenwight",
+						"with": "Hjoldak",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Honna",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 110,
+			"_copy": {
+				"name": "Medusa",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the medusa",
+						"with": "Honna",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Humanoid Mutate",
+			"source": "PaBTSO",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 14,
+			"int": 11,
+			"wis": 13,
+			"cha": 15,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"telepathy 60 ft."
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o mutante tem desvantagem nas jogadas de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O mutante faz dois ataques Unarmed Strike ou Nightmare Blast."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano de concussão mais 10 ({@damage 3d6}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Nightmare Blast",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance de 18 metros, uma criatura. {@h}7 ({@damage 2d6}) de dano psíquico, e o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 12} ou ter a condição {@condition frightened} até o início do próximo turno da mutação."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Defensive Flight",
+					"entries": [
+						"Immediately after taking damage, the mutate flies up to its speed. This movement doesn't provoke opportunity attacks."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Iarno \"Glasstaff\" Albrek",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 43,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor} and {@item staff of defense|PaBTSO}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+5",
+				"history": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Glasstaff casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell mage hand}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell charm person}",
+							"{@spell hold person}",
+							"{@spell magic missile}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Glasstaff empunha um {@item staff of defense|PaBTSO} (veja o apêndice B). Com o cajado em mãos, ele pode usar uma ação para lançar o feitiço {@spell mage armor} e usar sua reação para lançar o feitiço {@spell shield}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Glasstaff faz dois ataques Shocking Burst."
+					]
+				},
+				{
+					"name": "Shocking Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para acertar, alcance 5 pés ou alcance 120 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano elétrico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Teleport (2/Day)",
+					"entries": [
+						"Glasstaff magically teleports, along with any equipment he is wearing or carrying, up to 30 feet to an unoccupied space he can see."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"DR",
+				"E"
+			],
+			"damageTags": [
+				"L"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"paralyzed"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infected Elder Brain",
+			"source": "PaBTSO",
+			"page": 159,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"mind flayer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 189,
+				"formula": "18d10 + 90"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 10
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 20,
+			"int": 21,
+			"wis": 19,
+			"cha": 20,
+			"save": {
+				"int": "+9",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+9",
+				"insight": "+12"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"telepathy 1 mile; understands Common",
+				"Deep Speech",
+				"and Undercommon but can't speak"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The elder brain casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect thoughts}",
+						"{@spell levitate}"
+					],
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Creature Sense",
+					"entries": [
+						"O cérebro ancião está ciente de criaturas dentro de um raio de 1 milha de si mesmo que tenham um valor de Inteligência 4 ou superior. Ele conhece a distância e a direção de cada criatura, bem como o valor de Inteligência de cada uma, mas não consegue sentir mais nada sobre isso. Uma criatura protegida por um feitiço {@spell mind blank}, um feitiço {@spell nondetection} ou magia semelhante não pode ser percebida desta maneira."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O cérebro mais velho tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Telepathic Hub",
+					"entries": [
+						"O cérebro ancião pode usar sua telepatia para iniciar e manter conversas telepáticas com até dez criaturas ao mesmo tempo. O cérebro mais velho pode permitir que essas criaturas ouçam umas às outras telepaticamente enquanto estiverem conectadas dessa maneira."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cérebro mais velho faz dois ataques de tentáculos."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 30 pés, um alvo. {@h}15 ({@damage 3d8 + 2}) dano de concussão. Se o alvo for uma criatura Enorme ou menor, ele terá a condição {@condition grappled} (escape {@dc 14}) e sofrerá 9 ({@damage 1d8 + 5}) de dano psíquico no início de cada um de seus turnos até o agarrão terminar. O cérebro mais velho pode ter até quatro alvos {@condition grappled} ao mesmo tempo."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"Criaturas à escolha do cérebro mais velho a até 18 metros de si devem ter sucesso em um teste de resistência de Inteligência {@dc 17} ou sofrerão 32 ({@damage 5d10 + 5}) de dano psíquico e terão a condição {@condition stunned} por 1 minuto. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Psychic Link",
+					"entries": [
+						"The elder brain targets one creature with the {@condition incapacitated} condition that the elder brain senses with its Creature Sense trait and establishes a psychic link with the target. Until the link ends, the elder brain can perceive everything the target senses. The target becomes aware that something is linked to its mind once it no longer has the {@condition incapacitated} condition, and the elder brain can terminate the link at any time (no action required). The target can use an action on its turn to attempt to break the link, doing so with a successful {@dc 17} Charisma check. If the target breaks the link this way, the target takes 10 ({@damage 3d6}) psychic damage. The link also ends if the target and the elder brain are more than 1 mile apart. The elder brain can form psychic links with up to ten creatures at a time."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"B",
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infected Townsperson",
+			"source": "PaBTSO",
+			"page": 139,
+			"_copy": {
+				"name": "Berserker",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "berserker",
+						"with": "townsperson"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Greataxe",
+						"items": {
+							"name": "Psychic Slam",
+							"entries": [
+								"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) bludgeoning damage plus 3 ({@damage 1d6}) psychic damage."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Intellect Snare",
+			"source": "PaBTSO",
+			"page": 208,
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 99,
+				"formula": "18d6 + 36"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 45,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 13,
+			"dex": 18,
+			"con": 15,
+			"int": 23,
+			"wis": 17,
+			"cha": 11,
+			"save": {
+				"int": "+9",
+				"wis": "+6",
+				"cha": "+3"
+			},
+			"senses": [
+				"blindsight 120 ft. (can't see beyond this radius)"
+			],
+			"passive": 13,
+			"immune": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Cacophony of Minds",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 9 metros da armadilha intelectual deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou terá a condição {@condition incapacitated} por 1 minuto. Uma criatura {@condition incapacitated} pode repetir o teste de resistência no início de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso. Uma criatura que obtiver sucesso no teste de resistência fica imune à Cacofonia de Mentes desta armadilha intelectual por 24 horas."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A armadilha do intelecto tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A armadilha do intelecto faz dois ataques de Tentáculo."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 15 pés, um alvo. {@h}10 ({@damage 1d8 + 6}) dano de força, e se o alvo for uma criatura Média ou menor, o alvo tem a condição {@condition grappled} (escape {@dc 17})."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Siphon Thoughts",
+					"entries": [
+						"The intellect snare targets one creature it is grappling. The target must make a {@dc 17} Intelligence saving throw, taking 21 ({@damage 6d6}) psychic damage on a failed save, or half as much damage on a successful one. The intellect snare then regains a number of hit points equal to the amount of damage taken."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kellikilli",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 121,
+			"_copy": {
+				"name": "Water Weird",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the water weird",
+						"with": "Kellikilli",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lowarnizel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 181,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"young gem"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 168,
+				"formula": "16d10 + 80"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 80,
+					"condition": "(hover)"
+				},
+				"swim": 40,
+				"canHover": true
+			},
+			"str": 21,
+			"dex": 12,
+			"con": 21,
+			"int": 18,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"con": "+9",
+				"wis": "+6",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+12",
+				"perception": "+10",
+				"persuasion": "+8",
+				"stealth": "+5"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"force",
+				"psychic"
+			],
+			"conditionImmune": [
+				"frightened",
+				"prone"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"telepathy 120 ft."
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Lowarnizel casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dispel magic}",
+							"{@spell haste}",
+							"{@spell protection from evil and good}",
+							"{@spell sending}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Lowarnizel pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lowarnizel faz um ataque de mordida e dois ataques de garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 10 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) de dano perfurante mais 4 ({@damage 1d8}) de dano de força."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 5}) cortando dano."
+					]
+				},
+				{
+					"name": "Singularity Breath {@recharge 5}",
+					"entries": [
+						"Lowarnizel cria uma esfera brilhante de força gravitacional e depois libera a energia em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Força de {@dc 17}. Se falhar na resistência, uma criatura sofre 36 ({@damage 8d8}) de dano de força e sua velocidade se torna 0 até o início do próximo turno do dragão. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Lowarnizel magically transforms into any creature that is Medium or Small, while retaining his game statistics (other than his size). This transformation ends if the dragon is reduced to 0 hit points or uses a bonus action to end it."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Malinia",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 115,
+			"_copy": {
+				"name": "Humanoid Mutate",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mutate",
+						"with": "Malinia",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mind Flayer Clairvoyant",
+			"source": "PaBTSO",
+			"page": 209,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 15,
+			"int": 21,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"int": "+9",
+				"wis": "+7",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+9",
+				"insight": "+7",
+				"perception": "+7",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 15 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft.",
+				"Undercommon"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mind flayer casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1": [
+							"{@spell plane shift} (self only)"
+						],
+						"3e": [
+							"{@spell clairvoyance} (as an action)",
+							"{@spell dispel magic}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o devorador de mentes falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O devorador de mentes tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O devorador de mentes faz dois ataques de Tentáculo."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 1,5 m, uma criatura. {@h}21 ({@damage 3d10 + 5}) de dano psíquico. Se o alvo for Médio ou menor, ele possui a condição {@condition grappled} (escapar {@dc 17}) e deve ter sucesso em um teste de resistência de Inteligência {@dc 17} ou ter a condição {@condition incapacitated} até que a luta termine."
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um {@condition incapacitated} Humanóide {@condition grappled} pelo devorador de mentes. {@h}55 ({@damage 10d10}) dano perfurante. Se esse dano reduzir o alvo a 0 pontos de vida, o devorador de mentes o mata extraindo e devorando seu cérebro."
+					]
+				},
+				{
+					"name": "Unleash Void {@recharge 5}",
+					"entries": [
+						"O devorador de mentes abre uma fenda no Reino Distante, centrado em um ponto que o devorador de mentes pode ver a até 18 metros de si mesmo, e um tentáculo ataca criaturas próximas à fenda. Cada criatura, exceto devoradores de mentes, a até 9 metros da fenda deve realizar um teste de resistência de Inteligência de {@dc 17}, após o qual o tentáculo desaparece e a fenda se fecha. Se falhar na resistência, uma criatura sofre 18 ({@damage 4d8}) de dano de frio da fenda mais 18 ({@damage 4d8}) de dano psíquico do tentáculo e tem a condição {@condition stunned} por 1 minuto. Em um teste bem-sucedido, a criatura sofre apenas metade do dano. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Warp Reality",
+					"entries": [
+						"When hit by an attack roll, the mind flayer gains a +4 bonus to its AC against that attack roll, potentially causing it to miss. Then the mind flayer, along with any equipment it is wearing or carrying, magically teleports up to 60 feet to an unoccupied space it can see."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"C",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mind Flayer Nothic",
+			"source": "PaBTSO",
+			"page": 155,
+			"_copy": {
+				"name": "Nothic",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Rotting Gaze",
+						"items": {
+							"name": "Mind Blast {@recharge 5}",
+							"entries": [
+								"The nothic magically emits psychic energy in a 30-foot cone. Each creature in that area must succeed on a {@dc 12} Intelligence saving throw or take 10 ({@damage 2d8 + 1}) psychic damage and have the {@condition stunned} condition until the end of its next turn."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Mind Flayer Prophet",
+			"source": "PaBTSO",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 97,
+				"formula": "15d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 20,
+			"wis": 17,
+			"cha": 17,
+			"save": {
+				"int": "+8",
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+8",
+				"insight": "+6",
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft.",
+				"Undercommon"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mind flayer casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell levitate}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dominate monster}",
+							"{@spell plane shift} (self only)",
+							"{@spell true seeing}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Awareness",
+					"entries": [
+						"O devorador de mentes tem vantagem nas jogadas de iniciativa e não pode ser surpreendido desde que não tenha a condição {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O devorador de mentes tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 1,5 m, uma criatura. {@h}16 ({@damage 2d10 + 5}) de dano psíquico. Se o alvo for Médio ou menor, ele possui a condição {@condition grappled} (escape {@dc 16}) e deve ter sucesso em um teste de resistência de Inteligência {@dc 16} ou ter a condição {@condition stunned} até que a luta termine."
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 1,5 m, um Humanóide {@condition grappled} pelo devorador de mentes. {@h}55 ({@damage 10d10}) dano perfurante. Se esse dano reduzir o alvo a 0 pontos de vida, o devorador de mentes o mata extraindo e devorando seu cérebro."
+					]
+				},
+				{
+					"name": "Mind Whip {@recharge 5}",
+					"entries": [
+						"O devorador de mentes ataca com energia psíquica, mirando em até duas criaturas que ele possa ver a até 18 metros de si mesmo. Cada alvo deve ter sucesso em um teste de resistência de Inteligência {@dc 16} ou sofrerá 23 ({@damage 4d8 + 5}) de dano psíquico e terá a condição {@condition stunned} por 1 minuto. Um alvo {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mormesk the Wraith",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 70,
+			"_copy": {
+				"name": "Wraith",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wraith",
+						"with": "Mormesk",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nellik",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 193,
+			"_copy": {
+				"name": "Nycaloth",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the nycaloth",
+						"with": "Nellik",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Greataxe",
+						"items": {
+							"name": "Greataxe",
+							"entries": [
+								"{@atk mw} {@hit 10} to hit, reach 5 ft., one target. {@h}19 ({@damage 2d12 + 6}) slashing damage; if the target is an Aberration, it takes an additional 6 ({@damage 1d12}) slashing damage, and if it is grappling a creature, it must succeed on a {@dc 15} Strength saving throw or its grapple ends."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Nezznar the Spider",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 74,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 14,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 13,
+			"con": 10,
+			"int": 16,
+			"wis": 14,
+			"cha": 13,
+			"save": {
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+5",
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Nezznar casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13} unless otherwise noted):"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell mage hand}",
+						"{@spell spider climb} (from spider staff)",
+						"{@spell web} (from spider staff; save {@dc 15})"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}",
+							"{@spell invisibility}",
+							"{@spell mage armor}",
+							"{@spell magic missile}",
+							"{@spell suggestion}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Nezznar tem um {@item spider staff|lmop} totalmente carregado (veja o apêndice B)."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Nezznar tem vantagem em testes de resistência para evitar ou acabar com a condição {@condition charmed} em si mesmo, e a magia não pode fazê-lo dormir."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Nezznar tem desvantagem nas jogadas de ataque enquanto ele ou seu alvo estiver sob a luz do sol."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Nezznar faz dois ataques Poison Blast."
+					]
+				},
+				{
+					"name": "Poison Blast",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} para acertar, alcance 1,5 m ou alcance de 36 m, uma criatura. {@h}9 ({@damage 2d8}) dano de veneno."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"U"
+			],
+			"damageTags": [
+				"I"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nundro Rockseeker",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 73,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Mountain Dwarf",
+						"source": "PHB"
+					}
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nythalyn Henlifel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 114,
+			"_copy": {
+				"name": "Drow Elite Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Nythalyn",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oculorb",
+			"source": "PaBTSO",
+			"page": 214,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "15d10 + 45"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 17,
+			"int": 14,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"int": "+6",
+				"wis": "+6",
+				"cha": "+8"
+			},
+			"skill": {
+				"investigation": "+6",
+				"perception": "+10"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 20,
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O oculorbe tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Watchful Eyes",
+					"entries": [
+						"O oculorbe tem vantagem nas jogadas de iniciativa e não pode ser surpreendido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O oculorb faz dois ataques de Contato Terrível ou quatro ataques de Raio Ocular."
+					]
+				},
+				{
+					"name": "Dreadful Contact",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}14 ({@damage 3d6 + 4}) de dano psíquico ou 25 ({@damage 6d6 + 4}) de dano psíquico se o alvo tiver a condição {@condition frightened}."
+					]
+				},
+				{
+					"name": "Eye Beam",
+					"entries": [
+						"{@atk rs} {@hit 8} para acertar, alcance de 36 metros, uma criatura. {@h}14 ({@damage 3d6 + 4}) dano psíquico."
+					]
+				},
+				{
+					"name": "Antipathic Flood {@recharge 5}",
+					"entries": [
+						"O oculorb libera uma onda de emoções negativas, escolhendo uma das seguintes opções:"
+					]
+				},
+				{
+					"name": "Weeping Eyes",
+					"entries": [
+						"O oculorbe chora, liberando uma onda de desespero esmagador. Cada criatura a até 9 metros do oculorbe deve realizar um teste de resistência de Constituição {@dc 16}. Em caso de falha no salvamento, a velocidade de uma criatura é reduzida para 0 pés até o final do próximo turno do oculorbe, e se a criatura era {@status concentration||concentrating}, seu {@status concentration} é quebrado."
+					]
+				},
+				{
+					"name": "Withering Glare",
+					"entries": [
+						"Os olhos do oculorbe liberam uma energia escarlate furiosa em um cone de 18 metros. Cada criatura naquela área deve realizar um teste de resistência de {@dc 16} Sabedoria. Se falhar na resistência, uma criatura sofre 33 ({@damage 6d10}) de dano necrótico e tem a condição {@condition frightened} por 1 minuto. Em um teste bem-sucedido, uma criatura sofre metade do dano e não é {@condition frightened}. Uma criatura {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em um teste de resistência bem-sucedido."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Obsessive Rebuke",
+					"entries": [
+						"When the oculorb is damaged by a creature it can see within 60 feet of itself, it forces the creature to make a {@dc 16} Wisdom saving throw. The creature takes 10 ({@damage 3d6}) psychic damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ontharyx",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 115,
+			"_copy": {
+				"name": "Humanoid Mutate",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mutate",
+						"with": "Ontharyx",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Oshundo the Alhoon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 153,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"mind flayer",
+					"wizard"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d8 + 60"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 15,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 16,
+			"int": 19,
+			"wis": 17,
+			"cha": 17,
+			"save": {
+				"con": "+7",
+				"int": "+8",
+				"wis": "+7",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+8",
+				"history": "+8",
+				"insight": "+7",
+				"perception": "+7",
+				"stealth": "+5"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"cold",
+				"lightning",
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Deep Speech",
+				"telepathy 120 ft.",
+				"Undercommon"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Oshundo casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell disguise self}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dominate monster}",
+							"{@spell globe of invulnerability}",
+							"{@spell invisibility}",
+							"{@spell modify memory}",
+							"{@spell plane shift} (self only)",
+							"{@spell wall of force}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Oshundo tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Oshundo faz dois ataques Chilling Grasp ou Arcane Bolt."
+					]
+				},
+				{
+					"name": "Chilling Grasp",
+					"entries": [
+						"{@atk ms} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 4d6}) de dano de frio e Oshundo recupera 14 pontos de vida se o alvo for uma criatura."
+					]
+				},
+				{
+					"name": "Arcane Bolt",
+					"entries": [
+						"{@atk rs} {@hit 8} para acertar, alcance de 120 pés, um alvo. {@h}28 ({@damage 8d6}) dano de força."
+					]
+				},
+				{
+					"name": "Thundering Blast {@recharge 5}",
+					"entries": [
+						"Oshundo emite uma onda de energia dominadora em um cone de 18 metros. Cada criatura naquela área deve ter sucesso em um teste de resistência de Inteligência {@dc 16} ou sofrerá 22 ({@damage 4d8 + 4}) de dano trovejante e terá a condição {@condition stunned} por 1 minuto. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Negate Spell (3/Day)",
+					"entries": [
+						"Oshundo targets one creature it can perceive within 60 feet of itself that is casting a spell. If the spell is 3rd level or lower, the spell fails, but any spell slots or charges aren't wasted."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"C",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"invisible"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otyugh Mutate",
+			"source": "PaBTSO",
+			"page": 213,
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 76,
+				"formula": "8d10 + 32"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 11,
+			"con": 18,
+			"int": 10,
+			"wis": 15,
+			"cha": 6,
+			"save": {
+				"str": "+7",
+				"con": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Otyugh",
+				"telepathy 120 ft."
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Virulent Breath",
+					"entries": [
+						"Gás nocivo da digestão de refeições anteriores do mutante é expelido de sua boca. No início do turno da mutação, cada criatura a até 1,5 metro dele deve ser bem sucedida em um teste de resistência de Constituição {@dc 15} ou sofrerá 3 ({@damage 1d6}) de dano de veneno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O mutante faz dois ataques de Mordida ou Tentáculo. Pode substituir um desses ataques pelo Chitin Slam."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano perfurante. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Constituição {@dc 15} ou ter a condição {@condition poisoned}. A cada 24 horas decorridas, o alvo deve repetir o teste de resistência, reduzindo seu máximo de pontos de vida em 5 ({@dice 1d10}) em caso de falha. Após um salvamento bem-sucedido, o alvo não é mais {@condition poisoned}. O alvo morre se seu máximo de pontos de vida for reduzido a 0. Esta redução no máximo de pontos de vida do alvo dura até que ele não tenha mais a condição {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 3 metros, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão, e se o alvo for uma criatura Média ou menor, ele terá a condição {@condition grappled} (escapar {@dc 15}) e a condição {@condition restrained} até que esta luta termine. O mutante tem dois tentáculos que podem agarrar um alvo cada."
+					]
+				},
+				{
+					"name": "Chitin Slam",
+					"entries": [
+						"A mutação tem como alvo uma criatura que está lutando, jogando a criatura contra seu revestimento quitinoso. A criatura deve ter sucesso em um teste de resistência de Constituição {@dc 15} ou sofrerá 16 ({@damage 3d10}) de dano de concussão e terá a condição {@condition stunned} até o final do próximo turno do mutante."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"OTH",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Psionic Ashenwight",
+			"source": "PaBTSO",
+			"page": 204,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 19,
+			"dex": 13,
+			"con": 15,
+			"int": 17,
+			"wis": 14,
+			"cha": 6,
+			"save": {
+				"str": "+7",
+				"con": "+5",
+				"int": "+6",
+				"wis": "+5"
+			},
+			"passive": 12,
+			"resist": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"unconscious"
+			],
+			"languages": [
+				"telepathy 120 ft.",
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ashenwight casts one of the following spells, requiring no spellcasting components and using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell mage hand} (the hand is invisible)"
+					],
+					"daily": {
+						"1": [
+							"{@spell calm emotions}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ashenwight faz dois ataques de Fragmentos Necróticos. Ele também usa Coroa Psiônica, se disponível."
+					]
+				},
+				{
+					"name": "Necrotic Shard",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante mais 9 ({@damage 2d8}) de dano necrótico. Se o alvo for uma criatura, ele terá desvantagem na próxima jogada de ataque que realizar antes do final do próximo turno."
+					]
+				},
+				{
+					"name": "Psionic Crown {@recharge 5}",
+					"entries": [
+						"O ashenwight envolve a cabeça de uma criatura que ele pode ver a até 18 metros de si mesmo com uma coroa de cristais espectrais irregulares. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 14} ou ter a condição {@condition charmed} por 1 minuto. Enquanto {@condition charmed} dessa forma, os pensamentos do alvo são lentos; ele não pode reagir, sua velocidade é reduzida pela metade e sofre 9 ({@damage 2d8}) de dano psíquico no início de cada um de seus turnos. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Psionic Shambling Mound",
+			"source": "PaBTSO",
+			"page": 108,
+			"_copy": {
+				"name": "Shambling Mound",
+				"source": "MM"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The shambling mound casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 8}):"
+					],
+					"will": [
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell charm person} (already cast)"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Qunbraxel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 135,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"mind flayer",
+					"warlock"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 17,
+			"int": 19,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"int": "+8",
+				"wis": "+6",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+8",
+				"insight": "+6",
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Deep Speech",
+				"telepathy 60 ft.",
+				"Undercommon"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Qunbraxel casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell levitate}",
+						"{@spell mage armor} (self only)",
+						"{@spell mage hand} (the hand is invisible)",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell confusion}",
+							"{@spell sending}",
+							"{@spell telekinesis}"
+						],
+						"1e": [
+							"{@spell dominate monster}",
+							"{@spell plane shift} (self only)"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Qunbraxel tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Qunbraxel faz dois ataques Eldritch Bolt, ou um ataque Eldritch Bolt e um ataque Tentacle."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 1,5 m, uma criatura. {@h}15 ({@damage 2d10 + 4}) de dano psíquico. Se o alvo for Médio ou menor, ele possui a condição {@condition grappled} (escape {@dc 16}) e deve ter sucesso em um teste de resistência de Inteligência {@dc 16} ou ter a condição {@condition stunned} até que a luta termine."
+					]
+				},
+				{
+					"name": "Eldritch Bolt",
+					"entries": [
+						"{@atk rs} {@hit 8} para acertar, alcance de 120 pés, um alvo. {@h}20 ({@damage 3d10 + 4}) dano de força."
+					]
+				},
+				{
+					"name": "Extract Brain",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um humanóide com a condição {@condition stunned} que é {@condition grappled} de Qunbraxel. {@h}55 ({@damage 10d10}) dano perfurante. Se esse dano reduzir o alvo a 0 pontos de vida, Qunbraxel o mata extraindo e devorando seu cérebro."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"Qunbraxel emite magicamente energia psíquica em um cone de 18 metros. Cada criatura naquela área deve ter sucesso em um teste de resistência de Inteligência {@dc 16} ou sofrerá 26 ({@damage 5d8 + 4}) de dano psíquico e terá a condição {@condition stunned} por 1 minuto. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Redbrand Ruffian",
+			"source": "PaBTSO",
+			"page": 216,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 12,
+			"int": 9,
+			"wis": 9,
+			"cha": 11,
+			"skill": {
+				"intimidation": "+2"
+			},
+			"passive": 9,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Refraction of Ilvaash",
+			"source": "PaBTSO",
+			"page": 197,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"mind flayer"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 199,
+				"formula": "21d12 + 63"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"swim": 10,
+				"canHover": true
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 17,
+			"int": 23,
+			"wis": 20,
+			"cha": 22,
+			"save": {
+				"int": "+11",
+				"wis": "+10"
+			},
+			"skill": {
+				"arcana": "+11",
+				"insight": "+15",
+				"intimidation": "+11",
+				"persuasion": "+11"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Deep Speech",
+				"telepathy 100 miles",
+				"Undercommon"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The refraction casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell detect thoughts}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell dispel magic}",
+							"{@spell modify memory}"
+						],
+						"1e": [
+							"{@spell feeblemind}",
+							"{@spell plane shift} (self only)"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Creature Sense",
+					"entries": [
+						"A refração reconhece criaturas num raio de 160 quilômetros dela que tenham um valor de Inteligência 4 ou superior. Ele conhece a distância e a direção de cada criatura, bem como o valor de Inteligência de cada uma, mas não consegue sentir mais nada sobre isso. Uma criatura protegida por um feitiço {@spell mind blank}, um feitiço {@spell nondetection} ou magia semelhante não pode ser percebida desta maneira."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"A refração pode se mover através de outras criaturas e objetos como se fossem terrenos difíceis. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+					]
+				},
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"Se a refração falhar em um teste de resistência, ela pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A refração tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A refração faz dois ataques de Garra Dissonante."
+					]
+				},
+				{
+					"name": "Dissonant Claw",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros ou alcance de 36 metros, uma criatura. {@h}25 ({@damage 3d12 + 6}) de dano psíquico. Se o alvo for uma criatura {@status concentration||concentrating} em uma mágica, seu {@status concentration} será quebrado."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"Criaturas à escolha da refração a até 18 metros dela devem ter sucesso em um teste de resistência de Inteligência {@dc 19} ou sofrerão 33 ({@damage 5d10 + 6}) de dano psíquico e terão a condição {@condition stunned} por 1 minuto. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"A refração se teletransporta, junto com qualquer equipamento que esteja usando ou carregando, até 36 metros para um local desocupado que possa ver."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Mindbreaker",
+					"entries": [
+						"The refraction targets a creature within 120 feet of itself and disrupts its mental processes, causing the target to have disadvantage on all ability checks, attack rolls, and saving throws until the end of the target's next turn."
+					]
+				},
+				{
+					"name": "Projected Claw (Costs 2 Actions)",
+					"entries": [
+						"The refraction makes one Dissonant Claw attack."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Teleport"
+			],
+			"languageTags": [
+				"C",
+				"DS",
+				"TP",
+				"U"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rivibiddel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 122,
+			"_copy": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gnome",
+						"with": "Rivibiddel",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ruxithid the Chosen",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 99,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 88,
+				"formula": "16d8 + 16"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 14,
+			"dex": 19,
+			"con": 12,
+			"int": 18,
+			"wis": 15,
+			"cha": 12,
+			"save": {
+				"int": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"insight": "+5",
+				"perception": "+5",
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"psychic"
+			],
+			"languages": [
+				"Common",
+				"Goblin",
+				"telepathy 60 ft."
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Quando Ruxithid falha em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Mental Fortitude",
+					"entries": [
+						"Ruxithid tem vantagem em testes de resistência contra as condições {@condition charmed} e {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ruxithid faz dois ataques de cimitarra com carga psi."
+					]
+				},
+				{
+					"name": "Psi-Charged Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano cortante mais 7 ({@damage 2d6}) de dano psíquico."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Brain Tendrils {@recharge 5}",
+					"entries": [
+						"Ruxithid unleashes a flurry of crystalline psychic tendrils from his brain, targeting one creature that he can see within 30 feet of himself. The target must succeed on a {@dc 15} Dexterity saving throw or take 9 ({@damage 2d8}) psychic damage and have the {@condition stunned} condition until the start of Ruxithid's next turn."
+					]
+				},
+				{
+					"name": "Combat Command",
+					"entries": [
+						"Ruxithid commands one allied creature he can see within 60 feet of himself to strike. The creature can immediately use its reaction to make one melee weapon attack against a target within its reach."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO",
+				"TP"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shalfi Lewin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 174,
+			"_copy": {
+				"name": "Aberrant Zealot",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the zealot",
+						"with": "Shalfi",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sildar Hallwinter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 22,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 12,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"str": "+3",
+				"con": "+3"
+			},
+			"skill": {
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Sildar faz dois ataques com Espada Longa."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) de dano cortante ou 6 ({@damage 1d10 + 1}) de dano cortante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 2} para acertar, alcance 100/400 pés, um alvo. {@h}5 ({@damage 1d10}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"When an attacker Sildar can see would hit him with a melee attack, he can roll a {@dice d6} and add the number rolled to his AC against the triggering attack, provided he's wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Varakkta",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 174,
+			"_copy": {
+				"name": "Githyanki Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the githyanki",
+						"with": "Varakkta",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Voalsh",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 194,
+			"_copy": {
+				"name": "Mind Flayer Clairvoyant",
+				"source": "PaBTSO",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mind flayer",
+						"with": "Voalsh",
+						"flags": "i"
+					}
+				}
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yanthdel Henlifel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 114,
+			"_copy": {
+				"name": "Drow Elite Warrior",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the drow",
+						"with": "Yanthdel",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zeond",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PaBTSO",
+			"page": 43,
+			"_copy": {
+				"name": "Quasit",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the quasit",
+						"with": "Zeond",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

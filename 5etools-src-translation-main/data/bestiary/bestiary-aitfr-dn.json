@@ -1,0 +1,505 @@
+{
+	"monster": [
+		{
+			"name": "Giant Zombie Constrictor Snake",
+			"source": "AitFR-DN",
+			"page": 11,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 187,
+				"formula": "22d12 + 44"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 16,
+			"con": 14,
+			"int": 1,
+			"wis": 15,
+			"cha": 4,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 15 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"vulnerable": [
+				"poison"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Sunlight Vulnerability",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, a cobra tem manobras de ataque e nos testes de Sabedoria ({@skill Perception}) que dependem da visão. Quando a cobra começa seu turno sob a luz do sol, ela sofre imediatamente 10 de dano radiante."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir a cobra a 0 pontos de vida, ela deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, a cobra cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A cobra faz dois ataques: um com a mordida e outro com um ataque constritivo."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 10 pés, um alvo. {@h}17 ({@damage 3d8 + 4}) de dano perfurante, e o alvo deve realizar um teste de resistência de Constituição {@dc 15}, dano 17 ({@damage 5d6}) de dano de veneno se falhar na resistência, ou metade do dano se causar sucesso."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 3d8 + 4}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 16}). Até que esta luta termine, uma criatura {@condition restrained} e uma cobra não poderão contrair outro alvo."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P",
+				"R"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Hamish Hewland",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "AitFR-DN",
+			"page": 11,
+			"size": [
+				"H"
+			],
+			"type": "giant",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d12 + 20"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 23,
+			"dex": 11,
+			"con": 15,
+			"int": 10,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"str": "+9",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+9",
+				"history": "+3",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hamish faz dois ataques com seu machado ou atira duas pedras."
+					]
+				},
+				{
+					"name": "Axe",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) cortando dano."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 9} para acertar, alcance 60/240 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Hamish adds 2 to his AC against one melee attack that would hit him. To do so, he must see the attacker and be wielding a melee weapon or a shield."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Kyrilla, Accursed Gorgon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "AitFR-DN",
+			"page": 12,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 127,
+				"formula": "15d10 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 16,
+			"int": 14,
+			"wis": 14,
+			"cha": 15,
+			"save": {
+				"wis": "+6",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"insight": "+6",
+				"perception": "+6",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Common",
+				"Draconic",
+				"Primordial"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Feed on Pain (2/Day)",
+					"entries": [
+						"Na primeira vez que ela acerta um ataque com arma em seu turno, Kyrilla pode causar 16 ({@damage 3d10}) de dano venenoso extra ao alvo e recuperar um número de pontos de vida igual à metade do dano causado."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se ela falhar no teste de resistência, Kyrilla pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Petrifying Gaze",
+					"entries": [
+						"Quando uma criatura que pode ver os olhos de Kyrilla começa a até 9 metros dela, Kyrilla pode forçá-la a fazer um teste de resistência de constituição {@dc 14} se Kyrilla não estiver {@condition incapacitated} e puder ver uma criatura. Se o teste de resistência for 5 ou mais, a criatura será instantânea {@condition petrified}. Caso contrário, uma criatura que falha no salvamento começa a virar pedra e é {@condition restrained}. A criatura {@condition restrained} deverá repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que uma criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
+						"A menos que {@status surprised}, uma criatura possa desviar os olhos para evitar o teste de resistência no início de seu turno. Se uma criatura fizer isso, ela não poderá ver Kyrilla até o início do próximo turno, quando poderá desviar os olhos novamente. Se uma criatura olhar para Kyrilla nesse meio tempo, ela deverá fazer o teste imediatamente.",
+						"O olhar amaldiçoado de Kyrilla não afeta mortos-vivos ou construídos. Se Kyrilla se vir refletida em uma superfície polida a até 9 metros dela e em uma área de luz brilhante, ela será, devido à sua maldição, afetada por seu próprio olhar."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, Kyrilla tem manobras de ataque e em testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Kyrilla faz um ataque para contrair e dois ataques com suas garras, ou faz três ataques com seu arco longo."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 3d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 3 metros, um alvo. {@h}10 ({@damage 3d6}) dano de concussão, e o alvo é {@condition grappled} (escapar {@dc 13}) é para uma criatura grande ou menor. Até que esta luta termine, o alvo é {@condition restrained} e Kyrilla não pode restringir outro alvo."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 7} para acertar, alcance 150/600 pés, um alvo. {@h}16 ({@damage 3d8 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Summon Swarm of Poisonous Snakes {@recharge 5}",
+					"entries": [
+						"Kyrilla conjura um enxame de cobras venenosas em um espaço vazio a até 3 metros dela. O enxame está sob o controle de Kyrilla e age no seu turno, imediatamente após ela na ordem de iniciativa.",
+						"Ele permanece existindo por até 1 hora. Ela não pode convocar mais do que três exames por dia. Kyrilla pode banir qualquer um ou todos os seus enxames invocados com uma ação bônus."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Claw",
+					"entries": [
+						"Kyrilla or a swarm of poisonous snakes makes a weapon attack."
+					]
+				},
+				{
+					"name": "Detect",
+					"entries": [
+						"Kyrilla makes a Wisdom ({@skill Perception}) check."
+					]
+				},
+				{
+					"name": "Slither",
+					"entries": [
+						"Kyrilla moves up to her speed without provoking opportunity attacks."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Kyrilla, Accursed Gorgon",
+				"source": "AitFR-DN"
+			},
+			"attachedItems": [
+				"longbow|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"P"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"P",
+				"S"
+			],
+			"damageTagsLegendary": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RNG",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"petrified",
+				"restrained"
+			],
+			"conditionInflictLegendary": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Skeletal Horror",
+			"source": "AitFR-DN",
+			"page": 13,
+			"size": [
+				"L"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 150,
+				"formula": "20d10 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 15,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "6",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O horror faz dois ataques com suas garras."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}19 ({@damage 3d10 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Wave of Bones {@recharge 5}",
+					"entries": [
+						"O horror atinge os inimigos como uma onda antes de se reformar rapidamente. Cada criatura a até 3 metros do horror deve realizar um teste de resistência de Destreza de {@dc 15}, dano 18 ({@damage 4d8}) de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura que tenha falha neste teste de resistência também será derrubada {@condition prone}."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		}
+	]
+}

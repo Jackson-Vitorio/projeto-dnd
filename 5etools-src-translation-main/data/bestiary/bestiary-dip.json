@@ -1,0 +1,620 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"MM": "DIP",
+				"MTF": "DIP",
+				"VGM": "DIP"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Anchorite of Talos",
+			"source": "DIP",
+			"page": 51,
+			"otherSources": [
+				{
+					"source": "DC"
+				},
+				{
+					"source": "SDW"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-orc",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 9,
+			"wis": 15,
+			"cha": 12,
+			"skill": {
+				"nature": "+1",
+				"stealth": "+3",
+				"survival": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The anchorite's innate spellcasting ability is Wisdom (spell save {@dc 12}). It can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"3": [
+							"{@spell thunderwave} ({@dice 2d8} damage)"
+						],
+						"1e": [
+							"{@spell augury}",
+							"{@spell bless}",
+							"{@spell lightning bolt} ({@dice 8d6} damage)",
+							"{@spell revivify}"
+						]
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"O anacoreta pode usar sua ação para se transformar em javali ou voltar à sua forma verdadeira, que é humanóide. Suas estatísticas são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma se morrer."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Clawed Gauntlet (Humanoid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Tusk (Boar Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Shapechanger"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Don-Jon Raskin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 56,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 10,
+			"con": 13,
+			"int": 12,
+			"wis": 10,
+			"cha": 14,
+			"save": {
+				"dex": "+2",
+				"con": "+3"
+			},
+			"skill": {
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Brave",
+					"entries": [
+						"Don-Jon tem vantagem em testes de resistência contra ser {@condition frightened}."
+					]
+				},
+				{
+					"name": "Not Dead Yet (Recharges after a Long Rest)",
+					"entries": [
+						"Se o dano reduzir Don-Jon a 0 pontos de vida, ele cai para 1 ponto de vida e ganha vantagem nas jogadas de ataque até o final de seu próximo turno."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Don-Jon faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}2 ({@damage 1d4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Sling",
+					"entries": [
+						"{@atk rw} {@hit 2} para acertar, alcance 30/120 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"sling|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Falcon the Hunter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 56,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 16,
+			"int": 11,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"dex": "+4",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+4",
+				"perception": "+7",
+				"survival": "+5"
+			},
+			"passive": 17,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Archer",
+					"entries": [
+						"Um arco longo ou arco curto causa um dado extra de dano quando Falcon acerta com ele (incluído em seu ataque de arco longo)."
+					]
+				},
+				{
+					"name": "Sharpshooter",
+					"entries": [
+						"Os ataques de armas de longo alcance do Falcon ignoram {@quickref Cover||3||half cover} e {@quickref Cover||3||three-quarters cover}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Falcon faz três ataques corpo a corpo ou dois ataques à distância."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano cortante ou 7 ({@damage 1d10 + 2}) de dano cortante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 150/600 pés, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gorthok the Thunder Boar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "DIP",
+			"page": 58,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 73,
+				"formula": "7d12 + 28"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 20,
+			"dex": 11,
+			"con": 19,
+			"int": 6,
+			"wis": 10,
+			"cha": 14,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Relentless (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se Gorthok sofrer 27 pontos de dano ou menos que o reduziriam a 0 pontos de vida, ele será reduzido para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gorthok faz dois ataques corpo a corpo: um com suas presas relâmpago e outro com seus cascos trovejantes."
+					]
+				},
+				{
+					"name": "Lightning Tusks",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}12 ({@damage 2d6 + 5}) dano cortante mais 7 ({@damage 2d6}) dano elétrico."
+					]
+				},
+				{
+					"name": "Thunder Hooves",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 10 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano de concussão mais 7 ({@damage 2d6}) de dano de trovão."
+					]
+				},
+				{
+					"name": "Lightning Bolt {@recharge}",
+					"entries": [
+						"Gorthok dispara um raio em uma criatura que pode ver a até 36 metros dele. O alvo deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 18 ({@damage 4d8}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rock Gnome Recluse",
+			"source": "DIP",
+			"page": 62,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 13,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 6,
+			"dex": 11,
+			"con": 10,
+			"int": 15,
+			"wis": 10,
+			"cha": 13,
+			"skill": {
+				"arcana": "+4",
+				"history": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Gnomish"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The gnome is a 2nd-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost} (see \"Actions\" below)"
+							]
+						},
+						"1": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell magic missile} (see \"Actions\" below)",
+								"{@spell shield}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"O gnomo tem vantagem nos testes de resistência de Inteligência, Sabedoria e Carisma contra magia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Magic Missile (Expends a 1st-Level Spell Slot)",
+					"entries": [
+						"O gnomo cria três dardos mágicos. Cada dardo atinge uma criatura que o gnomo escolhe a até 36 metros dele e causa 3 ({@damage 1d4 + 1}) de dano de força."
+					]
+				},
+				{
+					"name": "Ray of Frost",
+					"entries": [
+						"{@atk rs} {@hit 4} para acertar, alcance de 60 pés, uma criatura. {@h}4 ({@damage 1d8}) dano de frio e a velocidade do alvo é reduzida em 3 metros até o início do próximo turno do gnomo."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"C",
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skeletal Riding Horse",
+			"source": "DIP",
+			"page": 21,
+			"_copy": {
+				"name": "Riding Horse",
+				"source": "MM"
+			},
+			"type": "undead",
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

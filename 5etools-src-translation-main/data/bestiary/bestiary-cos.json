@@ -1,0 +1,5175 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM",
+				"VRGR"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "CoS",
+				"VRGR": "CoS"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Amber Golem",
+			"source": "CoS",
+			"page": 186,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Anastrasya Karelova",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 93,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Anastrasya",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Animated Halberd",
+			"source": "CoS",
+			"page": 59,
+			"_copy": {
+				"name": "Flying Sword",
+				"source": "MM"
+			},
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Halberd",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d10 + 1}) cortando dano."
+					]
+				}
+			],
+			"attachedItems": [
+				"halberd|phb"
+			],
+			"miscTags": [
+				"MLW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Arabelle",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 38,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_mod": {
+					"action": "remove"
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d8"
+			},
+			"miscTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Armored Saber-Toothed Tiger",
+			"source": "CoS",
+			"page": 115,
+			"_copy": {
+				"name": "Saber-Toothed Tiger",
+				"source": "MM"
+			},
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item half plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "7d10 + 14"
+			},
+			"cr": "3",
+			"hasToken": true
+		},
+		{
+			"name": "Arrigal",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 121,
+			"_copy": {
+				"name": "Vistana Assassin",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the assassin",
+						"with": "Arrigal",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Baba Lysaga",
+			"group": [
+				"Hags"
+			],
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 228,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 120,
+				"formula": "16d8 + 48"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 16,
+			"int": 20,
+			"wis": 17,
+			"cha": 13,
+			"save": {
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+13",
+				"religion": "+13"
+			},
+			"passive": 13,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Giant"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Baba Lysaga is a 16th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). Baba Lysaga has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell sleep}",
+								"{@spell witch bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell crown of madness}",
+								"{@spell enlarge/reduce}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell fireball}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell Evard's black tentacles}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell geas}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell programmed illusion}",
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell finger of death}",
+								"{@spell mirage arcane}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell power word stun}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Baba Lysaga pode usar uma ação para se transformar em {@creature swarm of insects} (moscas) ou voltar à sua forma verdadeira. Enquanto estiver na forma de enxame, ela tem um deslocamento de caminhada de 1,5 metros e um deslocamento de voo de 9 metros. Qualquer coisa que ela esteja vestindo se transforma com ela, mas nada que ela esteja carregando se transforma."
+					]
+				},
+				{
+					"name": "Blessing of Mother Night",
+					"entries": [
+						"Baba Lysaga está protegida contra magia de adivinhação, como se estivesse protegida por um feitiço {@spell nondetection}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Baba Lysaga faz três ataques com seu bordão."
+					]
+				},
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano por concussão ou 8 ({@damage 1d8 + 4}) de dano por concussão se empunhado com as duas mãos."
+					]
+				},
+				{
+					"name": "Summon Swarms of Insects (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Baba Lysaga invoca {@dice 1d4} enxames de insetos. Um enxame convocado aparece em um espaço desocupado a até 18 metros de Baba Lysaga e atua como seu aliado. Permanece até que morra ou até que Baba Lysaga a desconsidere como uma ação."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"traitTags": [
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"D",
+				"DR",
+				"GI"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Baba Lysaga's Creeping Hut",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 226,
+			"size": [
+				"G"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 263,
+				"formula": "17d20 + 85"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 26,
+			"dex": 7,
+			"con": 20,
+			"int": 1,
+			"wis": 3,
+			"cha": 3,
+			"save": {
+				"con": "+9",
+				"wis": "+0",
+				"cha": "+0"
+			},
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius)"
+			],
+			"passive": 6,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"prone"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Constructed Nature",
+					"entries": [
+						"Um objeto animado não requer ar, comida, bebida ou sono.",
+						"A magia que anima um objeto é dissipada quando a construção chega a 0 pontos de vida. Um objeto animado reduzido a 0 pontos de vida torna-se inanimado e fica muito danificado para ser de muita utilidade ou valor para alguém."
+					]
+				},
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"A cabana é {@condition incapacitated} enquanto a joia mágica que a anima está na área de um {@spell antimagic field}. Se for alvo de {@spell dispel magic}, a cabana deve ter sucesso em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"A cabana causa dano duplo a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A cabana faz três ataques com as raízes. Pode substituir um desses ataques por um ataque de pedra."
+					]
+				},
+				{
+					"name": "Root",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 60 pés, um alvo. {@h}30 ({@damage 4d10 + 8}) dano de concussão."
+					]
+				},
+				{
+					"name": "Rock",
+					"entries": [
+						"{@atk rw} {@hit 12} para acertar, alcance de 120 pés, um alvo. {@h}21 ({@damage 3d8 + 8}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Antimagic Susceptibility",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Baron Vargas Vallakovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 105,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Vargas",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Barovian Commoner",
+			"source": "CoS",
+			"page": 29,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"action": [
+				{
+					"name": "Pitchfork",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) dano perfurante."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Barovian Scout",
+			"source": "CoS",
+			"page": 29,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Longbow",
+						"items": {
+							"name": "Light Crossbows",
+							"entries": [
+								"{@atk rw} {@hit 4} to hit, ranged 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+							]
+						}
+					}
+				}
+			},
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Barovian Witch",
+			"source": "CoS",
+			"page": 229,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d8 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 7,
+			"dex": 11,
+			"con": 13,
+			"int": 14,
+			"wis": 11,
+			"cha": 12,
+			"skill": {
+				"arcana": "+4",
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The witch is a 3rd-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 12}, {@hit 4} to hit with spell attacks). The witch has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell ray of sickness}",
+								"{@spell sleep}",
+								"{@spell Tasha's hideous laughter}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell alter self}",
+								"{@spell invisibility}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"action": [
+				{
+					"name": "Claws (Requires Alter Self)",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano cortante. Este ataque é mágico."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}2 ({@damage 1d4}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Beucephalus",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 93,
+			"_copy": {
+				"name": "Nightmare",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the nightmare",
+						"with": "Beucephalus",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 104,
+				"formula": "8d10 + 24"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bluto Krogarov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 38,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Bray Martikov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Young Wereraven",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Bray",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brom Martikov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Young Wereraven",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Brom",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Broom of Animated Attack",
+			"source": "CoS",
+			"page": 226,
+			"size": [
+				"S"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 17,
+				"formula": "5d6"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 10,
+			"int": 1,
+			"wis": 5,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 7,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Constructed Nature",
+					"entries": [
+						"Um objeto animado não requer ar, comida, bebida ou sono.",
+						"A magia que anima um objeto é dissipada quando a construção chega a 0 pontos de vida. Um objeto animado reduzido a 0 pontos de vida torna-se inanimado e fica muito danificado para ser de muita utilidade ou valor para alguém."
+					]
+				},
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"A vassoura está {@condition incapacitated} enquanto está na área de um {@spell antimagic field}. Se for alvo de {@spell dispel magic}, a vassoura deve ser bem-sucedida em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a vassoura permaneça imóvel e não voe, ela é indistinguível de uma vassoura normal."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A vassoura faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Broomstick",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Animated Attack",
+					"entries": [
+						"If the broom is motionless and a creature grabs hold of it, the broom makes a Dexterity check contested by the creature's Strength check. If the broom wins the contest, it flies out of the creature's grasp and makes a melee attack against it with advantage on the attack roll."
+					]
+				}
+			],
+			"traitTags": [
+				"Antimagic Susceptibility",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Clovin Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 147,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Clovin",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Two-Headed",
+							"entries": [
+								"The mongrelfolk has advantage on Wisdom ({@skill Perception}) checks and on saving throws against being {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned}, or knocked {@condition unconscious}."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cyrus Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 77,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Cyrus",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Keen Hearing and Smell",
+							"entries": [
+								"The mongrelfolk has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+							]
+						}
+					}
+				}
+			},
+			"traitTags": [
+				"Keen Senses"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Danika Dorakova",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Danika",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Davian Martikov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 173,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Davian",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Distended Corpse",
+			"source": "CoS",
+			"page": 165,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"trait": [
+				{
+					"name": "Snake-Swollen",
+					"entries": [
+						"Quando um cadáver é reduzido a 0 pontos de vida, ele se abre, expelindo um {@creature swarm of poisonous snakes}. As cobras estão com fome e lutam até serem mortas."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Donavich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 46,
+			"_copy": {
+				"name": "Acolyte",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the acolyte",
+						"with": "Donavich",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Doru",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 47,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Doru",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Emil Toranescu",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 81,
+			"_copy": {
+				"name": "Werewolf",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the werewolf",
+						"with": "Emil",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 72,
+				"formula": "9d8 + 18"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Escher",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 70,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Escher",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Exethanter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 189,
+			"_copy": {
+				"name": "Lich",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the lich",
+						"with": "Exethanter",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 99,
+				"formula": "18d8 + 54"
+			},
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The lich is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). The lich has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"damageTagsLegendary": [],
+			"damageTagsSpell": [
+				"C"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ezmerelda d'Avenir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 231,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item +1 studded leather armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 19,
+			"con": 16,
+			"int": 16,
+			"wis": 11,
+			"cha": 17,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"acrobatics": "+7",
+				"arcana": "+6",
+				"deception": "+9",
+				"insight": "+3",
+				"medicine": "+3",
+				"perception": "+6",
+				"performance": "+6",
+				"sleight of hand": "+7",
+				"stealth": "+7",
+				"survival": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ezmerelda is a 7th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). Ezmerelda has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell protection from evil and good}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell knock}",
+								"{@spell mirror image}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell clairvoyance}",
+								"{@spell lightning bolt}",
+								"{@spell magic circle}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell greater invisibility}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Além de sua armadura e armas mágicas, Ezmerelda tem duas {@item potion of greater healing||potions of greater healing}, seis {@item holy water (flask)|phb|vials of holy water} e três estacas de madeira."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ezmerelda faz três ataques: dois com seu florete +1 e um com seu machado de mão +1 ou sua espada curta prateada."
+					]
+				},
+				{
+					"name": "Rapier +1",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Handaxe +1",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Silvered Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Curse (Recharges after a Long Rest)",
+					"entries": [
+						"Ezmerelda tem como alvo uma criatura que ela possa ver a até 9 metros dela. O alvo deve ter sucesso em um teste de resistência de {@dc 14} Sabedoria ou será amaldiçoado. Enquanto amaldiçoado, o alvo fica vulnerável a um tipo de dano à escolha de Ezmerelda. A maldição dura até ser encerrada com um feitiço {@spell greater restoration}, um feitiço {@spell remove curse} ou magia semelhante. Quando a maldição termina, Ezmerelda sofre {@dice 3d6} de dano psíquico."
+					]
+				},
+				{
+					"name": "Evil Eye (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Ezmerelda tem como alvo uma criatura que ela possa ver a até 3 metros dela e lança um dos seguintes feitiços no alvo (economia {@dc 14}), não exigindo componentes somáticos nem materiais para fazer isso: amizade animal, encantar pessoa ou segurar pessoa. Se o alvo obtiver sucesso no teste de resistência inicial, Ezmerelda estará {@condition blinded} até o final de seu próximo turno. Uma vez que um alvo tenha sucesso em um teste de resistência contra este efeito, ele fica imune ao poder do Olho Maligno de todos os Vistani por 24 horas."
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 handaxe|dmg",
+				"+1 rapier|dmg",
+				"silvered shortsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"CUR",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gadof Blinsky",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 118,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gertruda",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 68,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Guardian Portrait",
+			"source": "CoS",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 5,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 0
+			},
+			"str": 1,
+			"dex": 1,
+			"con": 10,
+			"int": 14,
+			"wis": 10,
+			"cha": 10,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"plus up to two other languages"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The portrait's innate spellcasting ability is Intelligence (spell save {@dc 12}). The portrait can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"3e": [
+							"{@spell counterspell}",
+							"{@spell crown of madness}",
+							"{@spell hypnotic pattern}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Constructed Nature",
+					"entries": [
+						"Um objeto animado não requer ar, comida, bebida ou sono.",
+						"A magia que anima um objeto é dissipada quando a construção chega a 0 pontos de vida. Um objeto animado reduzido a 0 pontos de vida torna-se inanimado e fica muito danificado para ser de muita utilidade ou valor para alguém."
+					]
+				},
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"O retrato é {@condition incapacitated} enquanto está na área de um {@spell antimagic field}. Se for alvo de {@spell dispel magic}, o retrato deve ser bem sucedido em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou se tornar {@condition unconscious} por 1 minuto."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a figura do retrato permaneça imóvel, o retrato é indistinguível de uma pintura normal."
+					]
+				}
+			],
+			"traitTags": [
+				"Antimagic Susceptibility",
+				"False Appearance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Helga Ruvak",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 64,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Helga",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Henrik van der Voort",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 116,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ireena Kolyana",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 44,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Ireena",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hp": {
+				"average": 14,
+				"formula": "2d8"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ismark Kolyanovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 43,
+			"_copy": {
+				"name": "Veteran",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the veteran",
+						"with": "Ismark",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Izek Strazni",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 232,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 16,
+			"int": 10,
+			"wis": 9,
+			"cha": 15,
+			"skill": {
+				"intimidation": "+8",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Brute",
+					"entries": [
+						"Uma arma corpo a corpo causa um dado extra de dano quando Izek a acerta (incluído no ataque)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Izek faz dois ataques com seu machado de batalha."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano cortante ou 15 ({@dice 2d10 + 4}) quando usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Hurl Flame",
+					"entries": [
+						"{@atk rs} {@hit 5} para acertar, alcance de 60 pés, um alvo. {@h}10 ({@damage 3d6}) dano de fogo. Se o alvo for um objeto inflamável que não esteja sendo usado ou carregado, ele pegará fogo."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"traitTags": [
+				"Brute"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kasimir Velikov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 233,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Kasimir",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Fey Ancestry",
+								"entries": [
+									"Kasimir has advantage on saving throws against being {@condition charmed}, and magic can't put the him to sleep."
+								]
+							},
+							{
+								"name": "Special Equipment",
+								"entries": [
+									"Kasimir wears a {@item ring of warmth} and carries a spellbook containing all the spells he has prepared plus the following spells: {@spell arcane lock}, {@spell comprehend languages}, {@spell hold person}, {@spell identify}, {@spell locate object}, {@spell nondetection}, {@spell polymorph}, {@spell protection from evil and good}, and {@spell wall of stone}."
+								]
+							}
+						]
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "elf",
+						"prefix": "Dusk"
+					}
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Kasimir is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). Kasimir has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell misty step}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}",
+								"{@spell fly}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell cone of cold}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kiril Stoyanovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 203,
+			"_copy": {
+				"name": "Werewolf",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the werewolf",
+						"with": "Kiril",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 90,
+				"formula": "9d8 + 18"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight of the Order",
+			"source": "CoS",
+			"page": 139,
+			"_copy": {
+				"name": "Revenant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "revenant",
+						"with": "knight"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"The knight makes two longsword attacks or two fist attacks."
+								]
+							}
+						},
+						{
+							"mode": "insertArr",
+							"index": 1,
+							"items": {
+								"name": "Longsword",
+								"entries": [
+									"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}15 ({@damage 2d10 + 4}) slashing damage. If the target is a creature against which the knight has sworn vengeance, the target takes an extra 14 ({@damage 4d6}) slashing damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"broken chainmail"
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Lady Fiona Wachter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 110,
+			"_copy": {
+				"name": "Priest",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the priest",
+						"with": "Fiona",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				10
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Fiona is a 5th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). Fiona has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell command}",
+								"{@spell purify food and drink}",
+								"{@spell sanctuary}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell augury}",
+								"{@spell gentle repose}",
+								"{@spell hold person}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell create food and water}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Lady Lydia Petrovna",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 105,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Lief Lipsiege",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 62,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ludmilla Vilisevic",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 93,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Ludmilla",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Luvash",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 121,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the captain",
+						"with": "Luvash",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mad Mary",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 44,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Madam Eva",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 88,
+				"formula": "16d8 + 16"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 8,
+			"dex": 11,
+			"con": 12,
+			"int": 17,
+			"wis": 20,
+			"cha": 18,
+			"save": {
+				"con": "+5"
+			},
+			"skill": {
+				"arcana": "+7",
+				"deception": "+8",
+				"insight": "+13",
+				"intimidation": "+8",
+				"perception": "+9",
+				"religion": "+7"
+			},
+			"passive": 19,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Elvish",
+				"Infernal"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Madam Eva is a 16th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 17}, {@hit 9} to hit with spell attacks). Madam Eva has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell bane}",
+								"{@spell command}",
+								"{@spell detect evil and good}",
+								"{@spell protection from evil and good}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell protection from poison}",
+								"{@spell spiritual weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell create food and water}",
+								"{@spell speak with dead}",
+								"{@spell spirit guardians}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell divination}",
+								"{@spell freedom of movement}",
+								"{@spell guardian of faith}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell greater restoration}",
+								"{@spell raise dead}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell find the path}",
+								"{@spell harm}",
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell fire storm}",
+								"{@spell regenerate}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell earthquake}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Curse (Recharges after a Long Rest)",
+					"entries": [
+						"Madame Eva tem como alvo uma criatura que ela possa ver a até 9 metros dela. O alvo deve ter sucesso em um teste de resistência de {@dc 17} Sabedoria ou será amaldiçoado. Enquanto amaldiçoado, o alvo é {@condition blinded} e {@condition deafened}. A maldição dura até ser encerrada com um feitiço {@spell greater restoration}, um feitiço {@spell remove curse} ou magia semelhante. Quando a maldição termina, Madame Eva sofre {@dice 5d6} de dano psíquico."
+					]
+				},
+				{
+					"name": "Evil Eye (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Madame Eva tem como alvo uma criatura que ela possa ver a até 3 metros dela e lança um dos seguintes feitiços no alvo (economize {@dc 17}), não exigindo componentes somáticos nem materiais para fazer isso: {@spell animal friendship}, {@spell charm person} ou {@spell hold person}. Se o alvo tiver sucesso no teste de resistência inicial, Madame Eva será {@condition blinded} até o final de seu próximo turno. Uma vez que um alvo tenha sucesso em um teste de resistência contra este efeito, ele fica imune ao poder do Olho Maligno de todos os Vistani por 24 horas."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"N",
+				"O",
+				"R"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"CUR",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"deafened"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Majesto",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 115,
+			"_copy": {
+				"name": "Imp",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the imp",
+						"with": "Majesto",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Marzena Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 150,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Marzena",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Flight",
+							"entries": [
+								"The mongrelfolk has leathery wings and a flying speed of 40 feet."
+							]
+						}
+					}
+				}
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Milivoj",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 97,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"str": 15,
+			"action": [
+				{
+					"name": "Shovel",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano de concussão."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mishka Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 150,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Mishka",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Spider Climb",
+							"entries": [
+								"The mongrelfolk can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Mongrelfolk",
+			"source": "CoS",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"mongrelfolk"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 12,
+			"dex": 9,
+			"con": 15,
+			"int": 9,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"deception": "+2",
+				"perception": "+2",
+				"stealth": "+3"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Extraordinary Feature",
+					"entries": [
+						"O mestiço tem uma das seguintes características extraordinárias, determinadas aleatoriamente ao rolar um {@dice d20} ou escolhidas pelo Mestre:",
+						"1–3: Anfíbio. O povo mestiço pode respirar ar e água.",
+						"4–9: Visão no escuro. O povo mestiço tem visão no escuro com alcance de 18 metros.",
+						"10: Vôo. O mestiço tem asas de couro e um deslocamento de vôo de 12 metros.",
+						"11–15: Audição e olfato apurados. O mestiço tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem de audição ou olfato.",
+						"16–17: Escalada da Aranha. O mestiço pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade.",
+						"18–19: Salto em pé. O salto em distância do mestiço é de até 6 metros e o salto em altura de até 3 metros, com ou sem corrida.",
+						"20: Duas cabeças. O mestiço tem vantagem em testes de Sabedoria ({@skill Perception}) e em testes de resistência contra {@condition blinded}, {@condition charmed}, {@condition deafened}, {@condition frightened}, {@condition stunned} ou {@condition unconscious} nocauteado."
+					]
+				},
+				{
+					"name": "Mimicry",
+					"entries": [
+						"O mestiço pode imitar qualquer som que tenha ouvido, incluindo vozes. Uma criatura que ouve os sons pode dizer que são imitações com um teste bem sucedido de {@dc 12} Sabedoria ({@skill Insight})."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O mestiço faz dois ataques: um com sua mordida e outro com sua garra ou adaga."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) cortando dano."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Mimicry"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Morgantha",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 48,
+			"_copy": {
+				"name": "Night Hag",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the hag",
+						"with": "Morgantha",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Nikolai Wachter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 110,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Nikolai",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Otto Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 147,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Otto",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Standing Leap",
+							"entries": [
+								"The mongrelfolk's long jump is up to 20 feet and its high jump up to 10 feet, with or without a running start."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Parriwimple",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 43,
+			"_copy": {
+				"name": "Gladiator",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the gladiator",
+						"with": "Parriwimple",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"int": 6,
+			"hasToken": true
+		},
+		{
+			"name": "Patrina Velikovna",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 89,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the archmage",
+						"with": "Patrina",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "elf",
+						"prefix": "Dusk"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phantom Warrior",
+			"source": "CoS",
+			"page": 235,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 16,
+			"int": 8,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Ethereal Sight",
+					"entries": [
+						"O guerreiro fantasma pode ver 18 metros no Plano Etéreo quando está no Plano Material e vice-versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"O guerreiro fantasma pode se mover através de outras criaturas e objetos como se fossem {@quickref difficult terrain||3}. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+					]
+				},
+				{
+					"name": "Spectral Armor and Shield",
+					"entries": [
+						"A CA do guerreiro fantasma é responsável por sua armadura e escudo espectral."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O guerreiro fantasma faz dois ataques com sua espada longa espectral."
+					]
+				},
+				{
+					"name": "Spectral Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano de força."
+					]
+				},
+				{
+					"name": "Etherealness",
+					"entries": [
+						"O guerreiro fantasma entra no Plano Etéreo vindo do Plano Material, ou vice-versa. É visível no Plano Material enquanto está na Fronteira Etérea, e vice-versa, mas não pode afetar ou ser afetado por nada no outro plano."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phantom Warrior (Archer)",
+			"source": "CoS",
+			"page": 142,
+			"_copy": {
+				"name": "Phantom Warrior",
+				"source": "CoS",
+				"_mod": {
+					"action": [
+						{
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Spectral Longbow",
+									"entries": [
+										"{@atk rw} {@hit 2} to hit, range 150/600 ft., one target. {@h}4 ({@damage 1d8}) force damage."
+									]
+								}
+							]
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"The phantom warrior makes two attacks with its spectral longsword or spectral longbow."
+								]
+							}
+						}
+					]
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Piccolo",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 118,
+			"_copy": {
+				"name": "Baboon",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the baboon",
+						"with": "Piccolo",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pidlwick II",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 236,
+			"size": [
+				"S"
+			],
+			"type": "construct",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 11,
+			"int": 8,
+			"wis": 13,
+			"cha": 10,
+			"skill": {
+				"performance": "+2"
+			},
+			"passive": 11,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but doesn't speak and can't read or write"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"Durante a primeira rodada de combate, Pidlwick II tem vantagem nas jogadas de ataque contra qualquer criatura que ainda não tenha jogado."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 2} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Dart",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb",
+				"dart|phb"
+			],
+			"traitTags": [
+				"Ambusher"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rahadin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d8 + 54"
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 14,
+			"dex": 22,
+			"con": 17,
+			"int": 15,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"con": "+7",
+				"wis": "+7"
+			},
+			"skill": {
+				"deception": "+8",
+				"insight": "+7",
+				"intimidation": "+12",
+				"perception": "+11",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Rahadin's innate spellcasting ability is Intelligence. He can innately cast the following spells, requiring no components:"
+					],
+					"daily": {
+						"1": [
+							"{@spell magic weapon}",
+							"{@spell nondetection}"
+						],
+						"3": [
+							"{@spell misty step}",
+							"{@spell phantom steed}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Deathly Choir",
+					"entries": [
+						"Qualquer criatura a até 3 metros de Rahadin que não esteja protegida por um feitiço {@spell mind blank} ouve em sua mente os gritos das milhares de pessoas que Rahadin matou. Como uma ação bônus, Rahadin pode forçar todas as criaturas que podem ouvir os gritos a fazer um teste de resistência de {@dc 16} Sabedoria. Cada criatura sofre 16 ({@damage 3d10}) de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Rahadin tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				},
+				{
+					"name": "Mask of the Wild",
+					"entries": [
+						"Rahadin pode tentar se esconder mesmo quando está apenas levemente obscurecido por folhagens, chuva forte, neve caindo, neblina e outros fenômenos naturais."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rahadin ataca três vezes com sua cimitarra ou duas vezes com seus dardos {@condition poisoned}."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d6 + 6}) cortando dano."
+					]
+				},
+				{
+					"name": "Poisoned Dart",
+					"entries": [
+						"{@atk rw} {@hit 10} para acertar, alcance 20/60 pés, um alvo. {@h}8 ({@damage 1d4 + 6}) de dano perfurante mais 5 ({@damage 2d4}) de dano venenoso."
+					]
+				}
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rictavio",
+			"alias": [
+				"Rudolph van Richten"
+			],
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 238,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 12,
+			"con": 13,
+			"int": 16,
+			"wis": 18,
+			"cha": 16,
+			"save": {
+				"con": "+4",
+				"wis": "+7"
+			},
+			"skill": {
+				"arcana": "+9",
+				"insight": "+7",
+				"medicine": "+7",
+				"perception": "+7",
+				"religion": "+6",
+				"sleight of hand": "+4"
+			},
+			"passive": 17,
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Elvish",
+				"Infernal"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Rictavio is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 15}, {@hit 7} to hit with spell attacks). Rictavio has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell detect evil and good}",
+								"{@spell protection from evil and good}",
+								"{@spell sanctuary}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell augury}",
+								"{@spell lesser restoration}",
+								"{@spell protection from poison}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell magic circle}",
+								"{@spell remove curse}",
+								"{@spell speak with dead}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell death ward}",
+								"{@spell freedom of movement}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell dispel evil and good}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Além da bengala-espada, Rictavio usa um {@item hat of disguise} e um {@item ring of mind shielding}, e carrega um {@item spell scroll (5th level)||spell scroll} de {@spell raise dead}."
+					]
+				},
+				{
+					"name": "Undead Slayer",
+					"entries": [
+						"Quando Rictavio atinge um morto-vivo com um ataque de arma, o morto-vivo sofre 10 ({@dice 3d6}) de dano extra do tipo da arma."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rictavio faz dois ataques com sua bengala-espada."
+					]
+				},
+				{
+					"name": "Sword Cane",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano de concussão (bengala de madeira) ou dano perfurante (espada prateada)."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"E",
+				"I"
+			],
+			"damageTags": [
+				"B"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rosavalda \"Rose\" Durst",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 217,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ghost",
+						"with": "Rose",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Horrifying Visage"
+					}
+				}
+			},
+			"size": [
+				"S"
+			],
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hp": {
+				"average": 35,
+				"formula": "10d6"
+			},
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"languageTags": [
+				"C"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sangzor",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 160,
+			"_copy": {
+				"name": "Giant Goat",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the goat",
+						"with": "Sangzor",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"hp": {
+				"average": 33,
+				"formula": "3d10 + 3"
+			},
+			"int": 6,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"cr": "1",
+			"hasToken": true
+		},
+		{
+			"name": "Savid",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 133,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Savid",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "elf",
+						"prefix": "Dusk"
+					}
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sir Godfrey Gwilym",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 139,
+			"_copy": {
+				"name": "Knight of the Order",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the revenant",
+						"with": "Sir Godfrey",
+						"flags": "i"
+					}
+				}
+			},
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Sir Godfrey is a 16th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). He has the following paladin spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell command}",
+								"{@spell divine favor}",
+								"{@spell thunderous smite}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell branding smite}",
+								"{@spell magic weapon}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell blinding smite}",
+								"{@spell dispel magic}"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell staggering smite}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"damageTagsSpell": [
+				"R",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CP"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Snow Maiden",
+			"source": "CoS",
+			"page": 159,
+			"_copy": {
+				"name": "Specter",
+				"source": "MM",
+				"_mod": {
+					"resist": {
+						"mode": "removeArr",
+						"items": "cold"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Life Drain",
+						"items": {
+							"name": "Life Drain",
+							"entries": [
+								"{@atk ms} {@hit 4} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) cold damage. The target must succeed on a {@dc 10} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"immune": [
+				"cold",
+				"necrotic",
+				"poison"
+			],
+			"damageTags": [
+				"C",
+				"O"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Stanimir",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 20,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Stanimir",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mage is a 9th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). The mage has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell friends}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell mage armor}",
+								"{@spell shield}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell misty step}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell bestow curse}",
+								"{@spell phantom steed}",
+								"{@spell vampiric touch}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate person}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Stella Wachter",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 113,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Strahd von Zarovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 240,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"shapechanger"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 144,
+				"formula": "17d8 + 68"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 20,
+			"wis": 15,
+			"cha": 18,
+			"save": {
+				"dex": "+9",
+				"wis": "+7",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+15",
+				"perception": "+12",
+				"religion": "+10",
+				"stealth": "+14"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 22,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic",
+				"Elvish",
+				"Giant",
+				"Infernal"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Strahd is a 9th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 18}, {@hit 10} to hit with spell attacks). He has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell comprehend languages}",
+								"{@spell fog cloud}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell gust of wind}",
+								"{@spell mirror image}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell fireball}",
+								"{@spell nondetection}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell greater invisibility}",
+								"{@spell polymorph}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell animate objects}",
+								"{@spell scrying}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"Se Strahd não estiver em água corrente ou luz solar, ele pode usar sua ação para se transformar em um morcego minúsculo, um lobo médio ou uma nuvem média de névoa, ou voltar à sua forma verdadeira.",
+						"Enquanto estiver na forma de morcego ou lobo, Strahd não consegue falar. Na forma de morcego, seu deslocamento de caminhada é de 1,5 metro e seu deslocamento de vôo é de 9 metros. Na forma de lobo, sua velocidade de caminhada é de 12 metros. Suas estatísticas, exceto tamanho e velocidade, permanecem inalteradas. Qualquer coisa que ele esteja vestindo se transforma com ele, mas nada que ele esteja carregando se transforma. Ele volta à sua verdadeira forma se morrer.",
+						"Enquanto estiver na forma de névoa, Strahd não pode realizar nenhuma ação, falar ou manipular objetos. Ele não tem peso, tem deslocamento de vôo de 6 metros, pode pairar e entrar no espaço de uma criatura hostil e parar ali. Além disso, se o ar puder passar por um espaço, a névoa poderá fazê-lo sem se comprimir e não poderá passar pela água. Ele tem vantagem nos testes de resistência de Força, Destreza e Constituição, e é imune a todos os danos não-mágicos, exceto o dano que sofre da luz solar."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Strahd falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Misty Escape",
+					"entries": [
+						"Quando Strahd cai para 0 pontos de vida fora de seu caixão, ele se transforma em uma nuvem de névoa (como na característica Metamorfo) em vez de cair {@condition unconscious}, desde que não esteja em água corrente ou luz solar. Se ele não conseguir se transformar, ele será destruído.",
+						"Embora ele tenha 0 pontos de vida na forma de névoa, ele não pode voltar à sua forma de vampiro e deve chegar ao seu caixão dentro de 2 horas ou será destruído. Uma vez em seu caixão, ele volta à sua forma de vampiro. Ele então será {@condition paralyzed} até recuperar pelo menos 1 ponto de vida. Após 1 hora em seu caixão com 0 pontos de vida, ele recupera 1 ponto de vida."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Strahd recupera 20 pontos de vida no início de seu turno se tiver pelo menos 1 ponto de vida e não estiver em água corrente ou luz solar. Se ele sofrer dano radiante ou dano de água benta, esta característica não funciona no início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Strahd pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Vampire Weaknesses",
+					"entries": [
+						"Strahd tem as seguintes falhas:",
+						"{@i Forbiddance.} Ele não pode entrar na residência sem o convite de um dos ocupantes.",
+						"{@i Harmed by Running Water.} Ele sofre 20 de dano ácido se terminar seu turno em água corrente.",
+						"{@i Stake to the Heart.} Se uma arma perfurante feita de madeira for cravada em seu coração enquanto ele estiver {@condition incapacitated} em seu caixão, ele será {@condition paralyzed} até que a estaca seja removida.",
+						"{@i Sunlight Hypersensitivity.} Enquanto está sob a luz do sol, Strahd sofre 20 de dano radiante no início de seu turno e tem desvantagem em jogadas de ataque e testes de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Vampire Form Only)",
+					"entries": [
+						"Strahd faz dois ataques, dos quais apenas um pode ser um ataque de mordida."
+					]
+				},
+				{
+					"name": "Unarmed Strike (Vampire or Wolf Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante, mais 14 ({@damage 4d6}) de dano necrótico. Se o alvo for uma criatura, Strahd pode agarrá-lo (escapar de {@dc 18}) em vez de causar o dano cortante."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para atingir, alcançar 1,5 m, uma criatura voluntária ou uma criatura que seja {@condition grappled} de Strahd, {@condition incapacitated} ou {@condition restrained}. {@h}7 ({@damage 1d6 + 4}) de dano perfurante mais 10 ({@damage 3d6}) de dano necrótico. O máximo de pontos de vida do alvo é reduzido em uma quantidade igual ao dano necrótico recebido, e Strahd recupera pontos de vida iguais a essa quantidade. A redução dura até o alvo terminar um descanso longo. O alvo morre se seu máximo de pontos de vida for reduzido a 0. Um humanóide morto desta forma e então enterrado no chão surge na noite seguinte como um {@creature vampire spawn} sob o controle de Strahd."
+					]
+				},
+				{
+					"name": "Charm",
+					"entries": [
+						"Strahd tem como alvo um humanóide que ele possa ver a até 9 metros dele. Se o alvo puder ver Strahd, o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 17} contra esta magia ou será {@condition charmed}. O alvo {@condition charmed} considera Strahd um amigo confiável a ser respeitado e protegido. O alvo não está sob o controle de Strahd, mas atende aos pedidos e ações de Strahd da maneira mais favorável e deixa Strahd mordê-lo.",
+						"Cada vez que Strahd ou seus companheiros fazem algo prejudicial ao alvo, ele pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso. Caso contrário, o efeito dura 24 horas ou até que Strahd seja destruído, esteja em um plano de existência diferente do alvo ou execute uma ação bônus para encerrar o efeito."
+					]
+				},
+				{
+					"name": "Children of the Night (1/Day)",
+					"entries": [
+						"Strahd chama magicamente {@dice 2d4} {@creature swarm of bats||swarms of bats} ou {@creature swarm of rats||swarms of rats}, desde que o sol ainda não tenha nascido. Enquanto estiver ao ar livre, Strahd pode chamar {@dice 3d6} {@creature wolf||wolves}. As criaturas chamadas chegam em rodadas {@dice 1d4}, agindo como aliadas de Strahd e obedecendo aos seus comandos falados. As feras permanecem por 1 hora, até que Strahd morra, ou até que ele as dispense como uma ação bônus."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Move",
+					"entries": [
+						"Strahd moves up to his speed without provoking opportunity attacks."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"Strahd makes one unarmed strike."
+					]
+				},
+				{
+					"name": "Bite (Costs 2 Actions)",
+					"entries": [
+						"Strahd makes one bite attack."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Strahd von Zarovich",
+				"source": "CoS"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration",
+				"Shapechanger",
+				"Spider Climb",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR",
+				"E",
+				"GI",
+				"I"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"N",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"HPR",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedLegendary": [
+				"charisma"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Strahd Zombie",
+			"source": "CoS",
+			"page": 241,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"average": 30,
+				"formula": "4d8 + 12"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 13,
+			"dex": 6,
+			"con": 16,
+			"int": 3,
+			"wis": 6,
+			"cha": 5,
+			"save": {
+				"wis": "+0"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Loathsome Limbs",
+					"entries": [
+						"Sempre que o zumbi sofrer pelo menos 5 danos de concussão ou corte de uma vez, role um {@dice d20} para determinar o que mais acontece com ele:",
+						"1–8: Uma perna é decepada do zumbi se ele ainda tiver pernas.",
+						"9–16: Um braço é decepado do zumbi se ele ainda tiver braços.",
+						"17–20: O zumbi é decapitado.",
+						"Se o zumbi for reduzido a 0 pontos de vida, todas as partes dele morrem. Até então, uma parte decepada atua por iniciativa do zumbi e tem ação e movimento próprios. Uma parte cortada tem CA 8. Qualquer dano sofrido é subtraído dos pontos de vida do zumbi.",
+						"Uma perna decepada é incapaz de atacar e tem deslocamento de 1,5 metro.",
+						"Um braço decepado tem deslocamento de 1,5 metro e pode realizar um ataque de garra em seu turno, com desvantagem na jogada de ataque. Cada vez que o zumbi perde um braço, ele perde um ataque de garra.",
+						"Se sua cabeça for decepada, o zumbi perde o ataque de mordida e seu corpo fica {@condition blinded}, a menos que a cabeça possa vê-lo. A cabeça decepada tem deslocamento de 0 pés. Ele pode realizar um ataque de mordida, mas apenas contra um alvo em seu espaço.",
+						"A velocidade do zumbi é reduzida pela metade se faltar uma perna. Se perder ambas as pernas, cai {@condition prone}. Se tiver os dois braços, pode rastejar. Com apenas um braço, ele ainda pode rastejar, mas sua velocidade é reduzida pela metade. Sem braços ou pernas, seu deslocamento é de 0 metro e não pode se beneficiar de bônus de deslocamento."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O zumbi faz três ataques: um com a mordida e dois com as garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) dano cortante."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Strahd's Animated Armor",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 13,
+			"con": 16,
+			"int": 9,
+			"wis": 10,
+			"cha": 9,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 13,
+			"resist": [
+				"cold",
+				"fire"
+			],
+			"immune": [
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Constructed Nature",
+					"entries": [
+						"Um objeto animado não requer ar, comida, bebida ou sono.",
+						"A magia que anima um objeto é dissipada quando a construção chega a 0 pontos de vida. Um objeto animado reduzido a 0 pontos de vida torna-se inanimado e fica muito danificado para ser de muita utilidade ou valor para alguém."
+					]
+				},
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"A armadura é {@condition incapacitated} enquanto está na área de {@spell antimagic field}. Se for alvo de {@spell dispel magic}, a armadura deve ser bem-sucedida em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Enquanto a armadura permanece imóvel, ela é indistinguível de uma armadura normal."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A armadura faz dois ataques corpo a corpo ou usa Shocking Bolt duas vezes."
+					]
+				},
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) de dano cortante mais 3 ({@damage 1d6}) de dano elétrico."
+					]
+				},
+				{
+					"name": "Shocking Bolt",
+					"entries": [
+						"{@atk rs} {@hit 4} para acertar (com vantagem na jogada de ataque se o alvo estiver usando armadura feita de metal), alcance 60 pés, um alvo. {@h}10 ({@damage 3d6}) dano elétrico."
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb"
+			],
+			"traitTags": [
+				"Antimagic Susceptibility",
+				"False Appearance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"L",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Szoldar Szoldarovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 100,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Szoldar",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "The Abbot",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 151,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the deva",
+						"with": "The Abbot",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "The Mad Mage of Mount Baratok",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 39,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the archmage",
+						"with": "The Mad Mage",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The mad mage is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). He can cast {@spell disguise self} and {@spell invisibility} at will and has the following wizard spells prepared:"
+					],
+					"will": [
+						"{@spell disguise self}",
+						"{@spell invisibility}"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}",
+								"{@spell web}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fly}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell Mordenkainen's faithful hound}",
+								"{@spell polymorph}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell Bigby's hand}",
+								"{@spell cone of cold}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell true seeing}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell Mordenkainen's magnificent mansion}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell mind blank}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell time stop}"
+							]
+						}
+					},
+					"ability": "int",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"L",
+				"O",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Thornboldt \"Thorn\" Durst",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 217,
+			"_copy": {
+				"name": "Ghost",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the ghost",
+						"with": "Thorn",
+						"flags": "i"
+					},
+					"action": {
+						"mode": "removeArr",
+						"names": "Horrifying Visage"
+					}
+				}
+			},
+			"size": [
+				"S"
+			],
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hp": {
+				"average": 35,
+				"formula": "10d6"
+			},
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"languageTags": [
+				"C"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tree Blight",
+			"source": "CoS",
+			"page": 230,
+			"otherSources": [
+				{
+					"source": "WBtW"
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 92,
+				"formula": "8d12 + 40"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 23,
+			"dex": 10,
+			"con": 20,
+			"int": 6,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"blinded",
+				"deafened"
+			],
+			"languages": [
+				"understands Common and Druidic but doesn't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Embora a praga permaneça imóvel, ela é indistinguível de uma árvore morta."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"A praga causa dano duplo a objetos e estruturas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A praga faz um ataque de Ramo e um ataque de Agarrar Raiz."
+					]
+				},
+				{
+					"name": "Branch",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 15 pés, um alvo. {@h}16 ({@damage 3d6 + 6}) dano de concussão."
+					]
+				},
+				{
+					"name": "Grasping Root",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 15 pés, uma criatura não {@condition grappled} pela praga. {@h}O alvo é {@condition grappled} (escape {@dc 15}). Até que a luta termine, o alvo sofre 9 ({@damage 1d6 + 6}) de dano de concussão no início de cada um de seus turnos. A raiz tem CA 15 e pode ser cortada causando 6 de dano cortante ou mais de uma vez. Cortar a raiz não prejudica a praga, mas acaba com a garra."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 5 ft., one creature {@condition grappled} by the blight. {@h}19 ({@damage 3d8 + 6}) piercing damage."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Urwin Martikov",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the wereraven",
+						"with": "Urwin",
+						"flags": "i"
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Vasilka",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 151,
+			"_copy": {
+				"name": "Flesh Golem",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the golem",
+						"with": "Vasilka",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Victor Vallakovich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 105,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Victor",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vilnius",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 185,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Vilnius",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vistana Assassin",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vistana Bandit",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Bandit",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vistana Bandit Captain",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Bandit Captain",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vistana Commoner",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vistana Guard",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Guard",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vistana Spy",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Spy",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vistana Thug",
+			"source": "CoS",
+			"page": 28,
+			"_copy": {
+				"name": "Thug",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Vistana",
+						"source": "CoS"
+					}
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vladimir Horngaard",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 241,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item half plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 192,
+				"formula": "16d8 + 64"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 13,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"str": "+7",
+				"con": "+7",
+				"wis": "+6",
+				"cha": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Vladimir recupera 10 pontos de vida no início do seu turno. Se ele sofrer dano de fogo ou radiante, esta característica não funciona no início do próximo turno. O corpo de Vladimir só é destruído se ele começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Quando o corpo de Vladimir é destruído, sua alma permanece. Após 24 horas, a alma habita e anima outro cadáver no mesmo plano de existência e recupera todos os seus pontos de vida. Enquanto a alma não tem corpo, um feitiço {@spell wish} pode ser usado para forçar a alma a ir para a vida após a morte e não retornar."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Vladimir empunha um {@item +2 greatsword} com um punho esculpido para se assemelhar a asas de dragão prateadas e um pomo em forma de cabeça de dragão prateado segurando uma opala preta entre os dentes."
+					]
+				},
+				{
+					"name": "Turn Immunity",
+					"entries": [
+						"Vladimir é imune a efeitos que expulsem mortos-vivos."
+					]
+				},
+				{
+					"name": "Vengeful Tracker",
+					"entries": [
+						"Vladimir conhece a distância e a direção de Strahd, mesmo que Strahd e Vladimir estejam em planos de existência diferentes. Se Strahd for destruído, Vladimir sabe."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vladimir faz dois ataques de punho ou dois ataques com sua Espada Grande +2."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano de concussão. Strahd, o alvo da vingança juramentada de Vladimir, sofre 14 ({@damage 4d6}) de dano de concussão extra. Em vez de causar dano, Vladimir pode agarrar o alvo (escapar {@dc 14}) desde que o alvo seja Grande ou menor."
+					]
+				},
+				{
+					"name": "Greatsword +2",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 4d6 + 6}) cortando dano. Contra Strahd, Vladimir causa 14 ({@damage 4d6}) de dano cortante extra com esta arma."
+					]
+				},
+				{
+					"name": "Vengeful Glare",
+					"entries": [
+						"Vladimir pode mirar em Strahd a até 9 metros, desde que consiga ver Strahd. Strahd deve fazer um teste de resistência de {@dc 15} Sabedoria. Se falhar, Strahd é {@condition paralyzed} até que Vladimir cause dano a ele ou até o final do próximo turno de Vladimir. Quando a paralisia termina, Strahd é {@condition frightened} de Vladimir por 1 minuto. Strahd pode repetir o teste de resistência no final de cada um de seus turnos, com desvantagem se puder ver Vladimir, encerrando a condição {@condition frightened} em si mesmo com sucesso."
+					]
+				}
+			],
+			"attachedItems": [
+				"+2 greatsword|dmg"
+			],
+			"traitTags": [
+				"Regeneration",
+				"Rejuvenation",
+				"Turn Immunity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Volenta Popofsky",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 93,
+			"_copy": {
+				"name": "Vampire Spawn",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Volenta",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Walking Corpse",
+			"source": "CoS",
+			"page": 165,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Violent Death",
+								"entries": [
+									"When a corpse is reduced to 0 hit points, it splits open, disgorging a {@creature swarm of poisonous snakes}. The snakes are hungry and fight until slain."
+								]
+							}
+						]
+					}
+				}
+			},
+			"speed": {
+				"walk": 20
+			},
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Yevgeni Krushkin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 100,
+			"_copy": {
+				"name": "Scout",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the scout",
+						"with": "Yevgeni",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Wereraven",
+			"source": "CoS",
+			"page": 98,
+			"_copy": {
+				"name": "Wereraven",
+				"source": "VRGR"
+			},
+			"size": [
+				"S"
+			],
+			"alignment": [
+				"L",
+				"G"
+			],
+			"hp": {
+				"average": 7,
+				"formula": "2d6"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Zuleika Toranescu",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 204,
+			"_copy": {
+				"name": "Werewolf",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the werewolf",
+						"with": "Zuleika",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zygfrek Belview",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "CoS",
+			"page": 148,
+			"_copy": {
+				"name": "Mongrelfolk",
+				"source": "CoS",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mongrelfolk",
+						"with": "Zygfrek",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "replaceArr",
+						"replace": "Extraordinary Feature",
+						"items": {
+							"name": "Darkvision",
+							"entries": [
+								"The mongrelfolk has darkvision out to a range of 60 feet."
+							]
+						}
+					}
+				}
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

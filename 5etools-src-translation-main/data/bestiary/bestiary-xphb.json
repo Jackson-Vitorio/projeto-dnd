@@ -1,0 +1,6442 @@
+{
+	"monster": [
+		{
+			"name": "Aberrant Spirit",
+			"source": "XPHB",
+			"page": 322,
+			"summonedBySpell": "Summon Aberration|XPHB",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 4"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover; Beholderkin only)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 16,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Deep Speech",
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Regeneration (Slaad Only)",
+					"entries": [
+						"O espírito recupera 5 Pontos de Vida no início do seu turno se tiver pelo menos 1 Ponto de Vida."
+					]
+				},
+				{
+					"name": "Whispering Aura (Mind Flayer Only)",
+					"entries": [
+						"No início de cada turno do espírito, o espírito emite energia psiônica se não tiver a condição {@condition Incapacitated|XPHB}. {@actSave wis} DC é igual à CD do seu feitiço, cada criatura (exceto você) a até 1,5 metro do espírito. {@actSaveFail} {@damage 2d6} Dano psíquico."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Claw (Slaad Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d10 + 3 + summonSpellLevel} Dano cortante e o alvo não pode recuperar pontos de vida até o início do próximo turno do espírito."
+					]
+				},
+				{
+					"name": "Eye Ray (Beholderkin Only)",
+					"entries": [
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 150 pés. {@h}{@damage 1d8 + 3 + summonSpellLevel} Dano psíquico."
+					]
+				},
+				{
+					"name": "Psychic Slam (Mind Flayer Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d8 + 3 + summonSpellLevel} Dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Aberrant Spirit (Beholderkin)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Claw (Slaad Only)",
+									"Psychic Slam (Mind Flayer Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Eye Ray (Beholderkin Only)",
+									"with": "Eye Ray"
+								}
+							}
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": {
+							"number": 30,
+							"condition": "(hover)"
+						},
+						"canHover": true
+					},
+					"trait": null,
+					"traitTags": null,
+					"damageTags": [
+						"Y"
+					],
+					"miscTags": [
+						"RA"
+					]
+				},
+				{
+					"name": "Aberrant Spirit (Slaad)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Whispering Aura (Mind Flayer Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Regeneration (Slaad Only)",
+									"with": "Regeneration"
+								}
+							}
+						],
+						"action": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Eye Ray (Beholderkin Only)",
+									"Psychic Slam (Mind Flayer Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Claw (Slaad Only)",
+									"with": "Claw"
+								}
+							}
+						]
+					},
+					"speed": {
+						"walk": 30
+					},
+					"traitTags": [
+						"Regeneration"
+					],
+					"damageTags": [
+						"S"
+					],
+					"miscTags": [
+						"MA"
+					]
+				},
+				{
+					"name": "Aberrant Spirit (Star Spawn)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Regeneration (Slaad Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Whispering Aura (Mind Flayer Only)",
+									"with": "Whispering Aura"
+								}
+							}
+						],
+						"action": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Eye Ray (Beholderkin Only)",
+									"Claw (Slaad Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Psychic Slam (Mind Flayer Only)",
+									"with": "Psychic Slam"
+								}
+							}
+						]
+					},
+					"speed": {
+						"walk": 30
+					},
+					"traitTags": [
+						"Regeneration"
+					],
+					"damageTags": [
+						"Y"
+					],
+					"miscTags": [
+						"RA"
+					]
+				}
+			]
+		},
+		{
+			"name": "Animated Object",
+			"source": "XPHB",
+			"page": 240,
+			"summonedBySpell": "Animate Objects|XPHB",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"T",
+				"S",
+				"M",
+				"L",
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"special": "10 (Medium or smaller), 20 (Large), 40 (Huge)"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 6,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}Dano de força igual a {@damage 1d4 + 3} + seu modificador de habilidade de lançamento de feitiços (Médio ou menor), {@damage 2d6 + 3} + seu modificador de habilidade de lançamento de feitiços (Grande), ou {@damage 2d12 + 3} + seu modificador de habilidade de lançamento de feitiços (enorme)."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Animated Object (Huge)",
+					"source": "XPHB",
+					"hp": {
+						"special": "40"
+					},
+					"action": [
+						{
+							"name": "Slam",
+							"entries": [
+								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 2d12 + 3} + your spellcasting ability modifier."
+							]
+						}
+					]
+				},
+				{
+					"name": "Animated Object (Large)",
+					"source": "XPHB",
+					"hp": {
+						"special": "20"
+					},
+					"action": [
+						{
+							"name": "Slam",
+							"entries": [
+								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 2d6 + 3} + your spellcasting ability modifier."
+							]
+						}
+					]
+				},
+				{
+					"name": "Animated Object (Medium or Smaller)",
+					"source": "XPHB",
+					"hp": {
+						"special": "10"
+					},
+					"action": [
+						{
+							"name": "Slam",
+							"entries": [
+								"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft. {@h}Force damage equal to {@damage 1d4 + 3} + your spellcasting ability modifier."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ape",
+			"source": "XPHB",
+			"page": 346,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 348
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O macaco faz dois ataques de punho."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano de concussão."
+					]
+				},
+				{
+					"name": "Rock {@recharge}",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 25/50 pés. {@h}10 ({@damage 2d6 + 3}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/ape.mp3"
+			},
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Badger",
+			"source": "XPHB",
+			"page": 346,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 349
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 5,
+				"formula": "1d4 + 3"
+			},
+			"speed": {
+				"walk": 20,
+				"burrow": 5
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 16,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"languages": [
+				"None"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/badger.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bat",
+			"source": "XPHB",
+			"page": 346,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 349
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 5,
+				"fly": 30
+			},
+			"str": 2,
+			"dex": 15,
+			"con": 8,
+			"int": 2,
+			"wis": 12,
+			"cha": 4,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 11,
+			"cr": "0",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4} para acertar, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/bat.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Beast of the Land",
+			"source": "XPHB",
+			"page": 123,
+			"summonedByClass": "Ranger|XPHB",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "13 plus your Wisdom modifier"
+				}
+			],
+			"hp": {
+				"special": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 15,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Primal Bond",
+					"entries": [
+						"Adicione seu Bônus de Proficiência a qualquer teste de habilidade ou teste de resistência que a fera fizer."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beast's Strike",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 1,5 m. {@h}{@dice 1d8 + 2} mais seu modificador de Sabedoria de dano contundente, perfurante ou cortante (sua escolha ao invocar a fera). Se a fera se moveu pelo menos 6 metros em linha reta em direção ao alvo antes do ataque, o alvo sofre {@damage 1d6} de dano extra do mesmo tipo, e o alvo tem a condição {@condition Prone|XPHB} se for uma criatura Grande ou menor."
+					]
+				}
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Beast of the Sea",
+			"source": "XPHB",
+			"page": 124,
+			"summonedByClass": "Ranger|XPHB",
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "13 plus your Wisdom modifier"
+				}
+			],
+			"hp": {
+				"special": "5 plus five times your Ranger level (the beast has a number of Hit Dice [d8s] equal to your Ranger level)"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 60
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 15,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"senses": [
+				"darkvision 90 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A fera pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Primal Bond",
+					"entries": [
+						"Adicione seu Bônus de Proficiência a qualquer teste de habilidade ou teste de resistência que a fera fizer."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beast's Strike",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@dice 1d6 + 2} mais seu modificador de Sabedoria Dano de concussão ou perfurante (sua escolha quando você invoca a besta), e o alvo tem a condição {@condition Grappled|XPHB} (CD de fuga é igual ao CD de salvamento de feitiço)."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Beast of the Sky",
+			"source": "XPHB",
+			"page": 124,
+			"summonedByClass": "Ranger|XPHB",
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "13 plus your Wisdom modifier"
+				}
+			],
+			"hp": {
+				"special": "4 plus four times your Ranger level (the beast has a number of Hit Dice [d6s] equal to your Ranger level)"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 13,
+			"int": 8,
+			"wis": 14,
+			"cha": 11,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"A fera não provoca Ataques de Oportunidade quando voa para fora do alcance do inimigo."
+					]
+				},
+				{
+					"name": "Primal Bond",
+					"entries": [
+						"Adicione seu Bônus de Proficiência a qualquer teste de habilidade ou teste de resistência que a fera fizer."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beast's Strike",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@dice 1d4 + 3} mais seu modificador de Sabedoria de dano cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bestial Spirit",
+			"source": "XPHB",
+			"page": 323,
+			"summonedBySpell": "Summon Beast|XPHB",
+			"summonedBySpellLevel": 2,
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "20 (Air only) or 30 (Land and Water only) + 5 for each spell level above 2"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": {
+					"number": 30,
+					"condition": "(Land only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(Air only)"
+				},
+				"swim": {
+					"number": 30,
+					"condition": "(Water only)"
+				}
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 16,
+			"int": 4,
+			"wis": 14,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Flyby (Air Only)",
+					"entries": [
+						"O espírito não provoca Ataques de Oportunidade quando voa para fora do alcance do inimigo."
+					]
+				},
+				{
+					"name": "Pack Tactics (Land and Water Only)",
+					"entries": [
+						"O espírito tem Vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do espírito estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				},
+				{
+					"name": "Water Breathing (Water Only)",
+					"entries": [
+						"O espírito só pode respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques Rend igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d8 + 4 + summonSpellLevel} Dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby",
+				"Pack Tactics",
+				"Water Breathing"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Bestial Spirit (Air)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Water Breathing (Water Only)",
+									"Pack Tactics (Land and Water Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Flyby (Air Only)",
+									"with": "Flyby"
+								}
+							}
+						]
+					},
+					"hp": {
+						"special": "20 + 5 for each spell level above 2"
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 60
+					},
+					"traitTags": [
+						"Flyby"
+					]
+				},
+				{
+					"name": "Bestial Spirit (Land)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Water Breathing (Water Only)",
+									"Flyby (Air Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Pack Tactics (Land and Water Only)",
+									"with": "Pack Tactics"
+								}
+							}
+						]
+					},
+					"hp": {
+						"special": "30 + 5 for each spell level above 2"
+					},
+					"speed": {
+						"walk": 30,
+						"climb": 30
+					},
+					"traitTags": [
+						"Pack Tactics"
+					]
+				},
+				{
+					"name": "Bestial Spirit (Water)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Flyby (Air Only)"
+								]
+							},
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Pack Tactics (Land and Water Only)",
+									"with": "Pack Tactics"
+								}
+							}
+						]
+					},
+					"hp": {
+						"special": "30 + 5 for each spell level above 2"
+					},
+					"speed": {
+						"walk": 30,
+						"swim": 30
+					},
+					"traitTags": [
+						"Pack Tactics",
+						"Water Breathing"
+					]
+				}
+			]
+		},
+		{
+			"name": "Black Bear",
+			"source": "XPHB",
+			"page": 346,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 349
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30,
+				"swim": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 14,
+			"int": 2,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O urso faz dois ataques Rend."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}5 ({@damage 1d6 + 2}) Dano cortante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/black-bear.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boar",
+			"source": "XPHB",
+			"page": 347,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 350
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 11,
+			"con": 14,
+			"int": 2,
+			"wis": 9,
+			"cha": 5,
+			"passive": 9,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Bloodied Fury",
+					"entries": [
+						"Enquanto Ensanguentado, o javali tem Vantagem nas jogadas de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}4 ({@damage 1d6 + 1}) Dano perfurante. Se o javali se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo sofre 3 ({@damage 1d6}) de dano perfurante extra e, se for Grande ou menor, tem a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/boar.mp3"
+			},
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brown Bear",
+			"source": "XPHB",
+			"page": 347,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 350
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d10 + 6"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 15,
+			"int": 2,
+			"wis": 13,
+			"cha": 7,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"None"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O urso faz um ataque de mordida e um ataque de garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}7 ({@damage 1d8 + 3}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano cortante e o alvo tem a condição {@condition Prone|XPHB} se for Enorme ou menor."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/brown-bear.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Camel",
+			"source": "XPHB",
+			"page": 347,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 351
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 17,
+				"formula": "2d10 + 6"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 15,
+			"dex": 8,
+			"con": 17,
+			"int": 2,
+			"wis": 11,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/camel.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cat",
+			"source": "XPHB",
+			"page": 347,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 351
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 3,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"save": {
+				"dex": "+4"
+			},
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Jumper",
+					"entries": [
+						"A distância do salto do gato é determinada usando sua Destreza e não sua Força."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Scratch",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano cortante."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/cat.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Celestial Spirit",
+			"source": "XPHB",
+			"page": 323,
+			"summonedBySpell": "Summon Celestial|XPHB",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
+			"type": "celestial",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level + 2 (Defender only)"
+				}
+			],
+			"hp": {
+				"special": "40 + 10 for each spell level above 5"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 10,
+			"wis": 14,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Celestial",
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Radiant Bow (Avenger Only)",
+					"entries": [
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance de 600 pés. {@h}{@damage 2d6 + 2 + summonSpellLevel} Dano radiante."
+					]
+				},
+				{
+					"name": "Radiant Mace (Defender Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d10 + 3 + summonSpellLevel} Dano radiante, e o espírito pode escolher a si mesmo ou outra criatura que possa ver a até 3 metros do alvo. A criatura escolhida ganha {@dice 1d10} Pontos de Vida Temporários."
+					]
+				},
+				{
+					"name": "Healing Touch (1/Day)",
+					"entries": [
+						"O espírito toca outra criatura. O alvo recupera pontos de vida iguais a {@dice 2d8 + summonSpellLevel}."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"R"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Celestial Spirit (Avenger)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Radiant Bow (Avenger Only)",
+									"with": "Radiant Bow"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Radiant Mace (Defender Only)"
+							}
+						]
+					},
+					"ac": [
+						{
+							"special": "11 + the spell's level"
+						}
+					],
+					"miscTags": [
+						"RA",
+						"RW"
+					]
+				},
+				{
+					"name": "Celestial Spirit (Defender)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Radiant Mace (Defender Only)",
+									"with": "Radiant Mace"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Radiant Bow (Avenger Only)"
+							}
+						]
+					},
+					"ac": [
+						{
+							"special": "13 + the spell's level"
+						}
+					],
+					"miscTags": [
+						"MA",
+						"MLW"
+					]
+				}
+			]
+		},
+		{
+			"name": "Constrictor Snake",
+			"source": "XPHB",
+			"page": 348,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 351
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d10 + 2"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 12,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 12,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}6 ({@damage 1d8 + 2}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@actSave str} {@dc 12}, uma criatura média ou menor que a cobra pode ver em um raio de 1,5 metro. {@actSaveFail} 7 ({@damage 3d4}) Dano de concussão e o alvo tem a condição {@condition Grappled|XPHB} (escape {@dc 12})."
+					]
+				}
+			],
+			"token": {
+				"name": "Constrictor Snake",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/constrictor-snake.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled"
+			]
+		},
+		{
+			"name": "Construct Spirit",
+			"source": "XPHB",
+			"page": 324,
+			"summonedBySpell": "Summon Construct|XPHB",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "13 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "40 + 15 for each spell level above 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 18,
+			"int": 14,
+			"wis": 11,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Heated Body (Metal Only)",
+					"entries": [
+						"Uma criatura que atinja o espírito com um ataque corpo a corpo ou que comece seu turno em uma luta com o espírito sofre {@damage 1d10} de dano de Fogo."
+					]
+				},
+				{
+					"name": "Stony Lethargy (Stone Only)",
+					"entries": [
+						"Quando uma criatura inicia seu turno a até 3 metros do espírito, o espírito pode atacá-la com energia mágica se o espírito puder vê-la. {@actSave wis} DC é igual ao DC do seu feitiço, o alvo. {@actSaveFail} Até o início do próximo turno, o alvo não pode realizar Ataques de Oportunidade e sua Velocidade é reduzida pela metade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques Slam igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d8 + 4 + summonSpellLevel} Dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Berserk Lashing (Clay Only)",
+					"entries": [
+						"{@actTrigger} The spirit takes damage from a creature. {@actResponse} The spirit makes a Slam attack against that creature if possible, or the spirit moves up to half its Speed toward that creature without provoking Opportunity Attacks."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Construct Spirit (Clay)",
+					"source": "XPHB",
+					"_mod": {
+						"reaction": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Berserk Lashing (Clay Only)",
+									"with": "Berserk Lashing"
+								}
+							}
+						]
+					},
+					"trait": null,
+					"damageTags": [
+						"B"
+					]
+				},
+				{
+					"name": "Construct Spirit (Metal)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Heated Body (Metal Only)",
+									"with": "Heated Body"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Stony Lethargy (Stone Only)"
+							}
+						]
+					},
+					"reaction": null
+				},
+				{
+					"name": "Construct Spirit (Stone)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Stony Lethargy (Stone Only)",
+									"with": "Stony Lethargy"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Heated Body (Metal Only)"
+							}
+						]
+					},
+					"reaction": null,
+					"damageTags": [
+						"B"
+					]
+				}
+			]
+		},
+		{
+			"name": "Crab",
+			"source": "XPHB",
+			"page": 348,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 351
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d4 + 1"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 6,
+			"dex": 11,
+			"con": 12,
+			"int": 1,
+			"wis": 8,
+			"cha": 2,
+			"skill": {
+				"stealth": "+2"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 9,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O caranguejo pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/crab.mp3"
+			},
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crocodile",
+			"source": "XPHB",
+			"page": 348,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 352
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d10 + 2"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 30
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+2"
+			},
+			"passive": 10,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"O crocodilo pode prender a respiração por 1 hora."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}6 ({@damage 1d8 + 2}) Dano perfurante. Se o alvo for Médio ou menor, ele terá a condição {@condition Grappled|XPHB} (escape {@dc 12}). Enquanto {@condition Grappled|XPHB}, o alvo tem a condição {@condition Restrained|XPHB}."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/crocodile.mp3"
+			},
+			"traitTags": [
+				"Hold Breath"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dire Wolf",
+			"source": "XPHB",
+			"page": 348,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 352
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d10 + 6"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 15,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"None"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O lobo tem Vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}8 ({@damage 1d10 + 3}) Dano perfurante e o alvo tem a condição {@condition Prone|XPHB} se for Enorme ou menor."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/dire-wolf.mp3"
+			},
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Spirit",
+			"source": "XPHB",
+			"page": 325,
+			"summonedBySpell": "Summon Dragon|XPHB",
+			"summonedBySpellLevel": 5,
+			"size": [
+				"L"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "14 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "50 + 10 for each spell level above 5"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 14,
+			"con": 17,
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Draconic",
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Shared Resistances",
+					"entries": [
+						"Ao invocar o espírito, escolha uma de suas Resistências. Você tem Resistência ao tipo de dano escolhido até o feitiço terminar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques Rend igual à metade do nível do feitiço (arredondado para baixo) e usa Sopro."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 3 metros. {@h}{@damage 1d6 + 4 + summonSpellLevel} Dano perfurante."
+					]
+				},
+				{
+					"name": "Breath Weapon",
+					"entries": [
+						"{@actSave dex} DC é igual à CD do seu feitiço, cada criatura em um Cone de 9 metros. {@actSaveFail} {@damage 2d6} de dano de um tipo ao qual este espírito tem Resistência (sua escolha ao lançar o feitiço). {@actSaveSuccess} Metade do dano."
+					]
+				}
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draft Horse",
+			"source": "XPHB",
+			"page": 349,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 352
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 15,
+				"formula": "2d10 + 4"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 15,
+			"int": 2,
+			"wis": 11,
+			"cha": 7,
+			"passive": 10,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 5 pés. {@h}6 ({@damage 1d4 + 4}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/draft-horse.mp3"
+			},
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Elemental Spirit",
+			"source": "XPHB",
+			"page": 325,
+			"summonedBySpell": "Summon Elemental|XPHB",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "50 + 10 for each spell level above 4"
+			},
+			"speed": {
+				"walk": 40,
+				"burrow": {
+					"number": 40,
+					"condition": "(Earth only)"
+				},
+				"fly": {
+					"number": 40,
+					"condition": "(hover; Air only)"
+				},
+				"swim": {
+					"number": 40,
+					"condition": "(Water only)"
+				},
+				"canHover": true
+			},
+			"str": 18,
+			"dex": 15,
+			"con": 17,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"lightning",
+						"thunder"
+					],
+					"cond": true,
+					"note": "(Air only)"
+				},
+				{
+					"resist": [
+						"piercing",
+						"slashing"
+					],
+					"cond": true,
+					"note": "(Earth only)"
+				},
+				{
+					"resist": [
+						"acid"
+					],
+					"cond": true,
+					"note": "(Water only)"
+				}
+			],
+			"immune": [
+				"poison",
+				{
+					"immune": [
+						"fire"
+					],
+					"cond": true,
+					"note": "(Fire only)"
+				}
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"Primordial",
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Amorphous Form (Air, Fire, and Water Only)",
+					"entries": [
+						"O espírito pode se mover através de um espaço tão estreito quanto 1 polegada de largura sem contar como Terreno Difícil."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques Slam igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@dice 1d10 + 4 + summonSpellLevel} Dano de concussão (apenas Terra), Frio (apenas Água), Raio (apenas Ar) ou Fogo (apenas Fogo)."
+					]
+				}
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Elemental Spirit (Air)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous Form (Air, Fire, and Water Only)",
+									"with": "Amorphous Form"
+								}
+							}
+						],
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Slam",
+							"items": {
+								"name": "Slam",
+								"entries": [
+									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+								]
+							}
+						}
+					},
+					"speed": {
+						"walk": 40,
+						"fly": {
+							"number": 40,
+							"condition": "(hover)"
+						},
+						"canHover": true
+					},
+					"resist": [
+						"lightning",
+						"thunder"
+					],
+					"immune": [
+						"poison"
+					],
+					"damageTags": [
+						"B"
+					]
+				},
+				{
+					"name": "Elemental Spirit (Earth)",
+					"source": "XPHB",
+					"_mod": {
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Slam",
+							"items": {
+								"name": "Slam",
+								"entries": [
+									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+								]
+							}
+						}
+					},
+					"speed": {
+						"walk": 40,
+						"burrow": 40
+					},
+					"resist": [
+						"piercing",
+						"slashing"
+					],
+					"immune": [
+						"poison"
+					],
+					"trait": null,
+					"damageTags": [
+						"B"
+					]
+				},
+				{
+					"name": "Elemental Spirit (Fire)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous Form (Air, Fire, and Water Only)",
+									"with": "Amorphous Form"
+								}
+							}
+						],
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Slam",
+							"items": {
+								"name": "Slam",
+								"entries": [
+									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Fire damage."
+								]
+							}
+						}
+					},
+					"speed": {
+						"walk": 40
+					},
+					"immune": [
+						"poison",
+						"fire"
+					],
+					"damageTags": [
+						"F"
+					]
+				},
+				{
+					"name": "Elemental Spirit (Water)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Amorphous Form (Air, Fire, and Water Only)",
+									"with": "Amorphous Form"
+								}
+							}
+						],
+						"action": {
+							"mode": "replaceArr",
+							"replace": "Slam",
+							"items": {
+								"name": "Slam",
+								"entries": [
+									"{@atk m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, reach 5 ft.. {@h}{@damage 1d10 + 4 + summonSpellLevel} Bludgeoning damage."
+								]
+							}
+						}
+					},
+					"speed": {
+						"walk": 40,
+						"swim": 40
+					},
+					"resist": [
+						"acid"
+					],
+					"immune": [
+						"poison"
+					],
+					"damageTags": [
+						"B"
+					]
+				}
+			]
+		},
+		{
+			"name": "Elephant",
+			"source": "XPHB",
+			"page": 349,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 353
+				}
+			],
+			"size": [
+				"H"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 76,
+				"formula": "8d12 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 22,
+			"dex": 9,
+			"con": 17,
+			"int": 3,
+			"wis": 11,
+			"cha": 6,
+			"passive": 10,
+			"languages": [
+				"None"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O elefante faz dois ataques Gore."
+					]
+				},
+				{
+					"name": "Gore",
+					"entries": [
+						"{@atkr m} {@hit 8}, alcance 5 pés. {@h}15 ({@damage 2d8 + 6}) Dano perfurante. Se o elefante se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo também terá a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Trample",
+					"entries": [
+						"{@actSave dex} {@dc 16}, one creature within 5 feet that has the {@condition Prone|XPHB} condition. {@actSaveFail} 17 ({@damage 2d10 + 6}) Bludgeoning damage. {@actSaveSuccess} Half damage."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/elephant.mp3"
+			},
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Elk",
+			"source": "XPHB",
+			"page": 349,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 353
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d10"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 11,
+			"int": 2,
+			"wis": 10,
+			"cha": 6,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano de concussão. Se o alce se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo sofre 3 ({@damage 1d6}) de dano de concussão extra e, se for Enorme ou menor, tem a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"token": {
+				"name": "Elk",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/elk.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Fey Spirit",
+			"source": "XPHB",
+			"page": 326,
+			"summonedBySpell": "Summon Fey|XPHB",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "12 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "30 + 10 for each spell level above 3"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 14,
+			"wis": 11,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"Sylvan",
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques com Lâmina Feérica igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Fey Blade",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 2d6 + 3 + summonSpellLevel} Dano de força."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Fey Step",
+					"entries": [
+						"The spirit magically teleports up to 30 feet to an unoccupied space it can see. Then one of the following effects occurs, based on the spirit's chosen mood:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"name": "Fuming",
+									"type": "item",
+									"entries": [
+										"The spirit has Advantage on the next attack roll it makes before the end of this turn."
+									]
+								},
+								{
+									"name": "Mirthful",
+									"type": "item",
+									"entries": [
+										"{@actSave wis} DC equals your spell save DC, one creature the spirit can see within 10 feet of itself. {@actSaveFail} The target is {@condition Charmed|XPHB} by you and the spirit for 1 minute or until the target takes any damage."
+									]
+								},
+								{
+									"name": "Tricksy",
+									"type": "item",
+									"entries": [
+										"The spirit fills a 10-foot Cube within 5 feet of it with magical Darkness, which lasts until the end of its next turn."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Fey Spirit (Fuming)",
+					"source": "XPHB",
+					"bonus": [
+						{
+							"name": "Fey Step",
+							"entries": [
+								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. The spirit has Advantage on the next attack roll it makes before the end of this turn."
+							]
+						}
+					]
+				},
+				{
+					"name": "Fey Spirit (Mirthful)",
+					"source": "XPHB",
+					"bonus": [
+						{
+							"name": "Fey Step",
+							"entries": [
+								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. {@actSave wis} DC equals your spell save DC, one creature the spirit can see within 10 feet of itself. {@actSaveFail} The target is {@condition Charmed|XPHB} by you and the spirit for 1 minute or until the target takes any damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Fey Spirit (Tricksy)",
+					"source": "XPHB",
+					"bonus": [
+						{
+							"name": "Fey Step",
+							"entries": [
+								"The spirit magically teleports up to 30 feet to an unoccupied space it can see. The spirit fills a 10-foot Cube within 5 feet of it with magical Darkness, which lasts until the end of its next turn."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fiendish Spirit",
+			"source": "XPHB",
+			"page": 327,
+			"summonedBySpell": "Summon Fiend|XPHB",
+			"summonedBySpellLevel": 6,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "12 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "50 (Demon only) or 40 (Devil only) or 60 (Yugoloth only) + 15 for each spell level above 6"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": {
+					"number": 40,
+					"condition": "(Demon only)"
+				},
+				"fly": {
+					"number": 60,
+					"condition": "(Devil only)"
+				}
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Infernal",
+				"Telepathy 60 ft."
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Death Throes (Demon Only)",
+					"entries": [
+						"Quando o espírito cai para 0 Pontos de Vida ou o feitiço termina, o espírito explode. {@actSave dex} DC é igual à CD do seu feitiço, cada criatura em uma Emanação de 3 metros originada do espírito. {@actSaveFail} {@dice 2d10} mais o nível de dano de Fogo deste feitiço. {@actSaveSuccess} Metade do dano."
+					]
+				},
+				{
+					"name": "Devil's Sight (Devil Only)",
+					"entries": [
+						"A Escuridão Mágica não impede a Visão no Escuro do espírito."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O espírito tem Vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Bite (Demon Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d12 + 3 + summonSpellLevel} Dano necrótico."
+					]
+				},
+				{
+					"name": "Claws (Yugoloth Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d8 + 3 + summonSpellLevel} Dano cortante. Imediatamente após o ataque acertar ou errar, o espírito pode se teletransportar até 9 metros para um espaço desocupado que possa ver."
+					]
+				},
+				{
+					"name": "Fiery Strike (Devil Only)",
+					"entries": [
+						"{@atkr m,r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés ou alcance 150 pés. {@h}{@damage 2d6 + 3 + summonSpellLevel} Dano de fogo."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst",
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"F",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Fiendish Spirit (Demon)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Death Throes (Demon Only)",
+									"with": "Death Throes"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Devil's Sight (Devil Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Bite (Demon Only)",
+									"with": "Bite"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Claws (Yugoloth Only)",
+									"Fiery Strike (Devil Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "50 + 15 for each spell level above 6"
+					},
+					"speed": {
+						"walk": 40,
+						"climb": 40
+					},
+					"traitTags": [
+						"Death Burst",
+						"Magic Resistance"
+					],
+					"damageTags": [
+						"F"
+					]
+				},
+				{
+					"name": "Fiendish Spirit (Devil)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Devil's Sight (Devil Only)",
+									"with": "Devil's Sight"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Death Throes (Demon Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Fiery Strike (Devil Only)",
+									"with": "Fiery Strike"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Bite (Demon Only)",
+									"Claws (Yugoloth Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "40 + 15 for each spell level above 6"
+					},
+					"speed": {
+						"walk": 40,
+						"fly": 60
+					},
+					"traitTags": [
+						"Devil's Sight",
+						"Magic Resistance"
+					],
+					"damageTags": [
+						"N"
+					]
+				},
+				{
+					"name": "Fiendish Spirit (Yugoloth)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Death Throes (Demon Only)",
+									"Devil's Sight (Devil Only)"
+								]
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Claws (Yugoloth Only)",
+									"with": "Claws"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Bite (Demon Only)",
+									"Fiery Strike (Devil Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "60 + 15 for each spell level above 6"
+					},
+					"speed": {
+						"walk": 40
+					},
+					"traitTags": [
+						"Magic Resistance"
+					],
+					"damageTags": [
+						"F"
+					]
+				}
+			]
+		},
+		{
+			"name": "Frog",
+			"source": "XPHB",
+			"page": 349,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 354
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 1,
+			"dex": 13,
+			"con": 8,
+			"int": 1,
+			"wis": 8,
+			"cha": 3,
+			"skill": {
+				"perception": "+1",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 11,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O sapo pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Standing Leap",
+					"entries": [
+						"O salto em distância do sapo é de até 3 metros e o salto em altura é de até 1,5 metro com ou sem corrida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/frog.mp3"
+			},
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Badger",
+			"source": "XPHB",
+			"page": 350,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 354
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 15,
+				"formula": "2d8 + 6"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 10
+			},
+			"str": 13,
+			"dex": 10,
+			"con": 17,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"poison"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}6 ({@damage 2d4 + 1}) Dano perfurante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giant-badger.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Crab",
+			"source": "XPHB",
+			"page": 350,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 356
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 13,
+			"dex": 13,
+			"con": 11,
+			"int": 1,
+			"wis": 9,
+			"cha": 3,
+			"skill": {
+				"stealth": "+3"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 9,
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O caranguejo pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}4 ({@damage 1d6 + 1}) Dano de concussão. Se o alvo for Médio ou menor, ele possui a condição {@condition Grappled|XPHB} (escape {@dc 11}). O caranguejo tem duas garras, cada uma das quais pode agarrar um alvo."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giant-crab.mp3"
+			},
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Goat",
+			"source": "XPHB",
+			"page": 350,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 357
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d10 + 3"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 13,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano de concussão. Se a cabra se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo sofre 5 ({@damage 2d4}) de dano de concussão extra e, se for Enorme ou menor, terá a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"token": {
+				"name": "Giant Goat",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giant-goat.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			]
+		},
+		{
+			"name": "Giant Insect",
+			"source": "XPHB",
+			"page": 279,
+			"summonedBySpell": "Giant Insect|XPHB",
+			"summonedBySpellLevel": 4,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "30 + 10 for each spell level above 4"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(Wasp only)"
+				}
+			},
+			"str": 17,
+			"dex": 13,
+			"con": 15,
+			"int": 4,
+			"wis": 14,
+			"cha": 3,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O inseto pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O inseto realiza um número de ataques igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Poison Jab",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 10 pés. {@h}{@dice 1d6 + 3 + summonSpellLevel} Dano perfurante mais {@damage 1d4} Dano venenoso."
+					]
+				},
+				{
+					"name": "Web Bolt (Spider Only)",
+					"entries": [
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 60 pés. {@h}{@dice 1d10 + 3 + summonSpellLevel} Dano de concussão e a velocidade do alvo é reduzida a 0 até o início do próximo turno do inseto."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Venomous Spew (Centipede Only)",
+					"entries": [
+						"{@actSave con} Your spell save DC, one creature the insect can see within 10 feet. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the start of the insect's next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA",
+				"RA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Giant Insect (Centipede)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Web Bolt (Spider Only)"
+								]
+							}
+						]
+					},
+					"speed": {
+						"walk": 40,
+						"climb": 40
+					}
+				},
+				{
+					"name": "Giant Insect (Spider)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Web Bolt (Spider Only)",
+									"with": "Web Bolt"
+								}
+							}
+						]
+					},
+					"speed": {
+						"walk": 40,
+						"climb": 40
+					},
+					"bonus": null
+				},
+				{
+					"name": "Giant Insect (Wasp)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "removeArr",
+								"names": [
+									"Web Bolt (Spider Only)"
+								]
+							}
+						]
+					},
+					"speed": {
+						"walk": 40,
+						"climb": 40,
+						"fly": 40
+					},
+					"bonus": null
+				}
+			]
+		},
+		{
+			"name": "Giant Seahorse",
+			"source": "XPHB",
+			"page": 350,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 359
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 16,
+				"formula": "3d10"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 40
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 11,
+			"int": 2,
+			"wis": 12,
+			"cha": 5,
+			"passive": 11,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O cavalo-marinho só consegue respirar debaixo d’água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 1,5 m. {@h}9 ({@damage 2d6 + 2}) Dano de concussão, ou o cavalo-marinho causa 11 ({@damage 2d8 + 2}) Dano de concussão se ele se mover pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Bubble Dash",
+					"entries": [
+						"While underwater, the seahorse moves up to half its Swim Speed without provoking Opportunity Attacks."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Spider",
+			"source": "XPHB",
+			"page": 351,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 359
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d10 + 4"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 12,
+			"int": 2,
+			"wis": 11,
+			"cha": 4,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"None"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"A aranha pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"A aranha ignora as restrições de movimento causadas pelas teias e conhece a localização de qualquer outra criatura em contato com a mesma teia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} +5, alcance 5 pés. {@h}7 ({@damage 1d8 + 3}) Dano perfurante mais 7 ({@damage 2d6}) Dano venenoso."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@actSave dex} {@dc 13}, uma criatura que a aranha pode ver em um raio de 18 metros. {@actSaveFail} O alvo tem a condição {@condition Restrained|XPHB} até que a teia seja destruída (CA 10; HP 5; Vulnerabilidade a dano de Fogo; Imunidade a Veneno e dano Psíquico)."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giant-spider.mp3"
+			},
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Weasel",
+			"source": "XPHB",
+			"page": 351,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 361
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 11,
+			"dex": 17,
+			"con": 10,
+			"int": 4,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"acrobatics": "+5",
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano perfurante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/giant-weasel.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goat",
+			"source": "XPHB",
+			"page": 351,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 362
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 4,
+				"formula": "1d8"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 30
+			},
+			"str": 11,
+			"dex": 10,
+			"con": 11,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"cr": "0",
+			"action": [
+				{
+					"name": "Ram",
+					"entries": [
+						"{@atkr m} {@hit 2} para acertar, alcance 1,5 m. {@h}1 Dano de concussão, ou a cabra causa 2 ({@damage 1d4}) de dano de concussão se ela se mover pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do acerto."
+					]
+				}
+			],
+			"token": {
+				"name": "Goat",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/goat.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hawk",
+			"source": "XPHB",
+			"page": 352,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 362
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 60
+			},
+			"str": 5,
+			"dex": 16,
+			"con": 8,
+			"int": 2,
+			"wis": 14,
+			"cha": 6,
+			"skill": {
+				"perception": "+6"
+			},
+			"passive": 16,
+			"cr": "0",
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}1 Dano cortante."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/hawk.mp3"
+			},
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Imp",
+			"source": "XPHB",
+			"page": 352,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 177
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40
+			},
+			"str": 6,
+			"dex": 17,
+			"con": 13,
+			"int": 11,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"deception": "+4",
+				"insight": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Invisibility",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The imp casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+					],
+					"will": [
+						"{@spell Invisibility|XPHB}"
+					],
+					"ability": "cha",
+					"displayAs": "action",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Devil's Sight",
+					"entries": [
+						"A Escuridão Mágica não impede a Visão no Escuro do diabrete."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O diabrete tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Sting",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano perfurante mais 7 ({@damage 2d6}) Dano venenoso."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"O diabinho muda para uma forma que se assemelha a um rato (Velocidade 6 metros), um corvo (6 metros, Voar 18 metros) ou uma aranha (6 metros, Escalar 6 metros), ou retorna à sua forma verdadeira. Suas estatísticas são as mesmas em cada forma, exceto pela Velocidade. Qualquer equipamento que esteja vestindo ou carregando não é transformado. O diabrete volta à sua forma verdadeira se morrer."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/imp.mp3"
+			},
+			"traitTags": [
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lion",
+			"source": "XPHB",
+			"page": 352,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 364
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d10"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 11,
+			"int": 3,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O leão tem Vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do leão estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				},
+				{
+					"name": "Running Leap",
+					"entries": [
+						"Com uma corrida de 3 metros, o leão pode saltar em distância até 7,5 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O leão faz dois ataques Rend. Ele pode substituir um desses ataques pelo uso de Roar."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}7 ({@damage 1d8 + 3}) Dano cortante."
+					]
+				},
+				{
+					"name": "Roar",
+					"entries": [
+						"{@actSave wis} {@dc 11}, uma criatura em um raio de 4,5 metros. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno do leão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/lion.mp3"
+			},
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lizard",
+			"source": "XPHB",
+			"page": 353,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 364
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 2,
+			"dex": 11,
+			"con": 10,
+			"int": 1,
+			"wis": 8,
+			"cha": 3,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 9,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O lagarto pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"token": {
+				"name": "Lizard",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/lizard.mp3"
+			},
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			]
+		},
+		{
+			"name": "Mastiff",
+			"source": "XPHB",
+			"page": 353,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 365
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 5,
+				"formula": "1d8 + 1"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 14,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}4 ({@damage 1d6 + 1}) Dano perfurante e o alvo tem a condição {@condition Prone|XPHB} se for Grande ou menor."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/mastiff.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mule",
+			"source": "XPHB",
+			"page": 353,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 365
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"passive": 10,
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Beast of Burden",
+					"entries": [
+						"A mula conta como um tamanho maior para determinar sua capacidade de carga."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/mule.mp3"
+			},
+			"traitTags": [
+				"Beast of Burden"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Octopus",
+			"source": "XPHB",
+			"page": 353,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 365
+				}
+			],
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 3,
+				"formula": "1d6"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 30
+			},
+			"str": 4,
+			"dex": 15,
+			"con": 11,
+			"int": 3,
+			"wis": 10,
+			"cha": 4,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"None"
+			],
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Compression",
+					"entries": [
+						"O polvo pode se mover através de um espaço tão estreito quanto 1 polegada sem gastar movimento extra para isso."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O polvo só consegue respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Ink Cloud (1/Day)",
+					"entries": [
+						"{@actTrigger} A creature ends its turn within 5 feet of the octopus while underwater. {@actResponse} The octopus releases ink that fills a 5-foot Cube centered on itself, and the octopus moves up to its Swim Speed. The Cube is Heavily Obscured for 1 minute or until a strong current or similar effect disperses the ink."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/octopus.mp3"
+			},
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Tentacles"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Otherworldly Steed",
+			"source": "XPHB",
+			"page": 273,
+			"summonedBySpell": "Find Steed|XPHB",
+			"summonedBySpellLevel": 2,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": {
+					"choose": [
+						"celestial",
+						"fey",
+						"fiend"
+					]
+				}
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "10 + 1 per spell level"
+				}
+			],
+			"hp": {
+				"special": "5 + 10 per spell level (the steed has a number of Hit Dice [d10s] equal to the spell's level)"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": {
+					"number": 60,
+					"condition": "(requires level 4+ spell)"
+				}
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 14,
+			"int": 6,
+			"wis": 12,
+			"cha": 8,
+			"passive": 11,
+			"languages": [
+				"telepathy 1 mile (works only with you)"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Life Bond",
+					"entries": [
+						"Quando você recupera Pontos de Vida de uma magia de nível 1+, o corcel recupera o mesmo número de Pontos de Vida se você estiver a até 1,5 metro dele."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Otherworldly Slam",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@dice 1d8 + summonSpellLevel} de dano Radiante (Celestial), Psíquico (Fey) ou Necrótico (Demônio)."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Fell Glare (Fiend Only; Recharges after a Long Rest)",
+					"entries": [
+						"{@actSave wis} DC equals your spell save DC, one creature within 60 feet the steed can see. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the end of your next turn."
+					]
+				},
+				{
+					"name": "Fey Step (Fey Only; Recharges after a Long Rest)",
+					"entries": [
+						"The steed teleports, along with its rider, to an unoccupied space of your choice up to 60 feet away from itself."
+					]
+				},
+				{
+					"name": "Healing Touch (Celestial Only; Recharges after a Long Rest)",
+					"entries": [
+						"One creature within 5 feet of the steed regains a number of Hit Points equal to {@dice 2d8 + summonSpellLevel}."
+					]
+				}
+			],
+			"languageTags": [
+				"TP"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Owl",
+			"source": "XPHB",
+			"page": 354,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 366
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 5,
+				"fly": 60
+			},
+			"str": 3,
+			"dex": 13,
+			"con": 8,
+			"int": 2,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"A coruja não provoca Ataques de Oportunidade quando voa para fora do alcance do inimigo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Talons",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}1 Dano cortante."
+					]
+				}
+			],
+			"familiar": true,
+			"token": {
+				"name": "Owl",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/owl.mp3"
+			},
+			"traitTags": [
+				"Flyby"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Panther",
+			"source": "XPHB",
+			"page": 354,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 366
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 50,
+				"climb": 40
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A pantera faz um ataque Pounce e usa Prowl."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano cortante, ou a pantera causa 7 ({@damage 2d4 + 2}) Dano cortante se tivesse Vantagem na jogada de ataque."
+					]
+				},
+				{
+					"name": "Prowl",
+					"entries": [
+						"A pantera se move até metade de sua Velocidade sem provocar Ataques de Oportunidade. Ao final deste movimento, a pantera pode realizar a ação Esconder-se."
+					]
+				}
+			],
+			"token": {
+				"name": "Panther",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/panther.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			]
+		},
+		{
+			"name": "Pony",
+			"source": "XPHB",
+			"page": 354,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 367
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 13,
+			"int": 2,
+			"wis": 11,
+			"cha": 7,
+			"passive": 10,
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/pony.mp3"
+			},
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Pseudodragon",
+			"source": "XPHB",
+			"page": 354,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 249
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "dragon",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d4 + 3"
+			},
+			"speed": {
+				"walk": 15,
+				"fly": 60
+			},
+			"str": 6,
+			"dex": 15,
+			"con": 13,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"understands Common and Draconic but can't speak"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O pseudodragão tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O pseudodragão faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Sting",
+					"entries": [
+						"{@actSave con} {@dc 12}, uma criatura que o pseudodragão pode ver em um raio de 1,5 metro. {@actSaveFail} 5 ({@damage 2d4}) Dano de veneno e o alvo tem a condição {@condition Poisoned|XPHB} por 1 hora. Falha por 5 ou mais: O alvo {@condition Poisoned|XPHB} também tem a condição {@condition Unconscious|XPHB} até sofrer dano ou outra criatura realizar uma ação para acordá-lo."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/pseudodragon.mp3"
+			},
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DR"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"unconscious"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Quasit",
+			"source": "XPHB",
+			"page": 355,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 252
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 25,
+				"formula": "10d4"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 5,
+			"dex": 17,
+			"con": 10,
+			"int": 7,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Invisibility",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The quasit casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+					],
+					"will": [
+						"{@spell Invisibility|XPHB}"
+					],
+					"ability": "cha",
+					"displayAs": "action",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O quasit tem Vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano cortante, e o alvo tem a condição {@condition Poisoned|XPHB} até o início do próximo turno do quasit."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"O quasit muda para uma forma que se assemelha a um morcego (Velocidade 10 pés, Voar 40 pés), uma centopéia (40 pés, Escalar 40 pés) ou um sapo (40 pés, Nadar 40 pés), ou retorna à sua forma verdadeira. Suas estatísticas são as mesmas em cada forma, exceto pela Velocidade. Qualquer equipamento que esteja vestindo ou carregando não é transformado. O quasit reverte à sua forma verdadeira se morrer."
+					]
+				},
+				{
+					"name": "Scare (1/Day)",
+					"entries": [
+						"{@actSave wis} {@dc 10}, uma criatura em um raio de 6 metros. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB}. No final de cada um de seus turnos, o alvo repete o salvamento, encerrando o efeito sobre si mesmo em caso de sucesso. Após 1 minuto, ele é bem-sucedido automaticamente"
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/quasit.mp3"
+			},
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rat",
+			"source": "XPHB",
+			"page": 355,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 367
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 2,
+			"dex": 11,
+			"con": 9,
+			"int": 2,
+			"wis": 10,
+			"cha": 4,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 12,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Agile",
+					"entries": [
+						"O rato não provoca Ataques de Oportunidade quando sai do alcance do inimigo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"token": {
+				"name": "Rat",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/rat.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Raven",
+			"source": "XPHB",
+			"page": 355,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 368
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 2,
+				"formula": "1d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 50
+			},
+			"str": 2,
+			"dex": 14,
+			"con": 10,
+			"int": 5,
+			"wis": 13,
+			"cha": 6,
+			"skill": {
+				"perception": "+3"
+			},
+			"passive": 13,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Mimicry",
+					"entries": [
+						"O corvo pode imitar sons simples que ouviu, como um sussurro ou um chiado. Um ouvinte pode discernir que os sons são imitações com um teste bem-sucedido de {@dc 10} Sabedoria ({@skill Insight|XPHB})."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"token": {
+				"name": "Raven",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/raven.mp3"
+			},
+			"traitTags": [
+				"Mimicry"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			]
+		},
+		{
+			"name": "Reef Shark",
+			"source": "XPHB",
+			"page": 356,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 368
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 5,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 13,
+			"int": 1,
+			"wis": 10,
+			"cha": 4,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"None"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O tubarão tem Vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do tubarão estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				},
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"O tubarão só consegue respirar debaixo d'água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}7 ({@damage 2d4 + 2}) Dano perfurante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/reef-shark.mp3"
+			},
+			"traitTags": [
+				"Pack Tactics",
+				"Water Breathing"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Riding Horse",
+			"source": "XPHB",
+			"page": 356,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 368
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d10 + 2"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 12,
+			"int": 2,
+			"wis": 11,
+			"cha": 7,
+			"passive": 10,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}7 ({@damage 1d8 + 3}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/riding-horse.mp3"
+			},
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scorpion",
+			"source": "XPHB",
+			"page": 356,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 369
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 10
+			},
+			"str": 2,
+			"dex": 11,
+			"con": 8,
+			"int": 1,
+			"wis": 8,
+			"cha": 2,
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"None"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Sting",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano perfurante mais 3 ({@damage 1d6}) Dano venenoso."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/scorpion.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skeleton",
+			"source": "XPHB",
+			"page": 356,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 282
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 13,
+				"formula": "2d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 80/320 pés. {@h}6 ({@damage 1d6 + 3}) Dano perfurante."
+					]
+				}
+			],
+			"token": {
+				"name": "Skeleton",
+				"source": "MM"
+			},
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/skeleton.mp3"
+			},
+			"attachedItems": [
+				"shortbow|xphb",
+				"shortsword|xphb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RA",
+				"RNG"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Slaad Tadpole",
+			"source": "XPHB",
+			"page": 357,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 284
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 7,
+				"formula": "3d4"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 10
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 10,
+			"int": 3,
+			"wis": 5,
+			"cha": 3,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 7,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"languages": [
+				"understands Slaad but can't speak"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O slaad tem Vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}5 ({@damage 1d6 + 2}) Dano perfurante."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/slaad-tadpole.mp3"
+			},
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"OTH"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sphinx of Wonder",
+			"source": "XPHB",
+			"page": 357,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 291
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 24,
+				"formula": "7d4 + 7"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40
+			},
+			"str": 6,
+			"dex": 17,
+			"con": 13,
+			"int": 15,
+			"wis": 12,
+			"cha": 11,
+			"skill": {
+				"arcana": "+4",
+				"religion": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic",
+				"psychic",
+				"radiant"
+			],
+			"languages": [
+				"Celestial",
+				"Common"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"A esfinge tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano cortante mais 7 ({@damage 2d6}) Dano radiante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Burst of Ingenuity (2/Day)",
+					"entries": [
+						"{@actTrigger} The sphinx or another creature within 30 feet makes an ability check or a saving throw. {@actResponse} The sphinx adds 2 to the roll."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CE"
+			],
+			"damageTags": [
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spider",
+			"source": "XPHB",
+			"page": 357,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 369
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 2,
+			"dex": 14,
+			"con": 8,
+			"int": 1,
+			"wis": 10,
+			"cha": 2,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"A aranha pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"A aranha ignora as restrições de movimento causadas pelas teias e conhece a localização de qualquer outra criatura em contato com a mesma teia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano perfurante mais 2 ({@damage 1d4}) Dano venenoso."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/spider.mp3"
+			},
+			"traitTags": [
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sprite",
+			"source": "XPHB",
+			"page": 358,
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				},
+				{
+					"source": "XMM",
+					"page": 298
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "fey",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 10,
+				"formula": "4d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 40
+			},
+			"str": 3,
+			"dex": 18,
+			"con": 10,
+			"int": 14,
+			"wis": 13,
+			"cha": 11,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+8"
+			},
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "1/4",
+			"spellcasting": [
+				{
+					"name": "Invisibility",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The sprite casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+					],
+					"will": [
+						"{@spell Invisibility|XPHB}"
+					],
+					"ability": "cha",
+					"displayAs": "action",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Needle Sword",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 5 pés. {@h}6 ({@damage 1d4 + 4}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Enchanting Bow",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance 40/160 pés. {@h}1 Dano perfurante e o alvo tem a condição {@condition Charmed|XPHB} até o início do próximo turno do sprite."
+					]
+				},
+				{
+					"name": "Heart Sight",
+					"entries": [
+						"{@actSave cha} {@dc 10}, uma criatura a até 1,5 metro que o sprite pode ver. Celestiais, Demônios e Mortos-vivos falham automaticamente no salvamento. {@actSaveFail} O sprite conhece as emoções e o alinhamento do alvo."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/sprite.mp3"
+			},
+			"languageTags": [
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tiger",
+			"source": "XPHB",
+			"page": 358,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 371
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d10 + 6"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 16,
+			"con": 14,
+			"int": 3,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O tigre faz um ataque Pounce e usa Prowl."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano cortante. Se o tigre tiver Vantagem na jogada de ataque, o alvo sofre 3 ({@damage 1d6}) de dano cortante extra e, se for Enorme ou menor, tem a condição {@condition Prone|XPHB}."
+					]
+				},
+				{
+					"name": "Prowl",
+					"entries": [
+						"O tigre se move até metade de sua Velocidade sem provocar Ataques de Oportunidade. Ao final deste movimento, o tigre pode realizar a ação Esconder-se."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/tiger.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Undead Spirit",
+			"source": "XPHB",
+			"page": 328,
+			"summonedBySpell": "Summon Undead|XPHB",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"special": "11 + the spell's level"
+				}
+			],
+			"hp": {
+				"special": "30 (Ghostly and Putrid only) or 20 (Skeletal only) + 10 for each spell level above 3"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 40,
+					"condition": "(hover; Ghostly only)"
+				},
+				"canHover": true
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 9,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages you know"
+			],
+			"pbNote": "equals your Proficiency Bonus",
+			"trait": [
+				{
+					"name": "Festering Aura (Putrid Only)",
+					"entries": [
+						"{@actSave con} DC é igual à CD de salvamento de seu feitiço, qualquer criatura (exceto você) que comece seu turno dentro de uma Emanação de 1,5 metro originada do espírito. {@actSaveFail} A criatura tem a condição {@condition Poisoned|XPHB} até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Incorporeal Passage (Ghostly Only)",
+					"entries": [
+						"O espírito pode se mover através de outras criaturas e objetos como se fossem terrenos difíceis. Se terminar seu turno dentro de um objeto, ele será desviado para o espaço desocupado mais próximo e sofrerá {@damage 1d10} de dano de Força para cada 1,5 metro percorrido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espírito realiza um número de ataques igual à metade do nível desta magia (arredondado para baixo)."
+					]
+				},
+				{
+					"name": "Deathly Touch (Ghostly Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d8 + 3 + summonSpellLevel} Dano necrótico e o alvo terá a condição {@condition Frightened|XPHB} até o final do próximo turno."
+					]
+				},
+				{
+					"name": "Grave Bolt (Skeletal Only)",
+					"entries": [
+						"{@atkr r} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance de 150 pés. {@h}{@damage 2d4 + 3 + summonSpellLevel} Dano necrótico."
+					]
+				},
+				{
+					"name": "Rotting Claw (Putrid Only)",
+					"entries": [
+						"{@atkr m} {@hitYourSpellAttack Bonus equals your spell attack modifier}, alcance 5 pés. {@h}{@damage 1d6 + 3 + summonSpellLevel} Dano cortante. Se o alvo tiver a condição {@condition Poisoned|XPHB}, ele terá a condição {@condition Paralyzed|XPHB} até o final do próximo turno."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"N",
+				"O",
+				"S"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasToken": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Undead Spirit (Ghostly)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Incorporeal Passage (Ghostly Only)",
+									"with": "Incorporeal Passage"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Festering Aura (Putrid Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Deathly Touch (Ghostly Only)",
+									"with": "Deathly Touch"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Grave Bolt (Skeletal Only)",
+									"Rotting Claw (Putrid Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "30 + 10 for each spell level above 3"
+					},
+					"speed": {
+						"walk": 30,
+						"fly": {
+							"number": 40,
+							"condition": "(hover)"
+						},
+						"canHover": true
+					},
+					"damageTags": [
+						"N"
+					],
+					"conditionInflict": [
+						"frightened"
+					]
+				},
+				{
+					"name": "Undead Spirit (Putrid)",
+					"source": "XPHB",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Festering Aura (Putrid Only)",
+									"with": "Festering Aura"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": "Incorporeal Passage (Ghostly Only)"
+							}
+						],
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Rotting Claw (Putrid Only)",
+									"with": "Rotting Claw"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Deathly Touch (Ghostly Only)",
+									"Grave Bolt (Skeletal Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "30 + 10 for each spell level above 3"
+					},
+					"speed": {
+						"walk": 30
+					},
+					"traitTags": null,
+					"damageTags": [
+						"O",
+						"S"
+					],
+					"conditionInflict": [
+						"paralyzed",
+						"poisoned"
+					]
+				},
+				{
+					"name": "Undead Spirit (Skeletal)",
+					"source": "XPHB",
+					"_mod": {
+						"action": [
+							{
+								"mode": "renameArr",
+								"renames": {
+									"rename": "Grave Bolt (Skeletal Only)",
+									"with": "Grave Bolt"
+								}
+							},
+							{
+								"mode": "removeArr",
+								"names": [
+									"Deathly Touch (Ghostly Only)",
+									"Rotting Claw (Putrid Only)"
+								]
+							}
+						]
+					},
+					"hp": {
+						"special": "20 + 10 for each spell level above 3"
+					},
+					"speed": {
+						"walk": 30
+					},
+					"trait": null,
+					"traitTags": null,
+					"damageTags": [
+						"N"
+					],
+					"conditionInflict": null
+				}
+			]
+		},
+		{
+			"name": "Venomous Snake",
+			"source": "XPHB",
+			"page": 358,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 372
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 5,
+				"formula": "2d4"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 2,
+			"dex": 15,
+			"con": 11,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 10,
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano perfurante mais 3 ({@damage 1d6}) Dano venenoso."
+					]
+				}
+			],
+			"token": {
+				"name": "Poisonous Snake",
+				"source": "MM"
+			},
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			]
+		},
+		{
+			"name": "Warhorse",
+			"source": "XPHB",
+			"page": 359,
+			"otherSources": [
+				{
+					"source": "UtHftLH"
+				},
+				{
+					"source": "XMM",
+					"page": 373
+				}
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d10 + 3"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 13,
+			"int": 2,
+			"wis": 12,
+			"cha": 7,
+			"passive": 11,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 5 pés. {@h}9 ({@damage 2d4 + 4}) Dano de concussão. Se o cavalo se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe, o alvo sofre 5 ({@damage 2d4}) de dano de concussão extra e, se for Enorme ou menor, terá a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Weasel",
+			"source": "XPHB",
+			"page": 359,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 373
+				}
+			],
+			"size": [
+				"T"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 3,
+			"dex": 16,
+			"con": 8,
+			"int": 2,
+			"wis": 12,
+			"cha": 3,
+			"skill": {
+				"acrobatics": "+5",
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"None"
+			],
+			"cr": "0",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"familiar": true,
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/weasel.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wolf",
+			"source": "XPHB",
+			"page": 359,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 373
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 14,
+			"dex": 15,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O lobo tem Vantagem nas jogadas de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}5 ({@damage 1d6 + 2}) Dano perfurante e o alvo tem a condição {@condition Prone|XPHB} se for Médio ou menor."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/wolf.mp3"
+			},
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie",
+			"source": "XPHB",
+			"page": 359,
+			"otherSources": [
+				{
+					"source": "XMM",
+					"page": 346
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"average": 15,
+				"formula": "2d8 + 6"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 13,
+			"dex": 6,
+			"con": 16,
+			"int": 3,
+			"wis": 6,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 Pontos de Vida, ele deve fazer um teste de resistência de Constituição com uma CD de 5 mais o dano recebido, a menos que o dano seja Radiante ou de um Acerto Crítico. Em um teste bem sucedido, o zumbi cai para 1 Ponto de Vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}4 ({@damage 1d6 + 1}) Dano de concussão."
+					]
+				}
+			],
+			"soundClip": {
+				"type": "internal",
+				"path": "bestiary/zombie.mp3"
+			},
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,1526 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"XMM"
+			]
+		},
+		"otherSources": {
+			"monster": {
+				"XMM": "HotB"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Ankheg",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Ankheg",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Barbed Devil",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Barbed Devil",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bearded Devil",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Bearded Devil",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Commoner",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Commoner",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Corrupted Rat",
+			"source": "WttHC",
+			"size": [
+				"T"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 1,
+				"formula": "1d4 - 1"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 2,
+			"dex": 11,
+			"con": 9,
+			"int": 2,
+			"wis": 11,
+			"cha": 4,
+			"skill": {
+				"perception": "+2",
+				"stealth": "+2"
+			},
+			"senses": [
+				"Darkvision 30 ft."
+			],
+			"passive": 11,
+			"cr": "0",
+			"trait": [
+				{
+					"name": "Agile",
+					"entries": [
+						"O rato não provoca Ataques de Oportunidade quando sai do alcance do inimigo."
+					]
+				},
+				{
+					"name": "Death Burst",
+					"entries": [
+						"O rato explode quando morre. {@actSave con} {@dc 9}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro originada do rato. {@actSaveFail} 1 Dano ácido."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 2}, alcance 5 pés. {@h}1 Dano perfurante."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cultist of Demogorgon",
+			"source": "WttHC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"save": {
+				"wis": "+2"
+			},
+			"skill": {
+				"deception": "+2",
+				"religion": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Ritual Sickle",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}{@damage 1d4 + 2} Dano cortante mais 1 dano necrótico."
+					]
+				}
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MA",
+				"MLW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dardew",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "WttHC",
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				19
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d8 + 42"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 16,
+			"int": 14,
+			"wis": 12,
+			"cha": 16,
+			"save": {
+				"int": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"perception": "+4",
+				"performance": "+9"
+			},
+			"senses": [
+				"Darkvision 120 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Dardew faz dois ataques, usando Fiery Claw ou Power Chord em qualquer combinação."
+					]
+				},
+				{
+					"name": "Fiery Claw",
+					"entries": [
+						"{@atkr m} {@hit 7}, alcance 5 pés. {@h}8 ({@damage 1d8 + 4}) Dano cortante mais 7 ({@damage 2d6}) Dano de fogo."
+					]
+				},
+				{
+					"name": "Power Chord",
+					"entries": [
+						"{@actSave con} {@dc 14}, uma criatura que Dardew pode ver em um raio de 36 metros. {@actSaveFail} 13 ({@damage 3d6 + 3}) Dano de trovão."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Silver Tongue",
+					"entries": [
+						"{@actSave cha} {@dc 14}, one creature Dardew can see within 60 feet. {@actSaveFail} The creature has the {@condition Charmed|XPHB} condition until the start of Dardew's next turn."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"F",
+				"S",
+				"T"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demobat",
+			"source": "WttHC",
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4 + 6"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 40
+			},
+			"str": 4,
+			"dex": 16,
+			"con": 12,
+			"int": 2,
+			"wis": 10,
+			"cha": 6,
+			"senses": [
+				"Blindsight 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5} (com {@variantrule Advantage|XPHB} se o alvo for {@condition Grappled|XPHB} por um Demobat), alcance 5 pés. {@h}10 ({@damage 2d6 + 3}) Dano perfurante."
+					]
+				},
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}7 ({@damage 1d8 + 3}) Dano cortante. Se o alvo for uma criatura Média ou menor, o alvo terá a condição {@condition Grappled|XPHB} (escape {@dc 13}) de todos os quatro tentáculos."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Tentacles"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demodog",
+			"source": "WttHC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 16,
+			"dex": 15,
+			"con": 12,
+			"int": 6,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"Blindsight 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O demodog tem {@variantrule Advantage|XPHB} em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do demodog estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}8 ({@damage 1d10 + 3}) Dano perfurante. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demodragon",
+			"source": "WttHC",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d12 + 24"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 60
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 15,
+			"int": 8,
+			"wis": 12,
+			"cha": 10,
+			"save": {
+				"con": "+5",
+				"wis": "+4"
+			},
+			"senses": [
+				"Blindsight 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Baleful Presence",
+					"entries": [
+						"Fontes de luz em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 36 metros originadas do Demodragon piscam descontroladamente. Fontes não-mágicas de {@variantrule Bright Light|XPHB} naquela área derramaram {@variantrule Dim Light|XPHB}."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O Demodragon recupera 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Demodragon faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 7}, alcance 10 pés. {@h}11 ({@damage 2d6 + 4}) Dano perfurante mais 4 ({@damage 1d8}) Dano ácido."
+					]
+				},
+				{
+					"name": "Acid Breath {@recharge 5}",
+					"entries": [
+						"{@actSave dex} {@dc 13}, cada criatura em um {@variantrule Line [Area of Effect]|XPHB|Line} de 9 metros de comprimento e 1,5 metro de largura. {@actSaveFail} 22 ({@damage 4d10}) Dano ácido. {@actSaveSuccess} Metade do dano."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Demogorgon Spawn",
+			"source": "WttHC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"demon"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 13,
+			"int": 8,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"Blindsight 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"cold",
+				"lightning"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Baleful Presence",
+					"entries": [
+						"Fontes de luz em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 60 pés originadas do spawn piscam descontroladamente. Fontes não-mágicas de {@variantrule Bright Light|XPHB} naquela área liberam {@variantrule Dim Light|XPHB}."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O spawn recupera 5 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}."
+					]
+				},
+				{
+					"name": "Running Leap",
+					"entries": [
+						"Com uma corrida inicial de 3 metros, o spawn pode chegar a {@variantrule Long Jump|XPHB} até 9 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O spawn faz dois ataques de garra."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 10 pés. {@h}6 ({@damage 1d6 + 3}) Dano cortante."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano perfurante. Se o alvo for uma criatura Média ou menor, ele possui a condição {@condition Grappled|XPHB} (escape {@dc 13}). Enquanto {@condition Grappled|XPHB}, o alvo tem a condição {@condition Blinded|XPHB}."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dretch",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Dretch",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flizzlebin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "WttHC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"C",
+				"G"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 38,
+				"formula": "7d6 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 15,
+			"int": 16,
+			"wis": 10,
+			"cha": 12,
+			"skill": {
+				"arcana": "+5",
+				"stealth": "+4"
+			},
+			"senses": [
+				"Darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Dwarvish",
+				"Gnomish"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Flizzlebin tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Ventriloquist",
+					"entries": [
+						"Flizzlebin pode projetar sua voz de qualquer lugar a até 1,6 km de distância."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dazzling Confetti",
+					"entries": [
+						"{@atkr m,r} {@hit 5}, alcance 5 pés ou alcance 60 pés. {@h}10 ({@damage 2d6 + 3}) Dano radiante."
+					]
+				},
+				{
+					"name": "Vanishing Trick (3/Day)",
+					"entries": [
+						"Flizzlebin tem a condição {@condition Invisible|XPHB} por 10 minutos. Este efeito termina imediatamente após Flizzlebin fazer uma jogada de ataque, causar dano ou ter a condição {@condition Incapacitated|XPHB}, ou se seu chapéu for removido."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Distracting Glitter",
+					"entries": [
+						"{@actTrigger} Flizzlebin is hit by an attack roll. {@actResponse} Flizzlebin adds 2 to his AC against that attack, possibly causing it to miss."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D",
+				"G"
+			],
+			"damageTags": [
+				"R"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Corrupted Rat",
+			"source": "WttHC",
+			"size": [
+				"S"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d6"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 7,
+			"dex": 16,
+			"con": 12,
+			"int": 2,
+			"wis": 10,
+			"cha": 4,
+			"skill": {
+				"perception": "+12",
+				"stealth": "+5"
+			},
+			"senses": [
+				"Darkvision 60 ft."
+			],
+			"passive": 12,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Death Burst",
+					"entries": [
+						"O rato explode quando morre. Constituição {@variantrule Saving Throw|XPHB} {@dc 11}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro originada do rato. {@actSaveFail} 5 ({@damage 2d4}) Dano ácido. {@actSaveSuccess} Metade do dano."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano perfurante mais 5 ({@damage 2d4}) Dano ácido."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giant Spider",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Giant Spider",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gnoll Warrior",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Gnoll Warrior",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goblin Warrior",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Goblin Warrior",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Guard",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Guard",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hell Hound",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Hell Hound",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Imp Trickster",
+			"source": "WttHC",
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d4"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40,
+				"climb": 20
+			},
+			"str": 6,
+			"dex": 17,
+			"con": 13,
+			"int": 11,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"deception": "+4",
+				"insight": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"Darkvision 120 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O diabrete tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Sting",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}{@damage 1d6 + 3} Dano perfurante mais {@damage 2d6} Dano venenoso."
+					]
+				},
+				{
+					"name": "Invisibility",
+					"entries": [
+						"O diabrete tem a condição {@condition Invisible|XPHB} por 1 minuto. Este efeito termina imediatamente após o diabrete fazer uma jogada de ataque ou causar dano, ou se o diabrete tiver a condição {@condition Incapacitated|XPHB}."
+					]
+				},
+				{
+					"name": "Shape-Shift",
+					"entries": [
+						"O diabrete muda de forma para se assemelhar a um rato ({@variantrule Speed|XPHB} 6 metros), um corvo (6 metros, Voar 18 metros) ou uma aranha (6 metros, Escalar 6 metros) ou retorna à sua forma verdadeira. Suas estatísticas de jogo são as mesmas em cada formulário, exceto {@variantrule Speed|XPHB}. Qualquer equipamento que esteja usando ou carregando não é transformado."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Korex",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "WttHC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 8,
+			"wis": 12,
+			"cha": 15,
+			"skill": {
+				"perception": "+3",
+				"performance": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"Darkvision 120 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Elvish"
+			],
+			"cr": "2",
+			"gear": [
+				"pipes of pestilence|wtthc"
+			],
+			"trait": [
+				{
+					"name": "Sewer Speech",
+					"entries": [
+						"Korex pode compreender e se comunicar verbalmente com Monstruosidades."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rancid Knife",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}8 ({@damage 2d4 + 3}) Dano perfurante mais 7 ({@damage 2d6}) Dano venenoso, e o alvo tem a condição {@condition Poisoned|XPHB} até o início do próximo turno de Korex."
+					]
+				},
+				{
+					"name": "Entrancing Pipes",
+					"entries": [
+						"{@actSave wis} {@dc 12}, uma criatura que Korex pode ver em um raio de 36 metros. {@actSaveFail} 14 ({@damage 4d6}) Dano psíquico, e o alvo tem a condição {@condition Charmed|XPHB} até o início do próximo turno de Korex. {@actSaveSuccess} Apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Skitter",
+					"entries": [
+						"Korex takes the {@action Dash|XPHB} or {@action Disengage|XPHB} action."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"charmed",
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Medusa",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Medusa",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Myconid Adult",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Myconid Adult",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Needle Blight",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Needle Blight",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rilly June",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "WttHC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"halfling"
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 13,
+			"int": 10,
+			"wis": 13,
+			"cha": 10,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"nature": "+2",
+				"perception": "+3",
+				"survival": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Rilly June faz dois ataques em Hayfork."
+					]
+				},
+				{
+					"name": "Hayfork",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}6 ({@damage 1d8 + 2}) Dano perfurante."
+					]
+				},
+				{
+					"name": "G'wan, Git! (1/Day)",
+					"entries": [
+						"{@actSave wis} {@dc 11}, uma criatura que Rilly June pode ver em um raio de 18 metros. {@actSaveFail} 10 ({@damage 3d6}) Dano psíquico e o alvo tem a condição {@condition Frightened|XPHB} até o final do próximo turno. {@actSaveSuccess} Apenas metade do dano."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scarecrow",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Scarecrow",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shadow",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Shadow",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shrieker Fungus",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Shrieker Fungus",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarm of Corrupted Rats",
+			"source": "WttHC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"swarmSize": "T"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 10,
+			"int": 2,
+			"wis": 11,
+			"cha": 4,
+			"save": {
+				"dex": "+4"
+			},
+			"senses": [
+				"Darkvision 30 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Death Burst",
+					"entries": [
+						"O rato explode quando morre. {@actSave con} {@dc 10}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originada do rato. {@actSaveFail} {@damage 2d4} Dano ácido. {@actSaveSuccess} Metade do dano."
+					]
+				},
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para um rato minúsculo. O enxame não pode recuperar {@variantrule Hit Points|XPHB}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}6 ({@damage 2d4 + 2}) Dano perfurante ou {@damage 1d4 + 2} Dano perfurante se o enxame estiver ensanguentado."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vine Blight Tangler",
+			"source": "WttHC",
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 15,
+			"dex": 8,
+			"con": 14,
+			"int": 5,
+			"wis": 10,
+			"cha": 3,
+			"skill": {
+				"stealth": "+1"
+			},
+			"senses": [
+				"Blindsight 60 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"deafened"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Constricting Vine",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 10 pés. {@h}{@damage 1d10 + 2} Dano de concussão. Se o alvo for uma criatura Grande ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 12}) de uma das três vinhas."
+					]
+				},
+				{
+					"name": "Entangling Vines {@recharge 5}",
+					"entries": [
+						"Vinhas agarradoras aparecem momentaneamente em cada inimigo em um raio de 3 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto à escolha da praga a até 18 metros dele. Cada alvo deve ter sucesso em um teste de resistência de Força {@dc 12} ou ter a condição {@condition Restrained|XPHB} até o início do próximo turno da praga."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"AOE",
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Violet Fungus",
+			"source": "WttHC",
+			"isReprinted": true,
+			"_copy": {
+				"name": "Violet Fungus",
+				"source": "XMM"
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

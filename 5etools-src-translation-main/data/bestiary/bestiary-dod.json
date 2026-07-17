@@ -1,0 +1,198 @@
+{
+	"monster": [
+		{
+			"name": "Yarnspinner",
+			"isNamedCreature": true,
+			"source": "DoD",
+			"page": 22,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"archfey"
+				]
+			},
+			"alignment": [
+				"L",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 138,
+				"formula": "12d12 + 60"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40
+			},
+			"str": 24,
+			"dex": 16,
+			"con": 21,
+			"int": 18,
+			"wis": 21,
+			"cha": 19,
+			"save": {
+				"con": "+9",
+				"wis": "+9",
+				"cha": "+8"
+			},
+			"skill": {
+				"perception": "+13",
+				"stealth": "+7"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Sylvan"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Yarnspinner casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell faerie fire}",
+						"{@spell speak with animals}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animal friendship}",
+							"{@spell create food and water}",
+							"{@spell revivify}"
+						],
+						"1e": [
+							"{@spell awaken} (as an action)",
+							"{@spell pass without trace}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Rebirth",
+					"entries": [
+						"Se Yarnspinner morrer em seu Domínio do Deleite, ele revive com todos os seus pontos de vida {@dice 1d4} dias depois em um local seguro naquele domínio."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Yarnspinner falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"Yarnspinner pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"Yarnspinner ignora restrições de movimento causadas por correias."
+					]
+				},
+				{
+					"name": "Web Weaver (3/Day)",
+					"entries": [
+						"O Yarnspinner pode levar 1 minuto para criar uma das seguintes estruturas a partir da teia:",
+						{
+							"type": "list",
+							"items": [
+								"A 3-inch-thick, opaque wall of webbing consisting of up to three 10-foot-square sections, each of which must be anchored on at least two sides by other walls or surfaces. Each section has AC 12; 20 hit points; vulnerability to fire damage; and immunity to bludgeoning, poison, and psychic damage.",
+								"A hut small enough to fit in a 10-foot cube. The hut comes with a closable door and a comfortable bed made of webbing, sized for a Tiny, Small, or Medium creature.",
+								"A message consisting of no more than twenty-five characters, anchored at various points so it hangs in the air."
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Yarnspinner faz dois ataques de mordida e usa Spellcasting ou Web uma vez."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}17 ({@damage 3d6 + 7}) de dano perfurante mais 11 ({@damage 2d10}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Web",
+					"entries": [
+						"Yarnspinner atira teias em uma criatura que ele pode ver a até 36 metros de si mesmo. O alvo deve ter sucesso em um teste de resistência de Força {@dc 17} ou ser {@condition restrained} por 1 hora. O alvo pode repetir o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb",
+				"Web Walker"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"S"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

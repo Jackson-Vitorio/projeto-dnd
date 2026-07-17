@@ -1,0 +1,910 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"FRAiF": "NF",
+				"XMM": "NF"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Caldron Magen",
+			"source": "NF",
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				20
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 16,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"skill": {
+				"perception": "+4"
+			},
+			"passive": 14,
+			"immune": [
+				"acid",
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common plus two other languages but can't speak"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Disintegration",
+					"entries": [
+						"Se o magen morrer, ele se desintegrará em pó, deixando para trás tudo o que estava vestindo ou carregando."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O magen tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O magen faz dois ataques, usando Extended Fist ou Acid Spittle em qualquer combinação."
+					]
+				},
+				{
+					"name": "Extended Fist",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 15 pés. {@h}8 ({@damage 1d8 + 4}) Dano de concussão mais 5 ({@damage 1d10}) Dano ácido. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 14}) de um dos dois punhos."
+					]
+				},
+				{
+					"name": "Acid Spittle",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance de 60 pés. {@h}13 ({@damage 2d8 + 4}) Dano ácido."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"arcana"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"miscTags": [
+				"MA",
+				"RA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eldritch Eddy",
+			"source": "NF",
+			"size": [
+				"L"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 144,
+				"formula": "17d10 + 51"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 16,
+			"int": 12,
+			"wis": 9,
+			"cha": 17,
+			"save": {
+				"dex": "+4",
+				"int": "+4",
+				"cha": "+6"
+			},
+			"senses": [
+				"Blindsight 60 ft."
+			],
+			"passive": 9,
+			"resist": [
+				"force"
+			],
+			"immune": [
+				"fire",
+				"lightning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common plus one other language but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O redemoinho tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O redemoinho faz dois ataques, usando Searing Swipe ou Arcane Bolt em qualquer combinação."
+					]
+				},
+				{
+					"name": "Searing Swipe",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 10 pés. {@h}13 ({@damage 3d6 + 3}) Dano de Fogo ou Raio (escolha de Eddy)."
+					]
+				},
+				{
+					"name": "Arcane Bolt",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance 120 pés. {@h}14 ({@damage 2d10 + 3}) Dano de força."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Eldritch Overload",
+					"entries": [
+						"{@actTrigger} The eddy takes damage. {@actResponse d}{@actSave str} {@dc 14}, each creature of the eddy's choice in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the eddy. {@actSaveFail} 7 ({@damage 2d6}) Force damage, and the target has the {@condition Prone|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"F",
+				"L",
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phaerimm Elder",
+			"source": "NF",
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 218,
+				"formula": "23d12 + 69"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 17,
+			"int": 17,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"con": "+8",
+				"int": "+8",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+13",
+				"insight": "+8",
+				"perception": "+8"
+			},
+			"senses": [
+				"Truesight 120 ft."
+			],
+			"passive": 18,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"telepathy 120 ft. understands Common and Deep Speech but can't speak"
+			],
+			"cr": "14",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The phaerimm casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell Command|XPHB} (level 3 version)",
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Detect Thoughts|XPHB}",
+						"{@spell Mage Hand|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Clairvoyance|XPHB}",
+							"{@spell Geas|XPHB}",
+							"{@spell Major Image|XPHB}",
+							"{@spell Mirage Arcane|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The phaerimm casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "reaction",
+					"hidden": [
+						"daily"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O phaerimm tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O phaerimm faz três ataques Mind Lash. Ele pode substituir um ataque por (A) um ataque Vicious Stinger ou (B) um uso de Spellcasting para lançar {@spell Command|XPHB} (versão de nível 3)."
+					]
+				},
+				{
+					"name": "Mind Lash",
+					"entries": [
+						"{@atkr m,r} {@hit 9}, alcance 10 pés ou alcance 120 pés. {@h}32 ({@damage 6d8 + 4}) Dano psíquico."
+					]
+				},
+				{
+					"name": "Vicious Stinger",
+					"entries": [
+						"{@atkr m} {@hit 9}, alcance 5 pés. {@h}11 ({@damage 2d6 + 4}) Dano perfurante mais 26 ({@damage 4d12}) Dano de veneno, e o {@variantrule Speed|XPHB} do alvo é reduzido para 0 pés até o início do phaerimm próximo turno."
+					]
+				},
+				{
+					"name": "Siphon Magic {@recharge 5}",
+					"entries": [
+						"O phaerimm se concentra em um item mágico que pode ver a até 3 metros. Quando isso acontece, o phaerimm drena todas as cargas do item mágico. Independentemente de as cargas serem drenadas, o phaerimm pode lançar {@spell Clairvoyance|XPHB}, {@spell Geas|XPHB}, {@spell Major Image|XPHB} e {@spell Mirage Arcane|XPHB} uma vez adicional naquele dia."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Teleport",
+					"entries": [
+						"The phaerimm teleports up to 30 feet to an unoccupied space it can see."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"treasure": [
+				"arcana",
+				"implements"
+			],
+			"attachedItems": [
+				"mind lash|vgm"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Teleport"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phaerimm Scout",
+			"source": "NF",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 40
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 12,
+			"dex": 13,
+			"con": 12,
+			"int": 15,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"int": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"Truesight 60 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed"
+			],
+			"languages": [
+				"telepathy 120 ft. understands Common and Deep Speech but can't speak"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The phaerimm casts one of the following spells, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Detect Thoughts|XPHB}",
+						"{@spell Mage Hand|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Clairvoyance|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O phaerimm tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O phaerimm faz dois ataques, usando Stinger ou Mindwarp Ray em qualquer combinação."
+					]
+				},
+				{
+					"name": "Stinger",
+					"entries": [
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}4 ({@damage 1d6 + 1}) Dano perfurante mais 9 ({@damage 2d8}) Dano venenoso."
+					]
+				},
+				{
+					"name": "Mindwarp Ray",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 120 pés. {@h}6 ({@damage 1d6 + 3}) Dano psíquico e o alvo tem a condição {@condition Charmed|XPHB} até o início do próximo turno do phaerimm."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"{@actTrigger} The phaerimm is hit by an attack roll. {@actResponse} The phaerimm halves the damage (round down) it takes from that attack."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"treasure": [
+				"arcana",
+				"implements"
+			],
+			"tokenCustom": true,
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Terran Magen",
+			"source": "NF",
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				21
+			],
+			"hp": {
+				"average": 121,
+				"formula": "22d8 + 22"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 20,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 12,
+			"int": 10,
+			"wis": 18,
+			"cha": 10,
+			"save": {
+				"wis": "+7"
+			},
+			"skill": {
+				"perception": "+7"
+			},
+			"passive": 17,
+			"immune": [
+				"poison",
+				"thunder"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common plus two other languages but can't speak"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The magen casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Mending|XPHB}",
+						"{@spell Prestidigitation|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Disintegrate|XPHB}",
+							"{@spell Move Earth|XPHB}",
+							"{@spell Stone Shape|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Disintegration",
+					"entries": [
+						"Se o magen morrer, ele se desintegrará em pó, deixando para trás tudo o que estava vestindo ou carregando."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O magen tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O magen faz dois ataques, usando Hammer Fist ou Thunderous Boom em qualquer combinação."
+					]
+				},
+				{
+					"name": "Hammer Fist",
+					"entries": [
+						"{@atkr m} {@hit 6}, alcance 5 pés. {@h}16 ({@damage 3d8 + 3}) Dano de concussão mais 13 ({@damage 3d8}) Dano de Força."
+					]
+				},
+				{
+					"name": "Thunderous Boom",
+					"entries": [
+						"{@atkr r} {@hit 7}, alcance de 60 pés. {@h}28 ({@damage 8d6}) Dano de trovão."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"arcana"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"T"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Virvos Magen",
+			"source": "NF",
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				21
+			],
+			"hp": {
+				"average": 110,
+				"formula": "17d8 + 34"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 20,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"perception": "+6"
+			},
+			"passive": 16,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common plus two other languages but can't speak"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The magen casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell Dancing Lights|XPHB}",
+						"{@spell Minor Illusion|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Hypnotic Pattern|XPHB}",
+							"{@spell Major Image|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Disintegration",
+					"entries": [
+						"Se o magen morrer, ele se desintegrará em pó, deixando para trás tudo o que estava vestindo ou carregando."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O magen tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O magen faz dois ataques de Explosão Psíquica."
+					]
+				},
+				{
+					"name": "Psychic Blast",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, alcance 5 pés ou alcance 60 pés. {@h}21 ({@damage 6d6}) Dano psíquico."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"arcana"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"X"
+			],
+			"damageTags": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

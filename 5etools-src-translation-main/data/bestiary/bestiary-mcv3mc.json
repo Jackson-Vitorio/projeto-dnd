@@ -1,0 +1,575 @@
+{
+	"monster": [
+		{
+			"name": "Blaze",
+			"source": "MCV3MC",
+			"page": 3,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": {
+					"number": 20,
+					"condition": "(vertical movement only; hover)"
+				},
+				"canHover": true
+			},
+			"str": 16,
+			"dex": 17,
+			"con": 16,
+			"int": 6,
+			"wis": 10,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blaze Rod",
+					"entries": [
+						"Quando a chama cai para 0 pontos de vida, ela desaparece em uma nuvem de fumaça e tem 50% de chance de deixar para trás um bastão brilhante no valor de 100 po. A haste emite luz fraca em um raio de 1,5 metro. Como uma ação, uma criatura pode tentar quebrar a vara, fazendo isso com um teste de Força {@dc 14} bem-sucedido. O bastão quebrado libera sua energia ígnea em uma esfera de 1,5 metro de raio centrada em si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 6 ({@damage 1d12}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"name": "Heat Aura",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 1,5 metro do incêndio sofre 3 ({@damage 1d6}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"A chama emite luz brilhante em um raio de 6 metros e luz fraca por mais 6 metros adicionais."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"A chama sofre 1 de dano de frio para cada 1,5 metro que se move na água, para cada galão de água espirrado sobre ela ou sempre que inicia seu turno na chuva."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A chama faz três ataques Fiery Doom."
+					]
+				},
+				{
+					"name": "Fiery Doom",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para acertar; alcance 1,5 m ou alcance de 18 m, um alvo. {@h}8 ({@damage 1d10 + 3}) de dano de fogo e o alvo pega fogo se for uma criatura ou um objeto inflamável. Até que uma criatura realize uma ação para extinguir o fogo, o alvo em chamas sofre 3 ({@damage 1d6}) de dano de fogo no final de cada um de seus turnos."
+					]
+				}
+			],
+			"traitTags": [
+				"Illumination"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"C",
+				"F"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Creeper",
+			"source": "MCV3MC",
+			"page": 4,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 11,
+			"con": 14,
+			"int": 6,
+			"wis": 8,
+			"cha": 3,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Bizarre Physiology",
+					"entries": [
+						"O rastejador não pode realizar ações, exceto {@action Dash}, {@action Disengage}, {@action Hide} e {@action Search}. Não pode realizar ações ou reações bônus."
+					]
+				},
+				{
+					"name": "Creeper Head",
+					"entries": [
+						"Quando uma trepadeira chega a 0 pontos de vida devido à explosão de uma trepadeira carregada (veja a característica Destruição), ela morre e sua cabeça cai. A cabeça caída de uma trepadeira é oca e pode ser usada como máscara com aberturas para os olhos e a boca."
+					]
+				},
+				{
+					"name": "Destruction",
+					"entries": [
+						"Quando termina seu turno a até 3 metros de um Humanóide que possa ver, a trepadeira para de se mover e emite um silvo alto o suficiente para ser ouvido por criaturas a até 9 metros de si mesmo.",
+						"Se a trepadeira chegar a 0 pontos de vida antes do início do próximo turno, o assobio para e a trepadeira morre. Caso contrário, no início do próximo turno da trepadeira, uma das seguintes coisas acontecerá:",
+						{
+							"type": "list",
+							"items": [
+								"If there are no Humanoids within 10 feet of the hissing creeper, it stops hissing. It then uses any available movement to approach the nearest Humanoid it can see.",
+								"If there are one or more Humanoids within 10 feet of the hissing creeper, the creeper explodes in a ball of energy that fills a 20-foot-radius sphere centered on itself. This energy spreads around corners. The creeper is destroyed, and every other creature in the explosion's area must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save, or half as much damage on a successful one. Increase this damage by 7 ({@dice 2d6}) if the creeper is charged (see \"Electrical Charge\" below). Objects in the area that aren't being worn or carried take 14 ({@damage 4d6}) lightning damage, or 21 ({@damage 6d6}) lightning damage if the creeper is charged."
+							]
+						}
+					]
+				},
+				{
+					"name": "Electrical Charge",
+					"entries": [
+						"Sempre que a trepadeira é submetida a dano elétrico, ela não sofre dano e fica carregada por 1 minuto. Enquanto carregada, a trepadeira emite uma luz azul fraca em um raio de 1,5 metro."
+					]
+				},
+				{
+					"name": "Fear of Felines",
+					"entries": [
+						"A trepadeira tem a condição {@condition frightened} sempre que inicia seu turno a até 18 metros de uma criatura felina que possa ver. A condição dura até o início do próximo turno da trepadeira."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"damageTags": [
+				"L"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ender Dragon",
+			"source": "MCV3MC",
+			"page": 5,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"G"
+			],
+			"type": "dragon",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 350,
+				"formula": "20d20 + 140"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 120
+			},
+			"str": 27,
+			"dex": 14,
+			"con": 25,
+			"int": 10,
+			"wis": 15,
+			"cha": 19,
+			"save": {
+				"con": "+13",
+				"int": "+6",
+				"wis": "+8"
+			},
+			"skill": {
+				"perception": "+14",
+				"stealth": "+8"
+			},
+			"senses": [
+				"darkvision 240 ft."
+			],
+			"passive": 24,
+			"resist": [
+				"fire"
+			],
+			"immune": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "19",
+			"trait": [
+				{
+					"name": "Dragon Egg",
+					"entries": [
+						"Quando o Dragão Ender chega a 0 pontos de vida, ele irradia raios de luz roxa e então desaparece, deixando para trás um ovo de dragão inerte e negro no valor de 5.000 po."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Se o dragão falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dragão faz um ataque de mordida e usa Beating Wings."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar; alcance 15 pés, um alvo. {@h}18 ({@damage 3d6 + 8}) de dano perfurante mais 7 ({@damage 2d6}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Beating Wings",
+					"entries": [
+						"O dragão bate suas grandes asas. Cada criatura a até 4,5 metros do dragão deve ser bem-sucedida em um teste de resistência de Destreza {@dc 21} ou sofrerá 10 ({@damage 1d4 + 8}) de dano de concussão, será empurrada a 3 metros de distância do dragão e terá a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Harmful Breath {@recharge 5}",
+					"entries": [
+						"O dragão exala gás pútrido em um cone de 18 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 21}, sofrendo 52 ({@damage 15d6}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. O dragão então escolhe um ponto que pode ver onde o cone faz contato com o solo. Esse ponto se torna o centro de um cilindro de gás persistente com 3 metros de altura e 3 metros de raio que desaparece no início do próximo turno do dragão. Qualquer criatura que comece seu turno no cilindro sofre 10 ({@damage 3d6}) de dano necrótico."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Enderman",
+			"source": "MCV3MC",
+			"page": 6,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 15,
+			"int": 10,
+			"wis": 18,
+			"cha": 11,
+			"save": {
+				"str": "+5",
+				"con": "+5"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+7",
+				"survival": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"necrotic"
+			],
+			"languages": [
+				"Endspeech"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Evasive Teleportation",
+					"entries": [
+						"Sempre que sofrer dano ou for alvo de um ataque à distância, o Enderman pode se teletransportar, junto com qualquer equipamento que esteja vestindo ou carregando, para um espaço desocupado que possa ver a até 6 metros de si mesmo (nenhuma ação necessária). Se este efeito for desencadeado por um ataque à distância, o Enderman se teletransporta pouco antes do ataque acertar, fazendo com que o ataque falhe. Esta característica é suprimida enquanto o Enderman tem a condição {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Implosion",
+					"entries": [
+						"Quando o Enderman chega a 0 pontos de vida, ele morre e seu corpo implode. Role um {@dice d10}. Com um resultado de 9 ou menos, o Enderman não deixa restos. Em um resultado de 10, o Enderman deixa para trás um orbe roxo brilhante chamado pérola de Ender, no valor de 500 po. Uma criatura pode lançar a pérola até 18 metros; se a pérola cair em um espaço desocupado grande o suficiente para conter a criatura, a criatura se teletransporta para aquele espaço, junto com qualquer equipamento que esteja vestindo ou carregando, e a pérola desaparece."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o Enderman tem desvantagem nas jogadas de ataque."
+					]
+				},
+				{
+					"name": "Water Susceptibility",
+					"entries": [
+						"O Enderman sofre 1 dano de frio para cada 1,5 metro que se move na água, para cada galão de água espirrado nele ou sempre que inicia seu turno na chuva."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Enderman faz dois ataques Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar; alcançar 10 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano por concussão mais 9 ({@damage 2d8}) de dano necrótico."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wolf of the Overworld",
+			"source": "MCV3MC",
+			"page": 7,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 11,
+				"formula": "2d8 + 2"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+4"
+			},
+			"passive": 15,
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O lobo tem vantagem nas jogadas de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar; alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) dano perfurante. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Força {@dc 11} ou ter a condição {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

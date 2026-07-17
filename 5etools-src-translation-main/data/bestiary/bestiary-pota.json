@@ -1,0 +1,6573 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
+		"internalCopies": [
+			"monster"
+		],
+		"otherSources": {
+			"monster": {
+				"MM": "PotA",
+				"VGM": "PotA",
+				"MTF": "PotA",
+				"RoT": "PotA"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Aerisi Kalinoth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 192,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13,
+				{
+					"ac": 16,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 66,
+				"formula": "12d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 17,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				"lightning"
+			],
+			"languages": [
+				"Auran",
+				"Common",
+				"Elvish"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Aerisi is a 12th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). Aerisi has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell gust|xge}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell charm person}",
+								"{@spell feather fall}",
+								"{@spell mage armor}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell dust devil|xge}",
+								"{@spell gust of wind}",
+								"{@spell invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell fly}",
+								"{@spell gaseous form}",
+								"{@spell lightning bolt}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell ice storm}",
+								"{@spell storm sphere|xge}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell seeming} (cast each day)"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell chain lightning}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Aerisi tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-la dormir."
+					]
+				},
+				{
+					"name": "Howling Defeat",
+					"entries": [
+						"Quando Aerisi chega a 0 pontos de vida, seu corpo desaparece em um redemoinho uivante que se dispersa rápida e inofensivamente. Tudo o que ela está vestindo ou carregando é deixado para trás."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Aerisi falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Windvane",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}9 ({@damage 1d6 + 6}) de dano perfurante, ou 10 ({@damage 1d8 + 6}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo, mais 3 ({@damage 1d6}) de dano elétrico."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Aerisi Kalinoth",
+				"source": "PotA"
+			},
+			"attachedItems": [
+				"windvane|pota"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"I",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Aquatic Ghoul",
+			"source": "PotA",
+			"page": 87,
+			"_copy": {
+				"name": "Ghoul",
+				"source": "MM"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Bastian Thermandar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "genasi",
+						"prefix": "Fire"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 15,
+			"int": 11,
+			"wis": 9,
+			"cha": 18,
+			"skill": {
+				"arcana": "+3",
+				"deception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Ignan"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Bastian's innate spellcasting ability is Constitution (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
+					],
+					"will": [
+						"{@spell produce flame}"
+					],
+					"daily": {
+						"1": [
+							"{@spell burning hands}"
+						]
+					},
+					"ability": "con"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Bastian is a 9th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). Bastian knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell misty step}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell dimension door}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell hold monster}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"IG"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Black Earth Guard",
+			"source": "PotA",
+			"page": 195,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 11,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 9,
+			"skill": {
+				"intimidation": "+1",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O guarda faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Unyielding",
+					"entries": [
+						"When the guard is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"morningstar|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Black Earth Priest",
+			"source": "PotA",
+			"page": 195,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 14,
+			"int": 12,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"intimidation": "+5",
+				"religion": "+3",
+				"persuasion": "+5"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Terran"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell blade ward}",
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell mold earth|xge}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell earth tremor|xge}",
+								"{@spell expeditious retreat}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell shatter}",
+								"{@spell spider climb}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell slow}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O padre faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Glaive",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 3 metros, um alvo. {@h}7 ({@damage 1d10 + 2}) cortando dano."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Unyielding",
+					"entries": [
+						"When the priest is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"glaive|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"T"
+			],
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Braelen Hatherhand",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 156,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hp": {
+				"average": 2,
+				"formula": "1d8"
+			},
+			"action": null,
+			"miscTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Bronzefume",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 92,
+			"_copy": {
+				"name": "Dragon Turtle",
+				"source": "MM"
+			},
+			"hp": {
+				"average": 220,
+				"formula": "22d20 + 110"
+			},
+			"cr": "13",
+			"hasToken": true
+		},
+		{
+			"name": "Burrowshark",
+			"source": "PotA",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 10,
+			"wis": 11,
+			"cha": 13,
+			"skill": {
+				"animal handling": "+2",
+				"athletics": "+6",
+				"intimidation": "+3",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Bond of the Black Earth",
+					"entries": [
+						"O tubarão-burrows é magicamente vinculado a um bulette treinado para servir como sua montaria. Enquanto montado em seu bulette, o tubarão-toca compartilha os sentidos do bulette e pode montá-lo enquanto ele escava. O bulette vinculado obedece aos comandos do burrowshark. Se sua montaria morrer, o tubarão-toca pode treinar um novo bulette para servir como sua montaria vinculada, um processo que leva um mês."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O burrowshark faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) de dano perfurante ou 8 ({@damage 1d8 + 4}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Unyielding",
+					"entries": [
+						"When the burrowshark is subjected to an effect that would move it, knock it {@condition prone}, or both, it can use its reaction to be neither moved nor knocked {@condition prone}."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cavil Zaltobar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 182,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Cavil",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Crushing Wave Priest",
+			"source": "PotA",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"religion": "+2",
+				"stealth": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell expeditious retreat}",
+								"{@spell ice knife|xge}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blur}",
+								"{@spell hold person}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell sleet storm}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Crushing Wave Reaver",
+			"source": "PotA",
+			"page": 205,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 10,
+			"wis": 11,
+			"cha": 8,
+			"skill": {
+				"athletics": "+4",
+				"stealth": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Sharktoothed Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano cortante ou 7 ({@damage 1d10 + 2}) de dano cortante se usado com as duas mãos. Contra um alvo que não esteja usando armadura, o saqueador causa um dado extra de dano com esta espada."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Darathra Shendrel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 37,
+			"_copy": {
+				"name": "Knight",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the knight",
+						"with": "Darathra",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Dark Tide Knight",
+			"source": "PotA",
+			"page": 205,
+			"otherSources": [
+				{
+					"source": "SLW"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d8 + 18"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 16,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 11,
+			"skill": {
+				"athletics": "+7",
+				"stealth": "+7"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Bonded Mount",
+					"entries": [
+						"O cavaleiro está magicamente ligado a uma fera com uma velocidade de natação inata treinada para servir como sua montaria. Enquanto montado nesta fera, o cavaleiro ganha os sentidos da fera e a capacidade de respirar debaixo d'água. A montaria vinculada obedece aos comandos do cavaleiro. Se sua montaria morrer, o cavaleiro poderá treinar uma nova fera para servir como sua montaria vinculada, um processo que leva um mês."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"O cavaleiro causa 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado do cavaleiro que não seja {@condition incapacitated} e o cavaleiro não tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cavaleiro faz dois ataques com espadas curtas."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Lance",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}9 ({@damage 1d12 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"When an attacker the knight can see hits it with an attack, the knight can halve the damage against it."
+					]
+				}
+			],
+			"attachedItems": [
+				"lance|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Deseyna Majarra",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 126,
+			"_copy": {
+				"name": "Noble",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the noble",
+						"with": "Deseyna",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"action": null,
+			"miscTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Drannin Splithelm",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 210,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "dwarf",
+						"prefix": "Shield"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 18,
+			"int": 11,
+			"wis": 8,
+			"cha": 12,
+			"skill": {
+				"athletics": "+7",
+				"intimidation": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"resist": [
+				"cold",
+				"poison"
+			],
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Action Surge (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Drannin realiza uma ação adicional em seu turno."
+					]
+				},
+				{
+					"name": "Brute",
+					"entries": [
+						"Uma arma corpo a corpo causa um dado extra de dano quando Drannin a acerta (incluído no ataque)."
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"Drannin tem vantagem em testes de resistência contra veneno."
+					]
+				},
+				{
+					"name": "Indomitable (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Drannin pode rolar novamente um teste de resistência que falhou. Ele deve usar o novo rolo."
+					]
+				},
+				{
+					"name": "Second Wind (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Drannin pode usar uma ação bônus para recuperar 16 ({@dice 1d10 + 11}) pontos de vida."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Drannin usa um amuleto de controle para seu {@creature shield guardian} (veja o Manual dos Monstros) e um {@item ring of cold resistance}. Ele também carrega um {@item potion of frost giant strength}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Drinnin faz três ataques com seu machado grande."
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d12 + 4}) cortando dano."
+					]
+				}
+			],
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Brute"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Elizar Dryflagon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 202,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "11d8 + 22"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 14,
+			"int": 11,
+			"wis": 18,
+			"cha": 10,
+			"skill": {
+				"arcana": "+3",
+				"deception": "+3"
+			},
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Druidic"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Elizar is a 7th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 15}, {@hit 7} to hit with spell attacks). Elizar has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell guidance}",
+								"{@spell poison spray}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell animal friendship}",
+								"{@spell faerie fire}",
+								"{@spell healing word}",
+								"{@spell jump}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell flame blade}",
+								"{@spell spike growth}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell dispel magic}",
+								"{@spell stinking cloud}"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell blight}",
+								"{@spell wall of fire}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Summon Mephits (Recharges after a Long Rest)",
+					"entries": [
+						"Ao fumar seu cachimbo, Elizar pode usar uma ação para lançar {@spell conjure minor elementals}. Se ele fizer isso, ele invocará quatro mephits de fumaça."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger +1",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 dagger|dmg"
+			],
+			"languageTags": [
+				"C",
+				"DU"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"I",
+				"N",
+				"P",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Emberhorn Minotaur",
+			"source": "PotA",
+			"page": 120,
+			"_copy": {
+				"name": "Minotaur",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Burning Breath {@recharge 5}",
+							"entries": [
+								"The minotaur exhales a cloud of burning embers in a 15-foot cone. Each creature in that area must succeed on a {@dc 14} Dexterity saving throw, taking 21 ({@damage 6d6}) fire damage on a failed save, or half as much damage on a successful one."
+							]
+						}
+					}
+				}
+			},
+			"immune": [
+				"fire"
+			],
+			"actionTags": [
+				"Breath Weapon"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Eternal Flame Guardian",
+			"source": "PotA",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item breastplate|phb}",
+						"{@item shield|phb}"
+					]
+				},
+				{
+					"ac": 15,
+					"condition": "while using a crossbow"
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "7d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 13,
+			"con": 14,
+			"int": 8,
+			"wis": 11,
+			"cha": 13,
+			"skill": {
+				"intimidation": "+3",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Flaming Weapon (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Como uma ação bônus, o guarda pode embrulhar em chamas uma arma corpo a corpo que esteja empunhando. O guarda sai ileso deste fogo, que dura até o final do próximo turno do guarda. Enquanto envolta em chamas, a arma causa 3 ({@damage 1d6}) de dano de fogo extra ao acertar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O guarda faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) cortando dano."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 100/400 pés, um alvo. {@h}6 ({@damage 1d10 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eternal Flame Priest",
+			"source": "PotA",
+			"page": 200,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"intimidation": "+5",
+				"religion": "+2"
+			},
+			"passive": 10,
+			"resist": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Ignan"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell control flames|xge}",
+								"{@spell create bonfire|xge}",
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell minor illusion}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell expeditious retreat}",
+								"{@spell mage armor}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell blur}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell fireball}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"IG"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fathomer",
+			"source": "PotA",
+			"page": 207,
+			"otherSources": [
+				{
+					"source": "GoS"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 13,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 11,
+			"con": 14,
+			"int": 11,
+			"wis": 11,
+			"cha": 15,
+			"skill": {
+				"arcana": "+2",
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting (Human Form Only)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The fathomer is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It has two 3rd-level spell slots, which it regains after finishing a short or long rest, and knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell eldritch blast}",
+								"{@spell mage hand}"
+							]
+						},
+						"3": {
+							"lower": 1,
+							"slots": 2,
+							"spells": [
+								"{@spell armor of Agathys}",
+								"{@spell expeditious retreat}",
+								"{@spell hex}",
+								"{@spell invisibility}",
+								"{@spell Vampiric touch}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Shapechanger (2/Day)",
+					"entries": [
+						"O sondador pode usar sua ação para se transformar em uma serpente Média composta de água ou voltar à sua forma verdadeira. Qualquer coisa que o sondador esteja vestindo ou carregando é incluído na forma de serpente durante a mudança, ficando inacessível até que o sondador retorne à sua forma verdadeira. O sondador reverte à sua forma verdadeira após 4 horas, a menos que possa gastar outro uso desta característica. Se o sonda for derrubado {@condition unconscious} ou morrer, ele também retornará à sua forma verdadeira.",
+						"Enquanto estiver na forma de serpente, o sondador ganha uma velocidade de natação de 12 metros, a capacidade de respirar debaixo d'água, imunidade a danos de veneno, bem como resistência a danos de fogo e danos de concussão, perfurantes e cortantes de ataques não mágicos. Também possui imunidade às seguintes condições: {@condition exhaustion}, {@condition grappled}, {@condition paralyzed}, {@condition poisoned}, {@condition restrained}, {@condition prone}, {@condition unconscious}. A forma de serpente pode entrar no espaço de uma criatura hostil e parar aí. Além disso, se a água consegue passar por um espaço, a serpente consegue fazê-lo sem se apertar."
+					]
+				},
+				{
+					"name": "Olhydra's Armor (Human Form Only)",
+					"entries": [
+						"O sondador pode lançar {@spell mage armor} à vontade, sem gastar componentes materiais."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Constrict (Serpent Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) dano de concussão. Se o alvo for Médio ou menor, será {@condition grappled} (escape {@dc 12}). Até que a luta termine, o alvo é {@condition restrained}, e o sondador não pode restringir outro alvo."
+					]
+				},
+				{
+					"name": "Dagger (Human Form Only)",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CL",
+				"F"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Feathergale Knight",
+			"source": "PotA",
+			"page": 189,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 14,
+			"skill": {
+				"animal handling": "+2",
+				"history": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The knight is a 1st-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It knows the following sorcerer spell:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell gust|xge}",
+								"{@spell light}",
+								"{@spell message}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 2,
+							"spells": [
+								"{@spell expeditious retreat}",
+								"{@spell feather fall}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cavaleiro faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) de dano cortante ou 7 ({@damage 1d10 + 2}) de dano cortante se usado com as duas mãos."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano perfurante ou 6 ({@damage 1d8 + 2}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb",
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fennor",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 170,
+			"_copy": {
+				"name": "Berserker",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the berserker",
+						"with": "Fennor",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Fennor faz dois ataques com sua espada larga"
+					]
+				},
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano cortante."
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MLW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Flamewrath",
+			"source": "PotA",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d8 + 42"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"arcana": "+3",
+				"religion": "+3"
+			},
+			"passive": 10,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Ignan"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The flamewrath is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell control flames|xge}",
+								"{@spell fire bolt}",
+								"{@spell friends}",
+								"{@spell light}",
+								"{@spell minor illusion}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell color spray}",
+								"{@spell mage armor}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell scorching ray}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell fireball}",
+								"{@spell hypnotic pattern}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell fire shield} (see Wreathed in Flame)"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Wreathed in Flame",
+					"entries": [
+						"Para a ira das chamas, a versão quente do feitiço {@spell fire shield} tem uma duração de \"até ser dissipada\". O escudo de fogo queima por 10 minutos após a morte da ira flamejante, consumindo seu corpo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"IG"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gar Shatterkeel",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 97,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 15,
+			"dex": 15,
+			"con": 16,
+			"int": 12,
+			"wis": 18,
+			"cha": 13,
+			"skill": {
+				"nature": "+9",
+				"survival": "+8"
+			},
+			"passive": 14,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Gar is a 9th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 16}, {@hit 8} to hit with spell attacks). He has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mending}",
+								"{@spell resistance}",
+								"{@spell shape water|xge}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell create or destroy water}",
+								"{@spell cure wounds}",
+								"{@spell fog cloud}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkvision}",
+								"{@spell hold person}",
+								"{@spell protection from poison}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell call lightning}",
+								"{@spell sleet storm}",
+								"{@spell tidal wave|xge}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell control water}",
+								"{@spell ice storm}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell scrying}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Gar pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Gar falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Water Walk",
+					"entries": [
+						"Gar pode ficar de pé e se mover em superfícies líquidas como se fossem solo sólido."
+					]
+				},
+				{
+					"name": "Watery Fall",
+					"entries": [
+						"Quando Gar cai para 0 pontos de vida, seu corpo entra em colapso em uma poça de água escura que se dispersa rapidamente. Tudo o que ele estava vestindo ou carregando foi deixado para trás."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Gar faz dois ataques corpo a corpo, um com sua garra e outro com {@item Drown|PotA}."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 2d6 + 2}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 13}). Até que a luta termine, Gar não pode atacar outras criaturas com sua garra."
+					]
+				},
+				{
+					"name": "Drown",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante mais 4 ({@damage 1d8}) de dano por frio."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Gar Shatterkeel",
+				"source": "PotA"
+			},
+			"attachedItems": [
+				"drown|pota"
+			],
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"P"
+			],
+			"damageTagsLegendary": [
+				"L",
+				"N"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
+			],
+			"savingThrowForcedLegendary": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ghald",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 210,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"sahuagin"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 102,
+				"formula": "12d10 + 36"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 50
+			},
+			"str": 19,
+			"dex": 17,
+			"con": 16,
+			"int": 14,
+			"wis": 13,
+			"cha": 17,
+			"save": {
+				"dex": "+6",
+				"con": "+6",
+				"int": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"insight": "+4",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"Common",
+				"Sahuagin"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Assassinate",
+					"entries": [
+						"Durante seu primeiro turno, Ghald tem vantagem nas jogadas de ataque contra qualquer criatura que não tenha jogado um turno. Qualquer acerto de Ghald contra uma criatura {@status surprised} é um acerto crítico."
+					]
+				},
+				{
+					"name": "Limited Amphibiousness",
+					"entries": [
+						"Ghald pode respirar ar e água, mas precisa ser submerso pelo menos uma vez a cada 4 horas para evitar sufocamento."
+					]
+				},
+				{
+					"name": "Shark Telepathy",
+					"entries": [
+						"Ghald pode comandar magicamente qualquer tubarão a até 36 metros dele, usando telepatia limitada."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"Ghald causa 14 ({@dice 4d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado de Ghald que não seja {@condition incapacitated} e Ghald não tem desvantagem na jogada de ataque."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ghald faz três ataques, um com sua mordida e dois com suas espadas curtas."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}9 ({@damage 2d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}11 ({@damage 2d6 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Garrote",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura Média ou Pequena contra a qual Ghald tem vantagem na jogada de ataque. {@h}9 ({@damage 2d4 + 4}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 15}). Até o agarrão terminar, o alvo não consegue respirar e Ghald tem vantagem nas jogadas de ataque contra ele."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"OTH"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Grumink the Renegade",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 210,
+			"_copy": {
+				"name": "Assassin",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the assassin",
+						"with": "Grumink",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"dwarf"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hellenrae",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 13,
+			"dex": 18,
+			"con": 14,
+			"int": 10,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"acrobatics": "+7",
+				"athletics": "+4",
+				"insight": "+5",
+				"perception": "+5"
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 15,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Terran"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Se Hellenrae for submetida a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, ela não sofrerá nenhum dano se obtiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+					]
+				},
+				{
+					"name": "Stunning Strike {@recharge 5}",
+					"entries": [
+						"Quando Hellenrae atinge um alvo com um ataque de arma corpo a corpo, o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou permanecerá {@condition stunned} até o final do próximo turno de Hellenrae."
+					]
+				},
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Embora Hellenrae não esteja usando armadura e sem escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				},
+				{
+					"name": "Unarmored Movement",
+					"entries": [
+						"Enquanto Hellenrae não estiver usando armadura e sem escudo, seu deslocamento aumenta em 6 metros (incluído em seu deslocamento)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Hellenrae faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry and Counter",
+					"entries": [
+						"Hellenrae adds 3 to her AC against one melee or ranged weapon attack that would hit her. To do so, she must be able to sense the attacker with her blindsight. If the attack misses, Hellenrae can make one melee attack against the attacker if it is within her reach."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Howling Hatred Initiate",
+			"source": "PotA",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 9,
+				"formula": "2d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 10,
+			"int": 10,
+			"wis": 9,
+			"cha": 11,
+			"skill": {
+				"deception": "+2",
+				"religion": "+2",
+				"stealth": "+4"
+			},
+			"passive": 9,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Guiding Wind (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Como uma ação bônus, o iniciado ganha vantagem na próxima jogada de ataque à distância que fizer antes do final do próximo turno."
+					]
+				},
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"O iniciado pode prender a respiração por 30 minutos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Howling Hatred Priest",
+			"source": "PotA",
+			"page": 190,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 45,
+				"formula": "10d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 10,
+			"int": 14,
+			"wis": 10,
+			"cha": 14,
+			"skill": {
+				"acrobatics": "+5",
+				"intimidation": "+4",
+				"religion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The priest is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}",
+								"{@spell gust|xge}",
+								"{@spell light}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell shield}",
+								"{@spell witch bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell dust devil|xge}",
+								"{@spell gust of wind}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell gaseous form}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"O padre pode prender a respiração por 30 minutos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O sacerdote faz dois ataques corpo a corpo ou dois ataques à distância."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"L"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hurricane",
+			"source": "PotA",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 33,
+				"formula": "6d8 + 6"
+			},
+			"speed": {
+				"walk": 45
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 10,
+			"wis": 12,
+			"cha": 10,
+			"skill": {
+				"acrobatics": "+5"
+			},
+			"passive": 11,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The hurricane is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 11}, {@hit 3} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}",
+								"{@spell gust|xge}",
+								"{@spell light}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell jump}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 2,
+							"spells": [
+								"{@spell gust of wind}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Embora o furacão não use armadura e não empunhe escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				},
+				{
+					"name": "Unarmored Movement",
+					"entries": [
+						"Enquanto o furacão não estiver usando armadura e sem escudo, sua velocidade de caminhada aumenta em 4,5 metros (incluída em sua velocidade)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O furacão faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Deflect Missiles",
+					"entries": [
+						"When the hurricane is hit by a ranged weapon attack, it reduces the damage from the attack by {@dice 1d10 + 9}. If the damage is reduced to 0, the hurricane can catch the missile if it is small enough to hold in one hand and the hurricane has at least one hand free."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Imix",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 214,
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 325,
+				"formula": "26d12 + 156"
+			},
+			"speed": {
+				"walk": 50,
+				"fly": 50
+			},
+			"str": 19,
+			"dex": 24,
+			"con": 22,
+			"int": 15,
+			"wis": 16,
+			"cha": 23,
+			"save": {
+				"dex": "+13",
+				"con": "+12",
+				"cha": "+12"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Common",
+				"Ignan"
+			],
+			"cr": "19",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Imix's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell fireball}",
+						"{@spell wall of fire}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell fire storm}",
+							"{@spell haste}",
+							"{@spell teleport}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Os ataques slam de Imix são tratados como mágicos com o propósito de contornar a resistência e imunidade a ataques não mágicos."
+					]
+				},
+				{
+					"name": "Fire Aura",
+					"entries": [
+						"No início de cada turno de Imix, cada criatura a até 3 metros dele sofre 17 ({@damage 5d6}) de dano de fogo e objetos inflamáveis na aura que não estão sendo usados ou carregados se acendem. Uma criatura também sofre 17 ({@damage 5d6}) de dano de fogo se tocar Imix ou acertá-lo com um ataque corpo a corpo enquanto estiver a até 3 metros dele, e uma criatura sofre esse dano na primeira vez em um turno em que Imix se move para seu espaço. Armas não mágicas que atingem Imix são destruídas pelo fogo imediatamente após causar dano a ele"
+					]
+				},
+				{
+					"name": "Fire Form",
+					"entries": [
+						"Imix pode entrar no espaço de uma criatura hostil e parar aí. Ele pode se mover através de um espaço tão estreito quanto 1 polegada sem apertar se o fogo puder passar por esse espaço."
+					]
+				},
+				{
+					"name": "Illumination",
+					"entries": [
+						"Imix emite luz brilhante em um raio de 18 metros e luz fraca por mais 18 metros adicionais."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Imix falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Imix tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Imix faz dois ataques de impacto ou dois ataques de explosão de chamas."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 3 metros, um alvo. {@h}18 ({@damage 2d10 + 7}) de dano de concussão mais 18 ({@damage 5d6}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Flame Blast",
+					"entries": [
+						"{@atk rs} {@hit 12} para acertar, alcance de 250 pés, um alvo. {@h}35 ({@damage 10d6}) dano de fogo."
+					]
+				},
+				{
+					"name": "Summon Elementals (1/Day)",
+					"entries": [
+						"Imix invoca até três {@creature fire elemental||fire elementals} e perde 30 pontos de vida para cada elemental que invoca. Elementais invocados têm pontos de vida máximos, aparecem a até 30 metros de Imix e desaparecem se Imix for reduzido a 0 pontos de vida."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Heat Wave",
+					"entries": [
+						"Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 ({@damage 2d8}) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a {@dc 21} Constitution saving throw or gain one level of {@condition exhaustion}."
+					]
+				},
+				{
+					"name": "Teleport (Costs 2 Actions)",
+					"entries": [
+						"Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him."
+					]
+				},
+				{
+					"name": "Combustion (Costs 3 Actions)",
+					"entries": [
+						"Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a {@dc 21} Constitution saving throw. On a failed save, the target takes 70 ({@damage 20d6}) fire damage and catches fire. A target on fire takes 10 ({@damage 3d6}) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Imix",
+				"source": "PotA"
+			},
+			"traitTags": [
+				"Illumination",
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"IG"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"conditionInflictLegendary": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lyzandra \"Lyzzie\" Calderos",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 110,
+			"_copy": {
+				"name": "Mage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the mage",
+						"with": "Lyzandra",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Lyzandra is a 9th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). Lyzandra has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt}",
+								"{@spell light}",
+								"{@spell mage hand}",
+								"{@spell prestidigitation}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell misty step}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}",
+								"{@spell fly}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell greater invisibility}",
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 1,
+							"spells": [
+								"{@spell immolation|xge}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Maegla Tarnlar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 25,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM"
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Marlos Urnrayle",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 199,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 136,
+				"formula": "16d8 + 64"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 11,
+			"con": 18,
+			"int": 12,
+			"wis": 13,
+			"cha": 17,
+			"skill": {
+				"arcana": "+4",
+				"deception": "+6",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"tremorsense 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Common",
+				"Terran"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Earthen Defeat",
+					"entries": [
+						"Quando Marlos chega a 0 pontos de vida, seu corpo se transforma em lama e cai em uma poça. Tudo o que ele está vestindo ou carregando é deixado para trás."
+					]
+				},
+				{
+					"name": "Earth Passage",
+					"entries": [
+						"Marlos pode se mover em {@quickref difficult terrain||3} composto de qualquer coisa feita de terra ou pedra como se fosse um terreno normal. Ele pode se mover através de terra sólida e rocha como se fosse {@quickref difficult terrain||3}. Se ele terminar seu turno ali, ele será desviado para o espaço mais próximo que ocupou pela última vez."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Marlos falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Petrifying Gaze",
+					"entries": [
+						"Quando uma criatura que pode ver os olhos de Marlos começa seu turno a até 9 metros dele, Marlos pode forçá-la a fazer um teste de resistência de Constituição {@dc 14} se Marlos não estiver {@condition incapacitated} e puder ver a criatura. Se o teste de resistência falhar por 5 ou mais, a criatura é instantaneamente {@condition petrified}. Caso contrário, uma criatura que falhar no salvamento começa a virar pedra e é {@condition restrained}. A criatura {@condition restrained} deve repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que a criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
+						"A menos que {@status surprised}, uma criatura pode desviar os olhos para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá ver Marlos até o início do próximo turno, quando poderá decidir desviar os olhos novamente. Se a criatura olhar para Marlos nesse meio tempo, ela deverá fazer o salvamento imediatamente.",
+						"Se Marlos se vê refletido em uma superfície polida a até 9 metros dele e em uma área de luz brilhante, Marlos é, devido à sua maldição, afetado por seu próprio olhar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Marlos faz três ataques corpo a corpo, um com seu cabelo de cobra e dois com {@item Ironfang|PotA}."
+					]
+				},
+				{
+					"name": "Snake Hair",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano perfurante mais 14 ({@damage 4d6}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Ironfang",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano perfurante mais 4 ({@damage 1d8}) de dano trovejante."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Marlos Urnrayle",
+				"source": "PotA"
+			},
+			"attachedItems": [
+				"ironfang|pota"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"T"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"T"
+			],
+			"damageTagsLegendary": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Miraj Vizann",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 198,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "genasi",
+						"prefix": "Earth"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 13,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 10,
+			"con": 17,
+			"int": 13,
+			"wis": 11,
+			"cha": 18,
+			"skill": {
+				"arcana": "+4",
+				"deception": "+7"
+			},
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Primordial"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Miraj's innate spellcasting ability is Constitution (spell save {@dc 14}). He can innately cast the following spell, requiring no material components:"
+					],
+					"daily": {
+						"1": [
+							"{@spell pass without trace}"
+						]
+					},
+					"ability": "con"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Miraj is an 11th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). He knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell blade ward}",
+								"{@spell friends}",
+								"{@spell light}",
+								"{@spell message}",
+								"{@spell mold earth|xge}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell chromatic orb}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell Maximilian's earthen grasp|xge}",
+								"{@spell shatter}",
+								"{@spell suggestion}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell erupting earth|xge}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell polymorph}",
+								"{@spell stoneskin}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell wall of stone}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell move earth}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Earth Walk",
+					"entries": [
+						"Mover-se através de {@quickref difficult terrain||3} feito de terra ou pedra não custa nenhum movimento extra a Miraj."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) de dano por concussão ou 5 ({@damage 1d8 + 1}) de dano por concussão quando usado com as duas mãos."
+					]
+				}
+			],
+			"languageTags": [
+				"C",
+				"P"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"O",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Molten Magma Roper",
+			"source": "PotA",
+			"page": 143,
+			"_copy": {
+				"name": "Roper",
+				"source": "MM",
+				"_mod": {
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Tendril",
+							"items": {
+								"name": "Tendril",
+								"entries": [
+									"{@atk mw} {@hit 7} to hit, reach 50 ft., one creature. {@h}4 ({@damage 1d8}) fire damage and the target is {@condition grappled} (escape {@dc 15}). Until the grapple ends, the target is {@condition restrained} and has disadvantage on Strength checks and Strength saving throws, and the roper can't use the same tendril on another target. A creature takes 4 ({@damage 1d8}) fire damage each time it ends its turn grappled by the roper."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Bite",
+							"items": {
+								"name": "Bite",
+								"entries": [
+									"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}22 ({@damage 4d8 + 4}) fire damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"immune": [
+				"fire"
+			],
+			"vulnerable": [
+				"cold"
+			],
+			"damageTags": [
+				"F"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Nurvureem, The Dark Lady",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 180,
+			"_copy": {
+				"name": "Adult Black Dragon",
+				"source": "MM",
+				"_templates": [
+					{
+						"name": "Legendary Shadow Dragon",
+						"source": "MM"
+					}
+				],
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the dragon",
+						"with": "Nurvureem",
+						"flags": "i"
+					}
+				}
+			},
+			"traitTags": [
+				"Amphibious",
+				"Legendary Resistances",
+				"Sunlight Sensitivity"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P",
+				"S"
+			],
+			"damageTagsLegendary": [],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ogrémoch",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 216,
+			"size": [
+				"G"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 526,
+				"formula": "27d20 + 243"
+			},
+			"speed": {
+				"walk": 50,
+				"burrow": 50
+			},
+			"str": 26,
+			"dex": 11,
+			"con": 28,
+			"int": 11,
+			"wis": 15,
+			"cha": 22,
+			"save": {
+				"str": "+14",
+				"con": "+15",
+				"wis": "+8"
+			},
+			"senses": [
+				"blindsight 120 ft.",
+				"tremorsense 120 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"Common",
+				"Terran"
+			],
+			"cr": "20",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Ogrémoch's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell meld into stone}",
+						"{@spell move earth}",
+						"{@spell wall of stone}"
+					],
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Os ataques violentos de Ogrémoch são tratados como mágicos e adamantinos com o propósito de contornar a resistência e imunidade a ataques não mágicos."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Ogrémoch falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Ogrémoch tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Siege Monster",
+					"entries": [
+						"Ogrémoch causa o dobro de dano a objetos e estruturas com seus ataques corpo a corpo e de longo alcance."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ogrémoch faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 15 pés, um alvo. {@h}30 ({@damage 4d10 + 8}) dano de concussão."
+					]
+				},
+				{
+					"name": "Boulder",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance de 500 pés, um alvo. {@h}46 ({@damage 7d10 + 8}) dano de concussão. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 23} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Summon Elementals (1/Day)",
+					"entries": [
+						"Ogrémoch invoca até três {@creature earth elemental||earth elementals} e perde 30 pontos de vida para cada elemental que invoca. Elementais invocados têm pontos de vida máximos, aparecem a até 30 metros de Ogrémoch e desaparecem se Ogrémoch for reduzido a 0 pontos de vida."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Illuminating Crystals",
+					"entries": [
+						"Ogrémoch's crystalline protrusions flare. Each creature within 30 feet of Ogrémoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being {@condition invisible}."
+					]
+				},
+				{
+					"name": "Stomp (Costs 2 Actions)",
+					"entries": [
+						"Ogrémoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a {@dc 23} Dexterity saving throw or fall {@condition prone}."
+					]
+				},
+				{
+					"name": "Create Gargoyle (Costs 3 Actions)",
+					"entries": [
+						"Ogrémoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a {@creature gargoyle} and acts on the same initiative count as Ogrémoch. Ogrémoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogrémoch's commands and fights until destroyed."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Ogrémoch",
+				"source": "PotA"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance",
+				"Siege Monster"
+			],
+			"senseTags": [
+				"B",
+				"T"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"B"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictLegendary": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"savingThrowForcedLegendary": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Olhydra",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 218,
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 324,
+				"formula": "24d12 + 168"
+			},
+			"speed": {
+				"walk": 50,
+				"swim": 100
+			},
+			"str": 21,
+			"dex": 22,
+			"con": 24,
+			"int": 17,
+			"wis": 18,
+			"cha": 23,
+			"save": {
+				"str": "+11",
+				"con": "+13",
+				"wis": "+10"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"lightning",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"acid",
+				"cold",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Aquan"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Olhydra's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). She can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell wall of ice}"
+					],
+					"daily": {
+						"1": [
+							"{@spell storm of vengeance}"
+						],
+						"3": [
+							"{@spell ice storm}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Os ataques violentos de Olhydra são tratados como mágicos com o propósito de contornar a resistência e imunidade a ataques não mágicos."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Olhydra falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Olhydra tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Water Form",
+					"entries": [
+						"Olhydra pode entrar no espaço de uma criatura hostil e parar aí. Ela pode se mover por um espaço estreito de até 2,5 cm de largura sem se apertar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Olhydra faz dois ataques de impacto ou dois ataques de jato de água."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}21 ({@damage 3d10 + 5}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 19}). Olhydra pode atacar até quatro alvos. Quando Olhydra se move, todas as criaturas que ela está lutando se movem com ela."
+					]
+				},
+				{
+					"name": "Water Jet",
+					"entries": [
+						"{@atk rw} {@hit 12} para acertar, alcance de 120 pés, um alvo. {@h}21 ({@damage 6d6}) dano de concussão, e o alvo é derrubado {@condition prone} se falhar em um teste de resistência de Força {@dc 19}."
+					]
+				},
+				{
+					"name": "Summon Elementals (1/Day)",
+					"entries": [
+						"Olhydra invoca até três {@creature water elemental||water elementals} e perde 30 pontos de vida para cada elemental que invoca. Elementais invocados têm pontos de vida máximos, aparecem a até 30 metros de Olhydra e desaparecem se Olhydra for reduzida a 0 pontos de vida."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Crush",
+					"entries": [
+						"One creature that Olhydra is grappling is crushed for 21 ({@damage 3d10 + 5}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Fling (Costs 2 Actions)",
+					"entries": [
+						"Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes {@dice 1d6} bludgeoning damage for every 10 feet it was flung."
+					]
+				},
+				{
+					"name": "Water to Acid (Costs 3 Actions)",
+					"entries": [
+						"Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 ({@damage 2d10}) acid damage. Any creature {@condition grappled} by Olhydra takes 22 ({@damage 4d10}) acid damage at the start of its turn."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Olhydra",
+				"source": "PotA"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ"
+			],
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"damageTagsLegendary": [
+				"C"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"L",
+				"T"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone"
+			],
+			"conditionInflictLegendary": [
+				"frightened",
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"deafened"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedLegendary": [
+				"strength",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "One-Eyed Shiver",
+			"source": "PotA",
+			"page": 207,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 13,
+			"wis": 13,
+			"cha": 17,
+			"skill": {
+				"arcana": "+3",
+				"perception": "+3",
+				"intimidation": "+5"
+			},
+			"passive": 13,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The one-eyed shiver is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell mage hand}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell fog cloud}",
+								"{@spell mage armor}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell mirror image}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell fear}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Chilling Mist",
+					"entries": [
+						"Enquanto estiver vivo, o arrepio de um olho só projeta uma aura de névoa fria a até 3 metros de si mesmo. Se o arrepio de um olho causar dano a uma criatura nesta área, a criatura também sofrerá 5 ({@damage 1d10}) de dano de frio."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Eye of Frost",
+					"entries": [
+						"O arrepio de um olho só lança {@spell ray of frost} do olho perdido. Se acertar, o alvo também será {@condition restrained}. Um alvo {@condition restrained} desta forma pode encerrar a condição usando uma ação, obtendo sucesso em um teste de Força {@dc 13}."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"C",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"conditionInflictSpell": [
+				"frightened"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Oreioth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 212,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 14,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d8 + 12"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 14,
+			"int": 16,
+			"wis": 9,
+			"cha": 11,
+			"save": {
+				"wis": "+1"
+			},
+			"skill": {
+				"arcana": "+5",
+				"investigation": "+5",
+				"medicine": "+1"
+			},
+			"passive": 9,
+			"languages": [
+				"Abyssal",
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Oreioth is a 6th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell false life}",
+								"{@spell mage armor}",
+								"{@spell magic missile}",
+								"{@spell ray of sickness}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell crown of madness}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell vampiric touch}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Grim Harvest",
+					"entries": [
+						"Uma vez por turno, quando Oreioth mata uma ou mais criaturas com uma magia de 1º nível ou superior, ele recupera pontos de vida iguais ao dobro do nível da magia."
+					]
+				},
+				{
+					"name": "Swift Animation (Recharges after a Long Rest)",
+					"entries": [
+						"Quando um humanóide vivo Médio ou Pequeno a até 9 metros de Oreioth morre, ele pode usar uma ação em seu próximo turno para lançar {@spell animate dead} no cadáver daquele humanóide, em vez de usar o tempo normal de lançamento do feitiço."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AB",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"I",
+				"L",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Padraich",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 170,
+			"_copy": {
+				"name": "Berserker",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the berserker",
+						"with": "Padraich",
+						"flags": "i"
+					}
+				}
+			},
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"action": [
+				{
+					"name": "Maul",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"maul|phb"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Razerblast",
+			"source": "PotA",
+			"page": 201,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 75"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 11,
+			"con": 16,
+			"int": 9,
+			"wis": 10,
+			"cha": 13,
+			"skill": {
+				"intimidation": "+4",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Ignan"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Searing Armor",
+					"entries": [
+						"A armadura do razerblast está quente. Qualquer criatura que agarre o razerblast ou {@condition grappled} por ele sofre 5 ({@damage 1d10}) de dano de fogo no final do turno daquela criatura."
+					]
+				},
+				{
+					"name": "Shrapnel Explosion",
+					"entries": [
+						"Quando o razerblast chega a 0 pontos de vida, um orbe flamejante em seu peito explode, destruindo o corpo do razerblast e espalhando sua armadura como estilhaços. Criaturas a até 3 metros do razerblast quando ele explodir devem ter sucesso em um teste de resistência de {@dc 12} de Destreza, sofrendo 21 ({@damage 6d6}) de dano perfurante em caso de falha na resistência, ou metade do dano em caso de sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O razerblast faz três ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante, ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo, mais 3 ({@damage 1d6}) de dano de fogo."
+					]
+				}
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Renwick",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 66,
+			"_copy": {
+				"name": "Lich",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the lich",
+						"with": "Renwick",
+						"flags": "i"
+					}
+				}
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Renwick is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). Renwick has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell detect magic}",
+								"{@spell magic missile}",
+								"{@spell shield}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell detect thoughts}",
+								"{@spell invisibility}",
+								"{@spell Melf's acid arrow}",
+								"{@spell mirror image}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell animate dead}",
+								"{@spell counterspell}",
+								"{@spell dispel magic}",
+								"{@spell fireball}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell blight}",
+								"{@spell dimension door}"
+							]
+						},
+						"5": {
+							"slots": 3,
+							"spells": [
+								"{@spell cloudkill}",
+								"{@spell scrying}"
+							]
+						},
+						"6": {
+							"slots": 1,
+							"spells": [
+								"{@spell disintegrate}",
+								"{@spell globe of invulnerability}"
+							]
+						},
+						"7": {
+							"slots": 1,
+							"spells": [
+								"{@spell finger of death}",
+								"{@spell plane shift}"
+							]
+						},
+						"8": {
+							"slots": 1,
+							"spells": [
+								"{@spell dominate monster}",
+								"{@spell power word stun}"
+							]
+						},
+						"9": {
+							"slots": 1,
+							"spells": [
+								"{@spell time stop}"
+							]
+						}
+					},
+					"ability": "int"
+				}
+			],
+			"damageTagsLegendary": [],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Rhundorth",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 140,
+			"_copy": {
+				"name": "Guard",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the guard",
+						"with": "Rhundorth",
+						"flags": "i"
+					}
+				}
+			},
+			"ac": [
+				11
+			],
+			"str": 18,
+			"action": [
+				{
+					"name": "Warhammer",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 4}) de dano por concussão ou 10 ({@damage 1d10 + 4}) de dano por concussão se usado com as duas mãos."
+					]
+				}
+			],
+			"attachedItems": [
+				"warhammer|phb"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Sacred Stone Monk",
+			"source": "PotA",
+			"page": 196,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 22,
+				"formula": "4d8 + 4"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 15,
+			"con": 12,
+			"int": 10,
+			"wis": 14,
+			"cha": 9,
+			"skill": {
+				"acrobatics": "+4",
+				"athletics": "+3",
+				"perception": "+4"
+			},
+			"senses": [
+				"tremorsense 10 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Unarmored Defense",
+					"entries": [
+						"Enquanto o monge não estiver usando armadura e sem escudo, sua CA inclui seu modificador de Sabedoria."
+					]
+				},
+				{
+					"name": "Unarmored Movement",
+					"entries": [
+						"Enquanto o monge não estiver usando armadura e sem escudo, seu deslocamento de caminhada aumenta em 3 metros (incluído em seu deslocamento)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O monge faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Unarmed Strike",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The monk adds 2 to its AC against one melee or ranged weapon attack that would hit it. To do so, the monk must see the attacker."
+					]
+				}
+			],
+			"senseTags": [
+				"T"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shoalar Quanderil",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 208,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "genasi",
+						"prefix": "Water"
+					}
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				10,
+				{
+					"ac": 13,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d8 + 24"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 16,
+			"int": 14,
+			"wis": 10,
+			"cha": 17,
+			"skill": {
+				"arcana": "+4",
+				"deception": "+5",
+				"insight": "+2",
+				"persuasion": "+5"
+			},
+			"passive": 10,
+			"resist": [
+				"acid"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shoalar's innate spellcasting ability is Constitution (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He can innately cast the following spells:"
+					],
+					"will": [
+						"{@spell shape water|xge}"
+					],
+					"daily": {
+						"1": [
+							"{@spell create or destroy water}"
+						]
+					},
+					"ability": "con"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Shoalar is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). He knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell chill touch}",
+								"{@spell friends}",
+								"{@spell prestidigitation}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell disguise self}",
+								"{@spell mage armor}",
+								"{@spell magic missile}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell hold person}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell tidal wave|xge}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"Shoalar pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 3} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"C",
+				"N",
+				"O"
+			],
+			"spellcastingTags": [
+				"CS",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Skyweaver",
+			"source": "PotA",
+			"page": 191,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 10,
+			"cha": 16,
+			"skill": {
+				"deception": "+5",
+				"persuasion": "+5"
+			},
+			"passive": 10,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Skyweaver is a 6th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell blade ward}",
+								"{@spell light}",
+								"{@spell message}",
+								"{@spell ray of frost}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell feather fall}",
+								"{@spell mage armor}",
+								"{@spell witch bolt}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell gust of wind}",
+								"{@spell invisibility}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell fly}",
+								"{@spell lightning bolt}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 4} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"L"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Stone Warrior",
+			"source": "PotA",
+			"page": 97,
+			"_copy": {
+				"name": "Stone Golem",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "removeArr",
+						"names": "Multiattack"
+					}
+				}
+			},
+			"hp": {
+				"average": 102,
+				"formula": "17d10 + 85"
+			},
+			"cr": "4",
+			"actionTags": [],
+			"hasToken": true
+		},
+		{
+			"name": "Stonemelder",
+			"source": "PotA",
+			"page": 197,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item splint armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 10,
+			"con": 16,
+			"int": 12,
+			"wis": 11,
+			"cha": 17,
+			"skill": {
+				"intimidation": "+5",
+				"perception": "+2"
+			},
+			"senses": [
+				"tremorsense 30 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Terran"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Stonemelder is a 7th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). It knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell blade ward}",
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell mold earth|xge}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell expeditious retreat}",
+								"{@spell false life}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell Maximilian's earthen grasp|xge}",
+								"{@spell shatter}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell erupting earth|xge}",
+								"{@spell meld into stone}"
+							]
+						},
+						"4": {
+							"slots": 1,
+							"spells": [
+								"{@spell stoneskin}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Death Burst",
+					"entries": [
+						"Quando o Stonemelder morre, ele se transforma em pedra e explode em uma explosão de fragmentos de rocha, tornando-se uma pilha fumegante de entulho. Cada criatura a até 3 metros do Stonemelder explodindo deve realizar um teste de resistência de Destreza de {@dc 14}, sofrendo 11 ({@damage 2d10}) de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Black Earth Rod",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão. O Stonemelder também pode gastar um espaço de feitiço para causar dano extra, causando {@dice 2d8} de dano de concussão para um espaço de 1º nível, mais um {@dice 1d8} adicional para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"T"
+			],
+			"languageTags": [
+				"C",
+				"T"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"A",
+				"B",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Thurl Merosska",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 192,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 71,
+				"formula": "11d8 + 21"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 11,
+			"wis": 10,
+			"cha": 15,
+			"skill": {
+				"animal handling": "+2",
+				"athletics": "+5",
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"passive": 10,
+			"languages": [
+				"Auran",
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Thurl is a 5th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). Thurl knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell friends}",
+								"{@spell gust|xge}",
+								"{@spell light}",
+								"{@spell message}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell expeditious retreat}",
+								"{@spell feather fall}",
+								"{@spell jump}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell levitate}",
+								"{@spell misty step}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell haste}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Thurl faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Greatsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) cortando dano."
+					]
+				},
+				{
+					"name": "Lance",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}9 ({@damage 1d12 + 3}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"Thurl adds 2 to his AC against one melee attack that would hit him. To do so, Thurl must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"attachedItems": [
+				"greatsword|phb",
+				"lance|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"AU",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"C"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Tornscale",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 90,
+			"_copy": {
+				"name": "Lizardfolk",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the lizardfolk",
+						"with": "Tornscale",
+						"flags": "i"
+					}
+				}
+			},
+			"hp": {
+				"average": 36,
+				"formula": "4d8 + 4"
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Vanifer",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 203,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"tiefling"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 112,
+				"formula": "15d8 + 45"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 16,
+			"con": 17,
+			"int": 12,
+			"wis": 13,
+			"cha": 19,
+			"skill": {
+				"arcana": "+5",
+				"deception": "+8",
+				"performance": "+8"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Ignan",
+				"Infernal"
+			],
+			"cr": "9",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Vanifer is a 10th-level spellcaster. Her spellcasting ability is Charisma (spell save {@dc 16}, {@hit 8} to hit with spell attacks). Vanifer knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell fire bolt}",
+								"{@spell friends}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell produce flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell chromatic orb}",
+								"{@spell hellish rebuke}",
+								"{@spell shield}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell darkness}",
+								"{@spell detect thoughts}",
+								"{@spell misty step}",
+								"{@spell scorching ray}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell counterspell}",
+								"{@spell fireball}",
+								"{@spell hypnotic pattern}"
+							]
+						},
+						"4": {
+							"slots": 3,
+							"spells": [
+								"{@spell wall of fire}"
+							]
+						},
+						"5": {
+							"slots": 2,
+							"spells": [
+								"{@spell dominate person}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Funeral Pyre",
+					"entries": [
+						"Quando Vanifer chega a 0 pontos de vida, seu corpo é consumido por um clarão de fogo e fumaça. Tudo o que ela estava vestindo ou carregando foi deixado entre as cinzas."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se Vanifer falhar em um teste de resistência, ela pode escolher ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Vanifer faz dois ataques."
+					]
+				},
+				{
+					"name": "Tinderstrike",
+					"entries": [
+						"{@atk mw,rw} {@hit 9} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}7 ({@damage 1d4 + 5}) de dano perfurante mais 7 ({@damage 2d6}) de dano de fogo."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Vanifer",
+				"source": "PotA"
+			},
+			"attachedItems": [
+				"tinderstrike|pota"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I",
+				"IG"
+			],
+			"damageTags": [
+				"F",
+				"P"
+			],
+			"damageTagsLegendary": [
+				"F"
+			],
+			"damageTagsSpell": [
+				"A",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"T"
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"savingThrowForcedLegendary": [
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wiggan Nettlebee",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 212,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"halfling"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				11,
+				{
+					"ac": 16,
+					"condition": "with {@spell barkskin}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 12,
+			"con": 12,
+			"int": 14,
+			"wis": 15,
+			"cha": 13,
+			"skill": {
+				"deception": "+3",
+				"insight": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Halfling"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Wiggan is a 4th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 12}, {@hit 4} to hit with spell attacks). He has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance}",
+								"{@spell light}",
+								"{@spell mending}",
+								"{@spell shillelagh}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell animal friendship}",
+								"{@spell cure wounds}",
+								"{@spell healing word}",
+								"{@spell inflict wounds}",
+								"{@spell speak with animals}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell barkskin}",
+								"{@spell spike growth}",
+								"{@spell spiritual weapon}"
+							]
+						}
+					},
+					"ability": "wis"
+				}
+			],
+			"trait": [
+				{
+					"name": "Brave Devotion",
+					"entries": [
+						"Wiggan tem vantagem em testes de resistência contra ser {@condition charmed} ou {@condition frightened}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Wiggan faz dois ataques com sua bengala de madeira."
+					]
+				},
+				{
+					"name": "Wooden Cane",
+					"entries": [
+						"{@atk mw} {@hit 0} para acertar ({@hit 4} para acertar com shillelagh), alcance 5 pés, um alvo. {@h}1 ({@damage 1d4 - 1}) de dano por concussão ou 6 ({@damage 1d8 + 2}) de dano por concussão com shillelagh."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"H"
+			],
+			"damageTags": [
+				"B"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"charmed"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Windharrow",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 192,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"half-elf"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 14,
+			"wis": 10,
+			"cha": 17,
+			"skill": {
+				"acrobatics": "+5",
+				"deception": "+7",
+				"persuasion": "+5",
+				"performance": "+7",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Auran",
+				"Common",
+				"Elvish"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Windharrow is an 8th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 13}, {@hit 5} to hit with spell attacks). Windharrow knows the following bard spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell friends}",
+								"{@spell prestidigitation}",
+								"{@spell vicious mockery}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell disguise self}",
+								"{@spell dissonant whispers}",
+								"{@spell thunderwave}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell shatter}",
+								"{@spell silence}"
+							]
+						},
+						"3": {
+							"slots": 3,
+							"spells": [
+								"{@spell nondetection}",
+								"{@spell sending}",
+								"{@spell tongues}"
+							]
+						},
+						"4": {
+							"slots": 2,
+							"spells": [
+								"{@spell confusion}",
+								"{@spell dimension door}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"Windharrow tem vantagem em testes de resistência contra {@condition charmed}, e a magia não pode fazê-lo dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Windharrow faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Rapier",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"rapier|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AU",
+				"C",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"O",
+				"T",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CB"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Yan-C-Bin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 221,
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 283,
+				"formula": "21d12 + 147"
+			},
+			"speed": {
+				"walk": 50,
+				"fly": 150
+			},
+			"str": 18,
+			"dex": 24,
+			"con": 24,
+			"int": 16,
+			"wis": 21,
+			"cha": 23,
+			"save": {
+				"dex": "+13",
+				"wis": "+11",
+				"cha": "+12"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"cold",
+				"fire",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning",
+				"poison",
+				"thunder"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"Auran"
+			],
+			"cr": "18",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Yan-C-Bin's innate spellcasting ability is Charisma (spell save {@dc 20}, {@hit 12} to hit with spell attacks). He can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell gust of wind}",
+						"{@spell invisibility}",
+						"{@spell lightning bolt}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell chain lightning}",
+							"{@spell cloudkill}",
+							"{@spell haste}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Air Form",
+					"entries": [
+						"Yan-C-Bin pode entrar no espaço de uma criatura hostil e parar aí. Ele pode se mover através de um espaço tão estreito quanto 1 polegada de largura sem apertar se o ar puder passar por esse espaço."
+					]
+				},
+				{
+					"name": "Empowered Attacks",
+					"entries": [
+						"Os ataques slam de Yan-C-Bin são tratados como mágicos com o propósito de contornar a resistência e imunidade a ataques não mágicos."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Yan-C-Bin falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Yan-C-Bin tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Yan-C-Bin faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 10 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) de dano de força mais 10 ({@damage 3d6}) de dano elétrico."
+					]
+				},
+				{
+					"name": "Thundercrack (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Yan-C-Bin libera um terrível trovão em uma esfera de 30 metros de raio centrada em si mesmo. Todas as outras criaturas na área devem ter sucesso em um teste de resistência de Constituição {@dc 24} ou sofrerão 31 ({@damage 9d6}) de dano trovejante e sofrerão {@condition deafened} por 1 minuto. Em um teste bem-sucedido, uma criatura sofre metade do dano e fica {@condition deafened} até o início do próximo turno de Yan-C-Bin."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Yan-C-Bin se transforma em um humanóide Médio. Enquanto está na forma polimorfa, uma brisa turbulenta o envolve, seus olhos ficam pálidos e turvos e ele perde a característica Forma Aérea. Ele pode permanecer na forma polimorfa por até 1 hora. Reverter à sua verdadeira forma requer uma ação."
+					]
+				},
+				{
+					"name": "Summon Elementals (1/Day)",
+					"entries": [
+						"Yan-C-Bin invoca até três {@creature air elemental||air elementals} e perde 30 pontos de vida para cada elemental que invoca. Elementais invocados têm pontos de vida máximos, aparecem a até 30 metros de Yan-C-Bin e desaparecem se Yan-C-Bin for reduzido a 0 pontos de vida."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Peal of Thunder",
+					"entries": [
+						"Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 ({@damage 1d10}) thunder damage."
+					]
+				},
+				{
+					"name": "Teleport (Costs 2 Actions)",
+					"entries": [
+						"Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him."
+					]
+				},
+				{
+					"name": "Suffocate (Costs 3 Actions)",
+					"entries": [
+						"Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a {@dc 21} Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Yan-C-Bin",
+				"source": "PotA"
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"AU"
+			],
+			"damageTags": [
+				"L",
+				"O",
+				"T"
+			],
+			"damageTagsLegendary": [
+				"B",
+				"L"
+			],
+			"damageTagsSpell": [
+				"I",
+				"L"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"conditionInflictLegendary": [
+				"blinded"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Young Bulette",
+			"source": "PotA",
+			"page": 139,
+			"_copy": {
+				"name": "Rhinoceros",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "rhinoceros",
+						"with": "bulette"
+					}
+				}
+			},
+			"hp": {
+				"average": 45,
+				"formula": "6d10 + 12"
+			},
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) dano perfurante."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Young Purple Worm",
+			"source": "PotA",
+			"page": 113,
+			"_copy": {
+				"name": "Purple Worm",
+				"source": "MM"
+			},
+			"hp": {
+				"average": 184,
+				"formula": "15d20 + 90"
+			},
+			"cr": "13",
+			"hasToken": true
+		},
+		{
+			"name": "Zegdar",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "PotA",
+			"page": 120,
+			"_copy": {
+				"name": "Emberhorn Minotaur",
+				"source": "PotA",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the minotaur",
+						"with": "Zegdar",
+						"flags": "i"
+					}
+				}
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 117,
+				"formula": "9d10 + 27"
+			},
+			"int": 11,
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

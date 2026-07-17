@@ -1,0 +1,4813 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Bodytaker Plant",
+			"source": "VRGR",
+			"page": 226,
+			"size": [
+				"H"
+			],
+			"type": "plant",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 92,
+				"formula": "8d12 + 40"
+			},
+			"speed": {
+				"walk": 10,
+				"climb": 10,
+				"swim": 10
+			},
+			"str": 18,
+			"dex": 8,
+			"con": 20,
+			"int": 14,
+			"wis": 14,
+			"cha": 18,
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius)"
+			],
+			"passive": 12,
+			"vulnerable": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Podling Link",
+					"entries": [
+						"A planta pode ver e se comunicar telepaticamente com qualquer um de seus frutos em um raio de 16 quilômetros dela."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"Quando a planta morre, ela volta à vida no local onde morreu {@dice 1d12} meses depois, a menos que o solo onde se enraizou seja semeado com sal ou encharcado de veneno."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"A planta não precisa de sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A planta faz três ataques Vine Lash."
+					]
+				},
+				{
+					"name": "Vine Lash",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 20 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) cortando dano. Se o alvo for uma criatura, é {@condition grappled} (escape {@dc 15}). Até que a luta termine, o alvo é {@condition restrained}. A planta possui quatro vinhas, cada uma das quais pode atingir um alvo."
+					]
+				},
+				{
+					"name": "Entrapping Pod",
+					"entries": [
+						"{@atk mw} {@hit 7} para atingir, alcance 1,5 m, uma criatura média ou menor {@condition grappled} pela planta. {@h}22 ({@damage 4d8 + 4}) dano ácido, e o alvo é puxado para o espaço da planta e envolvido pela vagem, e a garra termina. Enquanto envelopado, o alvo é {@condition restrained} e possui {@quickref Cover||3||total cover} contra ataques e efeitos originados fora do pod. O alvo envelopado também deve ter sucesso imediato em um teste de resistência de Constituição {@dc 16} ou será {@condition stunned} pelas enzimas enfraquecidas da planta até que seja removido do fruto ou a planta morra. O alvo envelopado não requer ar e ganha 1 nível de {@condition exhaustion} para cada hora que passa no casulo. Se o alvo morrer enquanto estiver envolto, ele emerge imediatamente do casulo como um casulo vivo, vestindo ou carregando todo o equipamento original da criatura.",
+						"Como uma ação, uma criatura a até 1,5 metro da planta do corpo que está fora do casulo pode abrir o casulo e libertar o alvo com um teste de Força {@dc 15} bem-sucedido. Se a planta morrer, o alvo não será mais {@condition restrained} e poderá escapar do casulo gastando 3 metros de movimento, saindo de {@condition prone}. A planta possui uma vagem, que pode envolver uma criatura por vez."
+					]
+				}
+			],
+			"traitTags": [
+				"Rejuvenation",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Boneless",
+			"source": "VRGR",
+			"page": 228,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 15,
+			"int": 1,
+			"wis": 10,
+			"cha": 1,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"bludgeoning",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Compression",
+					"entries": [
+						"O desossado pode passar por qualquer abertura de pelo menos 2,5 cm de largura sem apertar. Ele também pode se espremer para caber em um espaço onde uma criatura minúscula caberia."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O desossado não precisa dormir."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O desossado faz dois ataques Slam. Se ambos os ataques atingirem uma criatura Grande ou menor, a criatura será {@condition grappled} (escape {@dc 13}), e o desossado poderá usar Abraço Esmagador."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano de concussão."
+					]
+				},
+				{
+					"name": "Crushing Embrace",
+					"entries": [
+						"O desossado envolve seu corpo em torno de uma criatura grande ou menor {@condition grappled} perto dele. Enquanto o desossado está preso, o alvo é {@condition blinded} e não consegue respirar. O alvo deve ter sucesso em um teste de resistência de Força {@dc 13} no início de cada turno do desossado ou sofrerá 5 ({@damage 1d4 + 3}) de dano de concussão. Se algo move o alvo, o desossado se move com ele. O desossado pode se separar gastando 1,5 metro de movimento. Uma criatura, incluindo o alvo, pode usar sua ação para tentar separar o desossado e forçá-lo a se mover para o espaço desocupado mais próximo, fazendo isso com um teste de Força {@dc 13} bem-sucedido. Quando o desossado morre, ele se separa de qualquer criatura à qual esteja anexado."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Brain in a Jar",
+			"source": "VRGR",
+			"page": 278,
+			"otherSources": [
+				{
+					"source": "IDRotF",
+					"page": 278
+				}
+			],
+			"size": [
+				"S"
+			],
+			"type": "undead",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d6 + 20"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 10,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 1,
+			"dex": 3,
+			"con": 15,
+			"int": 19,
+			"wis": 10,
+			"cha": 15,
+			"save": {
+				"int": "+6",
+				"cha": "+4"
+			},
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius); see also \"detect sentience\" below"
+			],
+			"passive": 10,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"paralyzed",
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The brain's innate spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). It can innately cast the following spells, requiring no components:"
+					],
+					"will": [
+						"{@spell chill touch} (see \"Actions\" below)",
+						"{@spell detect thoughts}",
+						"{@spell mage hand}",
+						"{@spell zone of truth}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell charm person}",
+							"{@spell hold person}"
+						],
+						"1e": [
+							"{@spell compulsion}",
+							"{@spell hold monster}",
+							"{@spell sleep} (3rd-level version)",
+							"{@spell Tasha's hideous laughter}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Detect Sentience",
+					"entries": [
+						"O cérebro pode sentir a presença e localização de qualquer criatura a até 90 metros dele que tenha Inteligência 3 ou superior, independentemente de barreiras interpostas, a menos que a criatura esteja protegida por um feitiço {@spell mind blank}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O cérebro tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O cérebro não necessita de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Chill Touch (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 6} para acertar, alcance de 36 metros, uma criatura. {@h}13 ({@damage 3d8}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do cérebro. Se o alvo for um morto-vivo, ele também terá desvantagem nas jogadas de ataque contra o cérebro até o final do próximo turno do cérebro."
+					]
+				},
+				{
+					"name": "Mind Blast {@recharge 5}",
+					"entries": [
+						"O cérebro emite magicamente energia psíquica em um cone de 18 metros. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Inteligência {@dc 14} ou sofrerá 17 ({@damage 3d8 + 4}) de dano psíquico e sofrerá {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"paralyzed",
+				"prone",
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Carrion Stalker",
+			"source": "VRGR",
+			"page": 230,
+			"size": [
+				"T"
+			],
+			"type": "monstrosity",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 35,
+				"formula": "10d4 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 12,
+			"int": 2,
+			"wis": 13,
+			"cha": 6,
+			"skill": {
+				"stealth": "+7"
+			},
+			"senses": [
+				"tremorsense 60 ft."
+			],
+			"passive": 11,
+			"conditionImmune": [
+				"blinded"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O perseguidor da carniça faz três ataques de tentáculos. Se estiver anexado a uma criatura, pode substituir um ataque de Tentáculo por Explosão Larval, se disponível."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}5 ({@damage 1d4 + 3}) dano perfurante, e o perseguidor da carniça se fixa no alvo e se puxa para o espaço do alvo. Enquanto estiver anexado, o espreitador da carniça se move com o alvo e tem vantagem nas jogadas de ataque contra ele.",
+						"Uma criatura pode usar sua ação para tentar separar o perseguidor de carniça e forçá-lo a se mover para o espaço desocupado mais próximo, fazendo isso com um teste de Força {@dc 11} bem-sucedido. Por seu turno, o espreitador da carniça pode se separar do alvo usando 1,5 metro de movimento. Quando morre, o perseguidor da carniça se separa de qualquer criatura à qual esteja anexado."
+					]
+				},
+				{
+					"name": "Larval Burst (1/Day)",
+					"entries": [
+						"O perseguidor da carniça libera uma explosão de larvas em uma esfera de 3 metros de raio centrada em si mesmo. Cada criatura naquela área deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou será {@condition poisoned}. Uma criatura {@condition poisoned} desta forma sofre 7 ({@damage 2d6}) de dano de veneno no início de cada um de seus turnos enquanto larvas infestam seu corpo. A criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso. Qualquer efeito que cure doenças ou remova a condição {@condition poisoned} mata instantaneamente as larvas da criatura, encerrando o efeito sobre ela.",
+						"Se uma criatura for reduzida a 0 pontos de vida pela infestação, ela morre. As larvas permanecem no cadáver e uma sobrevive para se tornar um perseguidor de carniça totalmente crescido em {@dice 1d4} semanas. Qualquer efeito que cure doenças ou remova a condição {@condition poisoned} que atinge o cadáver mata instantaneamente as larvas."
+					]
+				}
+			],
+			"senseTags": [
+				"T"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"DIS",
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Carrionette",
+			"source": "VRGR",
+			"page": 231,
+			"size": [
+				"S"
+			],
+			"type": "construct",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "6d6 + 6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 12,
+			"int": 8,
+			"wis": 14,
+			"cha": 14,
+			"passive": 12,
+			"resist": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "False Object",
+					"entries": [
+						"Se a carionete estiver imóvel no início do combate, ela terá vantagem em seu teste de iniciativa. Além disso, se uma criatura não observou o movimento ou ação da carrionete, essa criatura deve ser bem sucedida em um teste de {@dc 15} Sabedoria ({@skill Perception}) para discernir que a carrionete está animada."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"A carionete não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Silver Needle",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura. {@h}1 de dano perfurante mais 3 ({@damage 1d6}) de dano necrótico, e o alvo deve ter sucesso em um teste de resistência de Carisma de {@dc 12} ou será amaldiçoado por 1 minuto. Enquanto amaldiçoado desta forma, a velocidade do alvo é reduzida em 3 metros, e ele deve rolar um {@dice 1d4} e subtrair o número rolado de cada teste de habilidade ou jogada de ataque que fizer."
+					]
+				},
+				{
+					"name": "Soul Swap",
+					"entries": [
+						"A carionete tem como alvo uma criatura que ela possa ver a até 4,5 metros dela e que esteja amaldiçoada por sua Agulha Prateada. A menos que o alvo esteja protegido por um feitiço {@spell protection from evil and good}, ele deve ter sucesso em um teste de resistência de Carisma {@dc 12} ou terá sua consciência trocada pela carionete. A carionete ganha o controle do corpo do alvo, e o alvo fica {@condition unconscious} por 1 hora, após o qual ganha o controle do corpo da carionete. Enquanto controla o corpo do alvo, a carrionete mantém seus valores de Inteligência, Sabedoria e Carisma. Caso contrário, ele usa as estatísticas do corpo controlado, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
+						"Se o corpo da carionete for destruído, tanto a carrionete quanto o alvo morrem. Um feitiço {@spell protection from evil and good} lançado no corpo controlado expulsa a carionete e retorna a consciência de ambas as criaturas aos seus corpos originais. A troca também é desfeita se o corpo controlado sofrer dano da Agulha de Prata da carionete."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"CUR",
+				"MW"
+			],
+			"conditionInflict": [
+				"unconscious"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Death's Head",
+			"source": "VRGR",
+			"page": 232,
+			"size": [
+				"T"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 17,
+				"formula": "5d4 + 5"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 13,
+			"con": 12,
+			"int": 5,
+			"wis": 14,
+			"cha": 3,
+			"passive": 12,
+			"resist": [
+				"necrotic"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Beheaded Form",
+					"entries": [
+						"Quando criada, a caveira assume uma das três formas: Cabeça Aberrante, Cabeça Gnashing ou Cabeça Petrificante. Esta forma determina o ataque da criatura."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"A caveira não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Gnashing Bite (Gnashing Head Only)",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) de dano perfurante mais 7 ({@damage 2d6}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Mind-Bending Bite (Aberrant Head Only)",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}4 ({@damage 1d6 + 1}) de dano perfurante mais 5 ({@damage 1d10}) de dano necrótico, e o alvo deve ter sucesso em um teste de resistência de Inteligência de {@dc 10} ou não poderá realizar uma reação até o final do próximo turno. Além disso, no seu próximo turno, o alvo deve escolher se realizará um movimento, uma ação ou uma ação bônus; obtém apenas um dos três."
+					]
+				},
+				{
+					"name": "Petrifying Bite (Petrifying Head Only)",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d4 + 1}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou será {@condition restrained} quando começar a virar pedra. O alvo deve repetir o teste de resistência no final do próximo turno. Com um sucesso, o efeito termina. Em caso de falha, o alvo é {@condition petrified} por 10 minutos."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"intelligence"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dullahan",
+			"source": "VRGR",
+			"page": 233,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d8 + 54"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 15,
+			"cha": 16,
+			"save": {
+				"con": "+7"
+			},
+			"skill": {
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"cold",
+				"lightning",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Headless Summoning (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Se o dumbahan for reduzido a 0 pontos de vida, ele não morre nem cai {@condition unconscious}. Em vez disso, recupera 97 pontos de vida. Além disso, ele invoca três {@creature death's head|VRGR|death's heads}, um de cada tipo, em espaços desocupados a até 1,5 metro dele. As caveiras estão sob o controle do Dullahan e agem imediatamente após o Dullahan na ordem de iniciativa. Além disso, o Dullahan agora pode usar as opções da seção “Ações Míticas”. Conceda a um grupo 5.900 XP adicionais (11.800 XP no total) por derrotar o Dullahan após ele usar a Invocação Sem Cabeça."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se o dumbahan falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O Dullahan não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dumbahan faz dois ataques."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante ou 9 ({@damage 1d10 + 4}) de dano cortante se usado com as duas mãos, mais 11 ({@damage 2d10}) de dano necrótico. Se o dumbahan obtiver um acerto crítico contra uma criatura, o alvo deve ser bem sucedido em um teste de resistência de Constituição {@dc 15} ou o dumbahan cortará a cabeça do alvo. O alvo morre se não conseguir sobreviver sem a cabeça perdida. Uma criatura que não tem ou não precisa de uma cabeça, ou que tem ações lendárias, sofre 27 ({@damage 6d8}) de dano cortante extra."
+					]
+				},
+				{
+					"name": "Fiery Skull",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 120 pés, um alvo. {@h}14 ({@damage 2d10 + 3}) dano de fogo."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"The dullahan makes one attack."
+					]
+				},
+				{
+					"name": "Frightful Presence (Costs 2 Actions)",
+					"entries": [
+						"Each creature of the dullahan's choice within 30 feet of it must succeed on a {@dc 15} Wisdom saving throw or become {@condition frightened} of the dullahan until the end of its next turn."
+					]
+				},
+				{
+					"name": "Head Hunt (Costs 3 Actions)",
+					"entries": [
+						"The dullahan moves up to its speed without provoking opportunity attacks and makes one Battleaxe attack with advantage. If the attack hits, but is not a critical hit, the attack deals an extra 27 ({@damage 6d8}) necrotic damage."
+					]
+				}
+			],
+			"mythicHeader": [
+				"If the dullahan's Headless Summoning trait is active, it can use the options below as legendary actions."
+			],
+			"mythic": [
+				{
+					"name": "Coordinated Assault",
+					"entries": [
+						"The dullahan makes a Battleaxe attack, and then one {@creature death's head|VRGR} the dullahan can see within 30 feet of it can use its reaction to make a melee attack."
+					]
+				},
+				{
+					"name": "Headless Wail (Costs 2 Actions)",
+					"entries": [
+						"An echoing shriek issues from the dullahan's headless stump. Each creature of the dullahan's choice within 10 feet of it must make a {@dc 15} Wisdom saving throw. Each creature takes 16 ({@damage 3d10}) psychic damage on a failed save, or half as much damage on a successful one. If one or more creatures fail the saving throw, the dullahan gains 10 temporary hit points."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"F",
+				"N",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Elise",
+			"isNamedCreature": true,
+			"source": "VRGR",
+			"page": 143,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"average": 93,
+				"formula": "11d8 + 44"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 19,
+			"dex": 9,
+			"con": 18,
+			"int": 6,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"immune": [
+				"cold",
+				"lightning",
+				"poison",
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages of its creator but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Immutable Form",
+					"entries": [
+						"Elise é imune a qualquer feitiço ou efeito que altere sua forma."
+					]
+				},
+				{
+					"name": "Lightning Absorption",
+					"entries": [
+						"Sempre que Elise é submetida a dano elétrico, ela não sofre dano e, em vez disso, recupera um número de pontos de vida igual ao dano elétrico causado."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Elise tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Magic Weapons",
+					"entries": [
+						"Os ataques com armas de Elise são mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Elise faz dois ataques violentos."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption",
+				"Immutable Form",
+				"Magic Resistance",
+				"Magic Weapons"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gallows Speaker",
+			"source": "VRGR",
+			"page": 234,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 85,
+				"formula": "19d8"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 12,
+			"cha": 18,
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+7"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"any languages its component spirits knew in life"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Divination Senses",
+					"entries": [
+						"O orador da forca pode ver 18 metros no Plano Etéreo quando está no Plano Material e vice-versa."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"O orador da forca pode se mover através de outras criaturas e objetos como se fossem {@quickref difficult terrain||3}. Recebe 5 ({@damage 1d10}) de dano de força se terminar o turno dentro de um objeto."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O alto-falante da forca não requer ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Foretelling Touch",
+					"entries": [
+						"{@atk ms} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}15 ({@damage 2d10 + 4}) de dano psíquico, e o alvo deve rolar um {@dice d4} e subtrair o número rolado da próxima jogada de ataque ou teste de resistência que fizer antes do início do próximo turno do orador da forca."
+					]
+				},
+				{
+					"name": "Suffering Echoes",
+					"entries": [
+						"O orador da forca tem como alvo uma criatura que ele possa ver a até 9 metros dele. O alvo deve fazer um teste de resistência de {@dc 15} Sabedoria. Se falhar na resistência, o alvo sofre 19 ({@damage 3d12}) de dano psíquico, e ondas de memórias dolorosas saltam do alvo para até três outras criaturas à escolha do orador da forca que estão a até 9 metros do alvo, cada uma das quais sofre 13 ({@damage 3d8}) de dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"U"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Greater Star Spawn Emissary",
+			"source": "VRGR",
+			"page": 245,
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 290,
+				"formula": "20d12 + 160"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 24,
+			"dex": 13,
+			"con": 26,
+			"int": 27,
+			"wis": 22,
+			"cha": 25,
+			"save": {
+				"con": "+15",
+				"int": "+15",
+				"wis": "+13",
+				"cha": "+14"
+			},
+			"skill": {
+				"arcana": "+22",
+				"perception": "+13"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"acid",
+				"force",
+				"necrotic",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all",
+				"telepathy 1,000 ft."
+			],
+			"cr": "21",
+			"trait": [
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"Se o emissário falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O emissário não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O emissário faz três ataques."
+					]
+				},
+				{
+					"name": "Lashing Maw",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 15 pés, um alvo. {@h}20 ({@damage 2d10 + 7}) de dano perfurante mais 13 ({@damage 3d8}) de dano ácido."
+					]
+				},
+				{
+					"name": "Psychic Orb",
+					"entries": [
+						"{@atk rs} {@hit 15} para acertar, alcance de 36 metros, uma criatura. {@h}27 ({@damage 3d12 + 8}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Unearthly Bile {@recharge 5}",
+					"entries": [
+						"O emissário expele bile que espirra todas as criaturas em uma esfera de 9 metros de raio centrada em um ponto a até 36 metros do emissário. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 23}, sofrendo 55 ({@damage 10d10}) de dano ácido se falhar na resistência, ou metade do dano se obtiver sucesso. Para cada criatura que falhar no teste de resistência, um {@creature gibbering mouther} (veja sua entrada no Manual dos Monstros) aparece em um espaço desocupado em uma superfície que possa suportá-lo a até 9 metros daquela criatura. Os bocadores tagarelas agem logo após o emissário na mesma contagem de iniciativa, ganhando um bônus de +7 em suas jogadas de ataque e dano, e lutando até serem destruídos. Eles desaparecem quando o emissário morre."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"The emissary teleports up to 30 feet to an unoccupied space it can see and makes one attack."
+					]
+				},
+				{
+					"name": "Warp Space (Costs 2 Actions)",
+					"entries": [
+						"The emissary causes the ground in a 20-foot square that it can see within 90 feet of it to turn into teeth and maws until the start of its next turn. The area becomes {@quickref difficult terrain||3} for the duration. Any creature takes 10 ({@damage 3d6}) piercing damage for each 5 feet it moves on this terrain."
+					]
+				},
+				{
+					"name": "Mind Cloud (Costs 3 Actions)",
+					"entries": [
+						"The emissary unleashes a psychic wave. Each creature within 30 feet of the emissary must succeed on a {@dc 23} Wisdom saving throw or take 32 ({@damage 5d12}) psychic damage. In addition, every spell ends on creatures and objects of the emissary's choice in that area."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"A",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gremishka",
+			"source": "VRGR",
+			"page": 235,
+			"size": [
+				"T"
+			],
+			"type": "monstrosity",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 10,
+				"formula": "4d4"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 6,
+			"dex": 14,
+			"con": 10,
+			"int": 12,
+			"wis": 11,
+			"cha": 4,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}2 ({@damage 1d4 + 2}) de dano perfurante mais 3 ({@damage 1d6}) de dano de força."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Magic Allergy (1/Day)",
+					"entries": [
+						"Immediately after a creature within 30 feet of the gremishka casts a spell, the gremishka can spontaneously react to the magic. Roll a {@dice d6} to determine the effect:",
+						{
+							"type": "item",
+							"name": "1-2",
+							"entry": "The gremishka emanates magical energy. Each creature within 30 feet of the gremishka must succeed on a {@dc 10} Constitution saving throw or take 3 ({@damage 1d6}) force damage."
+						},
+						{
+							"type": "item",
+							"name": "3-4",
+							"entry": "The gremishka surges with magical energy and regains 3 ({@dice 1d6}) hit points."
+						},
+						{
+							"type": "item",
+							"name": "5-6",
+							"entry": "The gremishka explodes and dies, and one swarm of gremishkas instantly appears in the space where this gremishka died. The swarm uses the gremishka's initiative."
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Inquisitor of the Mind Fire",
+			"source": "VRGR",
+			"page": 248,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 17,
+			"wis": 16,
+			"cha": 19,
+			"save": {
+				"int": "+6",
+				"wis": "+6",
+				"cha": "+7"
+			},
+			"skill": {
+				"insight": "+6",
+				"perception": "+6"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"any three languages",
+				"telepathy 120 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The inquisitor casts one of the following spells, requiring no components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell arcane eye}",
+						"{@spell calm emotions}",
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}",
+						"{@spell sending}",
+						"{@spell suggestion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell mass suggestion}",
+							"{@spell modify memory}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O inquisidor ataca duas vezes com sua Espada Longa Prateada ou usa Fogo Mental duas vezes."
+					]
+				},
+				{
+					"name": "Silver Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante ou 9 ({@dice 1d10 + 4}) se usado com as duas mãos, mais 18 ({@damage 4d8}) de dano de força."
+					]
+				},
+				{
+					"name": "Mind Fire",
+					"entries": [
+						"O inquisidor tem como alvo uma criatura que ele possa ver a até 36 metros dele. O alvo deve ter sucesso em um teste de resistência de Inteligência {@dc 15} ou sofrerá 17 ({@damage 3d8 + 4}) de dano psíquico e será {@condition stunned} até o início do próximo turno do inquisidor."
+					]
+				},
+				{
+					"name": "Inquisitor's Command {@recharge 5}",
+					"entries": [
+						"Cada criatura, à escolha do inquisidor, que ele possa ver a até 18 metros dele deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 15} ou permanecerá {@condition charmed} até o início do próximo turno do inquisidor. No turno do alvo {@condition charmed}, o inquisidor pode controlar telepaticamente o movimento, a ação do alvo ou ambos. Quando controlado desta forma, o alvo pode realizar apenas a ação de Ataque (o inquisidor escolhe o alvo) ou Correr."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"O",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed",
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Inquisitor of the Sword",
+			"source": "VRGR",
+			"page": 249,
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item breastplate|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 91,
+				"formula": "14d8 + 28"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 14,
+			"int": 15,
+			"wis": 18,
+			"cha": 16,
+			"save": {
+				"int": "+5",
+				"wis": "+7",
+				"cha": "+6"
+			},
+			"skill": {
+				"acrobatics": "+5",
+				"athletics": "+4",
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"any two languages",
+				"telepathy 120 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The inquisitor casts one of the following spells, requiring no components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell detect thoughts}",
+						"{@spell dispel magic}",
+						"{@spell sending}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dimension door}",
+							"{@spell fly}",
+							"{@spell greater invisibility}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Metabolic Control",
+					"entries": [
+						"No início de cada um de seus turnos, o inquisidor recupera 10 pontos de vida e pode encerrar uma condição em si mesmo, desde que o inquisidor tenha pelo menos 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O inquisidor ataca duas vezes com sua Espada Longa Prateada. Depois de acertar ou errar um ataque, o inquisidor pode se teletransportar até 9 metros para um espaço desocupado que possa ver."
+					]
+				},
+				{
+					"name": "Silver Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante ou 9 ({@dice 1d10 + 4}) se usado com as duas mãos, mais 18 ({@damage 4d8}) de dano de força."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Blink Step",
+					"entries": [
+						"The inquisitor teleports up to 60 feet to an unoccupied space it can see."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Inquisitor of the Tome",
+			"source": "VRGR",
+			"page": 249,
+			"otherSources": [
+				{
+					"source": "VEoR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 12,
+			"int": 19,
+			"wis": 16,
+			"cha": 15,
+			"save": {
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+5"
+			},
+			"skill": {
+				"arcana": "+10",
+				"history": "+7",
+				"nature": "+7",
+				"religion": "+10"
+			},
+			"senses": [
+				"truesight 30 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"any four languages",
+				"telepathy 120 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The inquisitor casts one of the following spells, requiring no components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell dispel magic}",
+						"{@spell levitate}",
+						"{@spell mage armor}",
+						"{@spell mage hand}",
+						"{@spell sending}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Otiluke's resilient sphere}",
+							"{@spell telekinesis}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O inquisidor ataca duas vezes."
+					]
+				},
+				{
+					"name": "Force Bolt",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 36 metros, um alvo. {@h}22 ({@damage 4d8 + 4}) dano de força, e se o alvo for uma criatura grande ou menor, o inquisidor pode empurrá-lo até 3 metros de distância."
+					]
+				},
+				{
+					"name": "Silver Longsword",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante ou 9 ({@dice 1d10 + 4}) se usado com as duas mãos, mais 18 ({@damage 4d8}) de dano de força."
+					]
+				},
+				{
+					"name": "Implode {@recharge 4}",
+					"entries": [
+						"Cada criatura em uma esfera de 6 metros de raio centrada em um ponto que o inquisidor possa ver a até 36 metros dela deve ser bem sucedida em um teste de resistência de Constituição {@dc 15} ou sofrerá 31 ({@damage 6d8 + 4}) de dano de força e será derrubada {@condition prone} e movida para o espaço desocupado mais próximo do centro da esfera. Objetos grandes e menores que não estão sendo usados ​​ou carregados na esfera sofrem automaticamente o dano e são movidos de forma semelhante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Telekinetic Deflection",
+					"entries": [
+						"In response to being hit by an attack roll, the inquisitor increases its AC by 4 against the attack. If this causes the attack to miss, the attacker is hit by the attack instead."
+					]
+				}
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"O",
+				"S"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Isolde",
+			"isNamedCreature": true,
+			"source": "VRGR",
+			"page": 86,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"L",
+				"NX",
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item scale mail|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 60
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 16,
+			"int": 14,
+			"wis": 12,
+			"cha": 16,
+			"save": {
+				"str": "+7",
+				"con": "+6",
+				"int": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"deception": "+6",
+				"intimidation": "+6",
+				"perception": "+4",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"cold",
+				"fire",
+				"lightning",
+				"poison",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Infernal"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Isolde's spellcasting ability is Charisma (spell save {@dc 14}). Isolde can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"1": [
+							"{@spell plane shift} (self only)"
+						],
+						"3e": [
+							"{@spell alter self}",
+							"{@spell command}",
+							"{@spell detect magic}"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fiendish Blessing",
+					"entries": [
+						"O AC de Isolde inclui seu bônus de Carisma."
+					]
+				},
+				{
+					"name": "Magic Resistance Aura",
+					"entries": [
+						"Enquanto segura {@item Nepenthe|VRGR}, Isolde cria uma aura em um raio de 3 metros ao seu redor. Enquanto esta aura estiver ativa, Isolde e todas as criaturas amigas dela na aura têm vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Isolde faz dois ataques corpo a corpo ou usa seu Raio de Fogo duas vezes."
+					]
+				},
+				{
+					"name": "Nepenthe",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés.., um alvo. {@h}11 ({@damage 1d8 + 7}) de dano cortante, ou 12 ({@damage 1d10 + 7}) de dano cortante se usado com as duas mãos para fazer um ataque corpo a corpo. Se o alvo for um demônio ou um morto-vivo, ele sofrerá 11 ({@damage 2d10}) de dano radiante extra."
+					]
+				},
+				{
+					"name": "Fire Ray",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 120 pés, um alvo. {@h}10 ({@damage 3d6}) dano de fogo."
+					]
+				},
+				{
+					"name": "Fiendish Charm",
+					"entries": [
+						"Um humanóide que Isolde possa ver a até 9 metros dele deve ter sucesso em um teste de resistência de Sabedoria {@dc 14} ou será magicamente {@condition charmed} por 1 dia. O alvo {@condition charmed} obedece aos comandos falados de Isolde. Se o alvo sofrer algum dano de Isolde ou outra criatura ou receber um comando suicida de Isolde, o alvo pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso. Se o teste de resistência do alvo for bem sucedido, ou se o efeito terminar, a criatura ficará imune ao Feitiço Demoníaco de Isolde pelas próximas 24 horas."
+					]
+				}
+			],
+			"attachedItems": [
+				"nepenthe|vrgr"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"F",
+				"R",
+				"S"
+			],
+			"damageTagsSpell": [
+				"B",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Jiangshi",
+			"source": "VRGR",
+			"page": 236,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 119,
+				"formula": "14d8 + 56"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 18,
+			"dex": 3,
+			"con": 18,
+			"int": 17,
+			"wis": 14,
+			"cha": 12,
+			"save": {
+				"con": "+8",
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"any languages it knew in life"
+			],
+			"cr": "9",
+			"trait": [
+				{
+					"name": "Jiangshi Weaknesses",
+					"entries": [
+						"O jiangshi tem as seguintes falhas:",
+						"{@i Fear of Its Own Reflection.} Se o jiangshi vir seu próprio reflexo, ele imediatamente usará sua reação, se disponível, para se afastar o máximo possível do reflexo.",
+						"{@i Susceptible to Holy Symbols.} Enquanto o jiangshi está usando ou tocando um símbolo sagrado, ele falha automaticamente nos testes de resistência contra efeitos que expulsam mortos-vivos."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O jiangshi não precisa de ar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O jiangshi faz três ataques Slam e usa Consumir Energia."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Consume Energy",
+					"entries": [
+						"O jiangshi extrai energia de uma criatura que pode ver a até 9 metros dele. O alvo realiza um teste de resistência de Constituição {@dc 16}, sofrendo 18 ({@damage 4d8}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. O jiangshi recupera pontos de vida iguais à quantidade de dano necrótico causado. Depois de recuperar pontos de vida desta ação, o jiangshi ganha os seguintes benefícios por 7 dias: seu deslocamento de caminhada aumenta para 12 metros, e ele ganha um deslocamento de voo igual ao seu deslocamento de caminhada e pode pairar.",
+						"Um Humanóide morto por este dano necrótico ressuscita como uma criatura (veja sua entrada no Manual dos Monstros) no final do turno do jiangshi. O wight atua imediatamente após o jiangshi na ordem de iniciativa. Se esta criatura matar um Humanóide com seu Dreno de Vida, a criatura se transformará em um jiangshi 5 dias depois."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"O jiangshi se transforma em uma Besta, um Humanóide ou um Morto-Vivo que é Médio ou Pequeno ou volta à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que ele esteja usando ou carregando é absorvido ou suportado pela nova forma (a escolha do jiangshi). Ele reverte à sua verdadeira forma se morrer."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lesser Star Spawn Emissary",
+			"source": "VRGR",
+			"page": 245,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 241,
+				"formula": "21d8 + 147"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 21,
+			"dex": 18,
+			"con": 24,
+			"int": 25,
+			"wis": 20,
+			"cha": 23,
+			"save": {
+				"int": "+13",
+				"wis": "+11",
+				"cha": "+12"
+			},
+			"skill": {
+				"arcana": "+19",
+				"deception": "+18",
+				"perception": "+11"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"acid",
+				"force",
+				"necrotic",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all",
+				"telepathy 1,000 ft."
+			],
+			"cr": "19",
+			"trait": [
+				{
+					"name": "Aberrant Rejuvenation",
+					"entries": [
+						"Quando o emissário chega a 0 pontos de vida, seu corpo derrete. Um emissário de geração de estrela maior aparece instantaneamente em um espaço desocupado a até 18 metros de onde o emissário menor desapareceu. O emissário maior usa a contagem de iniciativa do emissário menor."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o emissário falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O emissário não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O emissário faz três ataques."
+					]
+				},
+				{
+					"name": "Lashing Maw",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 15 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) de dano perfurante mais 13 ({@damage 3d8}) de dano ácido."
+					]
+				},
+				{
+					"name": "Psychic Orb",
+					"entries": [
+						"{@atk rs} {@hit 13} para acertar, alcance de 36 metros, uma criatura. {@h}18 ({@damage 2d10 + 7}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"O emissário se transforma em uma criatura Pequena ou Média de sua escolha ou volta à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Psychic Orb",
+					"entries": [
+						"The emissary makes a Psychic Orb attack."
+					]
+				},
+				{
+					"name": "Teleportation Maw (Costs 2 Actions)",
+					"entries": [
+						"The emissary teleports to an unoccupied space it can see within 30 feet of it and can make a Lashing Maw attack."
+					]
+				},
+				{
+					"name": "Psychic Lash (Costs 3 Actions)",
+					"entries": [
+						"The emissary targets a creature it can see within 30 feet of it and psychically lashes at that creature's mind. The target must succeed on a {@dc 21} Wisdom saving throw or take 36 ({@damage 8d8}) psychic damage and be {@condition stunned} until the start of its next turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"A",
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Loup Garou",
+			"group": [
+				"Lycanthropes"
+			],
+			"source": "VRGR",
+			"page": 237,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"shapechanger"
+				]
+			},
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 170,
+				"formula": "20d8 + 80"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft. in hybrid form, 50 ft. in dire wolf form)"
+				}
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 14,
+			"wis": 16,
+			"cha": 16,
+			"save": {
+				"dex": "+9",
+				"con": "+9",
+				"cha": "+8"
+			},
+			"skill": {
+				"perception": "+13",
+				"stealth": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common (can't speak in wolf form)"
+			],
+			"cr": "13",
+			"trait": [
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"O loup garou tem vantagem nas jogadas de ataque contra uma criatura que não possui todos os seus pontos de vida."
+					]
+				},
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Quando o loup garou falha em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O loup garou recupera 10 pontos de vida no início de cada um de seus turnos. Se o loup garou sofrer dano de uma arma de prata, esta característica não funciona no início do próximo turno do loup garou. O Loup Garou morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O loup garou faz dois ataques: dois com sua Espada Longa (forma humanóide) ou um com sua Mordida e um com suas Garras (lobo terrível ou forma híbrida)."
+					]
+				},
+				{
+					"name": "Bite (Dire Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) de dano perfurante mais 14 ({@damage 4d6}) de dano necrótico. Se o alvo for um Humanóide, ele deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou será amaldiçoado com licantropia Loup Garou."
+					]
+				},
+				{
+					"name": "Claws (Dire Wolf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano cortante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Longsword (Humanoid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) de dano cortante ou 15 ({@damage 2d10 + 4}) de dano cortante se usado com as duas mãos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"The loup garou polymorphs into a Large wolf-humanoid hybrid or into a Large dire wolf, or back into its true form, which appears humanoid. Its statistics, other than its size and speed, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Swipe",
+					"entries": [
+						"The loup garou makes one Claws attack (dire wolf or hybrid form only) or one Longsword attack (humanoid form only)."
+					]
+				},
+				{
+					"name": "Mauling Pounce (Costs 2 Actions)",
+					"entries": [
+						"The loup garou moves up to its speed without provoking opportunity attacks, and it can make one Claws attack (dire wolf or hybrid form only) or one Longsword attack (humanoid form only) against each creature it moves past."
+					]
+				},
+				{
+					"name": "Bite (Costs 3 Actions)",
+					"entries": [
+						"The loup garou changes into hybrid or dire wolf form and then makes one Bite attack."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"CUR",
+				"MLW",
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Necrichor",
+			"source": "VRGR",
+			"page": 238,
+			"otherSources": [
+				{
+					"source": "AATM"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 20,
+				"climb": 20
+			},
+			"str": 8,
+			"dex": 15,
+			"con": 17,
+			"int": 17,
+			"wis": 13,
+			"cha": 10,
+			"save": {
+				"con": "+6",
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+9"
+			},
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius)"
+			],
+			"passive": 11,
+			"resist": [
+				"acid",
+				"necrotic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"any three languages",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se o necrichor falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Rejuvenation",
+					"entries": [
+						"A menos que seus restos sem vida sejam salpicados com água benta ou colocados em um recipiente sob os efeitos do feitiço {@spell hallow}, o necrichor destruído se reforma em {@dice 1d10} dias, recuperando todos os seus pontos de vida e aparecendo no local onde morreu ou no espaço desocupado mais próximo."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O necrichor pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O necrichor não necessita de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O necrichor faz dois ataques."
+					]
+				},
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano necrótico, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 14} ou será {@condition paralyzed} até o início do próximo turno do necrichor."
+					]
+				},
+				{
+					"name": "Necrotic Bolt",
+					"entries": [
+						"{@atk rs} {@hit 6} para acertar, alcance de 36 metros, uma criatura. {@h}12 ({@damage 2d8 + 3}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do necrichor."
+					]
+				},
+				{
+					"name": "Blood Puppeteering {@recharge}",
+					"entries": [
+						"O necrichor tem como alvo uma criatura que ele possa ver a até 1,5 metro dele e que não tenha nenhum de seus pontos de vida. Se o alvo não for um Constructo ou um Morto-Vivo, ele deve ter sucesso em um teste de resistência de Constituição {@dc 14} ou o necrichor entra no espaço do alvo e se fixa nele por 1 minuto. Enquanto estiver anexado, o necrichor sofre apenas metade do dano causado (arredondado para baixo) e o alvo sofre o dano restante. O necrichor pode ser anexado a apenas uma criatura por vez.",
+						"O necrichor anexado pode controlar telepaticamente o movimento, a ação do alvo ou ambos. Quando controlado desta forma, o alvo pode realizar apenas a ação de Ataque (necrichor escolhe o alvo) ou a ação de Investida. O alvo anexado pode repetir o teste de resistência no final de cada um de seus turnos, separando-se do necrichor e forçando-o a se mover para o espaço desocupado mais próximo se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Rejuvenation",
+				"Spider Climb",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP",
+				"X"
+			],
+			"damageTags": [
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nosferatu",
+			"source": "VRGR",
+			"page": 239,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "9d8 + 45"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 18,
+			"con": 21,
+			"int": 6,
+			"wis": 17,
+			"cha": 14,
+			"save": {
+				"dex": "+7",
+				"con": "+8",
+				"wis": "+6"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+10"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O nosferatu recupera 10 pontos de vida no início de cada um de seus turnos se tiver pelo menos 1 ponto de vida e não estiver sob a luz do sol. Se o nosferatu sofrer dano radiante, esta característica não funcionará até o início do próximo turno do nosferatu."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O nosferatu pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Sunlight Hypersensitivity",
+					"entries": [
+						"O nosferatu sofre 20 de dano radiante quando inicia seu turno sob a luz do sol. Enquanto estiver sob a luz do sol, tem desvantagem em jogadas de ataque e testes de habilidade."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O nosferatu não precisa de ar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O nosferatu realiza dois ataques de Garra seguidos de um ataque de Mordida. Se ambos os ataques de Garra atingirem a mesma criatura, o ataque de Mordida será realizado com vantagem."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d8 + 5}) dano cortante."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 1,5 m, uma criatura. {@h}9 ({@damage 1d8 + 5}) de dano perfurante mais 7 ({@damage 2d6}) de dano necrótico. Se o alvo estiver faltando algum de seus pontos de vida, ele sofrerá 11 ({@damage 2d10}) de dano necrótico.",
+						"O máximo de pontos de vida do alvo é reduzido em uma quantidade igual ao dano necrótico recebido, e o nosferatu recupera pontos de vida iguais a essa quantidade. A redução dura até o alvo terminar um descanso longo. O alvo morre se seu máximo de pontos de vida for reduzido a 0. Um Humanóide morto desta forma e então enterrado no chão se levanta como um nosferatu após {@dice 1d10} dias."
+					]
+				},
+				{
+					"name": "Blood Disgorge {@recharge 5}",
+					"entries": [
+						"O nosferatu vomita sangue em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 16}. Se falhar na resistência, uma criatura sofre 18 ({@damage 4d8}) de dano necrótico e não pode recuperar pontos de vida por 1 minuto. Se obtiver sucesso, a criatura sofre metade do dano sem efeitos adicionais."
+					]
+				}
+			],
+			"traitTags": [
+				"Regeneration",
+				"Spider Climb",
+				"Sunlight Sensitivity",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"HPR",
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Podling",
+			"source": "VRGR",
+			"page": 227,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 26,
+				"formula": "4d8 + 8"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 15,
+			"dex": 11,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 10,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Deep Speech",
+				"the languages the creature knew in life"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Semblance of Life",
+					"entries": [
+						"O podling é uma cópia física de uma criatura digerida por uma planta bodytaker. O filhote possui as memórias da criatura digeridas e se comporta como aquela criatura, mas com lapsos ocasionais. Um observador familiarizado com a criatura digerida pode reconhecer as discrepâncias com um teste bem sucedido de {@dc 20} Sabedoria ({@skill Insight}) ou automaticamente se o filhote fizer algo em contradição direta com as crenças ou comportamento estabelecido da criatura digerida. O fruto se transforma em uma pasta quando morre, quando a planta coletora de corpos que o criou morre ou quando a planta coletora de corpos o descarta (nenhuma ação é necessária)."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O podling não requer sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"languageTags": [
+				"DS",
+				"LF"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Priest of Osybus",
+			"source": "VRGR",
+			"page": 241,
+			"otherSources": [
+				{
+					"source": "VEoR"
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": "humanoid",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 60,
+				"formula": "8d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 16,
+			"int": 18,
+			"wis": 17,
+			"cha": 11,
+			"save": {
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+3"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 13,
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"any three languages"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Tattoo of Osybus",
+					"entries": [
+						"Se o sacerdote cair para 0 pontos de vida, role na tabela Dádivas da Morte-Viva para ver a bênção que o sacerdote recebe. O sacerdote morre se receber um benefício que já possui. Se receber um novo benefício, ele revive no início do próximo turno com metade de seus pontos de vida restaurados e seu tipo de criatura agora é Morto-Vivo.",
+						"Para evitar este renascimento, a tatuagem de Osybus no corpo do sacerdote deve ser destruída. A tatuagem é invulnerável enquanto o sacerdote tiver pelo menos 1 ponto de vida. Caso contrário, a tatuagem é um objeto com CA 15 e é imune a veneno e dano psíquico. Possui 15 pontos de vida, mas recupera todos os seus pontos de vida no final do turno de cada combatente."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O padre ataca duas vezes."
+					]
+				},
+				{
+					"name": "Soul Blade",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 2d4 + 2}) dano perfurante e, se o alvo for uma criatura, será {@condition paralyzed} até o início do próximo turno do sacerdote. Se este dano reduzir uma criatura Média ou menor a 0 pontos de vida, a criatura morre e sua alma fica presa no corpo do sacerdote, manifestando-se como uma Tatuagem de Alma sombria no sacerdote. A alma é libertada se o padre morrer."
+					]
+				},
+				{
+					"name": "Necrotic Bolt",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 120 pés, um alvo. {@h}17 ({@damage 3d8 + 4}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno do sacerdote."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Soul Tattoo {@recharge 5}",
+					"entries": [
+						"The priest touches one of the Soul Tattoos on its body. The tattoo vanishes as the trapped soul manifests as a shadowy creature that appears in an unoccupied space the priest can see within 30 feet of it. The creature has the size and silhouette of its original body, but it otherwise uses the stat block of a shadow.",
+						"The shadow obeys the priest's mental commands (no action required) and takes its turn immediately after the priest. If the creature is within 5 feet of the priest, it can turn back into a tattoo as an action, reappearing on the priest's flesh and regaining all its hit points."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Boons of Undeath",
+					"entries": [
+						"When a priest of Osybus drops to 0 hit points, the priest might revive with a benefit from the Boons of Undeath table. You can give a priest one or more of these boons of your choice before the priest faces adventurers. If you do so, the priest is Undead, rather than Humanoid, and a priest can receive each boon only once.",
+						{
+							"type": "table",
+							"caption": "Boons of Undeath",
+							"colLabels": [
+								"d6",
+								"Boon"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									{
+										"type": "entries",
+										"name": "Dread",
+										"entries": [
+											"Eerie whispers can now be heard around the priest. Any non-Undead creature that starts its turn within 30 feet of the priest must succeed on a {@dc 15} Wisdom saving throw or be {@condition frightened} of the priest until the start of the creature's next turn."
+										]
+									}
+								],
+								[
+									"2",
+									{
+										"type": "entries",
+										"name": "Ectoplasmic",
+										"entries": [
+											"An otherworldly slime drips off the priest and fades away moments later, leaving a greenish stain. When any creature starts its turn within 10 feet of the priest, the priest can reduce that creature's speed by 10 feet until the start of the creature's next turn, until which the creature is covered by ectoplasm. In addition, as an action, the priest can use the slime to make itself look and feel like any creature that is Medium or Small, while retaining its game statistics. This transformation lasts for 8 hours or until the priest drops to 0 hit points."
+										]
+									}
+								],
+								[
+									"3",
+									{
+										"type": "entries",
+										"name": "Vampiric",
+										"entries": [
+											"When the priest deals necrotic damage to any creature, the priest gains a number of temporary hit points equal to half that necrotic damage. The priest's speed also increases by 10 feet."
+										]
+									}
+								],
+								[
+									"4",
+									{
+										"type": "entries",
+										"name": "Blazing",
+										"entries": [
+											"The priest sloughs off its flesh, and its skeleton crumbles away, leaving only its skull. Its stat block is replaced by that of a {@creature flameskull}, but it retains its Tattoo of Osybus trait, and all fire damage it deals becomes necrotic damage. The Tattoo of Osybus now appears carved into the skull's forehead."
+										]
+									}
+								],
+								[
+									"5",
+									{
+										"type": "entries",
+										"name": "Spectral",
+										"entries": [
+											"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+										]
+									}
+								],
+								[
+									"6",
+									{
+										"type": "entries",
+										"name": "Deathly",
+										"entries": [
+											"The priest's visage becomes bone white, and its challenge rating increases by 1. It can cast {@spell animate dead} and {@spell create undead} once per day each, using Intelligence as the spellcasting ability, and it gains the following action:",
+											{
+												"type": "entries",
+												"name": "Circle of Death (Spell; {@recharge 5|m})",
+												"entries": [
+													"Each creature in a 60-foot-radius sphere centered on a point the priest can see within 150 feet of it must make a {@dc 15} Constitution saving throw, taking 28 ({@dice 8d6}) necrotic damage on a failed save, or half as much damage on a successful one.)"
+												]
+											}
+										]
+									}
+								]
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"paralyzed"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"_versions": [
+				{
+					"name": "Priest of Osybus (Blazing Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Blazing Boon",
+								"entries": [
+									"The priest sloughs off its flesh, and its skeleton crumbles away, leaving only its skull. Its stat block is replaced by that of a {@creature flameskull}, but it retains its Tattoo of Osybus trait, and all fire damage it deals becomes necrotic damage. The Tattoo of Osybus now appears carved into the skull's forehead."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Deathly Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"action": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Circle of Death (Spell; {@recharge 5|m})",
+								"entries": [
+									"Each creature in a 60-foot-radius sphere centered on a point the priest can see within 150 feet of it must make a {@dc 15} Constitution saving throw, taking 28 ({@dice 8d6}) necrotic damage on a failed save, or half as much damage on a successful one.)"
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"cr": "7",
+					"spellcasting": [
+						{
+							"name": "Innate Spellcasting",
+							"headerEntries": [
+								"The priest casts one of the following spells, requiring no components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+							],
+							"will": [
+								{
+									"entry": "{@spell circle of death}",
+									"hidden": true
+								}
+							],
+							"daily": {
+								"1e": [
+									"{@spell animate dead}",
+									"{@spell create undead}"
+								]
+							},
+							"ability": "int",
+							"displayAs": "action"
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Dread Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Dread Boon",
+								"entries": [
+									"Eerie whispers can now be heard around the priest. Any non-Undead creature that starts its turn within 30 feet of the priest must succeed on a {@dc 15} Wisdom saving throw or be {@condition frightened} of the priest until the start of the creature's next turn."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Ectoplasmic Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Ectoplasmic Boon",
+								"entries": [
+									"An otherworldly slime drips off the priest and fades away moments later, leaving a greenish stain. When any creature starts its turn within 10 feet of the priest, the priest can reduce that creature's speed by 10 feet until the start of the creature's next turn, until which the creature is covered by ectoplasm. In addition, as an action, the priest can use the slime to make itself look and feel like any creature that is Medium or Small, while retaining its game statistics. This transformation lasts for 8 hours or until the priest drops to 0 hit points."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Spectral Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Spectral Boon",
+								"entries": [
+									"The priest now appears wraithlike, and its challenge rating increases by 1. It gains resistance to all damage but force, radiant, and psychic, and it is vulnerable to radiant damage. It can also move through creatures and objects as if they were {@quickref difficult terrain||3}, but it takes 5 ({@dice 1d10}) force damage if it ends its turn inside a creature or an object."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				},
+				{
+					"name": "Priest of Osybus (Vampiric Boon)",
+					"source": "VRGR",
+					"_mod": {
+						"trait": {
+							"mode": "appendArr",
+							"items": {
+								"name": "Vampiric Boon",
+								"entries": [
+									"When the priest deals necrotic damage to any creature, the priest gains a number of temporary hit points equal to half that necrotic damage. The priest's speed also increases by 10 feet."
+								]
+							}
+						}
+					},
+					"type": "undead",
+					"variant": null
+				}
+			]
+		},
+		{
+			"name": "Relentless Juggernaut",
+			"source": "VRGR",
+			"page": 243,
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 161,
+				"formula": "14d10 + 84"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 12,
+			"con": 22,
+			"int": 8,
+			"wis": 15,
+			"cha": 16,
+			"save": {
+				"dex": "+5",
+				"wis": "+6",
+				"cha": "+7"
+			},
+			"skill": {
+				"perception": "+6",
+				"survival": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 16,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"understands all languages but can't speak"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o rolo compressor falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O rolo compressor recupera 20 pontos de vida no início do seu turno. Se o rolo compressor sofrer dano radiante, essa característica não funcionará no início do próximo turno. O rolo compressor morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O rolo compressor não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O rolo compressor faz dois ataques. Ele pode substituir um ataque por Deadly Shaping se estiver pronto."
+					]
+				},
+				{
+					"name": "Executioner's Pick",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}17 ({@damage 2d10 + 6}) dano perfurante e, se o alvo for uma criatura, sua velocidade será reduzida em 3 metros até o início do próximo turno do rolo compressor."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 1d10 + 6}) dano de concussão, e se o alvo for uma criatura grande ou menor, ele deve ter sucesso em um teste de resistência de Força {@dc 18} ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"name": "Deadly Shaping {@recharge 5}",
+					"entries": [
+						"O rolo compressor molda magicamente uma característica do seu entorno em um instrumento mortal. Uma criatura que o rolo compressor possa ver a até 18 metros dele deve realizar um teste de resistência de {@dc 18} Destreza. Se o teste de resistência falhar, a criatura alvo é atingida por um dos seguintes (escolha do rolo compressor):"
+					]
+				},
+				{
+					"name": "Flying Stone",
+					"entries": [
+						"O alvo sofre 22 ({@damage 5d8}) de dano de concussão e fica {@condition incapacitated} até o início do próximo turno do rolo compressor, e o implemento desaparece."
+					]
+				},
+				{
+					"name": "Scything Shrapnel",
+					"entries": [
+						"O alvo sofre 14 ({@damage 4d6}) de dano cortante e o implemento desaparece. No início de cada um de seus turnos, o alvo sofre 10 ({@damage 3d6}) de dano necrótico do ferimento deixado pelos estilhaços. O ferimento termina se o alvo recuperar quaisquer pontos de vida ou se uma criatura usar uma ação para estancar o ferimento, o que requer um teste bem-sucedido de {@dc 15} Sabedoria ({@skill Medicine})."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Implacable Advance",
+					"entries": [
+						"The juggernaut moves up to its speed, ignoring {@quickref difficult terrain||3}. Any object in its path takes 55 ({@damage 10d10}) bludgeoning damage if it isn't being worn or carried."
+					]
+				},
+				{
+					"name": "Rapid Shaping (Costs 3 Actions)",
+					"entries": [
+						"The juggernaut recharges Deadly Shaping and uses it."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Relentless Slasher",
+			"source": "VRGR",
+			"page": 242,
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 14,
+			"int": 14,
+			"wis": 15,
+			"cha": 16,
+			"save": {
+				"str": "+4",
+				"dex": "+7",
+				"con": "+5",
+				"wis": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"understands all languages but can't speak"
+			],
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"Se o slasher falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Shrouded Presence",
+					"entries": [
+						"O destruidor é imune a qualquer efeito que possa sentir suas emoções ou ler seus pensamentos, e não pode ser detectado por habilidades que detectam Demônios."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O slasher faz dois ataques com a Faca do Slasher."
+					]
+				},
+				{
+					"name": "Slasher's Knife",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} para acertar, alcance 5 pés ou alcance 30/60 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano cortante mais 21 ({@damage 6d6}) dano necrótico. Se o alvo for uma criatura, ele sofre um ferimento persistente que faz com que receba 7 ({@damage 2d6}) de dano necrótico no início de cada um de seus turnos. Cada vez que o slasher atinge o alvo ferido com este ataque, o dano causado pelo ferimento aumenta em 3 ({@dice 1d6}). O ferimento termina se o alvo recuperar pontos de vida ou se uma criatura usar uma ação para estancar o ferimento, o que requer um teste bem-sucedido de {@dc 15} Sabedoria ({@skill Medicine})."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Slice",
+					"entries": [
+						"{@atk mw,rw} {@hit 7} to hit, reach 5 ft. or range 30/60 ft., one target. {@h}7 ({@damage 1d6 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Vanishing Strike (Costs 3 Actions)",
+					"entries": [
+						"The slasher makes one Slasher's Knife attack. After the attack hits or misses, the slasher can teleport up to 30 feet to an unoccupied space it can see."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"XX"
+			],
+			"damageTags": [
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Strigoi",
+			"source": "VRGR",
+			"page": 246,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d8 + 21"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 40
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 16,
+			"int": 11,
+			"wis": 17,
+			"cha": 10,
+			"save": {
+				"str": "+5",
+				"dex": "+4",
+				"wis": "+5"
+			},
+			"skill": {
+				"perception": "+5",
+				"stealth": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Stirge Telepathy",
+					"entries": [
+						"O strigoi pode comandar magicamente qualquer {@creature stirge} em um raio de 36 metros dele, usando uma forma limitada de telepatia."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O strigoi faz um ataque de Garra e um ataque de Probóscide."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano cortante mais 6 ({@damage 1d12}) dano ácido."
+					]
+				},
+				{
+					"name": "Proboscis",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura. {@h}8 ({@damage 1d10 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano necrótico, e o strigoi recupera pontos de vida iguais à quantidade de dano necrótico causado. Uma criatura reduzida a 0 pontos de vida por este ataque morre e não deixa nada para trás, exceto sua pele e seu equipamento."
+					]
+				},
+				{
+					"name": "Ravenous Children (1/Day)",
+					"entries": [
+						"O strigoi invoca magicamente {@dice 1d4 + 2} {@creature stirge||stirges} (veja sua entrada no Manual dos Monstros) em espaços desocupados que ele pode ver a até 9 metros dele. Os Stirges estão sob o controle do strigoi e agem imediatamente após o strigoi na ordem de iniciativa. Os Stirges desaparecem após 1 hora, quando o strigoi morre, ou quando o strigoi os dispensa (nenhuma ação é necessária)."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"A",
+				"N",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarm of Gremishkas",
+			"source": "VRGR",
+			"page": 235,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"swarmSize": "T"
+			},
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 24,
+				"formula": "7d6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 10,
+			"int": 12,
+			"wis": 14,
+			"cha": 4,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Limited Spell Immunity",
+					"entries": [
+						"O enxame obtém sucesso automaticamente nos testes de resistência contra magias de 3º nível ou inferior, e as jogadas de ataque de tais magias sempre erram."
+					]
+				},
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para um Tiny gremishka. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bites",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 0 pés, um alvo no espaço do enxame. {@h}12 ({@damage 3d6 + 2}) de dano perfurante, ou 5 ({@damage 1d6 + 2}) de dano perfurante se o enxame tiver metade de seus pontos de vida ou menos, mais 7 ({@damage 2d6}) de dano de força."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Spell Redirection",
+					"entries": [
+						"In response to a spell attack roll missing the swarm, the swarm causes that spell to hit another creature of its choice within 30 feet of it that it can see."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarm of Maggots",
+			"source": "VRGR",
+			"page": 247,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "beast",
+				"swarmSize": "T"
+			},
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20
+			},
+			"str": 3,
+			"dex": 12,
+			"con": 10,
+			"int": 1,
+			"wis": 7,
+			"cha": 1,
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para um minúsculo verme. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Infestation",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 0 pés, um alvo no espaço do enxame. {@h}10 ({@damage 4d4}) de dano perfurante ou 5 ({@damage 2d4}) de dano perfurante se o enxame tiver metade de seus pontos de vida ou menos. Uma criatura danificada pelo enxame deve ter sucesso em um teste de resistência de Constituição {@dc 12} ou contrairá uma doença.",
+						"Cada vez que a criatura doente termina um descanso longo, role um {@dice d6} para determinar o efeito da doença:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "1-2",
+									"entries": [
+										"The creature is {@condition blinded} until it finishes a long rest."
+									]
+								},
+								{
+									"type": "item",
+									"name": "3-4",
+									"entries": [
+										"The creature's hit point maximum decreases by 5 ({@dice 2d4}), and the reduction can't be removed until the disease ends. The creature dies if its hit point maximum drops to 0."
+									]
+								},
+								{
+									"type": "item",
+									"name": "5-6",
+									"entries": [
+										"The creature has disadvantage on ability checks and attack rolls until it finishes its next long rest.",
+										"The disease lasts until it's removed by magic or until the creature rolls the same random effect for the disease two long rests in a row."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"DIS",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarm of Scarabs",
+			"source": "VRGR",
+			"page": 247,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "beast",
+				"swarmSize": "T"
+			},
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30,
+				"burrow": 30,
+				"climb": 30
+			},
+			"str": 3,
+			"dex": 14,
+			"con": 13,
+			"int": 1,
+			"wis": 12,
+			"cha": 1,
+			"senses": [
+				"tremorsense 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande o suficiente para um Escaravelho Minúsculo. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Skeletonize",
+					"entries": [
+						"Se o enxame começar seu turno no mesmo espaço que uma criatura morta que seja Grande ou menor, o cadáver é destruído, deixando para trás apenas equipamentos e ossos (ou exoesqueleto)."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O enxame pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ravenous Bites",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 0 pés, um alvo no espaço do enxame. {@h}14 ({@damage 4d6}) de dano perfurante ou 7 ({@damage 2d6}) de dano perfurante se o enxame tiver metade de seus pontos de vida ou menos. Se o alvo for uma criatura, os escaravelhos se enterram em seu corpo e a criatura sofre 3 ({@damage 1d6}) de dano perfurante no início de cada um de seus turnos. Qualquer criatura pode usar uma ação para matar ou remover os escaravelhos com fogo ou uma arma que cause dano perfurante, causando 1 dano do tipo apropriado ao alvo. Uma criatura reduzida a 0 pontos de vida pelo dano perfurante do enxame morre."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"T"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "Swarm of Zombie Limbs",
+			"source": "VRGR",
+			"page": 254,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"swarmSize": "T"
+			},
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 10,
+			"int": 3,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"passive": 9,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"stunned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Swarm",
+					"entries": [
+						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande o suficiente para um membro Minúsculo. O enxame não pode recuperar pontos de vida nem ganhar pontos de vida temporários."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O enxame não requer ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O enxame faz um ataque Undead Mass e um ataque Grasping Limbs."
+					]
+				},
+				{
+					"name": "Undead Mass",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 0 pés, um alvo no espaço do enxame. {@h}5 ({@damage 1d6 + 2}) de dano de concussão ou 4 ({@damage 1d4 + 2}) de dano de concussão se o enxame tiver metade de seus pontos de vida ou menos."
+					]
+				},
+				{
+					"name": "Grasping Limbs",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 0 pés, uma criatura no espaço do enxame. {@h}7 ({@damage 2d6}) de dano necrótico, e a criatura deve ter sucesso em um teste de resistência de Força {@dc 12} ou será {@condition restrained}. A criatura pode repetir o teste de resistência no final de cada um de seus turnos, sofrendo 7 ({@damage 2d6}) de dano necrótico se falhar na resistência. A criatura é libertada se tiver sucesso neste teste de resistência, se o enxame sair do espaço da criatura ou se o enxame morrer."
+					]
+				}
+			],
+			"traitTags": [
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		},
+		{
+			"name": "The Bagman",
+			"source": "VRGR",
+			"page": 225,
+			"_copy": {
+				"name": "Troll",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "troll",
+						"with": "Bagman",
+						"flags": "i"
+					},
+					"trait": [
+						{
+							"mode": "appendArr",
+							"items": [
+								{
+									"name": "Grappler",
+									"entries": [
+										"The Bagman has advantage on attack rolls against any creature {@condition grappled} by it."
+									]
+								},
+								{
+									"name": "Amorphous",
+									"entries": [
+										"The Bagman can move through a space as narrow as 1 inch wide without squeezing."
+									]
+								},
+								{
+									"name": "Alien Mind",
+									"entries": [
+										"If a creature tries to read the Bagman's thoughts, that creature must succeed on a {@dc 8} Intelligence saving throw or be {@condition stunned} for 1 minute. The {@condition stunned} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"traitTags": [
+				"Amorphous",
+				"Keen Senses",
+				"Regeneration"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Unspeakable Horror",
+			"source": "VRGR",
+			"page": 250,
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				},
+				{
+					"ac": 17,
+					"from": [
+						"Aberrant Armor Only"
+					]
+				}
+			],
+			"hp": {
+				"average": 95,
+				"formula": "10d10 + 40"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 13,
+			"con": 19,
+			"int": 3,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"con": "+7",
+				"wis": "+5"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"cr": "8",
+			"trait": [
+				{
+					"name": "Formed by the Mists",
+					"entries": [
+						"Quando criado, a composição corporal do horror assume uma das quatro formas: Armadura Aberrante, Membros Repugnantes, Massa Maleável ou Órgãos Oozing. Este formulário determina certas características neste bloco de estatísticas."
+					]
+				},
+				{
+					"name": "Amorphous (Malleable Mass Only)",
+					"entries": [
+						"O horror pode passar por qualquer abertura de pelo menos 2,5 cm de largura sem apertar."
+					]
+				},
+				{
+					"name": "Bile Body (Oozing Organs Only)",
+					"entries": [
+						"Qualquer criatura que tocar o horror ou acertá-lo com um ataque corpo a corpo sofre 5 ({@damage 1d10}) de dano ácido."
+					]
+				},
+				{
+					"name": "Relentless Stride (Loathsome Limbs Only)",
+					"entries": [
+						"O horror pode se mover pelo espaço de outra criatura. A primeira vez em um turno que o horror entra no espaço de uma criatura durante este movimento, a criatura deve ter sucesso em um teste de resistência de Força {@dc 16} ou será derrubada {@condition prone}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O horror faz dois ataques aos membros."
+					]
+				},
+				{
+					"name": "Limbs",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}21 ({@damage 3d10 + 5}) dano de concussão."
+					]
+				},
+				{
+					"name": "Hex Blast {@recharge 5}",
+					"entries": [
+						"O horror expele energia necrótica em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 15}, sofrendo 45 ({@damage 7d12}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Customizing a Horror",
+					"entries": [
+						"An unspeakable horror has one of four body compositions, determined by rolling on the Body Composition table. You can roll on the Limbs to customize it further, while results from the Hex Blast table replace that action in the stat block. If the results of multiple tables conflict, chose your preferred result.",
+						"The results of these tables are meant to be broad, so feel free to describe the details of an unspeakable horror's form and the interplay between its parts however you desire. The more discordant and unexpected a horror's parts, the more unsettling it might be.",
+						{
+							"type": "table",
+							"caption": "Body Composition",
+							"colLabels": [
+								"d4",
+								"Body"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									{
+										"type": "entries",
+										"name": "Aberrant Armor",
+										"entries": [
+											"The horror's body is armored in petrified wood, alien crystal, rusted mechanisms, sculpted stone, or an exoskeleton."
+										]
+									}
+								],
+								[
+									"2",
+									{
+										"type": "entries",
+										"name": "Loathsome Limbs",
+										"entries": [
+											"The horror's body boasts spider like legs, many-jointed appendages, or thrashing tentacles."
+										]
+									}
+								],
+								[
+									"3",
+									{
+										"type": "entries",
+										"name": "Malleable Mass",
+										"entries": [
+											"The horror's body is composed of a clot of boneless flesh, shadowy tendrils, or mist."
+										]
+									}
+								],
+								[
+									"4",
+									{
+										"type": "entries",
+										"name": "Oozing Organs",
+										"entries": [
+											"The horror's body boasts exposed entrails, bloated parasites, or a gelatinous shroud, perhaps because it is inside out."
+										]
+									}
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Hex Blast",
+							"colLabels": [
+								"d4",
+								"Hex"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									{
+										"type": "entries",
+										"name": "Beguiling Hex {@recharge 5}",
+										"entries": [
+											"The horror expels a wave of mind-altering magic. Each creature within 30 feet of the horror must make a {@dc 15} Wisdom saving throw, taking 33 ({@dice 6d10}) psychic damage and being {@condition incapacitated} until the end of the creature's next turn on a failed save, or taking half as much damage on a successful one."
+										]
+									}
+								],
+								[
+									"2",
+									{
+										"type": "entries",
+										"name": "Bile Hex {@recharge 5}",
+										"entries": [
+											"The horror expels acidic bile in a 60-foot line that is 5 feet wide. Each creature in that line must succeed on a {@dc 15} Dexterity saving throw or be covered in bile. A creature covered in bile takes 31 ({@dice 7d8}) acid damage at the start of each of its turns until it or another creature uses its action to scrape or wash off the bile that covers it."
+										]
+									}
+								],
+								[
+									"3",
+									{
+										"type": "entries",
+										"name": "Petrifying Hex {@recharge 5}",
+										"entries": [
+											"The horror expels petrifying gas in a 30-foot cone. Each creature in that area must succeed on a {@dc 15} Constitution saving throw or take 14 ({@dice 4d6}) necrotic damage and be {@condition restrained} as it begins to turn to stone. A {@condition restrained} creature must repeat the saving throw at the end of its next turn. On a success, the effect ends on the target. On a failure, the target is {@condition petrified} until freed by the {@spell greater restoration} spell or other magic."
+										]
+									}
+								],
+								[
+									"4",
+									{
+										"type": "entries",
+										"name": "Reality-Stealing Hex {@recharge 5}",
+										"entries": [
+											"The horror expels a wave of perception-distorting energy. Each creature within 30 feet of the horror must make a {@dc 15} Wisdom saving throw. On a failed save, the target takes 22 ({@dice 5d8}) psychic damage and is {@condition deafened} until the end of its next turn. If the saving throw fails by 5 or more, the target is also {@condition blinded} until the end of its next turn."
+										]
+									}
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Limbs",
+							"colLabels": [
+								"d4",
+								"Attack"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									{
+										"type": "entries",
+										"name": "Bone Blade",
+										"entries": [
+											"The horror's limb ends in a blade made of bone, which deals slashing damage instead of bludgeoning damage. In addition, it scores a critical hit on a roll of 19 or 20 and rolls the damage dice of a crit three times, instead of twice."
+										]
+									}
+								],
+								[
+									"2",
+									{
+										"type": "entries",
+										"name": "Corrosive Pseudopod",
+										"entries": [
+											"The horror's limb attack deals an extra 9 ({@dice 2d8}) acid damage."
+										]
+									}
+								],
+								[
+									"3",
+									{
+										"type": "entries",
+										"name": "Grasping Tentacle",
+										"entries": [
+											"The horror's limb is a grasping tentacle. When the horror hits a creature with this limb, the creature is also {@condition grappled} (escape {@dc 16}). The limb can have only one creature {@condition grappled} at a time."
+										]
+									}
+								],
+								[
+									"4",
+									{
+										"type": "entries",
+										"name": "Poisonous Limb",
+										"entries": [
+											"The horror's limb deals piercing damage instead of bludgeoning damage. In addition, when the horror hits a creature with this limb, the creature must succeed on a {@dc 15} Constitution saving throw or take 7 ({@dice 2d6}) poison damage and be {@condition poisoned} until the end of its next turn."
+										]
+									}
+								]
+							]
+						}
+					],
+					"_version": {
+						"name": "Unspeakable Horror (Customized)",
+						"addAs": "trait"
+					}
+				}
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"I",
+				"N",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"deafened",
+				"grappled",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampiric Mind Flayer",
+			"source": "VRGR",
+			"page": 252,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 85,
+				"formula": "10d8 + 40"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 18,
+			"con": 18,
+			"int": 5,
+			"wis": 15,
+			"cha": 18,
+			"save": {
+				"dex": "+7",
+				"int": "+0",
+				"wis": "+5",
+				"cha": "+7"
+			},
+			"skill": {
+				"perception": "+5",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"telepathy 120 ft. but can only project emotions"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O devorador de mentes pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"Enquanto estiver sob a luz do sol, o devorador de mentes tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O devorador de mentes não requer ar, comida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O devorador de mentes faz dois ataques de Garra ou um ataque de Garra e um ataque de Tentáculos."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano cortante mais 10 ({@damage 3d6}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}7 ({@damage 1d6 + 4}) dano perfurante, e se o alvo for uma criatura, é {@condition grappled} (escape {@dc 15})."
+					]
+				},
+				{
+					"name": "Drink Sapience",
+					"entries": [
+						"O devorador de mentes tem como alvo uma criatura que está agarrando. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 15} ou sofrerá 14 ({@damage 4d6}) de dano psíquico e ganhará 1 nível de {@condition exhaustion}. O devorador de mentes recupera um número de pontos de vida igual ao dano psíquico causado. Uma criatura reduzida a 0 pontos de vida pelo dano psíquico morre."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Disrupt Psyche {@recharge 5}",
+					"entries": [
+						"The mind flayer magically emits psionic energy in a 30-foot-radius sphere centered on itself. Each creature in that area must succeed on a {@dc 15} Intelligence saving throw or be {@condition incapacitated} for 1 minute. The {@condition incapacitated} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Sunlight Sensitivity",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"P",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"exhaustion",
+				"grappled",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wereraven",
+			"group": [
+				"Lycanthropes"
+			],
+			"source": "VRGR",
+			"page": 253,
+			"otherSources": [
+				{
+					"source": "CM"
+				},
+				{
+					"source": "CoS",
+					"page": 242
+				}
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger"
+				]
+			},
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 31,
+				"formula": "7d8"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(fly 50 ft. in raven and hybrid forms)"
+				}
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 11,
+			"int": 13,
+			"wis": 15,
+			"cha": 14,
+			"skill": {
+				"insight": "+4",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"Common (can't speak in raven form)"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"O homem-corvo pode usar sua ação para se transformar em um híbrido corvo-humanóide ou em um corvo, ou voltar à sua forma humana. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado. Ele reverte à sua forma humana se morrer."
+					]
+				},
+				{
+					"name": "Mimicry",
+					"entries": [
+						"O homem-corvo pode imitar sons simples que ouviu, como o sussurro de uma pessoa, o choro de um bebê ou o chilrear de um animal. Uma criatura que ouve os sons pode dizer que são imitações com um teste bem sucedido de {@dc 10} Sabedoria ({@skill Insight})."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O homem-corvo recupera 10 pontos de vida no início do seu turno. Se o homem-corvo sofrer dano de uma arma prateada ou de um feitiço, esta característica não funciona no início do próximo turno do homem-corvo. O homem-corvo morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Human or Hybrid Form Only)",
+					"entries": [
+						"O lobisomem faz dois ataques com arma, um dos quais pode ser com sua besta de mão."
+					]
+				},
+				{
+					"name": "Beak (Raven or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}1 dano perfurante na forma de corvo ou 4 ({@damage 1d4 + 2}) dano perfurante na forma híbrida. Se o alvo for humanóide, ele deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou será amaldiçoado com licantropia lobisomem."
+					]
+				},
+				{
+					"name": "Shortsword (Human or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				},
+				{
+					"name": "Hand Crossbow (Human or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 30/120 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
+			],
+			"traitTags": [
+				"Mimicry",
+				"Regeneration",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"CUR",
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Clot",
+			"source": "VRGR",
+			"page": 255,
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 104,
+				"formula": "11d12 + 33"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 10,
+			"con": 16,
+			"int": 3,
+			"wis": 8,
+			"cha": 10,
+			"save": {
+				"con": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"stunned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Deathly Stench",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 3 metros do zumbi deve ser bem sucedida em um teste de resistência de Constituição {@dc 14} ou sofrerá 9 ({@damage 2d8}) de dano de veneno e será {@condition poisoned} até o início do próximo turno da criatura."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O zumbi não precisa de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O zumbi faz dois ataques Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}18 ({@damage 3d8 + 5}) dano de concussão."
+					]
+				},
+				{
+					"name": "Flesh Entomb {@recharge 5}",
+					"entries": [
+						"O zumbi arremessa um amontoado de cadáveres em uma criatura que ele possa ver a até 9 metros dele. O alvo deve ter sucesso em um teste de resistência de Força {@dc 16} ou sofrerá 16 ({@damage 3d10}) de dano de concussão e, se o alvo for uma criatura Grande ou menor, ele será sepultado em carne morta.",
+						"Uma criatura sepultada na carne morta é {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora da carne morta e sofre 10 ({@damage 3d6}) de dano necrótico no início de cada um de seus turnos. A criatura pode ser libertada se a carne morta for destruída. A carne morta é um objeto Grande com CA 10, 25 pontos de vida e imunidade a veneno e dano psíquico."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Plague Spreader",
+			"source": "VRGR",
+			"page": 255,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"ac": [
+				10
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 10,
+			"con": 15,
+			"int": 3,
+			"wis": 5,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 7,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O zumbi não precisa de ar, comida, bebida ou sono."
+					]
+				},
+				{
+					"name": "Viral Aura",
+					"entries": [
+						"Qualquer criatura que comece seu turno a até 3 metros do espalhador da peste deve realizar um teste de resistência de Constituição {@dc 12}. Se falhar no salvamento, a criatura será {@condition poisoned} e não poderá recuperar pontos de vida até o final do próximo turno. Em um teste bem sucedido, a criatura fica imune à Aura Viral deste espalhador da praga por 24 horas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espalhador da peste faz dois ataques Slam."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano por concussão mais 9 ({@damage 2d8}) de dano necrótico."
+					]
+				},
+				{
+					"name": "Virulent Miasma (1/Day)",
+					"entries": [
+						"O espalhador da peste libera gás tóxico em uma esfera de 9 metros de raio centrada em si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 12}, sofrendo 14 ({@damage 4d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso. Um Humanóide reduzido a 0 pontos de vida por este dano morre e ressuscita como um zumbi (veja seu bloco de estatísticas no Manual dos Monstros) 1 minuto depois. O zumbi age imediatamente após o espalhador da praga na contagem de iniciativa."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"N"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		}
+	]
+}

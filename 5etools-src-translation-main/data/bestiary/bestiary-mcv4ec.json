@@ -1,0 +1,3328 @@
+{
+	"monster": [
+		{
+			"name": "Archon of Boundaries",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": "celestial",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 195,
+				"formula": "17d12 + 85"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 90
+			},
+			"str": 23,
+			"dex": 17,
+			"con": 20,
+			"int": 14,
+			"wis": 18,
+			"cha": 18,
+			"save": {
+				"con": "+10",
+				"wis": "+9"
+			},
+			"skill": {
+				"insight": "+9",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"radiant"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"understands Common and Celestial but can't speak"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The archon casts one of the following spells, using Charisma as the spellcasting ability:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell daylight}",
+							"{@spell lesser restoration}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o arconte falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O arconte tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O arconte faz um ataque de Cascos e um ataque de Lança Radiante."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 4d6 + 6}) de dano de concussão mais 10 ({@damage 3d6}) de dano radiante. Se o alvo for uma criatura Média ou menor, ele deve ter sucesso em um teste de resistência de Força {@dc 19} ou ter a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Radiant Lance",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}12 ({@damage 1d12 + 6}) de dano perfurante mais 28 ({@damage 8d6}) de dano radiante, e o alvo fica marcado até o início do próximo turno do arconte. Enquanto estiver marcado, o alvo tem desvantagem nas jogadas de ataque contra criaturas que não sejam o arconte."
+					]
+				}
+			],
+			"reactionHeader": [
+				"The archon can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Archon's Pursuit",
+					"entries": [
+						"When a creature marked by the archon's Radiant Lance ends its turn within 120 feet of the archon, the archon teleports to an unoccupied space it can see within 5 feet of the creature."
+					]
+				},
+				{
+					"name": "Haunting Radiance",
+					"entries": [
+						"Immediately after a creature within 120 feet of the archon forces it to make a saving throw, the archon responds with a burst of light. The creature must succeed on a {@dc 17} Constitution saving throw or have the {@condition blinded} condition until the end of the creature's next turn."
+					]
+				},
+				{
+					"name": "Parry",
+					"entries": [
+						"The archon adds 5 to its AC against one melee attack that would hit it, provided it can see the attacker."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"CE",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Beanstalk Wurm",
+			"source": "MCV4EC",
+			"size": [
+				"G"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 231,
+				"formula": "14d20 + 84"
+			},
+			"speed": {
+				"walk": 50,
+				"climb": 50
+			},
+			"str": 27,
+			"dex": 18,
+			"con": 22,
+			"int": 4,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"str": "+14",
+				"con": "+12"
+			},
+			"passive": 12,
+			"cr": "18",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"Se o vorme estiver imóvel no início do combate, ele terá vantagem em seu teste de iniciativa. Além disso, se uma criatura não observou o movimento ou ação do vorme, essa criatura deve ser bem sucedida em um teste de {@dc 18} de Inteligência ({@skill Investigation}) para discernir que o vorme está animado."
+					]
+				},
+				{
+					"name": "Leafy Handholds",
+					"entries": [
+						"As criaturas têm vantagem em testes de habilidade feitos para escalar o vorme."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o vorme falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O vorme recupera 20 pontos de vida no início de seu turno se tiver pelo menos 1 ponto de vida. Se o vorme sofrer dano de fogo ou raio, essa característica não funcionará no início do próximo turno do vorme."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O vorme realiza dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 14} para acertar, alcance 15 pés, um alvo. {@h}30 ({@damage 5d8 + 8}) dano perfurante. Se o alvo for uma criatura Grande ou menor, ele deverá ser bem sucedido em um teste de resistência de Destreza {@dc 22} ou será engolido pelo vorme. Uma criatura engolida tem a condição {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do vorme e sofre 28 ({@damage 8d6}) de dano perfurante no início de cada turno do vorme por causa de espinhos na goela do vorme.",
+						"O estômago do vorme pode conter até duas criaturas ao mesmo tempo. Se o vorme sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o vorme deverá ter sucesso em um teste de resistência de Constituição {@dc 22} no final daquele turno ou regurgitar todas as criaturas engolidas, cada uma delas caindo em um espaço a até 3 metros do vorme e tendo a condição {@condition prone}. Se o vorme morrer, uma criatura engolida não terá mais a condição {@condition restrained} e poderá escapar do cadáver usando 3 metros de movimento, saindo com a condição {@condition prone}."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance",
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Deathless Rider",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item chain mail|PHB}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 84,
+				"formula": "13d8 + 26"
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 14,
+			"int": 6,
+			"wis": 6,
+			"cha": 5,
+			"save": {
+				"str": "+7",
+				"con": "+5"
+			},
+			"skill": {
+				"athletics": "+7",
+				"perception": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Mounted Adept",
+					"entries": [
+						"Enquanto montado e sem a condição {@condition incapacitated}, o cavaleiro tem vantagem em jogadas de ataque corpo a corpo contra qualquer criatura desmontada menor que sua montaria, o cavaleiro e sua montaria têm vantagem em testes de resistência de Destreza, e o cavaleiro pode forçar um ataque direcionado à sua montaria para atingir o cavaleiro."
+					]
+				},
+				{
+					"name": "Undead Fortitude",
+					"entries": [
+						"Se o dano reduzir o cavaleiro a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD igual a 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o cavaleiro cai para 1 ponto de vida."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cavaleiro faz dois ataques de machado. Ele pode substituir um desses ataques por Fell Glare."
+					]
+				},
+				{
+					"name": "Axe",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d8 + 4}) cortando dano."
+					]
+				},
+				{
+					"name": "Fell Glare",
+					"entries": [
+						"O cavaleiro olha para uma criatura a até 9 metros de si mesmo. A criatura deve ter sucesso em um teste de resistência de Sabedoria {@dc 13} ou ter a condição {@condition frightened} por 1 minuto. A criatura {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, com desvantagem se puder ver o cavaleiro, encerrando a condição em caso de sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Undead Fortitude"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dunbarrow Witch",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 72,
+				"formula": "16d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 11,
+			"int": 16,
+			"wis": 15,
+			"cha": 20,
+			"save": {
+				"wis": "+5",
+				"cha": "+8"
+			},
+			"skill": {
+				"arcana": "+6",
+				"nature": "+6"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Sylvan",
+				"and any one language"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The witch casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 16}):"
+					],
+					"will": [
+						"{@spell mage armor} (self only)",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell animal messenger}",
+							"{@spell charm person}",
+							"{@spell Tasha's hideous laughter}"
+						],
+						"1e": [
+							"{@spell bestow curse}",
+							"{@spell dispel magic}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A bruxa faz dois ataques de Poison Dagger. Pode substituir um desses ataques por Spellcasting."
+					]
+				},
+				{
+					"name": "Poison Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}4 ({@damage 1d4 + 2}) de dano perfurante mais 21 ({@damage 6d6}) de dano venenoso."
+					]
+				},
+				{
+					"name": "Polymorph Concoction (1/Day)",
+					"entries": [
+						"A bruxa arremessa uma garrafa de líquido em um ponto de até 6 metros de distância de si mesma, que se estilhaça em uma nuvem de fumaça mágica que preenche uma esfera de 3 metros de raio. Cada criatura naquela área deve ter sucesso em um teste de resistência de Sabedoria {@dc 16} ou se transformar em uma criatura, como se estivesse sob os efeitos de um feitiço {@spell polymorph}, transformando-se em uma das seguintes formas (role um {@dice d4}): 1, morcego; 2, sapo; 3, lagarto; ou 4, rato. Esta transformação dura 1 hora ou até que a criatura chegue a 0 pontos de vida em sua nova forma."
+					]
+				},
+				{
+					"name": "Shattered Shards",
+					"entries": [
+						"A bruxa mira em um ponto que ela possa ver a até 9 metros de si mesma. O ar solidifica-se magicamente em um painel espelhado e então se quebra em um cone de 4,5 metros originado daquele ponto. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 16}, sofrendo 25 ({@damage 10d4}) de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S",
+				"X"
+			],
+			"damageTags": [
+				"I",
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MLW",
+				"MW",
+				"RW",
+				"THW"
+			],
+			"conditionInflictSpell": [
+				"charmed",
+				"incapacitated",
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Faerie Borrower",
+			"source": "MCV4EC",
+			"size": [
+				"T"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 12,
+				"formula": "5d4"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 30
+			},
+			"str": 2,
+			"dex": 20,
+			"con": 10,
+			"int": 13,
+			"wis": 12,
+			"cha": 16,
+			"skill": {
+				"sleight of hand": "+7",
+				"stealth": "+7"
+			},
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "1/2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The faerie casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell silent image}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"A fada não provoca ataques de oportunidade quando voa para fora do alcance do inimigo."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Needle Blade",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d4 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Magic Mockery",
+					"entries": [
+						"A fada lança provocações mágicas em uma criatura que ela possa ver a até 18 metros de si mesma. A criatura deve ter sucesso em um teste de resistência de Sabedoria {@dc 13} ou sofrerá 3 ({@damage 1d6}) de dano psíquico e terá desvantagem em jogadas de ataque e testes de habilidade até o início do próximo turno da fada."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Tricksy Parry",
+					"entries": [
+						"Immediately after taking damage, the faerie reduces the damage taken by 2 ({@dice 1d4})."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Faerie Pathlighter",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 38,
+				"formula": "7d8 + 7"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 13,
+			"wis": 17,
+			"cha": 18,
+			"skill": {
+				"insight": "+5",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The faerie casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability:"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell detect magic}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"1": [
+							"{@spell locate creature}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Faerie Illumination",
+					"entries": [
+						"A fada emite luz fraca em um raio de 4,5 metros."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A fada faz dois ataques Shining Strike."
+					]
+				},
+				{
+					"name": "Shining Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para acertar, alcance 5 pés ou alcance 30 pés, um alvo. {@h}7 ({@damage 2d6}) de dano radiante, e se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Destreza {@dc 14} ou será envolto em luz até o final do próximo turno da fada. Enquanto uma criatura estiver envolta em luz, as jogadas de ataque contra a criatura têm vantagem e a criatura não pode se beneficiar da condição {@condition invisible}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Guiding Light (2/Day)",
+					"entries": [
+						"The faerie summons a 30-foot-radius sphere of magical light centered on itself, which lasts for 1 minute or until the faerie has the {@condition incapacitated} condition. Each creature of the faerie's choice (other than the faerie) that starts its turn in that area gains 5 temporary hit points and has advantage on Wisdom saving throws and Wisdom checks until the start of its next turn.",
+						"The sphere is bright light, sheds dim light for an additional 30 feet, and moves with the faerie. If any of the sphere's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Faerie Pest",
+			"source": "MCV4EC",
+			"size": [
+				"S"
+			],
+			"type": "fey",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d6 + 5"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 12,
+			"int": 10,
+			"wis": 12,
+			"cha": 14,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The faerie casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"daily": {
+						"1": [
+							"{@spell blindness/deafness}"
+						],
+						"2e": [
+							"{@spell bane}",
+							"{@spell grease}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Stingblade",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano cortante mais 5 ({@damage 2d4}) dano venenoso. Se a fada tiver vantagem na jogada de ataque, o alvo sofre 3 ({@damage 1d6}) de dano cortante adicional."
+					]
+				},
+				{
+					"name": "Theft of Nerves (1/Day)",
+					"entries": [
+						"A fada libera uma explosão de magia confusa em um cone de 4,5 metros. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Inteligência {@dc 12} ou terá a condição {@condition frightened} por 1 minuto. Uma criatura {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Mischievous Stealth",
+					"entries": [
+						"The faerie takes the Hide action."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"I",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"intelligence"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gingerbrute",
+			"source": "MCV4EC",
+			"size": [
+				"T"
+			],
+			"type": "construct",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 18,
+				"formula": "4d4 + 8"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 13,
+			"dex": 18,
+			"con": 14,
+			"int": 7,
+			"wis": 10,
+			"cha": 12,
+			"skill": {
+				"acrobatics": "+6",
+				"athletics": "+3"
+			},
+			"passive": 10,
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"languages": [
+				"one language of its creator"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Can't Catch Me",
+					"entries": [
+						"O gengibre bruto tem vantagem em quaisquer testes de habilidade ou testes de resistência que fizer para evitar ou encerrar a condição {@condition grappled} ou {@condition restrained} em si mesmo."
+					]
+				},
+				{
+					"name": "Sweet Victory",
+					"entries": [
+						"Depois que o gengibre for destruído, uma criatura pode usar sua ação para comer todos os restos e ganhar 5 pontos de vida temporários. Os restos desintegram-se após 24 horas se não forem consumidos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O gengibre faz dois ataques de garfo, dois ataques de estilingue de chiclete ou um de cada."
+					]
+				},
+				{
+					"name": "Fork",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Gumdrop Slingshot",
+					"entries": [
+						"{@atk rw} {@hit 6} para acertar, alcance 30/120 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano de concussão."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Goose Mother",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": "fey",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 114,
+				"formula": "12d12 + 36"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 40
+			},
+			"str": 17,
+			"dex": 15,
+			"con": 17,
+			"int": 12,
+			"wis": 18,
+			"cha": 15,
+			"save": {
+				"str": "+6",
+				"int": "+4"
+			},
+			"skill": {
+				"insight": "+7",
+				"investigation": "+4",
+				"perception": "+10"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 20,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"stunned",
+				"unconscious"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se a Mãe Ganso falhar em um teste de resistência, ela pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"A Mãe Ganso tem cinco cabeças. Sempre que a Mãe Ganso sofre 25 ou mais de dano em um único turno, uma de suas cabeças morre. Se todas as suas cabeças morrerem, a Mãe Ganso morre.",
+						"No final de seu turno, a Mãe Ganso cria duas cabeças para cada uma de suas cabeças que morreram desde seu último turno, a menos que tenha sofrido dano de veneno desde seu último turno. A Mãe Ganso recupera 10 pontos de vida para cada cabeça quando ela cresce novamente."
+					]
+				},
+				{
+					"name": "Reactive Heads",
+					"entries": [
+						"Para cada cabeça que a Mãe Ganso tiver além de uma, ela obtém uma reação extra que pode ser usada apenas para ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Wakeful",
+					"entries": [
+						"Enquanto a Mãe Ganso dorme, pelo menos uma de suas cabeças está acordada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A Mãe Ganso faz tantos ataques de Bico quantas cabeças e um ataque de Asa."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}6 ({@damage 1d6 + 3}) dano de concussão."
+					]
+				},
+				{
+					"name": "Wing",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}9 ({@damage 1d12 + 3}) dano de concussão. Se o alvo for uma criatura Grande ou menor, ele deve ter sucesso em um teste de resistência de Força {@dc 15} ou ter a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Lullaby of Honks {@recharge 5}",
+					"entries": [
+						"As cabeças da Mãe Ganso grasnam uma canção de ninar discordante. Cada criatura à escolha da Mãe Ganso a até 3 metros dele deve realizar um teste de resistência de Constituição {@dc 15}. Se falhar na resistência, uma criatura sofre 7 ({@damage 2d6}) de dano trovejante e cai em um sono mágico. Em um teste bem-sucedido, o alvo sofre apenas metade do dano. As buzinas podem ser ouvidas a até 300 metros de distância.",
+						"Uma criatura sob sono mágico tem a condição {@condition unconscious} por 8 horas. Este efeito termina mais cedo para uma criatura se ela sofrer dano ou se outra criatura usar uma ação para acordá-la."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B",
+				"T"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "High Fae Impostor",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 149,
+				"formula": "23d8 + 46"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 13,
+			"dex": 21,
+			"con": 15,
+			"int": 18,
+			"wis": 16,
+			"cha": 23,
+			"save": {
+				"dex": "+9",
+				"wis": "+7"
+			},
+			"skill": {
+				"deception": "+14",
+				"performance": "+10",
+				"stealth": "+13"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The high fae casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 18}):"
+					],
+					"will": [
+						"{@spell friends}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell enthrall}",
+							"{@spell Nystul's magic aura}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Os Altos Fae têm vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O High Fae faz dois ataques Fae Blade e usa Vexing Prank uma vez."
+					]
+				},
+				{
+					"name": "Fae Blade",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}18 ({@damage 3d8 + 5}) dano de força."
+					]
+				},
+				{
+					"name": "Vexing Prank",
+					"entries": [
+						"O Grão-Feérico tem como alvo uma criatura que ele possa ver a até 18 metros de si mesmo com um truque mágico. O alvo deve fazer um teste de resistência de {@dc 18} Sabedoria. Se falhar na resistência, o alvo sofre 21 ({@damage 6d6}) de dano psíquico e tem a condição {@condition frightened} até o início do próximo turno do High Fae. Em um teste bem-sucedido, o alvo sofre apenas metade do dano."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Loot Likeness",
+					"entries": [
+						"The high fae magically transforms into a duplicate of a Small or Medium creature it can see. While transformed, the high fae retains its game statistics (other than its size) but gains access to enough general information about the imitated creature, such as background and personality, to reasonably pass itself off as the creature. This transformation ends if the high fae is reduced to 0 hit points, uses this bonus action again, or uses a bonus action to revert to its true form."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "High Fae Kindguard",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 156,
+				"formula": "24d8 + 48"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 22,
+			"dex": 23,
+			"con": 15,
+			"int": 14,
+			"wis": 17,
+			"cha": 13,
+			"save": {
+				"str": "+10",
+				"dex": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"athletics": "+10",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"Se o High Fae for submetido a um efeito que lhe permita fazer um teste de resistência de Destreza para receber apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência e apenas metade do dano se falhar, desde que não tenha a condição {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Os Altos Fae têm vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O High Fae faz dois ataques Fae Claymore e usa Tripping Feint."
+					]
+				},
+				{
+					"name": "Fae Claymore",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}20 ({@damage 4d6 + 6}) dano de força e a velocidade do alvo é reduzida em 3 metros, até uma velocidade mínima de 1,5 metros. A redução dura até o início do próximo turno do Grão-Feérico."
+					]
+				},
+				{
+					"name": "Tripping Feint",
+					"entries": [
+						"O Alto Fae tem como alvo uma criatura Grande ou menor que ele possa ver a até 3 metros de si mesmo. O alvo deve ter sucesso em um teste de resistência de Destreza {@dc 18} ou ter a condição {@condition prone}."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Darting Flight",
+					"entries": [
+						"The high fae moves up to its speed. This movement doesn't provoke opportunity attacks."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry and Riposte",
+					"entries": [
+						"The high fae adds 4 to its AC against one melee attack roll that would hit it, provided it can see the attacker. After the attack hits or misses, the high fae then makes one Fae Claymore attack against the attacker."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "High Fae Mage",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fey",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				14,
+				{
+					"ac": 17,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 148,
+				"formula": "27d8 + 27"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 11,
+			"dex": 18,
+			"con": 12,
+			"int": 17,
+			"wis": 15,
+			"cha": 24,
+			"save": {
+				"int": "+7",
+				"wis": "+6",
+				"cha": "+11"
+			},
+			"skill": {
+				"arcana": "+11",
+				"investigation": "+7",
+				"nature": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The high fae casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 19}):"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell detect magic}",
+						"{@spell druidcraft}",
+						"{@spell mage armor} (self only)"
+					],
+					"daily": {
+						"2e": [
+							"{@spell faerie fire}",
+							"{@spell gust of wind}",
+							"{@spell mirror image}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Os Altos Fae têm vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Alto Fae faz dois ataques de Golpe Elemental."
+					]
+				},
+				{
+					"name": "Elemental Strike",
+					"entries": [
+						"{@atk ms,rs} {@hit 11} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}18 ({@damage 2d10 + 7}) dano de ácido, frio, fogo, força, raio ou trovão (a escolha dos Grão-Feéricos)."
+					]
+				},
+				{
+					"name": "Negotiate Life {@recharge 5}",
+					"entries": [
+						"Os Grão-Feéricos realizam um acordo mágico, sugando energia de seus oponentes para curar suas feridas. O Alto Fae tem como alvo até três criaturas que pode ver a até 18 metros de si mesmo. Cada alvo deve realizar um teste de resistência de Constituição {@dc 19}, sofrendo 26 ({@damage 4d12}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. O Alto Fae então recupera 30 pontos de vida."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Fae Counterspell",
+					"entries": [
+						"The high fae interrupts a creature it can see that is casting a spell with verbal, somatic, or material components. The caster takes 10 ({@damage 3d6}) psychic damage and must make a {@dc 19} Charisma saving throw. On a failed save, the spell fails and has no effect, but the spell slot used to cast it is not expended."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"damageTags": [
+				"N",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "High Fae Noble",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "fey",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 175,
+				"formula": "27d8 + 54"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 13,
+			"dex": 25,
+			"con": 15,
+			"int": 19,
+			"wis": 18,
+			"cha": 22,
+			"save": {
+				"dex": "+12",
+				"int": "+9",
+				"wis": "+9",
+				"cha": "+11"
+			},
+			"skill": {
+				"history": "+9",
+				"insight": "+14",
+				"perception": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Sylvan",
+				"telepathy 120 ft."
+			],
+			"cr": "13",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The high fae casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 19}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell prestidigitation}",
+						"{@spell suggestion}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell major image}",
+							"{@spell zone of truth}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Aura of Overwhelming Splendor",
+					"entries": [
+						"Os Altos Fae irradiam magia deslumbrante e apaziguadora. Cada criatura à escolha do Grão-Feérico que começar seu turno a até 1,5 metro do Grão-Feérico deve ser bem-sucedida em um teste de resistência de Sabedoria {@dc 19} ou terá a condição {@condition charmed} até o início de seu próximo turno. Enquanto {@condition charmed}, a criatura também possui a condição {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o Grão-Feérico falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Os Altos Fae têm vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Alto Fae faz dois ataques Fae Blade. Ele pode substituir um desses ataques por Stunning Soliloquy, se disponível."
+					]
+				},
+				{
+					"name": "Fae Blade",
+					"entries": [
+						"{@atk mw} {@hit 12} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) dano de força."
+					]
+				},
+				{
+					"name": "Stunning Soliloquy {@recharge 5}",
+					"entries": [
+						"Os Grão-Feéricos desencadeiam uma série de palavras mágicas. Cada criatura, à escolha do Grão-Feérico, a até 9 metros de distância de si mesma, deve ser bem-sucedida em um teste de resistência de Sabedoria {@dc 19} ou terá a condição {@condition stunned} por 1 minuto. Uma criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				}
+			],
+			"reactionHeader": [
+				"The high fae can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Capricious Step",
+					"entries": [
+						"Immediately after taking damage, the high fae magically has the {@condition invisible} condition and teleports, along with any equipment it is wearing or carrying, to an unoccupied space it can see within 30 feet of itself. The invisibility lasts until the end of the high fae's next turn."
+					]
+				},
+				{
+					"name": "Ridicule",
+					"entries": [
+						"When a creature misses the high fae with an attack roll, the high fae magically mocks the creature, dealing 5 ({@damage 2d4}) psychic damage to the attacker."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"S",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Knight of Eldraine",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item plate armor|PHB|plate}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 14,
+			"int": 13,
+			"wis": 11,
+			"cha": 13,
+			"save": {
+				"con": "+4",
+				"wis": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Knightly Virtue",
+					"entries": [
+						"O cavaleiro possui uma das seguintes características, dependendo da corte que serve:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Courage (Embereth)",
+									"entries": [
+										"The knight has advantage on Wisdom checks and Wisdom saving throws."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Knowledge (Vantress)",
+									"entries": [
+										"The knight has advantage on Intelligence checks and Intelligence saving throws."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Loyalty (Ardenvale)",
+									"entries": [
+										"The knight has advantage on Charisma checks and Charisma saving throws."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Persistence (Locthwain)",
+									"entries": [
+										"The knight has advantage on Constitution saving throws."
+									]
+								},
+								{
+									"type": "item",
+									"name": "Strength (Garenbrig)",
+									"entries": [
+										"The knight has advantage on Strength checks and Strength saving throws."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Lance",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 10 pés, um alvo. {@h}9 ({@damage 1d12 + 3}) de dano perfurante mais 9 ({@damage 2d8}) de dano radiante."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) de dano cortante ou 8 ({@damage 1d10 + 3}) de dano cortante se usado com as duas mãos, mais 9 ({@damage 2d8}) de dano radiante."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} para acertar, alcance 100/400 pés, um alvo. {@h}6 ({@damage 1d10 + 1}) de dano perfurante mais 9 ({@damage 2d8}) de dano radiante."
+					]
+				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"lance|phb",
+				"longsword|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"R",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nightmare Haunt",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 13,
+			"int": 9,
+			"wis": 12,
+			"cha": 17,
+			"senses": [
+				"blindsight 120 ft. (can't see beyond this radius)"
+			],
+			"passive": 11,
+			"immune": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O pesadelo assombrado tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Somnophage",
+					"entries": [
+						"No início de seu turno, o pesadelo assombrado ganha um número de pontos de vida temporários igual a 5 vezes o número de criaturas {@condition unconscious} a até 9 metros dele."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A assombração do pesadelo faz dois ataques de Garra."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano cortante mais 9 ({@damage 2d8}) de dano psíquico."
+					]
+				},
+				{
+					"name": "Tendrils of Slumber {@recharge 5}",
+					"entries": [
+						"O pesadelo assombrado cria gavinhas espectrais que cobrem o chão em um quadrado de 6 metros que ele pode ver a até 9 metros de si mesmo por 1 minuto ou até usar esta ação novamente. Quando uma criatura que não seja o assombrado do pesadelo entra na área afetada pela primeira vez ou começa seu turno lá, a criatura deve ser bem sucedida em um teste de resistência de Força {@dc 14} ou sofrerá 11 ({@damage 2d10}) de dano necrótico e terá a condição {@condition restrained}. O terreno afetado também é considerado terreno difícil para outras criaturas além do pesadelo durante seu efeito.",
+						"Uma criatura que inicia seu turno na área e já está {@condition restrained} pelos tentáculos deve repetir o teste de resistência. Em caso de falha no salvamento, ele apresenta a condição {@condition unconscious} e em vez da condição {@condition restrained} causada pelas gavinhas. Se obtiver sucesso, o efeito termina na criatura. Uma criatura {@condition unconscious} permanece adormecida até não estar mais na área com gavinhas, sofrer qualquer dano ou ser alvo de um feitiço {@spell remove curse} ou magia semelhante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Stealth",
+					"entries": [
+						"While in dim light or darkness, the nightmare haunt takes the Hide action."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"N",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ogre Chitterlord",
+			"source": "MCV4EC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"druid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "7d10 + 14"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 15,
+			"int": 5,
+			"wis": 12,
+			"cha": 9,
+			"save": {
+				"wis": "+3"
+			},
+			"skill": {
+				"animal handling": "+3",
+				"nature": "+1"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The ogre casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 11}):"
+					],
+					"will": [
+						"{@spell beast sense} (rats only)",
+						"{@spell druidcraft}",
+						"{@spell entangle}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell animal messenger} (rats only)",
+							"{@spell stinking cloud}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Speak with Rats",
+					"entries": [
+						"O ogro pode comunicar verbalmente conceitos simples a ratos comuns e ratos gigantes."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ogro faz dois ataques de clava, dois ataques de chicote de cauda de rato ou um de cada."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}15 ({@damage 2d10 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Rat-Tail Whip",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}13 ({@damage 2d8 + 4}) dano cortante, e se o alvo for Grande ou menor, ele é puxado 1,5 metro em direção ao ogro."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Call Rats (1/Day)",
+					"entries": [
+						"The ogre magically calls {@dice 1d4} giant rats. Each rat appears in an unoccupied space within 30 feet of the ogre that the ogre can see. The rats act as the ogre's allies, obey its spoken commands, and take their turns immediately after the ogre's turn on the same initiative count. The rats remain for 1 hour, until the ogre dies, or until the ogre dismisses them as a bonus action."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"damageTags": [
+				"B",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Redtooth Werefox",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "monstrosity",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 60,
+				"formula": "11d8 + 11"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(in elf form; 40 ft. in fox and hybrid form)"
+				}
+			},
+			"str": 16,
+			"dex": 17,
+			"con": 12,
+			"int": 11,
+			"wis": 13,
+			"cha": 10,
+			"skill": {
+				"acrobatics": "+5",
+				"perception": "+5",
+				"survival": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Elvish (can't speak in fox form)"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A lobisomem faz dois ataques de mordida, dois ataques de lança ou um ataque de mordida e um ataque de lança."
+					]
+				},
+				{
+					"name": "Bite (Fox or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano perfurante. Se o homem-raposa se moveu pelo menos 6 metros em linha reta em direção ao alvo imediatamente antes do golpe e o alvo for uma criatura Média ou menor, o alvo deve ter sucesso em um teste de resistência de Força {@dc 13} ou ter a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Lance (Elf or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 3 metros, um alvo. {@h}9 ({@damage 1d12 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Entangling Arrow (Elf or Hybrid Form Only)",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 150/600 pés, um alvo. {@h}10 ({@damage 2d6 + 3}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência de Destreza {@dc 11} ou ter a condição {@condition restrained} até o início do próximo turno do lobisomem."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Change Shape",
+					"entries": [
+						"The werefox polymorphs into a fox-elf hybrid, into a fox, or back into its elf form. Its game statistics, other than its speed, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its elf form if it dies."
+					]
+				},
+				{
+					"name": "Vulpine Nimbleness (Fox or Hybrid Form Only)",
+					"entries": [
+						"The werefox takes the Dash or Disengage action."
+					]
+				}
+			],
+			"attachedItems": [
+				"lance|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"E"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sewer King",
+			"source": "MCV4EC",
+			"size": [
+				"M"
+			],
+			"type": "fiend",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 52,
+				"formula": "8d8 + 16"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 14,
+			"int": 8,
+			"wis": 12,
+			"cha": 11,
+			"skill": {
+				"perception": "+5",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Infernal",
+				"telepathy 30 ft."
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Beast Speech",
+					"entries": [
+						"O Rei do Esgoto pode compreender e se comunicar verbalmente com qualquer Besta."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Rancid Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) de dano perfurante mais 7 ({@damage 2d6}) de dano ácido. Se o alvo for uma criatura, ele deverá ter sucesso em um teste de resistência de Constituição {@dc 12} ou terá a condição {@condition poisoned} até o início do próximo turno do rei do esgoto."
+					]
+				},
+				{
+					"name": "Summon Swarm (1/Day)",
+					"entries": [
+						"O rei dos esgotos chia e convoca um enxame de ratos em seu auxílio. O enxame aparece em um espaço desocupado a até 9 metros do rei do esgoto que o rei do esgoto pode ver. Ele atua como aliado do rei dos esgotos, obedece aos comandos do rei dos esgotos e realiza seu turno imediatamente após o do rei dos esgotos. O enxame permanece até morrer, o rei do esgoto morrer ou até o rei do esgoto dispensá-lo como uma ação."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Skitter",
+					"entries": [
+						"The sewer king moves up to its speed without provoking opportunity attacks."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Snapping Hydra",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 149,
+				"formula": "13d12 + 65"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 40
+			},
+			"str": 21,
+			"dex": 5,
+			"con": 21,
+			"int": 2,
+			"wis": 16,
+			"cha": 7,
+			"skill": {
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"stunned",
+				"unconscious"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"A hidra pode respirar ar e água."
+					]
+				},
+				{
+					"name": "Multiple Heads",
+					"entries": [
+						"A hidra tem cinco cabeças. Sempre que a hidra sofre 30 ou mais de dano em um único turno, uma de suas cabeças morre. Se todas as suas cabeças morrerem, a hidra morre.",
+						"No final de seu turno, a hidra cria duas cabeças para cada uma de suas cabeças que morreram desde seu último turno, a menos que tenha sofrido dano de frio desde seu último turno. A hidra recupera 10 pontos de vida para cada cabeça regenerada dessa forma."
+					]
+				},
+				{
+					"name": "Reactive Heads",
+					"entries": [
+						"Para cada cabeça que a hidra tiver além de uma, ela obtém uma reação extra que pode ser usada apenas para ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Wakeful",
+					"entries": [
+						"Enquanto a hidra dorme, pelo menos uma de suas cabeças fica acordada."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A hidra faz tantos ataques de mordida quanto cabeças."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 3 metros, um alvo. {@h}14 ({@damage 2d8 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Shell Defense",
+					"entries": [
+						"A hidra retira seus membros e entra em sua concha. Até que surja como uma ação bônus, ele ganha +4 de bônus na CA e tem vantagem em testes de resistência de Força e Constituição. Enquanto estiver em sua concha, a hidra tem a condição {@condition prone}, sua velocidade é 0 e não pode aumentar, suas cabeças não podem morrer, tem desvantagem em testes de resistência de Destreza e não pode realizar nenhuma outra ação ou reação."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Specter of Night",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d12 + 45"
+			},
+			"speed": {
+				"walk": 60,
+				"fly": 60
+			},
+			"str": 22,
+			"dex": 18,
+			"con": 17,
+			"int": 12,
+			"wis": 13,
+			"cha": 12,
+			"save": {
+				"dex": "+8",
+				"wis": "+5"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"resist": [
+				"necrotic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o espectro falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O espectro tem vantagem em testes de resistência contra magias e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O espectro usa Mournful Keening se disponível, então faz um ataque de Cascos e um ataque de Foice Colhedora."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}16 ({@damage 3d6 + 6}) de dano por concussão mais 28 ({@damage 8d6}) de dano necrótico. Se o alvo for uma criatura Média ou menor, ele deverá ter sucesso em um teste de resistência de Força {@dc 18} ou ter a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Mournful Keening {@recharge}",
+					"entries": [
+						"O espectro emite um lamento agudo, chamando aqueles que estão próximos da morte. Cada criatura não-morta a até 36 metros do espectro deve realizar um teste de resistência de Constituição {@dc 15}. Se falhar, a criatura ouve o lamento e está marcada para morrer.",
+						"Uma criatura marcada para a morte não pode recuperar pontos de vida, tem desvantagem em testes de resistência contra a morte e todas as jogadas de ataque contra ela são feitas com vantagem. Este efeito dura 1 minuto ou até que a criatura seja alvo de um feitiço {@spell remove curse} ou magia semelhante."
+					]
+				},
+				{
+					"name": "Reaping Scythe",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 10 pés, um alvo. {@h}12 ({@damage 1d12 + 6}) de dano cortante mais 28 ({@damage 8d6}) de dano necrótico. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Constituição {@dc 15} ou ganhará um nível de {@condition exhaustion}."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sweettooth Horror",
+			"source": "MCV4EC",
+			"size": [
+				"L"
+			],
+			"type": "fiend",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 58,
+				"formula": "9d10 + 9"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 18,
+			"con": 12,
+			"int": 6,
+			"wis": 8,
+			"cha": 12,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"poisoned"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Caramelization",
+					"entries": [
+						"Se o horror sofrer dano de fogo, ele liberará um aroma doce e hipnotizante. Cada criatura a até 9 metros do horror deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou ter a condição {@condition charmed}. Uma criatura {@condition charmed} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O horror tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O horror faz um ataque de mordida e dois ataques de Candy Cane."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano perfurante mais 10 ({@damage 3d6}) de dano ácido."
+					]
+				},
+				{
+					"name": "Candy Cane",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, um alvo. {@h}8 ({@damage 1d8 + 4}) dano de concussão. Se o alvo for uma criatura Grande ou menor, o horror pode optar por não causar dano; em vez disso, o alvo tem a condição {@condition prone} e o horror pode puxar o alvo até 1,5 metro em sua direção."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"A",
+				"B",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tempest Hart",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 147,
+				"formula": "14d12 + 56"
+			},
+			"speed": {
+				"walk": 50,
+				"fly": 50
+			},
+			"str": 21,
+			"dex": 17,
+			"con": 18,
+			"int": 3,
+			"wis": 18,
+			"cha": 14,
+			"save": {
+				"dex": "+7",
+				"wis": "+8"
+			},
+			"skill": {
+				"perception": "+12"
+			},
+			"passive": 22,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"lightning",
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion"
+			],
+			"cr": "11",
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se o cervo falhar em um teste de resistência, ele pode optar por ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cervo faz um ataque Lightning Antlers e um ataque Thunder Hooves."
+					]
+				},
+				{
+					"name": "Lightning Antlers",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 15 pés, um alvo. {@h}16 ({@damage 2d10 + 5}) dano elétrico. Se o alvo for uma criatura, ele deverá ter sucesso em um teste de resistência de Constituição {@dc 16} ou terá a condição {@condition stunned} até o início do próximo turno do cervo."
+					]
+				},
+				{
+					"name": "Thunder Hooves",
+					"entries": [
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) dano trovejante."
+					]
+				}
+			],
+			"reactionHeader": [
+				"The hart can take up to two reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Entangling Growth",
+					"entries": [
+						"Immediately after a creature the hart can see within 120 feet of itself hits it with an attack roll, the hart reduces the damage to itself by half. The attacker must immediately make a {@dc 16} Strength saving throw as beanstalks coil around it in its space. On a failed save, the creature has the {@condition grappled} condition (escape {@dc 16}) and has the {@condition restrained} condition as long as it is {@condition grappled}. The beanstalks vanish after 1 minute, if the hart has the {@condition incapacitated} condition, or when the hart dies."
+					]
+				},
+				{
+					"name": "Lightning Call",
+					"entries": [
+						"In response to making a saving throw, the hart calls down a bolt of lightning that targets a creature it can see within 120 feet of itself. The target must make a {@dc 16} Dexterity saving throw, taking 19 ({@damage 3d12}) lightning damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"L",
+				"T"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Treefolk",
+			"source": "MCV4EC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "plant",
+				"tags": [
+					"druid"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 171,
+				"formula": "18d10 + 72"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 23,
+			"dex": 12,
+			"con": 18,
+			"int": 10,
+			"wis": 20,
+			"cha": 11,
+			"save": {
+				"con": "+8",
+				"int": "+4",
+				"wis": "+9"
+			},
+			"skill": {
+				"insight": "+9",
+				"nature": "+8",
+				"perception": "+9"
+			},
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 19,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"languages": [
+				"Common",
+				"Druidic",
+				"Sylvan"
+			],
+			"cr": "11",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The treefolk casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect poison and disease}",
+						"{@spell druidcraft}"
+					],
+					"daily": {
+						"1": [
+							"{@spell commune with nature} (as an action)"
+						],
+						"2e": [
+							"{@spell enlarge/reduce}",
+							"{@spell speak with plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Plant Camouflage",
+					"entries": [
+						"O povo das árvores tem vantagem nos testes de Destreza ({@skill Stealth}) que realiza em terreno florestal."
+					]
+				},
+				{
+					"name": "Tree Stride",
+					"entries": [
+						"Uma vez em cada um de seus turnos, o povo das árvores pode usar 3 metros de seu movimento para pisar magicamente em uma árvore viva a até 1,5 metro de si mesmo e emergir de uma segunda árvore viva a até 18 metros de si mesmo que ele possa ver, aparecendo em um espaço desocupado a até 1,5 metro da segunda árvore. Ambas as árvores devem ser pelo menos tão grandes quanto as árvores."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O povo das árvores faz dois ataques de Crushing Vine, dois ataques de Nightshade Bolt ou um de cada."
+					]
+				},
+				{
+					"name": "Crushing Vine",
+					"entries": [
+						"{@atk mw} {@hit 10} para acertar, alcance 3 metros, um alvo. {@h}25 ({@damage 3d12 + 6}) dano de concussão. Se o alvo for uma criatura, ele possui a condição {@condition grappled} (escape {@dc 18}). Enquanto {@condition grappled}, a criatura também possui a condição {@condition restrained}. O povo das árvores pode agarrar até seis criaturas desta forma."
+					]
+				},
+				{
+					"name": "Nightshade Bolt",
+					"entries": [
+						"{@atk rs} {@hit 9} para acertar, alcance de 60 pés, um alvo. {@h}33 ({@damage 6d10}) dano de veneno."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Oaken Boon",
+					"entries": [
+						"The treefolk blesses one creature other than itself that it can see within 60 feet of itself with the might and wisdom of the forest. While blessed in this way, a creature can use the treefolk's Tree Stride trait and gains 5 ({@dice 2d4}) temporary hit points at the start of each of its turns. This blessing lasts for 1 minute, until the treefolk has the {@condition incapacitated} condition, or until the treefolk uses this bonus action again."
+					]
+				}
+			],
+			"traitTags": [
+				"Camouflage",
+				"Tree Stride"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"S"
+			],
+			"damageTags": [
+				"B",
+				"I"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Witchkite",
+			"source": "MCV4EC",
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"warlock"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 220,
+				"formula": "21d12 + 84"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 80
+			},
+			"str": 23,
+			"dex": 10,
+			"con": 18,
+			"int": 15,
+			"wis": 17,
+			"cha": 19,
+			"save": {
+				"dex": "+5",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"skill": {
+				"arcana": "+7",
+				"perception": "+8",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"fire",
+				"psychic"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The witchkite casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell minor illusion}",
+						"{@spell speak with dead}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell detect thoughts}",
+							"{@spell dimension door}",
+							"{@spell hold monster}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se a pipa-bruxa falhar em um teste de resistência, ela pode optar por ter sucesso."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O witchkite faz dois ataques Rend e usa Malevolent Flare uma vez."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 10 pés, um alvo. {@h}16 ({@damage 3d6 + 6}) cortando dano."
+					]
+				},
+				{
+					"name": "Malevolent Flare",
+					"entries": [
+						"A pipa-bruxa cospe chamas mágicas de coloração verde em uma criatura que ela possa ver a até 18 metros de si mesma. O alvo deve fazer um teste de resistência de {@dc 17} Destreza. Se falhar na resistência, o alvo sofre 22 ({@damage 5d8}) de dano de fogo e sofre um dos seguintes efeitos à escolha da pipa bruxa:",
+						{
+							"type": "list",
+							"items": [
+								"The target must use its reaction to make a melee attack against another creature of the witchkite's choice that is within the target's reach.",
+								"The target takes 13 ({@damage 2d12}) psychic damage."
+							]
+						},
+						"Em um teste bem-sucedido, o alvo sofre apenas metade do dano."
+					]
+				}
+			],
+			"reactionHeader": [
+				"The witchkite can take up to two reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Enchanting Gaze",
+					"entries": [
+						"When a creature the witchkite can see moves within 10 feet of it, the witchkite emits an enchanting gaze at the creature. The creature must succeed on a {@dc 17} Wisdom saving throw or take 10 ({@damage 3d6}) psychic damage and have the {@condition charmed} condition until the end of its next turn."
+					]
+				},
+				{
+					"name": "Retribution",
+					"entries": [
+						"Immediately after taking damage from a melee attack, the witchkite makes one Rend attack against the attacker."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Witchstalker",
+			"source": "MCV4EC",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d10 + 22"
+			},
+			"speed": {
+				"walk": 60
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 15,
+			"int": 8,
+			"wis": 12,
+			"cha": 6,
+			"save": {
+				"str": "+7",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+7",
+				"stealth": "+6"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 17,
+			"languages": [
+				"understands Common but can't speak"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O caçador de bruxas tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Smell Magic",
+					"entries": [
+						"O perseguidor de bruxas pode sentir a presença e localização da magia a até 36 metros de si mesmo. Ele também tem vantagem nas jogadas de ataque contra criaturas que lançaram um feitiço desde o final do último turno do perseguidor de bruxas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O perseguidor de bruxas faz dois ataques de mordida."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 3d6 + 4}) dano perfurante. Se o alvo for uma criatura Grande ou menor, ele deve ter sucesso em um teste de resistência de Força {@dc 15} ou ter a condição {@condition prone}."
+					]
+				},
+				{
+					"name": "Mind-Wracking Howl {@recharge 5}",
+					"entries": [
+						"O perseguidor de bruxas solta um uivo terrível, e cada criatura a até 9 metros dele que não seja uma Monstruosidade deve realizar um teste de resistência de {@dc 13} Sabedoria. Se falhar na resistência, uma criatura sofre 24 ({@damage 7d6}) de dano psíquico e tem desvantagem em testes de resistência de Constituição para manter {@status concentration} em feitiços até o final do próximo turno. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Spell Stalk",
+					"entries": [
+						"Immediately after a creature within 120 feet of the witchstalker casts a spell, the witchstalker magically teleports to an unoccupied space within 5 feet of the creature and can make one Bite attack against the creature."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"damageTags": [
+				"P",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

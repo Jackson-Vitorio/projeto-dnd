@@ -1,0 +1,372 @@
+{
+	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		}
+	},
+	"monster": [
+		{
+			"name": "Homarid",
+			"source": "PSD",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 30
+			},
+			"str": 13,
+			"dex": 8,
+			"con": 13,
+			"int": 9,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Homarid"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"O homarídeo pode respirar ar e água."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O homarídeo faz dois ataques de garras."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d8 + 1}) cortando dano, e o alvo é {@condition grappled} (escape {@dc 11}). O homarídeo tem duas garras, cada uma das quais pode agarrar apenas um alvo."
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"damageTags": [
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Kavu Predator",
+			"source": "PSD",
+			"page": 24,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 15,
+			"int": 6,
+			"wis": 14,
+			"cha": 8,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands Elvish"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Pounce",
+					"entries": [
+						"Se o kavu se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de garra no mesmo turno, o alvo deve ser bem sucedido em um teste de resistência de Força {@dc 14} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o kavu pode realizar um ataque de mordida contra ele como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O kavu faz dois ataques com garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano perfurante."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Pounce"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"E"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lyra",
+			"alias": [
+				"Perfidious Muderator"
+			],
+			"isNamedCreature": true,
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the planetar",
+						"with": "Lyra",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Serra Angel",
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shalai",
+			"isNamedCreature": true,
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the solar",
+						"with": "Shalai",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Steel Leaf Kavu",
+			"source": "PSD",
+			"page": 24,
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 142,
+				"formula": "15d10 + 60"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 20,
+			"dex": 12,
+			"con": 18,
+			"int": 6,
+			"wis": 14,
+			"cha": 8,
+			"skill": {
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"understands Elvish"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Raking Charge",
+					"entries": [
+						"Se o kavu se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertá-la com um ataque de mordida no mesmo turno, o alvo deverá ter sucesso em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o kavu pode fazer um ataque destruidor contra ele como uma ação bônus."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 2d8 + 5}) dano perfurante."
+					]
+				},
+				{
+					"name": "Rend",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura {@condition prone}. {@h}23 ({@damage 4d8 + 5}) dano cortante."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"E"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Zombie Horse",
+			"source": "PSD",
+			"page": 17,
+			"_copy": {
+				"name": "Zombie",
+				"source": "MM"
+			},
+			"size": [
+				"L"
+			],
+			"hasToken": true
+		}
+	]
+}

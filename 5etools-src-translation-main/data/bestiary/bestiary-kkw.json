@@ -1,0 +1,320 @@
+{
+	"monster": [
+		{
+			"name": "Goblin Gang Member",
+			"source": "KKW",
+			"page": 167,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 10,
+				"formula": "3d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 16,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"O goblin pode realizar a ação Desengajar ou Esconder-se como uma ação bônus em cada um de seus turnos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d4 + 3}) dano perfurante."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 5} para acertar, alcance 80/320 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante."
+					]
+				}
+			],
+			"attachedItems": [
+				"dagger|phb",
+				"light crossbow|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Krenko",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "KKW",
+			"page": 168,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain shirt|phb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 21,
+				"formula": "6d6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 10,
+			"int": 10,
+			"wis": 8,
+			"cha": 14,
+			"skill": {
+				"stealth": "+6",
+				"deception": "+4",
+				"persuasion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"Krenko pode realizar a ação Desengajar ou Esconder-se como uma ação bônus em cada um de seus turnos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Krenko faz dois ataques com sua cimitarra."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) dano cortante mais 2 ({@damage 1d4}) dano venenoso.."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} para acertar, alcance 80/320 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Redirect Attack",
+					"entries": [
+						"When a creature Krenko can see targets him with an attack, Krenko chooses another goblin within 5 feet of him. The two goblins swap places, and the chosen goblin becomes the target instead."
+					]
+				}
+			],
+			"attachedItems": [
+				"light crossbow|phb",
+				"scimitar|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MLW",
+				"MW",
+				"RNG",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Loading Rig",
+			"isNpc": true,
+			"source": "KKW",
+			"page": 170,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "construct"
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 39,
+				"formula": "6d10 + 6"
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 13,
+			"int": 1,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"passive": 6,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Antimagic Susceptibility",
+					"entries": [
+						"A plataforma é {@condition incapacitated} enquanto está na área de {@spell antimagic field}. Se for alvo de {@spell dispel magic}, o equipamento deve ter sucesso em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
+					]
+				},
+				{
+					"name": "Unstable",
+					"entries": [
+						"Se o equipamento sofrer dano, ele deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou ser {@condition incapacitated} com velocidade 0 até que uma criatura o ative com um teste bem-sucedido de {@dc 10} Inteligência ({@skill Arcana}) feito como uma ação."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A armadura faz dois ataques corpo a corpo."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano de concussão."
+					]
+				}
+			],
+			"traitTags": [
+				"Antimagic Susceptibility"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

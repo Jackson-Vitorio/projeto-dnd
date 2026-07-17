@@ -1,0 +1,357 @@
+{
+	"monster": [
+		{
+			"name": "Dirt-Under-Nails",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "RtG",
+			"page": 32,
+			"size": [
+				"M"
+			],
+			"type": "plant",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 78,
+				"formula": "12d8 + 24"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 15,
+			"int": 12,
+			"wis": 12,
+			"cha": 18,
+			"save": {
+				"wis": "+4",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+4",
+				"deception": "+7",
+				"persuasion": "+7",
+				"religion": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"telepathy 60 ft."
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The warlock's innate spellcasting ability is Charisma. It can innately cast the following spells (spell save {@dc 15}), requiring no material components:"
+					],
+					"will": [
+						"{@spell alter self}",
+						"{@spell false life}",
+						"{@spell levitate} (self only)",
+						"{@spell mage armor} (self only)",
+						"{@spell silent image}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell feeblemind}",
+							"{@spell finger of death}",
+							"{@spell plane shift}"
+						]
+					},
+					"ability": "cha"
+				},
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Dirt-Under-Nails is a 17th level spellcaster. His spellcasting ability is Charisma (spell save {@dc 17}, {@hit 9} to hit with spell attacks). He regains his expended spell slots when he finishes a short or long rest. He knows the following warlock spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch}",
+								"{@spell eldritch blast}",
+								"{@spell friends}",
+								"{@spell mage hand}",
+								"{@spell minor illusion}",
+								"{@spell prestidigitation}",
+								"{@spell shocking grasp}"
+							]
+						},
+						"5": {
+							"lower": 1,
+							"slots": 4,
+							"spells": [
+								"{@spell armor of Agathys}",
+								"{@spell banishment}",
+								"{@spell burning hands}",
+								"{@spell cloudkill}",
+								"{@spell flame strike}",
+								"{@spell magic circle}",
+								"{@spell scorching ray}",
+								"{@spell scrying}",
+								"{@spell stinking cloud}",
+								"{@spell suggestion}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Dark One's Own Luck (Recharges after a Short or Long Rest)",
+					"entries": [
+						"Quando o bruxo faz um teste de habilidade ou teste de resistência, ele pode adicionar {@dice d10} à rolagem. Ele pode fazer isso depois que o teste for feito, mas antes que qualquer efeito do teste ocorra."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"Dirt-Under-Nails recupera 10 pontos de vida no início de seu turno se estiver em contato com o solo. Se Dirt-Under-Nails sofrer dano de fogo, esta característica não funcionará no início de seu próximo turno. Dirt-Under-Nails morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				},
+				{
+					"name": "Shared Senses",
+					"entries": [
+						"Dirt-Under-Nails pode ver e ouvir o que qualquer planta num raio de 36 metros pode ver e ouvir. Além disso, Dirt-Under-Nails pode se comunicar telepaticamente com qualquer planta dentro deste alcance."
+					]
+				},
+				{
+					"name": "Special Equipment (+2 Rod of the Pact Keeper)",
+					"entries": [
+						"Enquanto segura este {@item +2 Rod of the Pact Keeper||rod}, Dirt-Under-Nails ganha um bônus de +2 nas jogadas de ataque de feitiço e nas CDs dos testes de resistência de seus feitiços de bruxo (incluídas nas modificações abaixo). Além disso, ele pode recuperar 1 espaço de magia de bruxo como uma ação enquanto segura o bastão. Ele não pode usar esta propriedade novamente até terminar um descanso longo."
+					]
+				},
+				{
+					"name": "Tree Stride",
+					"entries": [
+						"Uma vez em cada um de seus turnos, Dirt-Under-Nails pode usar 3 metros de seu movimento para pisar magicamente em um bosque de cogumelos a até 1,5 metro dele e emergir de um segundo bosque de cogumelos a 18 metros dele, aparecendo em um espaço desocupado a 1,5 metro do segundo bosque. Ambos os bosques de cogumelos devem ser Grandes ou maiores. Dirt-Under-Nails não precisa ser capaz de ver o segundo bosque para usar essa habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace",
+					"entries": [
+						"{@atk mw} {@hit 3} para acertar, alcance 5 pés, um alvo. {@h}3 ({@damage 1d6}) de dano de concussão mais 10 ({@damage 3d6}) de dano de fogo."
+					]
+				}
+			],
+			"attachedItems": [
+				"mace|phb"
+			],
+			"traitTags": [
+				"Regeneration",
+				"Tree Stride"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"I",
+				"L",
+				"N",
+				"O",
+				"P",
+				"R",
+				"S",
+				"Y"
+			],
+			"spellcastingTags": [
+				"CL",
+				"I"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"incapacitated"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Rotter",
+			"source": "RtG",
+			"page": 34,
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"natural armor",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d8 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 10,
+			"wis": 13,
+			"cha": 8,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+4",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"bludgeoning",
+				"piercing"
+			],
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"telepathy 60 ft."
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Magic Club",
+					"entries": [
+						"Na mão do podre, sua clava é mágica e causa 7 ({@damage 3d4}) de dano extra (incluído em seus ataques)."
+					]
+				},
+				{
+					"name": "Plant Camouflage",
+					"entries": [
+						"O podre tem vantagem em testes de Destreza ({@skill Stealth}) que faz em terrenos com ampla cobertura vegetal."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"O rotter recupera 10 pontos de vida no início do seu turno se estiver em contato com o solo. Se o rotter sofrer dano de fogo, esta característica não funcionará no início do próximo turno do rotter. O podre morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+					]
+				},
+				{
+					"name": "Shared Senses",
+					"entries": [
+						"O podre pode ver e ouvir o que qualquer planta num raio de 36 metros pode ver e ouvir. Além disso, o podre pode se comunicar telepaticamente com qualquer planta dentro deste alcance."
+					]
+				},
+				{
+					"name": "Tree Stride",
+					"entries": [
+						"Uma vez em cada um de seus turnos, o podre pode usar 3 metros de seu movimento para pisar magicamente em um bosque de cogumelos a até 1,5 metro dele e emergir de um segundo bosque de cogumelos a 18 metros dele, aparecendo em um espaço desocupado a 1,5 metro do segundo bosque. Ambos os bosques de cogumelos devem ser Grandes ou maiores. O podre não precisa ver o segundo bosque para usar essa habilidade."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O podre faz dois ataques com sua clava."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}14 ({@damage 4d4 + 4}) dano de concussão."
+					]
+				}
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"traitTags": [
+				"Camouflage",
+				"Regeneration",
+				"Tree Stride"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"TP"
+			],
+			"damageTags": [
+				"B"
+			],
+			"miscTags": [
+				"MLW",
+				"MW"
+			],
+			"hasToken": true
+		}
+	]
+}

@@ -93,11 +93,12 @@ def translate():
             items = group[field]
             if isinstance(items, list):
                 for i_idx, item in enumerate(items):
-                    texts = extract_texts_from_item(item, f"{name}|{field}|{i_idx}")
+                    prefix = f"{name}|{field}|{i_idx}"
+                    texts = extract_texts_from_item(item, prefix)
                     for path, text in texts:
-                        key = f"{name}|{field}|{i_idx}|{path}"
-                        if key not in translated:
-                            pending.append((key, text))
+                        # path já inclui o prefix completo, não duplicar
+                        if path not in translated:
+                            pending.append((path, text))
     
     total = len(pending)
     print(f"  Textos a traduzir: {total}")
@@ -180,7 +181,10 @@ def translate():
             items = group[field]
             if isinstance(items, list):
                 for i_idx, item in enumerate(items):
-                    _apply_translations(item, f"{name}|{field}|{i_idx}", translations)
+                    prefix = f"{name}|{field}|{i_idx}"
+                    result = _apply_translations(item, prefix, translations)
+                    if result is not None:
+                        group[field][i_idx] = result
     
     with open(LG_FILE, 'w') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

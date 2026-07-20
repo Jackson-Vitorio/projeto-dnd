@@ -96,7 +96,7 @@
 				{
 					"name": "Detect Sentience",
 					"entries": [
-						"O cérebro em uma jarra pode sentir a presença e localização de qualquer criatura a até 90 metros dela que tenha Inteligência 3 ou superior, independentemente de barreiras interpostas, a menos que a criatura esteja protegida por um feitiço {@spell mind blank}."
+						"O cérebro em uma jarra pode sentir a presença e localização de qualquer criatura a até 90 metros dela que tenha inteligência 3 ou superior, independentemente de barreiras interpostas, a menos que uma criatura esteja protegida por um feitiço {@spell mind blank}."
 					]
 				},
 				{
@@ -110,7 +110,7 @@
 				{
 					"name": "Mind Blast {@recharge 5}",
 					"entries": [
-						"O cérebro em uma jarra emite magicamente energia psíquica em um cone de 18 metros. Cada criatura naquela área deve ter sucesso em um teste de resistência de Inteligência {@dc 15} ou sofrerá 13 ({@damage 2d8 + 4}) de dano psíquico e sofrerá {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"O cérebro em uma jarra emite magicamente energia psíquica em um cone de 18 metros. Cada criatura nesta área deve ter sucesso em um teste de resistência de Inteligência {@dc 15} ou sofrerá 13 ({@damage 2d8 + 4}) de dano psíquico e sofrerá {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				}
 			],
@@ -134,18 +134,18 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated",
-				"paralyzed",
-				"prone",
-				"unconscious"
+				"encantado",
+				"incapacitado",
+				"paralisado",
+				"propenso",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"wisdom"
+				"carisma",
+				"sabedoria"
 			],
 			"hasToken": true
 		},
@@ -223,7 +223,7 @@
 				{
 					"name": "Independent Tentacles",
 					"entries": [
-						"O kraken mecânico tem oito tentáculos, cada um dos quais é tratado como uma criatura Média, move-se independentemente no turno do construto e tem uma velocidade de vôo de 12 metros. Os sentidos do kraken mecânico operam através de seus tentáculos e também de seu corpo principal. Cada tentáculo pode ser atacado de forma independente, com o dano causado aos tentáculos aplicado ao total de pontos de vida do kraken mecânico. Um tentáculo é destruído se sofrer mais de 20 de dano.",
+						"O kraken mecânico tem oito tentáculos, cada um dos quais é tratado como uma criatura média, move-se independentemente no giro do construtor e tem uma velocidade de voo de 12 metros. Os sentidos do kraken mecânico operam através de seus tentáculos e também de seu corpo principal. Cada tentáculo pode ser atacado de forma independente, com o dano causado aos tentáculos aplicados ao total de pontos de vida do kraken mecânico. Um tentáculo é destruído e sofre mais de 20 de dano.",
 						"Reduzir o construto para três ou menos tentáculos reduz seus ataques de acordo. Um kraken mecânico pode regenerar quaisquer tentáculos destruídos no final de um descanso longo."
 					]
 				}
@@ -232,7 +232,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O kraken mecânico faz quatro ataques de tentáculos."
+						"O Kraken Mecânico faz quatro ataques de tentáculos."
 					]
 				},
 				{
@@ -448,13 +448,13 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Garret usa um {@item Ring of Warmth} (incluído em suas estatísticas) e empunha um {@item Gambler's Blade longsword|LLK}."
+						"Garret usa um {@item Ring of Warmth} (incluído em suas estatísticas) e empunhado um {@item Gambler's Blade longsword|LLK}."
 					]
 				},
 				{
 					"name": "Bardic Inspiration (3/Day)",
 					"entries": [
-						"Como uma ação bônus, Garret pode dar a uma criatura escolhida (além dele) um dado de inspiração {@dice d6}. A criatura escolhida deve estar a até 18 metros de Garret e ser capaz de ouvi-lo. Uma vez nos próximos 10 minutos, a criatura pode lançar o dado e adicionar o número obtido a um teste de habilidade, jogada de ataque ou teste de resistência que fizer. A criatura pode usar o dado de inspiração depois que o teste for feito, mas antes que o Mestre diga se foi bem-sucedido ou falhou. Depois que o dado de inspiração for lançado, ele será perdido. Uma criatura só pode ter um dado de inspiração por vez."
+						"Como uma ação bônus, Garret pode dar a uma criatura escolhida (além dele) um dado de inspiração {@dice d6}. A criatura escolhida deve estar a até 18 metros de Garret e ser capaz de ouvi-lo. Uma vez nos próximos 10 minutos, a criatura pode lançar o dado e adicionar o número obtido a um teste de habilidade, jogo de ataque ou teste de resistência que causa. A criatura pode usar o dado de inspiração depois que o teste for feito, mas antes que o Mestre diga se foi bem-sucedido ou falhou. Depois que o dado de inspiração for lançado, ele estará perdido. Uma criatura só pode ter um dado de inspiração de vez em quando."
 					]
 				},
 				{
@@ -466,7 +466,7 @@
 				{
 					"name": "Sneak Attack (1/Turn)",
 					"entries": [
-						"Garret causa 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado de Garret que não seja {@condition incapacitated} e Garret não tem desvantagem na jogada de ataque."
+						"Garret causa 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado de Garret que não seja {@condition incapacitated} e Garret não tem dificuldade na jogada de ataque."
 					]
 				}
 			],
@@ -507,12 +507,12 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated",
-				"prone"
+				"encantado",
+				"incapacitado",
+				"propenso"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -571,7 +571,7 @@
 				"O"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -607,8 +607,8 @@
 				{
 					"name": "Petrifying Gaze",
 					"entries": [
-						"Quando uma criatura que pode ver os olhos da medusa começa seu turno a até 9 metros da medusa, a medusa pode forçá-la a fazer um teste de resistência de Constituição {@dc 14} se a medusa não for {@condition incapacitated} e puder ver a criatura. Se o teste de resistência falhar por 5 ou mais, a criatura é instantaneamente {@condition petrified}. Caso contrário, uma criatura que falhar no salvamento começa a se transformar em vidro e é {@condition restrained}. A criatura {@condition restrained} deve repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que a criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
-						"A menos que {@status surprised}, uma criatura pode desviar os olhos para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá ver a medusa até o início de seu próximo turno, quando poderá desviar os olhos novamente. Se a criatura olhar para a medusa nesse meio tempo, ela deverá fazer um teste imediatamente.",
+						"Quando uma criatura que pode ver os olhos da medusa começa seu turno a até 9 metros da medusa, a medusa pode forçá-la a fazer um teste de resistência de Constituição {@dc 14} se a medusa não for {@condition incapacitated} e puder ver a criatura. Se o teste de resistência for 5 ou mais, a criatura é instantânea {@condition petrified}. Caso contrário, uma criatura que falha no salvamento começa a se transformar em vidro e é {@condition restrained}. A criatura {@condition restrained} deverá repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que uma criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
+						"A menos que {@status surprised}, uma criatura pode desviar os olhos para evitar o teste de resistência no início do seu turno. Se uma criatura fizer isso, ela não poderá ver a medusa até o início de seu próximo turno, quando poderá desviar os olhos novamente. Se uma criatura olhar para uma medusa nesse meio tempo, ela deverá fazer um teste imediatamente.",
 						"Se a medusa se vê refletida em uma superfície polida a até 9 metros dela e em uma área de luz brilhante, a medusa é, devido à sua maldição, afetada por seu próprio olhar."
 					]
 				}
@@ -773,15 +773,15 @@
 				"frightened"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated"
+				"encantado",
+				"incapacitado"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"intelligence",
-				"wisdom"
+				"inteligência",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -899,13 +899,13 @@
 				{
 					"name": "Transparent",
 					"entries": [
-						"Mesmo quando um povo lodo está à vista, é necessário um teste de {@dc 12} Sabedoria ({@skill Perception}) para detectar um povo lodo que não se moveu nem atacou. Uma criatura que tenta entrar no espaço do povo lodo sem saber da presença do povo lodo é {@status surprised} pelo povo lodo."
+						"Mesmo quando um povo lodo está à vista, é necessário um teste de {@dc 12} Sabedoria ({@skill Perception}) para detectar um povo lodo que não se moveu nem atacado. Uma criatura que tenta entrar no espaço do povo lodo sem saber da presença do povo lodo é {@status surprised} pelo povo lodo."
 					]
 				},
 				{
 					"name": "Fragile Bones",
 					"entries": [
-						"Para cada 5 de dano sofrido, a velocidade de caminhada do povo lodo é reduzida em 1,5 metro."
+						"Para cada 5 danos sofridos, a velocidade de caminhada do povo lodo é reduzida em 1,5 metro."
 					]
 				}
 			],

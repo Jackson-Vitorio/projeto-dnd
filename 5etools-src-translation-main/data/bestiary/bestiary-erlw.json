@@ -90,7 +90,7 @@
 				{
 					"name": "Alien Mind",
 					"entries": [
-						"Se uma criatura tentar ler os pensamentos de Belashyrra ou causar dano psíquico a ela, essa criatura deverá ser bem sucedida em um teste de resistência de Inteligência {@dc 22} ou ficará {@condition stunned} por 1 minuto. A criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+						"Se uma criatura tentar ler os pensamentos de Belashyrra ou causar dano psíquico a ela, essa criatura deverá ser bem sucedida em um teste de resistência de Inteligência {@dc 22} ou cair {@condition stunned} por 1 minuto. A criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
 					]
 				},
 				{
@@ -114,7 +114,7 @@
 				{
 					"name": "Regeneration",
 					"entries": [
-						"Belashyrra recupera 20 pontos de vida no início do seu turno. Se sofrer dano radiante, esta característica não funciona no início do próximo turno. Belashyrra morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+						"Belashyrra recupera 20 pontos de vida no início do seu turno. Se sofrer dano radiante, esta característica não funciona no início do próximo turno. Belashyrra morre apenas se começar sua vez com 0 pontos de vida e não se regenerar."
 					]
 				},
 				{
@@ -140,34 +140,34 @@
 				{
 					"name": "Eye Ray",
 					"entries": [
-						"Belashyrra dispara um dos seguintes raios oculares mágicos de sua escolha, visando uma criatura que possa ver a até 36 metros dele:",
+						"Belashyrra dispara um dos seguintes raios oculares mágicos de sua escolha, girando em uma criatura que pode ver a até 36 metros dele:",
 						{
 							"type": "list",
-							"style": "list-hang-notitle",
+							"style": "lista-pendurar-notitle",
 							"items": [
 								{
 									"type": "item",
 									"name": "1. Psyche-Reconstruction Ray",
-									"style": "italic",
-									"entry": "The target must make a {@dc 22} Wisdom saving throw, taking 49 ({@damage 9d10}) psychic damage on a failed save, or half as much damage on a successful one. If this damage reduces a creature to 0 hit points, it dies and transforms into a spectator under Belashyrra's control and acts immediately after Belashyrra in the initiative order. The target can't be returned to its original form by any means short of a {@spell wish} spell."
+									"style": "itálico",
+									"entry": "O alvo deve realizar um teste de resistência de Sabedoria {@dc 22}, sofrendo 49 ({@damage 9d10}) de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso. Se este dano reduzir uma criatura a 0 pontos de vida, ela morre e se transforma em um espectador sob o controle de Belashyrra e age imediatamente após Belashyrra na ordem de iniciativa. O alvo não pode retornar à sua forma original por qualquer meio que não seja um feitiço {@spell wish}."
 								},
 								{
 									"type": "item",
 									"name": "2. Domination Ray",
-									"style": "italic",
-									"entry": "The target must succeed on a {@dc 22} Wisdom saving throw or be {@condition charmed} by Belashyrra for 1 minute or until the target takes damage. Belashyrra can issue telepathic commands to the {@condition charmed} creature (no action required), which it does its best to obey."
+									"style": "itálico",
+									"entry": "O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 22} ou será {@condition charmed} de Belashyrra por 1 minuto ou até que o alvo sofra dano. Belashyrra pode emitir comandos telepáticos para a criatura {@condition charmed} (nenhuma ação necessária), aos quais ela faz o possível para obedecer."
 								},
 								{
 									"type": "item",
 									"name": "3. Mind-Weakening Ray",
-									"style": "italic",
-									"entry": "The target must succeed on a {@dc 22} Intelligence saving throw or take 36 ({@damage 8d8}) psychic damage and be unable to cast spells or activate magic items for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"style": "itálico",
+									"entry": "O alvo deve ter sucesso em um teste de resistência de Inteligência {@dc 22} ou sofrerá 36 ({@damage 8d8}) de dano psíquico e será incapaz de lançar feitiços ou ativar itens mágicos por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
 								},
 								{
 									"type": "item",
 									"name": "4. Blinding Ray",
-									"style": "italic",
-									"entry": "The target and each creature within 10 feet of it must succeed on a {@dc 22} Constitution saving throw or take 19 ({@damage 3d12}) radiant damage and be {@condition blinded} for 1 minute. Until this blindness ends, Belyshyrra can see through the {@condition blinded} creature's eyes. The {@condition blinded} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									"style": "itálico",
+									"entry": "O alvo e cada criatura a até 3 metros dele devem ter sucesso em um teste de resistência de Constituição {@dc 22} ou sofrerão 19 ({@damage 3d12}) de dano radiante e serão {@condition blinded} por 1 minuto. Até que a cegueira acabe, Belyshyrra pode ver através dos olhos da criatura {@condition blinded}. A criatura {@condition blinded} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
 								}
 							]
 						}
@@ -184,13 +184,13 @@
 				{
 					"name": "Implant Fear (Costs 2 Actions)",
 					"entries": [
-						"Belashyrra tem como alvo uma criatura que possa ver a até 18 metros dele. O alvo deve ter sucesso em um teste de resistência de {@dc 22} Sabedoria ou sofrerá 22 ({@damage 4d10}) de dano psíquico e imediatamente usar sua reação, se disponível, para se mover o máximo que sua velocidade permitir para longe de Belashyrra."
+						"Belashyrra tem como alvo uma criatura que pode ser vista a até 18 metros dele. O alvo deve ter sucesso em um teste de resistência de {@dc 22} Sabedoria ou sofrerá 22 ({@damage 4d10}) de dano psíquico e usará imediatamente sua ocorrência, se disponível, para se mover o máximo que sua velocidade permitir para longe de Belashyrra."
 					]
 				},
 				{
 					"name": "Rend Reality (Costs 3 Actions)",
 					"entries": [
-						"Belashyrra rompe os laços da realidade em sua área imediata. Cada criatura a até 3 metros de Belashyrra deve ter sucesso em um teste de resistência de Constituição {@dc 22} ou sofrerá 19 ({@damage 3d12}) de dano de força e ganhará um nível de {@condition exhaustion}."
+						"Belashyrra rompe os laços da realidade em sua área imediata. Cada criatura até 3 metros de Belashyrra deverá ter sucesso em um teste de resistência de Constituição {@dc 22} ou sofrerá 19 ({@damage 3d12}) de dano de força e ganhará um nível de {@condition exhaustion}."
 					]
 				}
 			],
@@ -337,7 +337,7 @@
 				{
 					"name": "Commander of Bones",
 					"entries": [
-						"Como uma ação bônus, o cavaleiro pode mirar em um esqueleto ou zumbi que possa ver a até 9 metros dele. O alvo deve realizar um teste de resistência de {@dc 14} Sabedoria. Se falhar na resistência, o alvo deve obedecer aos comandos do cavaleiro até que o cavaleiro morra ou até que o cavaleiro o libere como uma ação bônus. O cavaleiro pode comandar até doze mortos-vivos por vez desta forma."
+						"Como uma ação bônus, o cavaleiro pode mirar em um esqueleto ou zumbi que pode ver a até 9 metros dele. O alvo deve realizar um teste de resistência de {@dc 14} Sabedoria. Se falhar na resistência, o alvo deve obedecer aos comandos do cavaleiro até que o cavaleiro morra ou até que o cavaleiro o libere como uma ação bônus. O cavaleiro pode comandar até doze mortos-vivos por vez desta forma."
 					]
 				},
 				{
@@ -400,8 +400,8 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -465,7 +465,7 @@
 				{
 					"name": "Change Appearance",
 					"entries": [
-						"O changeling pode usar sua ação para se transformar em um humanóide Médio que viu ou voltar à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma se morrer."
+						"O changeling pode usar sua ação para se transformar em um humanóide Médio que viu ou voltar à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que você esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma de morrer."
 					]
 				}
 			],
@@ -485,7 +485,7 @@
 				{
 					"name": "Unsettling Visage (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Cada criatura a até 9 metros do changeling deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 13} ou será {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"Cada criatura a até 9 metros do changeling deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 13} ou será {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				}
 			],
@@ -523,7 +523,7 @@
 		{
 			"name": "Clawfoot",
 			"group": [
-				"Dinosaurs"
+				"Dinossauros"
 			],
 			"source": "ERLW",
 			"page": 289,
@@ -712,13 +712,13 @@
 				{
 					"name": "Evasion",
 					"entries": [
-						"Se o dolgaunt for submetido a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, o dolgaunt não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar. Não pode usar esta característica se for {@condition incapacitated}."
+						"Se o dolgaunt for submetido a um efeito que lhe permitirá fazer um teste de resistência de Destreza para sofrer apenas metade do dano, o dolgaunt não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar. Não é possível usar esse recurso para {@condition incapacitated}."
 					]
 				},
 				{
 					"name": "Unarmored Defense",
 					"entries": [
-						"Enquanto o dolgaunt não estiver usando armadura e não empunhando escudo, sua CA inclui seu modificador de Sabedoria."
+						"Enquanto o dolgaunt não estiver usando armadura e não empunhando escudo, seu CA inclui seu modificador de Sabedoria."
 					]
 				}
 			],
@@ -732,7 +732,7 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 6} para acertar, alcance 15 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano de concussão. O alvo é {@condition grappled} (escape {@dc 12}) se for uma criatura Grande ou menor. Até que esta luta termine, o dolgaunt não pode usar o mesmo tentáculo em outro alvo. O dolgaunt tem dois tentáculos."
+						"{@atk mw} {@hit 6} para acertar, alcance 15 pés, um alvo. {@h}7 ({@damage 1d6 + 4}) dano de concussão. O alvo é {@condition grappled} (escape {@dc 12}) se trata de uma criatura Grande ou menor. Até que esta luta termine, o dolgaunt não pode usar o mesmo tentáculo em outro alvo. O dolgaunt tem dois tentáculos."
 					]
 				},
 				{
@@ -989,7 +989,7 @@
 				{
 					"name": "Nightmare Touch",
 					"entries": [
-						"{@atk ms} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}18 ({@damage 4d6 + 4}) de dano psíquico. Se o alvo for {@condition unconscious}, ele sofre 10 ({@damage 3d6}) de dano psíquico extra e é amaldiçoado até que a bruxa morra ou a maldição seja removida. O máximo de pontos de vida da criatura amaldiçoada diminui em 5 ({@dice 1d10}) sempre que ela termina um descanso longo."
+						"{@atk ms} {@hit 7} para acertar, alcance 1,5 m, uma criatura. {@h}18 ({@damage 4d6 + 4}) de dano psíquico. Se o alvo for {@condition unconscious}, ele sofre 10 ({@damage 3d6}) de dano psíquico extra e é amaldiçoado até que uma bruxa morra ou uma maldição seja removida. Os pontos de vida máximos da criatura amaldiçoada diminuíram em 5 ({@dice 1d10}) sempre que ela termina um descanso longo."
 					]
 				}
 			],
@@ -997,7 +997,7 @@
 				{
 					"name": "Dream Eater",
 					"entries": [
-						"Quando uma criatura {@condition unconscious} que a bruxa pode ver a até 9 metros dela recupera a consciência, a bruxa pode forçar a criatura a fazer um teste de resistência de {@dc 15} Sabedoria. A menos que o teste seja bem-sucedido, a criatura sofre 11 ({@damage 2d10}) de dano psíquico e a bruxa recupera pontos de vida iguais à quantidade de dano sofrido."
+						"Quando uma criatura {@condition unconscious} que uma bruxa pode ver a até 9 metros dela recuperar a consciência, uma bruxa pode forçar uma criatura a fazer um teste de resistência de {@dc 15} Sabedoria. A menos que o teste seja bem-sucedido, a criatura sofre 11 ({@damage 2d10}) de dano psíquico e a bruxa recupera pontos de vida iguais à quantidade de dano sofrido."
 					]
 				}
 			],
@@ -1030,15 +1030,15 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated",
-				"unconscious"
+				"encantado",
+				"incapacitado",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1119,7 +1119,7 @@
 				{
 					"name": "Alien Mind",
 					"entries": [
-						"Se uma criatura tentar ler os pensamentos de Dyrrn ou causar dano psíquico a ela, essa criatura deverá ser bem sucedida em um teste de resistência de Inteligência {@dc 23} ou ficará {@condition stunned} por 1 minuto. A criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+						"Se uma criatura tentar ler os pensamentos de Dyrrn ou causar dano psíquico a ela, essa criatura deverá ser bem sucedida em um teste de resistência de Inteligência {@dc 23} ou vencer {@condition stunned} por 1 minuto. A criatura {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
 					]
 				},
 				{
@@ -1137,7 +1137,7 @@
 				{
 					"name": "Regeneration",
 					"entries": [
-						"Dyrrn recupera 20 pontos de vida no início do seu turno. Se Dyrrn sofrer dano radiante, esta característica não funcionará no início do próximo turno. Dyrrn morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+						"Dyrrn recupera 20 pontos de vida no início do seu turno. Se Dyrrn sofrer dano radiante, esta característica não funcionará no início do próximo turno. Dyrrn morre apenas se começar sua vez com 0 pontos de vida e não se regenerar."
 					]
 				},
 				{
@@ -1157,20 +1157,20 @@
 				{
 					"name": "Tentacle Whip",
 					"entries": [
-						"{@atk mw} {@hit 15} para acertar, alcance 3 metros, um alvo. {@h}24 ({@damage 3d10 + 8}) cortando dano. Se o alvo for uma criatura Média ou menor, ele será {@condition grappled} (escapar {@dc 23}), puxado para um espaço desocupado a até 1,5 metro de Dyrrn e deverá ter sucesso em um teste de resistência de Inteligência {@dc 23} ou será {@condition stunned} até que esta luta termine. Dyrrn não pode usar o mesmo chicote de tentáculos em outro alvo até que esta luta termine. Dyrrn tem dois chicotes de tentáculos."
+						"{@atk mw} {@hit 15} para acertar, alcance 3 metros, um alvo. {@h}24 ({@damage 3d10 + 8}) cortando dano. Se o alvo for uma criatura média ou menor, ele será {@condition grappled} (escapar {@dc 23}), puxado para um espaço desocupado a até 1,5 metro de Dyrrn e deverá ter sucesso em um teste de resistência de Inteligência {@dc 23} ou será {@condition stunned} até que esta luta termine. Dyrrn não pode usar o mesmo chicote de tentáculos em outro alvo até que esta luta termine. Dyrrn tem dois chicotes de tentáculos."
 					]
 				},
 				{
 					"name": "Corruption",
 					"entries": [
-						"Dyrrn tem como alvo uma criatura que ele possa ver a até 18 metros dele. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 23} ou sofrerá 22 ({@damage 4d6 + 8}) de dano necrótico e será corrompido por 1 minuto.",
-						"A carne de uma criatura corrompida se distorce de maneiras estranhas. A criatura tem desvantagem nas jogadas de ataque, sua velocidade é reduzida pela metade e se ela tentar lançar uma magia, ela deve primeiro ter sucesso em um teste de Inteligência {@dc 15} ou a magia falha e é desperdiçada. A criatura corrompida pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"Dyrrn tem como alvo uma criatura que ele poderá ver a até 18 metros dele. O alvo deverá ter sucesso em um teste de resistência de Constituição {@dc 23} ou sofrerá 22 ({@damage 4d6 + 8}) de dano necrótico e será danificado por 1 minuto.",
+						"A carne de uma criatura corrompida se distorce de maneiras estranhas. A criatura tem manobra nas jogadas de ataque, sua velocidade é reduzida pela metade e se ela tentar lançar uma magia, ela deve primeiro ter sucesso em um teste de Inteligência {@dc 15} ou uma falha de magia e é perdida. Uma criatura corrompida pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				},
 				{
 					"name": "Extract Brain",
 					"entries": [
-						"{@atk mw} {@hit 15} para acertar, alcance 1,5 m, uma criatura {@condition incapacitated} {@condition grappled} de Dyrrn. {@h}55 ({@damage 10d10}) dano perfurante. Se esse dano reduzir o alvo a 0 pontos de vida, Dyrrn mata o alvo extraindo e devorando seu cérebro."
+						"{@atk mw} {@hit 15} para acertar, alcance 1,5 m, uma criatura {@condition incapacitated} {@condition grappled} de Dyrrn. {@h}55 ({@damage 10d10}) dano perfurante. Se esse dano reduzir o alvo a 0 pontos da vida, Dyrrn mata o alvo extraindo e devorando seu cérebro."
 					]
 				}
 			],
@@ -1190,7 +1190,7 @@
 				{
 					"name": "Mind Blast (Costs 3 Actions)",
 					"entries": [
-						"Dyrrn emite magicamente energia psíquica em um cone de 18 metros. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Inteligência {@dc 23} ou sofrerá 30 ({@damage 5d8 + 8}) de dano psíquico e sofrerá {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"Dyrrn emite magicamente energia psíquica em um cone de 18 metros. Cada criatura nesta área deve ser bem sucedida em um teste de resistência de Inteligência {@dc 23} ou sofrerá 30 ({@damage 5d8 + 8}) de dano psíquico e sofrerá {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				}
 			],
@@ -1250,7 +1250,7 @@
 		{
 			"name": "Expeditious Messenger",
 			"group": [
-				"Homunculi"
+				"Homúnculos"
 			],
 			"source": "ERLW",
 			"page": 293,
@@ -1307,7 +1307,7 @@
 				{
 					"name": "Telepathic Bond",
 					"entries": [
-						"Embora o mensageiro esteja no mesmo plano de existência que seu mestre, ele pode transmitir magicamente o que sente ao seu mestre, e os dois podem se comunicar telepaticamente."
+						"Embora o mensageiro tenha o mesmo plano de existência que seu mestre, ele pode transmitir magicamente o que sente ao seu mestre, e os dois podem se comunicar telepaticamente."
 					]
 				}
 			],
@@ -1337,7 +1337,7 @@
 		{
 			"name": "Fastieth",
 			"group": [
-				"Dinosaurs"
+				"Dinossauros"
 			],
 			"source": "ERLW",
 			"page": 289,
@@ -1505,20 +1505,20 @@
 				{
 					"name": "Idyllic Touch",
 					"entries": [
-						"{@atk ms} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano de força. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Sabedoria {@dc 16} ou cairá {@condition prone} em um ataque de riso."
+						"{@atk ms} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}9 ({@damage 1d10 + 4}) dano de força. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Sabedoria {@dc 16} ou cairá {@condition prone} em um ataque de riso."
 					]
 				},
 				{
 					"name": "Mind Thrust",
 					"entries": [
-						"O quori tem como alvo uma criatura que ele possa ver a até 18 metros dele. O alvo deve realizar um teste de resistência de {@dc 16} Sabedoria, sofrendo 18 ({@damage 4d8}) de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O que é isso tem como alvo uma criatura que ele pode ver até 18 metros dele. O alvo deve realizar um teste de resistência de {@dc 16} Sabedoria, dano 18 ({@damage 4d8}) de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
 					"name": "Possession {@recharge}",
 					"entries": [
-						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 16} ou será possuído pelo quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa as estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
-						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja forçado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado a até 1,5 metro do corpo. O alvo fica imune à Possessão deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
+						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 16} ou será possuído pelo quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
+						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja obrigado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado até 1,5 metro do corpo. O alvo fica imune à posse deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
 					]
 				}
 			],
@@ -1526,7 +1526,7 @@
 				{
 					"name": "Empathic Feedback",
 					"entries": [
-						"Quando o quori sofre dano de uma criatura que pode ver a até 18 metros dele, o quori pode forçar aquela criatura a ter sucesso em um teste de resistência de Inteligência {@dc 16} ou sofrer 11 ({@damage 2d10}) de dano psíquico."
+						"Quando o quori sofre dano de uma criatura que pode chegar a até 18 metros dele, o quori pode forçar aquela criatura a ter sucesso em um teste de resistência de inteligência {@dc 16} ou sofrer 11 ({@damage 2d10}) de dano psíquico."
 					]
 				}
 			],
@@ -1555,7 +1555,7 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"charmed"
+				"encantado"
 			],
 			"savingThrowForced": [
 				"charisma",
@@ -1563,7 +1563,7 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1676,7 +1676,7 @@
 				{
 					"name": "Vicious Mockery (Cantrip)",
 					"entries": [
-						"O Inspirado lança uma série de insultos misturados com encantamentos sutis em uma criatura que pode ver a até 18 metros dele. Se o alvo puder ouvir o Inspirado, o alvo deve ter sucesso em um teste de resistência de {@dc 13} Sabedoria ou sofrerá 2 ({@damage 1d4}) de dano psíquico e terá desvantagem na próxima jogada de ataque que fizer antes do final do próximo turno."
+						"O Inspirado lança uma série de insultos misturados com encantamentos sutis em uma criatura que pode ver a até 18 metros dele. Se o alvo puder ouvir o Inspirado, o alvo deve ter sucesso em um teste de resistência de {@dc 13} Sabedoria ou sofrerá 2 ({@damage 1d4}) de dano psíquico e terá dificuldades na próxima jogada de ataque que fará antes do final do próximo turno."
 					]
 				}
 			],
@@ -1685,7 +1685,7 @@
 					"type": "variant",
 					"name": "Quori Vessel",
 					"entries": [
-						"The Inspired are vessels for quori spirits, allowing the quori to manifest a portion of their power while the vessel is possessed. An Inspired can gain benefits depending on the type of quori possessing it. The quori also gains access to the Inspired's knowledge and features.",
+						"Os Inspirados são recipientes para espíritos quori, permitindo que os quori manifestem uma parte de seu poder enquanto o recipiente está possuído. Um Inspirado pode obter benefícios dependendo do tipo de quori que o possui. O quori também ganha acesso aos conhecimentos e funcionalidades do Inspired.",
 						{
 							"type": "variantInner",
 							"name": "Hashalaq",
@@ -1694,7 +1694,7 @@
 									"type": "entries",
 									"name": "Suggestion (3/Day)",
 									"entries": [
-										"The Inspired can cast the {@spell suggestion} spell (spell save {@dc 13}), requiring no material components."
+										"O Inspirado pode lançar o feitiço {@spell suggestion} (feitiço salvo {@dc 13}), não necessitando de componentes materiais."
 									]
 								}
 							]
@@ -1707,14 +1707,14 @@
 									"type": "entries",
 									"name": "All Around Vision",
 									"entries": [
-										"The Inspired can't be {@status surprised}."
+										"O Inspirado não pode ser {@status surprised}."
 									]
 								},
 								{
 									"type": "entries",
 									"name": "Arcane Eye (3/Day)",
 									"entries": [
-										"The Inspired can cast the {@spell arcane eye} spell, requiring no material components."
+										"O Inspirado pode lançar o feitiço {@spell arcane eye}, sem necessidade de componentes materiais."
 									]
 								}
 							]
@@ -1727,7 +1727,7 @@
 									"type": "entries",
 									"name": "Fear (1/Day)",
 									"entries": [
-										"The Inspired can cast the {@spell fear} spell (spell save {@dc 13}), requiring no material components."
+										"O Inspirado pode lançar o feitiço {@spell fear} (feitiço salvo {@dc 13}), não necessitando de componentes materiais."
 									]
 								}
 							]
@@ -1762,7 +1762,7 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1827,7 +1827,7 @@
 		{
 			"name": "Iron Defender",
 			"group": [
-				"Homunculi"
+				"Homúnculos"
 			],
 			"source": "ERLW",
 			"page": 293,
@@ -1896,7 +1896,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem-sucedido em um teste de resistência de Força {@dc 13} ou sofrerá 3 ({@damage 1d6}) de dano perfurante extra e será {@condition grappled} (escapar {@dc 13}). O defensor pode ter apenas uma criatura {@condition grappled} desta forma por vez."
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 13} ou sofrerá 3 ({@damage 1d6}) de dano perfurante extra e será {@condition grappled} (escapar {@dc 13}). O defensor pode ter apenas uma criatura {@condition grappled} desta forma por vez."
 					]
 				}
 			],
@@ -2036,7 +2036,7 @@
 				{
 					"name": "All-Around Vision",
 					"entries": [
-						"O quori não pode ser {@status surprised} enquanto não for {@condition incapacitated}."
+						"O que acontece não pode ser {@status surprised} enquanto não for {@condition incapacitated}."
 					]
 				},
 				{
@@ -2056,7 +2056,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O quori faz dois ataques de Soul Binding. Alternativamente, pode fazer quatro ataques com Arcane Blast."
+						"O que acontece é que há dois ataques de Soul Binding. Alternativamente, você pode fazer quatro ataques com Arcane Blast."
 					]
 				},
 				{
@@ -2081,14 +2081,14 @@
 				{
 					"name": "Swarm of Eyes {@recharge}",
 					"entries": [
-						"O quori cria um enxame de olhos espectrais que preenche uma esfera de 9 metros de raio centrada em um ponto que ele pode ver a até 18 metros dele. Cada criatura naquela área deve realizar um teste de resistência de {@dc 21} Sabedoria. Em caso de falha, uma criatura sofre 45 ({@damage 10d8}) de dano psíquico e é {@condition blinded} por 1 minuto. Em caso de sucesso, a criatura sofre metade do dano e não é {@condition blinded}. Uma criatura {@condition blinded} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+						"O quori cria um exame de olhos espectrais que preenche uma esfera de 9 metros de raio centrada em um ponto que ele pode ver a até 18 metros dele. Cada criatura nesta área deve realizar um teste de resistência de {@dc 21} Sabedoria. Em caso de falha, uma criatura sofre 45 ({@damage 10d8}) de dano psíquico e é {@condition blinded} por 1 minuto. Em caso de sucesso, a criatura sofre metade do dano e não é {@condition blinded}. Uma criatura {@condition blinded} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
 					]
 				},
 				{
 					"name": "Possession {@recharge}",
 					"entries": [
-						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 21} ou será possuído pelos quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa as estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
-						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja forçado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado a até 1,5 metro do corpo. O alvo fica imune à Possessão deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
+						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 21} ou será possuído pelos quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
+						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja obrigado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado até 1,5 metro do corpo. O alvo fica imune à posse deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
 					]
 				}
 			],
@@ -2127,8 +2127,8 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"frightened",
-				"unconscious"
+				"assustado",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"charisma",
@@ -2136,7 +2136,7 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2192,7 +2192,7 @@
 				{
 					"name": "Dual Mind",
 					"entries": [
-						"O kalashtar tem vantagem nos testes de resistência de Sabedoria."
+						"O kalashtar tem vantagem nos testes de resistência da Sabedoria."
 					]
 				}
 			],
@@ -2206,7 +2206,7 @@
 				{
 					"name": "Mind Thrust",
 					"entries": [
-						"O kalashtar tem como alvo uma criatura que ele possa ver a até 9 metros dele. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 12} ou sofrerá 11 ({@damage 2d10}) de dano psíquico."
+						"O Kalashtar tem como alvo uma criatura que ele poderá ver a até 9 metros dele. O alvo deverá ter sucesso em um teste de resistência de Sabedoria {@dc 12} ou sofrerá 11 ({@damage 2d10}) de dano psíquico."
 					]
 				}
 			],
@@ -2298,7 +2298,7 @@
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o soldado a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o soldado cai para 1 ponto de vida."
+						"Se o dano reduzir o soldado a 0 pontos de vida, ele deverá realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o soldado caiu para 1 ponto de vida."
 					]
 				}
 			],
@@ -2326,7 +2326,7 @@
 				{
 					"name": "Parry",
 					"entries": [
-						"O soldado adiciona 3 à sua CA contra um ataque corpo a corpo que o acerte. Para fazer isso, o soldado deve ver o atacante e estar empunhando uma arma branca."
+						"O soldado adiciona 3 à sua CA contra um ataque corpo a corpo que o acertou. Para fazer isso, o soldado deve ver o atacante e estar armado com uma arma branca."
 					]
 				}
 			],
@@ -2544,7 +2544,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se Illmarrow falhar em um teste de resistência, ela pode escolher ter sucesso."
+						"Se Illmarrow falhar em um teste de resistência, ela pode escolher o sucesso."
 					]
 				},
 				{
@@ -2556,7 +2556,7 @@
 				{
 					"name": "Rejuvenation",
 					"entries": [
-						"O corpo de Illmarrow vira pó quando ela chega a 0 pontos de vida e seu equipamento é deixado para trás. Ela ganha um novo corpo após {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativa novamente. O novo corpo aparece a trezentos quilômetros do local onde ela foi destruída."
+						"O corpo de Illmarrow vira pó quando ela chega a 0 pontos de vida e seu equipamento é deixado para trás. Ela ganha um novo corpo após {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se novamente ativa. O novo corpo aparece a três milhas do local onde ela foi destruída."
 					]
 				}
 			],
@@ -2564,19 +2564,19 @@
 				{
 					"name": "Chill Touch (Cantrip)",
 					"entries": [
-						"{@atk rs} {@hit 15} para acertar, alcance de 36 metros, uma criatura. {@h}18 ({@damage 4d8}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno de Illmarrow. Se o alvo for um morto-vivo, ele também terá desvantagem nas jogadas de ataque contra Illmarrow até o final do próximo turno."
+						"{@atk rs} {@hit 15} para acertar, alcance de 36 metros, uma criatura. {@h}18 ({@damage 4d8}) dano necrótico e o alvo não pode recuperar pontos de vida até o início do próximo turno de Illmarrow. Se o alvo for um morto-vivo, ele também terá de evitar nas jogadas de ataque contra Illmarrow até o final do próximo turno."
 					]
 				},
 				{
 					"name": "Paralyzing Claw",
 					"entries": [
-						"{@atk mw} {@hit 10} para acertar, alcance 1,5 m, uma criatura. {@h}13 ({@damage 3d6 + 3}) de dano cortante mais 10 ({@damage 3d6}) de dano de frio, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+						"{@atk mw} {@hit 10} para acertar, alcance 1,5 m, uma criatura. {@h}13 ({@damage 3d6 + 3}) de dano cortante mais 10 ({@damage 3d6}) de dano de frio, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre se mesmo obtiver sucesso."
 					]
 				},
 				{
 					"name": "Poison Breath {@recharge 5}",
 					"entries": [
-						"Illmarrow exala gás venenoso em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 20}. Se falhar na resistência, uma criatura sofre 35 ({@damage 10d6}) de dano de veneno e fica {@condition poisoned} por 1 minuto. Enquanto {@condition poisoned} estiver dessa forma, a criatura não poderá recuperar pontos de vida. Em um teste bem-sucedido, a criatura sofre metade do dano e não é {@condition poisoned}.",
+						"Illmarrow exala gás venenoso em um cone de 9 metros. Cada criatura nesta área deve realizar um teste de resistência de Constituição {@dc 20}. Se falhar na resistência, uma criatura sofre 35 ({@damage 10d6}) de dano de veneno e fica {@condition poisoned} por 1 minuto. Enquanto {@condition poisoned} estiver dessa forma, a criatura não poderá recuperar pontos de vida. Em um teste bem-sucedido, uma criatura sofre metade do dano e não é {@condition poisoned}.",
 						"Um humanóide reduzido a 0 pontos de vida por este dano morre e ressuscita no início do próximo turno de Illmarrow como um zumbi. O zumbi age imediatamente após Illmarrow na contagem de iniciativa e fica permanentemente sob seu comando, seguindo suas ordens verbais."
 					]
 				}
@@ -2597,7 +2597,7 @@
 				{
 					"name": "Frightening Presence (Costs 2 Actions)",
 					"entries": [
-						"Illmarrow tem como alvo até três criaturas que ela possa ver a até 9 metros dela. Cada alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 20} ou será {@condition frightened} por 1 minuto. Um alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Se o teste de resistência de um alvo for bem-sucedido ou o efeito terminar, o alvo ficará imune à Presença Assustadora de Illmarrow pelas próximas 24 horas."
+						"Illmarrow tem como alvo até três criaturas que ela pode ver a até 9 metros dela. Cada um deve ter sucesso em um alvo de teste de resistência de Sabedoria {@dc 20} ou será {@condition frightened} por 1 minuto. Um alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Se o teste de resistência de um alvo for bem sucedido ou o efeito terminar, o alvo ficará imune à Presença Assustadora de Illmarrow nas próximas 24 horas."
 					]
 				},
 				{
@@ -2651,21 +2651,21 @@
 				"poisoned"
 			],
 			"conditionInflictSpell": [
-				"blinded",
-				"paralyzed",
-				"petrified",
-				"restrained",
-				"unconscious"
+				"cego",
+				"paralisado",
+				"petrificado",
+				"contido",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"carisma",
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2757,7 +2757,7 @@
 				{
 					"name": "Spell Mimicry {@recharge 5}",
 					"entries": [
-						"O feitiço viver libera uma fina camada de chamas em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza de {@dc 13}, sofrendo 10 ({@damage 3d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O feitiço viver libera uma fina camada de chamas em um cone de 4,5 metros. Cada criatura na área deve realizar um teste de resistência de Destreza de {@dc 13}, dano 10 ({@damage 3d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -2873,8 +2873,8 @@
 				{
 					"name": "Spell Mimicry {@recharge 5}",
 					"entries": [
-						"A magia viver cria uma esfera de neblina de 12 metros de diâmetro a até 18 metros dela (a neblina se espalha pelos cantos). Quando uma criatura entra na névoa pela primeira vez em um turno ou começa seu turno lá, ela deve realizar um teste de resistência de Constituição {@dc 16}, sofrendo 22 ({@damage 5d8}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso.",
-						"A névoa se afasta 3 metros da magia viver no início de cada um de seus turnos, rolando pelo chão e através de aberturas. A névoa dura 10 minutos ou até que o {@status concentration} do feitiço vivo termine (como se {@status concentration||concentrating} em um feitiço)."
+						"A magia viver cria uma esfera de neblina de 12 metros de diâmetro a até 18 metros dela (a neblina se espalha pelos cantos). Quando uma criatura entra na névoa pela primeira vez em um turno ou começa seu turno lá, ela deve realizar um teste de resistência de Constituição {@dc 16}, dano 22 ({@damage 5d8}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso.",
+						"A escuridão se afasta 3 metros da magia viver no início de cada um de seus turnos, rolando pelo chão e através de aberturas. A névoa dura 10 minutos ou até que o {@status concentration} do feitiço vivo termine (como se {@status concentration||concentrating} em um feitiço)."
 					]
 				}
 			],
@@ -2993,7 +2993,7 @@
 				{
 					"name": "Spell Mimicry {@recharge 5}",
 					"entries": [
-						"O feitiço viver desencadeia um raio em uma linha de 30 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 28 ({@damage 8d6}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O feitiço viver desencadeia um raio em uma linha de 30 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 15}, dano 28 ({@damage 8d6}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -3213,7 +3213,7 @@
 				{
 					"name": "Limited Magic Immunity",
 					"entries": [
-						"Mordakhesh não pode ser afetado ou detectado por magias de 6º nível ou inferior, a menos que queira. Mordakhesh tem vantagem em testes de resistência contra todos os outros feitiços e efeitos mágicos."
+						"Mordakhesh não pode ser afetado ou detectado por magias de 6º nível ou inferior, a menos que você queira. Mordakhesh tem vantagem em testes de resistência contra todos os outros feitiços e efeitos mágicos."
 					]
 				}
 			],
@@ -3253,7 +3253,7 @@
 				{
 					"name": "Warlord's Command (Costs 2 Actions)",
 					"entries": [
-						"Mordakhesh tem como alvo até dois aliados que ele possa ver a até 9 metros dele. Se um alvo puder vê-lo e ouvi-lo, o alvo pode fazer um ataque com arma como reação e ganha vantagem na jogada de ataque."
+						"Mordakhesh tem como alvo até dois aliados que ele poderá ver a até 9 metros dele. Se um alvo puder vê-lo e ouvi-lo, o alvo pode fazer um ataque com arma como fato e ganha vantagem na jogada de ataque."
 					]
 				}
 			],
@@ -3294,8 +3294,8 @@
 				"MW"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3399,7 +3399,7 @@
 				{
 					"name": "Aura of False Divinity",
 					"entries": [
-						"Uma criatura que comece seu turno a até 9 metros do ídolo radiante deve realizar um teste de resistência de {@dc 17} Sabedoria, desde que o ídolo radiante não seja {@condition incapacitated}. Em caso de falha no salvamento, a criatura é {@condition charmed} do ídolo radiante. Uma criatura {@condition charmed} desta forma pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso. Uma vez bem-sucedido no teste de resistência, a criatura fica imune à Aura de Falsa Divindade deste ídolo radiante por 24 horas."
+						"Uma criatura que começa seu turno a até 9 metros do ídolo radiante deve realizar um teste de resistência de {@dc 17} Sabedoria, desde que o ídolo radiante não seja {@condition incapacitated}. Em caso de falha no salvamento, a criatura é {@condition charmed} do ídolo radiante. Uma criatura {@condition charmed} desta forma pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Uma vez bem-sucedida no teste de resistência, a criatura fica imune à Aura de Falsa Divindade deste ídolo radiante por 24 horas."
 					]
 				},
 				{
@@ -3425,7 +3425,7 @@
 				{
 					"name": "Radiant Strike (1/Day)",
 					"entries": [
-						"O ídolo radiante escolhe um ponto no chão que possa ver a até 18 metros dele. Um cilindro de luz brilhante com 9 metros de raio e 12 metros de altura aparece lá até o início do próximo turno do ídolo radiante. Cada criatura no cilindro, quando aparece ou termina seu turno, deve realizar um teste de resistência de Constituição {@dc 17}, sofrendo 36 ({@damage 8d8}) de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O ídolo radiante escolhe um ponto no chão que pode ver até 18 metros dele. Um cilindro de luz brilhante com 9 metros de raio e 12 metros de altura aparece lá até o início do próximo turno do ídolo radiante. Cada criatura no cilindro, quando aparece ou termina seu turno, deve realizar um teste de resistência de Constituição {@dc 17}, dano 36 ({@damage 8d8}) de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -3464,15 +3464,15 @@
 				"charmed"
 			],
 			"conditionInflictSpell": [
-				"charmed"
+				"encantado"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3597,7 +3597,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se Rak Tulkhesh falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se Rak Tulkhesh falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				},
 				{
@@ -3635,8 +3635,8 @@
 				{
 					"name": "Change Shape",
 					"entries": [
-						"Rak Tulkhesh se transforma magicamente em um humanóide, besta ou gigante que tem um nível de desafio não superior ao seu, ou volta à sua verdadeira forma. Ele volta à sua verdadeira forma se morrer. Qualquer equipamento que ele esteja usando ou carregando é absorvido ou suportado pela nova forma (à sua escolha).",
-						"Em uma nova forma, Rak Tulkhesh mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária e pontuações de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão substituídas pelas da nova forma, exceto quaisquer características de classe ou ações lendárias dessa forma."
+						"Rak Tulkhesh se transforma magicamente em um humanóide, besta ou gigante que tem um nível de desafio não superior ao seu, ou volta à sua verdadeira forma. Ele volta à sua verdadeira forma se morrer. Qualquer equipamento que você esteja usando ou carregando é envolvido ou suportado pela nova forma (à sua escolha).",
+						"Em uma nova forma, Rak Tulkhesh mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária e ataques de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão mantidas pela nova forma, exceto quaisquer características de classe ou ações emprestadas dessa forma."
 					]
 				}
 			],
@@ -3656,7 +3656,7 @@
 				{
 					"name": "Provoke Rage (Costs 3 Actions)",
 					"entries": [
-						"Cada criatura a até 18 metros de Rak Tulkhesh deve ser bem sucedida em um teste de resistência de {@dc 24} Sabedoria ou usar sua reação para realizar um ataque corpo a corpo com arma contra uma criatura aleatória ao seu alcance. Se nenhuma criatura estiver ao alcance, ele realiza um ataque com arma à distância contra uma criatura aleatória dentro do alcance, arremessando sua arma se necessário. Este ataque é feito com vantagem e ganha +4 de bônus na jogada de dano."
+						"Cada criatura a até 18 metros de Rak Tulkhesh deve ser bem sucedida em um teste de resistência de {@dc 24} Sabedoria ou usar sua evidência para realizar um ataque corpo a corpo com arma contra uma criatura pesquisada ao seu alcance. Se nenhuma criatura estiver ao alcance, ele realizará um ataque com arma à distância contra uma criatura procurada dentro do alcance, lançando sua arma se necessário. Este ataque é feito com vantagem e ganha +4 de bônus na jogada de dano."
 					]
 				}
 			],
@@ -3696,8 +3696,8 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3768,7 +3768,7 @@
 				{
 					"name": "Shifting (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Como uma ação bônus, o metamorfo assume uma forma mais bestial por 1 minuto ou até morrer. O shifter ganha 5 pontos de vida temporários. Ele pode realizar um ataque de mordida ao ativar essa característica e também como uma ação bônus em cada um de seus turnos enquanto estiver em sua forma bestial."
+						"Como uma ação bônus, o metamorfo assume uma forma mais bestial por 1 minuto ou até morrer. O shifter ganha 5 pontos de vida temporários. Ele pode realizar um ataque de mordida ao ativar esse recurso e também como uma ação bônus em cada um de seus turnos enquanto estiver em sua forma bestial."
 					]
 				}
 			],
@@ -3932,7 +3932,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se Sul Khatesh falhar em um teste de resistência, ela pode escolher ter sucesso."
+						"Se Sul Khatesh falhar em um teste de resistência, ela pode escolher o sucesso."
 					]
 				},
 				{
@@ -3944,7 +3944,7 @@
 				{
 					"name": "Master of Magic",
 					"entries": [
-						"Sul Khatesh tem vantagem nos testes de resistência de Constituição para manter {@status concentration}."
+						"Sul Khatesh tem vantagem nos testes de resistência da Constituição para manter {@status concentration}."
 					]
 				}
 			],
@@ -3970,14 +3970,14 @@
 				{
 					"name": "Arcane Cataclysm (Recharges after a Long Rest)",
 					"entries": [
-						"Sul Khatesh conjura orbes de energia mágica que caem no chão em três pontos diferentes que ela pode ver em um raio de 1,6 km dela. Cada criatura em uma esfera de 12 metros de raio centrada em cada ponto deve realizar um teste de resistência de Destreza de {@dc 26}, sofrendo 71 ({@damage 11d12}) de dano de força se falhar na resistência ou metade do dano se obtiver sucesso. Uma criatura na área de mais de uma explosão arcana é afetada apenas uma vez. A área de cada explosão arcana atua como {@spell antimagic field} por 1 hora. Sul Khatesh e os feitiços que ela lança não são afetados por esses campos."
+						"Sul Khatesh conjura orbes de energia mágica que caem no chão em três pontos diferentes que ela pode ver em um raio de 1,6 km dela. Cada criatura em uma esfera de 12 metros de raio centrada em cada ponto deve realizar um teste de resistência de Destreza de {@dc 26}, dano 71 ({@damage 11d12}) de dano de força se falhar na resistência ou metade do dano se obtiver sucesso. Uma criatura na área de mais uma explosão arcana é afetada apenas uma vez. A área de cada explosão arcana atua como {@spell antimagic field} por 1 hora. Sul Khatesh e os feitiços que ela lança não são afetados por esses campos."
 					]
 				},
 				{
 					"name": "Change Shape",
 					"entries": [
-						"Sul Khatesh se transforma magicamente em um humanóide, besta ou gigante que tem um nível de desafio não superior ao seu, ou volta à sua forma verdadeira. Ela volta à sua verdadeira forma se morrer. Qualquer equipamento que ela esteja usando ou carregando é absorvido ou suportado pela nova forma (escolha de Sul Khatesh).",
-						"Em uma nova forma, Sul Khatesh mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária e pontuações de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão substituídas pelas da nova forma, exceto quaisquer características de classe ou ações lendárias dessa forma."
+						"Sul Khatesh se transforma magicamente em um humanóide, melhor ou gigante que tem um nível de desafio não superior ao seu, ou volta à sua forma verdadeira. Ela volta à sua verdadeira forma de morrer. Qualquer equipamento que ela esteja usando ou carregando é absorvido ou suportado pela nova forma (escolha de Sul Khatesh).",
+						"Em uma nova forma, Sul Khatesh mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária e interferência de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão mantidas pela nova forma, exceto quaisquer características de classe ou ações emprestadas dessa forma."
 					]
 				}
 			],
@@ -3991,13 +3991,13 @@
 				{
 					"name": "Consume Magic (Costs 2 Actions)",
 					"entries": [
-						"Sul Khatesh tem como alvo uma criatura a até 36 metros dela que esteja {@status concentration||concentrating} em um feitiço. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 26} ou seu {@status concentration} será quebrado no feitiço, e Sul Khatesh ganha 5 pontos de vida temporários por nível daquele feitiço."
+						"Sul Khatesh tem como alvo uma criatura a até 36 metros dela que usa {@status concentration||concentrating} em um feitiço. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 26} ou seu {@status concentration} será quebrado no feitiço, e Sul Khatesh ganha 5 pontos de vida temporários por nível daquele feitiço."
 					]
 				},
 				{
 					"name": "Maddening Secrets (Costs 3 Actions)",
 					"entries": [
-						"Sul Khatesh sussurra um segredo arcano na mente de uma criatura que ela pode ver a até 18 metros dela. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 26} ou gastar um de seus espaços de magia de 3º nível ou inferior e causar 26 ({@damage 4d12}) de dano de força a cada criatura em um raio de 9 metros dele. Uma criatura que falhar no teste de resistência, mas não puder gastar um espaço de magia, será {@condition stunned} até o final de seu próximo turno."
+						"Sul Khatesh sussurra um segredo arcano na mente de uma criatura que ela pode ver a até 18 metros dela. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 26} ou gastar um de seus espaços de magia de 3º nível ou inferior e causar 26 ({@damage 4d12}) de dano de força a cada criatura em um raio de 9 metros dele. Uma criatura que tenha deficiência no teste de resistência, mas que não possa gastar um espaço de magia, será {@condition stunned} até o final de seu próximo turno."
 					]
 				}
 			],
@@ -4032,10 +4032,10 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"frightened",
-				"paralyzed",
-				"unconscious"
+				"Encantado",
+				"assustado",
+				"paralisado",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -4043,8 +4043,8 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4129,7 +4129,7 @@
 				{
 					"name": "Unstable Mark",
 					"entries": [
-						"Quando o assassino lança um feitiço inato, cada criatura a até 3 metros do assassino deve realizar um teste de resistência de Constituição {@dc 12}, sofrendo 4 ({@damage 1d8}) de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"Quando o assassino lança um feitiço inato, cada criatura a até 3 metros do assassino deve realizar um teste de resistência de Constituição {@dc 12}, dano 4 ({@damage 1d8}) de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -4137,7 +4137,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O assassino faz dois ataques com espadas curtas."
+						"O faz assassino dois ataques com espadas curtas."
 					]
 				},
 				{
@@ -4149,7 +4149,7 @@
 				{
 					"name": "Fire Bolt (Cantrip)",
 					"entries": [
-						"{@atk rs} {@hit 4} para acertar, alcance de 120 pés, um alvo. {@h}11 ({@damage 2d10}) dano de fogo. Um objeto inflamável atingido por este feitiço se inflama se não estiver sendo usado ou carregado."
+						"{@atk rs} {@hit 4} para acertar, alcance de 120 pés, um alvo. {@h}11 ({@damage 2d10}) dano de fogo. Um objeto inflamável atingido por este feitiço se inflamar não for usado ou carregado."
 					]
 				},
 				{
@@ -4345,7 +4345,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"Se o Senhor das Lâminas se mover pelo menos 3 metros em linha reta em direção a um alvo e então acertá-lo com sua seis lâminas adamantinas no mesmo turno, o alvo sofre 11 ({@damage 2d10}) de dano cortante extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 19} ou será empurrado até 3 metros de distância e derrubado {@condition prone}."
+						"Se o Senhor das Lâminas se move pelo menos 3 metros em linha reta em direção a um alvo e então acertá-lo com suas seis lâminas adamantinas no mesmo turno, o alvo sofre 11 ({@damage 2d10}) de dano cortante extra. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 19} ou será empurrado até 3 metros de distância e derrubado {@condition prone}."
 					]
 				},
 				{
@@ -4403,7 +4403,7 @@
 				{
 					"name": "Blade Dash (Costs 3 Actions)",
 					"entries": [
-						"O Senhor das Lâminas se move até sua velocidade sem provocar ataques de oportunidade, então faz um ataque com sua seis lâminas adamantinas. Ele pode fazer um ataque de asas laminadas contra cada criatura por onde passa."
+						"O Senhor das Lâminas se move até sua velocidade sem provocar ataques de oportunidade, então faz um ataque com suas seis lâminas adamantinas. Ele pode fazer um ataque de asas laminadas contra cada criatura por onde passa."
 					]
 				}
 			],
@@ -4446,8 +4446,8 @@
 				"strength"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4535,13 +4535,13 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O quori faz três ataques: um ataque de pinça, um ataque com suas garras e um ataque de ferrão."
+						"O quori faz três ataques: um ataque de pinça, um ataque com suas garras e um ataque de ferro."
 					]
 				},
 				{
 					"name": "Pincer",
 					"entries": [
-						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano de concussão. O alvo é {@condition grappled} (escape {@dc 14}) se for uma criatura Grande ou menor. O quori tem duas pinças, cada uma das quais pode agarrar um alvo."
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano de concussão. O alvo é {@condition grappled} (escape {@dc 14}) se trata de uma criatura Grande ou menor. O quori tem duas pinças, cada uma das quais pode agarrar um alvo."
 					]
 				},
 				{
@@ -4553,14 +4553,14 @@
 				{
 					"name": "Stinger",
 					"entries": [
-						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, uma criatura. {@h}8 ({@damage 1d10 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano psíquico, e o alvo deve ter sucesso em um teste de resistência de {@dc 14} Sabedoria ou ser {@condition frightened} do quori por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+						"{@atk mw} {@hit 6} para acertar, alcance 3 metros, uma criatura. {@h}8 ({@damage 1d10 + 3}) de dano perfurante mais 10 ({@damage 3d6}) de dano psíquico, e o alvo deve ter sucesso em um teste de resistência de {@dc 14} Sabedoria ou ser {@condition frightened} do quori por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre se mesmo obtiver sucesso."
 					]
 				},
 				{
 					"name": "Possession {@recharge}",
 					"entries": [
-						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 14} ou será possuído pelo quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa as estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
-						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja forçado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado a até 1,5 metro do corpo. O alvo fica imune à Possessão deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
+						"Um humanóide que o quori possa ver a até 1,5 metro dele deve ter sucesso em um teste de resistência de Carisma {@dc 14} ou será possuído pelo quori; o quori então desaparece, e o alvo é {@condition incapacitated} e perde o controle de seu corpo. O quori agora controla o corpo, mas não priva o alvo da consciência. O quori não pode ser alvo de nenhum ataque, feitiço ou outro efeito e mantém seu alinhamento, Inteligência, Sabedoria, Carisma e imunidade a {@condition charmed} e {@condition frightened}. Caso contrário, ele usa estatísticas do alvo possuído, mas não obtém acesso ao conhecimento, características de classe ou proficiências do alvo.",
+						"A posse dura até que o corpo caia para 0 pontos de vida, o quori termine com uma ação bônus ou o quori seja obrigado a sair por um efeito como o feitiço {@spell dispel evil and good}. Quando a posse termina, o quori reaparece em um espaço desocupado até 1,5 metro do corpo. O alvo fica imune à posse deste quori por 24 horas após ter sucesso no teste de resistência ou após o término da posse."
 					]
 				}
 			],
@@ -4593,15 +4593,15 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"frightened"
+				"encantado",
+				"assustado"
 			],
 			"savingThrowForced": [
 				"charisma",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4836,18 +4836,18 @@
 				"blinded"
 			],
 			"conditionInflictSpell": [
-				"incapacitated",
-				"paralyzed",
-				"prone"
+				"incapacitado",
+				"paralisado",
+				"propenso"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity",
-				"wisdom"
+				"carisma",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -4947,7 +4947,7 @@
 				{
 					"name": "Spear",
 					"entries": [
-						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo, mais 9 ({@damage 2d8}) de dano radiante se o alvo for um demônio ou morto-vivo."
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) de dano perfurante ou 7 ({@damage 1d8 + 3}) de dano perfurante se usado com as duas mãos para fazer um ataque corpo a corpo, mais 9 ({@damage 2d8}) de dano radiante se o alvo para um demônio ou morto-vivo."
 					]
 				}
 			],
@@ -5025,7 +5025,7 @@
 				{
 					"name": "Bonding",
 					"entries": [
-						"O falcão pode se relacionar magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo dura até o falcão se vincular a uma criatura diferente ou até que a criatura vinculada morra. Enquanto estiverem vinculados, o falcão e a criatura vinculada podem se comunicar telepaticamente entre si a uma distância de até 30 metros."
+						"O falcão pode se relacionar magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo duradouro até o falcão se vincula a uma criatura diferente ou até que uma criatura vinculada morra. Enquanto isso, o falcão e a criatura vinculada podem se comunicar telepaticamente entre si a uma distância de até 30 metros."
 					]
 				},
 				{
@@ -5107,7 +5107,7 @@
 				{
 					"name": "Bonding",
 					"entries": [
-						"O cão pode se relacionar magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo dura até que o cão se una com uma criatura diferente ou até que a criatura vinculada morra. Enquanto estiverem vinculados, o cão e a criatura vinculada podem se comunicar telepaticamente um com o outro a uma distância de até 30 metros."
+						"O cão pode se relacionar magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo dura até que o cão seja uma criatura diferente ou até que uma criatura seja vinculada à morte. Enquanto estiverem juntos, o cão e a criatura vinculada podem se comunicar telepaticamente um com o outro a uma distância de até 30 metros."
 					]
 				},
 				{
@@ -5121,7 +5121,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
+						"{@atk mw} {@hit 5} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d6 + 3}) dano perfurante. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 13} ou será derrubado {@condition prone}."
 					]
 				}
 			],
@@ -5191,7 +5191,7 @@
 				{
 					"name": "Bonding",
 					"entries": [
-						"O corcel pode se unir magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo dura até o corcel se unir a uma criatura diferente ou até que a criatura vinculada morra. Enquanto estiverem vinculados, o corcel e a criatura vinculada podem se comunicar telepaticamente entre si a uma distância de até 30 metros."
+						"O corcel pode se unir magicamente com uma criatura que possa ver, imediatamente após passar pelo menos 1 hora observando aquela criatura enquanto estiver a até 9 metros dela. O vínculo duradouro até o corcel se une a uma criatura diferente ou até que uma criatura vinculada morra. Enquanto estiverem juntos, o corcel e a criatura vinculada podem se comunicar telepaticamente entre si a uma distância de até 30 metros."
 					]
 				}
 			],
@@ -5315,7 +5315,7 @@
 				{
 					"name": "Towering Terror",
 					"entries": [
-						"Qualquer inimigo fora do colosso que comece seu turno a até 9 metros dele deve ter sucesso em um teste de resistência de Sabedoria {@dc 26} ou permanecerá {@condition frightened} até o início do próximo turno do inimigo. Se o teste de resistência do inimigo for bem-sucedido, ele ficará imune ao Towering Terror deste colosso pelas próximas 24 horas."
+						"Qualquer inimigo fora do colosso que começar seu turno a até 9 metros dele deverá ter sucesso em um teste de resistência de Sabedoria {@dc 26} ou permanecerá {@condition frightened} até o início do próximo turno do inimigo. Se o teste de resistência do inimigo por bem-sucedido, ele se tornará imune ao Towering Terror deste colosso nas próximas 24 horas."
 					]
 				}
 			],
@@ -5341,14 +5341,14 @@
 				{
 					"name": "Stomp",
 					"entries": [
-						"O colosso bate um dos pés em um ponto do chão a até 6 metros dele. Qualquer criatura em um cilindro de 6 metros de raio e 6 metros de altura centrado neste ponto deve ser bem-sucedida em um teste de resistência de Destreza {@dc 26} ou sofrerá 33 ({@damage 6d10}) de dano de concussão e cairá {@condition prone}. Até que o colosso use seu Stomp novamente ou se mova, a criatura será {@condition restrained}. Enquanto {@condition restrained} estiver dessa forma, a criatura (ou outra criatura a até 1,5 metro dela) pode usar sua ação para fazer um teste de Força {@dc 26}. Se obtiver sucesso, a criatura se move para um espaço desocupado de sua escolha a até 1,5 metro do colosso e não é mais {@condition restrained}.",
-						"Estruturas, assim como objetos não mágicos que não estão sendo usados nem carregados, sofrem a mesma quantidade de dano se estiverem no cilindro (sem salvamento)."
+						"O colosso bate um dos pés em um ponto do chão a até 6 metros dele. Qualquer criatura em um cilindro de 6 metros de raio e 6 metros de altura centrado neste ponto deve ser bem-sucedida em um teste de resistência de Destreza {@dc 26} ou sofrerá 33 ({@damage 6d10}) de dano de concussão e cairá {@condition prone}. Até que o colosso use seu Stomp novamente ou se mova, a criatura será {@condition restrained}. Enquanto {@condition restrained} você estiver dessa forma, uma criatura (ou outra criatura a até 1,5 metro dela) pode usar sua ação para fazer um teste de Força {@dc 26}. Se obtiver sucesso, a criatura se move para um espaço desocupado de sua escolha até 1,5 metro do colosso e não é mais {@condition restrained}.",
+						"Estruturas, assim como objetos não mágicos que não estão sendo usados nem carregados, sofrem a mesma quantidade de dano se colocados no cilindro (sem salvamento)."
 					]
 				},
 				{
 					"name": "Incinerating Beam {@recharge 5}",
 					"entries": [
-						"O colosso dispara um feixe de luz em uma linha de 45 metros e 3 metros de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 26}, sofrendo 60 ({@damage 11d10}) de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura reduzida a 0 pontos de vida por este raio é desintegrada, deixando para trás tudo o que estava vestindo ou carregando."
+						"O colosso dispara um feixe de luz em uma linha de 45 metros e 3 metros de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 26}, dano 60 ({@damage 11d10}) de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura reduzida a 0 pontos de vida por esse raio é desintegrada, deixando para trás tudo o que estava vestido ou carregando."
 					]
 				}
 			],
@@ -5477,7 +5477,7 @@
 				{
 					"name": "Protection",
 					"entries": [
-						"Quando um atacante que o forjado bélico pode ver faz uma jogada de ataque contra uma criatura a até 1,5 metro do forjado bélico, o forjado bélico pode impor desvantagem na jogada de ataque."
+						"Quando um atacante que o forjado bélico pode fazer uma jogada de ataque contra uma criatura a até 1,5 metro do forjado bélico, o forjado bélico pode impor uma manobra de ataque."
 					]
 				}
 			],
@@ -5561,13 +5561,13 @@
 				{
 					"name": "Platforms",
 					"entries": [
-						"O titã warforged tem duas plataformas embutidas em seu chassi. Uma criatura Média ou menor pode andar em cada plataforma sem apertar. Para fazer um ataque corpo a corpo contra um alvo a até 1,5 metro do forjado bélico, ele deve usar lanças ou armas de alcance e o alvo deve ser Grande ou maior."
+						"O titã warforged tem duas plataformas embutidas em seu chassi. Uma criatura média ou menor pode andar em cada plataforma sem apertar. Para fazer um ataque corpo a corpo contra um alvo até 1,5 metro do forjado bélico, ele deve usar lanças ou armas de alcance e o alvo deve ser Grande ou maior."
 					]
 				},
 				{
 					"name": "Siege Monster",
 					"entries": [
-						"O titã forjado bélico causa o dobro de dano a objetos e estruturas."
+						"O titã forjado bélico causa o dobro de danos a objetos e estruturas."
 					]
 				}
 			],
@@ -5587,7 +5587,7 @@
 				{
 					"name": "Hammerfist",
 					"entries": [
-						"{@atk mw} {@hit 9} para acertar, alcance 10 pés, um alvo. {@h}19 ({@damage 3d8 + 6}) dano de concussão. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}."
+						"{@atk mw} {@hit 9} para acertar, alcance 10 pés, um alvo. {@h}19 ({@damage 3d8 + 6}) dano de concussão. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}."
 					]
 				},
 				{
@@ -5718,7 +5718,7 @@
 				{
 					"name": "Limited Magic Immunity",
 					"entries": [
-						"O rakshasa não pode ser afetado ou detectado por magias de 1º nível ou inferior, a menos que deseje. Tem vantagem em testes de resistência contra todos os outros feitiços e efeitos mágicos."
+						"O rakshasa não pode ser afetado ou detectado por magias de 1º nível ou inferior, a menos que você deseje. Tem vantagem em testes de resistência contra todos os outros feitiços e efeitos mágicos."
 					]
 				},
 				{
@@ -5730,7 +5730,7 @@
 				{
 					"name": "Martial Prowess (1/Turn)",
 					"entries": [
-						"Quando o rakshasa atinge uma criatura com um ataque de arma corpo a corpo, o ataque causa 11 ({@dice 2d10}) de dano extra do tipo da arma, e a criatura deve fazer um teste de resistência de Força {@dc 15}. Em caso de falha, o rakshasa pode empurrar a criatura até 3 metros de distância dele, derrubar a criatura {@condition prone} ou fazer com que a criatura deixe cair um item que esteja segurando, à escolha do rakshasa."
+						"Quando o rakshasa atinge uma criatura com um ataque de arma corpo a corpo, o ataque causa 11 ({@dice 2d10}) de dano extra do tipo da arma, e a criatura deve fazer um teste de resistência de Força {@dc 15}. Em caso de falha, o rakshasa pode empurrar a criatura até 3 metros de distância dele, atacar a criatura {@condition prone} ou fazer com que a criatura deixe cair um item que tenha segurança, à escolha do rakshasa."
 					]
 				}
 			],
@@ -5791,7 +5791,7 @@
 				"strength"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,

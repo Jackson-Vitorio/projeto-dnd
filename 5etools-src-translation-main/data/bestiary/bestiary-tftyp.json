@@ -99,7 +99,7 @@
 				{
 					"name": "Antimagic Susceptibility",
 					"entries": [
-						"A tabela é {@condition incapacitated} enquanto está na área de um {@spell antimagic field}. Se for alvo de {@spell dispel magic}, a mesa deve ter sucesso em um teste de resistência de Constituição contra a CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
+						"A tabela é {@condition incapacitated} enquanto está na área de um {@spell antimagic field}. Se for alvo de {@spell dispel magic}, a mesa deve ter sucesso em um teste de resistência de Constituição contra o CD de salvamento de feitiço do lançador ou cairá {@condition unconscious} por 1 minuto."
 					]
 				},
 				{
@@ -111,7 +111,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"Se a mesa se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de aríete no mesmo turno, o alvo sofre 9 ({@damage 2d8}) de dano de concussão extra. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
+						"Se a mesa se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de aríete no mesmo turno, o alvo sofre 9 ({@damage 2d8}) de dano de concussão extra. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
 					]
 				}
 			],
@@ -311,9 +311,9 @@
 				"MW"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"strength"
+				"constituição",
+				"destreza",
+				"força"
 			],
 			"hasToken": true
 		},
@@ -451,7 +451,7 @@
 				{
 					"name": "Cold Breath {@recharge 5}",
 					"entries": [
-						"O dragão exala uma rajada gelada de granizo em um cone de 4,5 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 12}, sofrendo 22 ({@damage 5d8}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O dragão exala uma rajada gelada de granizo em um cone de 4,5 metros. Cada criatura nesta área deve realizar um teste de resistência de Constituição {@dc 12}, dano 22 ({@damage 5d8}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -554,7 +554,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"Se a múmia centauro se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de lança no mesmo turno, o alvo sofre 10 ({@damage 3d6}) de dano perfurante extra."
+						"Se a múmia centauro se move pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque de lançamento no mesmo turno, o alvo sofre 10 ({@damage 3d6}) de dano perfurante extra."
 					]
 				}
 			],
@@ -562,7 +562,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"A múmia centauro faz dois ataques corpo a corpo, um com sua lança e outro com seus cascos, ou ataca com sua lança e usa Brilho Terrível."
+						"A múmia centauro faz dois ataques corpo a corpo, um com seu lançamento e outro com seus cascos, ou ataca com seu lançamento e usa Brilho Terrível."
 					]
 				},
 				{
@@ -574,13 +574,13 @@
 				{
 					"name": "Hooves",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano perfurante mais 10 ({@damage 3d6}) de dano necrótico. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Constituição {@dc 14} ou será amaldiçoado com podridão de múmia. O alvo amaldiçoado não pode recuperar pontos de vida e seu máximo de pontos de vida diminui em 10 ({@dice 3d6}) a cada 24 horas decorridas. Se a maldição reduzir o máximo de pontos de vida do alvo a 0, o alvo morre e seu corpo vira pó. A maldição dura até ser removida pelo feitiço {@spell remove curse} ou magia semelhante."
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano perfurante mais 10 ({@damage 3d6}) de dano necrótico. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Constituição {@dc 14} ou será amaldiçoado com podridão de múmia. O alvo amaldiçoado não pode recuperar pontos de vida e seu máximo de pontos de vida diminui em 10 ({@dice 3d6}) a cada 24 horas de corrida. Se a maldição reduzir o máximo de pontos de vida do alvo a 0, o alvo morre e seu corpo vira pó. A maldição dura até ser removida pelo feitiço {@spell remove curse} ou magia semelhante."
 					]
 				},
 				{
 					"name": "Dreadful Glare",
 					"entries": [
-						"A múmia centauro tem como alvo uma criatura que ela possa ver a até 18 metros dela. Se o alvo puder ver a múmia, o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 12} contra esta magia ou se tornar {@condition frightened} até o final do próximo turno da múmia. Se o alvo falhar no teste de resistência por 5 ou mais, também será {@condition paralyzed} pela mesma duração. Um alvo bem-sucedido no teste de resistência fica imune ao Brilho Terrível de todas as múmias (mas não dos senhores das múmias) pelas próximas 24 horas."
+						"A múmia centauro tem como alvo uma criatura que ela pode ver a até 18 metros dela. Se o alvo puder ver a múmia, o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 12} contra esta magia ou se tornar {@condition frightened} até o final do próximo turno da múmia. Se o alvo falhar no teste de resistência por 5 ou mais, também será {@condition paralyzed} pela mesma duração. Um alvo bem-sucedido no teste de resistência fica imune ao Brilho Terrível de todas as múmias (mas não dos senhores das múmias) nas próximas 24 horas."
 					]
 				}
 			],
@@ -800,7 +800,7 @@
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o guerreiro terrível a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano sofrido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o terrível guerreiro cai para 1 ponto de vida."
+						"Se o dano reduzir o guerreiro terrível a 0 pontos da vida, ele deverá realizar um teste de resistência de Constituição com CD 5 + o dano sofrido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o terrível cai guerreiro para 1 ponto de vida."
 					]
 				}
 			],
@@ -808,7 +808,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O terrível guerreiro faz dois ataques corpo a corpo."
+						"O guerreiro terrível faz dois ataques corpo a corpo."
 					]
 				},
 				{
@@ -1014,13 +1014,13 @@
 				{
 					"name": "Sneak Attack",
 					"entries": [
-						"Uma vez por turno, o espião pode causar 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado do espião que não seja {@condition incapacitated} e o espião não tem desvantagem na jogada de ataque."
+						"Uma vez por turno, o espião pode causar 7 ({@dice 2d6}) de dano extra quando atinge um alvo com um ataque de arma e tem vantagem na jogada de ataque, ou quando o alvo está a 1,5 metro de um aliado do espião que não seja {@condition incapacitated} e o espião não tem interferência na jogada de ataque."
 					]
 				},
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o espião tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, o espião tem manobras de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				}
 			],
@@ -1034,7 +1034,7 @@
 				{
 					"name": "Enlarge (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Por 1 minuto, o espião aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, o espião é Grande, dobra seus dados de dano em ataques com armas baseados em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o espião não tiver espaço para se tornar Grande, ele atinge o tamanho máximo possível no espaço disponível."
+						"Por 1 minuto, o espião aumenta magicamente de tamanho, junto com qualquer coisa que você esteja planejando ou carregando. Enquanto isso, o espião é Grande, dobra seus dados de dano em ataques com armas baseadas em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o espião não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
 					]
 				},
 				{
@@ -1052,7 +1052,7 @@
 				{
 					"name": "Invisibility (Recharges after a Short or Long Rest)",
 					"entries": [
-						"O espião gira magicamente {@condition invisible} até atacar, causar dano, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} estivesse em um feitiço). Qualquer equipamento que o espião use ou carregue estará {@condition invisible} com ele."
+						"O espião gira magicamente {@condition invisible} até atacar, causar dano, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} estivesse em um feitiço). Qualquer equipamento que o espião usar ou carregar estará {@condition invisible} com ele."
 					]
 				}
 			],
@@ -1143,7 +1143,7 @@
 				{
 					"name": "Martial Advantage",
 					"entries": [
-						"Uma vez por turno, o hobgoblin pode causar 7 ({@dice 2d6}) de dano extra a uma criatura que atingir com um ataque de arma se essa criatura estiver a até 1,5 metro de um aliado do hobgoblin que não seja {@condition incapacitated}."
+						"Uma vez por turno, o hobgoblin pode causar 7 ({@dice 2d6}) de dano extra a uma criatura que atinge com um ataque de arma se essa criatura estiver a até 1,5 metro de um aliado do hobgoblin que não seja {@condition incapacitated}."
 					]
 				}
 			],
@@ -1345,8 +1345,8 @@
 				{
 					"name": "Channel Divinity: Turn Undead (1/Short Rest)",
 					"entries": [
-						"Erky apresenta seu símbolo sagrado e faz uma oração censurando os mortos-vivos. Cada Morto-Vivo que puder ver ou ouvir Erky a até 9 metros dele deve fazer um teste de resistência de {@dc 12} Sabedoria. Se a criatura falhar no teste de resistência, ela será expulsa por 1 minuto ou até sofrer qualquer dano.",
-						"Uma criatura expulsa deve passar seus turnos tentando se afastar o máximo possível de Erky e não pode se mover voluntariamente para um espaço a até 9 metros dele. Também não pode reagir. Para sua ação, ele pode utilizar apenas a ação Dash ou tentar escapar de um efeito que o impeça de se mover. Se não houver para onde se mover, a criatura pode usar a ação Esquivar."
+						"Erky apresenta seu símbolo sagrado e faz uma oração censurando os mortos-vivos. Cada Morto-Vivo que puder ver ou ouvir Erky a até 9 metros dele deve fazer um teste de resistência de {@dc 12} Sabedoria. Se uma criatura não tiver teste de resistência, ela será expulsa por 1 minuto ou até sofrerá qualquer dano.",
+						"Uma criatura expulsa deve passar seus turnos tentando se afastar o máximo possível de Erky e não pode se mover voluntariamente para um espaço a até 9 metros dele. Também não pode reagir. Para sua ação, ele pode usar apenas a ação Dash ou tentar escapar de um efeito que o impeça de se mover. Se não houver para onde se mover, uma criatura pode usar a ação Esquivar."
 					]
 				}
 			],
@@ -1379,8 +1379,8 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1819,7 +1819,7 @@
 				{
 					"name": "Swallow",
 					"entries": [
-						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura Média ou menor que o sapo está lutando. {@h}10 ({@damage 2d6 + 3}) dano perfurante, o alvo é engolido e a luta termina. O alvo engolido é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do sapo, e sofre 10 ({@damage 3d6}) de dano de ácido e 11 ({@damage 2d10}) de dano de frio no início de cada um dos turnos do sapo. O sapo só pode engolir um alvo por vez.",
+						"{@atk mw} {@hit 5} para acertar, alcance 1,5 m, uma criatura Média ou menor que o sapo está lutando. {@h}10 ({@damage 2d6 + 3}) dano perfurante, o alvo é engolido e a luta termina. O alvo engolido é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do sapo, e sofre 10 ({@damage 3d6}) de dano de ácido e 11 ({@damage 2d10}) de dano de frio no início de cada um dos turnos do sapo. O sapo só pode engolir um alvo de vez em quando.",
 						"Se o sapo morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 1,5 metro de movimento, saindo de {@condition prone}."
 					]
 				}
@@ -1912,7 +1912,7 @@
 				{
 					"name": "Lightning Jolt {@recharge 5}",
 					"entries": [
-						"Uma criatura que a enguia tocar a até 1,5 metro dela fora da água, ou cada criatura a até 4,5 metros dela em um corpo d'água, deve realizar um teste de resistência de Constituição {@dc 12}. Se falhar no salvamento, o alvo sofre 13 ({@damage 3d8}) de dano elétrico. Se o alvo sofrer algum desses danos, o alvo será {@condition stunned} até o final do próximo turno da enguia. Em um teste bem-sucedido, o alvo sofre metade do dano e não é {@condition stunned}."
+						"Uma criatura que a enguia tocar a até 1,5 metro dela fora da água, ou cada criatura a até 4,5 metros dela em um corpo d'água, deve realizar um teste de resistência de Constituição {@dc 12}. Se falhar no salvamento, o alvo sofre 13 ({@damage 3d8}) de dano elétrico. Se o alvo sofrer algum desses danos, o alvo será {@condition stunned} até o final do próximo turno da guia. Em um teste bem-sucedido, o alvo sofre metade do dano e não é {@condition stunned}."
 					]
 				}
 			],
@@ -2006,7 +2006,7 @@
 				{
 					"name": "Evasion",
 					"entries": [
-						"Se o esqueleto for submetido a um efeito que lhe permita fazer um teste de resistência para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+						"Se o esqueleto for submetido a um efeito que lhe permitirá fazer um teste de resistência para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
 					]
 				},
 				{
@@ -2018,7 +2018,7 @@
 				{
 					"name": "Turn Immunity",
 					"entries": [
-						"O esqueleto é imune a efeitos que expulsam mortos-vivos."
+						"O esqueleto é imune aos efeitos que expulsam mortos-vivos."
 					]
 				}
 			],
@@ -2118,14 +2118,14 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 7} para acertar, alcance 10 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano perfurante. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
+						"{@atk mw} {@hit 7} para acertar, alcance 10 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano perfurante. Se o alvo for uma criatura, ele deverá ter sucesso em um teste de resistência de Força {@dc 15} ou será derrubado {@condition prone}."
 					]
 				},
 				{
 					"name": "Swallow",
 					"entries": [
 						"{@atk mw} {@hit 7} para acertar, alcance 1,5 m, uma criatura Média ou menor que o lagarto está lutando. {@h}16 ({@damage 2d10 + 5}) dano perfurante. O alvo é engolido e a luta termina. O alvo engolido é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do lagarto e sofre 10 ({@damage 3d6}) de dano ácido no início de cada um dos turnos do lagarto. O lagarto pode ter apenas um alvo engolido por vez.",
-						"Se o lagarto morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 3 metros de movimento, saindo de {@condition prone}."
+						"Se o lago morrer, uma criatura engolida não será mais {@condition restrained} para que ele possa escapar do cadáver usando 3 metros de movimento, saindo de {@condition prone}."
 					]
 				}
 			],
@@ -2335,7 +2335,7 @@
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deverá realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
 					]
 				}
 			],
@@ -2505,8 +2505,8 @@
 				"RW"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"constitution"
+				"carisma",
+				"constituição"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -2714,7 +2714,7 @@
 				{
 					"name": "Banded Claw",
 					"entries": [
-						"Em uma de suas garras, o caranguejo usa uma faixa de cobre coberta de runas que o torna imune a {@condition charmed}, {@condition frightened} e {@condition paralyzed}. A faixa de cobre não vale nada como tesouro, pois a magia está ligada a este caranguejo."
+						"Em uma de suas garras, o caranguejo usa uma faixa de cobertura coberta de runas que o torna imune a {@condition charmed}, {@condition frightened} e {@condition paralyzed}. A faixa de cobre não vale nada como tesouro, pois a magia está ligada a este caranguejo."
 					]
 				},
 				{
@@ -3002,13 +3002,13 @@
 				{
 					"name": "Stench",
 					"entries": [
-						"Qualquer criatura que não seja um troglodita que comece seu turno a até 1,5 metro do troglodita deve ter sucesso em um teste de resistência de Constituição {@dc 12} ou permanecerá {@condition poisoned} até o início do próximo turno da criatura. Em um teste de resistência bem-sucedido, a criatura fica imune ao fedor de todos os trogloditas por 1 hora."
+						"Qualquer criatura que não seja um troglodita que comece seu turno a até 1,5 metro do troglodita deverá ter sucesso em um teste de resistência de Constituição {@dc 12} ou permanecerá {@condition poisoned} até o início do próximo turno da criatura. Em um teste de resistência bem-sucedido, a criatura fica imune ao fedor de todos os trogloditas por 1 hora."
 					]
 				},
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o troglodita tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, o troglodita tem evitado nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				}
 			],
@@ -3064,15 +3064,15 @@
 				"poisoned"
 			],
 			"conditionInflictSpell": [
-				"invisible",
-				"unconscious"
+				"invisível",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity"
+				"constituição",
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -3251,7 +3251,7 @@
 				{
 					"name": "Seaweed Shape",
 					"entries": [
-						"O kelpie pode usar sua ação para remodelar seu corpo na forma de um humanóide ou animal pequeno, médio ou grande. Suas estatísticas permanecem inalteradas. O disfarce é convincente, a menos que o kelpie esteja sob luz forte ou o observador esteja a menos de 9 metros dele, caso em que as costuras entre os fios de algas marinhas são visíveis. O kelpie retorna à sua forma verdadeira se realizar uma ação bônus para fazer isso ou se morrer."
+						"O Kelpie pode usar sua ação para remodelar seu corpo na forma de um humanóide ou animal pequeno, médio ou grande. Suas estatísticas permaneceram inalteradas. O disfarce é convincente, a menos que o kelpie esteja sob luz forte ou o observador esteja a menos de 9 metros dele, caso em que as costuras entre os fios de algas marinhas sejam visíveis. O kelpie retorna à sua forma verdadeira se realizar uma ação bônus para fazer isso ou se morrer."
 					]
 				},
 				{
@@ -3271,14 +3271,14 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 3 metros, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante. Se o alvo for uma criatura Média ou menor, é {@condition grappled} (escape {@dc 12})."
+						"{@atk mw} {@hit 4} para acertar, alcance 3 metros, um alvo. {@h}11 ({@damage 2d8 + 2}) dano perfurante. Se o alvo para uma criatura média ou menor, é {@condition grappled} (escape {@dc 12})."
 					]
 				},
 				{
 					"name": "Drowning Hypnosis",
 					"entries": [
-						"O kelpie escolhe um humanóide que possa ver a até 45 metros dele. Se o alvo puder ver o kelpie, o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou ser magicamente {@condition charmed} enquanto o kelpie mantém {@status concentration}, até 10 minutos (como se {@status concentration||concentrating} estivesse em um feitiço). O alvo {@condition charmed} é {@condition incapacitated}, e em vez de prender a respiração debaixo d'água, ele tenta respirar normalmente e imediatamente fica sem fôlego, a menos que consiga respirar água. Se o alvo {@condition charmed} estiver a mais de 1,5 metro de distância do kelpie, o alvo deverá se mover em seu turno em direção ao kelpie pela rota mais direta, tentando chegar a 1,5 metro. Não evita ataques de oportunidade.",
-						"Antes de entrar em terreno prejudicial, como lava ou poço, e sempre que sofrer dano de uma fonte diferente do kelpie ou afogamento, o alvo pode repetir o teste de resistência. Um alvo {@condition charmed} também pode repetir o teste de resistência no final de cada um de seus turnos. Se o teste de resistência for bem-sucedido, o efeito termina nele.",
+						"O kelpie escolhe um humanóide que possa ver a até 45 metros dele. Se o alvo puder ver o kelpie, o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou ser magicamente {@condition charmed} enquanto o kelpie mantém {@status concentration}, até 10 minutos (como se {@status concentration||concentrating} esteve em um feitiço). O alvo {@condition charmed} é {@condition incapacitated}, e em vez de prender a respiração debaixo d'água, ele tenta respirar normalmente e imediatamente fica sem fôlego, a menos que consiga respirar água. Se o alvo {@condition charmed} estiver a mais de 1,5 metro de distância do kelpie, o alvo deverá se mover em seu turno em direção ao kelpie pela rota mais direta, tentando chegar a 1,5 metro. Não evita ataques de oportunidade.",
+						"Antes de entrar em terreno prejudicial, como lava ou poço, e sempre que sofrer dano de uma fonte diferente de kelpie ou afogamento, o alvo pode repetir o teste de resistência. Um alvo {@condition charmed} também pode repetir o teste de resistência no final de cada um de seus turnos. Se o teste de resistência for bem sucedido, o efeito termina nele.",
 						"Um alvo que salva com sucesso fica imune à hipnose deste kelpie pelas próximas 24 horas."
 					]
 				}
@@ -3662,7 +3662,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O kraken faz três ataques de tentáculos. Um deles pode ser substituído por um ataque de mordida e qualquer um deles pode ser substituído por Fling."
+						"O Kraken faz três ataques de tentáculos. Um deles pode ser substituído por um ataque de mordida e qualquer um deles pode ser substituído por Fling."
 					]
 				},
 				{
@@ -3674,19 +3674,19 @@
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 11} para acertar, alcance 20 pés, um alvo. {@h}14 ({@damage 2d6 + 7}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 16}). Até que esta luta termine, o alvo é {@condition restrained}. O kraken tem dez tentáculos, cada um dos quais pode agarrar um alvo."
+						"{@atk mw} {@hit 11} para acertar, alcance 20 pés, um alvo. {@h}14 ({@damage 2d6 + 7}) dano de concussão e o alvo é {@condition grappled} (escape {@dc 16}). Até que esta luta termine, o alvo é {@condition restrained}. O Kraken tem dez tentáculos, cada um dos quais pode agarrar um alvo."
 					]
 				},
 				{
 					"name": "Fling",
 					"entries": [
-						"Um objeto médio ou menor segurado ou criatura {@condition grappled} pelos tentáculos do kraken é lançado até 18 metros em uma direção aleatória e derrubado {@condition prone}. Se um alvo arremessado atingir uma superfície sólida, o alvo sofre 3 ({@damage 1d6}) de dano de concussão para cada 3 metros em que foi arremessado. Se o alvo for lançado em outra criatura, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 16} ou sofrerá o mesmo dano e será derrubada {@condition prone}."
+						"Um objeto médio ou menor seguro ou criatura {@condition grappled} pelos tentáculos do kraken é lançado até 18 metros em uma direção designada e derrubado {@condition prone}. Se um alvo arremessado atinge uma superfície sólida, o alvo sofre 3 ({@damage 1d6}) de dano de concussão para cada 3 metros em que foi arremessado. Se o alvo for lançado em outra criatura, essa criatura deverá ser bem sucedida em um teste de resistência de Destreza {@dc 16} ou sofrerá o mesmo dano e será derrubada {@condition prone}."
 					]
 				},
 				{
 					"name": "Lightning Storm",
 					"entries": [
-						"O kraken cria três raios, cada um dos quais pode atingir um alvo que o kraken possa ver a até 45 metros dele. Um alvo deve realizar um teste de resistência de Destreza {@dc 16}, sofrendo 16 ({@damage 3d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O kraken cria três raios, cada um dos quais pode atingir um alvo que o kraken possa ver a até 45 metros dele. Um alvo deve realizar um teste de resistência de Destreza {@dc 16}, dano 16 ({@damage 3d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -3807,7 +3807,7 @@
 				{
 					"name": "Shapechanger",
 					"entries": [
-						"O doppelganger pode usar sua ação para se transformar em um humanóide Pequeno ou Médio que viu, ou voltar à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma se morrer."
+						"O doppelganger pode usar sua ação para se transformar em um humanóide Pequeno ou Médio que viu, ou voltar à sua forma verdadeira. Suas estatísticas, além do tamanho, são as mesmas em cada formulário. Qualquer equipamento que você esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma de morrer."
 					]
 				},
 				{
@@ -3839,7 +3839,7 @@
 				{
 					"name": "Read Thoughts",
 					"entries": [
-						"O doppelganger lê magicamente os pensamentos superficiais de uma criatura a até 18 metros dele. O efeito pode penetrar barreiras, mas 90 centímetros de madeira ou terra, 60 centímetros de pedra, 5 centímetros de metal ou uma fina folha de chumbo o bloqueiam. Enquanto o alvo estiver ao alcance, o doppelganger pode continuar lendo seus pensamentos, desde que o {@status concentration} do doppelganger não esteja quebrado (como se {@status concentration||concentrating} em um feitiço). Ao ler a mente do alvo, o doppelganger tem vantagem em testes de Sabedoria ({@skill Insight}) e Carisma ({@skill Deception}, {@skill Intimidation} e {@skill Persuasion}) contra o alvo."
+						"O doppelganger lê magicamente os pensamentos superficiais de uma criatura a até 18 metros dele. O efeito pode penetrar barreiras, mas 90 centímetros de madeira ou terra, 60 centímetros de pedra, 5 centímetros de metal ou uma folha fina de chumbo ou bloqueio. Enquanto o alvo estiver ao alcance, o doppelganger pode continuar lendo seus pensamentos, desde que o {@status concentration} do doppelganger não esteja quebrado (como se {@status concentration||concentrating} em um feitiço). Ao ler a mente do alvo, o doppelganger tem vantagem em testes de Sabedoria ({@skill Insight}) e Carisma ({@skill Deception}, {@skill Intimidation} e {@skill Persuasion}) contra o alvo."
 					]
 				}
 			],
@@ -3967,7 +3967,7 @@
 				{
 					"name": "Mantle Dependent",
 					"entries": [
-						"A nereida usa um manto de tecido sedoso da cor da espuma do mar, que contém o espírito da criatura. O manto tem CA e pontos de vida iguais aos da nereida, mas a vestimenta não pode ser ferida diretamente enquanto a nereida a usar. Se o manto for destruído, a nereida se torna {@condition poisoned} e morre em 1 hora. Uma nereida está disposta a fazer qualquer coisa ao seu alcance para recuperar o manto caso ele seja roubado, inclusive servir ao ladrão."
+						"A nereida usa um manto de tecido sedoso do cor da espuma do mar, que contém o espírito da criatura. O manto tem CA e pontos de vida iguais aos da nereida, mas a vestimenta não pode ser ferida diretamente enquanto a nereida está usando. Se o manto for destruído, a nereida se torna {@condition poisoned} e morre em 1 hora. Uma Nereida está disposta a fazer qualquer coisa ao seu alcance para recuperar o homem caso ele seja roubado, inclusive servir ao ladrão."
 					]
 				},
 				{
@@ -3993,13 +3993,13 @@
 				{
 					"name": "Drowning Kiss {@recharge 5}",
 					"entries": [
-						"A nereida toca uma criatura que ela possa ver a até 1,5 metro dela. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou sofrerá 22 ({@damage 3d12 + 3}) de dano ácido. Em caso de falha, ele também fica sem fôlego e não consegue falar por 1 minuto. No final de cada um de seus turnos, ele pode repetir o salvamento, encerrando o efeito sobre si mesmo com um sucesso."
+						"A nereida toca uma criatura que ela poderá ver até 1,5 metro dela. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou sofrerá 22 ({@damage 3d12 + 3}) de dano ácido. Em caso de falha, ele também fica sem fôlego e não consegue falar por 1 minuto. No final de cada um de seus turnos, ele pode repetir o salvamento, encerrando o efeito sobre si mesmo com um sucesso."
 					]
 				},
 				{
 					"name": "Water Lash",
 					"entries": [
-						"A nereida faz com que um cubo de água de 1,5 metro a até 18 metros dela tome uma forma de sua escolha e atinja um alvo que ela possa ver a até 1,5 metro daquela água. O alvo deve realizar um teste de resistência de Força {@dc 13}. Se falhar na resistência, ele sofre 17 ({@damage 4d6 + 3}) de dano de concussão e, se for uma criatura grande ou menor, é empurrado até 4,5 metros em linha reta ou é derrubado {@condition prone} (escolha de Nereida). Em um teste bem-sucedido, o alvo sofre metade do dano e não é empurrado ou derrubado {@condition prone}."
+						"A nereida faz com que um cubo de água de 1,5 metro a até 18 metros dela tome uma forma de sua escolha e atinja um alvo que ela possa ver a até 1,5 metro daquela água. O alvo deve realizar um teste de resistência de Força {@dc 13}. Se falhar na resistência, ele sofre 17 ({@damage 4d6 + 3}) de dano de concussão e, se por uma criatura grande ou menor, é empurrado até 4,5 metros na linha reta ou é derrubado {@condition prone} (escolha de Nereida). Em um teste bem sucedido, o alvo sofre metade do dano e não é empurrado ou derrubado {@condition prone}."
 					]
 				}
 			],
@@ -4294,7 +4294,7 @@
 				{
 					"name": "Corrosive Form",
 					"entries": [
-						"Uma criatura que toca o Ooze Master ou o acerta com um ataque corpo a corpo enquanto estiver a 1,5 metro dele sofre 9 ({@damage 2d8}) de dano de ácido. Qualquer arma não-mágica que atinja o Mestre Ooze corrói. Depois de causar dano, a arma sofre uma penalidade permanente e cumulativa de -1 nas jogadas de dano. Se a penalidade cair para -5, a arma é destruída. A munição não mágica que atinge o Ooze Master é destruída após causar dano.",
+						"Uma criatura que toca o Ooze Master ou o acerta com um ataque corpo a corpo enquanto estiver a 1,5 metro dele sofre 9 ({@damage 2d8}) de dano de ácido. Qualquer arma não-mágica que atinja o Mestre Ooze corroi. Depois de causar dano, a arma sofre um prejuízo permanente e cumulativo de -1 nas jogadas de dano. Se um acaso cair para -5, a arma é destruída. A munição não mágica que atinge o Ooze Master é destruída após causar dano.",
 						"O Ooze Master pode comer madeira ou metal não mágico de 5 cm de espessura em 1 rodada."
 					]
 				},
@@ -4323,7 +4323,7 @@
 				{
 					"name": "Instinctive Charm",
 					"entries": [
-						"Se uma criatura que o Mestre Ooze pode ver fizer uma jogada de ataque contra ela enquanto estiver a até 9 metros dela, o Mestre Lodo pode usar uma reação para desviar o ataque se outra criatura estiver dentro do alcance do ataque. O atacante deve realizar um teste de resistência de {@dc 15} Sabedoria. Se falhar na resistência, o atacante tem como alvo a criatura que está mais próxima dele, não incluindo ele mesmo ou o Mestre Ooze. Se várias criaturas estiverem mais próximas, o atacante escolhe qual delas será o alvo. Em um teste bem sucedido, o atacante fica imune a este Feitiço Instintivo por 24 horas. Criaturas que não podem ser {@condition charmed} são imunes a este efeito."
+						"Se uma criatura que o Mestre Ooze pode fazer uma jogada de ataque contra ela enquanto estiver a até 9 metros dela, o Mestre Lodo pode usar uma ocorrência para desviar o ataque se outra criatura estiver dentro do alcance do ataque. O atacante deverá realizar um teste de resistência de {@dc 15} Sabedoria. Se falhar na resistência, o aventureiro tem como alvo a criatura que está mais próxima dele, não incluindo ele mesmo ou o Mestre Ooze. Se várias criaturas estiverem mais próximas, o caçador escolhe qual delas será o alvo. Em um teste bem sucedido, o atacante fica imune a este Feitiço Instintivo por 24 horas. Criaturas que não podem ser {@condition charmed} são imunes a este efeito."
 					]
 				}
 			],
@@ -4356,18 +4356,18 @@
 				"RCH"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"frightened",
-				"poisoned",
-				"restrained"
+				"encantado",
+				"assustado",
+				"envenenado",
+				"contido"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true
 		},
@@ -5008,7 +5008,7 @@
 				{
 					"name": "Keen Smell",
 					"entries": [
-						"O leão-marinho tem vantagem em testes de Sabedoria ({@skill Perception}) que dependem do olfato."
+						"O leão-marinho tem vantagem em testes de Sabedoria ({@skill Perception}) que depende do olfato."
 					]
 				},
 				{
@@ -5270,7 +5270,7 @@
 				"MW"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true
 		},
@@ -5334,7 +5334,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Sir Braford empunha {@item Shatterspike|tftyp}, uma espada longa mágica que concede um bônus de +1 nas jogadas de ataque e dano feitas com ela (incluída em seu ataque). Veja o folheto Shatterspike para outras propriedades do item."
+						"Sir Braford empunha {@item Shatterspike|tftyp}, uma espada longa mágica que concede um bônus de +1 nas jogadas de ataque e dano feito com ela (incluída em seu ataque). Veja o folheto Shatterspike para outras propriedades do item."
 					]
 				},
 				{
@@ -5356,7 +5356,7 @@
 				{
 					"name": "Protection",
 					"entries": [
-						"Quando uma criatura que Sir Braford pode ver ataca um alvo diferente dele que está a até 1,5 metro dele, ele pode usar uma reação para usar seu escudo para impor desvantagem na jogada de ataque."
+						"Quando uma criatura que Sir Braford pode ver atacar um alvo diferente que está a até 1,5 metro dele, ele pode usar uma ocorrência para usar seu escudo para impor uma manobra de ataque."
 					]
 				}
 			],
@@ -5470,7 +5470,7 @@
 				{
 					"name": "Stupefying Touch",
 					"entries": [
-						"Siren toca uma criatura que ela possa ver a até 1,5 metro dela. A criatura deve ter sucesso em um teste de resistência de Inteligência {@dc 13} ou sofrerá 13 ({@damage 3d6 + 3}) de dano psíquico e será {@condition stunned} até o início do próximo turno da Sirene."
+						"Siren toca uma criatura que ela poderá ver até 1,5 metro dela. A criatura deverá ter sucesso em um teste de resistência de Inteligência {@dc 13} ou sofrerá 13 ({@damage 3d6 + 3}) de dano psíquico e será {@condition stunned} até o início do próximo turno da Sirene."
 					]
 				}
 			],
@@ -5504,14 +5504,14 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"invisible"
+				"encantado",
+				"invisível"
 			],
 			"savingThrowForced": [
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -5519,7 +5519,7 @@
 		{
 			"name": "Snarla",
 			"group": [
-				"Lycanthropes"
+				"Licantropos"
 			],
 			"isNpc": true,
 			"isNamedCreature": true,
@@ -5635,7 +5635,7 @@
 				{
 					"name": "Shapechanger",
 					"entries": [
-						"O lobisomem pode usar sua ação para se transformar em um híbrido lobo-humanóide ou em um lobo, ou voltar à sua forma verdadeira, que é humanóide. Suas estatísticas, exceto seu AC, são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma se morrer."
+						"O lobisomem pode usar sua ação para se transformar em um lobo-humanóide híbrido ou em um lobo, ou voltar à sua forma verdadeira, que é humanóide. Suas estatísticas, exceto seu AC, são as mesmas em cada formulário. Qualquer equipamento que você esteja usando ou carregando não é transformado. Ele reverte à sua verdadeira forma de morrer."
 					]
 				},
 				{
@@ -5655,7 +5655,7 @@
 				{
 					"name": "Bite (Wolf or Hybrid Form Only)",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante. Se o alvo for um humanóide, ele deve ter sucesso em um teste de resistência de Constituição {@dc 12} ou será amaldiçoado com licantropia de lobisomem."
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d8 + 2}) dano perfurante. Se o alvo for um humanóide, ele deverá ter sucesso em um teste de resistência de Constituição {@dc 12} ou será amaldiçoado com licantropia de lobisomem."
 					]
 				},
 				{
@@ -5709,9 +5709,9 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -5832,7 +5832,7 @@
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o duergar tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, o duergar tem de evitar nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				}
 			],
@@ -5840,7 +5840,7 @@
 				{
 					"name": "Enlarge (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Por 1 minuto, o duergar aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, o duergar é Grande, dobra seus dados de dano em ataques com armas baseados em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o duergar não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
+						"Por 1 minuto, o duergar aumenta magicamente de tamanho, junto com qualquer coisa que você esteja planejando ou carregando. Enquanto isso, o duergar é Grande, dobra seus dados de dano em ataques com armas baseadas em Força (incluídos nos ataques) e faz testes de Força e testes de resistência de Força com vantagem. Se o duergar não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
 					]
 				},
 				{
@@ -5858,7 +5858,7 @@
 				{
 					"name": "Invisibility (Recharges after a Short or Long Rest)",
 					"entries": [
-						"O duergar transforma {@condition invisible} magicamente até atacar, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} estivesse em um feitiço). Qualquer equipamento que o duergar use ou carregue será {@condition invisible} com ele."
+						"O duergar transforma {@condition invisible} magicamente até atacar, lançar um feitiço ou usar seu Ampliar, ou até que seu {@status concentration} seja quebrado, até 1 hora (como se {@status concentration||concentrating} esteve em um feitiço). Qualquer equipamento que o duergar usar ou carregar será {@condition invisible} com ele."
 					]
 				}
 			],
@@ -5897,12 +5897,12 @@
 				"invisible"
 			],
 			"conditionInflictSpell": [
-				"blinded",
-				"paralyzed"
+				"cego",
+				"paralisado"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -5927,7 +5927,7 @@
 				{
 					"name": "Steam Breath",
 					"entries": [
-						"A estátua exala vapor em uma linha de 9 metros de comprimento e 3 metros de largura. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 15}, sofrendo 7 ({@damage 2d4 + 2}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"A estátua exala vapor em uma linha de 9 metros de comprimento e 3 metros de largura. Cada criatura nesta área deve realizar um teste de resistência de Constituição {@dc 15}, dano 7 ({@damage 2d4 + 2}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -6104,19 +6104,19 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se Var falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se você falhar em um teste de resistência, ele pode escolher ter sucesso."
 					]
 				},
 				{
 					"name": "Rejuvenation",
 					"entries": [
-						"Se Var for destruído, mas seu filactério permanecer intacto, Var ganha um novo corpo em {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativo novamente. O novo corpo aparece a 1,5 metro do filactério."
+						"Se Var for destruído, mas seu filactério permaneceu intacto, Var ganha um novo corpo em {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativo novamente. O novo corpo aparece a 1,5 metro do filactério."
 					]
 				},
 				{
 					"name": "Turn Resistance",
 					"entries": [
-						"Var tem vantagem em testes de resistência contra qualquer efeito que expulsa mortos-vivos."
+						"Tem vantagem em testes de resistência contra qualquer efeito que expulse mortos-vivos."
 					]
 				}
 			],
@@ -6124,7 +6124,7 @@
 				{
 					"name": "Paralyzing Touch",
 					"entries": [
-						"{@atk ms} {@hit 9} para acertar, alcance 1,5 m, uma criatura. {@h}10 ({@damage 3d6}) dano de frio. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+						"{@atk ms} {@hit 9} para acertar, alcance 1,5 m, uma criatura. {@h}10 ({@damage 3d6}) dano de frio. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre se mesmo obtiver sucesso."
 					]
 				},
 				{
@@ -6138,7 +6138,7 @@
 				{
 					"name": "Cantrip",
 					"entries": [
-						"Var lança um truque."
+						"Var um truque."
 					]
 				},
 				{
@@ -6150,7 +6150,7 @@
 				{
 					"name": "Frightening Gaze (Costs 2 Actions)",
 					"entries": [
-						"Var fixa seu olhar em uma criatura que ele pode ver a até 3 metros dele. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 17} contra esta magia ou se tornar {@condition frightened} por 1 minuto. O alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Se o teste de resistência de um alvo for bem-sucedido ou o efeito terminar, o alvo ficará imune ao olhar de Var pelas próximas 24 horas."
+						"Var fixa seu olhar em uma criatura que ele pode ver a até 3 metros dele. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 17} contra esta magia ou se tornar {@condition frightened} por 1 minuto. O alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Se o teste de resistência de um alvo para bem-sucedido ou o efeito terminar, o alvo ficará imune ao olhar de Var pelas próximas 24 horas."
 					]
 				}
 			],
@@ -6188,16 +6188,16 @@
 				"paralyzed"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -6280,7 +6280,7 @@
 				{
 					"name": "Flexible",
 					"entries": [
-						"Tecuziztecatl pode entrar em um espaço grande o suficiente para uma criatura Média sem apertar."
+						"Tecuziztecatl pode entrar em um espaço grande o suficiente para uma criatura média sem precisar."
 					]
 				},
 				{
@@ -6306,7 +6306,7 @@
 				{
 					"name": "Spit Acid {@recharge 4}",
 					"entries": [
-						"Tecuziztecatl exala ácido em uma linha de 9 metros com 1,5 metro de largura. Cada criatura nessa linha deve realizar um teste de resistência de Destreza {@dc 13}, sofrendo 18 ({@damage 4d8}) de dano de ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"Tecuziztecatl exala ácido em uma linha de 9 metros com 1,5 metro de largura. Cada criatura nessa linha deve realizar um teste de resistência de Destreza {@dc 13}, dano 18 ({@damage 4d8}) de dano de ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -6464,7 +6464,7 @@
 				"THW"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -6710,7 +6710,7 @@
 				{
 					"name": "Adhesive Blossoms",
 					"entries": [
-						"O lançador de espinhos adere a qualquer coisa que o toque. Uma criatura Média ou menor aderida ao lançador de espinhos também é {@condition grappled} por ele (escapar {@dc 11}). Os testes de habilidade feitos para escapar deste agarrão têm desvantagem.",
+						"O lançador de espinhos adere a qualquer coisa que o toque. Uma criatura média ou menor aderida ao lançador de espinhos também é {@condition grappled} por ele (escapar {@dc 11}). Os testes de habilidade feitos para escapar deste agarrão têm desvantagens.",
 						"No final de cada turno do lançador de espinhos, qualquer coisa que {@condition grappled} passe por ele sofre 3 ({@damage 1d6}) de dano ácido."
 					]
 				},
@@ -6846,10 +6846,10 @@
 						{
 							"type": "list",
 							"items": [
-								"Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.",
-								"Harmed by Running Water. The vampire takes 20 acid damage when it ends its turn in running water.",
-								"Stake to the Heart. The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is {@condition incapacitated} in its resting place.",
-								"Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks."
+								"Proibição. O vampiro não pode entrar numa residência sem o convite de um dos ocupantes.",
+								"Prejudicado por água corrente. O vampiro sofre 20 de dano ácido quando termina seu turno em água corrente.",
+								"Aposte no coração. O vampiro é destruído se uma arma perfurante feita de madeira for cravada em seu coração enquanto ele estiver {@condition incapacitated} em seu local de descanso.",
+								"Hipersensibilidade à luz solar. O vampiro sofre 20 de dano radiante quando inicia seu turno sob a luz do sol. Enquanto estiver sob a luz do sol, tem desvantagem em jogadas de ataque e testes de habilidade."
 							]
 						}
 					]
@@ -6858,7 +6858,7 @@
 					"name": "Shapechanger",
 					"entries": [
 						"Se o vampiro não estiver sob a luz do sol ou em água corrente, ele pode usar sua ação para se transformar em um morcego minúsculo ou voltar à sua forma verdadeira.",
-						"Enquanto estiver na forma de morcego, o vampiro não pode falar, seu deslocamento de caminhada é de 1,5 metro e seu deslocamento de vôo é de 9 metros. Suas estatísticas, exceto seu tamanho e velocidade, permanecem inalteradas. Qualquer coisa que ele esteja vestindo se transforma com ele, mas nada que ele esteja carregando o faz. Ele reverte à sua verdadeira forma se morrer."
+						"Enquanto estiver na forma de morcego, o vampiro não pode falar, sua posição de caminhada é de 1,5 metro e sua posição de voo é de 9 metros. Suas estatísticas, exceto seu tamanho e velocidade, permanecem inalteradas. Qualquer coisa que ele usa se transforma com ele, mas nada que ele esteja carregando o faz. Ele reverte à sua verdadeira forma de morrer."
 					]
 				}
 			],
@@ -6878,7 +6878,7 @@
 				{
 					"name": "Children of the Night (1/Day)",
 					"entries": [
-						"O vampiro magicamente chama {@dice 2d4} enxames de morcegos, desde que o sol ainda não tenha nascido. As criaturas chamadas chegam em {@dice 1d4} rodadas, agindo como aliadas do vampiro e obedecendo aos seus comandos falados. As feras permanecem por 1 hora, até que o vampiro morra, ou até que o vampiro as dispense como uma ação bônus."
+						"O vampiro magicamente chama {@dice 2d4} enxames de morcegos, desde que o sol ainda não tenha nascido. As chamadas chegam em {@dice 1d4} rodadas, provocadas como aliadas do vampiro e obedecendo aos seus comandos falados. As feras permaneceram por 1 hora, até que o vampiro morra, ou até que o vampiro as dispense como uma ação bônus."
 					]
 				},
 				{
@@ -6913,10 +6913,10 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"paralyzed"
+				"paralisado"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -7043,7 +7043,7 @@
 				{
 					"name": "Corrode Metal",
 					"entries": [
-						"Qualquer arma não-mágica feita de metal que atinja Fauce Branco sofre corrosão. Depois de causar dano, a arma sofre uma penalidade permanente e cumulativa de -1 nas jogadas de dano. se a penalidade cair para -5, a arma é destruída. A munição não mágica feita de metal que atinge White Maw é destruída após causar dano.",
+						"Qualquer arma não-mágica feita de metal que atinja Fauce Branco sofra corrosão. Depois de causar dano, a arma sofre um prejuízo permanente e cumulativo de -1 nas jogadas de dano. se a sorte cair para -5, a arma é destruída. A munição não mágica feita de metal que atinge White Maw é destruída após causar dano.",
 						"White Maw pode comer metal não mágico de 5 cm de espessura em 1 rodada."
 					]
 				},
@@ -7056,7 +7056,7 @@
 				{
 					"name": "Killer Response",
 					"entries": [
-						"Qualquer criatura que comece seu turno no espaço de White Maw será alvo de um ataque de pseudópode se White Maw não for {@condition incapacitated}."
+						"Qualquer criatura que comece seu turno no espaço do White Maw será alvo de um ataque de pseudópode se o White Maw não for {@condition incapacitated}."
 					]
 				}
 			],
@@ -7064,7 +7064,7 @@
 				{
 					"name": "Pseudopod",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}22 ({@damage 4d8 + 4}) de dano por concussão mais 9 ({@damage 2d8}) de dano ácido. Se o alvo estiver usando uma armadura de metal não-mágica, sua armadura será parcialmente corroída e sofrerá uma penalidade permanente e cumulativa de -1 na CA que oferece. A armadura é destruída se a penalidade reduzir sua CA para 10."
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}22 ({@damage 4d8 + 4}) de dano por concussão mais 9 ({@damage 2d8}) de dano ácido. Se o alvo estiver usando uma armadura de metal não mágica, sua armadura será parcialmente corroída e sofrerá um acidente permanente e cumulativo de -1 na CA que oferece. A armadura é destruída se a destruição reduzir sua CA para 10."
 					]
 				}
 			],
@@ -7344,13 +7344,13 @@
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, Yusdrayl tem desvantagem em jogadas de ataque, bem como em testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, Yusdrayl tem manobras de ataque, bem como em testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				},
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"Yusdrayl tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um de seus aliados estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+						"Yusdrayl tem vantagem em um jogo de ataque contra uma criatura se pelo menos um de seus aliados estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
 					]
 				}
 			],
@@ -7395,7 +7395,7 @@
 				"MW"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluff": true,

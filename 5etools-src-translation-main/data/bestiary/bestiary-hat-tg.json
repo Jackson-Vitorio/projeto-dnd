@@ -112,7 +112,7 @@
 					"name": "Change Shape (5/Day)",
 					"entries": [
 						"Doric se transforma magicamente em uma Besta com nível de desafio 3 ou menos ou em um urso-coruja (veja o Manual dos Monstros).",
-						"Doric pode permanecer nessa forma por até 2 horas. Ela pode escolher se seu equipamento cai no chão, se funde com sua nova forma ou se é usado pela nova forma. Doric volta à sua forma verdadeira se for {@condition incapacitated} ou morrer. Ela pode voltar à sua forma verdadeira usando uma ação bônus.",
+						"Doric pode permanecer nessa forma por até 2 horas. Ela pode escolher se seu equipamento cai no chão, se é fundo com sua nova forma ou se é usado pela nova forma. Dórico volta à sua forma verdadeira se for {@condition incapacitated} ou morrer. Ela pode voltar à sua forma usando uma ação bônus.",
 						"Enquanto Doric é transformado, seu bloco de estatísticas é substituído pelo bloco de estatísticas daquela forma, exceto que ela mantém seus pontos de vida atuais, seu máximo de pontos de vida, esta ação bônus, seu alinhamento e seus valores de Inteligência, Sabedoria e Carisma."
 					]
 				}
@@ -121,7 +121,7 @@
 				{
 					"name": "Fiery Rebuke (3/Day)",
 					"entries": [
-						"Quando Doric é danificado por uma criatura que ela pode ver a até 18 metros de si mesma, ela magicamente envolve a criatura em chamas. A criatura deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 16 ({@damage 3d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"Quando Doric é ferido por uma criatura que ela pode ver a até 18 metros de si mesma, ela magicamente envolve uma criatura em chamas. Uma criatura deve realizar um teste de resistência de Destreza {@dc 15}, dano 16 ({@damage 3d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -158,15 +158,15 @@
 				"RW"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"strength"
+				"constituição",
+				"destreza",
+				"força"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -253,7 +253,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Edgin faz dois ataques de alaúde reforçado ou espada curta."
+						"Edgin faz dois ataques de alaúde reforçados ou espada curta."
 					]
 				},
 				{
@@ -271,7 +271,7 @@
 				{
 					"name": "Disorienting Words",
 					"entries": [
-						"Edgin provoca magicamente até três criaturas que ele pode ver a até 18 metros de si mesmo. Cada criatura deve ter sucesso em um teste de resistência de Sabedoria {@dc 15} ou sofrerá 10 ({@damage 3d6}) de dano psíquico e terá desvantagem na próxima jogada de ataque que fizer antes do início do próximo turno de Edgin."
+						"Edgin provoca magicamente até três criaturas que ele pode ver a até 18 metros de si mesmo. Cada criatura deve ter sucesso em um teste de resistência de Sabedoria {@dc 15} ou sofrerá 10 ({@damage 3d6}) de dano psíquico e terá dificuldade na próxima jogada de ataque que causará antes do início do próximo turno de Edgin."
 					]
 				}
 			],
@@ -279,7 +279,7 @@
 				{
 					"name": "Inspiring Words (3/Day)",
 					"entries": [
-						"Quando uma criatura que Edgin pode ver a até 18 metros de si mesmo falha em um teste de habilidade, uma jogada de ataque ou um teste de resistência, Edgin concede incentivo mágico à criatura. A criatura pode rolar um {@dice d8} e adicionar o número obtido ao total, potencialmente transformando a falha em um sucesso."
+						"Quando uma criatura que Edgin pode ver a até 18 metros de si mesma falha em um teste de habilidade, uma jogada de ataque ou um teste de resistência, Edgin concede incentivo mágico à criatura. A criatura pode rolar um {@dice d8} e adicionar o número de resultados ao total, especificamente mudando a falha em um sucesso."
 					]
 				}
 			],
@@ -306,13 +306,13 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"charmed"
+				"encantado"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -373,19 +373,19 @@
 				{
 					"name": "Disarming Charm",
 					"entries": [
-						"Embora Forge não esteja usando armadura, sua CA inclui seu modificador de Carisma."
+						"Embora Forge não esteja usando armadura, seu CA inclui seu modificador de Carisma."
 					]
 				},
 				{
 					"name": "Double-Cross",
 					"entries": [
-						"Se Forge atingir uma criatura amiga com uma jogada de ataque, o ataque será automaticamente um acerto crítico."
+						"Se Forge atingir uma criatura amiga com um ataque de ataque, o ataque será automaticamente um certo crítico."
 					]
 				},
 				{
 					"name": "Evasion",
 					"entries": [
-						"Se Forge for sujeito a um efeito que lhe permita fazer um teste de resistência de Destreza para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência e apenas metade do dano se falhar, desde que não seja {@condition incapacitated}."
+						"Se Forge for sujeito a um efeito que lhe permitirá fazer um teste de resistência de Destreza para sofrer apenas metade do dano, ele não sofrerá nenhum dano se tiver sucesso no teste de resistência e apenas metade do dano se falhar, desde que não seja {@condition incapacitated}."
 					]
 				}
 			],
@@ -405,7 +405,7 @@
 				{
 					"name": "Heavy Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 5} para acertar, alcance 100/400 pés, um alvo. {@h}7 ({@damage 1d10 + 2}) de dano perfurante mais 24 ({@damage 7d6}) de dano venenoso. Acertar ou Errar: Se o alvo for uma criatura, ele terá desvantagem na próxima jogada de ataque que fizer antes do início do próximo turno de Forge."
+						"{@atk rw} {@hit 5} para acertar, alcance 100/400 pés, um alvo. {@h}7 ({@damage 1d10 + 2}) de dano perfurante mais 24 ({@damage 7d6}) de dano venenoso. Acertar ou Errar: Se o alvo for uma criatura, ele terá que evitar na próxima jogada de ataque que fará antes do início do próximo turno de Forge."
 					]
 				}
 			],
@@ -413,7 +413,7 @@
 				{
 					"name": "Cunning",
 					"entries": [
-						"Forge realiza a ação Correr, Desengajar ou Esconder-se, ou ele ganha vantagem na próxima jogada de ataque que fizer antes do final deste turno."
+						"Forge realiza a ação Correr, Desengajar ou Esconder-se, ou ganha vantagem na próxima jogada de ataque que causar antes do final deste turno."
 					]
 				}
 			],
@@ -521,7 +521,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Holga carrega um machado grande de aço escuro, uma arma mágica que lhe concede resistência a danos causados ​​por raios enquanto ela o carrega (incluída acima)."
+						"Holga carrega um machado grande de aço escuro, uma arma mágica que lhe concede resistência a danos causados por raios enquanto ela o carrega (incluído acima)."
 					]
 				},
 				{
@@ -555,7 +555,7 @@
 				{
 					"name": "Wrestle",
 					"entries": [
-						"Holga empurra uma criatura a até 1,5 metro de si mesma. Essa criatura deve ser bem sucedida em um teste de resistência de Força {@dc 15} ou será movida 1,5 metro para um espaço desocupado à escolha de Holga."
+						"Holga empurra uma criatura a até 1,5 metro de si mesma. Essa criatura deve ser bem sucedida em um teste de resistência de Força {@dc 15} ou será movida 1,5 metro para um espaço ocupado à escolha de Holga."
 					]
 				}
 			],
@@ -672,7 +672,7 @@
 				{
 					"name": "Fey Ancestry",
 					"entries": [
-						"Simon tem vantagem nos testes de resistência que faz para evitar ou acabar com a condição {@condition charmed} em si mesmo, e a magia não pode fazê-lo dormir."
+						"Simon tem vantagem nos testes de resistência que fazem para evitar ou acabar com a condição {@condition charmed} em si mesmo, e a magia não pode fazê-lo dormir."
 					]
 				},
 				{
@@ -712,7 +712,7 @@
 				{
 					"name": "Sheltering Shield (3/Day)",
 					"entries": [
-						"Quando Simon ou outra criatura que ele possa ver a até 3 metros de si mesmo sofre dano, ele conjura uma esfera cintilante de força mágica com 3 metros de raio centrada em si mesmo. As criaturas dentro da esfera possuem resistência ao dano que desencadeou esta reação."
+						"Quando Simon ou outra criatura que ele possa ver a até 3 metros de si mesmo sofre dano, ele conjura uma esfera cintilante de força mágica com 3 metros de raio centrada em si mesmo. As criaturas dentro da esfera possuem resistência ao dano que desencadeou esta ocorrência."
 					]
 				}
 			],
@@ -862,7 +862,7 @@
 				{
 					"name": "Swarm of Meteors (1/Day)",
 					"entries": [
-						"Sofina invoca magicamente um enxame de meteoros que detona em quatro esferas de 12 metros de raio, cada uma centrada em um ponto que ela pode ver a até 1,6 km de si mesma. Essas esferas podem se sobrepor. Cada criatura em uma ou mais dessas esferas deve realizar um teste de resistência de Destreza {@dc 18}, sofrendo 35 ({@damage 10d6}) de dano de fogo e 35 ({@damage 10d6}) de dano de concussão se falhar no teste de resistência, ou metade do dano se obtiver sucesso. Uma criatura em múltiplas esferas sofre este dano apenas uma vez."
+						"Sofina invoca magicamente um enxame de meteoros que detona em quatro esferas de 12 metros de raio, cada uma centrada em um ponto que ela pode ver a até 1,6 km de si mesma. Essas esferas podem se sobrepor. Cada criatura em uma ou mais dessas esferas deve realizar um teste de resistência de Destreza {@dc 18}, dano 35 ({@damage 10d6}) de dano de fogo e 35 ({@damage 10d6}) de dano de concussão se falhar no teste de resistência, ou metade do dano se obtiver sucesso. Uma criatura em múltiplas esferas sofre esse dano apenas uma vez."
 					]
 				}
 			],
@@ -870,7 +870,7 @@
 				{
 					"name": "Summon Wraith (1/Day)",
 					"entries": [
-						"Sofina invoca magicamente o espírito de um assassino Thayan, que aparece como um espectro (veja o Manual dos Monstros). O espectro invocado aparece em um espaço desocupado a até 18 metros de Sofina, a quem obedece. O espectro invocado tem seu turno imediatamente após Sofina. Dura 1 hora, até que ele ou Sofina morra, ou até que Sofina o descarte como uma ação bônus."
+						"Sofina invoca magicamente o espírito de um assassino Thayan, que aparece como um espectro (veja o Manual dos Monstros). O espectro invocado aparece num espaço desocupado a até 18 metros de Sofina, a quem obedece. O espectro invocado tem seu turno imediatamente após Sofina. Dura 1 hora, até que ele ou Sofina morra, ou até que Sofina o descarte como uma ação bônus."
 					]
 				}
 			],
@@ -902,15 +902,15 @@
 				"AOE"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1021,19 +1021,19 @@
 				{
 					"name": "Longsword",
 					"entries": [
-						"Xenk destaca magicamente a lâmina da espada longa de seu punho, lançando a lâmina em uma criatura que ele possa ver a até 9 metros de si mesmo. O alvo deve fazer um teste de resistência de Destreza {@dc 16}. Se falhar na resistência, o alvo é empalado pela lâmina, sofrendo 14 ({@damage 3d6 + 4}) de dano perfurante, e é nocauteado {@condition prone}. No final do turno atual, a lâmina se reconecta magicamente ao cabo."
+						"Xenk destaca magicamente a lâmina da espada longa de seu punho, lançando a lâmina em uma criatura que ele pode ver a até 9 metros de si mesmo. O alvo deve fazer um teste de resistência de Destreza {@dc 16}. Se falhar na resistência, o alvo é empalado pela lâmina, dano 14 ({@damage 3d6 + 4}) de dano perfurante, e é nocauteado {@condition prone}. No final do turno atual, a lâmina se reconecta magicamente ao cabo."
 					]
 				},
 				{
 					"name": "Shortsword and Dagger",
 					"entries": [
-						"Xenk ataca com ambas as armas. Cada criatura de sua escolha a até 3 metros dele deve realizar um teste de Destreza {@dc 16}. Se falhar na resistência, a criatura sofre 7 ({@damage 2d6}) de dano perfurante e tem desvantagem nas jogadas de ataque até o início do próximo turno de Xenk. Se obtiver sucesso, a criatura sofre metade do dano e não sofre nenhum outro efeito."
+						"Xenk ataca com ambas as armas. Cada criatura de sua escolha a até 3 metros deverá realizar um teste de Destreza {@dc 16}. Se falhar na resistência, a criatura sofre 7 ({@damage 2d6}) de dano perfurante e tem manobras de ataque até o início do próximo turno de Xenk. Se obtiver sucesso, a criatura sofre metade do dano e não sofre nenhum outro efeito."
 					]
 				},
 				{
 					"name": "Cleansing Touch (1/Day)",
 					"entries": [
-						"Xenk toca uma criatura a até 1,5 metro dele. O alvo recupera magicamente 27 ({@dice 6d8}) pontos de vida e ganha o benefício de um feitiço {@spell lesser restoration}."
+						"Xenk toca uma criatura a até 1,5 metro dele. O alvo recupera magicamente 27 ({@dice 6d8}) pontos de vida e ganhos o benefício de um feitiço {@spell lesser restoration}."
 					]
 				}
 			],

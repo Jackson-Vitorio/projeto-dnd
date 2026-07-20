@@ -207,7 +207,7 @@
 				{
 					"name": "Legendary Resistance (3/Day, or 4/Day in Domain)",
 					"entries": [
-						"Se Ankhtepot falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se Ankhtepot falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				},
 				{
@@ -221,7 +221,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Ankhtepot faz quatro ataques de explosão de energia negativa. Ele pode substituir um ataque pelo uso de Spellcasting para lançar {@spell Power Word Stun|XPHB}."
+						"Ankhtepot causa quatro ataques de explosão de energia negativa. Ele pode substituir um ataque pelo uso de Spellcasting para lançar {@spell Power Word Stun|XPHB}."
 					]
 				},
 				{
@@ -233,7 +233,7 @@
 				{
 					"name": "Touch of Death {@recharge}",
 					"entries": [
-						"Ankhtepot toca uma criatura em um raio de 1,5 metro. Se a criatura tiver 80 {@variantrule Hit Points|XPHB} ou menos, ela morre. Caso contrário, sofre 52 ({@damage 8d12}) de dano necrótico."
+						"Ankhtepot toca uma criatura em um raio de 1,5 metro. Se uma criatura tiver 80 {@variantrule Hit Points|XPHB} ou menos, ela morrerá. Caso contrário, sofre 52 ({@damage 8d12}) de dano necrótico."
 					]
 				}
 			],
@@ -241,7 +241,7 @@
 				{
 					"name": "Death Strike",
 					"entries": [
-						"Ankhtepot faz um ataque de explosão de energia negativa."
+						"Ankhtepot provoca um ataque de explosão de energia negativa."
 					]
 				},
 				{
@@ -291,15 +291,15 @@
 				"RA"
 			],
 			"conditionInflictSpell": [
-				"blinded",
-				"stunned"
+				"cego",
+				"atordoado"
 			],
 			"savingThrowForced": [
 				"charisma",
 				"strength"
 			],
 			"savingThrowForcedSpell": [
-				"constitution"
+				"constituição"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -467,7 +467,7 @@
 				{
 					"name": "Eldritch Teleport",
 					"entries": [
-						"Azalin se teletransporta até 18 metros para um espaço desocupado que ele pode ver e faz um ataque Eldritch Burst ou Paralyzing Touch."
+						"Azalin se teletransporta até 18 metros para um espaço desocupado que ele pode ver e fazer um ataque Eldritch Burst ou Paralyzing Touch."
 					]
 				},
 				{
@@ -516,17 +516,17 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated",
-				"invisible"
+				"encantado",
+				"incapacitado",
+				"invisível"
 			],
 			"savingThrowForced": [
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -610,8 +610,8 @@
 				{
 					"name": "Entrapping Pod",
 					"entries": [
-						"{@actSave str} {@dc 15}, uma criatura grande ou menor que a planta está lutando. {@actSaveFail} O alvo é puxado para o espaço da planta, não é mais {@condition Grappled|XPHB} e fica preso no casulo da planta. Enquanto preso, o alvo tem as condições {@condition Blinded|XPHB} e {@condition Paralyzed|XPHB}, e tem {@variantrule Cover|XPHB|Total Cover} contra ataques e outros efeitos fora do pod. Após {@dice 2d4} horas, o alvo preso morre e, se for um humanóide, um Bodytaker Podling semelhante a ele emerge do casulo.",
-						"Uma criatura fora do casulo e a até 1,5 metro da planta pode realizar uma ação para realizar um teste de Força de {@dc 14} ({@skill Athletics|XPHB}). Em um teste bem-sucedido, o alvo é removido do casulo, cai em um espaço a até 1,5 metro da planta e tem a condição {@condition Prone|XPHB}. Se a planta morrer, o alvo preso não será mais {@condition Blinded|XPHB} ou {@condition Paralyzed|XPHB} e poderá escapar do casulo usando 1,5 metro de movimento, saindo de {@condition Prone|XPHB}."
+						"{@actSave str} {@dc 15}, uma criatura grande ou menor que a planta está lutando. {@actSaveFail} O alvo é puxado para o espaço da planta, não é mais {@condition Grappled|XPHB} e fica preso no casulo da planta. Enquanto isso, o alvo tem as condições {@condition Blinded|XPHB} e {@condition Paralyzed|XPHB}, e tem {@variantrule Cover|XPHB|Total Cover} contra ataques e outros efeitos fora do pod. Após {@dice 2d4} horas, o alvo preso morre e, se for um humanóide, um Bodytaker Podling semelhante a ele emerge do casulo.",
+						"Uma criatura fora do casulo e até 1,5 metro da planta pode realizar uma ação para realizar um teste de Força de {@dc 14} ({@skill Athletics|XPHB}). Em um teste bem-sucedido, o alvo é removido do caso, cai em um espaço a até 1,5 metro da planta e tem a condição {@condition Prone|XPHB}. Se a planta morrer, o alvo preso não será mais {@condition Blinded|XPHB} ou {@condition Paralyzed|XPHB} e poderá escapar do caso usando 1,5 metro de movimento, saindo de {@condition Prone|XPHB}."
 					]
 				}
 			],
@@ -619,7 +619,7 @@
 				{
 					"name": "Transfer Harm",
 					"entries": [
-						"{@actTrigger} Uma jogada de ataque atinge a planta enquanto um fruto está a 1,5 metro da planta. {@actResponse} A planta reduz pela metade o dano sofrido pelo ataque e o fruto sofre a outra metade do dano."
+						"{@actTrigger} Uma batida de ataque atinge a planta enquanto um fruto está a 1,5 metro da planta. {@actResponse} A planta reduz pela metade o dano sofrido pelo ataque e o fruto sofre a outra metade do dano."
 					]
 				}
 			],
@@ -630,7 +630,7 @@
 				"swamp"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Rejuvenation"
@@ -712,7 +712,7 @@
 				{
 					"name": "Semblance of Life",
 					"entries": [
-						"O podling é uma cópia física de uma criatura digerida por uma planta Bodytaker. O podling tem {@variantrule Advantage|XPHB} em testes de Carisma ({@skill Deception|XPHB}) feitos para passar como a criatura digerida. O podling se transforma em uma pasta quando morre."
+						"O podling é uma cópia física de uma criatura digerida de uma planta Bodytaker. O podling tem {@variantrule Advantage|XPHB} em testes de Carisma ({@skill Deception|XPHB}) feitos para passar como uma criatura digerida. O podling se transforma em uma pasta quando morre."
 					]
 				}
 			],
@@ -731,7 +731,7 @@
 				"swamp"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"senseTags": [
 				"B"
@@ -817,7 +817,7 @@
 				{
 					"name": "Smother",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}7 ({@damage 2d4 + 2}) Dano de concussão. Se o alvo for uma criatura Média ou menor, ele possui a condição {@condition Grappled|XPHB} (escape {@dc 12}). Até que a luta termine, o alvo tem as condições {@condition Blinded|XPHB} e {@condition Restrained|XPHB}, está sufocando e sofre 7 ({@damage 2d4 + 2}) de dano de concussão no início de cada turno do desossado. Os desossados ​​podem sufocar apenas uma criatura por vez. Enquanto estiver agarrando um alvo, o desossado não poderá realizar esta ação novamente."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}7 ({@damage 2d4 + 2}) Dano de concussão. Se o alvo for uma criatura Média ou menor, ele possui a condição {@condition Grappled|XPHB} (escape {@dc 12}). Até que a luta termine, o alvo tem as condições {@condition Blinded|XPHB} e {@condition Restrained|XPHB}, está sufocando e sofre 7 ({@damage 2d4 + 2}) de dano de concussão no início de cada turno do desossado. Os desossados ​​​​podem sufocar apenas uma criatura por vez. Enquanto você estiver agarrando um alvo, o desossado não poderá realizar esta ação novamente."
 					]
 				}
 			],
@@ -825,7 +825,7 @@
 				{
 					"name": "Unraveling Flesh (1/Day)",
 					"entries": [
-						"{@actSave wis} {@dc 11}, cada criatura em um raio de 9 metros que possa ver o desossado. {@actSaveFail} O destino tem a condição {@condition Frightened|XPHB}. {@actSaveSuccessOrFail} O desossado sobe até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+						"{@actSave wis} {@dc 11}, cada criatura em um raio de 9 metros que pode ver o desossado. {@actSaveFail} O destino tem a condição {@condition Frightened|XPHB}. {@actSaveSuccessOrFail} O desossado sobe até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
 					]
 				}
 			],
@@ -932,7 +932,7 @@
 				{
 					"name": "Detect Intelligence",
 					"entries": [
-						"O cérebro sente magicamente a localização de qualquer criatura a até 90 metros de si mesmo que tenha um valor de Inteligência igual ou superior a 3, independentemente das barreiras interpostas."
+						"O cérebro sente magicamente a localização de qualquer criatura a até 90 metros de si mesmo que tenha um valor de inteligência igual ou superior a 3, independentemente das barreiras interpostas."
 					]
 				},
 				{
@@ -966,7 +966,7 @@
 				"urban"
 			],
 			"treasure": [
-				"arcana"
+				"arcano"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -996,14 +996,14 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"paralyzed"
+				"encantado",
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1046,20 +1046,20 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O perseguidor da carniça faz dois ataques de tentáculo e um ataque de ferrão."
+						"O perseguidor da carniça faz dois ataques de tentáculo e um ataque de ferro."
 					]
 				},
 				{
 					"name": "Tentacle",
 					"entries": [
 						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}8 ({@damage 2d4 + 3}) Dano perfurante e o perseguidor de carniça se fixa no alvo. Enquanto estiver anexado, o perseguidor da carniça não pode realizar ataques de Tentáculos contra outros alvos.",
-						"O espreitador da carniça pode se separar gastando 1,5 metro de movimento. O alvo ou uma criatura a até 1,5 metro dele pode separar o espreitador de carniça como uma ação."
+						"O espreitador da carniça pode se separar gastando 1,5 metro de movimento. O alvo ou uma criatura até 1,5 metro dele pode separar o espírito de carniça como uma ação."
 					]
 				},
 				{
 					"name": "Stinger",
 					"entries": [
-						"{@atkr m} {@hit 5} (com {@variantrule Advantage|XPHB} se o perseguidor de carniça estiver preso ao alvo), alcance 1,5 m. {@h}7 ({@damage 2d6}) Dano de veneno e o alvo será sujeito ao seguinte efeito. {@actSave con} {@dc 13}. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB}. Enquanto {@condition Poisoned|XPHB} dessa forma, o alvo fica infestado com uma larva perseguidora de carniça. Se o alvo ainda for {@condition Poisoned|XPHB} desta forma após 24 horas, o efeito termina quando a larva se torna um Carrion Stalker totalmente crescido, que explode do peito do alvo e o mata."
+						"{@atkr m} {@hit 5} (com {@variantrule Advantage|XPHB} se o perseguidor de carniça estiver preso ao alvo), alcance 1,5 m. {@h}7 ({@damage 2d6}) Dano de veneno e o alvo estarão sujeitos ao seguinte efeito. {@actSave con} {@dc 13}. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB}. Enquanto {@condition Poisoned|XPHB} dessa forma, o alvo fica infestado com uma larva perseguidora de carniça. Se o alvo ainda for {@condition Poisoned|XPHB} desta forma após 24 horas, o efeito termina quando uma larva se torna um Carrion Stalker totalmente crescido, que explode do peito do alvo e o mata."
 					]
 				}
 			],
@@ -1148,14 +1148,14 @@
 				{
 					"name": "Silver Needle",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano perfurante mais 3 ({@damage 1d6}) Dano necrótico. Se o alvo for um Humanóide não amaldiçoado por uma carionete, ele estará sujeito ao seguinte efeito. {@actSave cha} {@dc 11}. {@actSaveFail} O alvo é amaldiçoado por 1 minuto. Até que a maldição termine, o alvo terá a condição {@condition Poisoned|XPHB} e seu {@variantrule Speed|XPHB} será reduzido em 3 metros."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}1 Dano perfurante mais 3 ({@damage 1d6}) Dano necrótico. Se o alvo de um Humanóide não for amaldiçoado por um carionete, ele estará sujeito ao seguinte efeito. {@actSave cha} {@dc 11}. {@actSaveFail} O alvo é amaldiçoado por 1 minuto. Até que a maldição termine, o alvo terá a condição {@condition Poisoned|XPHB} e seu {@variantrule Speed|XPHB} será limitado em 3 metros."
 					]
 				},
 				{
 					"name": "Soul Swap {@recharge 5}",
 					"entries": [
-						"{@actSave cha} {@dc 11}, um humanóide que a carionete pode ver a até 4,5 metros que é amaldiçoado por sua Agulha de Prata. {@actSaveFail} A carrionete possui o corpo do alvo, e o alvo possui o corpo da carrionete e tem a condição {@condition Unconscious|XPHB} por 1 hora. Embora possuam outro corpo, a carionete e o alvo mantêm seus alinhamentos; personalidades; Pontuações de Inteligência, Sabedoria e Carisma; e idiomas conhecidos. Caso contrário, eles adotam as estatísticas de jogo da outra criatura, embora o alvo não possa usar esta ação de Troca de Alma.",
-						"A posse é desfeita se o alvo (enquanto estiver no corpo da carionete) causar dano à carionete (no corpo original do alvo) com sua Agulha de Prata. Se um dos corpos for destruído, tanto a carionete quanto o alvo morrem."
+						"{@actSave cha} {@dc 11}, um humanóide que a carionete pode ver a até 4,5 metros que é amaldiçoado por sua Agulha de Prata. {@actSaveFail} A carrionete possui o corpo do alvo, e o alvo possui o corpo da carrionete e tem a condição {@condition Unconscious|XPHB} por 1 hora. Embora possuíssem outro corpo, a carionete e o alvo mantivessem seus alinhamentos; personalidades; Pontuações de Inteligência, Sabedoria e Carisma; e idiomas conhecidos. Caso contrário, eles adotam as estatísticas de jogo de outra criatura, embora o alvo não possa usar esta ação de Troca de Alma.",
+						"A posse é desfeita se o alvo (enquanto estiver no corpo da carionete) causar dano à carionete (no corpo original do alvo) com sua Agulha de Prata. Se um dos corpos for destruído, tanto a carionete quanto o alvo morre."
 					]
 				}
 			],
@@ -1163,7 +1163,7 @@
 				"urban"
 			],
 			"treasure": [
-				"implements"
+				"implementos"
 			],
 			"senseTags": [
 				"D"
@@ -1287,7 +1287,7 @@
 				{
 					"name": "Bite (Panther or Hybrid Form Only)",
 					"entries": [
-						"{@atkr m} {@hit 8}, alcance 5 pés. {@h}20 ({@damage 3d10 + 4}) Dano perfurante. Se o alvo for um Humanóide, ele estará sujeito ao seguinte efeito. {@actSave con} {@dc 15}. {@actSaveFail} O alvo está amaldiçoado. Se o alvo amaldiçoado cair para 0 {@variantrule Hit Points|XPHB}, ele se tornará uma lobisomem sob o controle do Mestre e terá 10 {@variantrule Hit Points|XPHB} (use o bloco de estatísticas Weretiger). {@actSaveSuccess} O alvo fica imune à maldição de Chakuna por 24 horas."
+						"{@atkr m} {@hit 8}, alcance 5 pés. {@h}20 ({@damage 3d10 + 4}) Dano perfurante. Se o alvo for um Humanóide, ele estará sujeito ao seguinte efeito. {@actSave con} %%Chá790c85%%. {@actSaveFail} O alvo está amaldiçoado. Se o alvo amaldiçoado cair para 0 {@variantrule Hit Points|XPHB}, ele se tornará um lobisomem sob o controle do Mestre e terá 10 {@variantrule Hit Points|XPHB} (use o bloco de estatísticas Weretiger). {@actSaveSuccess} O alvo fica imune à maldição de Chakuna por 24 horas."
 					]
 				},
 				{
@@ -1299,7 +1299,7 @@
 				{
 					"name": "Barbed Spear (Humanoid or Hybrid Form Only)",
 					"entries": [
-						"{@atkr m,r} {@hit 8}, alcance 5 pés ou alcance 30/120 pés. {@h}8 ({@damage 1d8 + 4}) Dano perfurante e o alvo recebe um ferimento grave se não tiver um. Enquanto o alvo estiver ferido, sua velocidade é reduzida em 3 metros e ele perde 5 ({@dice 1d10}) {@variantrule Hit Points|XPHB} no início de cada um de seus turnos. O ferimento fecha após 1 minuto, após um feitiço restaurar {@variantrule Hit Points|XPHB} no alvo, ou após o alvo ou uma criatura a até 1,5 metro dele realizar uma ação para estancar o ferimento, fazendo isso com sucesso em um teste de {@dc 15} Sabedoria ({@skill Medicine|XPHB}). {@hom}A lança retorna magicamente para a mão de Chakuna imediatamente após um ataque à distância."
+						"{@atkr m,r} {@hit 8}, alcance 5 pés ou alcance 30/120 pés. {@h}8 ({@damage 1d8 + 4}) Dano perfurante e o alvo recebe um ferimento grave se não tiver um. Enquanto o alvo estiver ferido, sua velocidade é reduzida em 3 metros e ele perde 5 ({@dice 1d10}) {@variantrule Hit Points|XPHB} no início de cada um de seus giros. O ferimento fecha após 1 minuto, após um feitiço restaurar {@variantrule Hit Points|XPHB} no alvo, ou após o alvo ou uma criatura a até 1,5 metro dele realizar uma ação para estancar o ferimento, fazendo isso com sucesso em um teste de {@dc 15} Sabedoria ({@skill Medicine|XPHB}). {@hom}Um lançamento retorna magicamente para a mão de Chakuna imediatamente após um ataque à distância."
 					]
 				}
 			],
@@ -1486,7 +1486,7 @@
 				{
 					"name": "Legendary Resistance (4/Day, or 5/Day in Domain)",
 					"entries": [
-						"Se Cthulhu falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se Cthulhu falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				},
 				{
@@ -1500,19 +1500,19 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Cthulhu faz três ataques de Garra Eldritch e usa Spellcasting para lançar {@spell Befuddlement|XPHB} se disponível ou {@spell Mind Spike|XPHB} (versão de nível 4). Ele pode substituir um ataque de Garra Eldritch pelo uso de Tentáculo."
+						"Cthulhu faz três ataques de Garra Eldritch e usa Spellcasting para lançar {@spell Befuddlement|XPHB} se disponível ou {@spell Mind Spike|XPHB} (versão de nível 4). Ele pode substituir um ataque de Garra Eldritch pelo uso do Tentáculo."
 					]
 				},
 				{
 					"name": "Eldritch Claw",
 					"entries": [
-						"{@atkr m} {@hit 17}, alcance 10 pés. {@h}18 ({@damage 2d8 + 9}) Dano cortante mais 9 ({@damage 2d8}) Dano ácido. Se o alvo for uma criatura Grande ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 19}) de um dos dois membros."
+						"{@atkr m} {@hit 17}, alcance 10 pés. {@h}18 ({@damage 2d8 + 9}) Dano cortante mais 9 ({@damage 2d8}) Dano ácido. Se o alvo for uma criatura grande ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 19}) de um dos dois membros."
 					]
 				},
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@actSave con} {@dc 25}, uma criatura {@condition Grappled|XPHB} de Cthulhu. {@actSaveFail} 21 ({@damage 6d6}) Dano ácido mais 13 ({@damage 3d8}) Dano psíquico. {@actSaveSuccess} Metade do dano. {@actSaveSuccessOrFail} O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano psíquico sofrido, e Cthulhu recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
+						"{@actSave con} {@dc 25}, uma criatura {@condition Grappled|XPHB} de Cthulhu. {@actSaveFail} 21 ({@damage 6d6}) Dano ácido mais 13 ({@damage 3d8}) Dano psíquico. {@actSaveSuccess} Metade de dano. {@actSaveSuccessOrFail} O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano psíquico sofrido, e Cthulhu recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
 					]
 				}
 			],
@@ -1520,7 +1520,7 @@
 				{
 					"name": "Warp",
 					"entries": [
-						"Cthulhu se teletransporta para um espaço desocupado que pode ver em um raio de 36 metros, levando consigo as criaturas que está lutando. Então, cada criatura a até 3 metros do espaço que deixou fica sujeita ao seguinte efeito. {@actSave str} {@dc 25}. {@actSaveFail} 7 ({@damage 2d6}) Dano de concussão mais 7 ({@damage 2d6}) Dano de trovão, e se o alvo for uma criatura Grande ou menor, ele terá a condição {@condition Prone|XPHB}. {@actSaveSuccess} Apenas metade do dano."
+						"Cthulhu se teletransporta para um espaço desocupado que pode ver em um raio de 36 metros, levando consigo as criaturas que estão lutando. Então, cada criatura a até 3 metros do espaço que deixava sujeita ao próximo efeito. {@actSave str} {@dc 25}. {@actSaveFail} 7 ({@damage 2d6}) Dano de concussão mais 7 ({@damage 2d6}) Dano de trovão, e se o alvo for uma criatura Grande ou menor, ele terá a condição {@condition Prone|XPHB}. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -1528,7 +1528,7 @@
 				{
 					"name": "Clamp",
 					"entries": [
-						"Cthulhu faz um ataque Eldritch Claw."
+						"Cthulhu ataca Eldritch Claw."
 					]
 				},
 				{
@@ -1583,7 +1583,7 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"charmed"
+				"encantado"
 			],
 			"savingThrowForced": [
 				"charisma",
@@ -1591,8 +1591,8 @@
 				"strength"
 			],
 			"savingThrowForcedSpell": [
-				"intelligence",
-				"wisdom"
+				"inteligência",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1725,13 +1725,13 @@
 				{
 					"name": "Overhanging Branches",
 					"entries": [
-						"Os aliados da árvore podem encerrar seus movimentos voluntariamente no espaço da árvore. Aliados no espaço da árvore têm {@variantrule Cover|XPHB|Half Cover}."
+						"Os aliados da árvore podem impedir seus movimentos voluntariamente no espaço da árvore. Aliados no espaço da árvore têm {@variantrule Cover|XPHB|Half Cover}."
 					]
 				},
 				{
 					"name": "Unholy Regrowth",
 					"entries": [
-						"Se a árvore morrer, {@dice 2d6} Árvores Death's Head crescerão novamente no mesmo local em 365 dias, a menos que a árvore seja morta por uma criatura sob o efeito de um feitiço {@spell Bless|XPHB} usando uma arma que causa dano cortante."
+						"Se a árvore morrer, {@dice 2d6} Árvores Death's Head crescerá novamente no mesmo local em 365 dias, a menos que a árvore seja morta por uma criatura sob o efeito de um feitiço {@spell Bless|XPHB} usando uma arma que causa dano cortante."
 					]
 				}
 			],
@@ -1751,7 +1751,7 @@
 				{
 					"name": "Exploding Head",
 					"entries": [
-						"{@actSave dex} {@dc 14}, cada criatura em um raio de 3 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que a árvore pode ver dentro de 36 metros. {@actSaveFail} 10 ({@damage 3d6}) Dano necrótico e a criatura tem a condição {@condition Poisoned|XPHB} até o início do próximo turno da árvore. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave dex} {@dc 14}, cada criatura em um raio de 3 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que uma árvore pode ver dentro de 36 metros. {@actSaveFail} 10 ({@damage 3d6}) Dano necrótico e a criatura tem a condição {@condition Poisoned|XPHB} até o início do próximo giro da árvore. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -1857,7 +1857,7 @@
 				{
 					"name": "Terrorizer",
 					"entries": [
-						"O dumbahan tem {@variantrule Advantage|XPHB} em jogadas de ataque contra alvos que possuem a condição {@condition Frightened|XPHB}."
+						"O idiota tem {@variantrule Advantage|XPHB} em jogadas de ataque contra alvos que possuem a condição {@condition Frightened|XPHB}."
 					]
 				}
 			],
@@ -1883,7 +1883,7 @@
 				{
 					"name": "Headless Wail",
 					"entries": [
-						"{@actSave con} {@dc 15}, até três criaturas em um raio de 36 metros do Dullahan que não sejam Construtos ou Mortos-vivos. {@actSaveFail} 13 ({@damage 2d12}) Dano psíquico e o alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno do Dullahan. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave con} {@dc 15}, até três criaturas em um raio de 36 metros do Dullahan que não são Construtos ou Mortos-vivos. {@actSaveFail} 13 ({@damage 2d12}) Dano psíquico e o alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno do Dullahan. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -1893,7 +1893,7 @@
 				"urban"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"senseTags": [
 				"U"
@@ -2007,13 +2007,13 @@
 				{
 					"name": "Darklord Restoration",
 					"entries": [
-						"Se Ebonbane morrer, ele revive com todos os seus {@variantrule Hit Points|XPHB} em {@dice 1d10} semanas, teletransportando-se para algum lugar na Mansão Shadowborn. Até reviver, Ebonbane atua como uma espada longa +3 quando empunhada por uma criatura."
+						"Se Ebonbane morrer, ele revive com todos os seus {@variantrule Hit Points|XPHB} em {@dice 1d10} semanas, teletransportando-se para algum lugar na Mansão Shadowborn. Até reviver, Ebonbane atua como uma espada longa +3 quando empunhado por uma criatura."
 					]
 				},
 				{
 					"name": "Legendary Resistance (3/Day, or 4/Day in Domain)",
 					"entries": [
-						"Se Ebonbane falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se Ebonbane falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				},
 				{
@@ -2033,20 +2033,20 @@
 				{
 					"name": "Darkflame Slash",
 					"entries": [
-						"{@atkr m,r} {@hit 9}, alcance 5 pés ou alcance de 90 pés. {@h}9 ({@damage 1d10 + 4}) Dano cortante mais 10 ({@damage 3d6}) Dano necrótico."
+						"{@atkr m,r} {@hit 9}, alcance de 5 pés ou alcance de 90 pés. {@h}9 ({@damage 1d10 + 4}) Dano cortante mais 10 ({@damage 3d6}) Dano necrótico."
 					]
 				},
 				{
 					"name": "Possess Dead {@recharge 5}",
 					"entries": [
-						"Ebonbane levanta um cadáver Humanóide Médio ou Pequeno a até 1,5 metro de si mesmo e o possui. O cadáver empunha Ebonbane e está sob seu controle. Ebonbane ganha 50 {@variantrule Temporary Hit Points|XPHB}, e suas estatísticas são as mesmas, exceto que seu {@variantrule Speed|XPHB} aumenta para 30 pés, e ele pode falar através do cadáver usando qualquer idioma que o cadáver conhecesse em vida.",
-						"A posse dura até que Ebonbane caia para 0 {@variantrule Hit Points|XPHB} ou Ebonbane termine a posse como {@variantrule Bonus Action|XPHB}. Assim que a posse terminar, Ebonbane não poderá possuir o cadáver novamente. O cadáver vira pó 24 horas após o término da posse."
+						"Ebonbane levanta um cadáver Humanóide Médio ou Pequeno a até 1,5 metro de si mesmo e o possui. O cadáver empunhado Ebonbane e está sob seu controle. Ebonbane ganha 50 {@variantrule Temporary Hit Points|XPHB}, e suas estatísticas são as mesmas, exceto que seu {@variantrule Speed|XPHB} aumenta para 30 pés, e ele pode falar através do cadáver usando qualquer idioma que o cadáver conheceu na vida.",
+						"A posse dura até que Ebonbane caia para 0 {@variantrule Hit Points|XPHB} ou Ebonbane termina a posse como {@variantrule Bonus Action|XPHB}. Assim que a posse terminar, Ebonbane não poderá possuir o cadáver novamente. O cadáver vira pó 24 horas após o término da posse."
 					]
 				},
 				{
 					"name": "Worthy Wielder",
 					"entries": [
-						"{@actSave cha} {@dc 17}, um humanóide disposto a até 1,5 metro. {@actSaveFail} 36 ({@damage 8d8}) Dano de força. Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, Ebonbane devora sua alma. Uma criatura cuja alma foi devorada por Ebonbane pode ser restaurada à vida apenas por um feitiço {@spell Wish|XPHB}. {@actSaveSuccess} O alvo se sintoniza com Ebonbane e pode empunhar a espada."
+						"{@actSave cha} {@dc 17}, um humanóide disposto a até 1,5 metro. {@actSaveFail} 36 ({@damage 8d8}) Dano de força. Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, Ebonbane devora sua alma. Uma criatura cuja alma foi devorada por Ebonbane pode ser restaurada à vida apenas por um feitiço {@spell Wish|XPHB}. {@actSaveSuccess} O alvo se sintoniza com Ebonbane e pode empunhar uma espada."
 					]
 				}
 			],
@@ -2054,7 +2054,7 @@
 				{
 					"name": "Parry",
 					"entries": [
-						"{@actTrigger} Ebonbane é atingido por uma jogada de ataque corpo a corpo. {@actResponse} Ebonbane adiciona 5 à sua CA contra esse ataque, possivelmente fazendo com que ele erre."
+						"{@actTrigger} Ebonbane é atingido por um jogo de ataque corpo a corpo. {@actResponse} Ebonbane adiciona 5 à sua CA contra esse ataque, possivelmente fazendo com que ele erre."
 					]
 				}
 			],
@@ -2062,7 +2062,7 @@
 				{
 					"name": "Retaliate",
 					"entries": [
-						"Ebonbane move até metade de seu {@variantrule Speed|XPHB} e faz um ataque Darkflame Slash."
+						"Ebonbane move-se até metade de seu {@variantrule Speed|XPHB} e faz um ataque Darkflame Slash."
 					]
 				},
 				{
@@ -2230,7 +2230,7 @@
 				"underdark"
 			],
 			"treasure": [
-				"arcana"
+				"arcano"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -2260,15 +2260,15 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"prone"
+				"propenso"
 			],
 			"savingThrowForced": [
 				"intelligence",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"strength",
-				"wisdom"
+				"força",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2329,8 +2329,8 @@
 			],
 			"cr": "8",
 			"gear": [
-				"light crossbow|xphb",
-				"rapier|xphb"
+				"besta leve | xphb",
+				"florete | xphb"
 			],
 			"spellcasting": [
 				{
@@ -2375,7 +2375,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Ez faz três ataques, usando Hunter's Blade ou Fiery Bolt em qualquer combinação."
+						"São três ataques, usando Hunter's Blade ou Fiery Bolt em qualquer combinação."
 					]
 				},
 				{
@@ -2395,7 +2395,7 @@
 				{
 					"name": "Bolster Allies",
 					"entries": [
-						"Ez escolhe até seis aliados em um raio de 18 metros. Cada alvo que pode ouvi-la tem a escolha de Ez de (A) {@variantrule Advantage|XPHB} na próxima jogada de ataque que fizer antes do final do próximo turno ou (B) {@variantrule Resistance|XPHB} para dano de Ácido, Necrótico e Veneno até o final do próximo turno."
+						"Ez escolhe até seis aliados em um raio de 18 metros. Cada um que pode ouvir o alvo a escolha de Ez de (A) {@variantrule Advantage|XPHB} na próxima jogada de ataque que causar antes do final do próximo turno ou (B) {@variantrule Resistance|XPHB} para dano de Ácido, Necrótico e Veneno até o final do próximo turno."
 					]
 				},
 				{
@@ -2408,7 +2408,7 @@
 				{
 					"name": "Inspiring Rally",
 					"entries": [
-						"Ez escolhe até seis aliados em um raio de 18 metros. Cada alvo que puder ouvi-la pode levar um {@variantrule Reaction|XPHB} para subir até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+						"Ez escolhe até seis aliados em um raio de 18 metros. Cada alvo que você puder ouvir pode levar um {@variantrule Reaction|XPHB} para subir até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
 					]
 				}
 			],
@@ -2439,8 +2439,8 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity"
+				"carisma",
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2512,13 +2512,13 @@
 				{
 					"name": "Aura of Violence",
 					"entries": [
-						"No final de cada turno do orador da forca, cada criatura à escolha do orador da forca em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originado do orador da forca sofre o seguinte efeito. {@actSave wis} {@dc 15}. {@actSaveFail} O alvo leva um {@variantrule Reaction|XPHB} para fazer uma jogada de ataque corpo a corpo contra uma criatura ao seu alcance. Se nenhuma criatura estiver ao alcance, o alvo sofre 7 ({@damage 2d6}) de Dano Psíquico."
+						"No final de cada turno do orador da força, cada criatura à escolha do orador da força em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originado do orador da força sofre o seguinte efeito. {@actSave wis} {@dc 15}. {@actSaveFail} O alvo leva um {@variantrule Reaction|XPHB} para fazer uma jogada de ataque corpo a corpo contra uma criatura ao seu alcance. Se nenhuma criatura estiver ao alcance, o alvo sofre 7 ({@damage 2d6}) de Dano Psíquico."
 					]
 				},
 				{
 					"name": "Whirling Form",
 					"entries": [
-						"O orador da forca pode entrar no espaço de uma criatura e parar ali."
+						"O orador da força pode entrar no espaço de uma criatura e parar tudo."
 					]
 				}
 			],
@@ -2526,19 +2526,19 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O orador da forca faz dois ataques de Lâminas Giratórias."
+						"O orador da força faz dois ataques de Lâminas Giratórias."
 					]
 				},
 				{
 					"name": "Whirling Blades",
 					"entries": [
-						"{@atkr m,r} {@hit 6}, alcance 5 pés ou alcance de 60 pés. {@h}13 ({@damage 3d6 + 3}) Dano cortante mais 7 ({@damage 3d4}) Dano necrótico."
+						"{@atkr m,r} {@hit 6}, alcance de 5 pés ou alcance de 60 pés. {@h}13 ({@damage 3d6 + 3}) Dano cortante mais 7 ({@damage 3d4}) Dano necrótico."
 					]
 				},
 				{
 					"name": "Howling Wind {@recharge 5}",
 					"entries": [
-						"{@actSave con} {@dc 15}, cada criatura em um {@variantrule Cone [Area of Effect]|XPHB|Cone} de 9 metros. {@actSaveFail} 18 ({@damage 4d8}) Dano de trovão e o alvo tem a condição {@condition Frightened|XPHB} por 1 minuto. Enquanto {@condition Frightened|XPHB} está dessa forma, a criatura tem a condição {@condition Deafened|XPHB}, é compelida a gritar junto com o orador da forca e não pode lançar feitiços com componente verbal. O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave con} {@dc 15}, cada criatura em um {@variantrule Cone [Area of Effect]|XPHB|Cone} de 9 metros. {@actSaveFail} 18 ({@damage 4d8}) Dano de trovão e o alvo tem a condição {@condition Frightened|XPHB} por 1 minuto. Enquanto {@condition Frightened|XPHB} é dessa forma, uma criatura tem a condição {@condition Deafened|XPHB}, é obrigada a gritar junto com o orador da força e não pode lançar feitiços com componentes verbais. O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -2549,7 +2549,7 @@
 				"urban"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"senseTags": [
 				"U"
@@ -2632,8 +2632,8 @@
 			],
 			"cr": "3",
 			"gear": [
-				"component pouch|xphb",
-				"dagger|xphb"
+				"bolsa de componentes | xphb",
+				"adaga | xphb"
 			],
 			"spellcasting": [
 				{
@@ -2678,7 +2678,7 @@
 				{
 					"name": "Suppressed Lycanthropy",
 					"entries": [
-						"Se reduzido a 0 {@variantrule Hit Points|XPHB}, Gennifer sucumbe à licantropia. Suas estatísticas são substituídas pelas do bloco de estatísticas do Lobisomem, mas ela mantém seu alinhamento; personalidade; Pontuações de Inteligência, Sabedoria e Carisma; proficiências; e idiomas conhecidos. Ela então revive imediatamente em sua forma híbrida com todos os seus {@variantrule Hit Points|XPHB}."
+						"Se limitado a 0 {@variantrule Hit Points|XPHB}, Gennifer sucumbe à licantropia. Suas estatísticas são obtidas pelo bloco de estatísticas do Lobisomem, mas ela mantém seu alinhamento; personalidade; Pontuações de Inteligência, Sabedoria e Carisma; proficiências; e idiomas conhecidos. Ela então revive imediatamente em sua forma híbrida com todos os seus {@variantrule Hit Points|XPHB}."
 					]
 				}
 			],
@@ -2736,7 +2736,7 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"charisma"
+				"carisma"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2820,7 +2820,7 @@
 				{
 					"name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
 					"entries": [
-						"Se o emissário falhar em um teste de resistência, ele pode optar por ter sucesso."
+						"Se o emissário falhar em um teste de resistência, ele poderá optar por ter sucesso."
 					]
 				}
 			],
@@ -2840,13 +2840,13 @@
 				{
 					"name": "Coagulated Nodule",
 					"entries": [
-						"{@atkr r} {@hit 15}, alcance 120 pés. {@h}44 ({@damage 8d8 + 8}) Dano ácido."
+						"{@atkr r} {@hit 15}, alcance 120 pés. {@h}44 ({@damage 8d8 + 8}) Danoácido."
 					]
 				},
 				{
 					"name": "Unearthly Bile {@recharge 5}",
 					"entries": [
-						"{@actSave dex} {@dc 23}, cada criatura em um raio de 9 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que o emissário pode ver em um raio de 36 metros. {@actSaveFail} 54 ({@damage 12d8}) Dano de ácido e um Gibbering Mouther aparece em um espaço desocupado a até 9 metros do alvo. Os abocanhadores realizam sua vez imediatamente após o emissário na mesma contagem de {@variantrule Initiative|XPHB}. Cada abocanhador luta até ser destruído. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave dex} {@dc 23}, cada criatura em um raio de 9 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centralizada em um ponto onde o emissário pode ver em um raio de 36 metros. {@actSaveFail} 54 ({@damage 12d8}) Dano de ácido e um Gibbering Mouther aparece em um espaço desocupado a até 9 metros do alvo. Os abocanhadores realizam sua vez imediatamente após o emissário na mesma contagem de {@variantrule Initiative|XPHB}. Cada abocanhador luta até ser destruído. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -2861,7 +2861,7 @@
 				{
 					"name": "Teleporting Lash",
 					"entries": [
-						"O emissário pode se teletransportar até 9 metros para um espaço desocupado que possa ver e realiza um ataque de Gorja Cortante."
+						"O emissário pode se teletransportar até 9 metros para um espaço desocupado que possa ver e realizar um ataque de Gorja Cortante."
 					]
 				}
 			],
@@ -2873,7 +2873,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Legendary Resistances"
@@ -2973,7 +2973,7 @@
 				"urban"
 			],
 			"treasure": [
-				"arcana"
+				"arcano"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -3061,7 +3061,7 @@
 				{
 					"name": "Claw",
 					"entries": [
-						"{@atkr m} {@hit 10}, alcance 10 pés. {@h}22 ({@damage 3d10 + 6}) Dano cortante. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 16}) de uma das duas garras."
+						"{@atkr m} {@hit 10}, alcance 10 pés. {@h}22 ({@damage 3d10 + 6}) Dano cortante. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 16}) de uma das duas garras."
 					]
 				},
 				{
@@ -3076,7 +3076,7 @@
 				"underdark"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"traitTags": [
 				"Pack Tactics"
@@ -3185,8 +3185,8 @@
 			},
 			"gear": [
 				{
-					"item": "viol|xphb",
-					"displayName": "Violin"
+					"item": "viola|xphb",
+					"displayName": "Violino"
 				}
 			],
 			"trait": [
@@ -3211,7 +3211,7 @@
 				{
 					"name": "Regeneration",
 					"entries": [
-						"Harkon ganha 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}. Se Harkon sofrer dano Radiante, esta característica não funcionará no início de seu próximo turno."
+						"Harkon ganha 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}. Se Harkon sofrer dano Radiante, esse recurso não funcionará no início de seu próximo turno."
 					]
 				}
 			],
@@ -3219,7 +3219,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Harkon faz dois ataques de furto. Ele pode substituir um ataque por (A) Mordida ou (B) Desempenho Enthralling."
+						"Harkon faz dois ataques furtivos. Ele pode substituir um ataque por (A) Mordida ou (B) Desempenho Enthralling."
 					]
 				},
 				{
@@ -3231,7 +3231,7 @@
 				{
 					"name": "Swipe (Dire Wolf or Hybrid Form Only)",
 					"entries": [
-						"{@atkr m} {@hit 10}, alcance 5 pés. {@h}16 ({@damage 2d10 + 5}) Dano cortante. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Prone|XPHB}."
+						"{@atkr m} {@hit 10}, alcance 5 pés. {@h}16 ({@damage 2d10 + 5}) Dano cortante. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Prone|XPHB}."
 					]
 				},
 				{
@@ -3253,19 +3253,19 @@
 				{
 					"name": "Crushing Insult",
 					"entries": [
-						"Harkon usa Shape-Shift para retornar à sua forma humanóide, então usa o seguinte efeito. {@actSave wis} {@dc 17}, cada criatura à escolha de Harkon que ele possa ver a até 9 metros de si mesmo (criaturas {@condition Charmed|XPHB} de Harkon falham automaticamente neste salvamento). {@actSaveFail} 16 ({@damage 3d10}) Dano psíquico. {@actSaveSuccessOrFail} Harkon não pode realizar esta ação novamente até o início de seu próximo turno."
+						"Harkon usa Shape-Shift para retornar à sua forma humanóide, então usa o seguinte efeito. {@actSave wis} {@dc 17}, cada criatura à escolha de Harkon que ele pode ver a até 9 metros de si mesmo (criaturas {@condition Charmed|XPHB} de Harkon falham automaticamente neste salvamento). {@actSaveFail} 16 ({@damage 3d10}) Dano psíquico. {@actSaveSuccessOrFail} Harkon não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				},
 				{
 					"name": "Pounce",
 					"entries": [
-						"Harkon se move até metade de seu {@variantrule Speed|XPHB} e faz um ataque de furto."
+						"Harkon se move até metade de seu {@variantrule Speed|XPHB} e faz um ataque furto."
 					]
 				},
 				{
 					"name": "Surprise Bite",
 					"entries": [
-						"Harkon usa Shape-Shift para se transformar em sua forma híbrida ou de lobo terrível e então faz um ataque de mordida. Harkon não pode realizar esta ação novamente até o início de seu próximo turno."
+						"Harkon usa Shape-Shift para se transformar em sua forma híbrida ou de lobo terrível e então faz um ataque de morte. Harkon não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				}
 			],
@@ -3376,7 +3376,7 @@
 				"xpLair": 13000
 			},
 			"gear": [
-				"quarterstaff|xphb"
+				"bordão | xphb"
 			],
 			"spellcasting": [
 				{
@@ -3467,37 +3467,37 @@
 				{
 					"name": "Wild Magic Surge",
 					"entries": [
-						"Hazlik manifesta um dos seguintes surtos mágicos, visando uma criatura que ele possa ver em um raio de 36 metros. Enquanto {@status Bloodied|XPHB}, Hazlik manifesta duas ondas (role {@dice 1d4}; role novamente se Hazlik já tiver usado aquela onda durante este turno):",
+						"Hazlik manifesta um dos seguintes surtos mágicos, girando em torno de uma criatura que ele pode ver em um raio de 36 metros. Enquanto {@status Bloodied|XPHB}, Hazlik manifesta duas ondas (role {@dice 1d4}; role novamente se Hazlik já usou aquela onda durante este turno):",
 						{
 							"type": "list",
-							"style": "list-hang-notitle",
+							"style": "lista-pendurar-notitle",
 							"items": [
 								{
 									"type": "item",
 									"name": "1: Misty Movement",
 									"entries": [
-										"Hazlik can teleport the target up to 30 feet to an unoccupied space he can see on a surface or liquid large enough to support the target."
+										"Hazlik pode teletransportar o alvo até 9 metros para um espaço desocupado que ele possa ver em uma superfície ou líquido grande o suficiente para sustentar o alvo."
 									]
 								},
 								{
 									"type": "item",
 									"name": "2: Eye Blight",
 									"entries": [
-										"{@actSave con} {@dc 18}. {@actSaveFail} The target has the {@condition Blinded|XPHB} condition until the end of its next turn."
+										"{@actSave con} {@dc 18}. {@actSaveFail} O alvo tem a condição {@condition Blinded|XPHB} até o final do próximo turno."
 									]
 								},
 								{
 									"type": "item",
 									"name": "3: Mind Flare",
 									"entries": [
-										"{@actSave int} {@dc 18}. {@actSaveFail} 13 ({@damage 2d12}) Psychic damage, and the target can't take the {@action Magic|XPHB} action until the end of its next turn."
+										"{@actSave int} {@dc 18}. {@actSaveFail} 13 ({@damage 2d12}) Dano psíquico e o alvo não pode realizar a ação {@action Magic|XPHB} até o final do próximo turno."
 									]
 								},
 								{
 									"type": "item",
 									"name": "4: Implode",
 									"entries": [
-										"{@actSave dex} {@dc 18}. {@actSaveFail} The target takes 10 ({@damage 3d6}) Force damage. {@actSaveSuccessOrFail} Each creature within 5 feet of the target takes 10 ({@damage 3d6}) Force damage."
+										"{@actSave dex} {@dc 18}. {@actSaveFail} O alvo sofre 10 ({@damage 3d6}) de dano de Força. {@actSaveSuccessOrFail} Cada criatura a até 1,5 metro do alvo sofre 10 ({@damage 3d6}) de dano de Força."
 									]
 								}
 							]
@@ -3559,7 +3559,7 @@
 				"blinded"
 			],
 			"conditionInflictSpell": [
-				"invisible"
+				"invisível"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -3567,9 +3567,9 @@
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3626,8 +3626,8 @@
 			],
 			"cr": "8",
 			"gear": [
-				"breastplate|xphb",
-				"silvered longsword|xdmg"
+				"peitoral | xphb",
+				"espada longa prateada | xdmg"
 			],
 			"spellcasting": [
 				{
@@ -3669,7 +3669,7 @@
 				{
 					"name": "Inquisitor's Command {@recharge 5}",
 					"entries": [
-						"{@actSave wis} {@dc 16}, cada criatura à escolha do inquisidor que ele possa ver em um raio de 18 metros. {@actSaveFail} O alvo tem a condição {@condition Charmed|XPHB} até o início do próximo turno do inquisidor. No turno do alvo {@condition Charmed|XPHB}, o inquisidor pode controlar telepaticamente o movimento do alvo e fazer com que o alvo execute a ação {@action Attack|XPHB} (o inquisidor escolhe o alvo), a ação {@action Dash|XPHB} ou nenhuma ação."
+						"{@actSave wis} {@dc 16}, cada criatura à escolha do inquisidor que ele possa ver em um raio de 18 metros. {@actSaveFail} O alvo tem a condição {@condition Charmed|XPHB} até o início do próximo turno do inquisidor. No turn do alvo {@condition Charmed|XPHB}, o inquisidor pode controlar telepaticamente o movimento do alvo e fazer com que o alvo execute a ação {@action Attack|XPHB} (o inquisidor o escolhe alvo), a ação {@action Dash|XPHB} ou nenhuma ação."
 					]
 				},
 				{
@@ -3683,7 +3683,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"senseTags": [
 				"U"
@@ -3712,16 +3712,16 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated",
-				"paralyzed"
+				"encantado",
+				"incapacitado",
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"intelligence",
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3779,8 +3779,8 @@
 			],
 			"cr": "8",
 			"gear": [
-				"breastplate|xphb",
-				"silvered longsword|xdmg"
+				"peitoral | xphb",
+				"espada longa prateada | xdmg"
 			],
 			"spellcasting": [
 				{
@@ -3811,7 +3811,7 @@
 				{
 					"name": "Metabolic Control",
 					"entries": [
-						"No início de cada um de seus turnos, se o inquisidor tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}, ele recupera 10 {@variantrule Hit Points|XPHB} e pode encerrar uma condição em si mesmo."
+						"No início de cada um de seus turnos, se o inquisidor tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}, ele recupera 10 {@variantrule Hit Points|XPHB} e pode garantir uma condição em si mesmo."
 					]
 				}
 			],
@@ -3833,7 +3833,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"senseTags": [
 				"U"
@@ -3860,10 +3860,10 @@
 				"MLW"
 			],
 			"conditionInflictSpell": [
-				"invisible"
+				"invisível"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3922,7 +3922,7 @@
 			],
 			"cr": "8",
 			"gear": [
-				"longsword|xphb"
+				"espada longa | xphb"
 			],
 			"spellcasting": [
 				{
@@ -3958,7 +3958,7 @@
 				{
 					"name": "Force Blade",
 					"entries": [
-						"{@atkr m,r} {@hit 7}, alcance 5 pés ou alcance 120 pés. {@h}22 ({@damage 4d8 + 4}) Dano de força. Se o alvo for uma criatura Grande ou menor, ele será empurrado até 3 metros para longe do inquisidor."
+						"{@atkr m,r} {@hit 7}, alcance 5 pés ou alcance 120 pés. {@h}22 ({@damage 4d8 + 4}) Dano de força. Se o alvo for uma criatura grande ou menor, ele será empurrado até 3 metros para longe do inquisidor."
 					]
 				}
 			],
@@ -3966,7 +3966,7 @@
 				{
 					"name": "Implode {@recharge 4}",
 					"entries": [
-						"{@actSave dex} {@dc 15}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que o inquisidor pode ver em um raio de 36 metros. {@actSaveFail} 27 ({@damage 6d8}) Dano de força, e o alvo tem a condição {@condition Prone|XPHB} e é puxado até 6 metros em linha reta em direção ao centro de {@variantrule Sphere [Area of Effect]|XPHB|Sphere}. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave dex} {@dc 15}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrada em um ponto que o inquisidor pode ver em um raio de 36 metros. {@actSaveFail} 27 ({@damage 6d8}) Dano de força, e o alvo tem a condição {@condition Prone|XPHB} e é puxado até 6 metros em linha reta em direção ao centro de {@variantrule Sphere [Area of Effect]|XPHB|Sphere}. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -3974,7 +3974,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"senseTags": [
 				"U"
@@ -4001,14 +4001,14 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"strength"
+				"destreza",
+				"força"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4079,7 +4079,7 @@
 				{
 					"name": "Legendary Resistance (2/Day, or 3/Day in Domain)",
 					"entries": [
-						"Se Ivan falhar em um teste de resistência, ele pode optar por ter sucesso."
+						"Se Ivan falhar em um teste de resistência, ele poderá optar por ter sucesso."
 					]
 				}
 			],
@@ -4115,8 +4115,8 @@
 				{
 					"name": "Trapped Ground",
 					"entries": [
-						"Ivan espalha estrepes especiais para cobrir uma área de 6 metros quadrados a até 1,5 metro de si mesmo. Os estrepes se dissolvem no final do próximo turno de Ivan. Ivan não pode realizar esta ação novamente até o início do seu próximo turno.",
-						"Quando os estrepes aparecem, cada criatura na área fica sujeita ao seguinte efeito; uma criatura que entra nos estrepes pela primeira vez em um turno ou termina seu turno lá também está sujeita a este efeito. {@actSave dex} {@dc 15} (uma criatura faz este salvamento apenas uma vez por turno). {@actSaveFail} 9 ({@damage 2d8}) Dano perfurante e seu {@variantrule Speed|XPHB} é reduzido a 0 até o início do próximo turno."
+						"Ivan espalhou estrepes especiais para cobrir uma área de 6 metros quadrados a até 1,5 metro de si mesmo. Os estrepes se dissolvem no final do próximo turno de Ivan. Ivan não pode realizar esta ação novamente até o início do seu próximo turno.",
+						"Quando os estrepes aparecem, cada criatura na área fica sujeita ao seguinte efeito; Uma criatura que entra nos estrepes pela primeira vez em um turno ou termina seu turno lá também está sujeita a este efeito. {@actSave dex} {@dc 15} (uma criatura faz este salvamento apenas uma vez por turno). {@actSaveFail} 9 ({@damage 2d8}) Dano perfurante e seu {@variantrule Speed|XPHB} é limitado a 0 até o início do próximo turno."
 					]
 				}
 			],
@@ -4265,7 +4265,7 @@
 				{
 					"name": "Tree Stride",
 					"entries": [
-						"Se estiver a 1,5 metro de uma planta inanimada Grande ou maior, Ivana se teletransporta para um espaço desocupado a 1,5 metro de uma segunda planta inanimada Grande ou maior que esteja a 18 metros da planta anterior."
+						"Se você estiver a 1,5 metro de uma planta inanimada Grande ou maior, Ivana se teletransporta para um espaço desocupado a 1,5 metro de uma segunda planta inanimada Grande ou maior que fica a 18 metros da planta anterior."
 					]
 				}
 			],
@@ -4274,7 +4274,7 @@
 				{
 					"name": "Retaliate",
 					"entries": [
-						"Ivana faz um ataque Toxic Touch."
+						"Ivana faz um ataque ao Toxic Touch."
 					]
 				},
 				{
@@ -4311,14 +4311,14 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"charmed"
+				"encantado"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -4388,20 +4388,20 @@
 						"O jiangshi tem estes pontos fracos:",
 						{
 							"type": "list",
-							"style": "list-hang-notitle",
+							"style": "lista-pendurar-notitle",
 							"items": [
 								{
 									"type": "item",
 									"name": "Fear of Its Own Reflection",
 									"entries": [
-										"If the jiangshi sees its reflection, it immediately takes its {@variantrule Reaction|XPHB}, if available, to move as far from the reflection as possible."
+										"Se o jiangshi vir seu reflexo, ele imediatamente leva seu {@variantrule Reaction|XPHB}, se disponível, para se mover o mais longe possível do reflexo."
 									]
 								},
 								{
 									"type": "item",
 									"name": "Susceptible to Holy Symbols",
 									"entries": [
-										"While the jiangshi is wearing or touching a {@item Holy Symbol|XPHB}, it loses its {@variantrule Immunity|XPHB} to the {@condition Frightened|XPHB} condition and automatically fails saving throws to avoid or end the {@condition Frightened|XPHB} condition."
+										"Enquanto o jiangshi está usando ou tocando um {@item Holy Symbol|XPHB}, ele perde seu {@variantrule Immunity|XPHB} para a condição {@condition Frightened|XPHB} e falha automaticamente nos testes de resistência para evitar ou encerrar a condição {@condition Frightened|XPHB}."
 									]
 								}
 							]
@@ -4425,7 +4425,7 @@
 				{
 					"name": "Consume Energy",
 					"entries": [
-						"{@actSave con} {@dc 16}, uma criatura que o jiangshi pode ver em um raio de 9 metros. {@actSaveFail} 18 ({@damage 4d8}) Dano necrótico. {@actSaveSuccess} Metade do dano. {@actSaveSuccessOrFail} O jiangshi recupera {@variantrule Hit Points|XPHB} igual ao dano necrótico recebido, o {@variantrule Fly Speed|XPHB} do jiangshi aumenta para 6 metros até o final de seu próximo turno e ele pode realizar seu Passo Voraz {@variantrule Bonus Action|XPHB}. Um Humanóide reduzido a 0 {@variantrule Hit Points|XPHB} por este dano surge no final do turno do jiangshi como um Wight sob o controle do jiangshi. Se esta criatura matar um Humanóide com sua ação Dreno de Vida, a criatura se transformará em um Jiangshi independente 5 dias depois."
+						"{@actSave con} {@dc 16}, uma criatura que o jiangshi pode ver em um raio de 9 metros. {@actSaveFail} 18 ({@damage 4d8}) Dano necrótico. {@actSaveSuccess} Metade de dano. {@actSaveSuccessOrFail} O jiangshi recupera {@variantrule Hit Points|XPHB} igual ao dano necrótico recebido, o {@variantrule Fly Speed|XPHB} do jiangshi aumenta para 6 metros até o final de seu próximo turno e ele pode realizar seu Passo Voraz {@variantrule Bonus Action|XPHB}. Um Humanóide reduzido a 0 {@variantrule Hit Points|XPHB} por este dano surge no final do turno do jiangshi como um Wight sob o controle do jiangshi. Se esta criatura matar um Humanóide com sua ação Dreno de Vida, uma criatura se transformará em um Jiangshi independente 5 dias depois."
 					]
 				}
 			],
@@ -4439,7 +4439,7 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"O jiangshi muda para uma criatura de Besta Média ou Pequena, Humanóide ou Morto-Vivo, ou retorna à sua forma verdadeira. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que esteja usando ou carregando não é transformado."
+						"O jiangshi muda para uma criatura de Besta Média ou Pequena, Humanóide ou Morto-Vivo, ou retorna à sua forma verdadeira. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que você esteja usando ou carregando não é transformado."
 					]
 				}
 			],
@@ -4447,7 +4447,7 @@
 				"any"
 			],
 			"treasure": [
-				"relics"
+				"relíquias"
 			],
 			"senseTags": [
 				"SD"
@@ -4518,10 +4518,10 @@
 			],
 			"cr": "3",
 			"gear": [
-				"chain mail|xphb",
+				"cota de malha | xphb",
 				{
-					"item": "+1 longsword|xdmg",
-					"displayName": "Gossamer (+1 Longsword)"
+					"item": "+1 espada longa | xdmg",
+					"displayName": "Gossamer (+1 Espada Longa)"
 				}
 			],
 			"action": [
@@ -4548,7 +4548,7 @@
 				{
 					"name": "Deflect Blow",
 					"entries": [
-						"{@actTrigger} Uma jogada de ataque atinge Laurie ou uma criatura que ela possa ver a até 1,5 metro. {@actResponse} O dano do ataque desencadeador é reduzido em 5 ({@dice 1d10})."
+						"{@actTrigger} Um ataque de ataque envolve Laurie ou uma criatura que ela pode ver até 1,5 metro. {@actResponse} O dano do ataque desencadeador é reduzido em 5 ({@dice 1d10})."
 					]
 				}
 			],
@@ -4646,7 +4646,7 @@
 				{
 					"name": "Legendary Resistance (3/Day, or 4/Day in lair)",
 					"entries": [
-						"Se o emissário falhar em um teste de resistência, ele pode optar por ter sucesso."
+						"Se o emissário falhar em um teste de resistência, ele poderá optar por ter sucesso."
 					]
 				}
 			],
@@ -4674,7 +4674,7 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"O emissário muda para uma criatura Pequena ou Média, ou retorna à sua forma verdadeira. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que esteja usando ou carregando não é transformado."
+						"O emissário muda para uma criatura Pequena ou Média, ou retorna à sua forma verdadeira. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que você esteja usando ou carregando não é transformado."
 					]
 				}
 			],
@@ -4683,7 +4683,7 @@
 				{
 					"name": "Teleporting Lash",
 					"entries": [
-						"O emissário se teletransporta até 9 metros para um espaço desocupado que pode ver e realiza um ataque de Gorja Cortante."
+						"O emissário se teletransporta até 9 metros para um espaço desocupado que pode ver e realizar um ataque de Gorja Cortante."
 					]
 				},
 				{
@@ -4707,7 +4707,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Legendary Resistances"
@@ -4842,7 +4842,7 @@
 				{
 					"name": "Marshal Undead",
 					"entries": [
-						"Criaturas mortas-vivas à escolha de Lord Soth (excluindo ele mesmo) em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 60 pés originado dele têm {@variantrule Advantage|XPHB} em jogadas de ataque e testes de resistência. Lord Soth não pode usar esta característica se tiver a condição {@condition Incapacitated|XPHB}."
+						"Criaturas mortas-vivas à escolha de Lord Soth (excluindo ele mesmo) em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 60 pés originado dele têm {@variantrule Advantage|XPHB} em jogadas de ataque e testes de resistência. Lord Soth não pode usar este recurso se tiver a condição {@condition Incapacitated|XPHB}."
 					]
 				}
 			],
@@ -4862,13 +4862,13 @@
 				{
 					"name": "Cataclysmic Fire {@recharge 5}",
 					"entries": [
-						"{@actSave dex} {@dc 19}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que Lord Soth pode ver em um raio de 36 metros. {@actSaveFail} 24 ({@damage 7d6}) Dano de fogo mais 24 ({@damage 7d6}) Dano necrótico. {@actSaveSuccess} Metade do dano."
+						"{@actSave dex} {@dc 19}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrada em um ponto que Lord Soth pode ver em um raio de 36 metros. {@actSaveFail} 24 ({@damage 7d6}) Dano de fogo mais 24 ({@damage 7d6}) Dano necrótico. {@actSaveSuccess} Metade de dano."
 					]
 				},
 				{
 					"name": "Face of Death (1/Day)",
 					"entries": [
-						"{@actSave cha} {@dc 19}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 18 metros originária de Lord Soth. {@actSaveFail} 22 ({@damage 4d10}) Dano psíquico e a criatura tem a condição {@condition Frightened|XPHB}. {@actSaveSuccess} Apenas metade do dano. {@actSaveSuccessOrFail} Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, o alvo morre."
+						"{@actSave cha} {@dc 19}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 18 metros originária de Lord Soth. {@actSaveFail} 22 ({@damage 4d10}) Dano psíquico e uma criatura com a condição {@condition Frightened|XPHB}. {@actSaveSuccess} Apenas metade do dano. {@actSaveSuccessOrFail} Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, o alvo morre."
 					]
 				}
 			],
@@ -4876,7 +4876,7 @@
 				{
 					"name": "Punish",
 					"entries": [
-						"Lord Soth move até metade de seu {@variantrule Speed|XPHB} e faz um ataque de Marca Abandonada."
+						"Lord Soth move-se até metade de seu {@variantrule Speed|XPHB} e faz um ataque de Marca Abandonada."
 					]
 				},
 				{
@@ -4921,16 +4921,16 @@
 				"frightened"
 			],
 			"conditionInflictSpell": [
-				"incapacitated",
-				"paralyzed"
+				"incapacitado",
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"charisma",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"wisdom"
+				"carisma",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5006,13 +5006,13 @@
 			],
 			"cr": "13",
 			"gear": [
-				"longsword|xphb"
+				"espada longa | xphb"
 			],
 			"trait": [
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se o loup garou falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se o homem falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				}
 			],
@@ -5038,7 +5038,7 @@
 				{
 					"name": "Rend (Dire Wolf or Hybrid Form Only)",
 					"entries": [
-						"{@atkr m} {@hit 12}, alcance 5 pés. {@h}16 ({@damage 2d8 + 7}) Dano cortante. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Prone|XPHB}."
+						"{@atkr m} {@hit 12}, alcance 5 pés. {@h}16 ({@damage 2d8 + 7}) Dano cortante. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Prone|XPHB}."
 					]
 				}
 			],
@@ -5046,7 +5046,7 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"O loup garou muda de forma para um grande lobo atroz híbrido humanóide ou um grande lobo atroz, ou retorna à sua verdadeira forma humanóide. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que esteja usando ou carregando não é transformado."
+						"O loup garou muda de forma para um grande lobo atroz híbrido humanóide ou um grande lobo atroz, ou retorna à sua verdadeira forma humanóide. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que você esteja usando ou carregando não é transformado."
 					]
 				}
 			],
@@ -5054,7 +5054,7 @@
 				{
 					"name": "Mauling Charge",
 					"entries": [
-						"O loup garou se move até metade de seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks} e faz um ataque de Espada Longa ou Rend."
+						"O loup garou se moveu até metade de seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks} e fez um ataque de Espada Longa ou Rend."
 					]
 				},
 				{
@@ -5070,7 +5070,7 @@
 				"urban"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Legendary Resistances"
@@ -5235,7 +5235,7 @@
 				{
 					"name": "Apocalyptic Visions {@recharge 5}",
 					"entries": [
-						"{@actSave wis} {@dc 17}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que Madame Eva pode ver a até 36 metros. {@actSaveFail} 24 ({@damage 7d6}) Dano necrótico mais 24 ({@damage 7d6}) Dano psíquico, e o alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno de Madame Eva. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave wis} {@dc 17}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrada em um ponto que Madame Eva pode ver até 36 metros. {@actSaveFail} 24 ({@damage 7d6}) Dano necrótico mais 24 ({@damage 7d6}) Dano psíquico, e o alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno de Madame Eva. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -5275,13 +5275,13 @@
 				"frightened"
 			],
 			"conditionInflictSpell": [
-				"paralyzed"
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5373,7 +5373,7 @@
 					"name": "Silver Canister",
 					"entries": [
 						"O mi-go tem uma caixinha prateada. Enquanto segura ou carrega o recipiente, o mi-go pode usar sua ação Extrair Cérebro.",
-						"A vasilha tem AC 15, HP 40 e {@variantrule Resistance|XPHB} para todos os danos. A caixa quebra se for reduzida a 0 {@variantrule Hit Points|XPHB}. Se o recipiente estiver quebrado, todos os cérebros dentro dele serão destruídos. O mi-go pode criar um novo canister após 7 dias."
+						"A vasilha tem AC 15, HP 40 e {@variantrule Resistance|XPHB} para todos os danos. A caixa quebra se por menor a 0 {@variantrule Hit Points|XPHB}. Se o recipiente estiver quebrado, todos os cérebros dentro dele serão destruídos. O mi-go pode criar um novo canister após 7 dias."
 					]
 				}
 			],
@@ -5381,25 +5381,25 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O mi-go faz dois ataques de pinça. Ele pode substituir um ataque pelo uso de Dazing Ray, se disponível."
+						"O meu faz dois ataques de pinça. Ele pode substituir um ataque pelo uso de Dazing Ray, se disponível."
 					]
 				},
 				{
 					"name": "Pincer",
 					"entries": [
-						"{@atkr m} {@hit 9}, alcance 5 pés. {@h}23 ({@damage 4d8 + 5}) Dano cortante mais 16 ({@damage 3d10}) Dano ácido. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 15}) de uma das duas pinças."
+						"{@atkr m} {@hit 9}, alcance 5 pés. {@h}23 ({@damage 4d8 + 5}) Dano cortante mais 16 ({@damage 3d10}) Dano ácido. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 15}) de uma das duas pinças."
 					]
 				},
 				{
 					"name": "Dazing Ray {@recharge 4}",
 					"entries": [
-						"{@actSave dex} {@dc 17}, uma criatura que o mi-go pode ver em um raio de 18 metros. {@actSaveFail} 22 ({@damage 4d10}) Dano de raio mais 10 ({@damage 3d6}) Dano de Força, e o alvo tem a condição {@condition Stunned|XPHB} até o final do próximo turno do mi-go."
+						"{@actSave dex} {@dc 17}, uma criatura que o meu pode ver em um raio de 18 metros. {@actSaveFail} 22 ({@damage 4d10}) Dano de raio mais 10 ({@damage 3d6}) Dano de Força, e o alvo tem a condição {@condition Stunned|XPHB} até o final do próximo turno do mi-go."
 					]
 				},
 				{
 					"name": "Extract Brain (Requires Silver Canister)",
 					"entries": [
-						"{@actSave con} {@dc 17}, uma criatura que é {@condition Grappled|XPHB} no mi-go ou que tem a condição {@condition Stunned|XPHB}. {@actSaveFail} 77 ({@damage 14d10}) Dano perfurante. {@actSaveSuccess} Metade do dano. {@actSaveSuccessOrFail} Se esse dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, o mi-go o mata, remove seu cérebro e o coloca em sua vasilha prateada."
+						"{@actSave con} {@dc 17}, uma criatura que é {@condition Grappled|XPHB} no mi-go ou que tem a condição {@condition Stunned|XPHB}. {@actSaveFail} 77 ({@damage 14d10}) Dano perfurante. {@actSaveSuccess} Metade de dano. {@actSaveSuccessOrFail} Se esse dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, o mi-go o mata, remove seu cérebro e o coloca em sua vasilha prateada."
 					]
 				}
 			],
@@ -5410,7 +5410,7 @@
 				"underdark"
 			],
 			"treasure": [
-				"implements"
+				"implementos"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -5443,15 +5443,15 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated"
+				"encantado",
+				"incapacitado"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5566,7 +5566,7 @@
 				{
 					"name": "Instill Dread {@recharge 4}",
 					"entries": [
-						"{@actSave wis} {@dc 13}, cada criatura no espaço do horror da névoa. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno do horror da névoa."
+						"{@actSave wis} {@dc 13}, cada criatura no espaço do horror da neblina. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno do horror da névoa."
 					]
 				}
 			],
@@ -5594,13 +5594,13 @@
 				"invisible"
 			],
 			"conditionInflictSpell": [
-				"prone"
+				"propenso"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5645,8 +5645,8 @@
 			],
 			"cr": "3",
 			"gear": [
-				"orb|xphb",
-				"leather armor|xphb"
+				"orbe | xphb",
+				"armadura de couro | xphb"
 			],
 			"spellcasting": [
 				{
@@ -5697,7 +5697,7 @@
 				{
 					"name": "Mist Walker",
 					"entries": [
-						"O andarilho pode viajar com segurança através das Brumas para alcançar um domínio específico que conhece pelo nome. O andarilho ainda não consegue contornar as fronteiras do domínio fechadas pela vontade de um Lorde das Trevas."
+						"O andarilho pode viajar com segurança através das Brumas para alcançar um domínio específico que você conhece pelo nome. O andarilho ainda não consegue contornar as fronteiras do domínio fechado pela vontade de um Lorde das Trevas."
 					]
 				}
 			],
@@ -5719,8 +5719,8 @@
 				"any"
 			],
 			"treasure": [
-				"arcana",
-				"individual"
+				"arcano",
+				"indivíduo"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -5744,13 +5744,13 @@
 				"RA"
 			],
 			"conditionInflictSpell": [
-				"paralyzed"
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"charisma"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5823,7 +5823,7 @@
 				{
 					"name": "Greater Lightning Absorption",
 					"entries": [
-						"Sempre que o monstro for sujeito a dano de Raio, ele recupera um número de {@variantrule Hit Points|XPHB} igual ao dano de Raio causado, e seu {@variantrule Speed|XPHB} aumenta em 12 metros até o final do próximo turno."
+						"Sempre que o monstruoso sujeito a dano de Raio, ele recupera um número de {@variantrule Hit Points|XPHB} igual ao dano de Raio causado, e seu {@variantrule Speed|XPHB} aumenta em 12 metros até o final do próximo turno."
 					]
 				},
 				{
@@ -5843,13 +5843,13 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O monstro faz dois ataques Slam e usa Crush ou Throw."
+						"O monstruoso faz dois ataques Slam e usa Crush ou Throw."
 					]
 				},
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atkr m} {@hit 10}, alcance 5 pés. {@h}13 ({@damage 2d6 + 6}) Dano de concussão mais 7 ({@damage 2d6}) Dano de raio. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Grappled|XPHB} (escape {@dc 18}) de uma das duas mãos."
+						"{@atkr m} {@hit 10}, alcance 5 pés. {@h}13 ({@damage 2d6 + 6}) Dano de concussão mais 7 ({@damage 2d6}) Dano de raio. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Grappled|XPHB} (escape {@dc 18}) de uma das duas mãos."
 					]
 				},
 				{
@@ -5861,7 +5861,7 @@
 				{
 					"name": "Throw",
 					"entries": [
-						"O monstro lança uma criatura {@condition Grappled|XPHB} por ele para um espaço que ele possa ver a até 9 metros de si mesmo e que não esteja no ar. {@actSave dex} {@dc 18}, a criatura lançada e cada criatura no espaço de destino. {@actSaveFail} 13 ({@damage 2d6 + 6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccess} Apenas metade do dano."
+						"O monstro lança uma criatura {@condition Grappled|XPHB} por ele para um espaço que ele possa ver a até 9 metros de si mesmo e que não esteja no ar. {@actSave dex} {@dc 18}, uma criatura lançada e cada criatura no espaço de destino. {@actSaveFail} 13 ({@damage 2d6 + 6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -5869,7 +5869,7 @@
 				{
 					"name": "Violent Leap",
 					"entries": [
-						"O monstro gasta 3 metros de movimento para saltar para um espaço de até 12 metros que contenha uma ou mais criaturas Médias ou menores. {@actSave dex} {@dc 18}, cada criatura no espaço de destino do monstro. {@actSaveFail} 14 ({@damage 4d6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccessOrFail} O alvo se move para o espaço desocupado mais próximo."
+						"O monstruoso gasta 3 metros de movimento para saltar para um espaço de até 12 metros que contém uma ou mais criaturas Médias ou menores. {@actSave dex} {@dc 18}, cada criatura no espaço de destino do monstro. {@actSaveFail} 14 ({@damage 4d6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccessOrFail} O alvo se move para o espaço desocupado mais próximo."
 					]
 				}
 			],
@@ -5877,7 +5877,7 @@
 				"urban"
 			],
 			"treasure": [
-				"individual"
+				"indivíduo"
 			],
 			"traitTags": [
 				"Damage Absorption",
@@ -6061,7 +6061,7 @@
 					"name": "Mother's Visage (1/Day)",
 					"entries": [
 						"Lorinda se transforma em Mãe, uma divindade reverenciada pelo povo de Tepest, por 8 horas. Suas estatísticas de jogo são as mesmas em cada formulário. Qualquer equipamento que ela esteja usando ou carregando não é transformado.",
-						"Enquanto está na forma de Mãe, Lorinda pode usar Spellcasting para lançar {@spell Charm Person|XPHB} como {@variantrule Bonus Action|XPHB}.",
+						"Enquanto está em forma de Mãe, Lorinda pode usar Spellcasting para lançar {@spell Charm Person|XPHB} como {@variantrule Bonus Action|XPHB}.",
 						"Lorinda volta à sua forma verdadeira se cair para 50 {@variantrule Hit Points|XPHB} ou menos.",
 						"Quando Lorinda retorna à sua forma verdadeira, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originária de Lorinda fica sujeita ao seguinte efeito. {@actSave wis} {@dc 14} (o alvo obtém sucesso automaticamente se for um Constructo ou um Morto-Vivo). {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} por 1 minuto. Enquanto {@condition Frightened|XPHB}, o alvo tem {@variantrule Disadvantage|XPHB} em testes de resistência."
 					]
@@ -6071,7 +6071,7 @@
 				{
 					"name": "Brand",
 					"entries": [
-						"Lorinda se teletransporta para um espaço desocupado que ela pode ver em um raio de 9 metros e pode realizar um ataque da Marca Materna."
+						"Lorinda se teletransporta para um espaço desocupado que pode ver em um raio de 9 metros e pode realizar um ataque da Marca Materna."
 					]
 				}
 			],
@@ -6113,16 +6113,16 @@
 				"frightened"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"invisible",
-				"poisoned"
+				"encantado",
+				"invisível",
+				"envenenado"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -6199,19 +6199,19 @@
 				{
 					"name": "Legendary Resistance (2/Day)",
 					"entries": [
-						"Se o necrichor falhar em um teste de resistência, ele pode optar por ter sucesso."
+						"Se o necrotério falhar em um teste de resistência, ele pode optar por ter sucesso."
 					]
 				},
 				{
 					"name": "Reborn by Blood",
 					"entries": [
-						"Se destruído, o necrichor revive com todos os seus {@variantrule Hit Points|XPHB} em {@dice 1d10} dias no espaço desocupado mais próximo próximo a uma criatura de sua escolha que ele já possuiu com sua ação de Marionetista de Sangue. Esta característica não funciona se os restos mortais do necrichor destruído estiverem em um recipiente afetado pelo feitiço {@spell Hallow|XPHB} ou se todos os alvos anteriores do Blood Puppeteering do necrichor estiverem mortos."
+						"Se destruído, o necrichor revive com todos os seus {@variantrule Hit Points|XPHB} em {@dice 1d10} dias no espaço desocupado mais próximo próximo a uma criatura de sua escolha que ele já possuiu com sua ação de Marionetista de Sangue. Esta característica não funciona se os restos mortais do necrichor forem destruídos quando estiverem em um recipiente afetado pelo feitiço {@spell Hallow|XPHB} ou se todos os alvos anteriores do Blood Puppeteering do necrichor estiverem mortos."
 					]
 				},
 				{
 					"name": "Spider Climb",
 					"entries": [
-						"O necrichor pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
+						"O necrotério pode escalar superfícies difíceis, inclusive ao longo de tetos, sem precisar fazer um teste de habilidade."
 					]
 				}
 			],
@@ -6225,14 +6225,14 @@
 				{
 					"name": "Necrotic Burst",
 					"entries": [
-						"{@atkr m,r} {@hit 6}, alcance 5 pés ou alcance 120 pés. {@h}12 ({@damage 2d8 + 3}) Dano de força mais 11 ({@damage 2d10}) Dano necrótico, e o alvo tem a condição {@condition Poisoned|XPHB} até o início do próximo turno de necrichor. Enquanto {@condition Poisoned|XPHB}, o alvo não pode recuperar {@variantrule Hit Points|XPHB}."
+						"{@atkr m,r} {@hit 6}, alcance 5 pés ou alcance 120 pés. {@h}12 ({@damage 2d8 + 3}) Dano de força mais 11 ({@damage 2d10}) Dano necrótico, e o alvo tem a condição {@condition Poisoned|XPHB} até o início do próximo giro de necrichor. Enquanto {@condition Poisoned|XPHB}, o alvo não pode recuperar {@variantrule Hit Points|XPHB}."
 					]
 				},
 				{
 					"name": "Blood Puppeteering {@recharge}",
 					"entries": [
-						"{@actSave con} {@dc 15}, uma criatura {@status Bloodied|XPHB} a até 1,5 metro. Construtos e Mortos-vivos são automaticamente bem-sucedidos neste salvamento. {@actSaveFail} O alvo está possuído pelo necrichor; o necrichor desaparece e o alvo fica com a condição {@condition Incapacitated|XPHB} e perde o controle de seu corpo. O necrichor agora controla o corpo do alvo, mas o alvo mantém a consciência. O necrichor não pode ser alvo de nenhum ataque, feitiço ou outro efeito, exceto aqueles que visam especificamente Mortos-Vivos. As estatísticas de jogo do necrichor são as mesmas, exceto que ele usa as pontuações de {@variantrule Speed|XPHB} e Força, Destreza e Constituição do alvo possuído.",
-						"A posse dura até que o alvo caia para 0 {@variantrule Hit Points|XPHB} ou o necrichor o deixe como {@variantrule Bonus Action|XPHB}. Quando a possessão termina, o necrichor aparece em um espaço desocupado a até 1,5 metro do alvo, e o alvo fica imune à Arte de Marionetes de Sangue deste necrichor por 24 horas. {@actSaveSuccess} O alvo fica imune ao Blood Puppeteering deste necrichor por 24 horas."
+						"{@actSave con} {@dc 15}, uma criatura {@status Bloodied|XPHB} a até 1,5 metro. Construtos e Mortos-vivos são automaticamente bem sucedidos neste salvamento. {@actSaveFail} O alvo está possuído pelo necrichor; o necrichor desaparece e o alvo fica com a condição {@condition Incapacitated|XPHB} e perde o controle de seu corpo. O necrichor agora controla o corpo do alvo, mas o alvo mantém a consciência. O necrotério não pode ser alvo de nenhum ataque, feitiço ou outro efeito, exceto aqueles que visam especificamente Mortos-Vivos. As estatísticas do jogo do necrichor são as mesmas, exceto que ele usa as advertências de {@variantrule Speed|XPHB} e Força, Destreza e Constituição do alvo possuído.",
+						"A posse dura até que o alvo caia para 0 {@variantrule Hit Points|XPHB} ou o necrichor o deixe como {@variantrule Bonus Action|XPHB}. Quando a possessão termina, o necrichor aparece em um espaço desocupado até 1,5 metro do alvo, e o alvo fica imune à Arte de Marionetes de Sangue deste necrichor por 24 horas. {@actSaveSuccess} O alvo fica imune ao Blood Puppeteering deste necrichor por 24 horas."
 					]
 				}
 			],
@@ -6376,8 +6376,8 @@
 				"underdark"
 			],
 			"treasure": [
-				"implements",
-				"individual"
+				"implementos",
+				"indivíduo"
 			],
 			"traitTags": [
 				"Flyby"
@@ -6476,7 +6476,7 @@
 				{
 					"name": "Petrifying Bite",
 					"entries": [
-						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}3 ({@damage 1d4 + 1}) Dano perfurante mais 3 ({@damage 1d6}) Dano necrótico. Se o alvo for uma criatura, ele estará sujeito ao seguinte efeito. {@actSave con} {@dc 11}. {@actSaveFail 1} O alvo tem a condição {@condition Restrained|XPHB} e repete o salvamento no final de seu próximo turno se ainda for {@condition Restrained|XPHB}, encerrando o efeito sobre si mesmo com sucesso. {@actSaveFail 2} O alvo tem a condição {@condition Petrified|XPHB} em vez da condição {@condition Restrained|XPHB} por 10 minutos, após os quais o efeito termina no alvo."
+						"{@atkr m} {@hit 3}, alcance 5 pés. {@h}3 ({@damage 1d4 + 1}) Dano perfurante mais 3 ({@damage 1d6}) Dano necrótico. Se o alvo for uma criatura, ele estará sujeito ao seguinte efeito. {@actSave con} {@dc 11}. {@actSaveFail 1} O alvo tem a condição {@condition Restrained|XPHB} e repete o salvamento no final de seu próximo turno se ainda para {@condition Restrained|XPHB}, encerrando o efeito sobre si mesmo com sucesso. {@actSaveFail 2} O alvo tem a condição {@condition Petrified|XPHB} em vez da condição {@condition Restrained|XPHB} por 10 minutos, após os quais o efeito termina no alvo."
 					]
 				}
 			],
@@ -6556,19 +6556,19 @@
 				{
 					"name": "Tattoo of Osybus",
 					"entries": [
-						"Se o dano reduzir o sacerdote a 0 {@variantrule Hit Points|XPHB}, ele receberá um benefício aleatório. Role {@dice 1d6} para determinar o benefício que o sacerdote recebe. O sacerdote revive no início de seu próximo turno com metade de seu {@variantrule Hit Points|XPHB}, e seu tipo de criatura agora é Morto-vivo."
+						"Se o dano reduzir o sacerdote a 0 {@variantrule Hit Points|XPHB}, ele receberá um benefício aleatório. Papel {@dice 1d6} para determinar o benefício que o sacerdote recebe. O sacerdote revive no início de seu próximo turno com metade de seu {@variantrule Hit Points|XPHB}, e seu tipo de criatura agora é Morto-vivo."
 					]
 				},
 				{
 					"name": "1: Dread Boon",
 					"entries": [
-						"Uma aura de pavor preenche um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originado do sacerdote. {@actSave wis} {@dc 15}, cada criatura não-morto-vivo que inicia seu turno no {@variantrule Emanation [Area of Effect]|XPHB|Emanation}. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno"
+						"Uma aura de pavor preenche um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originada do sacerdote. {@actSave wis} {@dc 15}, cada criatura não-morto-vivo que inicia seu turno em {@variantrule Emanation [Area of Effect]|XPHB|Emanation}. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno"
 					]
 				},
 				{
 					"name": "2: Ectoplasmic Boon",
 					"entries": [
-						"O ectoplasma pegajoso retarda criaturas em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originado do sacerdote. {@actSave str} {@dc 15}, cada criatura que inicia seu turno no {@variantrule Emanation [Area of Effect]|XPHB|Emanation}. {@actSaveFail} O {@variantrule Speed|XPHB} do alvo é reduzido em 3 metros até o início do próximo turno."
+						"O ectoplasma pegajoso retarda criaturas em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 4,5 metros originado do sacerdote. {@actSave str} {@dc 15}, cada criatura que inicia seu turno no {@variantrule Emanation [Area of Effect]|XPHB|Emanation}. {@actSaveFail} O {@variantrule Speed|XPHB} do alvo é limitado em 3 metros até o início do próximo turno."
 					]
 				},
 				{
@@ -6592,8 +6592,8 @@
 				{
 					"name": "6: Deathly Boon",
 					"entries": [
-						"Quando o sacerdote revive com este benefício, todos os cadáveres de Humanóides Pequenos ou Médios em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originado do sacerdote surgem como Esqueletos sob o controle do sacerdote. Além disso, no final de cada turno do sacerdote, cada criatura não-morto-vivo em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,50 metro originado do sacerdote sofre 5 ({@damage 1d10}) de dano necrótico.",
-						"O sacerdote morre e esta característica não funciona se o sacerdote receber um benefício que já possui ou se a tatuagem de Osybus do sacerdote for destruída. A tatuagem é destruída apenas se o sacerdote sofrer 15 de dano ou mais em um único turno enquanto o sacerdote tiver 0 {@variantrule Hit Points|XPHB}."
+						"Quando o sacerdote revive com este benefício, todos os cadáveres de Humanóides Pequenos ou Médios em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originados do sacerdote surgem como Esqueletos sob o controle do sacerdote. Além disso, no final de cada turno do sacerdote, cada criatura não-morto-vivo em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,50 metro originado do sacerdote sofre 5 ({@damage 1d10}) de dano necrótico.",
+						"O sacerdote morre e esta característica não funciona se o sacerdote receber um benefício que já possui ou se a tatuagem de Osybus do sacerdote para destruído. A tatuagem é destruída apenas se o sacerdote sofrer 15 de dano ou mais em um único turno enquanto o sacerdote tiver 0 {@variantrule Hit Points|XPHB}."
 					]
 				}
 			],
@@ -6607,7 +6607,7 @@
 				{
 					"name": "Soul Blade",
 					"entries": [
-						"{@atkr m} {@hit 7}, alcance 5 pés. {@h}9 ({@damage 2d4 + 4}) Dano perfurante. Se o alvo for uma criatura, ele terá a condição {@condition Paralyzed|XPHB} até o início do próximo turno do sacerdote. Se este dano reduzir uma criatura Média ou menor a 0 {@variantrule Hit Points|XPHB}, a criatura morre e sua alma fica presa em uma tatuagem de alma no corpo do sacerdote. A alma é libertada se o padre morrer."
+						"{@atkr m} {@hit 7}, alcance 5 pés. {@h}9 ({@damage 2d4 + 4}) Dano perfurante. Se o alvo for uma criatura, ele terá a condição {@condition Paralyzed|XPHB} até o início do próximo turno do sacerdote. Se este dano reduzir uma criatura Média ou menor a 0 {@variantrule Hit Points|XPHB}, a criatura morre e sua alma fica presa em uma tatuagem de alma no corpo do sacerdote. A alma é libertada se o pai morrer."
 					]
 				},
 				{
@@ -6629,7 +6629,7 @@
 				"any"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"senseTags": [
 				"SD"
@@ -6797,7 +6797,7 @@
 				{
 					"name": "Marshal Undead",
 					"entries": [
-						"Criaturas mortas-vivas à escolha de Ramya (excluindo ela mesma) em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 60 pés originado dela têm {@variantrule Advantage|XPHB} em jogadas de ataque e testes de resistência. Ela não pode usar esta característica se tiver a condição {@condition Incapacitated|XPHB}."
+						"Criaturas mortas-vivas à escolha de Ramya (excluindo ela mesma) em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 60 pés originados dela têm {@variantrule Advantage|XPHB} em jogadas de ataque e testes de resistência. Ela não pode usar este recurso se tiver a condição {@condition Incapacitated|XPHB}."
 					]
 				}
 			],
@@ -6817,7 +6817,7 @@
 				{
 					"name": "Vengeful Fire {@recharge 5}",
 					"entries": [
-						"{@actSave dex} {@dc 17}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que Ramya pode ver em um raio de 36 metros. {@actSaveFail} 28 ({@damage 8d6}) Dano de fogo mais 28 ({@damage 8d6}) Dano necrótico. {@actSaveSuccess} Metade do dano."
+						"{@actSave dex} {@dc 17}, cada criatura em um raio de 6 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centralizada em um ponto onde Ramya pode ver em um raio de 36 metros. {@actSaveFail} 28 ({@damage 8d6}) Dano de fogo mais 28 ({@damage 8d6}) Dano necrótico. {@actSaveSuccess} Metade de dano."
 					]
 				}
 			],
@@ -6825,7 +6825,7 @@
 				{
 					"name": "Parry",
 					"entries": [
-						"{@actTrigger} Ramya é atingido por uma jogada de ataque corpo a corpo enquanto segura uma arma. {@actResponse} Ramya adiciona 5 à sua CA contra esse ataque, possivelmente fazendo com que ele erre."
+						"{@actTrigger} Ramya é atingido por um jogo de ataque corpo a corpo enquanto segura uma arma. {@actResponse} Ramya adicionou 5 à sua CA contra esse ataque, possivelmente fazendo com que ele errasse."
 					]
 				}
 			],
@@ -6872,14 +6872,14 @@
 				"MA"
 			],
 			"conditionInflictSpell": [
-				"prone"
+				"propenso"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -6888,7 +6888,7 @@
 		{
 			"name": "Reanimated Companion",
 			"source": "RHW",
-			"summonedByClass": "Artificer|EFA",
+			"summonedByClass": "Artífice|EFA",
 			"size": [
 				"M"
 			],
@@ -6932,12 +6932,12 @@
 			"languages": [
 				"understands the languages you know"
 			],
-			"pbNote": "equals your Proficiency Bonus",
+			"pbNote": "é igual ao seu Bônus de Proficiência",
 			"trait": [
 				{
 					"name": "Death Burst",
 					"entries": [
-						"O companheiro explode quando morre. {@actSave dex} DC é igual a {@dcYourSpellSave}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originada do companheiro. {@actSaveFail} {@damage 2d4} Dano necrótico. {@actSaveSuccess} Metade do dano."
+						"O companheiro explode quando morre. {@actSave dex} DC é igual a {@dcYourSpellSave}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originada do companheiro. {@actSaveFail} {@damage 2d4} Dano necrótico. {@actSaveSuccess} Metade de dano."
 					]
 				},
 				{
@@ -7029,13 +7029,13 @@
 				{
 					"name": "Regeneration",
 					"entries": [
-						"O rolo compressor recupera 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos. Se o rolo compressor sofrer dano radiante ou dano de {@variantrule Critical Hit|XPHB}, essa característica não funcionará no próximo turno do rolo compressor. O rolo compressor morre apenas se começar seu turno com 0 {@variantrule Hit Points|XPHB} e não se regenerar."
+						"O rolo compressor recupera 10 {@variantrule Hit Points|XPHB} no início de cada um de seus giros. Se o rolo compressor sofrer dano radiante ou dano de {@variantrule Critical Hit|XPHB}, esse recurso não funcionará na próxima volta do rolo compressor. O rolo compressor morre apenas se começar seu turno com 0 {@variantrule Hit Points|XPHB} e não se regenerar."
 					]
 				},
 				{
 					"name": "Siege Monster",
 					"entries": [
-						"O rolo compressor causa o dobro de dano a objetos e estruturas."
+						"O rolo compressor causa o dobro de danos a objetos e estruturas."
 					]
 				}
 			],
@@ -7049,13 +7049,13 @@
 				{
 					"name": "Executioner's Blade",
 					"entries": [
-						"{@atkr m} {@hit 10}, alcance 10 pés. {@h}19 ({@damage 3d8 + 6}) Dano cortante, e o {@variantrule Speed|XPHB} do alvo é reduzido em 3 metros até o final do próximo turno do rolo compressor."
+						"{@atkr m} {@hit 10}, alcance 10 pés. {@h}19 ({@damage 3d8 + 6}) Dano cortante, e o {@variantrule Speed|XPHB} do alvo é limitado em 3 metros até o final do próximo turno do rolo compressor."
 					]
 				},
 				{
 					"name": "Crushing Stone",
 					"entries": [
-						"{@atkr r} {@hit 10}, alcance de 60 pés. {@h}13 ({@damage 2d6 + 6}) Dano de concussão e o alvo tem a condição {@condition Incapacitated|XPHB} até o início do próximo turno do rolo compressor."
+						"{@atkr r} {@hit 10}, alcance de 60 pés. {@h}13 ({@damage 2d6 + 6}) Dano de concussão e o alvo tem a condição {@condition Incapacitated|XPHB} até o início da próxima volta do rolo compressor."
 					]
 				}
 			],
@@ -7063,7 +7063,7 @@
 				{
 					"name": "Implacable Advance",
 					"entries": [
-						"O rolo compressor se move até metade de seu {@variantrule Speed|XPHB}, ignorando {@variantrule Difficult Terrain|XPHB}. Cada criatura em seu caminho está sujeita ao seguinte efeito. {@actSave str} {@dc 18}. {@actSaveFail} 7 ({@damage 2d6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccessOrFail} O rolo compressor não pode realizar esta ação novamente até o início de seu próximo turno."
+						"O rolo compressor se move até metade de seu {@variantrule Speed|XPHB}, ignorando {@variantrule Difficult Terrain|XPHB}. Cada criatura em seu caminho está sujeita aos seguintes efeitos. {@actSave str} {@dc 18}. {@actSaveFail} 7 ({@damage 2d6}) Dano de concussão e o alvo tem a condição {@condition Prone|XPHB}. {@actSaveSuccessOrFail} O rolo compressor não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				},
 				{
@@ -7077,7 +7077,7 @@
 				"any"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"traitTags": [
 				"Legendary Resistances",
@@ -7174,7 +7174,7 @@
 				{
 					"name": "Nightmarish Restoration",
 					"entries": [
-						"Se o pesadelo morrer, seu corpo desaparece na névoa e ele ganha um novo corpo em {@dice 1d10} dias, revivendo com todos os seus {@variantrule Hit Points|XPHB} no espaço desocupado mais próximo próximo a uma criatura {@condition Unconscious|XPHB} amaldiçoada por sua Lança do Assombrado. Esta característica não funciona se não houver alvos restantes amaldiçoados desta forma."
+						"Se o pesadelo morrer, seu corpo desaparece na névoa e ele ganha um novo corpo em {@dice 1d10} dias, revivendo com todos os seus {@variantrule Hit Points|XPHB} no espaço desocupado mais próximo próximo a uma criatura {@condition Unconscious|XPHB} amaldiçoada por sua Lança do Assombrado. Este recurso não funciona se não houver alvos restantes amaldiçoados desta forma."
 					]
 				}
 			],
@@ -7202,13 +7202,13 @@
 				{
 					"name": "Dreamwalk",
 					"entries": [
-						"O pesadelo se teletransporta para um espaço desocupado a até 1,5 metro de uma criatura que ele possa ver e então realiza um ataque de Lança do Assombrado."
+						"O pesadelo se teletransporta para um espaço desocupado até 1,5 metro de uma criatura que ele pode ver e então realiza um ataque de Lança do Assombrado."
 					]
 				},
 				{
 					"name": "Narcotize",
 					"entries": [
-						"O pesadelo tem como alvo uma criatura que ele pode ver em um raio de 36 metros que está amaldiçoada pela Lança do Assombrado. O alvo sofre 7 ({@damage 2d6}) de dano psíquico e tem a condição {@condition Unconscious|XPHB} por 1 hora, até sofrer dano ou até que uma criatura a até 1,5 metro dele realize uma ação para acordá-lo."
+						"O pesadelo tem como alvo uma criatura que pode ver em um raio de 36 metros que está amaldiçoada pela Lança do Assombrado. O alvo sofre 7 ({@damage 2d6}) de dano psíquico e tem a condição {@condition Unconscious|XPHB} por 1 hora, até sofrer dano ou até que uma criatura a até 1,5 metro dele realize uma ação para acordá-lo."
 					]
 				}
 			],
@@ -7216,7 +7216,7 @@
 				"any"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"traitTags": [
 				"Legendary Resistances"
@@ -7303,7 +7303,7 @@
 				{
 					"name": "Legendary Resistance (1/Day)",
 					"entries": [
-						"Se o slasher falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se o slasher falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				}
 			],
@@ -7339,7 +7339,7 @@
 				"any"
 			],
 			"treasure": [
-				"armaments"
+				"armamentos"
 			],
 			"traitTags": [
 				"Legendary Resistances"
@@ -7423,8 +7423,8 @@
 			],
 			"cr": "5",
 			"gear": [
-				"hand crossbow|xphb",
-				"leather armor|xphb"
+				"besta de mão | xphb",
+				"armadura de couro | xphb"
 			],
 			"trait": [
 				{
@@ -7619,7 +7619,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"Saidra pode se mover através de outras criaturas e objetos como se fossem {@variantrule Difficult Terrain|XPHB}. Ela sofre 5 ({@damage 1d10}) de dano de Força se terminar seu turno dentro de um objeto."
+						"Saidra pode se mover através de outras criaturas e objetos como se fosse {@variantrule Difficult Terrain|XPHB}. Ela sofre 5 ({@damage 1d10}) de dano de Força se terminar seu giro dentro de um objeto."
 					]
 				},
 				{
@@ -7685,7 +7685,7 @@
 				{
 					"name": "Shadow Veil",
 					"entries": [
-						"Saidra concede a si mesma a condição {@condition Invisible|XPHB} até o início de seu próximo turno e pode voar até metade de seu {@variantrule Fly Speed|XPHB}. A condição termina logo após Saidra causar dano. Saidra não pode realizar esta ação novamente até o início de seu próximo turno."
+						"Saidra concede a mesma condição {@condition Invisible|XPHB} até o início de seu próximo turno e pode voar até metade de seu {@variantrule Fly Speed|XPHB}. A condição termina logo após Saidra causar dano. Saidra não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				}
 			],
@@ -7725,7 +7725,7 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -7833,7 +7833,7 @@
 				{
 					"name": "Cold Sprint",
 					"entries": [
-						"{@actTrigger} O shoggoth está sujeito a danos de frio. {@actResponse} O shoggoth se move até seu {@variantrule Speed|XPHB} e pode fazer um ataque de pseudópode com {@variantrule Advantage|XPHB}."
+						"{@actTrigger} O shoggoth está sujeito a indenização por frio. {@actResponse} O shoggoth se move até seu {@variantrule Speed|XPHB} e pode fazer um ataque de pseudópode com {@variantrule Advantage|XPHB}."
 					]
 				}
 			],
@@ -7926,8 +7926,8 @@
 			],
 			"cr": "4",
 			"gear": [
-				"longsword|xphb",
-				"shield|xphb"
+				"espada longa | xphb",
+				"escudo | xphb"
 			],
 			"trait": [
 				{
@@ -7941,7 +7941,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O esqueleto faz dois ataques de Espada Longa Vampírica. Ele pode substituir um ataque pelo uso de Shield Bash."
+						"O esqueleto faz dois ataques de Espada Longa Vampírica. Ele pode substituir um ataque pelo uso do Shield Bash."
 					]
 				},
 				{
@@ -7953,7 +7953,7 @@
 				{
 					"name": "Shield Bash",
 					"entries": [
-						"{@actSave str} {@dc 13}, uma criatura a até 1,5 metro que o esqueleto pode ver. {@actSaveFail} 10 ({@damage 2d6 + 3}) Dano de concussão. Se o alvo for uma criatura Média ou menor, ele terá a condição {@condition Prone|XPHB}."
+						"{@actSave str} {@dc 13}, uma criatura a até 1,5 metro que o esqueleto pode ver. {@actSaveFail} 10 ({@damage 2d6 + 3}) Dano de concussão. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Prone|XPHB}."
 					]
 				}
 			],
@@ -8156,34 +8156,34 @@
 						"Strahd tem estes pontos fracos:",
 						{
 							"type": "list",
-							"style": "list-hang-subtrait",
+							"style": "lista-pendurar-subtrato",
 							"items": [
 								{
 									"type": "itemSub",
 									"name": "Forbiddance",
 									"entries": [
-										"Strahd can't enter a residence without an invitation from an occupant."
+										"Strahd não pode entrar em uma residência sem o convite de um ocupante."
 									]
 								},
 								{
 									"type": "itemSub",
 									"name": "Running Water",
 									"entries": [
-										"Strahd takes 20 Acid damage if he ends his turn in running water."
+										"Strahd sofre 20 de dano de Ácido se terminar seu turno em água corrente."
 									]
 								},
 								{
 									"type": "itemSub",
 									"name": "Stake to the Heart",
 									"entries": [
-										"If a weapon that deals Piercing damage is driven into Strahd's heart while Strahd has the {@condition Incapacitated|XPHB} condition in his resting place, Strahd has the {@condition Paralyzed|XPHB} condition until the weapon is removed."
+										"Se uma arma que causa dano perfurante for cravada no coração de Strahd enquanto Strahd estiver com a condição {@condition Incapacitated|XPHB} em seu local de descanso, Strahd terá a condição {@condition Paralyzed|XPHB} até que a arma seja removida."
 									]
 								},
 								{
 									"type": "itemSub",
 									"name": "Sunlight",
 									"entries": [
-										"Strahd takes 20 Radiant damage if he starts his turn in sunlight. While in sunlight, he has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks."
+										"Strahd sofre 20 de dano radiante se começar seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele tem {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
 									]
 								}
 							]
@@ -8207,7 +8207,7 @@
 				{
 					"name": "Bite (Bat or Vampire Form Only)",
 					"entries": [
-						"{@actSave con} {@dc 17}, uma criatura a até 1,5 metro que esteja disposta ou que tenha a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 7 ({@damage 1d6 + 4}) Dano perfurante mais 10 ({@damage 3d6}) Dano necrótico. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e Strahd recupera {@variantrule Hit Points|XPHB} igual a essa quantidade. Um Humanóide reduzido a 0 {@variantrule Hit Points|XPHB} por este dano surge na noite seguinte como uma Prole de Vampiro sob o controle de Strahd, a menos que o Humanóide seja restaurado à vida ou seu corpo seja destruído."
+						"{@actSave con} {@dc 17}, uma criatura a até 1,5 metro que está disposta ou que tenha a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 7 ({@damage 1d6 + 4}) Dano perfurante mais 10 ({@damage 3d6}) Dano necrótico. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e Strahd recupera {@variantrule Hit Points|XPHB} igual a essa quantidade. Um Humanóide reduzido a 0 {@variantrule Hit Points|XPHB} por este dano surge na noite seguinte como um Prole de Vampiro sob o controle de Strahd, a menos que o Humanóide seja restaurado à vida ou seu corpo seja destruído."
 					]
 				}
 			],
@@ -8215,9 +8215,9 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"Se Strahd não estiver sob a luz do sol ou em água corrente, ele muda de forma para um morcego minúsculo ({@variantrule Speed|XPHB} 5 pés, {@variantrule Fly Speed|XPHB} 30 pés), um lobo médio ({@variantrule Speed|XPHB} 40 pés) ou uma nuvem média de névoa ({@variantrule Speed|XPHB} 5 pés, {@variantrule Fly Speed|XPHB} 20 pés [pairar]), ou ele retorna à sua forma de vampiro. Qualquer coisa que ele esteja vestindo se transforma com ele.",
+						"Se Strahd não estiver sob a luz do sol ou em água corrente, ele muda de forma para um morcego minúsculo ({@variantrule Speed|XPHB} 5 pés, {@variantrule Fly Speed|XPHB} 30 pés), um lobo médio ({@variantrule Speed|XPHB} 40 pés) ou uma nuvem média de neve ({@variantrule Speed|XPHB} 5 pés, {@variantrule Fly Speed|XPHB} 20 pés [pairar]), ou ele retorna à sua forma de vampiro. Qualquer coisa que ele usa se transforma com ele.",
 						"Enquanto estiver na forma de morcego ou lobo, Strahd não consegue falar. Suas estatísticas de jogo, exceto seu tamanho e {@variantrule Speed|XPHB}, permanecem inalteradas.",
-						"Enquanto estiver na forma de névoa, Strahd não pode realizar nenhuma ação, falar ou manipular objetos. Ele não tem peso e pode entrar no espaço do inimigo e parar aí. Se o ar pode passar através de um espaço, Strahd pode fazê-lo, mas não pode passar através de líquidos. Strahd tem {@variantrule Resistance|XPHB} de todos os danos, exceto o dano que ele sofre da luz solar."
+						"Enquanto estiver na forma de neblina, Strahd não pode realizar nenhuma ação, falar ou manipular objetos. Ele não tem peso e pode entrar no espaço do inimigo e parar aí. Se o ar pode passar através de um espaço, Strahd pode fazê-lo, mas não pode passar através de líquidos. Strahd tem {@variantrule Resistance|XPHB} de todos os danos, exceto o dano que ele sofre da luz solar."
 					]
 				}
 			],
@@ -8273,17 +8273,17 @@
 				"paralyzed"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"invisible",
-				"prone"
+				"encantado",
+				"invisível",
+				"propenso"
 			],
 			"savingThrowForced": [
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"strength",
-				"wisdom"
+				"destreza",
+				"força",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -8353,7 +8353,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O strigoi faz dois ataques de Garra e um ataque de Probóscide."
+						"O strigoi faz dois ataques de Garra e um ataque de Probóscídio."
 					]
 				},
 				{
@@ -8365,7 +8365,7 @@
 				{
 					"name": "Proboscis",
 					"entries": [
-						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano perfurante mais 7 ({@damage 2d6}) Dano necrótico. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e o strigoi recupera {@variantrule Hit Points|XPHB} igual a essa quantidade. Uma criatura reduzida a 0 {@variantrule Hit Points|XPHB} por este ataque morre, não deixando nada para trás, exceto sua pele e equipamento."
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}5 ({@damage 1d4 + 3}) Dano perfurante mais 7 ({@damage 2d6}) Dano necrótico. O de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e o strigoi recupera {@variantrule Hit Points|XPHB} igual a essa quantidade máxima. Uma criatura reduzida a 0 {@variantrule Hit Points|XPHB} por este ataque morre, não deixando nada para trás, exceto sua pele e equipamento."
 					]
 				}
 			],
@@ -8373,7 +8373,7 @@
 				{
 					"name": "Protective Swarm {@recharge}",
 					"entries": [
-						"O strigoi invoca um enxame de mosquitos sedentos de sangue em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originado de si mesmo, que dura 1 minuto ou até que o {@status Concentration|XPHB} do strigoi termine. Sempre que o enxame entra no espaço de uma criatura ou uma criatura entra no enxame ou termina seu turno lá, aquela criatura está sujeita ao seguinte efeito (uma criatura faz este teste apenas uma vez por turno, e strigoi e stirges não são afetados). {@actSave con} {@dc 13}. {@actSaveFail} 3 ({@damage 1d6}) Dano necrótico e o alvo tem a condição {@condition Poisoned|XPHB} até o final do próximo turno."
+						"O strigoi invoca um enxame de mosquitos sedentos de sangue em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originado de si mesmo, que dura 1 minuto ou até que o {@status Concentration|XPHB} do strigoi termine. Sempre que o exame entra no espaço de uma criatura ou uma criatura entra no exame ou termina seu turno lá, essa criatura está sujeita ao seguinte efeito (uma criatura faz este teste apenas uma vez por turno, e strigoi e stirges não são afetados). {@actSave con} {@dc 13}. {@actSaveFail} 3 ({@damage 1d6}) Dano necrótico e o alvo tem a condição {@condition Poisoned|XPHB} até o final do próximo turno."
 					]
 				}
 			],
@@ -8479,7 +8479,7 @@
 				{
 					"name": "Swarm (Swarm Form Only)",
 					"entries": [
-						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
+						"O exame pode ocupar o espaço de outra criatura e vice-versa, e o exame pode se mover através de qualquer abertura grande ou suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
 					]
 				}
 			],
@@ -8487,7 +8487,7 @@
 				{
 					"name": "Swarming Bites (Swarm Form Only)",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}%12 ({@damage 3d6 + 2}) Dano perfurante ou 9 ({@damage 3d4 + 2}) Dano perfurante se o enxame for {@status Bloodied|XPHB}, mais 7 ({@damage 2d6}) Dano de força. Se o alvo estiver sintonizado com qualquer item mágico, seu {@variantrule Attunement|XPHB} com um item (escolha do Mestre) termina."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}%12 ({@damage 3d6 + 2}) Dano perfurante ou 9 ({@damage 3d4 + 2}) Dano perfurante se o enxame para {@status Bloodied|XPHB}, mais 7 ({@damage 2d6}) Dano de força. Se o alvo estiver sintonizado com qualquer item mágico, seu {@variantrule Attunement|XPHB} com um item (escolha do Mestre) termina."
 					]
 				}
 			],
@@ -8495,7 +8495,7 @@
 				"urban"
 			],
 			"treasure": [
-				"arcana"
+				"arcano"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -8574,7 +8574,7 @@
 				{
 					"name": "Swarm",
 					"entries": [
-						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande o suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
+						"O exame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande ou suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
 					]
 				}
 			],
@@ -8582,7 +8582,7 @@
 				{
 					"name": "Infestation",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}12 ({@damage 4d4 + 2}) Dano de veneno ou 7 ({@damage 2d4 + 2}) Dano de veneno se o enxame for {@status Bloodied|XPHB} e o alvo tiver o {@condition Poisoned|XPHB} condição. Se o alvo permanecer {@condition Poisoned|XPHB} desta forma após 1 hora, ele estará sujeito ao seguinte efeito. {@actSave con} {@dc 11}. {@actSaveFail} Roll {@dice 1d6}: em 1-2, o alvo tem a condição {@condition Blinded|XPHB}; em 3-4, o máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em 5 ({@dice 1d10}); em 5-6, o alvo ganha 1 nível {@condition Exhaustion|XPHB}. O efeito dura até que a condição {@condition Poisoned|XPHB} termine. {@actSaveSuccess} A condição {@condition Poisoned|XPHB} termina."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}12 ({@damage 4d4 + 2}) Dano de veneno ou 7 ({@damage 2d4 + 2}) Dano de veneno se o enxame for {@status Bloodied|XPHB} e o alvo tiver a condição {@condition Poisoned|XPHB}. Se o alvo permanecer {@condition Poisoned|XPHB} desta forma após 1 hora, ele estará sujeito ao seguinte efeito. {@actSave con} {@dc 11}. {@actSaveFail} Roll {@dice 1d6}: em 1-2, o alvo tem a condição {@condition Blinded|XPHB}; em 3-4, o alvo máximo de {@variantrule Hit Points|XPHB|Hit Point} diminui em 5 ({@dice 1d10}); em 5-6, o alvo ganha 1 nível {@condition Exhaustion|XPHB}. O efeito dura até que a condição {@condition Poisoned|XPHB} termine. {@actSaveSuccess} A condição {@condition Poisoned|XPHB} termina."
 					]
 				}
 			],
@@ -8670,13 +8670,13 @@
 				{
 					"name": "Skeletonize",
 					"entries": [
-						"Se o enxame começar seu turno no mesmo espaço que um cadáver Grande ou menor, o cadáver é destruído, deixando para trás apenas o que estava vestindo ou carregando."
+						"Se o exame começar seu turno no mesmo espaço que um cadáver Grande ou menor, o cadáver é destruído, deixando para trás apenas o que estava carregando ou carregando."
 					]
 				},
 				{
 					"name": "Swarm",
 					"entries": [
-						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e o enxame pode se mover através de qualquer abertura grande o suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
+						"O exame pode ocupar o espaço de outra criatura e vice-versa, e o exame pode se mover através de qualquer abertura grande ou suficiente para uma criatura Minúscula. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
 					]
 				}
 			],
@@ -8684,7 +8684,7 @@
 				{
 					"name": "Ravenous Bites",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}20 ({@damage 4d8 + 2}) Dano perfurante, ou 11 ({@damage 2d8 + 2}) Dano perfurante se o enxame for {@status Bloodied|XPHB}, e o alvo tiver o {@condition Poisoned|XPHB} condiciona por 1 minuto enquanto os insetos se enterram dentro dele. A condição termina mais cedo se um feitiço ou efeito restaurar {@variantrule Hit Points|XPHB} no alvo. Enquanto {@condition Poisoned|XPHB}, o alvo sofre 4 ({@damage 1d8}) de dano perfurante no início de cada um de seus turnos. Uma criatura reduzida a 0 {@variantrule Hit Points|XPHB} por este dano morre."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}20 ({@damage 4d8 + 2}) Dano perfurante, ou 11 ({@damage 2d8 + 2}) Dano perfurante se o enxame for {@status Bloodied|XPHB}, e o alvo tiver o {@condition Poisoned|XPHB} condicional por 1 minuto enquanto os insetos se enterram dentro dele. A condição termina mais cedo se um feitiço ou efeito restaurar {@variantrule Hit Points|XPHB} no alvo. Enquanto {@condition Poisoned|XPHB}, o alvo sofre 4 ({@damage 1d8}) de dano perfurante no início de cada um de seus turnos. Uma criatura reduzida a 0 {@variantrule Hit Points|XPHB} por este dano morre."
 					]
 				}
 			],
@@ -8767,7 +8767,7 @@
 				{
 					"name": "Swarm",
 					"entries": [
-						"O enxame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande o suficiente para acomodar um minúsculo pedaço de carne. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
+						"O exame pode ocupar o espaço de outra criatura e vice-versa, e pode se mover através de qualquer abertura grande o suficiente para acomodar um pedaço de carne. O enxame não pode recuperar {@variantrule Hit Points|XPHB} ou ganhar {@variantrule Temporary Hit Points|XPHB}."
 					]
 				}
 			],
@@ -8775,7 +8775,7 @@
 				{
 					"name": "Rotten Flesh",
 					"entries": [
-						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}9 ({@damage 2d6 + 2}) Dano necrótico ou 5 ({@damage 1d6 + 2}) Dano necrótico se o enxame for {@status Bloodied|XPHB}, e o alvo tiver o {@condition Poisoned|XPHB} até o final do próximo turno."
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}9 ({@damage 2d6 + 2}) Dano necrosado ou 5 ({@damage 1d6 + 2}) Dano necrosado se o enxame para {@status Bloodied|XPHB}, e o alvo tiver o {@condition Poisoned|XPHB} até o final do próximo turno."
 					]
 				}
 			],
@@ -8882,7 +8882,7 @@
 				{
 					"name": "Phantasmic Assault",
 					"entries": [
-						"{@atkr m,r} {@hit 8}, alcance 5 pés ou alcance de 60 pés. {@h}14 ({@damage 4d6}) Dano de frio, necrótico, venenoso ou psíquico (escolha do horror)."
+						"{@atkr m,r} {@hit 8}, alcance de 5 pés ou alcance de 60 pés. {@h}14 ({@damage 4d6}) Dano de frio, necrótico, venenoso ou psíquico (escolha do horror)."
 					]
 				}
 			],
@@ -8890,7 +8890,7 @@
 				{
 					"name": "Warp Mind",
 					"entries": [
-						"{@actTrigger} Uma criatura que o horror pode ver a até 36 metros de si mesma realiza a ação {@action Study|XPHB} ou faz um teste de resistência de Constituição para manter {@status Concentration|XPHB}. {@actResponse d}{@actSave wis} {@dc 15}, a criatura desencadeadora. {@actSaveFail} 7 ({@damage 2d6}) Dano psíquico e o alvo tem a condição {@condition Stunned|XPHB} até o final do próximo turno."
+						"{@actTrigger} Uma criatura que o horror pode ver a até 36 metros de si mesma realizando a ação {@action Study|XPHB} ou faz um teste de resistência de Constituição para manter {@status Concentration|XPHB}. {@actResponse d}{@actSave wis} {@dc 15}, uma criatura desencadeadora. {@actSaveFail} 7 ({@damage 2d6}) Dano psíquico e o alvo tem a condição {@condition Stunned|XPHB} até o final do próximo turno."
 					]
 				}
 			],
@@ -8994,7 +8994,7 @@
 				{
 					"name": "Sunlight Hypersensitivity",
 					"entries": [
-						"O devorador de mentes sofre 20 de dano Radiante se começar seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
+						"O devorador de mentes sofre 20 de dano Radiante se começa seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
 					]
 				}
 			],
@@ -9020,13 +9020,13 @@
 				{
 					"name": "Drink Sapience",
 					"entries": [
-						"{@actSave wis} {@dc 15}, uma criatura que o devorador de mentes possui {@condition Grappled|XPHB}. {@actSaveFail} 21 ({@damage 6d6}) Dano psíquico e a criatura ganha 1 {@condition Exhaustion|XPHB} de nível. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano psíquico recebido, e o devorador de mentes recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
+						"{@actSave wis} {@dc 15}, uma criatura que o devorador de mentes possui {@condition Grappled|XPHB}. {@actSaveFail} 21 ({@damage 6d6}) Dano psíquico e uma criatura ganha 1 {@condition Exhaustion|XPHB} de nível. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano psíquico recebido, e o devorador de mentes recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
 					]
 				},
 				{
 					"name": "Mind Burst {@recharge 5}",
 					"entries": [
-						"{@actSave int} {@dc 15}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originada do devorador de mentes. {@actSaveFail} O alvo tem a condição {@condition Incapacitated|XPHB} e repete o salvamento no final de cada um de seus turnos, encerrando o efeito em si mesmo com sucesso. Após 1 minuto, ele é bem-sucedido automaticamente."
+						"{@actSave int} {@dc 15}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originada do devorador de mentes. {@actSaveFail} O alvo tem a condição {@condition Incapacitated|XPHB} e repete o salvamento no final de cada um de seus turnos, encerrando o efeito em si mesmo com sucesso. Após 1 minuto, ele será bem-sucedido automaticamente."
 					]
 				}
 			],
@@ -9035,7 +9035,7 @@
 				"urban"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Spider Climb",
@@ -9146,7 +9146,7 @@
 				{
 					"name": "Regeneration",
 					"entries": [
-						"O nosferatu recupera 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}. Se o nosferatu sofrer dano Radiante, esta característica não funcionará no próximo turno do nosferatu."
+						"O nosferatu recupera 10 {@variantrule Hit Points|XPHB} no início de cada um de seus turnos se tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}. Se o nosferatu sofrer dano Radiante, esse recurso não funcionará no próximo turno do nosferatu."
 					]
 				},
 				{
@@ -9158,7 +9158,7 @@
 				{
 					"name": "Sunlight Hypersensitivity",
 					"entries": [
-						"O nosferatu sofre 20 de dano Radiante se começar seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
+						"O nosferatu sofre 20 de dano Radiante se começa seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
 					]
 				}
 			],
@@ -9184,7 +9184,7 @@
 				{
 					"name": "Blood Spew {@recharge 5}",
 					"entries": [
-						"{@actSave con} {@dc 16}, cada criatura em um {@variantrule Cone [Area of Effect]|XPHB|Cone} de 15 pés. {@actSaveFail} 27 ({@damage 6d8}) Dano necrótico e a criatura não pode recuperar {@variantrule Hit Points|XPHB} por 1 minuto. {@actSaveSuccess} Apenas metade do dano."
+						"{@actSave con} {@dc 16}, cada criatura em um {@variantrule Cone [Area of Effect]|XPHB|Cone} de 15 pés. {@actSaveFail} 27 ({@damage 6d8}) Dano necrótico e uma criatura não podem recuperar {@variantrule Hit Points|XPHB} por 1 minuto. {@actSaveSuccess} Apenas metade do dano."
 					]
 				}
 			],
@@ -9192,7 +9192,7 @@
 				{
 					"name": "Bloodthirsty Slash",
 					"entries": [
-						"{@actTrigger} Uma criatura {@status Bloodied|XPHB} que o nosferatu pode ver em um raio de 12 metros sofre dano. {@actResponse} O nosferatu se move até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks} e faz um ataque de Garra contra a criatura desencadeadora."
+						"{@actTrigger} Uma criatura {@status Bloodied|XPHB} que o nosferatu pode ver em um raio de 12 metros sofre dano. {@actResponse} O nosferatu se move até seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks} e faz um ataque de Garra contra uma criatura desencadeada."
 					]
 				}
 			],
@@ -9201,7 +9201,7 @@
 				"urban"
 			],
 			"treasure": [
-				"any"
+				"qualquer"
 			],
 			"traitTags": [
 				"Regeneration",
@@ -9291,7 +9291,7 @@
 				"xpLair": 3900
 			},
 			"gear": [
-				"studded leather armor|xphb"
+				"armadura de couro cravejada | xphb"
 			],
 			"spellcasting": [
 				{
@@ -9316,7 +9316,7 @@
 				{
 					"name": "Bolster Inventions",
 					"entries": [
-						"No final de cada turno de Viktra, cada um de seus aliados Construct em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro originado de Viktra ganha 5 {@variantrule Temporary Hit Points|XPHB}. Esta característica não funciona se Viktra tiver a condição {@condition Incapacitated|XPHB}."
+						"No final de cada turno de Viktra, cada um de seus aliados Construa em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro originado de Viktra ganha 5 {@variantrule Temporary Hit Points|XPHB}. Este recurso não funciona se Viktra tiver a condição {@condition Incapacitated|XPHB}."
 					]
 				},
 				{
@@ -9342,36 +9342,36 @@
 				{
 					"name": "Lightning Rod",
 					"entries": [
-						"{@atkr m,r} {@hit 6}, alcance 5 pés ou alcance de 90 pés. {@h}12 ({@damage 2d8 + 3}) Dano de raio e o alvo não pode realizar Reações até o início de seu próximo turno."
+						"{@atkr m,r} {@hit 6}, alcance de 5 pés ou alcance de 90 pés. {@h}12 ({@damage 2d8 + 3}) Dano de raio e o alvo não pode realizar Reações até o início de seu próximo turno."
 					]
 				},
 				{
 					"name": "Syringe",
 					"entries": [
-						"{@actSave con} {@dc 16}, uma criatura que Viktra pode ver em um raio de 1,5 metro. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB} por 1 minuto. Enquanto {@condition Poisoned|XPHB} estiver dessa forma, o alvo sofre um dos seguintes efeitos (escolha de Viktra). O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. O alvo obtém sucesso automaticamente após 1 minuto:",
+						"{@actSave con} {@dc 16}, uma criatura que Viktra pode ver em um raio de 1,5 metro. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB} por 1 minuto. Enquanto {@condition Poisoned|XPHB} estiver dessa forma, o alvo sofre um dos seguintes efeitos (escolha de Viktra). O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. O alvo obtém sucesso após automaticamente 1 minuto:",
 						{
 							"type": "list",
-							"style": "list-hang-notitle",
+							"style": "lista-pendurar-notitle",
 							"items": [
 								{
 									"type": "item",
 									"name": "Corrosive Serum",
 									"entries": [
-										"The target takes 10 ({@damage 4d4}) Acid damage at the start of each of its turns, and its {@variantrule Speed|XPHB} decreases by 10 feet."
+										"O alvo sofre 10 ({@damage 4d4}) de dano ácido no início de cada um de seus turnos e seu {@variantrule Speed|XPHB} diminui em 3 metros."
 									]
 								},
 								{
 									"type": "item",
 									"name": "Deadly Serum",
 									"entries": [
-										"The target takes 11 ({@damage 2d10}) Necrotic damage at the start of each of its turns, and it can't regain {@variantrule Hit Points|XPHB}."
+										"O alvo sofre 11 ({@damage 2d10}) de dano necrótico no início de cada um de seus turnos e não pode recuperar {@variantrule Hit Points|XPHB}."
 									]
 								},
 								{
 									"type": "item",
 									"name": "Mind-Altering Serum",
 									"entries": [
-										"The target takes 10 ({@damage 3d6}) Psychic damage at the start of each of its turns, and it has {@variantrule Disadvantage|XPHB} on saving throws to maintain {@status Concentration|XPHB}."
+										"O alvo sofre 10 ({@damage 3d6}) de dano psíquico no início de cada um de seus turnos e tem {@variantrule Disadvantage|XPHB} em testes de resistência para manter {@status Concentration|XPHB}."
 									]
 								}
 							]
@@ -9383,7 +9383,7 @@
 				{
 					"name": "Redirect Attack",
 					"entries": [
-						"{@actTrigger} Uma criatura que Viktra pode ver faz uma jogada de ataque contra ela. {@actResponse} Viktra escolhe um aliado Pequeno ou Médio a até 1,5 metro de si mesma. Viktra e aquele aliado trocam de lugar, e o aliado se torna o alvo do ataque."
+						"{@actTrigger} Uma criatura que Viktra pode fazer um jogo de ataque contra ela. {@actResponse} Viktra escolhe um aliado Pequeno ou Médio a até 1,5 metro de si mesma. Viktra e aquele aliado trocam de lugar, e o aliado se torna o alvo do ataque."
 					]
 				}
 			],
@@ -9397,7 +9397,7 @@
 				{
 					"name": "Static Explosion",
 					"entries": [
-						"{@actSave dex} {@dc 16}, cada criatura em um raio de 3 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centrado em um ponto que Viktra pode ver em um raio de 27 metros. {@actSaveFail} 5 ({@damage 2d4}) Dano de raio. {@actSaveSuccess} Metade do dano."
+						"{@actSave dex} {@dc 16}, cada criatura em um raio de 3 metros {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centralizada em um ponto que Viktra pode ver em um raio de 27 metros. {@actSaveFail} 5 ({@damage 2d4}) Dano de raio. {@actSaveSuccess} Metade de dano."
 					]
 				}
 			],
@@ -9509,12 +9509,12 @@
 				"xpLair": 10000
 			},
 			"gear": [
-				"pike|xphb",
+				"pique | xphb",
 				{
-					"item": "spear|xphb",
+					"item": "lança | xphb",
 					"quantity": 6
 				},
-				"studded leather armor|xphb"
+				"armadura de couro cravejada | xphb"
 			],
 			"trait": [
 				{
@@ -9526,7 +9526,7 @@
 				{
 					"name": "Legendary Resistance (3/Day, or 4/Day in Domain)",
 					"entries": [
-						"Se Vladeska falhar em um teste de resistência, ela pode escolher ter sucesso."
+						"Se Vladeska falhar em um teste de resistência, ela poderá escolher o sucesso."
 					]
 				}
 			],
@@ -9534,13 +9534,13 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Vladeska faz dois ataques de Pike. Ela pode substituir um ataque por um ataque de lança empaladora."
+						"Vladeska faz dois ataques de Pike. Ela pode substituir um ataque por um ataque de lançamento empalador."
 					]
 				},
 				{
 					"name": "Impaling Spear",
 					"entries": [
-						"{@atkr m,r} {@hit 8}, alcance 5 pés ou alcance 20/60 pés. {@h}13 ({@damage 2d8 + 4}) Dano perfurante e o alvo é empalado na lança de Vladeska. Enquanto empalada, a criatura tem a condição {@condition Restrained|XPHB} e sofre 3 ({@damage 1d6}) de dano perfurante no início de cada um de seus turnos. O alvo ou uma criatura a até 1,5 metro dele pode realizar uma ação para removê-lo da lança."
+						"{@atkr m,r} {@hit 8}, alcance 5 pés ou alcance 20/60 pés. {@h}13 ({@damage 2d8 + 4}) Dano perfurante e o alvo é empalado no lançamento de Vladeska. Enquanto empalada, a criatura tem a condição {@condition Restrained|XPHB} e sofre 3 ({@damage 1d6}) de dano perfurante no início de cada um de seus turnos. O alvo ou uma criatura até 1,5 metro dele pode realizar uma ação para removê-lo do lançamento."
 					]
 				},
 				{
@@ -9560,7 +9560,7 @@
 				{
 					"name": "Redirect Attack",
 					"entries": [
-						"{@actTrigger} Uma criatura que Vladeska pode ver faz uma jogada de ataque contra ela. {@actResponse} Vladeska escolhe um aliado Pequeno ou Médio a até 1,5 metro de si mesma. Ela e aquele aliado trocam de lugar e o aliado se torna o alvo do ataque."
+						"{@actTrigger} Uma criatura que Vladeska pode fazer um jogo de ataque contra ela. {@actResponse} Vladeska escolhe um aliado Pequeno ou Médio a até 1,5 metro de si mesma. Ela e aquele aliado trocam de lugar e o aliado se torna o alvo do ataque."
 					]
 				}
 			],
@@ -9574,7 +9574,7 @@
 				{
 					"name": "Dreadful Impaling",
 					"entries": [
-						"Vladeska faz um ataque de lança empaladora. Se o ataque acertar e o alvo for uma criatura, cada aliado do alvo em um raio de 9 metros estará sujeito ao seguinte efeito. {@actSave wis} {@dc 15}. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o final do próximo turno. {@actSaveSuccessOrFail} Vladeska não pode realizar esta ação novamente até o início de seu próximo turno."
+						"Vladeska faz um ataque de lançamento empaladora. Se o ataque acertar e o alvo para uma criatura, cada aliado do alvo em um raio de 9 metros estará sujeito ao seguinte efeito. {@actSave wis} {@dc 15}. {@actSaveFail} O alvo tem a condição {@condition Frightened|XPHB} até o final do próximo turno. {@actSaveSuccessOrFail} Vladeska não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				},
 				{
@@ -9690,7 +9690,7 @@
 				{
 					"name": "Meltable",
 					"entries": [
-						"Se a estátua de cera sofrer dano de Fogo, até o final do próximo turno, seu {@variantrule Speed|XPHB} diminuirá em 6 metros e terá {@variantrule Disadvantage|XPHB} em testes de resistência."
+						"Se uma estátua de cera sofrer dano de Fogo, até o final do próximo turno, seu {@variantrule Speed|XPHB} diminuirá em 6 metros e terá {@variantrule Disadvantage|XPHB} em testes de resistência."
 					]
 				}
 			],
@@ -9710,7 +9710,7 @@
 				{
 					"name": "Wax Lob",
 					"entries": [
-						"{@atkr r} {@hit 5}, alcance 20/60 pés. {@h}8 ({@damage 2d4 + 3}) Dano de concussão e {@variantrule Speed|XPHB} do alvo diminui em 3 metros até o final do próximo turno."
+						"{@atkr r} {@hit 5}, alcance 20/60 pés. {@h}8 ({@damage 2d4 + 3}) Dano de concussão e {@variantrule Speed|XPHB} do alvo diminuiu em 3 metros até o final do próximo turn."
 					]
 				}
 			],
@@ -9718,7 +9718,7 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"A forma de cera muda para um humanóide de seu tamanho ou retorna à sua forma verdadeira. Suas estatísticas de jogo são as mesmas em cada formulário. Qualquer equipamento que esteja usando ou carregando não é transformado."
+						"A forma de cera muda para um humanóide de seu tamanho ou retorna à sua forma verdadeira. Suas estatísticas de jogo são as mesmas em cada formulário. Qualquer equipamento que você esteja usando ou carregando não é transformado."
 					]
 				}
 			],
@@ -9726,7 +9726,7 @@
 				"urban"
 			],
 			"treasure": [
-				"implements"
+				"implementos"
 			],
 			"senseTags": [
 				"B"
@@ -9798,7 +9798,7 @@
 			],
 			"cr": "2",
 			"gear": [
-				"shortbow|xphb"
+				"arco curto | xphb"
 			],
 			"trait": [
 				{
@@ -9838,7 +9838,7 @@
 				{
 					"name": "Shape-Shift",
 					"entries": [
-						"O homem-corvo muda para um híbrido corvo-humanóide Médio ou um corvo Pequeno, ou retorna à sua verdadeira forma humanóide. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que esteja usando ou carregando não é transformado."
+						"O homem-corvo muda para um híbrido corvo-humanóide Médio ou um corvo Pequeno, ou retorna à sua verdadeira forma humanóide. Suas estatísticas de jogo, além do tamanho, são as mesmas em todas as modalidades. Qualquer equipamento que você esteja usando ou carregando não é transformado."
 					]
 				}
 			],
@@ -9847,7 +9847,7 @@
 				"urban"
 			],
 			"treasure": [
-				"individual"
+				"indivíduo"
 			],
 			"traitTags": [
 				"Mimicry"
@@ -9956,7 +9956,7 @@
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"Wilfred pode se mover através de outras criaturas e objetos como se fossem {@variantrule Difficult Terrain|XPHB}. Ele sofre 5 ({@damage 1d10}) de dano de Força se terminar seu turno dentro de um objeto."
+						"Wilfred pode se mover através de outras criaturas e objetos como se fossem {@variantrule Difficult Terrain|XPHB}. Ele sofre 5 ({@damage 1d10}) de dano de Força se terminar seu giro dentro de um objeto."
 					]
 				},
 				{
@@ -9968,7 +9968,7 @@
 				{
 					"name": "Possessive Aura",
 					"entries": [
-						"Servos fantasmagóricos e ávidos cercam Wilfred em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro vindo dele. Uma criatura que termine seu turno nesta área estará sujeita ao seguinte efeito. {@actSave cha} {@dc 14}. {@actSaveFail} O destino tem a condição {@condition Charmed|XPHB}. Enquanto a criatura estiver {@condition Charmed|XPHB} dessa forma, seu {@variantrule Speed|XPHB} é reduzido a 0. O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Após 1 minuto, ele é bem-sucedido automaticamente."
+						"Servos fantasmagóricos e ávidos cercam Wilfred em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro vindo dele. Uma criatura que termine seu turno nesta área estará sujeita ao seguinte efeito. {@actSave cha} {@dc 14}. {@actSaveFail} O destino tem a condição {@condition Charmed|XPHB}. Enquanto a criatura tiver {@condition Charmed|XPHB} dessa forma, seu {@variantrule Speed|XPHB} é reduzido a 0. O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Após 1 minuto, ele será bem-sucedido automaticamente."
 					]
 				}
 			],
@@ -9996,7 +9996,7 @@
 				{
 					"name": "Redirect Attack",
 					"entries": [
-						"{@actTrigger} Uma criatura que Wilfred pode ver faz uma jogada de ataque contra ele. {@actResponse} Wilfred escolhe uma criatura Pequena ou Média a até 1,5 metro de si mesmo que tenha a condição {@condition Charmed|XPHB}. Wilfred e aquela criatura trocam de lugar e a criatura se torna o alvo do ataque."
+						"{@actTrigger} Uma criatura que Wilfred pode fazer um jogo de ataque contra ele. {@actResponse} Wilfred escolhe uma criatura Pequena ou Média a até 1,5 metro de si mesmo que tenha a condição {@condition Charmed|XPHB}. Wilfred e aquela criatura trocam de lugar e uma criatura se torna o alvo do ataque."
 					]
 				}
 			],
@@ -10004,7 +10004,7 @@
 				{
 					"name": "Bone-Chilling Step",
 					"entries": [
-						"Wilfred se teletransporta até 18 metros para um espaço desocupado que ele possa ver, e cada criatura a até 3 metros do espaço que ele deixou sofre 4 ({@damage 1d8}) de dano necrótico. Wilfred não pode realizar esta ação novamente até o início de seu próximo turno."
+						"Wilfred se teletransporta até 18 metros para um espaço desocupado que ele possa ver, e cada criatura a até 3 metros do espaço que ele deixa sofre 4 ({@damage 1d8}) de dano necrótico. Wilfred não pode realizar esta ação novamente até o início de seu próximo turno."
 					]
 				},
 				{
@@ -10143,7 +10143,7 @@
 				{
 					"name": "Shielded Mind",
 					"entries": [
-						"Os pensamentos do yithian não podem ser lidos de forma alguma, e outras criaturas podem se comunicar com ele telepaticamente apenas se ele permitir."
+						"Os pensamentos do yithian não podem ser lidos de alguma forma, e outras criaturas podem se comunicar com ele telepaticamente, apenas se ele permitir."
 					]
 				}
 			],
@@ -10157,13 +10157,13 @@
 				{
 					"name": "Pincer",
 					"entries": [
-						"{@atkr m} {@hit 9}, alcance 10 pés. {@h}18 ({@damage 4d6 + 4}) Dano perfurante e a criatura tem a condição {@condition Grappled|XPHB} (escapar {@dc 14})."
+						"{@atkr m} {@hit 9}, alcance 10 pés. {@h}18 ({@damage 4d6 + 4}) Dano perfurante e uma criatura com a condição {@condition Grappled|XPHB} (escapar {@dc 14})."
 					]
 				},
 				{
 					"name": "Sup",
 					"entries": [
-						"{@actSave int} {@dc 18}, uma criatura em um raio de 3 metros que tem a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 15 ({@damage 3d6 + 5}) Dano psíquico. O máximo de {@variantrule Hit Points|XPHB} do alvo diminui em uma quantidade igual ao dano recebido, e o yithian recupera {@variantrule Hit Points|XPHB} igual a essa quantia."
+						"{@actSave int} {@dc 18}, uma criatura em um raio de 3 metros que tem a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 15 ({@damage 3d6 + 5}) Dano psíquico. O máximo de {@variantrule Hit Points|XPHB} do alvo diminui em uma quantidade igual ao dano recebido, e o yithian recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
 					]
 				}
 			],
@@ -10171,8 +10171,8 @@
 				{
 					"name": "Mind Swap {@recharge}",
 					"entries": [
-						"{@actSave int} {@dc 18}, um humanóide que o yithian pode ver a até 1,5 metro. {@actSaveFail} O alvo está possuído pelo yithian; o yithian desaparece e o alvo fica com a condição {@condition Incapacitated|XPHB} e perde o controle de seu corpo. O yithian agora controla o corpo; o alvo não tem conhecimento das ações do yithian. O yithian não pode ser alvo de nenhum ataque, feitiço ou outro efeito. As estatísticas de jogo do yithian são as mesmas, exceto que ele usa os modificadores {@variantrule Speed|XPHB} e Força, Destreza e Constituição do alvo possuído. Ele sabe tudo o que o alvo sabia.",
-						"A posse dura até que o corpo caia para 0 {@variantrule Hit Points|XPHB} ou o yithian saia como {@variantrule Bonus Action|XPHB}. Quando a posse termina, o yithian retorna ao seu corpo, que aparece a até 1,5 metro do alvo. O alvo é {@condition Stunned|XPHB} por 1 minuto por memórias alienígenas, e é imune à troca mental deste yithian por 24 horas. {@actSaveSuccess} O alvo fica imune a Mind Swap por 24 horas."
+						"{@actSave int} {@dc 18}, um humanóide que o yithian pode ver a até 1,5 metro. {@actSaveFail} O alvo está possuído por yithian; o yithian desaparece e o alvo fica com a condição {@condition Incapacitated|XPHB} e perde o controle de seu corpo. O yithian agora controla o corpo; o alvo não tem conhecimento das ações do yithian. O yithian não pode ser alvo de nenhum ataque, feitiço ou outro efeito. As estatísticas de jogo do yithian são as mesmas, exceto que ele usa os modificadores {@variantrule Speed|XPHB} e Força, Destreza e Constituição do alvo possuído. Ele sabe tudo o que o alvo sabia.",
+						"A posse dura até que o corpo caia para 0 {@variantrule Hit Points|XPHB} ou o yithian saia como {@variantrule Bonus Action|XPHB}. Quando a posse termina, o yithian retorna ao seu corpo, que aparece a até 1,5 metro do alvo. O alvo é {@condition Stunned|XPHB} por 1 minuto por memórias específicas, e é imune à troca mental deste yithian por 24 horas. {@actSaveSuccess} O alvo fica imune a Mind Swap por 24 horas."
 					]
 				}
 			],
@@ -10182,7 +10182,7 @@
 				"urban"
 			],
 			"treasure": [
-				"arcana"
+				"arcano"
 			],
 			"traitTags": [
 				"Magic Resistance"
@@ -10217,14 +10217,14 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"incapacitated"
+				"encantado",
+				"incapacitado"
 			],
 			"savingThrowForced": [
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -10291,7 +10291,7 @@
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o zumbi a 0 {@variantrule Hit Points|XPHB}, ele fará um teste de resistência de Constituição ({@dc 5} mais o dano recebido), a menos que o dano seja Radiante ou de {@variantrule Critical Hit|XPHB}. Em um salvamento bem-sucedido, o zumbi cai para 1 {@variantrule Hit Points|XPHB|Hit Point}."
+						"Se o dano reduzir o zumbi a 0 {@variantrule Hit Points|XPHB}, ele fará um teste de resistência de Constituição ({@dc 5} mais o dano recebido), a menos que o dano seja Radiante ou de {@variantrule Critical Hit|XPHB}. Em um salvamento bem sucedido, o zumbi cai para 1 {@variantrule Hit Points|XPHB|Hit Point}."
 					]
 				}
 			],
@@ -10311,8 +10311,8 @@
 				{
 					"name": "Flesh Entomb {@recharge 5}",
 					"entries": [
-						"{@actSave str} {@dc 16}, uma criatura que o zumbi pode ver em um raio de 9 metros. {@actSaveFail} 16 ({@damage 3d10}) Dano de concussão. Se o alvo for uma criatura Grande ou menor, ele será sepultado em uma pilha de carne morta. Enquanto sepultado, o alvo tem a condição {@condition Restrained|XPHB}, tem {@variantrule Cover|XPHB|Total Cover} contra ataques e outros efeitos fora da carne morta e sofre 10 ({@damage 3d6}) de dano necrótico no início de cada um de seus turnos.",
-						"O alvo pode ser libertado se a carne morta for destruída (CA 10; HP 25; {@variantrule Immunity|XPHB} para dano necrótico, venenoso e psíquico)."
+						"{@actSave str} {@dc 16}, uma criatura que o zumbi pode ver em um raio de 9 metros. {@actSaveFail} 16 ({@damage 3d10}) Dano de concussão. Se o alvo for uma criatura grande ou menor, ele será sepultado em uma pilha de carne morta. Enquanto sepultado, o alvo tem a condição {@condition Restrained|XPHB}, tem {@variantrule Cover|XPHB|Total Cover} contra ataques e outros efeitos fora da carne morta e sofre 10 ({@damage 3d6}) de dano necrótico no início de cada um de seus turnos.",
+						"O pode ser libertado se a carne morta for destruída (CA 10; HP 25; {@variantrule Immunity|XPHB} para dano necrótico, venenoso e psíquico)."
 					]
 				}
 			],
@@ -10413,7 +10413,7 @@
 				{
 					"name": "Viral Aura",
 					"entries": [
-						"{@actSave con} {@dc 12}, qualquer criatura que inicia seu turno em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originado do zumbi. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB} até o início de seu próximo turno. Enquanto {@condition Poisoned|XPHB}, o alvo não pode recuperar {@variantrule Hit Points|XPHB}. {@actSaveSuccess} A criatura fica imune à Aura Viral deste zumbi por 24 horas."
+						"{@actSave con} {@dc 12}, qualquer criatura que inicia seu turno em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 3 metros originado do zumbi. {@actSaveFail} O alvo tem a condição {@condition Poisoned|XPHB} até o início de seu próximo turno. Enquanto {@condition Poisoned|XPHB}, o alvo não pode recuperar {@variantrule Hit Points|XPHB}. {@actSaveSuccess} Uma criatura fica imune à Aura Viral deste zumbi por 24 horas."
 					]
 				}
 			],
@@ -10433,7 +10433,7 @@
 				{
 					"name": "Virulent Miasma (1/Day)",
 					"entries": [
-						"{@actSave con} {@dc 12}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originada do zumbi. {@actSaveFail} 14 ({@damage 4d6}) Dano de veneno. {@actSaveSuccess} Metade do dano. {@actSaveSuccessOrFail} Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, ele morre e ressuscita 1 minuto depois como um Zumbi."
+						"{@actSave con} {@dc 12}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 9 metros originada do zumbi. {@actSaveFail} 14 ({@damage 4d6}) Dano de veneno. {@actSaveSuccess} Metade de dano. {@actSaveSuccessOrFail} Se este dano reduzir o alvo a 0 {@variantrule Hit Points|XPHB}, ele morre e ressuscita 1 minuto depois como um Zumbi."
 					]
 				}
 			],

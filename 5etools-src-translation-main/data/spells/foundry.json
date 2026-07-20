@@ -28,21 +28,21 @@
 				{
 					"changes": [
 						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
-							"value": "bludgeoning",
+							"key": "sistema.traits.dr.value",
+							"mode": "PERSONALIZADO",
+							"value": "espancamento",
 							"priority": 20
 						},
 						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
+							"key": "sistema.traits.dr.value",
+							"mode": "PERSONALIZADO",
 							"value": "piercing",
 							"priority": 20
 						},
 						{
-							"key": "system.traits.dr.value",
-							"mode": "CUSTOM",
-							"value": "slashing",
+							"key": "sistema.traits.dr.value",
+							"mode": "PERSONALIZADO",
+							"value": "cortando",
 							"priority": 20
 						}
 					],
@@ -62,13 +62,13 @@
 						"type": "damage",
 						"target.affects.count": "1",
 						"target.template.units": "",
-						"target.affects.type": "creature",
+						"target.affects.type": "criatura",
 						"damage.parts": [
 							{
 								"custom.enabled": true,
-								"custom.formula": "(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[on hit]",
+								"custom.formula": "(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[ao acertar]",
 								"types": [
-									"thunder"
+									"trovão"
 								]
 							}
 						]
@@ -87,9 +87,9 @@
 						"damage.parts": [
 							{
 								"custom.enabled": true,
-								"custom.formula": "(floor((@item.level) / 2) + 2)d6",
+								"custom.formula": "(piso((@item.level) / 2) + 2)d6",
 								"types": [
-									"fire"
+									"fogo"
 								]
 							}
 						]
@@ -107,20 +107,20 @@
 						"type": "damage",
 						"target.affects.count": "1",
 						"target.template.units": "",
-						"target.affects.type": "creature",
+						"target.affects.type": "criatura",
 						"damage.parts": [
 							{
 								"custom.enabled": true,
-								"custom.formula": "(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[on hit]",
+								"custom.formula": "(floor(((@details.level + @details.spellLevel) + 1) / 6))d8[ao acertar]",
 								"types": [
-									"fire"
+									"fogo"
 								]
 							},
 							{
 								"custom.enabled": true,
 								"custom.formula": "@mod + (floor(((@details.level + @details.spellLevel) + 1) / 6))d8[splash]",
 								"types": [
-									"fire"
+									"fogo"
 								]
 							}
 						]
@@ -139,9 +139,9 @@
 						"damage.parts": [
 							{
 								"custom.enabled": true,
-								"custom.formula": "(1d4 + 1) * (2 + @item.level)",
+								"custom.formula": "(1d4 + 1) * (2 + @item.nível)",
 								"types": [
-									"force"
+									"força"
 								]
 							}
 						]
@@ -155,21 +155,21 @@
 			"source": "XGE",
 			"system": {
 				"range.value": 60,
-				"range.units": "ft",
+				"range.units": "pés",
 				"activities": [
 					{
 						"type": "damage",
 						"activation.value": 1,
-						"activation.type": "action",
+						"activation.type": "ação",
 						"target.affects.count": "1",
 						"target.template.units": "",
-						"target.affects.type": "creature",
+						"target.affects.type": "criatura",
 						"damage.parts": [
 							{
 								"custom.enabled": true,
 								"custom.formula": "1d6 + @mod",
 								"types": [
-									"bludgeoning"
+									"espancamento"
 								]
 							}
 						]
@@ -188,16 +188,16 @@
 						"damage.parts": [
 							{
 								"custom.enabled": true,
-								"custom.formula": "4d4[immediate]",
+								"custom.formula": "4d4[imediato]",
 								"types": [
-									"acid"
+									"ácido"
 								]
 							},
 							{
 								"custom.enabled": true,
-								"custom.formula": "(@item.level)d4[end of turn]",
+								"custom.formula": "(@item.level)d4[fim do turno]",
 								"types": [
-									"acid"
+									"ácido"
 								]
 							}
 						]
@@ -226,7 +226,7 @@
 				"activities": [
 					{
 						"type": "damage",
-						"roll.formula": "(floor(((@item.level) - 1) / 2))d8",
+						"roll.formula": "(piso(((@item.nível) - 1)/2))d8",
 						"damage.parts": []
 					}
 				]
@@ -245,7 +245,7 @@
 								"custom.enabled": true,
 								"custom.formula": "(floor((@item.level) / 2))d8 + @mod",
 								"types": [
-									"force"
+									"força"
 								]
 							}
 						]
@@ -261,9 +261,9 @@
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
 				"summons.match.saves": true,
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 4) * 10",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 4) * 10",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.profiles": [
 					{
 						"name": "Beholderkin",
@@ -291,7 +291,7 @@
 						"bonuses": {
 							"ac": "@item.level",
 							"hp": "10 * (@item.level - 4)",
-							"attackDamage": "@item.level"
+							"attackDamage": "@item.nível"
 						},
 						"match": {
 							"proficiency": true,
@@ -321,9 +321,9 @@
 			"name": "Summon Beast",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 2) * 5",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 2) * 5",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
 				"summons.profiles": [
@@ -349,10 +349,10 @@
 			"system": {
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
-				"summons.bonuses.ac": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
 				"summons.bonuses.hp": "(@item.level - 5) * 10",
-				"summons.bonuses.attackDamage": "@item.level",
-				"summons.bonuses.healing": "@item.level",
+				"summons.bonuses.attackDamage": "@item.nível",
+				"summons.bonuses.healing": "@item.nível",
 				"summons.profiles": [
 					{
 						"name": "Avenger",
@@ -370,9 +370,9 @@
 			"name": "Summon Construct",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
 				"summons.bonuses.hp": "(@item.level - 4) * 15",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
 				"summons.match.saves": true,
@@ -418,9 +418,9 @@
 			"name": "Summon Elemental",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 4) * 10",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 4) * 10",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
 				"summons.profiles": [
@@ -448,9 +448,9 @@
 			"name": "Summon Fey",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 3) * 10",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 3) * 10",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.match.proficiency": true,
 				"summons.match.attacks": true,
 				"summons.match.saves": true,
@@ -475,10 +475,10 @@
 			"name": "Summon Fiend",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "15 * @item.level",
-				"summons.bonuses.attackDamage": "@item.level",
-				"summons.bonuses.saveDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "15 * @item.nível",
+				"summons.bonuses.attackDamage": "@item.nível",
+				"summons.bonuses.saveDamage": "@item.nível",
 				"summons.match.attacks": true,
 				"summons.match.proficiency": true,
 				"summons.match.saves": true,
@@ -505,9 +505,9 @@
 			"system": {
 				"summons.match.attacks": true,
 				"summons.match.saves": true,
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 3) * 15",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 3) * 15",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.profiles": [
 					{
 						"name": "Fury",
@@ -529,9 +529,9 @@
 			"name": "Summon Undead",
 			"source": "TCE",
 			"system": {
-				"summons.bonuses.ac": "@item.level",
-				"summons.bonuses.hp": "(@item.level - 3) * 10",
-				"summons.bonuses.attackDamage": "@item.level",
+				"summons.bonuses.ac": "@item.nível",
+				"summons.bonuses.hp": "(@item.nível - 3) * 10",
+				"summons.bonuses.attackDamage": "@item.nível",
 				"summons.match.attacks": true,
 				"summons.match.proficiency": true,
 				"summons.match.saves": true,
@@ -564,7 +564,7 @@
 								"custom.enabled": true,
 								"custom.formula": "1d12",
 								"types": [
-									"lightning"
+									"relâmpago"
 								]
 							}
 						]

@@ -130,13 +130,13 @@
 				{
 					"name": "Frightful Presence",
 					"entries": [
-						"Cada criatura, à escolha do dragão, que esteja a até 36 metros do dragão e ciente disso, deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou se tornará {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso. Se o teste de resistência de uma criatura for bem-sucedido ou o efeito terminar, a criatura ficará imune à Presença Aterrorizante do dragão pelas próximas 24 horas."
+						"Cada criatura, à escolha do dragão, que aproveita até 36 metros do dragão e sabe disso, deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou se tornar {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso. Se o teste de resistência de uma criatura for bem-sucedido ou o efeito final, a criatura ficará imune à Presença Aterrorizante do Dragão pelas próximas 24 horas."
 					]
 				},
 				{
 					"name": "Debilitating Breath {@recharge 5}",
 					"entries": [
-						"O dragão exala uma pulsação de som agudo e quase inaudível em um cone de 18 metros. Cada criatura naquele cone deve realizar um teste de resistência de Constituição {@dc 18}. Se falhar na resistência, a criatura sofre 45 ({@damage 13d6}) de dano trovejante e fica {@condition incapacitated} até o final do próximo turno. Em um teste bem-sucedido, a criatura sofre metade do dano e não é {@condition incapacitated}."
+						"O dragão exala uma pulsação de som agudo e quase inaudível em um cone de 18 metros. Cada criatura naquele cone deve realizar um teste de resistência de Constituição {@dc 18}. Se falhar na resistência, a criatura sofre 45 ({@damage 13d6}) de dano trovejante e fica {@condition incapacitated} até o final do próximo turno. Em um teste bem-sucedido, uma criatura sofre metade do dano e não é {@condition incapacitated}."
 					]
 				}
 			],
@@ -150,13 +150,13 @@
 				{
 					"name": "Telekinetic Fling",
 					"entries": [
-						"O dragão escolhe um objeto Pequeno ou menor que não esteja sendo usado ou carregado e que ele possa ver a até 18 metros dele, e magicamente arremessa o objeto em uma criatura que ele possa ver a até 18 metros do objeto. O alvo deve ter sucesso em um teste de resistência de Destreza {@dc 17} ou sofrerá 15 ({@damage 4d6}) de dano de concussão."
+						"O dragão escolhe um objeto pequeno ou menor que não esteja sendo usado ou carregado e que ele possa ver a até 18 metros dele, e magicamente arremessa o objeto em uma criatura que ele possa ver a até 18 metros do objeto. O alvo deve ter sucesso em um teste de resistência de Destreza {@dc 17} ou sofrerá 15 ({@damage 4d6}) de dano de concussão."
 					]
 				},
 				{
 					"name": "Teleport (Costs 2 Actions)",
 					"entries": [
-						"O dragão se teletransporta magicamente para um espaço desocupado que pode ver a até 9 metros dele."
+						"O dragão se teletransporta magicamente para um espaço desocupado que pode chegar a até 9 metros dele."
 					]
 				}
 			],
@@ -171,19 +171,19 @@
 					"source": "FTD",
 					"page": 33,
 					"entries": [
-						"You can customize any dragon's stat block to reflect the dragon's unique character. Minor changes such as those below are easy to make and have no impact on a dragon's challenge rating.",
+						"Você pode personalizar o bloco de estatísticas de qualquer dragão para refletir o caráter único do dragão. Pequenas alterações como as abaixo são fáceis de fazer e não têm impacto no nível de desafio do dragão.",
 						{
 							"type": "entries",
 							"name": "Languages",
 							"entries": [
-								"Most dragons prefer to speak Draconic but learn Common for dealing with allies and minions. But given their high Intelligence and long life span, dragons can easily learn additional languages. You can add languages to a dragon's stat block."
+								"A maioria dos dragões prefere falar Dracônico, mas aprende Comum para lidar com aliados e lacaios. Mas dada a sua alta inteligência e longa vida útil, os dragões podem facilmente aprender idiomas adicionais. Você pode adicionar idiomas ao bloco de estatísticas de um dragão."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Skills",
 							"entries": [
-								"Most dragons are proficient in the {@skill Perception} and {@skill Stealth} skills, and many dragons have additional skill proficiencies. As with languages, you can customize a dragon's skill list (even doubling their proficiency bonus with certain skills) to reflect particular interests and activities. You can also give a dragon tool proficiencies, particularly if the dragon spends time in Humanoid form."
+								"A maioria dos dragões são proficientes nas habilidades {@skill Perception} e {@skill Stealth}, e muitos dragões têm proficiências em habilidades adicionais. Tal como acontece com os idiomas, você pode personalizar a lista de habilidades de um dragão (até mesmo dobrando seu bônus de proficiência com certas habilidades) para refletir interesses e atividades específicas. Você também pode dar proficiência em ferramentas a um dragão, especialmente se o dragão passar algum tempo na forma humanóide."
 							]
 						},
 						{
@@ -197,56 +197,56 @@
 							"type": "entries",
 							"name": "Other Traits and Actions",
 							"entries": [
-								"You can borrow traits and actions from other monsters to add unique flavor to a dragon. Consider these examples:",
+								"Você pode emprestar características e ações de outros monstros para adicionar um sabor único a um dragão. Considere estes exemplos:",
 								{
 									"type": "list",
-									"style": "list-hang-notitle",
+									"style": "lista-pendurar-notitle",
 									"items": [
 										{
 											"type": "item",
 											"name": "Change Shape",
 											"entries": [
-												"You can decide that a dragon acquires this action at a younger age than usual, particularly if you want to feature a dragon in Humanoid form in your campaign:",
-												"The dragon magically polymorphs into a humanoid or beast that has a challenge rating no higher than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the dragon's choice).",
-												"In a new form, the dragon retains its alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Its statistics and capabilities are otherwise replaced by those of the new form, except any class features or legendary actions of that form."
+												"Você pode decidir que um dragão adquira esta ação em uma idade mais jovem do que o normal, especialmente se quiser apresentar um dragão na forma Humanóide em sua campanha:",
+												"O dragão se transforma magicamente em um humanóide ou besta que tem um nível de desafio não superior ao seu, ou retorna à sua forma verdadeira. Ele reverte à sua verdadeira forma se morrer. Qualquer equipamento que ele esteja vestindo ou carregando é absorvido ou suportado pela nova forma (a escolha do dragão).",
+												"Em uma nova forma, o dragão mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária, ações de covil e valores de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão substituídas pelas da nova forma, exceto quaisquer características de classe ou ações lendárias dessa forma."
 											]
 										},
 										{
 											"type": "item",
 											"name": "Flyby",
 											"entries": [
-												"The dragon is an agile flier, quick to fly out of enemies' reach.",
-												"The dragon doesn't provoke an opportunity attack when it flies out of an enemy's reach."
+												"O dragão é um voador ágil, rápido para voar para fora do alcance dos inimigos.",
+												"O dragão não provoca um ataque de oportunidade quando voa para fora do alcance do inimigo."
 											]
 										},
 										{
 											"type": "item",
 											"name": "Mimicry",
 											"entries": [
-												"Impersonating characters or their allies could be a fun trick for a crafty dragon.",
-												"The dragon can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 12} Wisdom ({@skill Insight}) check."
+												"Personificar personagens ou seus aliados pode ser um truque divertido para um dragão astuto.",
+												"O dragão pode imitar qualquer som que tenha ouvido, incluindo vozes. Uma criatura que ouve os sons pode dizer que são imitações com um teste bem-sucedido de {@dc 12} Sabedoria ({@skill Insight})."
 											]
 										},
 										{
 											"type": "item",
 											"name": "Rejuvenation",
 											"entries": [
-												"You might decide that dragons in your campaign, being an essential part of the Material Plane, are nearly impossible to destroy. A dragon's life essence might be preserved in the egg from which it first emerged, in its hoard, or in a cavernous hall at the center of the world, just as a lich's essence is hidden in a phylactery.",
-												"If it has an essence-preserving object, a destroyed dragon gains a new body in {@dice 1d10} days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the object."
+												"Você pode decidir que os dragões em sua campanha, sendo uma parte essencial do Plano Material, são quase impossíveis de destruir. A essência vital de um dragão pode ser preservada no ovo do qual ele emergiu, em seu tesouro ou em um salão cavernoso no centro do mundo, assim como a essência de um lich está escondida em um filactério.",
+												"Se tiver um objeto de preservação de essência, um dragão destruído ganha um novo corpo em {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativo novamente. O novo corpo aparece a até 1,5 metro do objeto."
 											]
 										},
 										{
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
+												"A maioria dos dragões tem {@sense blindsight} e {@sense darkvision}. Você pode atualizar {@sense blindsight} para {@sense truesight} ou pode dar a um dragão uma velocidade de escavação {@sense tremorsense|MM}."
 											]
 										},
 										{
 											"type": "item",
 											"name": "Tunneler",
 											"entries": [
-												"The dragon can burrow through solid rock at half its burrowing speed and leaves a tunnel in its wake."
+												"O dragão pode escavar rocha sólida com metade de sua velocidade de escavação e deixar um túnel em seu rastro."
 											]
 										}
 									]
@@ -256,7 +256,7 @@
 					]
 				}
 			],
-			"dragonAge": "adult",
+			"dragonAge": "adulto",
 			"traitTags": [
 				"Legendary Resistances",
 				"Spider Climb",
@@ -299,7 +299,7 @@
 				"charmed"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"constitution",
@@ -310,7 +310,7 @@
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,

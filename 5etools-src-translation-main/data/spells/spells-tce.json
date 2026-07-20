@@ -15,7 +15,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "bonus"
+					"unit": "bônus"
 				}
 			],
 			"range": {
@@ -40,12 +40,12 @@
 				}
 			],
 			"entries": [
-				"You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes {@damage 4d12} force damage. This attack scores a critical hit if the number on the {@dice d20} is 18 or higher. On a critical hit, the blade deals an extra {@damage 8d12} force damage (for a total of {@damage 12d12} force damage).",
-				"As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again.",
-				"The blade can harmlessly pass through any barrier, including a {@spell wall of force}."
+				"Você cria uma fenda plana em forma de lâmina com cerca de um metro de comprimento em um espaço desocupado que você pode ver dentro do alcance. A lâmina dura enquanto durar. Ao lançar esta magia, você pode realizar até dois ataques mágicos corpo a corpo com a lâmina, cada um contra uma criatura, objeto solto ou estrutura a até 1,5 metro da lâmina. Ao acertar, o alvo sofre {@damage 4d12} de dano de força. Este ataque obtém um acerto crítico se o número em {@dice d20} for 18 ou superior. Em um acerto crítico, a lâmina causa {@damage 8d12} de dano de força extra (para um total de {@damage 12d12} de dano de força).",
+				"Como uma ação bônus em seu turno, você pode mover a lâmina até 9 metros para um espaço desocupado que você possa ver e então realizar até dois ataques mágicos corpo a corpo com ela novamente.",
+				"A lâmina pode passar inofensivamente por qualquer barreira, incluindo {@spell wall of force}."
 			],
 			"damageInflict": [
-				"force"
+				"força"
 			],
 			"spellAttack": [
 				"M"
@@ -73,7 +73,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -86,7 +86,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a melee weapon worth at least 1 sp",
+					"text": "uma arma corpo a corpo que vale pelo menos 1 sp",
 					"cost": 10
 				}
 			},
@@ -100,12 +100,12 @@
 				}
 			],
 			"entries": [
-				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects and then becomes sheathed in booming energy until the start of your next turn. If the target willingly moves 5 feet or more before then, the target takes {@damage 1d8} thunder damage, and the spell ends.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target on a hit, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by 1d8 at 11th level ({@damage 2d8} and {@damage 3d8}) and again at 17th level ({@damage 3d8} and {@damage 4d8})."
+				"Você brande a arma usada no lançamento da magia e faz um ataque corpo a corpo com ela contra uma criatura a até 1,5 metro de você. Se acertar, o alvo sofre os efeitos normais do ataque com arma e então fica coberto por uma energia crescente até o início do seu próximo turno. Se o alvo se mover voluntariamente 1,5 metro ou mais antes disso, o alvo sofre {@damage 1d8} de dano trovejante e o feitiço termina.",
+				"O dano deste feitiço aumenta quando você atinge certos níveis. No 5º nível, o ataque corpo a corpo causa {@damage 1d8} de dano trovejante extra ao alvo ao acertar, e o dano que o alvo sofre ao se mover aumenta para {@damage 2d8}. Ambas as jogadas de dano aumentam em 1d8 no 11º nível ({@damage 2d8} e {@damage 3d8}) e novamente no 17º nível ({@damage 3d8} e {@damage 4d8})."
 			],
 			"scalingLevelDice": [
 				{
-					"label": "thunder damage on moving",
+					"label": "dano de trovão ao se mover",
 					"scaling": {
 						"1": "1d8",
 						"5": "2d8",
@@ -114,7 +114,7 @@
 					}
 				},
 				{
-					"label": "thunder damage on hit",
+					"label": "dano de trovão ao acertar",
 					"scaling": {
 						"5": "1d8",
 						"11": "2d8",
@@ -123,7 +123,7 @@
 				}
 			],
 			"damageInflict": [
-				"thunder"
+				"trovão"
 			],
 			"spellAttack": [
 				"M"
@@ -145,7 +145,7 @@
 			"time": [
 				{
 					"number": 10,
-					"unit": "minute"
+					"unit": "minuto"
 				}
 			],
 			"range": {
@@ -158,7 +158,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a magic item or a willing creature from the destination world"
+				"m": "um item mágico ou uma criatura voluntária do mundo de destino"
 			},
 			"duration": [
 				{
@@ -170,9 +170,9 @@
 				}
 			],
 			"entries": [
-				"You and up to eight willing creatures within range fall {@condition unconscious} for the spell's duration and experience visions of another world on the Material Plane, such as Oerth, Toril, Krynn, or Eberron. If the spell reaches its full duration, the visions conclude with each of you encountering and pulling back a mysterious blue curtain. The spell then ends with you mentally and physically transported to the world that was in the visions.",
-				"To cast this spell, you must have a magic item that originated on the world you wish to reach, and you must be aware of the world's existence, even if you don't know the world's name. Your destination in the other world is a safe location within 1 mile of where the magic item was created. Alternatively, you can cast the spell if one of the affected creatures was born on the other world, which causes your destination to be a safe location within 1 mile of where that creature was born.",
-				"The spell ends early on a creature if that creature takes any damage, and the creature isn't transported. If you take any damage, the spell ends for you and all the other creatures, with none of you being transported."
+				"Você e até oito criaturas voluntárias dentro do alcance caem {@condition unconscious} durante a duração do feitiço e experimentam visões de outro mundo no Plano Material, como Oerth, Toril, Krynn ou Eberron. Se o feitiço atingir sua duração total, as visões terminam com cada um de vocês encontrando e abrindo uma misteriosa cortina azul. O feitiço então termina com você transportado mental e fisicamente para o mundo que estava nas visões.",
+				"Para lançar este feitiço, você deve ter um item mágico originado no mundo que deseja alcançar e deve estar ciente da existência do mundo, mesmo que não saiba o nome do mundo. Seu destino no outro mundo é um local seguro a até 1,6 km de onde o item mágico foi criado. Alternativamente, você pode lançar a magia se uma das criaturas afetadas nasceu em outro mundo, o que faz com que seu destino seja um local seguro dentro de 1,6 km de onde aquela criatura nasceu.",
+				"A magia termina mais cedo em uma criatura se ela sofrer algum dano e a criatura não for transportada. Se você sofrer algum dano, o feitiço termina para você e todas as outras criaturas, e nenhum de vocês será transportado."
 			],
 			"conditionInflict": [
 				"unconscious"
@@ -198,7 +198,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -211,7 +211,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "a melee weapon worth at least 1 sp",
+					"text": "uma arma corpo a corpo que vale pelo menos 1 sp",
 					"cost": 10
 				}
 			},
@@ -221,12 +221,12 @@
 				}
 			],
 			"entries": [
-				"You brandish the weapon used in the spell's casting and make a melee attack with it against one creature within 5 feet of you. On a hit, the target suffers the weapon attack's normal effects, and you can cause green fire to leap from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
-				"This spell's damage increases when you reach certain levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target on a hit, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@damage 1d8} at 11th level ({@damage 2d8} and {@damage 2d8}) and 17th level ({@damage 3d8} and {@damage 3d8})."
+				"Você brande a arma usada no lançamento da magia e faz um ataque corpo a corpo com ela contra uma criatura a até 1,5 metro de você. Se acertar, o alvo sofre os efeitos normais do ataque com arma, e você pode fazer com que o fogo verde salte do alvo para uma criatura diferente de sua escolha que você possa ver a até 1,5 metro dele. A segunda criatura sofre dano de fogo igual ao seu modificador de habilidade de conjuração.",
+				"O dano deste feitiço aumenta quando você atinge certos níveis. No 5º nível, o ataque corpo a corpo causa {@damage 1d8} de dano de fogo extra ao alvo ao acertar, e o dano de fogo à segunda criatura aumenta para {@damage 1d8} + seu modificador de habilidade de lançamento de feitiços. Ambas as jogadas de dano aumentam em {@damage 1d8} no 11º nível ({@damage 2d8} e {@damage 2d8}) e no 17º nível ({@damage 3d8} e {@damage 3d8})."
 			],
 			"scalingLevelDice": [
 				{
-					"label": "fire damage to secondary creature",
+					"label": "dano de fogo à criatura secundária",
 					"scaling": {
 						"1": "{{spellcasting_mod}}",
 						"5": "1d8 + {{spellcasting_mod}}",
@@ -235,7 +235,7 @@
 					}
 				},
 				{
-					"label": "fire damage on hit",
+					"label": "dano de fogo ao acertar",
 					"scaling": {
 						"5": "1d8",
 						"11": "2d8",
@@ -244,7 +244,7 @@
 				}
 			],
 			"damageInflict": [
-				"fire"
+				"fogo"
 			],
 			"spellAttack": [
 				"M"
@@ -264,11 +264,11 @@
 			"source": "TCE",
 			"page": 107,
 			"level": 3,
-			"school": "A",
+			"school": "Um",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -292,19 +292,19 @@
 				}
 			],
 			"entries": [
-				"For the duration, you or one willing creature you can see within range has resistance to psychic damage, as well as advantage on Intelligence, Wisdom, and Charisma saving throws."
+				"Durante a duração, você ou uma criatura voluntária que você possa ver dentro do alcance tem resistência a dano psíquico, bem como vantagem em testes de resistência de Inteligência, Sabedoria e Carisma."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them."
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 3º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
 					]
 				}
 			],
 			"damageResist": [
-				"psychic"
+				"psíquico"
 			],
 			"miscTags": [
 				"ADV",
@@ -328,7 +328,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -347,11 +347,11 @@
 				}
 			],
 			"entries": [
-				"You create a lash of lightning energy that strikes at one creature of your choice that you can see within 15 feet of you. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take {@damage 1d8} lightning damage if it is within 5 feet of you.",
-				"This spell's damage increases by {@damage 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
+				"Você cria um raio de energia elétrica que atinge uma criatura de sua escolha que você possa ver a até 4,5 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Força ou será puxado até 3 metros em linha reta em sua direção e então sofrerá {@damage 1d8} de dano elétrico se estiver a 1,5 metro de você.",
+				"O dano deste feitiço aumenta em {@damage 1d8} quando você atinge o 5º nível ({@damage 2d8}), 11º nível ({@damage 3d8}) e 17º nível ({@damage 4d8})."
 			],
 			"scalingLevelDice": {
-				"label": "lightning damage",
+				"label": "dano relâmpago",
 				"scaling": {
 					"1": "1d8",
 					"5": "2d8",
@@ -360,10 +360,10 @@
 				}
 			},
 			"damageInflict": [
-				"lightning"
+				"relâmpago"
 			],
 			"savingThrow": [
-				"strength"
+				"força"
 			],
 			"miscTags": [
 				"FMV",
@@ -379,14 +379,14 @@
 			"source": "TCE",
 			"page": 108,
 			"reprintedAs": [
-				"Mind Sliver|XPHB"
+				"Fragmento da Mente|XPHB"
 			],
 			"level": 0,
 			"school": "E",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -409,11 +409,11 @@
 				}
 			],
 			"entries": [
-				"You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take {@damage 1d6} psychic damage and subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn.",
-				"This spell's damage increases by {@damage 1d6} when you reach certain levels: 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+				"Você direciona um pico desorientador de energia psíquica na mente de uma criatura que você pode ver dentro do alcance. O alvo deve ter sucesso em um teste de resistência de Inteligência ou sofrerá {@damage 1d6} de dano psíquico e subtrairá {@dice 1d4} do próximo teste de resistência que fizer antes do final do seu próximo turno.",
+				"O dano deste feitiço aumenta em {@damage 1d6} quando você atinge certos níveis: 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
 			],
 			"scalingLevelDice": {
-				"label": "psychic damage",
+				"label": "dano psíquico",
 				"scaling": {
 					"1": "1d6",
 					"5": "2d6",
@@ -422,10 +422,10 @@
 				}
 			},
 			"damageInflict": [
-				"psychic"
+				"psíquico"
 			],
 			"savingThrow": [
-				"intelligence"
+				"inteligência"
 			],
 			"miscTags": [
 				"SCL",
@@ -445,7 +445,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "bonus"
+					"unit": "bônus"
 				}
 			],
 			"range": {
@@ -469,23 +469,23 @@
 				}
 			],
 			"entries": [
-				"You call forth spirits of the dead, which flit around you for the spell's duration. The spirits are intangible and invulnerable.",
-				"Until the spell ends, any attack you make deals {@damage 1d8} extra damage when you hit a creature within 10 feet of you. This damage is radiant, necrotic, or cold (your choice when you cast the spell). Any creature that takes this damage can't regain hit points until the start of your next turn.",
-				"In addition, any creature of your choice that you can see that starts its turn within 10 feet of you has its speed reduced by 10 feet until the start of your next turn."
+				"Você invoca espíritos dos mortos, que flutuam ao seu redor durante a duração da magia. Os espíritos são intangíveis e invulneráveis.",
+				"Até o feitiço terminar, qualquer ataque que você fizer causará {@damage 1d8} de dano extra quando você atingir uma criatura a até 3 metros de você. Este dano é radiante, necrótico ou frio (você escolhe ao lançar o feitiço). Qualquer criatura que sofrer este dano não poderá recuperar pontos de vida até o início do seu próximo turno.",
+				"Além disso, qualquer criatura à sua escolha que você possa ver e que comece seu turno a até 3 metros de você tem seu deslocamento reduzido em 3 metros até o início do seu próximo turno."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 1d8|3,5,7,9|1d8} for every two slot levels above 3rd."
+						"Quando você lança esta magia usando um espaço de magia de 4º nível ou superior, o dano aumenta em {@scaledamage 1d8|3,5,7,9|1d8} para cada dois níveis de espaço acima do 3º."
 					]
 				}
 			],
 			"damageInflict": [
-				"radiant",
-				"necrotic",
-				"cold"
+				"radiante",
+				"necrótico",
+				"frio"
 			],
 			"miscTags": [
 				"SGT"
@@ -496,14 +496,14 @@
 			"source": "TCE",
 			"page": 109,
 			"reprintedAs": [
-				"Summon Aberration|XPHB"
+				"Invocar Aberração|XPHB"
 			],
 			"level": 4,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -517,7 +517,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a pickled tentacle and an eyeball in a platinum-inlaid vial worth at least 400 gp",
+					"text": "um tentáculo em conserva e um globo ocular em um frasco incrustado de platina valendo pelo menos 400 PO",
 					"cost": 40000
 				}
 			},
@@ -532,15 +532,15 @@
 				}
 			],
 			"entries": [
-				"You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Aberrant Spirit|TCE} stat block. When you cast the spell, choose Beholderkin, Slaad, or Star Spawn. The creature resembles an aberration of that kind, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você evoca um espírito aberrante. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Aberrant Spirit|TCE}. Ao lançar o feitiço, escolha Beholderkin, Slaad ou Star Spawn. A criatura se assemelha a uma aberração desse tipo, que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 5º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -554,14 +554,14 @@
 			"source": "TCE",
 			"page": 109,
 			"reprintedAs": [
-				"Summon Beast|XPHB"
+				"Convocar Besta|XPHB"
 			],
 			"level": 2,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -575,7 +575,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a feather, tuft of fur, and fish tail inside a gilded acorn worth at least 200 gp",
+					"text": "uma pena, um tufo de pêlo e um rabo de peixe dentro de uma bolota dourada valendo pelo menos 200 PO",
 					"cost": 20000
 				}
 			},
@@ -590,15 +590,15 @@
 				}
 			],
 			"entries": [
-				"You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Bestial Spirit|TCE} stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você evoca um espírito bestial. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Bestial Spirit|TCE}. Ao lançar o feitiço, escolha um ambiente: Ar, Terra ou Água. A criatura se assemelha a um animal de sua escolha, nativo do ambiente escolhido, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 3º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -612,14 +612,14 @@
 			"source": "TCE",
 			"page": 110,
 			"reprintedAs": [
-				"Summon Celestial|XPHB"
+				"Convocar Celestial|XPHB"
 			],
 			"level": 5,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -633,7 +633,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a golden reliquary worth at least 500 gp",
+					"text": "um relicário de ouro valendo pelo menos 500 PO",
 					"cost": 50000
 				}
 			},
@@ -648,15 +648,15 @@
 				}
 			],
 			"entries": [
-				"You call forth a celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range. This corporeal form uses the {@creature Celestial Spirit|TCE} stat block. When you cast the spell, choose Avenger or Defender. Your choice determines the creature's attack in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você invoca um espírito celestial. Ele se manifesta de forma angélica em um espaço desocupado que você pode ver ao seu alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Celestial Spirit|TCE}. Ao lançar o feitiço, escolha Vingador ou Defensor. Sua escolha determina o ataque da criatura em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 6º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -671,14 +671,14 @@
 			"source": "TCE",
 			"page": 111,
 			"reprintedAs": [
-				"Summon Construct|XPHB"
+				"Convocar Construto|XPHB"
 			],
 			"level": 4,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -692,7 +692,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an ornate stone and metal lockbox worth at least 400 gp",
+					"text": "um cofre ornamentado de pedra e metal no valor de pelo menos 400 PO",
 					"cost": 40000
 				}
 			},
@@ -707,15 +707,15 @@
 				}
 			],
 			"entries": [
-				"You call forth the spirit of a construct. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Construct Spirit|TCE} stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles a golem or a modron (your choice) made of the chosen material, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você invoca o espírito de uma construção. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Construct Spirit|TCE}. Ao lançar o feitiço, escolha um material: Argila, Metal ou Pedra. A criatura se assemelha a um golem ou modron (à sua escolha) feito do material escolhido, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 4º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -729,14 +729,14 @@
 			"source": "TCE",
 			"page": 111,
 			"reprintedAs": [
-				"Summon Elemental|XPHB"
+				"Invocar Elemental|XPHB"
 			],
 			"level": 4,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -750,7 +750,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "air, a pebble, ash, and water inside a gold-inlaid vial worth at least 400 gp",
+					"text": "ar, uma pedra, cinza e água dentro de um frasco incrustado de ouro valendo pelo menos 400 PO",
 					"cost": 40000
 				}
 			},
@@ -765,15 +765,15 @@
 				}
 			],
 			"entries": [
-				"You call forth an elemental spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Elemental Spirit|TCE} stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você invoca um espírito elemental. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Elemental Spirit|TCE}. Ao lançar o feitiço, escolha um elemento: Ar, Terra, Fogo ou Água. A criatura se assemelha a uma forma bípede envolta no elemento escolhido, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 5º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -787,14 +787,14 @@
 			"source": "TCE",
 			"page": 112,
 			"reprintedAs": [
-				"Summon Fey|XPHB"
+				"Convocar Fey|XPHB"
 			],
 			"level": 3,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -808,7 +808,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gilded flower worth at least 300 gp",
+					"text": "uma flor dourada valendo pelo menos 300 PO",
 					"cost": 30000
 				}
 			},
@@ -823,15 +823,15 @@
 				}
 			],
 			"entries": [
-				"You call forth a fey spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fey Spirit|TCE} stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a fey creature of your choice marked by the chosen mood, which determines one of the traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você evoca um espírito feérico. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Fey Spirit|TCE}. Ao lançar o feitiço, escolha um clima: Fumegante, Alegre ou Traiçoeiro. A criatura se assemelha a uma criatura feérica de sua escolha, marcada pelo humor escolhido, que determina uma das características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 4º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -845,14 +845,14 @@
 			"source": "TCE",
 			"page": 112,
 			"reprintedAs": [
-				"Summon Fiend|XPHB"
+				"Convocar Demônio|XPHB"
 			],
 			"level": 6,
 			"school": "C",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -866,7 +866,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "humanoid blood inside a ruby vial worth at least 600 gp",
+					"text": "sangue humanóide dentro de um frasco de rubi valendo pelo menos 600 PO",
 					"cost": 60000
 				}
 			},
@@ -881,15 +881,15 @@
 				}
 			],
 			"entries": [
-				"You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Fiendish Spirit|TCE} stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a fiend of the chosen type, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você invoca um espírito diabólico. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Fiendish Spirit|TCE}. Ao lançar o feitiço, escolha Demônio, Diabo ou Yugoloth. A criatura se assemelha a um demônio do tipo escolhido, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 7th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 7º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -907,7 +907,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -921,7 +921,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "tears inside a gem worth at least 300 gp",
+					"text": "rasga dentro de uma gema valendo pelo menos 300 PO",
 					"cost": 30000
 				}
 			},
@@ -936,15 +936,15 @@
 				}
 			],
 			"entries": [
-				"You call forth a shadowy spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Shadow Spirit|TCE} stat block. When you cast the spell, choose an emotion: Fury, Despair, or Fear. The creature resembles a misshapen biped marked by the chosen emotion, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você evoca um espírito sombrio. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Shadow Spirit|TCE}. Ao lançar o feitiço, escolha uma emoção: Fúria, Desespero ou Medo. A criatura se assemelha a um bípede disforme marcado pela emoção escolhida, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 4º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -959,14 +959,14 @@
 			"source": "TCE",
 			"page": 114,
 			"reprintedAs": [
-				"Summon Undead|XPHB"
+				"Convocar Mortos-vivos|XPHB"
 			],
 			"level": 3,
 			"school": "N",
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -980,7 +980,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a gilded skull worth at least 300 gp",
+					"text": "uma caveira dourada valendo pelo menos 300 PO",
 					"cost": 30000
 				}
 			},
@@ -995,15 +995,15 @@
 				}
 			],
 			"entries": [
-				"You call forth an undead spirit. It manifests in an unoccupied space that you can see within range. This corporeal form uses the {@creature Undead Spirit|TCE} stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an undead creature with the chosen form, which determines certain traits in its stat block. The creature disappears when it drops to 0 hit points or when the spell ends.",
-				"The creature is an ally to you and your companions. In combat, the creature shares your initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge} action and uses its move to avoid danger."
+				"Você invoca um espírito morto-vivo. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas {@creature Undead Spirit|TCE}. Ao lançar o feitiço, escolha a forma da criatura: Fantasmagórica, Pútrida ou Esquelética. O espírito se assemelha a uma criatura morta-viva com a forma escolhida, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
+						"Quando você conjurar esta magia usando um espaço de magia de 4º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
 					]
 				}
 			],
@@ -1027,7 +1027,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -1046,11 +1046,11 @@
 				}
 			],
 			"entries": [
-				"You create a momentary circle of spectral blades that sweep around you. All other creatures within 5 feet of you must succeed on a Dexterity saving throw or take {@damage 1d6} force damage.",
-				"This spell's damage increases by {@damage 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+				"Você cria um círculo momentâneo de lâminas espectrais que giram ao seu redor. Todas as outras criaturas a até 1,5 metro de você devem ser bem sucedidas em um teste de resistência de Destreza ou sofrerão {@damage 1d6} de dano de força.",
+				"O dano deste feitiço aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
 			],
 			"scalingLevelDice": {
-				"label": "force damage",
+				"label": "dano de força",
 				"scaling": {
 					"1": "1d6",
 					"5": "2d6",
@@ -1059,10 +1059,10 @@
 				}
 			},
 			"damageInflict": [
-				"force"
+				"força"
 			],
 			"savingThrow": [
-				"dexterity"
+				"destreza"
 			],
 			"miscTags": [
 				"SCL"
@@ -1080,7 +1080,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -1093,7 +1093,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of rotten food"
+				"m": "um pouco de comida estragada"
 			},
 			"duration": [
 				{
@@ -1106,22 +1106,22 @@
 				}
 			],
 			"entries": [
-				"A stream of acid emanates from you in a line 30 feet long and 5 feet wide in a direction you choose. Each creature in the line must succeed on a Dexterity saving throw or be covered in acid for the spell's duration or until a creature uses its action to scrape or wash the acid off itself or another creature. A creature covered in the acid takes {@damage 2d4} acid damage at start of each of its turns."
+				"Uma corrente de ácido emana de você em uma linha de 9 metros de comprimento e 1,5 metro de largura na direção que você escolher. Cada criatura na linha deve ser bem sucedida em um teste de resistência de Destreza ou ficará coberta de ácido pela duração da magia ou até que uma criatura use sua ação para raspar ou lavar o ácido de si mesma ou de outra criatura. Uma criatura coberta pelo ácido sofre {@damage 2d4} de dano de ácido no início de cada um de seus turnos."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 2d4|1-9|2d4} for each slot level above 1st."
+						"Quando você lança este feitiço usando um espaço de feitiço de 2º nível ou superior, o dano aumenta em {@scaledamage 2d4|1-9|2d4} para cada nível do espaço acima do 1º."
 					]
 				}
 			],
 			"damageInflict": [
-				"acid"
+				"ácido"
 			],
 			"savingThrow": [
-				"dexterity"
+				"destreza"
 			]
 		},
 		{
@@ -1133,7 +1133,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "action"
+					"unit": "ação"
 				}
 			],
 			"range": {
@@ -1156,22 +1156,22 @@
 				}
 			],
 			"entries": [
-				"You psychically lash out at one creature you can see within range. The target must make an Intelligence saving throw. On a failed save, the target takes {@damage 3d6} psychic damage, and it can't take a reaction until the end of its next turn. Moreover, on its next turn, it must choose whether it gets a move, an action, or a bonus action; it gets only one of the three. On a successful save, the target takes half as much damage and suffers none of the spell's other effects."
+				"Você ataca psiquicamente uma criatura que você pode ver dentro do alcance. O alvo deve fazer um teste de resistência de Inteligência. Se falhar na resistência, o alvo sofre {@damage 3d6} de dano psíquico e não pode reagir até o final do próximo turno. Além disso, no seu próximo turno, ele deve escolher se deseja realizar um movimento, uma ação ou uma ação bônus; obtém apenas um dos três. Se obtiver sucesso, o alvo sofre metade do dano e não sofre nenhum dos outros efeitos da magia."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "At Higher Levels",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd. The creatures must be within 30 feet of each other when you target them."
+						"Quando você conjura esta magia usando um espaço de magia de 3º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 2º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
 					]
 				}
 			],
 			"damageInflict": [
-				"psychic"
+				"psíquico"
 			],
 			"savingThrow": [
-				"intelligence"
+				"inteligência"
 			],
 			"miscTags": [
 				"SCT",
@@ -1191,7 +1191,7 @@
 			"time": [
 				{
 					"number": 1,
-					"unit": "bonus"
+					"unit": "bônus"
 				}
 			],
 			"range": {
@@ -1204,7 +1204,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an object engraved with a symbol of the Outer Planes, worth at least 500 gp",
+					"text": "um objeto gravado com um símbolo dos Planos Exteriores, valendo pelo menos 500 PO",
 					"cost": 50000
 				}
 			},
@@ -1219,24 +1219,24 @@
 				}
 			],
 			"entries": [
-				"Uttering an incantation, you draw on the magic of the Lower Planes or Upper Planes (your choice) to transform yourself. You gain the following benefits until the spell ends:",
+				"Pronunciando um encantamento, você recorre à magia dos Planos Inferiores ou dos Planos Superiores (à sua escolha) para se transformar. Você ganha os seguintes benefícios até o fim da magia:",
 				{
 					"type": "list",
 					"items": [
-						"You are immune to fire and poison damage (Lower Planes) or radiant and necrotic damage (Upper Planes).",
-						"You are immune to the {@condition poisoned} condition (Lower Planes) or the {@condition charmed} condition (Upper Planes).",
-						"Spectral wings appear on your back, giving you a flying speed of 40 feet.",
-						"You have a +2 bonus to AC.",
-						"All your weapon attacks are magical, and when you make a weapon attack, you can use your spellcasting ability modifier, instead of Strength or Dexterity, for the attack and damage rolls.",
-						"You can attack twice, instead of once, when you take the {@action Attack} action on your turn. You ignore this benefit if you already have a feature, like Extra Attack, that lets you attack more than once when you take the Attack action on your turn."
+						"Você é imune a danos de fogo e veneno (Planos Inferiores) ou danos radiantes e necróticos (Planos Superiores).",
+						"Você é imune à condição {@condition poisoned} (Planos Inferiores) ou à condição {@condition charmed} (Planos Superiores).",
+						"Asas espectrais aparecem em suas costas, proporcionando a você um deslocamento de vôo de 12 metros.",
+						"Você tem um bônus de +2 na CA.",
+						"Todos os seus ataques com arma são mágicos, e quando você faz um ataque com arma, você pode usar seu modificador de habilidade de conjuração, em vez de Força ou Destreza, para as jogadas de ataque e dano.",
+						"Você pode atacar duas vezes, em vez de uma, ao realizar a ação {@action Attack} no seu turno. Você ignora esse benefício se já tiver um recurso, como Ataque Extra, que permite atacar mais de uma vez ao realizar a ação de Ataque no seu turno."
 					]
 				}
 			],
 			"damageImmune": [
-				"fire",
-				"poison",
-				"radiant",
-				"necrotic"
+				"fogo",
+				"veneno",
+				"radiante",
+				"necrótico"
 			],
 			"conditionImmune": [
 				"charmed",

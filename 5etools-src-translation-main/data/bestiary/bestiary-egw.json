@@ -80,7 +80,7 @@
 				{
 					"name": "Pounce",
 					"entries": [
-						"Se o absorvedor se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertar seu ataque de garras no mesmo turno, o alvo deverá ter sucesso em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o absorvedor pode realizar um ataque de mordida contra ele como uma ação bônus."
+						"Se o absorvedor se mover pelo menos 6 metros em linha reta em direção a uma criatura e então acertar seu ataque de garras no mesmo turno, o alvo deverá ter sucesso em um teste de resistência de Força {@dc 17} ou será derrubado {@condition prone}. Se o alvo for {@condition prone}, o absorvedor pode realizar um ataque de morte contra ele como uma ação bônus."
 					]
 				}
 			],
@@ -114,7 +114,7 @@
 				{
 					"name": "Tail Ray",
 					"entries": [
-						"Quando o absorvedor sofre dano de um feitiço, ele sofre apenas metade do dano desencadeado. Se o conjurador estiver a até 18 metros do absorvedor, o absorvedor pode forçar o conjurador a fazer um teste de resistência de {@dc 16} Destreza. A menos que o teste seja bem-sucedido, o lançador sofre a outra metade do dano."
+						"Quando o absorvedor sofre dano de um feitiço, ele sofre apenas metade do dano desencadeado. Se o conjurador tiver até 18 metros do absorvedor, o absorvedor pode forçar o conjurador a fazer um teste de resistência de {@dc 16} Destreza. A menos que o teste seja bem-sucedido, o lançador sofre mais metade do dano."
 					]
 				}
 			],
@@ -230,10 +230,10 @@
 				{
 					"name": "Horrid Gnashing",
 					"entries": [
-						"As bocas do anulador rangem incoerentemente enquanto ele consegue ver qualquer inimigo. Cada criatura que iniciar seu turno a até 6 metros do anulador e puder ouvi-lo deve realizar um teste de resistência de {@dc 16} Sabedoria. A menos que o salvamento seja bem-sucedido, a criatura rola um {@dice d8} para determinar o que fará durante o turno atual:",
+						"As bocas do anulador variam incoerentemente enquanto ele consegue ver qualquer inimigo. Cada criatura que inicia seu turno a até 6 metros do anulador e pode ouvi-lo deve realizar um teste de resistência de {@dc 16} Sabedoria. A menos que o salvamento seja bem-sucedido, a criatura rola um {@dice d8} para determinar o que acontecerá durante o turno atual:",
 						"1-4: A criatura é {@condition stunned} até o final do turno.",
 						"5-6: A criatura fica {@condition frightened} até o final do turno e usa seu movimento para chegar o mais longe possível do anulador.",
-						"7-8: A criatura não se move e usa sua ação para realizar um ataque corpo a corpo contra uma criatura aleatória (que não seja ela mesma) se alguma estiver ao seu alcance. Caso contrário, não faz nada."
+						"7-8: Uma criatura não se move e usa sua ação para realizar um ataque corpo a corpo contra uma criatura procurada (que não seja ela mesma) se estiver alguma vez ao seu alcance. Caso contrário, não faz nada."
 					]
 				},
 				{
@@ -259,7 +259,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 10 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano cortante mais 11 ({@damage 2d10}) dano de força, e o alvo é {@condition grappled} (escape {@dc 16}) se for uma criatura. O anulador tem duas garras, cada uma das quais pode agarrar uma criatura."
+						"{@atk mw} {@hit 8} para acertar, alcance 10 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano cortante mais 11 ({@damage 2d10}) dano de força, e o alvo é {@condition grappled} (escape {@dc 16}) se para uma criatura. O anulador tem duas garras, cada uma das quais pode agarrar uma criatura."
 					]
 				}
 			],
@@ -267,7 +267,7 @@
 				{
 					"name": "Counterspell",
 					"entries": [
-						"O anulador tenta interromper uma criatura que ele possa ver a até 18 metros no processo de lançar um feitiço. Se a criatura estiver lançando uma magia de 3º nível ou inferior, sua magia falha e não tem efeito. Se estiver lançando uma magia de 4º nível ou superior, o anulador faz um teste de Carisma com CD igual a 10 + o nível da magia. Se obtiver sucesso, o feitiço da criatura falha e não tem efeito."
+						"O anulador tenta interromper uma criatura que ele possa ver a até 18 metros no processo de lançar um feitiço. Se uma criatura estiver lançando uma magia de 3º nível ou inferior, sua magia falha e não tem efeito. Se você estiver lançando uma magia de 4º nível ou superior, o anulador faz um teste de Carisma com CD igual a 10 + o nível da magia. Se obteve sucesso, o feitiço da criatura falhou e não teve efeito."
 					]
 				}
 			],
@@ -395,7 +395,7 @@
 				{
 					"name": "Reversal",
 					"entries": [
-						"Quando uma criatura que o reversor pode ver a até 9 metros dele recupera pontos de vida, o reversor reduz o número de pontos de vida recuperados para 0 e o reversor causa 13 ({@damage 3d8}) de dano de força à criatura."
+						"Quando uma criatura que o reversor pode ver a até 9 metros dele recuperar pontos de vida, o reversor reduz o número de pontos de vida recuperados para 0 e o reversor causa 13 ({@damage 3d8}) de dano de força à criatura."
 					]
 				}
 			],
@@ -618,7 +618,7 @@
 				{
 					"name": "Blood Curse of Binding (1/Day)",
 					"entries": [
-						"Como uma ação bônus, o caçador de sangue tem como alvo uma criatura que ele possa ver a até 9 metros dele. O alvo deve ter sucesso em um teste de resistência de Força {@dc 14} ou terá sua velocidade reduzida a 0 e será incapaz de reagir. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+						"Como uma ação bônus, o caçador de sangue tem como alvo uma criatura que ele pode ver a até 9 metros dele. O alvo deve ter sucesso em um teste de resistência de Força {@dc 14} ou terá sua velocidade reduzida a 0 e será incapaz de reagir. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre se mesmo obtiver sucesso."
 					]
 				},
 				{
@@ -824,7 +824,7 @@
 				{
 					"name": "Zone of Calamity (Costs 2 Actions)",
 					"entries": [
-						"Uma esfera de confusão mágica com 4,5 metros de raio se estende de um ponto que Bol'bara pode ver a até 18 metros dela e se espalha pelos cantos. Cada criatura que inicia seu turno naquela área é tratada como se fosse alvo do feitiço {@spell confusion} (economize {@dc 12}). A esfera dura enquanto Bol'bara mantiver {@status concentration}, até 1 minuto (como se {@status concentration||concentrating} estivesse em um feitiço)."
+						"Uma esfera de confusão mágica com 4,5 metros de raio se estende de um ponto que Bol'bara pode ver a até 18 metros dela e se espalhar pelos cantos. Cada criatura que inicia seu turno nessa área é tratada como se fosse alvo do feitiço {@spell confusion} (economize {@dc 12}). A esfera dura enquanto Bol'bara mantiver {@status concentration}, até 1 minuto (como se {@status concentration||concentrating} estava em um feitiço)."
 					]
 				}
 			],
@@ -860,7 +860,7 @@
 				"THW"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true
 		},
@@ -911,7 +911,7 @@
 				{
 					"name": "Bladed Hide",
 					"entries": [
-						"No início de cada um de seus turnos, o charneca causa 5 ({@damage 2d4}) de dano perfurante a qualquer criatura que o agarre."
+						"No início de cada um de seus turnos, a charneca causa 5 ({@damage 2d4}) de dano perfurante a qualquer criatura que o agarre."
 					]
 				},
 				{
@@ -925,7 +925,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O charneca faz dois ataques: um com suas lâminas e outro com suas garras."
+						"A charneca faz dois ataques: um com suas lâminas e outro com suas garras."
 					]
 				},
 				{
@@ -1021,7 +1021,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura. {@h}4 ({@damage 1d4 + 2}) dano perfurante e o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 11} ou se tornará {@condition frightened} até o início do próximo turno do rastreador."
+						"{@atk mw} {@hit 4} para acertar, alcance 1,5 m, uma criatura. {@h}4 ({@damage 1d4 + 2}) dano perfurante e o alvo deve ter sucesso em um teste de resistência da Sabedoria {@dc 11} ou se tornará {@condition frightened} até o início do próximo giro do rastreador."
 					]
 				},
 				{
@@ -1155,13 +1155,13 @@
 				{
 					"name": "Alluring Thrum {@recharge 5}",
 					"entries": [
-						"O emissário emite um zumbido terrível, mas sedutor. Cada criatura a até 6 metros do emissário que puder ouvi-lo e que não seja uma aberração deve ser bem sucedida em um teste de resistência de Constituição {@dc 14} ou será {@condition charmed} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"O emissário emite um zumbido terrível, mas sedutor. Cada criatura a até 6 metros do emissário que puder ouvi-lo e que não seja uma aberração deve ser bem sucedida em um teste de resistência de Constituição {@dc 14} ou será {@condition charmed} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				},
 				{
 					"name": "Crystal Spores {@recharge}",
 					"entries": [
-						"Uma nuvem de esporos cristalinos tóxicos com 4,5 metros de raio se estende do emissário. Os esporos se espalharam pelos cantos. Cada criatura na área deve ter sucesso em um teste de resistência de Constituição {@dc 14} ou se tornará {@condition poisoned}. Enquanto {@condition poisoned} dessa forma, uma criatura sofre 11 ({@damage 2d10}) de dano de veneno no início de cada um de seus turnos. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso."
+						"Uma nuvem de esporos cristalinos tóxicos com 4,5 metros de raio se estende do emissário. Os esporos se espalharam pelos cantos. Cada criatura na área deve ter sucesso em um teste de resistência de Constituição {@dc 14} ou se tornará {@condition poisoned}. Enquanto {@condition poisoned} dessa forma, uma criatura sofre 11 ({@damage 2d10}) de dano de veneno no início de cada um de seus turnos. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso."
 					]
 				}
 			],
@@ -1278,7 +1278,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O vidente usa Cajado de Fissão duas vezes, Orbe Psicodélico duas vezes ou cada um uma vez."
+						"O vidente usa Cajado de Fissão duas vezes, Orbe Psicodélico duas vezes ou cada uma vez."
 					]
 				},
 				{
@@ -1290,7 +1290,7 @@
 				{
 					"name": "Psychedelic Orb",
 					"entries": [
-						"O vidente lança um orbe cintilante em uma criatura que ele possa ver a até 120 metros dele. O alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 19} ou sofrerá 27 ({@damage 5d10}) de dano psíquico e sofrerá uma condição aleatória até o início do próximo turno do vidente. Role um {@dice d6} para a condição: (1-2) {@condition blinded}, (3-4) {@condition frightened} ou (5-6) {@condition stunned}."
+						"O vidente lança um orbe cintilante em uma criatura que ele pode ver a até 120 metros dele. O alvo deverá ter sucesso em um teste de resistência de Sabedoria {@dc 19} ou sofrerá 27 ({@damage 5d10}) de dano psíquico e sofrerá uma condição experimentada até o início do próximo turno do vidente. Role um {@dice d6} para a condição: (1-2) {@condition blinded}, (3-4) {@condition frightened} ou (5-6) {@condition stunned}."
 					]
 				}
 			],
@@ -1407,7 +1407,7 @@
 				{
 					"name": "Radiant Mirror",
 					"entries": [
-						"Se o verme sofrer dano radiante, cada criatura a até 6 metros dele também sofrerá esse dano."
+						"Se o verme sofrer dano radiante, cada criatura até 6 metros também sofrerá esse dano."
 					]
 				},
 				{
@@ -1434,7 +1434,7 @@
 					"name": "Bite",
 					"entries": [
 						"{@atk mw} {@hit 13} para acertar, alcance 3 metros, um alvo. {@h}30 ({@damage 5d8 + 8}) dano perfurante. Se o alvo for uma criatura Grande ou menor, ele deverá ter sucesso em um teste de resistência de {@dc 18} Destreza ou será engolido pelo verme. Uma criatura engolida é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do verme e sofre 21 ({@damage 6d6}) de dano de fogo no início de cada turno do verme.",
-						"Se o verme sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o verme deve ter sucesso em um teste de resistência de Constituição {@dc 21} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do verme. Se o verme morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 6 metros de movimento, saindo de {@condition prone}."
+						"Se o verme sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o verme deve ter sucesso em um teste de resistência de Constituição {@dc 21} no final dessa volta ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do verme. Se o verme morrer, uma criatura engolida não será mais {@condition restrained}, pois ele poderá escapar do cadáver usando 6 metros de movimento, saindo de {@condition prone}."
 					]
 				}
 			],
@@ -1574,13 +1574,13 @@
 				{
 					"name": "Numbing Aura",
 					"entries": [
-						"Qualquer criatura que comece seu turno a até 3 metros do zumbi deve realizar um teste de resistência de Constituição {@dc 17}. A menos que o teste seja bem-sucedido, a criatura não pode realizar mais de um ataque ou realizar uma ação bônus naquele turno."
+						"Qualquer criatura que comece seu turno até 3 metros do zumbi deve realizar um teste de resistência de Constituição {@dc 17}. A menos que o teste seja bem sucedido, uma criatura não pode mais de um ataque ou realizar uma ação bônus naquele turno."
 					]
 				},
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja de fogo, radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deverá realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja de fogo, radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
 					]
 				}
 			],
@@ -1606,7 +1606,7 @@
 				{
 					"name": "Freezing Stare",
 					"entries": [
-						"O zumbi tem como alvo uma criatura que ele possa ver a até 18 metros dele. O alvo deve ter sucesso em um teste de resistência de Constituição {@dc 17} ou sofrerá 35 ({@damage 10d6}) de dano de frio e permanecerá {@condition paralyzed} até o final do próximo turno."
+						"O zumbi tem como alvo uma criatura que ele poderá ver até 18 metros dele. O alvo deverá ter sucesso em um teste de resistência de Constituição {@dc 17} ou sofrerá 35 ({@damage 10d6}) de dano de frio e permanecerá {@condition paralyzed} até o final do próximo turno."
 					]
 				}
 			],
@@ -1706,7 +1706,7 @@
 				{
 					"name": "Death Burst",
 					"entries": [
-						"Quando o verme morre, ele explode em uma explosão de energia gelada. Cada criatura a até 18 metros dele deve realizar um teste de resistência de Destreza {@dc 20}, sofrendo 28 ({@damage 8d6}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso. As criaturas dentro do verme, quando ele morre, falham automaticamente neste teste de resistência."
+						"Quando o verme morre, ele explode em uma explosão de energia gelada. Cada criatura a até 18 metros deve realizar um teste de resistência de Destreza {@dc 20}, dano 28 ({@damage 8d6}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso. As criaturas dentro do verme, quando ele morre, falham automaticamente neste teste de resistência."
 					]
 				},
 				{
@@ -1727,13 +1727,13 @@
 					"name": "Bite",
 					"entries": [
 						"{@atk mw} {@hit 15} para acertar, alcance 3 metros, um alvo. {@h}22 ({@damage 3d8 + 9}) de dano perfurante mais 10 ({@damage 3d6}) de dano de frio. Se o alvo for uma criatura Grande ou menor, ele deverá ser bem sucedido em um teste de resistência de Destreza {@dc 20} ou será engolido pelo verme. Uma criatura engolida é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do verme e sofre 10 ({@damage 3d6}) de dano ácido e 10 ({@damage 3d6}) de dano frio no início de cada um dos turnos do verme.",
-						"Se o verme sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o verme deve ter sucesso em um teste de resistência de Constituição {@dc 20} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do verme."
+						"Se o verme sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o verme deve ter sucesso em um teste de resistência de Constituição {@dc 20} no final dessa volta ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do verme."
 					]
 				},
 				{
 					"name": "Trill",
 					"entries": [
-						"O verme do gelo emite um grito assustador. Cada criatura a até 18 metros do verme que puder ouvi-lo deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 20} ou será {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência cada vez que sofrer dano e no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso. Uma vez que uma criatura resista com sucesso contra este efeito, ou se este efeito terminar, aquela criatura ficará imune ao Trill de todos os vermes do gelo pelas próximas 24 horas. Os vermes do gelo são imunes a esse efeito."
+						"O verme do gelo emite um grito assustador. Cada criatura a até 18 metros do verme que puder ouvi-lo deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 20} ou será {@condition stunned} por 1 minuto. Uma criatura pode repetir o teste de resistência cada vez que sofrer dano e no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso. Uma vez que uma criatura resista com sucesso contra este efeito, ou se este efeito terminar, essa criatura se tornará imune ao Trill de todos os vermes do gelo nas próximas 24 horas. Os vermes do gelo são imunes a esse efeito."
 					]
 				}
 			],
@@ -1872,13 +1872,13 @@
 				{
 					"name": "Spear Launcher",
 					"entries": [
-						"{@atk rw} {@hit 9} para acertar, alcance de 90 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano perfurante e o alvo é atingido {@condition prone}."
+						"{@atk rw} {@hit 9} para acertar, alcance de 90 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano perfurante e o alvo foi atingido {@condition prone}."
 					]
 				},
 				{
 					"name": "Shrapnel Blast {@recharge}",
 					"entries": [
-						"O redutor lança um jato de metal irregular em um cone de 9 metros. Cada criatura na área deve realizar um teste de resistência de Destreza de {@dc 15}, sofrendo 21 ({@damage 6d6}) de dano perfurante se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O redutor lança um jato de metal irregular em um cone de 9 metros. Cada criatura na área deve realizar um teste de resistência de Destreza de {@dc 15}, dano 21 ({@damage 6d6}) de dano perfurante se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -1986,7 +1986,7 @@
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o gloomstalker tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, o gloomstalker tem manobras de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				}
 			],
@@ -2006,7 +2006,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d6 + 6}) dano cortante mais 7 ({@damage 2d6}) dano necrótico."
+						"{@atk mw} {@hit 9} para acertar, alcance 5 pés, um alvo. {@h}13 ({@damage 2d6 + 6}) dano cortante mais 7 ({@damage 2d6}) dano necrosado."
 					]
 				},
 				{
@@ -2018,7 +2018,7 @@
 				{
 					"name": "Shriek {@recharge}",
 					"entries": [
-						"O sombriostalker emite um grito terrível. Cada inimigo a até 18 metros do gloomstalker que puder ouvi-lo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou permanecerá {@condition paralyzed} até o final do próximo turno do inimigo."
+						"O sombriostalker emite um grito terrível. Cada inimigo a até 18 metros do sombriostalker que pôde ouvi-lo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou permanecerá {@condition paralyzed} até o final do próximo turno do inimigo."
 					]
 				}
 			],
@@ -2107,7 +2107,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"O lobo tem vantagem nas jogadas de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+						"O lobo tem vantagem nas estratégias de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
 					]
 				}
 			],
@@ -2121,7 +2121,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 1d10 + 6}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Força {@dc 16} ou será derrubado {@condition prone}."
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 1d10 + 6}) dano perfurante. Se o alvo for uma criatura, ele deverá ser bem sucedido em um teste de resistência de Força {@dc 16} ou será derrubado {@condition prone}."
 					]
 				},
 				{
@@ -2220,14 +2220,14 @@
 				{
 					"name": "Amphibious",
 					"entries": [
-						"A tartaruga pode respirar ar e água."
+						"Uma tartaruga pode respirar ar e água."
 					]
 				},
 				{
 					"name": "Massive Frame",
 					"entries": [
-						"A tartaruga pode carregar até 20.000 libras de peso em cima de sua carapaça, mas se move a metade da velocidade se o peso exceder 10.000 libras. Criaturas médias ou menores podem se mover por baixo da tartaruga enquanto ela não estiver {@condition prone}.",
-						"Qualquer criatura sob a tartaruga quando ela cair {@condition prone} é {@condition grappled} (escape {@dc 18}). Até que a luta termine, a criatura é {@condition prone} e {@condition restrained}."
+						"A tartaruga pode carregar até 20.000 libras de peso em cima de sua carapaça, mas se mover a metade da velocidade se o peso ultrapassar 10.000 libras. Criaturas médias ou menores podem se mover por baixo da tartaruga enquanto ela não estiver {@condition prone}.",
+						"Qualquer criatura sob uma tartaruga quando ela cair {@condition prone} é {@condition grappled} (escape {@dc 18}). Até que a luta termine, a criatura é {@condition prone} e {@condition restrained}."
 					]
 				}
 			],
@@ -2241,7 +2241,7 @@
 				{
 					"name": "Shell Defense {@recharge 4}",
 					"entries": [
-						"A tartaruga se recolhe em sua carapaça, cai {@condition prone} e ganha um bônus de +5 na CA. Enquanto a tartaruga está em sua carapaça, sua velocidade é 0 e não pode aumentar. A tartaruga pode emergir de sua carapaça como uma ação, e então ela não é mais {@condition prone}."
+						"A tartaruga se recolhe em sua carapaça, cai {@condition prone} e ganha um bônus de +5 na CA. Enquanto uma tartaruga está em sua carapaça, sua velocidade é 0 e não pode aumentar. Uma tartaruga pode emergir de sua carapaça como uma ação, e então ela não é mais {@condition prone}."
 					]
 				}
 			],
@@ -2359,7 +2359,7 @@
 				{
 					"name": "Undead Fortitude",
 					"entries": [
-						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deve realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
+						"Se o dano reduzir o zumbi a 0 pontos de vida, ele deverá realizar um teste de resistência de Constituição com CD 5 + o dano recebido, a menos que o dano seja radiante ou de um acerto crítico. Com um sucesso, o zumbi cai para 1 ponto de vida."
 					]
 				}
 			],
@@ -2367,7 +2367,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O zumbi faz dois ataques de garras. Para cada um desses ataques que reduza uma criatura a 0 pontos de vida, o zumbi pode realizar um ataque de garra adicional."
+						"O zumbi faz dois ataques de garras. Para cada um desses ataques que reduz uma criatura a 0 pontos de vida, o zumbi pode realizar um ataque de garra adicional."
 					]
 				},
 				{
@@ -2382,12 +2382,12 @@
 					"type": "variant",
 					"name": "Husk Zombie Bursters",
 					"entries": [
-						"Some husk zombies become bloated with disease and bile, their frenzied state pushing them to rush other living creatures, explode, and spread their horrid infection. A husk zombie burster has the following additional action option:",
+						"Alguns zumbis de casca ficam inchados com doenças e bile, seu estado frenético os leva a atacar outras criaturas vivas, explodir e espalhar sua horrível infecção. Um estouro de casca de zumbi tem a seguinte opção de ação adicional:",
 						{
 							"type": "entries",
 							"name": "Burst",
 							"entries": [
-								"The zombie explodes and is destroyed. Each creature within 5 feet of it must make a {@dc 12} Constitution saving throw, taking 14 ({@damage 4d6}) poison damage on a failed save, or half as much damage on a successful one. A humanoid creature killed by this damage rises as a {@creature husk zombie|EGW} after 1 minute."
+								"O zumbi explode e é destruído. Cada criatura a até 1,5 metro dele deve realizar um teste de resistência de Constituição {@dc 12}, sofrendo 14 ({@damage 4d6}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura humanóide morta por este dano aumenta como {@creature husk zombie|EGW} após 1 minuto."
 							]
 						}
 					],
@@ -2522,19 +2522,19 @@
 				{
 					"name": "Messy End",
 					"entries": [
-						"O kobold explode 3 rodadas após morrer, ou imediatamente se for morto por um acerto crítico. A explosão destrói o corpo do kobold, deixando seu equipamento para trás. Cada criatura a até 1,5 metro do kobold explodindo deve realizar um teste de resistência de Destreza {@dc 10}, sofrendo 4 ({@damage 1d8}) de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O kobold explode 3 rodadas após morrer, ou imediatamente se morre por um certo crítico. A explosão destrói o corpo do kobold, deixando seu equipamento para trás. Cada criatura a até 1,5 metro do kobold explodindo deve realizar um teste de resistência de Destreza {@dc 10}, dano 4 ({@damage 1d8}) de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"O kobold tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do kobold estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+						"O kobold tem vantagem em um jogo de ataque contra uma criatura se pelo menos um dos aliados do kobold estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
 					]
 				},
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o kobold tem desvantagem nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
+						"Enquanto estiver sob a luz do sol, o kobold tem evita nas jogadas de ataque, bem como nos testes de Sabedoria ({@skill Perception}) que dependem da visão."
 					]
 				}
 			],
@@ -2673,7 +2673,7 @@
 				{
 					"name": "Amphibious",
 					"entries": [
-						"O merrow pode respirar ar e água."
+						"O Merrow pode respirar ar e água."
 					]
 				}
 			],
@@ -2681,13 +2681,13 @@
 				{
 					"name": "Harpoon",
 					"entries": [
-						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano perfurante. Se o alvo for uma criatura Média ou menor, o merrow pode puxá-lo 3 metros para mais perto."
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 5 pés ou alcance 20/60 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano perfurante. Se o alvo for uma criatura média ou menor, o merrow pode puxá-lo 3 metros para mais perto."
 					]
 				},
 				{
 					"name": "Lightning Bolt (3rd-Level Spell; Requires a Spell Slot)",
 					"entries": [
-						"O merrow libera um raio em uma linha de 30 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 13}, sofrendo 28 ({@damage 8d6}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O merrow libera um raio em uma linha de 30 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza {@dc 13}, dano 28 ({@damage 8d6}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -2720,9 +2720,9 @@
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2859,7 +2859,7 @@
 				"I"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2954,7 +2954,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 6} para acertar, alcance 1,5 m, uma criatura. {@h}13 ({@damage 2d8 + 4}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 15} ou se tornar {@condition poisoned} por 1 minuto. A criatura {@condition poisoned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso."
+						"{@atk mw} {@hit 6} para acertar, alcance 1,5 m, uma criatura. {@h}13 ({@damage 2d8 + 4}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência da Constituição {@dc 15} ou se tornar {@condition poisoned} por 1 minuto. A criatura {@condition poisoned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
 					]
 				},
 				{
@@ -2966,7 +2966,7 @@
 				{
 					"name": "Siphon Life {@recharge 4}",
 					"entries": [
-						"O nergaliid extrai magicamente a vida de um humanóide que pode ver a até 12 metros dele. O alvo deve fazer um teste de resistência de {@dc 15} Sabedoria. Um alvo {@condition incapacitated} falha no salvamento automaticamente. Se falhar na resistência, a criatura sofre 10 ({@damage 3d6}) de dano psíquico e o nergaliid ganha pontos de vida temporários iguais ao dano sofrido. Se obtiver sucesso, o alvo sofre metade do dano e o nergaliid não ganha pontos de vida temporários. Se este dano matar o alvo, seu corpo sobe no final do turno atual do nergaliid como um {@creature husk zombie|EGW} (veja anteriormente neste capítulo)."
+						"O nergalid extrai magicamente a vida de um humanóide que pode ver a até 12 metros dele. O alvo deve fazer um teste de resistência de {@dc 15} Sabedoria. Um alvo {@condition incapacitated} falha no salvamento automaticamente. Se falhar na resistência, a criatura sofre 10 ({@damage 3d6}) de dano psíquico e o nergalídeo ganha pontos de vida temporários iguais ao dano sofrido. Se obtiver sucesso, o alvo sofre metade do dano e o nergaliid não ganha pontos de vida temporários. Se este dano matar o alvo, seu corpo sobe no final do turno atual do nergaliid como um {@creature husk zombie|EGW} (veja anteriormente neste capítulo)."
 					]
 				}
 			],
@@ -3145,8 +3145,8 @@
 				"R"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -3272,7 +3272,7 @@
 				{
 					"name": "Shark Telepathy",
 					"entries": [
-						"O bruxo pode comandar magicamente qualquer tubarão a até 36 metros dele, usando telepatia limitada."
+						"O bruxo pode comandar magicamente qualquer tubarão até 36 metros dele, usando telepatia limitada."
 					]
 				}
 			],
@@ -3292,7 +3292,7 @@
 				{
 					"name": "Sword of Fathoms",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d10 + 2}) dano cortante, e se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou começará a sufocar. A criatura sufocante fica {@condition incapacitated} até o final do próximo turno, quando o efeito nela termina."
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}7 ({@damage 1d10 + 2}) dano cortante, e se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou prescrever a sufocar. A criatura sufocante fica {@condition incapacitated} até o final do próximo turno, quando o efeito nela termina."
 					]
 				},
 				{
@@ -3307,12 +3307,12 @@
 					"type": "variant",
 					"name": "Rod of Retribution",
 					"entries": [
-						"Sahuagin warlocks of Uk'otoa who have exceptional potential in the eyes of the leviathan lord are granted a {@item rod of retribution|egw} in addition to Uk'otoa's typical blessing, the Sword of Fathoms. A sahuagin warlock of Uk'otoa holding this rod gains the following reaction:",
+						"Os feiticeiros Sahuagin de Uk'otoa que têm potencial excepcional aos olhos do senhor leviatã recebem um {@item rod of retribution|egw} além da bênção típica de Uk'otoa, a Espada das Braças. Um bruxo sahuagin de Uk'otoa segurando esta vara ganha a seguinte reação:",
 						{
 							"type": "entries",
 							"name": "Retribution (3/Day)",
 							"entries": [
-								"When a creature the warlock can see within 60 feet of it damages the warlock, the creature must make a {@dc 13} Dexterity saving throw, taking 11 ({@damage 2d10}) lightning damage on a failed save, or half as much damage on a successful one."
+								"Quando uma criatura que o bruxo pode ver a até 18 metros dele causa dano ao bruxo, a criatura deve realizar um teste de resistência de Destreza {@dc 13}, sofrendo 11 ({@damage 2d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
 							]
 						}
 					]
@@ -3351,18 +3351,18 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"blinded",
-				"charmed",
-				"invisible"
+				"cego",
+				"encantado",
+				"invisível"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"strength",
-				"wisdom"
+				"destreza",
+				"força",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3399,7 +3399,7 @@
 		{
 			"name": "Sea Fury",
 			"group": [
-				"Hags"
+				"Bruxas"
 			],
 			"source": "EGW",
 			"page": 299,
@@ -3526,7 +3526,7 @@
 				{
 					"name": "Death Glare",
 					"entries": [
-						"A fúria do mar tem como alvo uma criatura {@condition frightened} que ela possa ver a até 9 metros dela. O alvo deve ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou cairá para 0 pontos de vida."
+						"A fúria do mar tem como alvo uma criatura {@condition frightened} que ela pode ver a até 9 metros dela. O deve ter sucesso em um alvo de teste de resistência de {@dc 16} Sabedoria ou cairá para 0 pontos de vida."
 					]
 				}
 			],
@@ -3534,19 +3534,19 @@
 				{
 					"name": "As Water",
 					"entries": [
-						"A fúria do mar se transforma em uma onda de água do mar espumosa, junto com tudo o que está vestindo ou carregando, e avança em sua velocidade sem provocar ataques de oportunidade. Enquanto estiver neste formato, não pode ser {@condition grappled} ou {@condition restrained}. Ele reverte à sua verdadeira forma no final deste movimento."
+						"A fúria do mar se transforma em uma onda de água do mar espumosa, junto com tudo o que está acostumado ou carregando, e avança em sua velocidade sem provocar ataques de oportunidade. Enquanto estiver neste formato, não poderá ser {@condition grappled} ou {@condition restrained}. Ele reverte à sua verdadeira forma no final deste movimento."
 					]
 				},
 				{
 					"name": "Fearsome Apparition (Costs 2 Actions)",
 					"entries": [
-						"A fúria do mar evoca a aparição de uma de suas irmãs mortas, que aparece em um espaço desocupado que a fúria do mar pode ver a até 9 metros dele. Os inimigos da fúria do mar que puderem ver a aparição devem ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou serão {@condition frightened} dela até que desapareça no final do próximo turno da fúria do mar."
+						"A fúria do mar evoca a intimidade de uma de suas irmãs mortas, que aparece em um espaço desocupado que a fúria do mar pode ver a até 9 metros dele. Os inimigos da fúria do mar que podem ver a intimidade devem ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou serão {@condition frightened} dela até que desapareça no final do próximo turno da fúria do mar."
 					]
 				},
 				{
 					"name": "Conjure Snakes (Costs 3 Actions)",
 					"entries": [
-						"A fúria do mar vomita um {@creature swarm of poisonous snakes}, que ocupa o mesmo espaço que a fúria do mar, age por sua própria contagem de iniciativa e ataca conforme direcionado pela fúria do mar. A fúria do mar pode controlar até três desses enxames por vez."
+						"A fúria do mar vomita um {@creature swarm of poisonous snakes}, que ocupa o mesmo espaço que a fúria do mar, age por sua própria contagem de iniciativa e ataca conforme direcionado pela fúria do mar. A fúria do mar pode controlar até três desses exames por vez."
 					]
 				}
 			],
@@ -3588,7 +3588,7 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"frightened"
+				"assustado"
 			],
 			"savingThrowForced": [
 				"wisdom"
@@ -3597,8 +3597,8 @@
 				"strength"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"wisdom"
+				"constituição",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3656,7 +3656,7 @@
 				{
 					"name": "Stench",
 					"entries": [
-						"Qualquer criatura que comece seu turno a até 1,5 metro do shadowghast deve ser bem sucedida em um teste de resistência de Constituição {@dc 12} ou permanecerá {@condition poisoned} até o início de seu próximo turno. Em um teste de resistência bem-sucedido, a criatura fica imune a esse Fedor por 24 horas."
+						"Qualquer criatura que iniciar seu turno até 1,5 metro do shadowghast deverá ser bem sucedida em um teste de resistência de Constituição {@dc 12} ou permanecerá {@condition poisoned} até o início de seu próximo turno. Em um teste de resistência bem sucedido, a criatura fica imune a esse Fedor por 24 horas."
 					]
 				},
 				{
@@ -3682,7 +3682,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) cortando dano. Se o alvo for uma criatura que não seja um morto-vivo, ele deverá ser bem sucedido em um teste de resistência de Constituição {@dc 12} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) cortando dano. Se o alvo for uma criatura que não seja um morto-vivo, ele deverá ser bem sucedido em um teste de resistência de Constituição {@dc 12} ou será {@condition paralyzed} por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre se mesmo obtiver sucesso."
 					]
 				}
 			],
@@ -3794,7 +3794,7 @@
 				{
 					"name": "Powerful Build",
 					"entries": [
-						"Sken conta como um tamanho maior ao determinar sua capacidade de carga e o peso que ela pode empurrar, arrastar ou levantar."
+						"Saiba como um tamanho maior para determinar sua capacidade de carga e o peso que ela pode empurrar, arrastar ou levantar."
 					]
 				},
 				{
@@ -3816,7 +3816,7 @@
 				{
 					"name": "Stone's Endurance (Recharges after a Short or Long Rest)",
 					"entries": [
-						"Quando Sken sofre dano, ela pode usar sua reação para reduzir o dano recebido em 8 ({@dice 1d12 + 2})."
+						"Quando Sken sofre dano, ela pode usar sua ocorrência para reduzir o dano recebido em 8 ({@dice 1d12 + 2})."
 					]
 				}
 			],
@@ -3895,8 +3895,8 @@
 				}
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"strength"
+				"constituição",
+				"força"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -3998,7 +3998,7 @@
 				{
 					"name": "Tail",
 					"entries": [
-						"{@atk mw} {@hit 6} para acertar, alcance 15 pés, um alvo. {@h}14 ({@damage 2d10 + 3}) dano de concussão. Se o alvo for uma criatura Grande ou menor, é {@condition grappled} (escape {@dc 12})."
+						"{@atk mw} {@hit 6} para acertar, alcance 15 pés, um alvo. {@h}14 ({@damage 2d10 + 3}) dano de concussão. Se o alvo para uma criatura Grande ou menor, é {@condition grappled} (escape {@dc 12})."
 					]
 				}
 			],
@@ -4129,7 +4129,7 @@
 				{
 					"name": "Charge",
 					"entries": [
-						"Se o udaak se mover pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque violento no mesmo turno, o alvo sofre 27 ({@damage 6d8}) de dano de concussão extra. Se o alvo for uma criatura, ele deve ter sucesso em um teste de resistência de Força {@dc 21} ou será empurrado até 6 metros de distância do udaak e derrubado {@condition prone}."
+						"Se o udaak se move pelo menos 6 metros em linha reta em direção a um alvo e então acertá-lo com um ataque violento no mesmo turno, o alvo sofre 27 ({@damage 6d8}) de dano de concussão extra. Se o alvo for uma criatura, ele deverá ter sucesso em um teste de resistência de Força {@dc 21} ou será empurrado até 6 metros de distância do udaak e derrubado {@condition prone}."
 					]
 				},
 				{
@@ -4161,8 +4161,8 @@
 				{
 					"name": "Swallow",
 					"entries": [
-						"O udaak realiza um ataque de mordida contra um alvo Grande ou menor que esteja agarrando. Se o ataque acertar, o alvo também é engolido e a luta termina. Uma criatura engolida é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do udaak e sofre 21 ({@damage 6d6}) de dano ácido no início de cada um dos turnos do udaak.",
-						"Se o udaak sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o udaak deve ter sucesso em um teste de resistência de Constituição {@dc 21} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do udaak. Se o udaak morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 6 metros de movimento, saindo de {@condition prone}."
+						"O udaak realiza um ataque de mordida contra um alvo grande ou menor que está agarrando. Se o ataque acertar, o alvo também é engolido e a luta termina. Uma criatura engolida é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do udaak e sofre 21 ({@damage 6d6}) de dano ácido no início de cada um dos turnos do udaak.",
+						"Se o udaak sofrer 30 de dano ou mais em um único turno de uma criatura dentro dele, o udaak deverá ter sucesso em um teste de resistência de Constituição {@dc 21} no final daquele turno ou regurgitar todas as criaturas engolidas, que caem {@condition prone} em um espaço a até 3 metros do udaak. Se o udaak morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 6 metros de movimento, saindo de {@condition prone}."
 					]
 				}
 			],
@@ -4256,13 +4256,13 @@
 				{
 					"name": "Voice Lock",
 					"entries": [
-						"O buscador de vox deve se mover em direção e atacar a fonte da voz mais próxima a até 18 metros dela, excluindo todos os outros alvos, enquanto permanecer operacional."
+						"O buscador de voz deve se mover em direção e atacar a fonte da voz mais próximo a até 18 metros dela, excluindo todos os outros alvos, enquanto permanece operacional."
 					]
 				},
 				{
 					"name": "Spider Climb",
 					"entries": [
-						"O buscador de vox pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
+						"O buscador de voz pode escalar superfícies difíceis, inclusive de cabeça para baixo em tetos, sem precisar fazer um teste de habilidade."
 					]
 				}
 			],

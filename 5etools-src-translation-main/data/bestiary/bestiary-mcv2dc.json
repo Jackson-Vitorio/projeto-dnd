@@ -70,13 +70,13 @@
 				{
 					"name": "Ghastly Visions",
 					"entries": [
-						"Cada criatura que iniciar seu turno a até 9 metros do devorador de sonhos deve realizar um teste de resistência de {@dc 16} Sabedoria. Se falhar no salvamento, a criatura será {@condition frightened} do comedor de sonhos até o início do próximo turno da criatura. Se o teste de resistência de uma criatura for bem-sucedido, a criatura ficará imune à característica Visões Medonhas deste devorador de sonhos pelas próximas 24 horas."
+						"Cada criatura que inicia seu turno até 9 metros do Devorador de Sonhos deve realizar um teste de resistência de {@dc 16} Sabedoria. Se falhar no salvamento, a criatura será {@condition frightened} do comedor de sonhos até o início do próximo turno da criatura. Se o teste de resistência de uma criatura for bem-sucedida, uma criatura ficará imune à característica Visões Medonhas deste devorador de sonhos pelas próximas 24 horas."
 					]
 				},
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"O devorador de sonhos pode se mover através de outras criaturas e objetos como se fossem um terreno difícil. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+						"O devorador de sonhos pode se mover através de outras criaturas e objetos como se fossem um terreno difícil. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu giro dentro de um objeto."
 					]
 				},
 				{
@@ -104,9 +104,9 @@
 				{
 					"name": "Engulfing Nightmare",
 					"entries": [
-						"O devorador de sonhos tem como alvo uma criatura a até 1,5 metro de si mesmo. O alvo deve ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou será engolfado pelo devorador de sonhos, pois o devorador de sonhos envolve a criatura em um miasma de seus piores medos.",
+						"O devorador de sonhos tem como alvo uma criatura a até 1,5 metro de si mesmo. O alvo deve ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou será engolfado pelo devorador de sonhos, pois o devorador de sonhos envolve uma criatura em um miasma de seus piores medos.",
 						"Quando o devorador de sonhos engole um alvo, o devorador de sonhos entra em seu espaço e o alvo sofre imediatamente 10 ({@damage 3d6}) de dano psíquico. Um alvo engolfado é {@condition restrained} e {@condition blinded}, e sofre 10 ({@damage 3d6}) de dano psíquico adicional no início de cada turno do comedor de sonhos. Quando o devorador de sonhos se move, o alvo engolfado se move com ele.",
-						"O devorador de sonhos pode ter apenas um alvo engolido por vez. Um alvo engolfado escapa no início de seu turno fazendo um teste de resistência de {@dc 16} Sabedoria. Se obtiver sucesso, o alvo escapa; o alvo não está mais engolfado e entra em um espaço de sua escolha a até 1,5 metro do devorador de sonhos. Uma criatura a até 4,5 metros do devorador de sonhos também pode usar sua ação para tentar libertar um alvo engolfado. Fazer isso exige que a criatura use sua ação para fazer um teste de {@dc 16} Carisma ({@skill Persuasion}) para convencer o alvo engolfado de que o pesadelo não é real, com o alvo escapando com sucesso. A criatura que faz o teste sofre 10 ({@damage 3d6}) de dano psíquico, independentemente do sucesso ou fracasso do teste, enquanto sua mente esbarra no pesadelo."
+						"O devorador de sonhos pode ter apenas um alvo engolido por vez. Um engolfado escapa no início de seu turno fazendo um alvo de teste de resistência de {@dc 16} Sabedoria. Se obtiver sucesso, o alvo escapa; o alvo não está mais engolfado e entra em um espaço de sua escolha a até 1,5 metro do devorador de sonhos. Uma criatura a até 4,5 metros do devorador de sonhos também pode usar sua ação para tentar libertar um alvo engolfado. Fazer isso exige que uma criatura use sua ação para fazer um teste de {@dc 16} Carisma ({@skill Persuasion}) para convencer o alvo engolfado de que o pesadelo não é real, com o alvo escapando com sucesso. Uma criatura que faz o teste sofre 10 ({@damage 3d6}) de dano psíquico, independentemente do sucesso ou fracasso do teste, enquanto sua mente não termina no pesadelo."
 					]
 				}
 			],
@@ -226,7 +226,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Na batalha, Ember veste uma armadura mágica forjada sob medida para seu uso. Enquanto estiver usando a armadura, Ember adiciona seu modificador de Carisma às jogadas de dano de sua arma (incluídas nas descrições de ataque), e sua CA não pode ser inferior a 20."
+						"Na batalha, Ember veste uma armadura mágica forjada sob medida para seu uso. Enquanto estiver usando a armadura, Ember adiciona seu modificador de Carisma às jogadas de dano de sua arma (incluídas nas transferências de ataque), e seu CA não pode ser inferior a 20."
 					]
 				}
 			],
@@ -252,7 +252,7 @@
 				{
 					"name": "Firestorm Breath {@recharge 5}",
 					"entries": [
-						"Ember exala chamas e cinzas em um cone de 27 metros. Cada criatura naquela área deve realizar um teste de resistência de {@dc 22} Destreza. Se falhar na resistência, uma criatura sofre 56 ({@damage 16d6}) de dano de fogo e é empurrada até 9 metros de distância de Ember e derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano sem outros efeitos. Se uma criatura for reduzida a 0 pontos de vida por este efeito, a criatura morre imediatamente e seu corpo é reduzido a cinzas."
+						"Ember exala chamas e cinzas em um cone de 27 metros. Cada criatura nesta área deve realizar um teste de resistência de {@dc 22} Destreza. Se falhar na resistência, uma criatura sofre 56 ({@damage 16d6}) de dano de fogo e é empurrada até 9 metros de distância de Ember e derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano sem outros efeitos. Se uma criatura por menos de 0 pontos de vida por este efeito, uma criatura morre imediatamente e seu corpo é reduzido a cinzas."
 					]
 				}
 			],
@@ -260,7 +260,7 @@
 				{
 					"name": "Alter Shape",
 					"entries": [
-						"Ember se transforma magicamente em um abutre ou mago e mantém seu alinhamento, imunidade a danos, pontos de vida e dados de vida, bem como seus valores de Inteligência, Sabedoria e Carisma. Esta transformação termina se Ember for reduzido a 0 pontos de vida ou se ele usar outra ação bônus para encerrá-la."
+						"Ember se transforma magicamente em um abutre ou mago e mantém seu alinhamento, imunidade a danos, pontos de vida e dados de vida, bem como seus valores de Inteligência, Sabedoria e Carisma. Esta transformação termina se Ember for limitada a 0 pontos de vida ou se ele usar outra ação bônus para encerrá-la."
 					]
 				}
 			],
@@ -274,7 +274,7 @@
 				{
 					"name": "Searing Bite (Costs 2 Actions)",
 					"entries": [
-						"Ember faz um ataque de mordida. Se o ataque acertar, causará 7 ({@damage 2d6}) de dano de fogo adicional."
+						"Ember faz um ataque de morte. Se o ataque ocorrer, causará 7 ({@damage 2d6}) de dano de fogo adicional."
 					]
 				}
 			],
@@ -410,7 +410,7 @@
 				{
 					"name": "Legendary Resistance (2/Day)",
 					"entries": [
-						"Se o Mestre da Floresta falhar em um teste de resistência, ele pode escolher ter sucesso."
+						"Se o Mestre da Floresta falhar em um teste de resistência, ele pode escolher o sucesso."
 					]
 				},
 				{
@@ -450,8 +450,8 @@
 				{
 					"name": "Erupting Briars {@recharge 4}",
 					"entries": [
-						"O Mestre da Floresta toca seu chifre na terra e faz com que uma parede de arbustos de 1,5 metro de altura irrompa em uma linha de 27 metros e 3 metros de largura. Quando a parede aparece, cada criatura em sua área é empurrada para o espaço desocupado mais próximo adjacente à parede e deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 27 ({@damage 6d8}) de dano perfurante se falhar na resistência ou metade do dano se obtiver sucesso.",
-						"A parede de sarças dura até o início do próximo turno do Mestre da Floresta. A parede bloqueia a linha de visão e conta como terreno difícil para todas as criaturas, exceto o Mestre da Floresta. A primeira vez que uma criatura entra na área da parede em um turno, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 15} ou sofrerá 13 ({@damage 3d8}) de dano perfurante."
+						"O Mestre da Floresta toca seu chifre na terra e faz com que uma parede de arbustos de 1,5 metro de altura irrompa em uma linha de 27 metros e 3 metros de largura. Quando uma parede aparece, cada criatura em sua área é empurrada para o espaço desocupado mais próximo à parede e deve realizar um teste de resistência de Destreza {@dc 15}, causando 27 ({@damage 6d8}) de dano perfurante se falhar na resistência ou metade do dano se obtiver sucesso.",
+						"A parede de sarças dura até o início do próximo turno do Mestre da Floresta. A parede bloqueia a linha de visão e conta como terreno difícil para todas as criaturas, exceto o Mestre da Floresta. Na primeira vez que uma criatura entra na área da parede em um turno, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 15} ou sofrerá 13 ({@damage 3d8}) de dano perfurante."
 					]
 				}
 			],
@@ -459,7 +459,7 @@
 				{
 					"name": "Misty Escape",
 					"entries": [
-						"Se o Mestre da Floresta sofrer dano de um ataque corpo a corpo, ele, junto com qualquer equipamento que esteja vestindo ou carregando, se teletransportará para um espaço desocupado a até 9 metros que ele possa ver."
+						"Se o Mestre da Floresta sofrer dano de um ataque corpo a corpo, ele, junto com qualquer equipamento que você esteja trabalhando ou carregando, se teletransportará para um espaço desocupado a até 9 metros que ele possa ver."
 					]
 				}
 			],
@@ -594,13 +594,13 @@
 				{
 					"name": "Duty-Bound",
 					"entries": [
-						"O renunciado é obrigado a cumprir um dever singular com o qual se comprometeu em vida. Embora este dever esteja incompleto, sempre que o renunciado for destruído, ele se forma novamente em seu local anterior após 3 ({@dice 1d6}) dias, com todos os seus pontos de vida restaurados."
+						"O renunciado é obrigado a cumprir um dever singular com o que se comprometeu em vida. Embora este deva ser incompleto, sempre que o renunciado por destruído, ele se forma novamente em seu local anterior após 3 ({@dice 1d6}) dias, com todos os seus pontos de vida restaurados."
 					]
 				},
 				{
 					"name": "Incorporeal Movement",
 					"entries": [
-						"Os renegados podem se mover através de outras criaturas e objetos como se fossem terrenos difíceis. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu turno dentro de um objeto."
+						"Os renegados podem se mover através de outras criaturas e objetos como se fossem terrenos difíceis. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu giro dentro de um objeto."
 					]
 				},
 				{
@@ -628,7 +628,7 @@
 				{
 					"name": "Phantasmic Battalion {@recharge 5}",
 					"entries": [
-						"O renunciado convoca um batalhão de soldados fantasmagóricos em seu auxílio. Os soldados fantasmagóricos preenchem um cubo de 3 metros centrado no renunciado, movem-se com o renunciado quando o renunciado se move e duram até o início do próximo turno do renunciado. Enquanto os soldados fantasmas estiverem presentes, a área que eles ocupam é considerada terreno difícil para todas as criaturas, exceto os renegados, e o alcance dos renunciados para ataques com armas corpo a corpo aumenta em 3 metros."
+						"O renunciou à convocação de um batalhão de soldados fantasmagóricos em seu auxílio. Os soldados fantasmagóricos preenchem um cubo de 3 metros centrado no renunciado, movem-se com o renunciado quando o renunciado se movem e duram até o início do próximo turno do renunciado. Enquanto os soldados fantasmas estão presentes, a área que eles ocupam é considerada terreno difícil para todas as criaturas, exceto os renegados, e o alcance dos renunciados para ataques com armas corpo a corpo aumenta em 3 metros."
 					]
 				}
 			],
@@ -656,10 +656,10 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"prone"
+				"propenso"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -722,19 +722,19 @@
 				{
 					"name": "Crystal Blade",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano de força, mais 7 ({@damage 2d6}) de dano de força se o buscador for Grande."
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano de força, mais 7 ({@damage 2d6}) de dano de força se o buscador para Grande."
 					]
 				},
 				{
 					"name": "Augment Physicality (1/Day)",
 					"entries": [
-						"Por 1 minuto, o buscador aumenta magicamente sua habilidade física e aumenta de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto aumentado, o buscador é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o buscador não tiver espaço para se tornar Grande, ele atinge o tamanho máximo possível no espaço disponível."
+						"Por 1 minuto, o buscador aumenta magicamente sua habilidade física e aumenta de tamanho, junto com qualquer coisa que você usa ou carrega. Enquanto continua, o buscador é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o buscador não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
 					]
 				},
 				{
 					"name": "Change Shape (1/Day)",
 					"entries": [
-						"O buscador se transforma magicamente para parecer e se sentir como um Humanóide Médio que viu. Qualquer equipamento que o buscador esteja usando ou carregando não é transformado e as estatísticas do buscador não mudam. O buscador reverte à sua forma verdadeira se for reduzido a 0 pontos de vida ou se o buscador usar uma ação para encerrar a transformação."
+						"O buscador se transforma magicamente para parecer e se sentir como um Humanóide Médio que viu. Qualquer equipamento que o buscador esteja usando ou carregando não é transformado e as estatísticas do buscador não mudam. O buscador reverte à sua forma verdadeira se for limitado a 0 pontos de vida ou se o buscador usar uma ação para consolidar a transformação."
 					]
 				}
 			],
@@ -742,7 +742,7 @@
 				{
 					"name": "Veil Walk {@recharge 4}",
 					"entries": [
-						"O buscador, junto com qualquer equipamento que esteja usando ou carregando, vira {@condition invisible} e se teletransporta para um espaço desocupado que pode ver a até 9 metros de si mesmo. O buscador permanece {@condition invisible} até o início de seu próximo turno ou até imediatamente após o buscador fazer uma jogada de ataque, o que ocorrer primeiro."
+						"O buscador, junto com qualquer equipamento que você esteja usando ou carregando, vira {@condition invisible} e se teletransporta para um espaço ocupado que pode chegar a até 9 metros de si mesmo. O buscador permanece {@condition invisible} até o início de seu próximo turno ou até imediatamente após o buscador fazer uma jogada de ataque, o que ocorre primeiro."
 					]
 				}
 			],
@@ -855,7 +855,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O guardião do véu usa Aumentar Fisicalidade, se disponível, e faz dois ataques Mirage Flare."
+						"A guarda do véu usa Aumentar Fisicalidade, se disponível, e faz dois ataques Mirage Flare."
 					]
 				},
 				{
@@ -867,13 +867,13 @@
 				{
 					"name": "Augment Physicality (1/Day)",
 					"entries": [
-						"Por 1 minuto, o guardião do véu obscurece magicamente sua localização, aumenta sua habilidade física e aumenta de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Enquanto o guardião do véu estiver aumentado, as jogadas de ataque contra ele têm desvantagem, ele é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o guardião do véu não tiver espaço para se tornar Grande, ele atinge o tamanho máximo possível no espaço disponível. Esses aumentos terminam se o guardião do véu for {@condition incapacitated}."
+						"Por 1 minuto, o guarda do véu obscurece magicamente sua localização, aumenta sua habilidade física e aumenta de tamanho, junto com qualquer coisa que você usa ou carrega. Enquanto a guarda do véu aumenta, as jogadas de ataque contra ele têm desvantagem, ele é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o guardião do véu não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível. Esses aumentos terminam se o guardião do véu for {@condition incapacitated}."
 					]
 				},
 				{
 					"name": "Change Shape (3/Day)",
 					"entries": [
-						"O guardião do véu se transforma magicamente para parecer um Humanóide Médio que viu. Qualquer equipamento que o guardião do véu esteja usando ou carregando não é transformado e as estatísticas do guardião do véu não mudam. O guardião do véu reverte à sua forma verdadeira se for reduzido a 0 pontos de vida ou se o guardião do véu usar uma ação para encerrar a transformação."
+						"O guardião do véu se transforma magicamente para parecer um Humanóide Médio que viu. Qualquer equipamento que o guardião do véu esteja usando ou carregando não é transformado e as estatísticas do guardião do véu não mudam. O guardião do véu reverte à sua forma verdadeira se for limitado a 0 pontos de vida ou se o guardião do véu usar uma ação para encerrar a transformação."
 					]
 				}
 			],
@@ -881,7 +881,7 @@
 				{
 					"name": "Obscuring Mist",
 					"entries": [
-						"Se uma criatura que o guardião do véu possa ver a até 9 metros de si mesmo for alvo de um ataque, o guardião do véu cerca a criatura com névoa ilusória, concedendo à criatura {@quickref Cover||3||half cover} até o início do próximo turno do guardião do véu."
+						"Se uma criatura que o guardião do véu possa ver a até 9 metros de si mesmo para alvo de um ataque, o guardião do véu cerca a criatura com neblina ilusória, concedendo à criatura {@quickref Cover||3||half cover} até o início do próximo turno do guardião do véu."
 					]
 				}
 			],
@@ -912,13 +912,13 @@
 				"incapacitated"
 			],
 			"conditionInflictSpell": [
-				"invisible"
+				"invisível"
 			],
 			"savingThrowForced": [
 				"wisdom"
 			],
 			"savingThrowForcedSpell": [
-				"intelligence"
+				"inteligência"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -951,7 +951,7 @@
 				"walk": 30
 			},
 			"initiative": {
-				"advantageMode": "adv"
+				"advantageMode": "advérbio"
 			},
 			"str": 8,
 			"dex": 17,
@@ -1001,7 +1001,7 @@
 				{
 					"name": "Thunderscream Gadget {@recharge 5}",
 					"entries": [
-						"O inventor produz um dispositivo que emite uma onda sonora estridente em um cone de 9 metros proveniente do inventor. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 14}, sofrendo 10 ({@damage 3d6}) de dano trovejante se falhar na resistência ou metade desse dano se obtiver sucesso."
+						"O inventor produz um dispositivo que emite uma onda sonora estridente em um cone de 9 metros proveniente do inventor. Cada criatura na área deve realizar um teste de resistência de Constituição {@dc 14}, dano 10 ({@damage 3d6}) de dano trovejante se falhar na resistência ou metade desse dano se obtiver sucesso."
 					]
 				}
 			],
@@ -1009,7 +1009,7 @@
 				{
 					"name": "Flash Powder",
 					"entries": [
-						"Se o inventor for ferido por uma criatura que ele possa ver a até 4,5 metros de si mesmo, o inventor retaliará atirando pólvora brilhantemente explosiva na criatura. A criatura deve ter sucesso em um teste de resistência de Destreza {@dc 14} ou será {@condition blinded} até o final do próximo turno."
+						"Se o inventor for ferido por uma criatura que ele possa ver a até 4,5 metros de si mesmo, o inventor retaliará tirando pólvora brilhantemente explosiva na criatura. A criatura deve ter sucesso em um teste de resistência de Destreza {@dc 14} ou será {@condition blinded} até o final do próximo turno."
 					]
 				}
 			],
@@ -1071,7 +1071,7 @@
 				"climb": 30
 			},
 			"initiative": {
-				"advantageMode": "adv"
+				"advantageMode": "advérbio"
 			},
 			"str": 9,
 			"dex": 18,
@@ -1128,25 +1128,25 @@
 				{
 					"name": "Generate Gadget {@recharge 5}",
 					"entries": [
-						"O cérebro rapidamente monta um dispositivo mecânico, produzindo um dos seguintes efeitos (a escolha do cérebro):"
+						"O cérebro monta rapidamente um dispositivo mecânico, produzindo um dos seguintes efeitos (a escolha do cérebro):"
 					]
 				},
 				{
 					"name": "Chattergrab",
 					"entries": [
-						"Partes deste gadget parecem dentes de metal rangendo. Este dispositivo se lança em direção a uma criatura que o cérebro possa ver a até 18 metros de si mesmo. A criatura deve ter sucesso em um teste de resistência de Destreza {@dc 16} ou sofrerá 31 ({@damage 7d8}) de dano perfurante e será {@condition incapacitated} até o início do próximo turno do mentor."
+						"Partes deste gadget parecem dentes de metal rangendo. Este dispositivo é lançado em direção a uma criatura que o cérebro pode ver a até 18 metros de si mesmo. A criatura deverá ter sucesso em um teste de resistência de Destreza {@dc 16} ou sofrerá 31 ({@damage 7d8}) de dano perfurante e será {@condition incapacitated} até o início do próximo turno do mentor."
 					]
 				},
 				{
 					"name": "Phasmoball",
 					"entries": [
-						"O cérebro lança este dispositivo a um ponto que o cérebro pode ver a até 9 metros de si mesmo, onde o dispositivo libera uma nuvem de gases que distorcem a mente em uma esfera de 3 metros de raio. Cada criatura dentro da esfera deve ser bem-sucedida em um teste de resistência de Sabedoria {@dc 16} ou sofrerá 11 ({@damage 2d10}) de dano psíquico e será {@condition frightened} do mentor até o início do próximo turno do mentor."
+						"O cérebro lança este dispositivo a um ponto que o cérebro pode ver a até 9 metros de si mesmo, onde o dispositivo libera uma nuvem de gases que distorce a mente em uma esfera de 3 metros de raio. Cada criatura dentro da esfera deverá ser bem-sucedida em um teste de resistência de Sabedoria {@dc 16} ou sofrerá 11 ({@damage 2d10}) de dano psíquico e será {@condition frightened} do mentor até o início do próximo turno do mentor."
 					]
 				},
 				{
 					"name": "Thunderscream",
 					"entries": [
-						"Este gadget emite uma onda sonora estridente em um cone de 9 metros originada do cérebro. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 16}, sofrendo 21 ({@damage 6d6}) de dano trovejante se falhar na resistência ou metade do dano se obtiver sucesso."
+						"Este gadget emite uma onda sonora estridente em um cone de 9 metros originada do cérebro. Cada criatura nesta área deve realizar um teste de resistência de Constituição {@dc 16}, dano 21 ({@damage 6d6}) de dano trovejante se falhar na resistência ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -1248,7 +1248,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"O caçador tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados do caçador estiver a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+						"O caçador tem vantagem em um jogo de ataque contra uma criatura se pelo menos um dos aliados do caçador precisar a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
 					]
 				}
 			],
@@ -1363,7 +1363,7 @@
 				{
 					"name": "Death Throes",
 					"entries": [
-						"Se o dragoniano for reduzido a 0 pontos de vida, seu corpo irrompe em lama que preenche uma esfera de 3 metros de raio. Cada criatura dentro dessa área deve ser bem sucedida em um teste de resistência de Destreza {@dc 14} ou ficará coberta pela lama por 1 minuto. Enquanto estiver coberto pela lama, o deslocamento da criatura é reduzido pela metade. Uma criatura pode usar sua ação para raspar a lama de si mesma ou de outra criatura a até 1,5 metro de si mesma."
+						"Se o dragoniano for limitado a 0 pontos de vida, seu corpo irrompe em lama que preenche uma esfera de 3 metros de raio. Cada criatura dentro dessa área deve ser bem sucedida em um teste de resistência de Destreza {@dc 14} ou ficar coberta pela lama por 1 minuto. Enquanto você está coberto pela lama, a localização da criatura é limitada pela metade. Uma criatura pode usar sua ação para raspar a lama de si mesma ou de outra criatura a até 1,5 metro de si mesma."
 					]
 				}
 			],
@@ -1383,7 +1383,7 @@
 				{
 					"name": "Flaming Carnage {@recharge 5}",
 					"entries": [
-						"O dragoniano entrega-se à sua raiva, envolvendo-se em fogo e avançando em sua velocidade. O dragoniano pode entrar nos espaços das criaturas durante este movimento. Durante este movimento, quando o dragoniano entra no espaço de uma criatura, a criatura deve realizar um teste de resistência de {@dc 14} Destreza. Se falhar na resistência, a criatura sofre 22 ({@damage 4d10}) de dano de fogo e é derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano e é empurrada para o espaço mais próximo, fora do caminho do dragoniano. Uma criatura pode ser afetada pela Carnificina Flamejante deste dragoniano apenas uma vez durante um turno."
+						"O dragoniano entrega-se à sua raiva, envolve-se no fogo e avança em sua velocidade. O dragoniano pode entrar nos espaços das criaturas durante esse movimento. Durante esse movimento, quando o dragoniano não entra no espaço de uma criatura, a criatura deve realizar um teste de resistência de {@dc 14} Destreza. Se falhar na resistência, uma criatura sofre 22 ({@damage 4d10}) de dano de fogo e é derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano e é empurrada para o espaço mais próximo, fora do caminho do dragoniano. Uma criatura pode ser afetada pela Carnificina Flamejante deste dragoniano apenas uma vez durante um turno."
 					]
 				}
 			],
@@ -1391,7 +1391,7 @@
 				{
 					"name": "Violent Retaliation",
 					"entries": [
-						"Se uma criatura a até 3 metros do dragoniano acertá-lo com um ataque, o dragoniano pode realizar um ataque de Garra contra aquela criatura. Se o ataque da Garra acertar, ele causará 4 ({@damage 1d8}) de dano cortante adicional."
+						"Se uma criatura a até 3 metros do dragoniano acertá-lo com um ataque, o dragoniano pode realizar um ataque de Garra contra aquela criatura. Se o ataque da Garra for bem-sucedido, ele causará 4 ({@damage 1d8}) de danos cortantes adicionais."
 					]
 				}
 			],
@@ -1521,7 +1521,7 @@
 				{
 					"name": "Draconic Command",
 					"entries": [
-						"Sempre que um Dragão ou uma criatura com a característica Devoção Dracônica a até 9 metros de Verminaard faz uma jogada de ataque, a criatura pode rolar um {@dice d4} e adicionar o número rolado à jogada de ataque."
+						"Sempre que um Dragão ou uma criatura com o recurso Devoção Dracônica a até 9 metros de Verminaard faz uma jogada de ataque, a criatura pode rolar um {@dice d4} e adicionar o número rolado à jogada de ataque."
 					]
 				},
 				{
@@ -1533,7 +1533,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Verminaard usa {@item +2 plate armor} e empunha a maça {@item Nightbringer|MCV2DC}, que lhe concede visão no escuro, bem como imunidade a danos de fogo e às condições {@condition charmed} e {@condition frightened} (incluídas acima)."
+						"Verminaard usa {@item +2 plate armor} e empunhado a maça {@item Nightbringer|MCV2DC}, que lhe concede visão no escuro, bem como imunidade a danos de fogo e às condições {@condition charmed} e {@condition frightened} (incluídas acima)."
 					]
 				}
 			],
@@ -1547,13 +1547,13 @@
 				{
 					"name": "Nightbringer",
 					"entries": [
-						"{@atk mw} {@hit 15} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 1d6 + 9}) de dano de concussão mais 10 ({@damage 4d4}) de dano radiante. Se o alvo for uma criatura, o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition blinded} até o início do próximo turno de Verminaard."
+						"{@atk mw} {@hit 15} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 1d6 + 9}) de dano de concussão mais 10 ({@damage 4d4}) de dano radiante. Se o alvo for uma criatura, o alvo deverá ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition blinded} até o início do próximo turno de Verminaard."
 					]
 				},
 				{
 					"name": "Malediction",
 					"entries": [
-						"Verminaard pronuncia uma palavra profana, fazendo com que fogo profano desça sobre uma criatura que Verminaard pode ver a até 18 metros de si mesmo. A criatura deve realizar um teste de resistência de Destreza {@dc 18}, sofrendo 11 ({@damage 2d10}) de dano necrótico mais 11 ({@damage 2d10}) de dano radiante se falhar na resistência ou metade do dano se obtiver sucesso."
+						"Verminaard pronuncia uma palavra profana, fazendo com que fogo profano desça sobre uma criatura que Verminaard pode ver a até 18 metros de si mesmo. Uma criatura deve realizar um teste de resistência de Destreza {@dc 18}, dano 11 ({@damage 2d10}) de dano necrótico mais 11 ({@damage 2d10}) de dano radiante se falhar na resistência ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -1561,7 +1561,7 @@
 				{
 					"name": "Dragon Queen's Favor (5/Day)",
 					"entries": [
-						"Verminaard ou uma criatura que ele possa ver a até 18 metros de si recupera magicamente 17 ({@dice 2d12 + 4}) pontos de vida."
+						"Verminaard ou uma criatura que ele pode ver a até 18 metros de si recupera magicamente 17 ({@dice 2d12 + 4}) pontos de vida."
 					]
 				}
 			],
@@ -1575,7 +1575,7 @@
 				{
 					"name": "Fervent Strike (Costs 2 Actions)",
 					"entries": [
-						"Verminaard faz um ataque Nightbringer. Se este ataque acertar, ele causará 7 ({@damage 2d6}) de dano de concussão adicional."
+						"Verminaard faz um ataque Nightbringer. Se este ataque for bem sucedido, ele causará 7 ({@damage 2d6}) de dano de concussão adicional."
 					]
 				},
 				{
@@ -1617,17 +1617,17 @@
 				"blinded"
 			],
 			"conditionInflictSpell": [
-				"frightened",
-				"paralyzed"
+				"com medo",
+				"paralisado"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity",
-				"wisdom"
+				"carisma",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,

@@ -16,13 +16,13 @@
 				"faces": 8
 			},
 			"proficiency": [
-				"con",
-				"int"
+				"golpe",
+				"interno"
 			],
-			"spellcastingAbility": "int",
-			"casterProgression": "artificer",
-			"preparedSpells": "<$level$> / 2 + <$int_mod$>",
-			"preparedSpellsChange": "restLong",
+			"spellcastingAbility": "interno",
+			"casterProgression": "artífice",
+			"preparedSpells": "<$nível$> / 2 + <$int_mod$>",
+			"preparedSpellsChange": "descanso longo",
 			"cantripProgression": [
 				2,
 				2,
@@ -49,7 +49,7 @@
 				{
 					"name": "Infusions",
 					"featureType": [
-						"AI"
+						"IA"
 					],
 					"progression": [
 						0,
@@ -77,21 +77,21 @@
 			],
 			"startingProficiencies": {
 				"armor": [
-					"light",
-					"medium",
-					"shield"
+					"luz",
+					"médio",
+					"escudo"
 				],
 				"weapons": [
-					"simple",
+					"simples",
 					{
-						"proficiency": "firearms",
+						"proficiency": "armas de fogo",
 						"optional": true
 					}
 				],
 				"tools": [
 					"{@item thieves' tools|PHB}",
 					"{@item tinker's tools|PHB}",
-					"one type of {@item artisan's tools|PHB} of your choice"
+					"um tipo de {@item artisan's tools|PHB} de sua escolha"
 				],
 				"toolProficiencies": [
 					{
@@ -120,10 +120,10 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"any two {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} of your choice",
-					"a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts}",
-					"(a) {@item studded leather armor|phb} or (b) {@item scale mail|phb}",
-					"{@item thieves' tools|phb} and a {@item dungeoneer's pack|phb}"
+					"quaisquer dois {@filter simple weapons|items|source=phb|category=basic|type=simple weapon} de sua escolha",
+					"um {@item light crossbow|phb} e {@item crossbow bolts (20)|phb|20 bolts}",
+					"(a) {@item studded leather armor|phb} ou (b) {@item scale mail|phb}",
+					"{@item thieves' tools|phb} e um {@item dungeoneer's pack|phb}"
 				],
 				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
 				"defaultData": [
@@ -143,10 +143,10 @@
 					},
 					{
 						"a": [
-							"studded leather armor|phb"
+							"armadura de couro cravejado | phb"
 						],
 						"b": [
-							"scale mail|phb"
+							"escala de correio | phb"
 						]
 					},
 					{
@@ -163,9 +163,9 @@
 				},
 				"proficienciesGained": {
 					"armor": [
-						"light",
-						"medium",
-						"shield"
+						"luz",
+						"médio",
+						"escudo"
 					],
 					"tools": [
 						"{@item thieves' tools|PHB}",
@@ -183,7 +183,7 @@
 				{
 					"colLabels": [
 						"{@filter Infusions Known|optionalfeatures|feature type=ai|source=TCE}",
-						"Infused Items",
+						"Itens Infundidos",
 						"{@filter Cantrips Known|spells|level=0|class=artificer}"
 					],
 					"rows": [
@@ -290,7 +290,7 @@
 					]
 				},
 				{
-					"title": "Spell Slots per Spell Level",
+					"title": "Espaços de Feitiço por Nível de Feitiço",
 					"colLabels": [
 						"{@filter 1st|spells|level=1|class=Artificer}",
 						"{@filter 2nd|spells|level=2|class=Artificer}",
@@ -443,41 +443,41 @@
 				}
 			],
 			"classFeatures": [
-				"Optional Rule: Firearm Proficiency|Artificer|TCE|1",
-				"Magical Tinkering|Artificer|TCE|1",
-				"Spellcasting|Artificer|TCE|1",
-				"Infuse Item|Artificer|TCE|2",
+				"Regra Opcional: Proficiência em Arma de Fogo|Artífice|TCE|1",
+				"Consertos Mágicos|Artífice|TCE|1",
+				"Conjuração|Artífice|TCE|1",
+				"Infundir Item|Artífice|TCE|2",
 				{
-					"classFeature": "Artificer Specialist|Artificer|TCE|3",
+					"classFeature": "Especialista Artífice|Artífice|TCE|3",
 					"gainSubclassFeature": true
 				},
-				"The Right Tool for the Job|Artificer|TCE|3",
-				"Ability Score Improvement|Artificer|TCE|4",
+				"A ferramenta certa para o trabalho|Artífice|TCE|3",
+				"Melhoria na Pontuação de Habilidade|Artífice|TCE|4",
 				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|5",
+					"classFeature": "Recurso Especialista Artífice|Artífice|TCE|5",
 					"gainSubclassFeature": true
 				},
-				"Tool Expertise|Artificer|TCE|6",
-				"Flash of Genius|Artificer|TCE|7",
-				"Ability Score Improvement|Artificer|TCE|8",
+				"Conhecimento em Ferramentas|Artífice|TCE|6",
+				"Flash de Gênio|Artífice|TCE|7",
+				"Melhoria na Pontuação de Habilidade|Artífice|TCE|8",
 				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|9",
+					"classFeature": "Recurso Especialista Artífice|Artífice|TCE|9",
 					"gainSubclassFeature": true
 				},
-				"Magic Item Adept|Artificer|TCE|10",
-				"Spell-Storing Item|Artificer|TCE|11",
-				"Ability Score Improvement|Artificer|TCE|12",
-				"Magic Item Savant|Artificer|TCE|14",
+				"Adepto de Item Mágico|Artífice|TCE|10",
+				"Item de armazenamento de feitiços|Artífice|TCE|11",
+				"Melhoria na Pontuação de Habilidade|Artífice|TCE|12",
+				"Savant de Itens Mágicos|Artífice|TCE|14",
 				{
-					"classFeature": "Artificer Specialist Feature|Artificer|TCE|15",
+					"classFeature": "Recurso Especialista Artífice|Artífice|TCE|15",
 					"gainSubclassFeature": true
 				},
-				"Ability Score Improvement|Artificer|TCE|16",
-				"Magic Item Master|Artificer|TCE|18",
-				"Ability Score Improvement|Artificer|TCE|19",
-				"Soul of Artifice|Artificer|TCE|20"
+				"Melhoria na Pontuação de Habilidade|Artífice|TCE|16",
+				"Mestre de Itens Mágicos|Artífice|TCE|18",
+				"Melhoria na Pontuação de Habilidade|Artífice|TCE|19",
+				"Alma do Artifício|Artífice|TCE|20"
 			],
-			"subclassTitle": "Artificer Specialist",
+			"subclassTitle": "Especialista Artífice",
 			"hasFluff": true,
 			"hasFluffImages": true
 		}
@@ -485,9 +485,9 @@
 	"subclass": [
 		{
 			"name": "Alchemist",
-			"shortName": "Alchemist",
+			"shortName": "Alquimista",
 			"source": "TCE",
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"page": 14,
 			"otherSources": [
@@ -501,41 +501,41 @@
 				{
 					"prepared": {
 						"3": [
-							"healing word",
-							"ray of sickness"
+							"palavra de cura",
+							"raio de doença"
 						],
 						"5": [
-							"flaming sphere",
-							"melf's acid arrow"
+							"esfera flamejante",
+							"flecha ácida de melf"
 						],
 						"9": [
-							"gaseous form",
-							"mass healing word"
+							"forma gasosa",
+							"palavra de cura em massa"
 						],
 						"13": [
-							"blight",
-							"death ward"
+							"praga",
+							"enfermaria"
 						],
 						"17": [
-							"cloudkill",
-							"raise dead"
+							"nuvem morta",
+							"ressuscitar mortos"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"Alchemist|Artificer|TCE|Alchemist|TCE|3",
-				"Alchemical Savant|Artificer|TCE|Alchemist|TCE|5",
-				"Restorative Reagents|Artificer|TCE|Alchemist|TCE|9",
-				"Chemical Mastery|Artificer|TCE|Alchemist|TCE|15"
+				"Alquimista|Artífice|TCE|Alquimista|TCE|3",
+				"Sábio Alquímico|Artífice|TCE|Alquimista|TCE|5",
+				"Reagentes Restauradores|Artífice|TCE|Alquimista|TCE|9",
+				"Domínio Químico|Artífice|TCE|Alquimista|TCE|15"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Armorer",
-			"shortName": "Armorer",
+			"shortName": "Armeiro",
 			"source": "TCE",
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"page": 15,
 			"edition": "classic",
@@ -543,41 +543,41 @@
 				{
 					"prepared": {
 						"3": [
-							"magic missile",
-							"thunderwave"
+							"míssil mágico",
+							"onda de trovão"
 						],
 						"5": [
-							"mirror image",
-							"shatter"
+							"imagem espelhada",
+							"quebrar"
 						],
 						"9": [
-							"hypnotic pattern",
-							"lightning bolt"
+							"padrão hipnótico",
+							"relâmpago"
 						],
 						"13": [
-							"fire shield",
-							"greater invisibility"
+							"escudo de fogo",
+							"maior invisibilidade"
 						],
 						"17": [
-							"passwall",
-							"wall of force"
+							"barreira de acesso",
+							"muro de força"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"Armorer|Artificer|TCE|Armorer|TCE|3",
-				"Extra Attack|Artificer|TCE|Armorer|TCE|5",
-				"Armor Modifications|Artificer|TCE|Armorer|TCE|9",
-				"Perfected Armor|Artificer|TCE|Armorer|TCE|15"
+				"Armeiro|Artífice|TCE|Armeiro|TCE|3",
+				"Ataque Extra|Artífice|TCE|Armeiro|TCE|5",
+				"Modificações de Armadura|Artífice|TCE|Armador|TCE|9",
+				"Armadura Aperfeiçoada|Artífice|TCE|Armeiro|TCE|15"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Artillerist",
-			"shortName": "Artillerist",
+			"shortName": "Artilheiro",
 			"source": "TCE",
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"page": 17,
 			"otherSources": [
@@ -591,41 +591,41 @@
 				{
 					"prepared": {
 						"3": [
-							"shield",
-							"thunderwave"
+							"escudo",
+							"onda de trovão"
 						],
 						"5": [
-							"scorching ray",
-							"shatter"
+							"raio escaldante",
+							"quebrar"
 						],
 						"9": [
-							"fireball",
-							"wind wall"
+							"bola de fogo",
+							"parede de vento"
 						],
 						"13": [
-							"ice storm",
-							"wall of fire"
+							"tempestade de gelo",
+							"parede de fogo"
 						],
 						"17": [
-							"cone of cold",
-							"wall of force"
+							"cone de frio",
+							"muro de força"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"Artillerist|Artificer|TCE|Artillerist|TCE|3",
-				"Arcane Firearm|Artificer|TCE|Artillerist|TCE|5",
-				"Explosive Cannon|Artificer|TCE|Artillerist|TCE|9",
-				"Fortified Position|Artificer|TCE|Artillerist|TCE|15"
+				"Artilheiro|Artífice|TCE|Artilheiro|TCE|3",
+				"Arma de Fogo Arcana|Artífice|TCE|Artilheiro|TCE|5",
+				"Canhão Explosivo|Artífice|TCE|Artilheiro|TCE|9",
+				"Posição Fortificada|Artífice|TCE|Artilheiro|TCE|15"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Battle Smith",
-			"shortName": "Battle Smith",
+			"shortName": "Ferreiro de Batalha",
 			"source": "TCE",
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"page": 18,
 			"otherSources": [
@@ -639,33 +639,33 @@
 				{
 					"prepared": {
 						"3": [
-							"heroism",
-							"shield"
+							"heroísmo",
+							"escudo"
 						],
 						"5": [
-							"branding smite",
-							"warding bond"
+							"ferimento de marca",
+							"título de proteção"
 						],
 						"9": [
-							"aura of vitality",
-							"conjure barrage"
+							"aura de vitalidade",
+							"conjurar barragem"
 						],
 						"13": [
-							"aura of purity",
-							"fire shield"
+							"aura de pureza",
+							"escudo de fogo"
 						],
 						"17": [
-							"banishing smite",
-							"mass cure wounds"
+							"banindo golpear",
+							"curar feridas em massa"
 						]
 					}
 				}
 			],
 			"subclassFeatures": [
-				"Battle Smith|Artificer|TCE|Battle Smith|TCE|3",
-				"Extra Attack|Artificer|TCE|Battle Smith|TCE|5",
-				"Arcane Jolt|Artificer|TCE|Battle Smith|TCE|9",
-				"Improved Defender|Artificer|TCE|Battle Smith|TCE|15"
+				"Ferreiro de Batalha|Artífice|TCE|Ferreiro de Batalha|TCE|3",
+				"Ataque Extra|Artífice|TCE|Battle Smith|TCE|5",
+				"Jolt Arcano|Artífice|TCE|Battle Smith|TCE|9",
+				"Defensor Aprimorado|Artífice|TCE|Battle Smith|TCE|15"
 			],
 			"hasFluffImages": true
 		}
@@ -681,23 +681,23 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
 				"{@i 1st-level artificer feature}",
-				"You've learned how to invest a spark of magic into mundane objects. To use this ability, you must have {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical properties of your choice:",
+				"Você aprendeu como investir uma centelha de magia em objetos mundanos. Para usar esta habilidade, você deve ter {@item thieves' tools|PHB} ou {@item artisan's tools|PHB} em mãos. Você então toca um objeto não mágico Minúsculo como uma ação e atribui a ele uma das seguintes propriedades mágicas de sua escolha:",
 				{
 					"type": "list",
 					"items": [
-						"The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
-						"Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.",
-						"The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.",
-						"A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like."
+						"O objeto emite luz brilhante em um raio de 1,5 metro e penumbra por mais 1,5 metro adicional.",
+						"Sempre que tocado por uma criatura, o objeto emite uma mensagem gravada que pode ser ouvida a até 3 metros de distância. Você emite a mensagem ao conceder essa propriedade ao objeto, e a gravação não pode durar mais do que 6 segundos.",
+						"O objeto emite continuamente um odor ou som não-verbal de sua escolha (vento, ondas, chilrear ou algo semelhante). O fenômeno escolhido é perceptível a até 3 metros de distância.",
+						"Um efeito visual estático aparece em uma das superfícies do objeto. Este efeito pode ser uma imagem, até 25 palavras de texto, linhas e formas, ou uma mistura desses elementos, conforme desejar."
 					]
 				},
-				"The chosen property lasts indefinitely. As an action, you can touch the object and end the property early.",
-				"You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new property applies."
+				"O imóvel escolhido tem duração indeterminada. Como uma ação, você pode tocar o objeto e encerrar a propriedade mais cedo.",
+				"Você pode conceder magia a vários objetos, tocando um objeto cada vez que usar esse recurso, embora um único objeto possa conter apenas uma propriedade por vez. O número máximo de objetos que você pode afetar com este recurso ao mesmo tempo é igual ao seu modificador de Inteligência (mínimo de um objeto). Se você tentar exceder o máximo, a propriedade mais antiga será encerrada imediatamente e a nova propriedade será aplicada."
 			]
 		},
 		{
@@ -710,11 +710,11 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
-				"The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in {@book chapter 9|DMG|9|Firearms} of the {@book Dungeon Master's Guide|DMG} and your artificer has been exposed to the operation of such weapons, your artificer is proficient with them."
+				"Os segredos da criação e operação de armas de pólvora foram descobertos em vários cantos do multiverso de D&D. Se o seu Mestre usa as regras sobre armas de fogo em {@book chapter 9|DMG|9|Firearms} do {@book Dungeon Master's Guide|DMG} e seu artífice foi exposto à operação de tais armas, seu artífice é proficiente com elas."
 			]
 		},
 		{
@@ -727,25 +727,25 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 1,
 			"entries": [
 				"{@i 1st-level artificer feature}",
-				"You've studied the workings of magic and how to cast spells, channeling the magic through objects. To observers, you don't appear to be casting spells in a conventional way; you appear to produce wonders from mundane items and outlandish inventions.",
+				"Você estudou o funcionamento da magia e como lançar feitiços, canalizando a magia através de objetos. Para os observadores, você não parece estar lançando feitiços de maneira convencional; você parece produzir maravilhas a partir de itens mundanos e invenções bizarras.",
 				{
 					"type": "entries",
 					"name": "Tools Required",
 					"entries": [
-						"You produce your artificer spell effects through your tools. You must have a spellcasting focus\u2014specifically {@item thieves' tools|phb} or some kind of {@item artisan's tools|phb|artisan's tool}\u2014in hand when you cast any spell with this Spellcasting feature (meaning the spell has an 'M' component when you cast it). You must be proficient with the tool to use it in this way. See {@book chapter 5|PHB|4}, \"Equipment,\" in the {@book Player's Handbook|PHB} for descriptions of these tools.",
-						"After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.",
+						"Você produz os efeitos da magia do seu artífice através de suas ferramentas. Você deve ter um foco de lançamento de feitiços - especificamente {@item thieves' tools|phb} ou algum tipo de {@item artisan's tools|phb|artisan's tool} - em mãos ao lançar qualquer feitiço com este recurso de lançamento de feitiços (o que significa que o feitiço tem um componente 'M' quando você o lança). Você deve ser proficiente com a ferramenta para usá-la dessa forma. Consulte {@book chapter 5|PHB|4}, \"Equipamento\", no {@book Player's Handbook|PHB} para obter descrições dessas ferramentas.",
+						"Depois de obter o recurso Infundir Item no 2º nível, você também pode usar qualquer item que contenha uma de suas infusões como foco de lançamento de magias.",
 						{
 							"type": "inset",
 							"name": "The Magic of Artifice",
 							"entries": [
-								"As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast {@spell cure wounds} using {@item alchemist's supplies|PHB}, you could be quickly producing a salve. If you cast it using {@item tinker's tools|PHB}, you might have a miniature mechanical spider that binds wounds. When you cast {@spell poison spray}, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for a spellcaster of any other class, but your method of spellcasting is special.",
-								"The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your tools and create the specialized items you'll use to produce your effects. If you replace {@spell cure wounds} with {@spell heat metal}, you might be altering the device you use to heal\u2014perhaps modifying a tool so that it channels heat instead of healing energy.",
-								"Such details don't limit you in any way or provide you with any benefit beyond the spell's effects. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself from other spellcasters."
+								"Como artífice, você usa ferramentas ao lançar suas magias. Ao descrever seu lançamento de feitiços, pense em como você está usando uma ferramenta para realizar o efeito do feitiço. Se você lançar {@spell cure wounds} usando {@item alchemist's supplies|PHB}, poderá produzir rapidamente uma pomada. Se você conjurá-la usando {@item tinker's tools|PHB}, poderá ter uma aranha mecânica em miniatura que cura feridas. Ao lançar {@spell poison spray}, você pode lançar produtos químicos nocivos ou usar uma varinha que cospe veneno. O efeito da magia é o mesmo de um conjurador de qualquer outra classe, mas seu método de conjuração é especial.",
+								"O mesmo princípio se aplica quando você prepara seus feitiços. Como artífice, você não estuda um livro de feitiços nem reza para preparar seus feitiços. Em vez disso, você trabalha com suas ferramentas e cria os itens especializados que usará para produzir seus efeitos. Se você substituir {@spell cure wounds} por {@spell heat metal}, poderá estar alterando o dispositivo usado para curar – talvez modificando uma ferramenta para canalizar calor em vez de energia de cura.",
+								"Esses detalhes não limitam você de forma alguma nem fornecem nenhum benefício além dos efeitos da magia. Você não precisa justificar como está usando ferramentas para lançar um feitiço. Mas descrever seu lançamento de feitiços de forma criativa é uma maneira divertida de se diferenciar de outros conjuradores."
 							]
 						}
 					]
@@ -754,37 +754,37 @@
 					"type": "entries",
 					"name": "Cantrips (0-Level Spells)",
 					"entries": [
-						"At 1st level, you know two cantrips of your choice from the {@filter artificer spell list|spells|level=0|class=Artificer}. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.",
-						"When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list."
+						"No 1º nível, você conhece dois truques à sua escolha do {@filter artificer spell list|spells|level=0|class=Artificer}. Em níveis mais altos, você aprende truques adicionais de artífice à sua escolha, conforme mostrado na coluna Truques Conhecidos da tabela Artífice.",
+						"Quando você ganha um nível nesta classe, você pode substituir um dos truques do artífice que você conhece por outro truque da lista de magias do artífice."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Preparing and Casting Spells",
 					"entries": [
-						"The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.",
-						"You prepare the list of artificer spells that are available for you to cast, choosing from the {@filter artificer spell list|spells|class=Artificer}. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots.",
-						"For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell {@spell cure wounds}, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.",
-						"You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list."
+						"A tabela Artífice mostra quantos espaços de magia você tem para lançar suas magias de artífice. Para conjurar uma de suas magias de artífice de 1º nível ou superior, você deve gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.",
+						"Você prepara a lista de feitiços de artífice que estão disponíveis para serem lançados, escolhendo entre {@filter artificer spell list|spells|class=Artificer}. Ao fazer isso, escolha um número de magias de artífice igual ao seu modificador de Inteligência + metade do seu nível de artífice, arredondado para baixo (mínimo de uma magia). As magias devem ser de um nível para o qual você tenha espaços de magia.",
+						"Por exemplo, se você for um artífice de 5º nível, você terá quatro espaços de magia de 1º nível e dois de 2º nível. Com Inteligência 14, sua lista de magias preparadas pode incluir quatro magias de 1º ou 2º nível, em qualquer combinação. Se você preparar o feitiço de 1º nível {@spell cure wounds}, poderá lançá-lo usando um slot de 1º ou 2º nível. Lançar a magia não a remove da sua lista de magias preparadas.",
+						"Você pode alterar sua lista de magias preparadas ao terminar um descanso longo. Preparar uma nova lista de magias de artífice requer tempo gasto ajustando seus focos de conjuração: pelo menos 1 minuto por nível de magia para cada magia em sua lista."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Spellcasting Ability",
 					"entries": [
-						"Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.",
+						"Inteligência é sua habilidade de lançar feitiços para seus feitiços de artífice; sua compreensão da teoria por trás da magia permite que você use esses feitiços com habilidade superior. Você usa sua Inteligência sempre que uma magia de artífice se referir à sua habilidade de lançar magias. Além disso, você usa seu modificador de Inteligência ao definir a CD do teste de resistência para uma magia de artífice que você conjura e ao fazer uma jogada de ataque com uma.",
 						{
 							"type": "abilityDc",
 							"name": "Spell",
 							"attributes": [
-								"int"
+								"interno"
 							]
 						},
 						{
 							"type": "abilityAttackMod",
 							"name": "Spell",
 							"attributes": [
-								"int"
+								"interno"
 							]
 						}
 					]
@@ -793,7 +793,7 @@
 					"type": "entries",
 					"name": "Ritual Casting",
 					"entries": [
-						"You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared."
+						"Você pode lançar uma magia de artífice como um ritual se essa magia tiver a etiqueta ritual e você tiver a magia preparada."
 					]
 				}
 			]
@@ -808,34 +808,34 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 2,
 			"entries": [
 				"{@i 2nd-level artificer feature}",
-				"You've gained the ability to imbue mundane items with certain magical infusions, turning those objects into magic items.",
+				"Você ganhou a habilidade de imbuir itens mundanos com certas infusões mágicas, transformando esses objetos em itens mágicos.",
 				{
 					"type": "refClassFeature",
-					"classFeature": "Infusions Known|Artificer|TCE|2"
+					"classFeature": "Infusões Conhecidas|Artífice|TCE|2"
 				},
 				{
 					"type": "inset",
 					"name": "Artificer Infusions",
 					"entries": [
-						"Artificers have invented numerous magical infusions, extraordinary processes that rapidly create magic items. To many, artificers seem like wonderworkers, accomplishing in hours what others need weeks to complete.",
-						"The description of each of the following infusions details the type of item that can receive it, along with whether the resulting magic item requires attunement.",
-						"Some infusions specify a minimum artificer level. You can't learn such an infusion until you are at least that level.",
-						"Unless an infusion's description says otherwise, you can't learn an infusion more than once."
+						"Os artesãos inventaram inúmeras infusões mágicas, processos extraordinários que criam itens mágicos rapidamente. Para muitos, os artífices parecem milagreiros, realizando em horas o que outros precisam de semanas para realizar.",
+						"A descrição de cada uma das infusões a seguir detalha o tipo de item que pode recebê-la, bem como se o item mágico resultante requer sintonização.",
+						"Algumas infusões especificam um nível mínimo de artífice. Você não pode aprender tal infusão até que esteja pelo menos nesse nível.",
+						"A menos que a descrição de uma infusão diga o contrário, você não pode aprender uma infusão mais de uma vez."
 					]
 				},
 				{
 					"type": "entries",
 					"name": "Infusing an Item",
 					"entries": [
-						"Whenever you finish a long rest, you can touch a nonmagical object and imbue it with one of your artificer infusions, turning it into a magic item. An infusion works on only certain kinds of objects, as specified in the infusion's description. If the item requires attunement, you can attune yourself to it the instant you infuse the item. If you decide to attune to the item later, you must do so using the normal process for attunement (see \"{@book Attunement|DMG|7|Attunement}\" in chapter 7 of the {@book Dungeon Master's Guide|DMG}).",
-						"Your infusion remains in an item indefinitely, but when you die, the infusion vanishes after a number of days have passed equal to your Intelligence modifier (minimum of 1 day). The infusion also vanishes if you give up your knowledge of the infusion for another one.",
-						"You can infuse more than one nonmagical object at the end of a long rest; the maximum number of objects appears in the Infused Items column of the Artificer table. You must touch each of the objects, and each of your infusions can be in only one object at a time. Moreover, no object can bear more than one of your infusions at a time. If you try to exceed your maximum number of infusions, the oldest infusion immediately ends, and then the new infusion applies.",
-						"If an infusion ends on an item that contains other things, like a {@item bag of holding}, its contents harmlessly appear in and around its space."
+						"Sempre que terminar um descanso longo, você pode tocar um objeto não mágico e imbuí-lo com uma de suas infusões de artífice, transformando-o em um item mágico. Uma infusão funciona apenas em certos tipos de objetos, conforme especificado na descrição da infusão. Se o item exigir sintonização, você poderá sintonizar-se com ele no instante em que infundir o item. Se você decidir sintonizar o item mais tarde, deverá fazê-lo usando o processo normal de sintonização (veja \"{@book Attunement|DMG|7|Attunement}\" no capítulo 7 do {@book Dungeon Master's Guide|DMG}).",
+						"Sua infusão permanece em um item indefinidamente, mas quando você morre, a infusão desaparece após um número de dias igual ao seu modificador de Inteligência (mínimo de 1 dia). A infusão também desaparece se você desistir do seu conhecimento sobre a infusão por outra.",
+						"Você pode infundir mais de um objeto não mágico ao final de um descanso longo; o número máximo de objetos aparece na coluna Itens Infundidos da tabela Artífice. Você deve tocar em cada um dos objetos, e cada uma de suas infusões só pode estar em um objeto por vez. Além disso, nenhum objeto pode suportar mais do que uma de suas infusões por vez. Se tentar exceder o número máximo de perfusões, a perfusão mais antiga termina imediatamente e, em seguida, aplica-se a nova perfusão.",
+						"Se uma infusão terminar em um item que contém outras coisas, como {@item bag of holding}, seu conteúdo aparecerá inofensivamente dentro e ao redor de seu espaço."
 					]
 				}
 			]
@@ -850,13 +850,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 2,
 			"header": 1,
 			"entries": [
-				"When you gain this feature, pick four artificer infusions to learn, choosing from the \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=TCE}\" section at the end of the class's description. You learn additional infusions of your choice when you reach certain levels in this class, as shown in the Infusions Known column of the Artificer table.",
-				"Whenever you gain a level in this class, you can replace one of the artificer infusions you learned with a new one."
+				"Ao ganhar esse recurso, escolha quatro infusões de artífice para aprender, escolhendo na seção \"{@filter Artificer Infusions|optionalfeatures|feature type=ai|source=TCE}\" no final da descrição da classe. Você aprende infusões adicionais à sua escolha quando atinge determinados níveis nesta classe, conforme mostrado na coluna Infusões Conhecidas da tabela Artífice.",
+				"Sempre que você ganha um nível nesta classe, você pode substituir uma das infusões de artífice que aprendeu por uma nova."
 			]
 		},
 		{
@@ -869,12 +869,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 3,
 			"entries": [
 				"{@i 3rd-level artificer feature}",
-				"Choose the type of specialist you are, each of which is detailed at the end of the class's description. Your choice grants you features at 5th level and again at 9th and 15th level."
+				"Escolha o tipo de especialista que você é, cada um deles detalhado no final da descrição da aula. Sua escolha concede características no 5º nível e novamente no 9º e 15º níveis."
 			]
 		},
 		{
@@ -887,12 +887,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 3,
 			"entries": [
 				"{@i 3rd-level artificer feature}",
-				"You've learned how to produce exactly the tool you need: with {@item thieves' tools|PHB} or {@item artisan's tools|PHB} in hand, you can magically create one set of {@item artisan's tools|PHB} in an unoccupied space within 5 feet of you. This creation requires 1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again."
+				"Você aprendeu como produzir exatamente a ferramenta que precisa: com {@item thieves' tools|PHB} ou {@item artisan's tools|PHB} em mãos, você pode criar magicamente um conjunto de {@item artisan's tools|PHB} em um espaço desocupado a até 1,5 metro de você. Esta criação requer 1 hora de trabalho ininterrupto, que pode coincidir com um descanso curto ou longo. Embora sejam produtos de magia, as ferramentas não são mágicas e desaparecem quando você usa esse recurso novamente."
 			]
 		},
 		{
@@ -905,13 +905,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 4,
 			"entries": [
 				"{@i 4th-level artificer feature}",
-				"When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"Quando você alcança o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -924,12 +924,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 5,
 			"entries": [
 				"{@i 5th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
+				"Você ganha uma característica concedida por sua escolha, Artífice Especialista."
 			]
 		},
 		{
@@ -942,12 +942,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 6,
 			"entries": [
 				"{@i 6th-level artificer feature}",
-				"Your proficiency bonus is now doubled for any ability check you make that uses your proficiency with a tool."
+				"Seu bônus de proficiência agora é duplicado para qualquer teste de habilidade que você fizer que use sua proficiência com uma ferramenta."
 			]
 		},
 		{
@@ -960,13 +960,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 7,
 			"entries": [
 				"{@i 7th-level artificer feature}",
-				"You've gained the ability to come up with solutions under pressure. When you or another creature you can see within 30 feet of you makes an ability check or a saving throw, you can use your reaction to add your Intelligence modifier to the roll.",
-				"You can use this feature a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a long rest."
+				"Você ganhou a capacidade de encontrar soluções sob pressão. Quando você ou outra criatura que você possa ver a até 9 metros de você faz um teste de habilidade ou teste de resistência, você pode usar sua reação para adicionar seu modificador de Inteligência à jogada.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Inteligência (mínimo de uma vez). Você recupera todos os usos gastos ao terminar um descanso longo."
 			]
 		},
 		{
@@ -979,13 +979,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 8,
 			"entries": [
 				"{@i 8th-level artificer feature}",
-				"When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"Quando você alcança o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá pegar um {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -998,12 +998,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 9,
 			"entries": [
 				"{@i 9th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
+				"Você ganha uma característica concedida por sua escolha, Artífice Especialista."
 			]
 		},
 		{
@@ -1016,17 +1016,17 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 10,
 			"entries": [
 				"{@i 10th-level artificer feature}",
-				"You've achieved a profound understanding of how to use and make magic items:",
+				"Você alcançou um conhecimento profundo de como usar e fazer itens mágicos:",
 				{
 					"type": "list",
 					"items": [
-						"You can attune to up to four magic items at once.",
-						"If you craft a magic item with a rarity of common or uncommon, it takes you a quarter of the normal time, and it costs you half as much of the usual gold."
+						"Você pode sintonizar até quatro itens mágicos de uma vez.",
+						"Se você criar um item mágico com raridade comum ou incomum, levará um quarto do tempo normal e custará metade do ouro normal."
 					]
 				}
 			]
@@ -1041,13 +1041,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 11,
 			"entries": [
 				"{@i 11th-level artificer feature}",
-				"You can now store a spell in an object. Whenever you finish a long rest, you can touch one {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} or one item that you can use as a spellcasting focus, and you store a spell in it, choosing a 1st- or 2nd-level spell from the {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} that requires 1 action to cast (you needn't have it prepared).",
-				"While holding the object, a creature can take an action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires {@status concentration}, the creature must concentrate. The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object."
+				"Agora você pode armazenar um feitiço em um objeto. Sempre que você terminar um descanso longo, você pode tocar em um {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} ou em um item que você pode usar como foco de lançamento de feitiços e armazenar um feitiço nele, escolhendo um feitiço de 1º ou 2º nível do {@filter artificer spell list|spells|class=Artificer|cast time=action|level=1;2} que requer 1 ação para ser lançado (você não precisa prepará-lo).",
+				"Enquanto segura o objeto, uma criatura pode realizar uma ação para produzir o efeito da magia a partir dele, usando seu modificador de habilidade de conjuração. Se o feitiço exigir {@status concentration}, a criatura deverá se concentrar. A magia permanece no objeto até que seja usada um número de vezes igual ao dobro do seu modificador de Inteligência (mínimo de duas vezes) ou até que você use esta característica novamente para armazenar uma magia em um objeto."
 			]
 		},
 		{
@@ -1060,13 +1060,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 12,
 			"entries": [
 				"{@i 12th-level artificer feature}",
-				"When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"Quando você alcança o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1079,17 +1079,17 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 14,
 			"entries": [
 				"{@i 14th-level artificer feature}",
-				"Your skill with magic items deepens:",
+				"Sua habilidade com itens mágicos se aprofunda:",
 				{
 					"type": "list",
 					"items": [
-						"You can attune to up to five magic items at once.",
-						"You ignore all class, race, spell, and level requirements on attuning to or using a magic item."
+						"Você pode sintonizar até cinco itens mágicos de uma vez.",
+						"Você ignora todos os requisitos de classe, raça, magia e nível para sintonizar ou usar um item mágico."
 					]
 				}
 			]
@@ -1104,12 +1104,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 15,
 			"entries": [
 				"{@i 15th-level artificer feature}",
-				"You gain a feature granted by your Artificer Specialist choice."
+				"Você ganha uma característica concedida por sua escolha, Artífice Especialista."
 			]
 		},
 		{
@@ -1122,13 +1122,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 16,
 			"entries": [
 				"{@i 16th-level artificer feature}",
-				"When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"Quando você atinge o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1141,12 +1141,12 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 18,
 			"entries": [
 				"{@i 18th-level artificer feature}",
-				"You can now attune to up to six magic items at once."
+				"Agora você pode sintonizar até seis itens mágicos de uma vez."
 			]
 		},
 		{
@@ -1159,13 +1159,13 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 19,
 			"entries": [
 				"{@i 19th-level artificer feature}",
-				"When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
-				"If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+				"Quando você atinge o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
 			]
 		},
 		{
@@ -1178,17 +1178,17 @@
 					"page": 54
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
 			"level": 20,
 			"entries": [
 				"{@i 20th-level artificer feature}",
-				"You have developed a mystical connection to your magic items, which you can draw on for protection:",
+				"Você desenvolveu uma conexão mística com seus itens mágicos, que pode usar para proteção:",
 				{
 					"type": "list",
 					"items": [
-						"You gain a +1 bonus to all saving throws per magic item you are currently attuned to.",
-						"If you're reduced to 0 hit points but not killed outright, you can use your reaction to end one of your artificer infusions, causing you to drop to 1 hit point instead of 0."
+						"Você ganha um bônus de +1 em todos os testes de resistência por item mágico com o qual você está atualmente sintonizado.",
+						"Se você for reduzido a 0 pontos de vida, mas não for morto imediatamente, você pode usar sua reação para encerrar uma de suas infusões de artífice, fazendo com que você caia para 1 ponto de vida em vez de 0."
 					]
 				}
 			]
@@ -1205,24 +1205,24 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"An Alchemist is an expert at combining reagents to produce mystical effects. Alchemists use their creations to give life and to leech it away. Alchemy is the oldest of artificer traditions, and its versatility has long been valued during times of war and peace.",
+				"Um Alquimista é especialista em combinar reagentes para produzir efeitos místicos. Os alquimistas usam suas criações para dar vida e sugá-la. A alquimia é a mais antiga das tradições dos artesãos e sua versatilidade tem sido valorizada há muito tempo em tempos de guerra e paz.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Alchemist|TCE|3"
+					"subclassFeature": "Proficiência em Ferramentas|Artífice|TCE|Alquimista|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Alchemist Spells|Artificer|TCE|Alchemist|TCE|3"
+					"subclassFeature": "Feitiços de Alquimista|Artífice|TCE|Alquimista|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Experimental Elixir|Artificer|TCE|Alchemist|TCE|3"
+					"subclassFeature": "Elixir Experimental|Artífice|TCE|Alquimista|TCE|3"
 				}
 			]
 		},
@@ -1236,45 +1236,45 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Alchemist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+				"A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, como mostrado na tabela de Magias do Alquimista. Essas magias contam como magias de artífice para você, mas não contam no número de magias de artífice que você prepara.",
 				{
 					"type": "table",
-					"caption": "Alchemist Spells",
+					"caption": "Feitiços de Alquimista",
 					"colLabels": [
-						"Artificer Level",
-						"Spell"
+						"Nível de Artífice",
+						"Feitiço"
 					],
 					"colStyles": [
-						"col-2 text-center",
+						"col-2 centro de texto",
 						"col-10"
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell healing word}, {@spell ray of sickness}"
+							"3º",
+							"{@spell healing word},{@spell ray of sickness}"
 						],
 						[
-							"5th",
-							"{@spell flaming sphere}, {@spell Melf's acid arrow}"
+							"5º",
+							"{@spell flaming sphere},{@spell Melf's acid arrow}"
 						],
 						[
-							"9th",
+							"9º",
 							"{@spell gaseous form}, {@spell mass healing word}"
 						],
 						[
-							"13th",
-							"{@spell blight}, {@spell death ward}"
+							"13º",
+							"{@spell blight},{@spell death ward}"
 						],
 						[
-							"17th",
-							"{@spell cloudkill}, {@spell raise dead}"
+							"17º",
+							"{@spell cloudkill},{@spell raise dead}"
 						]
 					]
 				}
@@ -1290,52 +1290,52 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Beginning at 3rd level, whenever you finish a long rest, you can magically produce an {@i experimental elixir} in an empty flask you touch. Roll on the Experimental Elixir table for the elixir's effect, which is triggered when someone drinks the elixir. As an action, a creature can drink the elixir or administer it to an {@condition incapacitated} creature.",
-				"Creating an {@i experimental elixir} requires you to have {@item alchemist's supplies|PHB} on your person, and any elixir you create with this feature lasts until it is drunk or until the end of your next long rest.",
-				"When you reach certain levels in this class, you can make more elixirs at the end of a long rest: two at 6th level and three at 15th level. Roll for each elixir's effect separately. Each elixir requires its own flask.",
-				"You can create additional {@i experimental elixirs} by expending a spell slot of 1st level or higher for each one. When you do so, you use your action to create the elixir in an empty flask you touch, and you choose the elixir's effect from the Experimental Elixir table.",
+				"A partir do 3º nível, sempre que terminar um descanso longo, você pode produzir magicamente um {@i experimental elixir} em um frasco vazio que tocar. Role na tabela Experimental Elixir para ver o efeito do elixir, que é acionado quando alguém bebe o elixir. Como uma ação, uma criatura pode beber o elixir ou administrá-lo a uma criatura {@condition incapacitated}.",
+				"Criar um {@i experimental elixir} requer que você tenha {@item alchemist's supplies|PHB} consigo, e qualquer elixir que você criar com esse recurso dura até ser bebido ou até o final do seu próximo descanso longo.",
+				"Ao atingir certos níveis nesta classe, você poderá fazer mais elixires ao final de um descanso longo: dois no 6º nível e três no 15º nível. Role para o efeito de cada elixir separadamente. Cada elixir requer seu próprio frasco.",
+				"Você pode criar {@i experimental elixirs} adicional gastando um espaço de magia de 1º nível ou superior para cada um. Ao fazer isso, você usa sua ação para criar o elixir em um frasco vazio que você toca e escolhe o efeito do elixir na tabela Experimental Elixir.",
 				{
 					"type": "table",
-					"caption": "Experimental Elixir",
+					"caption": "Elixir Experimental",
 					"colLabels": [
 						"d6",
-						"Effect"
+						"Efeito"
 					],
 					"colStyles": [
-						"col-2 text-center",
+						"col-2 centro de texto",
 						"col-10"
 					],
 					"rows": [
 						[
 							"1",
-							"{@b Healing}. The drinker regains a number of hit points equal to {@dice 2d4} + your Intelligence modifier."
+							"{@b Healing}. O bebedor recupera um número de pontos de vida igual a {@dice 2d4} + seu modificador de Inteligência."
 						],
 						[
 							"2",
-							"{@b Swiftness}. The drinker's walking speed increases by 10 feet for 1 hour."
+							"{@b Swiftness}. A velocidade de caminhada do bebedor aumenta em 3 metros durante 1 hora."
 						],
 						[
 							"3",
-							"{@b Resilience}. The drinker gains a +1 bonus to AC for 10 minutes."
+							"{@b Resilience}. O bebedor ganha um bônus de +1 na CA por 10 minutos."
 						],
 						[
 							"4",
-							"{@b Boldness}. The drinker can roll a {@dice d4} and add the number rolled to every attack roll and saving throw they make for the next minute."
+							"{@b Boldness}. O bebedor pode lançar um {@dice d4} e adicionar o número obtido a cada jogada de ataque e teste de resistência que fizer no próximo minuto."
 						],
 						[
 							"5",
-							"{@b Flight}. The drinker gains a flying speed of 10 feet for 10 minutes."
+							"{@b Flight}. O bebedor ganha deslocamento de vôo de 3 metros por 10 minutos."
 						],
 						[
 							"6",
-							"{@b Transformation}. The drinker's body is transformed as if by the {@spell alter self} spell. The drinker determines the transformation caused by the spell, the effects of which last for 10 minutes."
+							"{@b Transformation}. O corpo do bebedor é transformado como se fosse pelo feitiço {@spell alter self}. O bebedor determina a transformação causada pelo feitiço, cujos efeitos duram 10 minutos."
 						]
 					]
 				}
@@ -1351,14 +1351,14 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item alchemist's supplies|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
+				"Ao adotar esta especialização no 3º nível, você ganha proficiência com {@item alchemist's supplies|PHB}. Se você já possui essa proficiência, você ganha proficiência com outro tipo de {@item artisan's tools|PHB} de sua escolha."
 			]
 		},
 		{
@@ -1371,14 +1371,14 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 5,
 			"header": 2,
 			"entries": [
-				"At 5th level, you develop masterful command of magical chemicals, enhancing the healing and damage you create through them. Whenever you cast a spell using your {@item alchemist's supplies|PHB} as the spellcasting focus, you gain a bonus to one roll of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1)."
+				"No 5º nível, você desenvolve um domínio magistral de substâncias químicas mágicas, aumentando a cura e o dano que você cria através delas. Sempre que você lança um feitiço usando seu {@item alchemist's supplies|PHB} como foco de lançamento do feitiço, você ganha um bônus em uma jogada do feitiço. Essa jogada deve restaurar pontos de vida ou ser uma jogada de dano que cause dano ácido, de fogo, necrótico ou venenoso, e o bônus é igual ao seu modificador de Inteligência (mínimo de +1)."
 			]
 		},
 		{
@@ -1391,19 +1391,19 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
 			"entries": [
-				"Starting at 9th level, you can incorporate restorative reagents into some of your works:",
+				"A partir do 9º nível, você pode incorporar reagentes restauradores em alguns de seus trabalhos:",
 				{
 					"type": "list",
 					"items": [
-						"Whenever a creature drinks an {@i experimental elixir} you created, the creature gains temporary hit points equal to {@dice 2d6} + your Intelligence modifier (minimum of 1 temporary hit point).",
-						"You can cast {@spell lesser restoration} without expending a spell slot and without preparing the spell, provided you use {@item alchemist's supplies|PHB} as the spellcasting focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a long rest."
+						"Sempre que uma criatura bebe um {@i experimental elixir} que você criou, a criatura ganha pontos de vida temporários iguais a {@dice 2d6} + seu modificador de Inteligência (mínimo de 1 ponto de vida temporário).",
+						"Você pode lançar {@spell lesser restoration} sem gastar um espaço de feitiço e sem preparar o feitiço, desde que use {@item alchemist's supplies|PHB} como foco de lançamento de feitiços. Você pode fazer isso um número de vezes igual ao seu modificador de Inteligência (no mínimo uma vez) e recupera todos os usos gastos ao terminar um descanso longo."
 					]
 				}
 			]
@@ -1418,19 +1418,19 @@
 					"page": 58
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Alchemist",
+			"subclassShortName": "Alquimista",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"By 15th level, you have been exposed to so many chemicals that they pose little risk to you, and you can use them to quickly end certain ailments:",
+				"No 15º nível, você foi exposto a tantos produtos químicos que eles representam pouco risco para você, e você pode usá-los para acabar rapidamente com certas doenças:",
 				{
 					"type": "list",
 					"items": [
-						"You gain resistance to acid damage and poison damage, and you are immune to the {@condition poisoned} condition.",
-						"You can cast {@spell greater restoration} and {@spell heal} without expending a spell slot, without preparing the spell, and without material components, provided you use {@item alchemist's supplies|PHB} as the spellcasting focus. Once you cast either spell with this feature, you can't cast that spell with it again until you finish a long rest."
+						"Você ganha resistência a danos de ácido e veneno e fica imune à condição {@condition poisoned}.",
+						"Você pode lançar {@spell greater restoration} e {@spell heal} sem gastar um espaço de feitiço, sem preparar o feitiço e sem componentes materiais, desde que use {@item alchemist's supplies|PHB} como foco de lançamento de feitiços. Depois de lançar qualquer magia com esta característica, você não poderá conjurar aquela magia novamente até terminar um descanso longo."
 					]
 				}
 			]
@@ -1439,28 +1439,28 @@
 			"name": "Armorer",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this armor, becoming one with it even as they experiment with it and refine its magical capabilities.",
+				"Um artífice especializado como Armeiro modifica a armadura para funcionar quase como uma segunda pele. A armadura é aprimorada para aprimorar a magia do artífice, desencadear ataques potentes e gerar uma defesa formidável. O artífice se une a esta armadura, tornando-se um com ela enquanto faz experiências com ela e refina suas capacidades mágicas.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tools of the Trade|Artificer|TCE|Armorer|TCE|3"
+					"subclassFeature": "Ferramentas do ofício|Artífice|TCE|Armador|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Armorer Spells|Artificer|TCE|Armorer|TCE|3"
+					"subclassFeature": "Feitiços de Armeiro|Artífice|TCE|Armeiro|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Arcane Armor|Artificer|TCE|Armorer|TCE|3"
+					"subclassFeature": "Armadura Arcana|Artífice|TCE|Armador|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Armor Model|Artificer|TCE|Armorer|TCE|3"
+					"subclassFeature": "Modelo de Armadura|Artífice|TCE|Armador|TCE|3"
 				}
 			]
 		},
@@ -1468,93 +1468,93 @@
 			"name": "Dampening Field",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"type": "item",
 			"entries": [
-				"You have advantage on Dexterity ({@skill Stealth}) checks. If the armor normally imposes disadvantage on such checks, the advantage and disadvantage cancel each other, as normal."
+				"Você tem vantagem em testes de Destreza ({@skill Stealth}). Se a armadura normalmente impõe desvantagem em tais testes, a vantagem e a desvantagem se cancelam, normalmente."
 			]
 		},
 		{
 			"name": "Defensive Field",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"type": "item",
 			"entries": [
-				"As a bonus action, you can gain temporary hit points equal to your level in this class, replacing any temporary hit points you already have. You lose these temporary hit points if you doff the armor. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+				"Como uma ação bônus, você pode ganhar pontos de vida temporários iguais ao seu nível nesta classe, substituindo quaisquer pontos de vida temporários que você já possua. Você perde esses pontos de vida temporários se tirar a armadura. Você pode usar esta ação bônus um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
 			]
 		},
 		{
 			"name": "Lightning Launcher",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"type": "item",
 			"entries": [
-				"A gemlike node appears on one of your armored fists or on the chest (your choice). It counts as a simple ranged weapon, with a normal range of 90 feet and a long range of 300 feet, and it deals {@damage 1d6} lightning damage on a hit. Once on each of your turns when you hit a creature with it, you can deal an extra {@damage 1d6} lightning damage to that target."
+				"Um nó em forma de gema aparece em um de seus punhos blindados ou no peito (você escolhe). Ela conta como uma arma de longo alcance simples, com alcance normal de 90 pés e longo alcance de 300 pés, e causa {@damage 1d6} de dano elétrico ao acertar. Uma vez em cada um de seus turnos, ao atingir uma criatura com ela, você pode causar {@damage 1d6} de dano elétrico extra ao alvo."
 			]
 		},
 		{
 			"name": "Powered Steps",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"type": "item",
 			"entries": [
-				"Your walking speed increases by 5 feet."
+				"Sua velocidade de caminhada aumenta em 1,5 metro."
 			]
 		},
 		{
 			"name": "Thunder Gauntlets",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"type": "item",
 			"entries": [
-				"Each of the armor's gauntlets counts as a simple melee weapon while you aren't holding anything in it, and it deals {@damage 1d8} thunder damage on a hit. A creature hit by the gauntlet has disadvantage on attack rolls against targets other than you until the start of your next turn, as the armor magically emits a distracting pulse when the creature attacks someone else."
+				"Cada uma das manoplas da armadura conta como uma arma corpo a corpo simples enquanto você não está segurando nada nela, e causa {@damage 1d8} de dano trovejante ao acertar. Uma criatura atingida pela manopla tem desvantagem nas jogadas de ataque contra alvos que não sejam você até o início do seu próximo turno, já que a armadura emite magicamente um pulso perturbador quando a criatura ataca outra pessoa."
 			]
 		},
 		{
 			"name": "Arcane Armor",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Armorer feature}",
-				"Your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have {@item smith's tools|PHB} in hand.",
-				"You gain the following benefits while wearing this armor:",
+				"Suas atividades metalúrgicas o levaram a transformar a armadura em um canal para sua magia. Como uma ação, você pode transformar uma armadura que está usando em Armadura Arcana, desde que tenha {@item smith's tools|PHB} em mãos.",
+				"Você ganha os seguintes benefícios ao usar esta armadura:",
 				{
 					"type": "list",
 					"items": [
-						"If the armor normally has a Strength requirement, the arcane armor lacks this requirement for you.",
-						"You can use the arcane armor as a spellcasting focus for your artificer spells.",
-						"The armor attaches to you and can't be removed against your will. It also expands to cover your entire body, although you can retract or deploy the helmet as a bonus action. The armor replaces any missing limbs, functioning identically to a limb it replaces.",
-						"You can doff or don the armor as an action. The armor continues to be Arcane Armor until you don another suit of armor or you die."
+						"Se a armadura normalmente tem um requisito de Força, a armadura arcana não possui esse requisito para você.",
+						"Você pode usar a armadura arcana como foco de lançamento de magias para seus feitiços de artífice.",
+						"A armadura está presa a você e não pode ser removida contra sua vontade. Ele também se expande para cobrir todo o seu corpo, embora você possa retrair ou desdobrar o capacete como uma ação bônus. A armadura substitui quaisquer membros perdidos, funcionando de forma idêntica ao membro que ela substitui.",
+						"Você pode tirar ou vestir a armadura como uma ação. A armadura continua sendo Armadura Arcana até que você vista outra armadura ou morra."
 					]
 				}
 			]
@@ -1563,17 +1563,17 @@
 			"name": "Armor Model",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Armorer feature}",
-				"You can customize your Arcane Armor. When you do so, choose one of the following armor models: Guardian or Infiltrator. The model you choose gives you special benefits while you wear it.",
-				"Each model includes a special weapon. When you attack with that weapon, you can add your Intelligence modifier, instead of Strength or Dexterity, to the attack and damage rolls.",
-				"You can change the armor's model whenever you finish a short or long rest, provided you have {@item smith's tools|PHB} in hand.",
+				"Você pode personalizar sua Armadura Arcana. Ao fazer isso, escolha um dos seguintes modelos de armadura: Guardião ou Infiltrador. O modelo que você escolher oferece benefícios especiais enquanto você o usa.",
+				"Cada modelo inclui uma arma especial. Ao atacar com essa arma, você pode adicionar seu modificador de Inteligência, em vez de Força ou Destreza, às jogadas de ataque e dano.",
+				"Você pode alterar o modelo da armadura sempre que terminar um descanso curto ou longo, desde que tenha {@item smith's tools|PHB} em mãos.",
 				{
 					"type": "entries",
 					"entries": [
@@ -1581,18 +1581,18 @@
 							"type": "entries",
 							"name": "Guardian",
 							"entries": [
-								"You design your armor to be in the front line of conflict. It has the following features:",
+								"Você projeta sua armadura para estar na linha de frente do conflito. Possui os seguintes recursos:",
 								{
 									"type": "list",
-									"style": "list-hang-notitle",
+									"style": "lista-pendurar-notitle",
 									"items": [
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "Thunder Gauntlets|Artificer|TCE|Armorer|TCE|3"
+											"subclassFeature": "Manoplas do Trovão|Artífice|TCE|Armeiro|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "Defensive Field|Artificer|TCE|Armorer|TCE|3"
+											"subclassFeature": "Campo Defensivo|Artífice|TCE|Armeiro|TCE|3"
 										}
 									]
 								}
@@ -1602,22 +1602,22 @@
 							"type": "entries",
 							"name": "Infiltrator",
 							"entries": [
-								"You customize your armor for subtle undertakings. It has the following features:",
+								"Você personaliza sua armadura para empreendimentos sutis. Possui os seguintes recursos:",
 								{
 									"type": "list",
-									"style": "list-hang-notitle",
+									"style": "lista-pendurar-notitle",
 									"items": [
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "Lightning Launcher|Artificer|TCE|Armorer|TCE|3"
+											"subclassFeature": "Lançador de Raios|Artífice|TCE|Armador|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "Powered Steps|Artificer|TCE|Armorer|TCE|3"
+											"subclassFeature": "Passos Acionados|Artífice|TCE|Armador|TCE|3"
 										},
 										{
 											"type": "refSubclassFeature",
-											"subclassFeature": "Dampening Field|Artificer|TCE|Armorer|TCE|3"
+											"subclassFeature": "Campo de Amortecimento|Artífice|TCE|Armador|TCE|3"
 										}
 									]
 								}
@@ -1631,45 +1631,45 @@
 			"name": "Armorer Spells",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Armorer feature}",
-				"You always have certain spells prepared after you reach particular levels in this class, as shown in the Armorer Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+				"Você sempre tem certos feitiços preparados depois de atingir níveis específicos nesta classe, conforme mostrado na tabela de Feitiços do Armeiro. Essas magias contam como magias de artífice para você, mas não contam no número de magias de artífice que você prepara.",
 				{
 					"type": "table",
-					"caption": "Armorer Spells",
+					"caption": "Feitiços de Armeiro",
 					"colLabels": [
-						"Artificer Level",
-						"Spell"
+						"Nível de Artífice",
+						"Feitiço"
 					],
 					"colStyles": [
-						"col-2 text-center",
+						"col-2 centro de texto",
 						"col-10"
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell magic missile}, {@spell thunderwave}"
+							"3º",
+							"{@spell magic missile},{@spell thunderwave}"
 						],
 						[
-							"5th",
-							"{@spell mirror image}, {@spell shatter}"
+							"5º",
+							"{@spell mirror image},{@spell shatter}"
 						],
 						[
-							"9th",
-							"{@spell hypnotic pattern}, {@spell lightning bolt}"
+							"9º",
+							"{@spell hypnotic pattern},{@spell lightning bolt}"
 						],
 						[
-							"13th",
+							"13º",
 							"{@spell fire shield}, {@spell greater invisibility}"
 						],
 						[
-							"17th",
+							"17º",
 							"{@spell passwall}, {@spell wall of force}"
 						]
 					]
@@ -1680,96 +1680,96 @@
 			"name": "Tools of the Trade",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Armorer feature}",
-				"You gain proficiency with heavy armor. You also gain proficiency with {@item smith's tools|PHB}. If you already have this tool proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
+				"Você ganha proficiência com armaduras pesadas. Você também ganha proficiência com {@item smith's tools|PHB}. Se você já possui proficiência nesta ferramenta, você ganha proficiência com outro tipo de {@item artisan's tools|PHB} de sua escolha."
 			]
 		},
 		{
 			"name": "Extra Attack",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 5,
 			"header": 2,
 			"entries": [
 				"{@i 5th-level Armorer feature}",
-				"You can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
+				"Você pode atacar duas vezes, em vez de uma, sempre que realizar a ação {@action Attack} no seu turno."
 			]
 		},
 		{
 			"name": "Armor Modifications",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
 			"entries": [
 				"{@i 9th-level Armorer feature}",
-				"You learn how to use your artificer infusions to specially modify your Arcane Armor. That armor now counts as separate items for the purposes of your Infuse Items feature: armor (the chest piece), boots, helmet, and the armor's special weapon. Each of those items can bear one of your infusions, and the infusions transfer over if you change your armor's model with the Armor Model feature. In addition, the maximum number of items you can infuse at once increases by 2, but those extra items must be part of your Arcane Armor."
+				"Você aprende como usar suas infusões de artífice para modificar especialmente sua Armadura Arcana. Essa armadura agora conta como itens separados para os propósitos do recurso Infundir Itens: armadura (o peitoral), botas, capacete e a arma especial da armadura. Cada um desses itens pode conter uma de suas infusões, e as infusões são transferidas se você alterar o modelo da sua armadura com o recurso Modelo de Armadura. Além disso, o número máximo de itens que você pode infundir de uma vez aumenta em 2, mas esses itens extras devem fazer parte da sua Armadura Arcana."
 			]
 		},
 		{
 			"name": "Guardian",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"When a Huge or smaller creature you can see ends its turn within 30 feet of you, you can use your reaction to magically force it to make a Strength saving throw against your spell save DC. On a failed save, you pull the creature up to 25 feet directly to an unoccupied space. If you pull the target to a space within 5 feet of you, you can make a melee weapon attack against it as part of this reaction.",
-				"You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+				"Quando uma criatura Enorme ou menor que você pode ver termina seu turno a até 9 metros de você, você pode usar sua reação para forçá-la magicamente a fazer um teste de resistência de Força contra sua CD de resistência de feitiço. Se falhar na resistência, você puxa a criatura até 7,5 metros diretamente para um espaço desocupado. Se você puxar o alvo para um espaço a até 1,5 metro de você, você pode realizar um ataque com arma corpo a corpo contra ele como parte desta reação.",
+				"Você pode usar esta reação um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos dela quando terminar um descanso longo."
 			]
 		},
 		{
 			"name": "Infiltrator",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Any creature that takes lightning damage from your Lightning Launcher glimmers with magical light until the start of your next turn. The glimmering creature sheds dim light in a 5-foot radius, and it has disadvantage on attack rolls against you, as the light jolts it if it attacks you. In addition, the next attack roll against it has advantage, and if that attack hits, the target takes an extra {@damage 1d6} lightning damage."
+				"Qualquer criatura que sofrer dano elétrico do seu Lançador de Raios brilha com luz mágica até o início do seu próximo turno. A criatura cintilante emite luz fraca em um raio de 1,5 metro e tem desvantagem nas jogadas de ataque contra você, já que a luz a sacode se ela atacar você. Além disso, a próxima jogada de ataque contra ele tem vantagem e, se o ataque acertar, o alvo sofre {@damage 1d6} de dano elétrico extra."
 			]
 		},
 		{
 			"name": "Perfected Armor",
 			"source": "TCE",
 			"page": 15,
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Armorer",
+			"subclassShortName": "Armeiro",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
 				"{@i 15th-level Armorer feature}",
-				"Your Arcane Armor gains additional benefits based on its model, as shown below.",
+				"Sua Armadura Arcana ganha benefícios adicionais com base em seu modelo, conforme mostrado abaixo.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Guardian|Artificer|TCE|Armorer|TCE|15"
+					"subclassFeature": "Guardião|Artífice|TCE|Armeiro|TCE|15"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Infiltrator|Artificer|TCE|Armorer|TCE|15"
+					"subclassFeature": "Infiltrador|Artífice|TCE|Armeiro|TCE|15"
 				}
 			]
 		},
@@ -1783,25 +1783,25 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield. This destructive power was valued by all the armies of the Last War. Now that the war is over, some members of this specialization have sought to build a more peaceful world by using their powers to fight the resurgence of strife in Khorvaire.",
-				"The gnome artificer Vi, an unlikely yet key member of House Cannith's warforged project, has been especially vocal about making things right: \"It's about time we fixed things instead of blowing them all to hell.\"",
+				"Um Artilheiro é especialista em usar magia para lançar energia, projéteis e explosões em um campo de batalha. Este poder destrutivo foi valorizado por todos os exércitos da Última Guerra. Agora que a guerra acabou, alguns membros desta especialização procuraram construir um mundo mais pacífico, usando os seus poderes para combater o ressurgimento do conflito em Khorvaire.",
+				"O artífice gnomo Vi, um membro improvável, mas importante, do projeto forjado bélico da Casa Cannith, tem sido especialmente veemente sobre como consertar as coisas: “Já era hora de consertarmos as coisas em vez de mandá-las todas para o inferno”.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Artillerist|TCE|3"
+					"subclassFeature": "Proficiência em Ferramentas|Artífice|TCE|Artilheiro|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Artillerist Spells|Artificer|TCE|Artillerist|TCE|3"
+					"subclassFeature": "Feitiços de Artilheiro|Artífice|TCE|Artilheiro|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3"
+					"subclassFeature": "Canhão Sobrenatural|Artífice|TCE|Artilheiro|TCE|3"
 				}
 			]
 		},
@@ -1815,45 +1815,45 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Artillerist Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+				"A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, como mostrado na tabela Magias de Artilheiro. Essas magias contam como magias de artífice para você, mas não contam no número de magias de artífice que você prepara.",
 				{
 					"type": "table",
-					"caption": "Artillerist Spells",
+					"caption": "Feitiços de Artilheiro",
 					"colLabels": [
-						"Artificer Level",
-						"Spell"
+						"Nível de Artífice",
+						"Feitiço"
 					],
 					"colStyles": [
-						"col-2 text-center",
+						"col-2 centro de texto",
 						"col-10"
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell shield}, {@spell thunderwave}"
+							"3º",
+							"{@spell shield},{@spell thunderwave}"
 						],
 						[
-							"5th",
-							"{@spell scorching ray}, {@spell shatter}"
+							"5º",
+							"{@spell scorching ray},{@spell shatter}"
 						],
 						[
-							"9th",
+							"9º",
 							"{@spell fireball}, {@spell wind wall}"
 						],
 						[
-							"13th",
-							"{@spell ice storm}, {@spell wall of fire}"
+							"13º",
+							"{@spell ice storm},{@spell wall of fire}"
 						],
 						[
-							"17th",
-							"{@spell cone of cold}, {@spell wall of force}"
+							"17º",
+							"{@spell cone of cold},{@spell wall of force}"
 						]
 					]
 				}
@@ -1869,23 +1869,23 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"At 3rd level, you learn how to create a magical cannon. Using {@item woodcarver's tools|PHB} or {@item smith's tools|PHB}, you can take an action to magically create a Small or Tiny eldritch cannon in an unoccupied space on a horizontal surface within 5 feet of you. A Small eldritch cannon occupies its space, and a Tiny one can be held in one hand.",
-				"Once you create a cannon, you can't do so again until you finish a long rest or until you expend a spell slot of 1st level or higher. You can have only one cannon at a time and can't create one while your cannon is present.",
-				"The cannon is a magical object. Regardless of size, the cannon has an AC of 18 and a number of hit points equal to five times your artificer level. It is immune to poison damage and psychic damage, and all conditions. If it is forced to make an ability check or a saving throw, treat all its ability scores as 10 (+0). If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. It disappears if it is reduced to 0 hit points or after 1 hour. You can dismiss it early as an action.",
-				"When you create the cannon, you determine its appearance and whether it has legs. You also decide which type it is, choosing from the options on the Eldritch Cannons table. On each of your turns, you can take a bonus action to cause the cannon to activate if you are within 60 feet of it. As part of the same bonus action, you can direct the cannon to walk or climb up to 15 feet to an unoccupied space, provided it has legs.",
+				"No 3º nível você aprende como criar um canhão mágico. Usando {@item woodcarver's tools|PHB} ou {@item smith's tools|PHB}, você pode realizar uma ação para criar magicamente um canhão místico Pequeno ou Minúsculo em um espaço desocupado em uma superfície horizontal a até 1,5 metro de você. Um canhão pequeno e místico ocupa seu espaço, e um pequeno pode ser segurado com uma mão.",
+				"Depois de criar um canhão, você não poderá fazê-lo novamente até terminar um descanso longo ou até gastar um espaço de magia de 1º nível ou superior. Você pode ter apenas um canhão por vez e não pode criar um enquanto seu canhão estiver presente.",
+				"O canhão é um objeto mágico. Independentemente do tamanho, o canhão tem CA de 18 e um número de pontos de vida igual a cinco vezes o seu nível de artífice. É imune a danos venenosos e psíquicos e a todas as condições. Se ele for forçado a fazer um teste de habilidade ou teste de resistência, trate todos os seus valores de habilidade como 10 (+0). Se o feitiço {@spell mending} for lançado nele, ele recuperará {@dice 2d6} pontos de vida. Ele desaparece se for reduzido a 0 pontos de vida ou após 1 hora. Você pode descartá-lo antecipadamente como uma ação.",
+				"Ao criar o canhão, você determina sua aparência e se ele tem pernas. Você também decide qual tipo é, escolhendo entre as opções na tabela Eldritch Cannons. Em cada um de seus turnos, você pode realizar uma ação bônus para ativar o canhão se você estiver a até 18 metros dele. Como parte da mesma ação bônus, você pode direcionar o canhão para caminhar ou subir até 4,5 metros até um espaço desocupado, desde que tenha pernas.",
 				{
 					"type": "table",
-					"caption": "Eldritch Cannons",
+					"caption": "Canhões Sobrenaturais",
 					"colLabels": [
-						"Cannon",
-						"Activation"
+						"Canhão",
+						"Ativação"
 					],
 					"colStyles": [
 						"col-2",
@@ -1894,15 +1894,15 @@
 					"rows": [
 						[
 							"{@object Eldritch Cannon, Flamethrower|TCE|Flamethrower}",
-							"The cannon exhales fire in an adjacent 15-foot cone that you designate. Each creature in that area must make a Dexterity saving throw against your spell save DC, taking {@damage 2d8} fire damage on a failed save or half as much damage on a successful one. The fire ignites any flammable objects in the area that aren't being worn or carried."
+							"O canhão exala fogo em um cone adjacente de 4,5 metros que você designar. Cada criatura naquela área deve fazer um teste de resistência de Destreza contra sua CD de salvamento de feitiço, sofrendo {@damage 2d8} de dano de fogo se falhar na resistência ou metade do dano se obtiver sucesso. O fogo acende quaisquer objetos inflamáveis ​​na área que não estejam sendo usados ​​ou carregados."
 						],
 						[
 							"{@object Eldritch Cannon, Force Ballista|TCE|Force Ballista}",
-							"Make a ranged spell attack, originating from the cannon, at one creature or object within 120 feet of it. On a hit, the target takes {@damage 2d8} force damage, and if the target is a creature, it is pushed up to 5 feet away from the cannon."
+							"Faça um ataque mágico à distância, originado do canhão, em uma criatura ou objeto a até 36 metros dele. Ao acertar, o alvo sofre {@damage 2d8} de dano de força e, se o alvo for uma criatura, ele é empurrado até 1,5 metro de distância do canhão."
 						],
 						[
 							"{@object Eldritch Cannon, Protector|TCE|Protector}",
-							"The cannon emits a burst of positive energy that grants itself and each creature of your choice within 10 feet of it a number of temporary hit points equal to {@damage 1d8} + your Intelligence modifier (minimum of +1)."
+							"O canhão emite uma explosão de energia positiva que concede a si mesmo e a cada criatura de sua escolha a até 3 metros dele um número de pontos de vida temporários igual a {@damage 1d8} + seu modificador de Inteligência (mínimo de +1)."
 						]
 					]
 				}
@@ -1918,14 +1918,14 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item woodcarver's tools|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
+				"Ao adotar esta especialização no 3º nível, você ganha proficiência com {@item woodcarver's tools|PHB}. Se você já possui essa proficiência, você ganha proficiência com outro tipo de {@item artisan's tools|PHB} de sua escolha."
 			]
 		},
 		{
@@ -1938,15 +1938,15 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 5,
 			"header": 2,
 			"entries": [
-				"At 5th level, you know how to turn a wand, staff, or rod into an arcane firearm, a conduit for your destructive spells. When you finish a long rest, you can use {@item woodcarver's tools|PHB} to carve special sigils into a wand, staff, or rod and thereby turn it into your arcane firearm. The sigils disappear from the object if you later carve them on a different item. The sigils otherwise last indefinitely.",
-				"You can use your arcane firearm as a spellcasting focus for your artificer spells. When you cast an artificer spell through the firearm, roll a {@damage d8}, and you gain a bonus to one of the spell's damage rolls equal to the number rolled."
+				"No 5º nível, você sabe como transformar uma varinha, cajado ou bastão em uma arma de fogo arcana, um canal para suas magias destrutivas. Ao terminar um descanso longo, você pode usar {@item woodcarver's tools|PHB} para esculpir sigilos especiais em uma varinha, cajado ou bastão e, assim, transformá-lo em sua arma de fogo arcana. Os sigilos desaparecem do objeto se você os gravar posteriormente em um item diferente. Caso contrário, os sigilos duram indefinidamente.",
+				"Você pode usar sua arma de fogo arcana como foco de lançamento de magias para seus feitiços de artífice. Quando você lança um feitiço de artífice através da arma de fogo, role um {@damage d8} e você ganha um bônus em uma das jogadas de dano do feitiço igual ao número rolado."
 			]
 		},
 		{
@@ -1959,19 +1959,19 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
 			"entries": [
-				"Starting at 9th level, every eldritch cannon you create is more destructive:",
+				"A partir do 9º nível, cada canhão sobrenatural que você cria é mais destrutivo:",
 				{
 					"type": "list",
 					"items": [
-						"The cannon's damage rolls all increase by {@damage 1d8}.",
-						"As an action, you can command the cannon to detonate if you are within 60 feet of it. Doing so destroys the cannon and forces each creature within 20 feet of it to make a Dexterity saving throw against your spell save DC, taking {@damage 3d8} force damage on a failed save or half as much damage on a successful one."
+						"Todas as jogadas de dano do canhão aumentam em {@damage 1d8}.",
+						"Como uma ação, você pode comandar o canhão para detonar se você estiver a até 18 metros dele. Fazer isso destrói o canhão e força cada criatura a até 6 metros dele a fazer um teste de resistência de Destreza contra sua CD de salvamento de feitiço, sofrendo {@damage 3d8} de dano de força em uma falha na resistência ou metade do dano em uma falha."
 					]
 				}
 			]
@@ -1986,19 +1986,19 @@
 					"page": 59
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Artillerist",
+			"subclassShortName": "Artilheiro",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"Starting at 15th level, you're a master at forming well-defended emplacements using Eldritch Cannon:",
+				"A partir do 15º nível, você é um mestre em formar posições bem defendidas usando o Canhão Eldritch:",
 				{
 					"type": "list",
 					"items": [
-						"You and your allies have {@quickref Cover||3||half cover} while within 10 feet of a cannon you create with Eldritch Cannon, as a result of a shimmering field of magical protection that the cannon emits.",
-						"You can now have two cannons at the same time. You can create two with the same action (but not the same spell slot), and you can activate both of them with the same bonus action. You determine whether the cannons are identical to each other or different. You can't create a third cannon while you have two."
+						"Você e seus aliados têm {@quickref Cover||3||half cover} enquanto estiverem a até 3 metros de um canhão criado com o Canhão Eldritch, como resultado de um campo cintilante de proteção mágica que o canhão emite.",
+						"Agora você pode ter dois canhões ao mesmo tempo. Você pode criar dois com a mesma ação (mas não com o mesmo espaço de magia) e pode ativar ambos com a mesma ação bônus. Você determina se os canhões são idênticos entre si ou diferentes. Você não pode criar um terceiro canhão enquanto tiver dois."
 					]
 				}
 			]
@@ -2013,29 +2013,29 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
-				"Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both material and personnel. To aid in their work, Battle Smiths are usually accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender.",
-				"Battle Smiths played a key role in House Cannith's work on battle constructs and the original warforged, and after the Last War, these artificers led efforts to aid those who were injured in the war's horrific battles.",
+				"Os exércitos necessitam de protecção e alguém tem de recompor as coisas se as defesas falharem. Uma combinação de protetor e médico, um Battle Smith é um especialista em defender os outros e reparar materiais e pessoal. Para ajudar em seu trabalho, os Battle Smiths geralmente são acompanhados por um defensor de aço, um companheiro protetor de sua própria criação. Muitos soldados contam histórias de quase morrerem antes de serem salvos por um Battle Smith e um defensor de aço.",
+				"Battle Smiths desempenhou um papel fundamental no trabalho da Casa Cannith nas construções de batalha e no forjado bélico original, e após a Última Guerra, esses artífices lideraram esforços para ajudar aqueles que foram feridos nas terríveis batalhas da guerra.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Tool Proficiency|Artificer|TCE|Battle Smith|TCE|3"
+					"subclassFeature": "Proficiência em Ferramentas|Artífice|TCE|Battle Smith|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Battle Smith Spells|Artificer|TCE|Battle Smith|TCE|3"
+					"subclassFeature": "Feitiços de Battle Smith|Artífice|TCE|Battle Smith|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Battle Ready|Artificer|TCE|Battle Smith|TCE|3"
+					"subclassFeature": "Pronto para Batalha|Artífice|TCE|Battle Smith|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Steel Defender|Artificer|TCE|Battle Smith|TCE|3"
+					"subclassFeature": "Defensor de Aço|Artífice|TCE|Battle Smith|TCE|3"
 				}
 			]
 		},
@@ -2049,19 +2049,19 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you reach 3rd level, your combat training and your experiments with magic have paid off in two ways:",
+				"Quando você alcança o 3º nível, seu treinamento de combate e seus experimentos com magia valeram a pena de duas maneiras:",
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency with {@filter martial weapons|items|type=martial weapon}.",
-						"When you attack with a magic weapon, you can use your Intelligence modifier, instead of Strength or Dexterity modifier, for the attack and damage rolls."
+						"Você ganha proficiência com {@filter martial weapons|items|type=martial weapon}.",
+						"Quando você ataca com uma arma mágica, você pode usar seu modificador de Inteligência, em vez do modificador de Força ou Destreza, para as jogadas de ataque e dano."
 					]
 				}
 			]
@@ -2076,45 +2076,45 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"Starting at 3rd level, you always have certain spells prepared after you reach particular levels in this class, as shown in the Battle Smith Spells table. These spells count as artificer spells for you, but they don't count against the number of artificer spells you prepare.",
+				"A partir do 3º nível, você sempre terá certas magias preparadas após atingir níveis específicos nesta classe, como mostrado na tabela de Magias do Ferreiro de Batalha. Essas magias contam como magias de artífice para você, mas não contam no número de magias de artífice que você prepara.",
 				{
 					"type": "table",
-					"caption": "Battle Smith Spells",
+					"caption": "Feitiços de Batalha Smith",
 					"colLabels": [
-						"Artificer Level",
-						"Spell"
+						"Nível de Artífice",
+						"Feitiço"
 					],
 					"colStyles": [
-						"col-2 text-center",
+						"col-2 centro de texto",
 						"col-10"
 					],
 					"rows": [
 						[
-							"3rd",
-							"{@spell heroism}, {@spell shield}"
+							"3º",
+							"{@spell heroism},{@spell shield}"
 						],
 						[
-							"5th",
-							"{@spell branding smite}, {@spell warding bond}"
+							"5º",
+							"{@spell branding smite},{@spell warding bond}"
 						],
 						[
-							"9th",
-							"{@spell aura of vitality}, {@spell conjure barrage}"
+							"9º",
+							"{@spell aura of vitality},{@spell conjure barrage}"
 						],
 						[
-							"13th",
-							"{@spell aura of purity}, {@spell fire shield}"
+							"13º",
+							"{@spell aura of purity},{@spell fire shield}"
 						],
 						[
-							"17th",
-							"{@spell banishing smite}, {@spell mass cure wounds}"
+							"17º",
+							"{@spell banishing smite},{@spell mass cure wounds}"
 						]
 					]
 				}
@@ -2130,17 +2130,17 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"By 3rd level, your tinkering has borne you a faithful companion, a {@creature steel defender|tce}. It is friendly to you and your companions, and it obeys your commands. See this creature's game statistics in the steel defender stat block, which uses your proficiency bonus (PB) in several places. You determine the creature's appearance and whether it has two legs or four; your choice has no effect on its game statistics.",
-				"In combat, the defender shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the {@action Dodge} action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are {@condition incapacitated}, the defender can take any action of its choice, not just {@action Dodge}.",
-				"If the {@spell mending} spell is cast on it, it regains {@dice 2d6} hit points. If it has died within the last hour, you can use your {@item smith's tools|PHB} as an action to revive it, provided you are within 5 feet of it and you expend a spell slot of 1st level or higher. The steel defender returns to life after 1 minute with all its hit points restored.",
-				"At the end of a long rest, you can create a new steel defender if you have your {@item smith's tools|PHB} with you. If you already have a steel defender from this feature, the first one immediately perishes. The defender also perishes if you die."
+				"No 3º nível, seus ajustes lhe renderam um companheiro fiel, um {@creature steel defender|tce}. É amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas de jogo desta criatura no bloco de estatísticas do defensor de aço, que usa seu bônus de proficiência (PB) em vários lugares. Você determina a aparência da criatura e se ela tem duas ou quatro pernas; sua escolha não afeta as estatísticas do jogo.",
+				"Em combate, o defensor compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza no seu turno é a ação {@action Dodge}, a menos que você execute uma ação bônus no seu turno para ordená-lo a realizar outra ação. Essa ação pode ser uma em seu bloco de estatísticas ou alguma outra ação. Se você for {@condition incapacitated}, o defensor poderá realizar qualquer ação de sua escolha, não apenas {@action Dodge}.",
+				"Se o feitiço {@spell mending} for lançado nele, ele recuperará {@dice 2d6} pontos de vida. Se ele morreu na última hora, você pode usar seu {@item smith's tools|PHB} como uma ação para reanimá-lo, desde que esteja a até 1,5 metro dele e gaste um espaço de magia de 1º nível ou superior. O defensor de aço volta à vida após 1 minuto com todos os seus pontos de vida restaurados.",
+				"No final de um descanso longo, você pode criar um novo defensor de aço se tiver seu {@item smith's tools|PHB} com você. Se você já possui um defensor de aço deste recurso, o primeiro morre imediatamente. O defensor também morre se você morrer."
 			]
 		},
 		{
@@ -2153,14 +2153,14 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"When you adopt this specialization at 3rd level, you gain proficiency with {@item smith's tools|PHB}. If you already have this proficiency, you gain proficiency with one other type of {@item artisan's tools|PHB} of your choice."
+				"Ao adotar esta especialização no 3º nível, você ganha proficiência com {@item smith's tools|PHB}. Se você já possui essa proficiência, você ganha proficiência com outro tipo de {@item artisan's tools|PHB} de sua escolha."
 			]
 		},
 		{
@@ -2173,14 +2173,14 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 5,
 			"header": 2,
 			"entries": [
-				"Starting at 5th level, you can attack twice, rather than once, whenever you take the {@action Attack} action on your turn."
+				"A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que executar a ação {@action Attack} no seu turno."
 			]
 		},
 		{
@@ -2193,22 +2193,22 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
 			"entries": [
-				"At 9th level, you learn new ways to channel arcane energy to harm or heal. When either you hit a target with a magic weapon attack or your steel defender hits a target, you can channel magical energy through the strike to create one of the following effects:",
+				"No 9º nível, você aprende novas maneiras de canalizar energia arcana para prejudicar ou curar. Quando você atinge um alvo com um ataque de arma mágica ou seu defensor de aço atinge um alvo, você pode canalizar energia mágica através do ataque para criar um dos seguintes efeitos:",
 				{
 					"type": "list",
 					"items": [
-						"The target takes an extra {@damage 2d6} force damage.",
-						"Choose one creature or object you can see within 30 feet of the target. Healing energy flows into the chosen recipient, restoring {@dice 2d6} hit points to it."
+						"O alvo sofre {@damage 2d6} de dano de força extra.",
+						"Escolha uma criatura ou objeto que você possa ver a até 9 metros do alvo. A energia de cura flui para o destinatário escolhido, restaurando {@dice 2d6} pontos de vida para ele."
 					]
 				},
-				"You can use this energy a number of times equal to your Intelligence modifier (minimum of once), but you can do so no more than once on a turn. You regain all expended uses when you finish a long rest."
+				"Você pode usar esta energia um número de vezes igual ao seu modificador de Inteligência (no mínimo uma vez), mas não pode fazer isso mais do que uma vez por turno. Você recupera todos os usos gastos ao terminar um descanso longo."
 			]
 		},
 		{
@@ -2221,20 +2221,20 @@
 					"page": 60
 				}
 			],
-			"className": "Artificer",
+			"className": "Artífice",
 			"classSource": "TCE",
-			"subclassShortName": "Battle Smith",
+			"subclassShortName": "Ferreiro de Batalha",
 			"subclassSource": "TCE",
 			"level": 15,
 			"header": 2,
 			"entries": [
-				"At 15th level, your Arcane Jolt and steel defender become more powerful:",
+				"No 15º nível, seu Arcane Jolt e seu defensor de aço se tornam mais poderosos:",
 				{
 					"type": "list",
 					"items": [
-						"The extra damage and the healing of your Arcane Jolt both increase to {@damage 4d6}.",
-						"Your steel defender gains a +2 bonus to Armor Class.",
-						"Whenever your steel defender uses its Deflect Attack, the attacker takes force damage equal to {@damage 1d4} + your Intelligence modifier."
+						"O dano extra e a cura do seu Arcane Jolt aumentam para {@damage 4d6}.",
+						"Seu defensor de aço ganha +2 de bônus na Classe de Armadura.",
+						"Sempre que seu defensor de aço usa seu Ataque de Deflexão, o atacante sofre dano de força igual a {@damage 1d4} + seu modificador de Inteligência."
 					]
 				}
 			]

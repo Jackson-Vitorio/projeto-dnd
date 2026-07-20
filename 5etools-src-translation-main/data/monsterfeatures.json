@@ -3,159 +3,159 @@
 		{
 			"name": "Aggressive",
 			"example": "Orc",
-			"effect": "As a bonus action, the creature can move up to its speed toward a hostile creature it can see.",
+			"effect": "Como uma ação bônus, a criatura pode se mover até seu deslocamento em direção a uma criatura hostil que ela possa ver.",
 			"dpr": "2"
 		},
 		{
 			"name": "Ambusher",
-			"example": "Doppelganger",
-			"effect": "The creature has advantage on attack rolls against any creature it has {@status surprised}.",
+			"example": "Sósia",
+			"effect": "A criatura tem vantagem nas jogadas de ataque contra qualquer criatura que possua {@status surprised}.",
 			"attackBonus": "1"
 		},
 		{
 			"name": "Angelic Weapons",
 			"example": "Deva",
-			"effect": "The creature's weapon attacks are magical. When the creature hits with any weapon, the weapon deals extra radiant damage. Input this extra damage per round.",
-			"dpr": "trait",
+			"effect": "Os ataques com armas da criatura são mágicos. Quando a criatura atinge qualquer arma, a arma causa dano radiante extra. Insira esse dano extra por rodada.",
+			"dpr": "característica",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Avoidance",
 			"example": "Demilich",
-			"effect": "If the creature is subjected to an effect that allows it to make a saving throw to only take half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.",
+			"effect": "Se a criatura for submetida a um efeito que lhe permita fazer um teste de resistência para sofrer apenas metade do dano, ela não sofrerá nenhum dano se for bem-sucedida no teste de resistência, e apenas metade do dano se falhar.",
 			"ac": "1"
 		},
 		{
 			"name": "Blood Frenzy",
 			"example": "Sahuagin",
-			"effect": "The creature has advantage on melee attack rolls against any creature that doesn't have all its hit points.",
+			"effect": "A criatura tem vantagem em jogadas de ataque corpo a corpo contra qualquer criatura que não tenha todos os seus pontos de vida.",
 			"attackBonus": "4"
 		},
 		{
 			"name": "Constrict",
-			"example": "Giant Constrictor Snake",
-			"effect": "The creature has the ability to restrain and/or grapple a target as part of an attack.",
+			"example": "Cobra Constritora Gigante",
+			"effect": "A criatura tem a habilidade de conter e/ou agarrar um alvo como parte de um ataque.",
 			"ac": "1"
 		},
 		{
 			"name": "Damage Transfer",
-			"example": "Cloaker",
-			"effect": "While attached or grappling a creature, the creature takes only half damage dealt to it (rounded down), and the other creature takes the other half.",
+			"example": "Capa",
+			"effect": "Enquanto estiver presa ou agarrada a uma criatura, a criatura sofre apenas metade do dano causado a ela (arredondado para baixo), e a outra criatura sofre a outra metade.",
 			"hp": "hp",
-			"dpr": "hpActual * 0.33"
+			"dpr": "hpReal * 0,33"
 		},
 		{
 			"name": "Enlarge",
 			"example": "Duergar",
-			"effect": "The creature magically increases in size, along with anything it is wearing or carrying. Input the extra damage inflicted per round whilst enlarged.",
-			"dpr": "trait",
+			"effect": "A criatura aumenta magicamente de tamanho, junto com qualquer coisa que esteja vestindo ou carregando. Insira o dano extra infligido por rodada enquanto estiver ampliado.",
+			"dpr": "característica",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Frightful Presence",
-			"example": "Ancient Gold Dragon",
-			"effect": "Each creature of the creature's choice within range must make a Wisdom saving throw or be frightened for 1 minute.",
+			"example": "Dragão Dourado Antigo",
+			"effect": "Cada criatura, à escolha da criatura, dentro do alcance, deve realizar um teste de resistência de Sabedoria ou ficará assustada por 1 minuto.",
 			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)"
 		},
 		{
 			"name": "Heated Body",
 			"example": "Azer",
-			"effect": "Touching or hitting the creature while within 5 ft. of it causes damage.",
-			"dpr": "trait",
+			"effect": "Tocar ou acertar a criatura a até 1,5 metro dela causa dano.",
+			"dpr": "característica",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Horrifying Visage",
 			"example": "Banshee",
-			"effect": "Each non-undead creature of the creature's choice within range must make a Wisdom saving throw or be frightened for 1 minute.",
+			"effect": "Cada criatura não-morta, à escolha da criatura, dentro do alcance, deve realizar um teste de resistência de Sabedoria ou ficará assustada por 1 minuto.",
 			"hp": "Math.floor((expectedCr <= 10) ? hp * 0.25 : 0)"
 		},
 		{
 			"name": "Legendary Resistance",
 			"example": "Tarrasque",
-			"effect": "If the creature fails a saving throw, it can choose to succeed instead. Input the number of uses per day.",
+			"effect": "Se a criatura falhar em um teste de resistência, ela pode escolher ter sucesso. Insira o número de utilizações por dia.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 10*trait : ((expectedCr >= 5 && expectedCr <= 10) ? 20*trait : ((expectedCr >= 11) ? 30*trait : 0)))",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Magic Resistance",
 			"example": "Balor",
-			"effect": "The creature has advantage on saving throws against spells and other magical effects.",
+			"effect": "A criatura tem vantagem em testes de resistência contra magias e outros efeitos mágicos.",
 			"ac": "2"
 		},
 		{
 			"name": "Martial Advantage",
-			"example": "Hobgoblin",
-			"effect": "The creature can deal extra damage to a creature it hits if that creature is with in 5 ft. of an ally of the creature that isn't incapacitated. Input the extra damage inflicted per round.",
-			"dpr": "trait",
+			"example": "Duende Macabro",
+			"effect": "A criatura pode causar dano extra a uma criatura que atingir se essa criatura estiver a 1,5 metro de um aliado da criatura que não esteja incapacitado. Insira o dano extra infligido por rodada.",
+			"dpr": "característica",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Nimble Escape",
-			"example": "Goblin",
-			"effect": "The creature can take the Disengage or Hide action as a bonus action on each of its turns.",
+			"example": "Duende",
+			"effect": "A criatura pode realizar a ação Desengajar ou Esconder-se como uma ação bônus em cada um de seus turnos.",
 			"ac": "4",
 			"attackBonus": "4"
 		},
 		{
 			"name": "Pack Tactics",
 			"example": "Kobold",
-			"effect": "The creature has advantage on an attack roll against a creature if at least one of the creature's allies is within 5 feet of the creature and the ally isn't incapacitated.",
+			"effect": "A criatura tem vantagem em uma jogada de ataque contra uma criatura se pelo menos um dos aliados da criatura estiver a até 1,5 metro da criatura e o aliado não estiver incapacitado.",
 			"attackBonus": "1"
 		},
 		{
 			"name": "Parry",
-			"example": "Hobgoblin warlord",
-			"effect": "The creature adds its proficiency bonus to its AC against one melee attack that would hit it as a reaction.",
+			"example": "Senhor da guerra Hobgoblin",
+			"effect": "A criatura adiciona seu bônus de proficiência à sua CA contra um ataque corpo a corpo que a atingiria como reação.",
 			"ac": "1"
 		},
 		{
 			"name": "Possession",
-			"example": "Ghost",
-			"effect": "The creature can control another creature, during which time it cannot be targeted by nearly any effect.",
+			"example": "Fantasma",
+			"effect": "A criatura pode controlar outra criatura, durante o qual ela não pode ser alvo de quase nenhum efeito.",
 			"hp": "hp"
 		},
 		{
 			"name": "Regeneration",
-			"example": "Troll",
-			"effect": "At the beginning of the creature's turn, it regains hit points and cannot be killed until this effect is mitigated in some way, usually through acid or fire damage. Input how many hit points it regains at the beginning of its turn.",
+			"example": "troll",
+			"effect": "No início do turno da criatura, ela recupera pontos de vida e não pode ser morta até que este efeito seja mitigado de alguma forma, geralmente através de dano ácido ou de fogo. Insira quantos pontos de vida ele recupera no início do turno.",
 			"hp": "trait*3",
 			"hasNumberParam": true
 		},
 		{
 			"name": "Relentless",
-			"example": "Boar",
-			"effect": "If the creature would be reduced to 0 hit points, there is a chance that it can instead only be reduced to 1.",
+			"example": "Javali",
+			"effect": "Se a criatura for reduzida a 0 pontos de vida, há uma chance de que ela só possa ser reduzida a 1.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))"
 		},
 		{
 			"name": "Shadow Stealth",
-			"example": "Shadow Demon",
-			"effect": "While in dim light or darkness, the creature can take the Hide action as a bonus action.",
+			"example": "Demônio das Sombras",
+			"effect": "Enquanto estiver na penumbra ou na escuridão, a criatura pode realizar a ação Esconder-se como uma ação bônus.",
 			"ac": "4"
 		},
 		{
 			"name": "Stench",
-			"example": "Troglodyte",
-			"effect": "Any creature other than the monster within 5 feet of it must make a saving throw or be poisoned.",
+			"example": "Troglodita",
+			"effect": "Qualquer criatura que não seja o monstro a até 1,5 metro dele deve fazer um teste de resistência ou será envenenada.",
 			"ac": "1"
 		},
 		{
 			"name": "Superior Invisibility",
-			"example": "Pixie",
-			"effect": "The creature can turn invisible as an action or bonus action.",
+			"example": "duende",
+			"effect": "A criatura pode ficar invisível como uma ação ou ação bônus.",
 			"ac": "2"
 		},
 		{
 			"name": "Undead Fortitude",
-			"example": "Zombie",
-			"effect": "If the creature would be reduced to 0 hit points, there is a chance that it can instead only be reduced to 1. This feature is negated if the damage is from radiant nature.",
+			"example": "Zumbi",
+			"effect": "Se a criatura for reduzida a 0 pontos de vida, há uma chance de que ela só possa ser reduzida a 1. Este recurso é negado se o dano for de natureza radiante.",
 			"hp": "((expectedCr >= 0 && expectedCr <= 4) ? 7 : ((expectedCr >= 5 && expectedCr <= 10) ? 14 : ((expectedCr >= 11 && expectedCr <= 16) ? 21 : ((expectedCr >= 17) ? 28 : 0))))"
 		},
 		{
 			"name": "Web",
-			"example": "Giant Spider",
-			"effect": "Ranged Weapon Attack that restrains the target on a hit.",
+			"example": "Aranha Gigante",
+			"effect": "Ataque com arma de longo alcance que restringe o alvo ao acertar.",
 			"ac": "1"
 		}
 	]

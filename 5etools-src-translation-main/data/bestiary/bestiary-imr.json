@@ -108,20 +108,20 @@
 				{
 					"name": "Fire Breath {@recharge 5}",
 					"entries": [
-						"A cabeça direita do ettin exala fogo em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 45 ({@damage 10d8}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"A cabeça direita do ettin exala fogo em um cone de 9 metros. Cada criatura na área deve realizar um teste de resistência de Destreza {@dc 14}, dano 45 ({@damage 10d8}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
 					"name": "Cold Breath {@recharge 5}",
 					"entries": [
-						"A cabeça esquerda do ettin exala uma explosão gelada em um cone de 9 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 14}, sofrendo 45 ({@damage 10d8}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"A cabeça à esquerda do ettin exala uma explosão gelada em um cone de 9 metros. Cada criatura na área deve realizar um teste de resistência de Constituição {@dc 14}, dano 45 ({@damage 10d8}) de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
 					"name": "Gaze",
 					"entries": [
-						"O ettin volta seu olhar mágico para uma criatura que ele possa ver a até 36 metros dele. Esse alvo deve fazer um teste de resistência de {@dc 14} Sabedoria. A menos que o alvo seja {@condition incapacitated}, ele pode desviar os olhos para evitar o olhar e ter sucesso automaticamente no salvamento. Se o alvo fizer isso, ele não poderá ver o ettin até o início do próximo turno do ettin. Se o alvo olhar para o ettin nesse meio tempo, ele deverá fazer o teste imediatamente.",
-						"Se o alvo falhar no teste, ele sofre um dos seguintes efeitos, à escolha do ettin ou aleatoriamente:"
+						"Ou será seu olhar mágico para uma criatura que ele poderá ver a até 36 metros dele. Esse alvo deve fazer um teste de resistência de {@dc 14} Sabedoria. A menos que o alvo seja {@condition incapacitated}, ele pode desviar os olhos para evitar o olhar e ter sucesso automaticamente no salvamento. Se o alvo fizer isso, ele não poderá ver o ettin até o início do próximo turno do ettin. Se o alvo for o mesmo nesse meio tempo, ele deverá fazer o teste imediatamente.",
+						"Se o alvo falhar no teste, ele sofrerá um dos seguintes efeitos, à escolha do ettin ou aleatoriamente:"
 					]
 				},
 				{
@@ -139,7 +139,7 @@
 				{
 					"name": "Insanity Gaze",
 					"entries": [
-						"O alvo sofre o efeito do feitiço {@spell confusion} sem fazer um teste de resistência. O efeito dura até o início do próximo turno do ettin. O ettin não precisa se concentrar no feitiço."
+						"O alvo sofre o efeito do feitiço {@spell confusion} sem fazer um teste de resistência. O efeito dura até o início do próximo turno do ettin. O evento não precisa se concentrar no feitiço."
 					]
 				}
 			],
@@ -368,13 +368,13 @@
 				{
 					"name": "Rust Monster Cloak",
 					"entries": [
-						"Qualquer arma não-mágica feita de metal que atinja Barbatos fica corroída. Depois de causar dano, a arma sofre uma penalidade permanente e cumulativa de -1 nas jogadas de dano. Se a penalidade cair para -5, a arma é destruída. A munição não mágica feita de metal que atinge Barbatos é destruída após causar dano."
+						"Qualquer arma não-mágica feita de metal que atinja Barbatos fique corroída. Depois de causar dano, a arma sofre um prejuízo permanente e cumulativo de -1 nas jogadas de dano. Se um acaso cair para -5, a arma é destruída. A munição não mágica feita de metal que atinge Barbatos é destruída após causar dano."
 					]
 				},
 				{
 					"name": "Heart of the Troll",
 					"entries": [
-						"Barbatos recupera 10 pontos de vida no início de seu turno. Se Barbatos sofrer dano de ácido ou fogo, esta característica não funcionará no início do próximo turno de Barbatos. Barbatos morre apenas se começar seu turno com 0 pontos de vida e não se regenerar."
+						"Barbatos recupera 10 pontos de vida no início de seu turno. Se Barbatos sofrer dano de ácido ou fogo, esse recurso não funcionará no início do próximo turno de Barbatos. Barbatos morre apenas se começar sua vez com 0 pontos de vida e não se regenerar."
 					]
 				}
 			],
@@ -394,14 +394,14 @@
 				{
 					"name": "Light Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 6} para acertar, alcance 80/320 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 13} ou será {@condition poisoned} por 1 hora. Se o teste de resistência falhar por 5 ou mais, o alvo também será {@condition unconscious}. O alvo recupera a consciência se sofrer dano ou se outra criatura realizar uma ação para sacudi-lo."
+						"{@atk rw} {@hit 6} para acertar, alcance 80/320 pés, um alvo. {@h}7 ({@damage 1d8 + 3}) dano perfurante, e o alvo deve ter sucesso em um teste de resistência da Constituição {@dc 13} ou será {@condition poisoned} por 1 hora. Se o teste de resistência por 5 ou mais, o alvo também será {@condition unconscious}. Ou recuperar a consciência se sofrer dano ou se outra criatura realizar uma ação para sacudi-lo."
 					]
 				},
 				{
 					"name": "Cloak Sweep",
 					"entries": [
-						"Barbatos corrói um objeto de metal ferroso não mágico que ele pode ver a até 1,5 metro de si mesmo. Se o objeto não estiver sendo usado ou carregado, o toque destrói um cubo de 30 centímetros dele. Se o objeto estiver sendo usado ou carregado por uma criatura, a criatura pode fazer um teste de resistência de Destreza {@dc 12} para evitar o toque de Barbatos.",
-						"Se o objeto tocado for uma armadura de metal ou um escudo de metal sendo usado ou carregado, ele sofre uma penalidade permanente e cumulativa de 1 na CA que oferece. Armadura reduzida a uma CA de 10 ou um escudo que caia para um bônus de +0 é destruído. Se o objeto tocado for uma arma de metal empunhada, ela enferruja conforme descrito no traço Rust Monster Cloak de Barbatos."
+						"Barbatos corroi um objeto de metal ferroso não mágico que ele pode ver a até 1,5 metro de si mesmo. Se o objeto não estiver sendo usado ou carregado, toque em um cubo de 30 centímetros dele. Se o objeto estiver sendo usado ou carregado por uma criatura, a criatura pode fazer um teste de resistência de Destreza {@dc 12} para evitar o toque de Barbatos.",
+						"Se o objeto tocado por uma armadura de metal ou um escudo de metal sendo usado ou carregado, ele sofre um prejuízo permanente e cumulativo de 1 na CA que oferece. Armadura reduzida a um CA de 10 ou um escudo que caia para um bônus de +0 é destruído. Se o objeto tocado por uma arma de metal empunhada, ela enferruja conforme descrito no traço Rust Monster Cloak de Barbatos."
 					]
 				}
 			],
@@ -435,15 +435,15 @@
 				"unconscious"
 			],
 			"conditionInflictSpell": [
-				"restrained"
+				"contido"
 			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"strength"
+				"destreza",
+				"força"
 			],
 			"hasToken": true
 		},
@@ -527,7 +527,7 @@
 		{
 			"name": "Enhanced Medusa",
 			"alias": [
-				"Daoud's Living Lanthor"
+				"O Lanthor Vivo de Daoud"
 			],
 			"source": "IMR",
 			"page": 47,
@@ -559,8 +559,8 @@
 				{
 					"name": "Petrifying Gaze",
 					"entries": [
-						"Quando uma criatura que pode ver os olhos da medusa começa seu turno a até 9 metros da medusa, a medusa pode forçá-la a fazer um teste de resistência de Constituição {@dc 14} se a medusa não for {@condition incapacitated} e puder ver a criatura. Se o teste de resistência falhar por 5 ou mais, a criatura é instantaneamente {@condition petrified}. Caso contrário, uma criatura que falhar no teste começa a se transformar em metal, madeira ou porcelana (a escolha da medusa) e é {@condition restrained}. A criatura {@condition restrained} deve repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que a criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
-						"A menos que {@status surprised}, uma criatura possa desviar os olhos para evitar o teste de resistência no início de seu turno. Se a criatura fizer isso, ela não poderá ver a medusa até o início de seu próximo turno, quando poderá desviar os olhos novamente. Se a criatura olhar para a medusa nesse meio tempo, ela deverá fazer um teste imediatamente.",
+						"Quando uma criatura que pode ver os olhos da medusa começa seu turno a até 9 metros da medusa, a medusa pode forçá-la a fazer um teste de resistência de Constituição {@dc 14} se a medusa não for {@condition incapacitated} e puder ver a criatura. Se o teste de resistência por 5 ou mais, a criatura é instantânea {@condition petrified}. Caso contrário, uma criatura que falha no teste começa a se transformar em metal, madeira ou porcelana (a escolha da medusa) e é {@condition restrained}. A criatura {@condition restrained} deverá repetir o teste de resistência no final de seu próximo turno, tornando-se {@condition petrified} em caso de falha ou encerrando o efeito em caso de sucesso. A petrificação dura até que uma criatura seja libertada pelo feitiço {@spell greater restoration} ou outra magia.",
+						"A menos que {@status surprised}, uma criatura possa desviar os olhos para evitar o teste de resistência no início de seu turno. Se uma criatura fizer isso, ela não poderá ver a medusa até o início de seu próximo turno, quando poderá desviar os olhos novamente. Se uma criatura olhar para uma medusa nesse meio tempo, ela deverá fazer um teste imediatamente.",
 						"Se a medusa se vê refletida em uma superfície polida a até 9 metros dela e em uma área de luz brilhante, a medusa é, devido à sua maldição, afetada por seu próprio olhar."
 					]
 				}
@@ -576,7 +576,7 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity"
+				"destreza"
 			],
 			"hasToken": true
 		},
@@ -683,13 +683,13 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"O olho de cristal de Lynx é um {@item crystal ball} de visão da verdade magicamente encolhido. Um de seus dentes é {@item ring of mind shielding} remodelado, enquanto outro foi magicamente colocado sob um feitiço permanente {@spell Nystul's magic aura}, escondendo a magia desses itens e escondendo sua verdadeira natureza de magia ou recursos que podem detectar mortos-vivos."
+						"O olho de cristal de Lynx é um {@item crystal ball} de visão da verdade magicamente coletada. Um de seus dentes é {@item ring of mind shielding} remodelado, enquanto outro foi magicamente colocado sob um feitiço permanente {@spell Nystul's magic aura}, escondendo a magia desses itens e escondendo sua verdadeira natureza de magia ou recursos que podem detectar mortos-vivos."
 					]
 				},
 				{
 					"name": "Aversion of Fire",
 					"entries": [
-						"Se Lynx sofrer dano de fogo, ela terá desvantagem em jogadas de ataque e testes de habilidade até o final de seu próximo turno."
+						"Se Lynx sofrer dano de fogo, ela terá manobras de ataque e testes de habilidade até o final de seu próximo turno."
 					]
 				},
 				{
@@ -701,7 +701,7 @@
 				{
 					"name": "Lightning Absorption",
 					"entries": [
-						"Sempre que Lynx é submetida a dano elétrico, ela não sofre dano e, em vez disso, recupera um número de pontos de vida igual ao dano elétrico causado."
+						"Sempre que Lynx é submetido a dano elétrico, ela não sofre dano e, em vez disso, recupera um número de pontos de vida igual ao dano elétrico causado."
 					]
 				},
 				{
@@ -895,7 +895,7 @@
 				{
 					"name": "Artificial Mind",
 					"entries": [
-						"Moghadam pode manifestar uma mente artificial como uma imagem espectral flutuante do crânio adornado com joias de {@creature demilich}. Moghadam pode se comunicar telepaticamente com essa mente, enviá-la a até 90 metros de distância dele e ver e ouvir através dela."
+						"Moghadam pode manifestar uma mente artificial como uma imagem espectral flutuante do crânio adornado com joias de {@creature demilich}. Moghadam pode se comunicar telepaticamente com essa mente, enviar-la a até 90 metros de distância dele e ver e ouvir através dela."
 					]
 				},
 				{
@@ -915,13 +915,13 @@
 				{
 					"name": "Blight (1/Day)",
 					"entries": [
-						"Enquanto empunha {@item Ruinblade|IMR}, Moghadam pode lançar o feitiço {@spell blight} ({@dc 15})."
+						"Enquanto empunhado {@item Ruinblade|IMR}, Moghadam pode lançar o feitiço {@spell blight} ({@dc 15})."
 					]
 				},
 				{
 					"name": "Disintegrate (1/7 Days)",
 					"entries": [
-						"Enquanto empunha {@item Ruinblade|IMR}, Moghadam pode lançar o feitiço {@spell disintegrate} contra qualquer objeto não mágico ou criação de força mágica."
+						"Enquanto empunhado {@item Ruinblade|IMR}, Moghadam pode lançar o feitiço {@spell disintegrate} contra qualquer objeto não mágico ou criação de força mágica."
 					]
 				},
 				{
@@ -959,9 +959,9 @@
 				"intelligence"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -1035,7 +1035,7 @@
 				{
 					"name": "Limited Telepathy",
 					"entries": [
-						"O otyugh pode transmitir magicamente mensagens e imagens simples para qualquer criatura a até 36 metros dele que possa entender um idioma. Esta forma de telepatia não permite que a criatura receptora responda telepaticamente."
+						"O otyugh pode transmitir magicamente mensagens e imagens simples para qualquer criatura a até 36 metros dele que possa entender um idioma. Esta forma de telepatia não permite que uma criatura receptora responda telepaticamente."
 					]
 				}
 			],
@@ -1049,19 +1049,19 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}16 ({@damage 2d10 + 5}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Constituição contra doenças de {@dc 17} ou se tornar {@condition poisoned} até que a doença seja curada. A cada 24 horas decorridas, o alvo deve repetir o teste de resistência, reduzindo seu máximo de pontos de vida em 5 ({@dice 1d10}) em caso de falha. A doença é curada com sucesso. O alvo morre se a doença reduzir seu máximo de pontos de vida para 0. Essa redução no máximo de pontos de vida do alvo dura até que a doença seja curada."
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}16 ({@damage 2d10 + 5}) dano perfurante. Se o alvo for uma criatura, ele deve ser bem sucedido em um teste de resistência de Constituição contra doenças de {@dc 17} ou se tornar {@condition poisoned} até que a doença seja curada. A cada 24 horas de corrida, o alvo deve repetir o teste de resistência, reduzindo seu máximo de pontos de vida em 5 ({@dice 1d10}) em caso de falha. A doença é curada com sucesso. O morre se a doença reduz máximo seu alvo de pontos de vida para 0. Essa redução no máximo de pontos de vida do alvo dura até que a doença seja curada."
 					]
 				},
 				{
 					"name": "Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 8} para acertar, alcance 15 pés, um alvo. {@h}10 ({@damage 1d10 + 5}) dano de concussão. Se o alvo for Grande ou menor, é {@condition grappled} (escape {@dc 16}) e {@condition restrained} até que a luta termine. O neo-otyugh tem dois tentáculos, cada um dos quais pode agarrar um alvo."
+						"{@atk mw} {@hit 8} para acertar, alcance 15 pés, um alvo. {@h}10 ({@damage 1d10 + 5}) dano de concussão. Se o alvo para Grande ou menor, é {@condition grappled} (escape {@dc 16}) e {@condition restrained} até que a luta termine. O neo-otyugh tem dois tentáculos, cada um dos quais pode agarrar um alvo."
 					]
 				},
 				{
 					"name": "Tentacle Slam",
 					"entries": [
-						"O neo-otyugh bate as criaturas {@condition grappled} umas nas outras ou em uma superfície sólida. Cada criatura deve ter sucesso em um teste de resistência de Constituição {@dc 16} ou sofrerá 15 ({@damage 3d6 + 5}) de dano de concussão e será {@condition stunned} até o final do próximo turno do neo-otyugh. Em um teste bem-sucedido, o alvo sofre metade do dano de concussão e não é {@condition stunned}."
+						"O neo-otyugh bate as criaturas {@condition grappled} umas nas outras ou em uma superfície sólida. Cada criatura deverá ter sucesso em um teste de resistência de Constituição {@dc 16} ou sofrerá 15 ({@damage 3d6 + 5}) de dano de concussão e será {@condition stunned} até o final do próximo turno do neo-otyugh. Em um teste bem-sucedido, o alvo sofre metade do dano de concussão e não é {@condition stunned}."
 					]
 				}
 			],
@@ -1095,14 +1095,14 @@
 				"stunned"
 			],
 			"conditionInflictSpell": [
-				"paralyzed",
-				"prone"
+				"paralisado",
+				"propenso"
 			],
 			"savingThrowForced": [
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"wisdom"
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1236,7 +1236,7 @@
 				{
 					"name": "Brute",
 					"entries": [
-						"Uma arma corpo a corpo causa um dado extra de dano quando Sir Ursas a acerta (incluído em seu ataque)."
+						"Uma arma corpo a corpo causa um dado extra de dano quando Sir Ursas acertou (incluído em seu ataque)."
 					]
 				}
 			],
@@ -1270,7 +1270,7 @@
 				{
 					"name": "Parry",
 					"entries": [
-						"Sir Ursas adiciona 3 à sua CA contra um ataque corpo a corpo que o atingiria. Para fazer isso, ele deve ver o atacante e estar empunhando uma arma branca."
+						"Sir Ursas adiciona 3 à sua CA contra um ataque corpo a corpo que o atingiria. Para fazer isso, ele deve ver o atacante e estar armado com uma arma branca."
 					]
 				}
 			],
@@ -1599,13 +1599,13 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Thessalar empunha um {@item +1 dagger} revestido com {@item Thessaltoxin|IMR|thessaltoxin poison} (veja o apêndice C)."
+						"Thessalar empunhado um {@item +1 dagger} revestido com {@item Thessaltoxin|IMR|thessaltoxin poison} (veja o apêndice C)."
 					]
 				},
 				{
 					"name": "Alchemical Homunculus",
 					"entries": [
-						"Thessalar está acompanhado por seu {@creature Thessalar's homunculus|IMR}. Se o feitiço {@spell mending} for lançado nele, o homúnculo recupera {@dice 2d6} pontos de vida."
+						"Thessalar é acompanhado por seu {@creature Thessalar's homunculus|IMR}. Se o feitiço {@spell mending} foi lançado nele, o homúnculo recupera {@dice 2d6} pontos de vida."
 					]
 				},
 				{
@@ -1662,8 +1662,8 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity"
+				"constituição",
+				"destreza"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1753,7 +1753,7 @@
 				{
 					"name": "Telepathic Bond",
 					"entries": [
-						"Embora o construto esteja no mesmo plano de existência de seu mestre, ele pode transmitir magicamente o que sente ao seu mestre, e os dois podem se comunicar telepaticamente."
+						"Embora a construção seja o mesmo plano de existência de seu mestre, ele pode transmitir magicamente o que sente ao seu mestre, e os dois podem se comunicar telepaticamente."
 					]
 				}
 			],
@@ -1761,7 +1761,7 @@
 				{
 					"name": "Claws",
 					"entries": [
-						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}1 dano cortante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou será {@condition poisoned} por 1 minuto. Se o teste de resistência falhar por 5 ou mais, o alvo será {@condition poisoned} por 5 ({@dice 1d10}) minutos e {@condition unconscious} enquanto {@condition poisoned} desta forma."
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}1 dano cortante, e o alvo deve ter sucesso em um teste de resistência de Constituição {@dc 10} ou será {@condition poisoned} por 1 minuto. Se o teste de resistência por 5 ou mais, o alvo será {@condition poisoned} por 5 ({@dice 1d10}) minutos e {@condition unconscious} enquanto {@condition poisoned} desta forma."
 					]
 				}
 			],
@@ -1888,7 +1888,7 @@
 					"name": "Bite",
 					"entries": [
 						"{@atk mw} {@hit 12} para acertar, alcance 5 pés, um alvo. {@h}20 ({@damage 3d8 + 7}) de dano perfurante mais 5 ({@damage 1d10}) de dano ácido. Se o alvo for uma criatura Média ou menor {@condition grappled} do thessalkraken, essa criatura é engolida e o agarrão termina. Enquanto engolida, a criatura é {@condition blinded} e {@condition restrained}, tem {@quickref Cover||3||total cover} contra ataques e outros efeitos fora do thessalkraken, e sofre 21 ({@damage 6d6}) de dano ácido no início de cada um dos turnos do thessalkraken.",
-						"Se o thessalkraken sofrer 35 de dano ou mais em um único turno de uma criatura dentro dele, ele deverá ter sucesso em um teste de resistência de Constituição {@dc 23} no final daquele turno ou regurgitar todas as criaturas engolidas, que cairão {@condition prone} em um espaço a até 3 metros do thessalkraken. Se o thessalkraken morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 3 metros de movimento, saindo de {@condition prone}."
+						"Se o thessalkraken sofrer 35 de dano ou mais em um único turno de uma criatura dentro dele, ele deverá ter sucesso em um teste de resistência de Constituição {@dc 23} no final desse turno ou regurgitar todas as criaturas engolidas, que cairão {@condition prone} em um espaço a até 3 metros do thessalkraken. Se o thessalkraken morrer, uma criatura engolida não será mais {@condition restrained} por ele e poderá escapar do cadáver usando 3 metros de movimento, saindo de {@condition prone}."
 					]
 				},
 				{
@@ -1900,13 +1900,13 @@
 				{
 					"name": "Fling",
 					"entries": [
-						"Um objeto médio ou menor segurado ou criatura {@condition grappled} pelo thessalkraken é lançado até 12 metros em uma direção aleatória e derrubado {@condition prone}. Se um alvo arremessado atingir uma superfície sólida, o alvo sofre 3 ({@damage 1d6}) de dano de concussão para cada 3 metros que foi arremessado. Se o alvo for lançado em outra criatura, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 16} ou sofrerá o mesmo dano e será derrubada {@condition prone}."
+						"Um objeto médio ou menor seguro ou criatura {@condition grappled} pelo thessalkraken é lançado até 12 metros em uma direção designada e derrubado {@condition prone}. Se um alvo arremessado atinge uma superfície sólida, o alvo sofre 3 ({@damage 1d6}) de dano de concussão para cada 3 metros que foi arremessado. Se o alvo for lançado em outra criatura, essa criatura deverá ser bem sucedida em um teste de resistência de Destreza {@dc 16} ou sofrerá o mesmo dano e será derrubada {@condition prone}."
 					]
 				},
 				{
 					"name": "Acid Saliva {@recharge 5}",
 					"entries": [
-						"O thessalkraken cospe uma bola de ácido em um ponto que pode ver a até 18 metros dele. Cada criatura a até 3 metros desse ponto deve realizar um teste de resistência de Destreza de {@dc 18}, sofrendo 22 ({@damage 4d10}) de dano ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"O thessalkraken cospe uma bola de ácido em um ponto que pode ver a até 18 metros dele. Cada criatura a até 3 metros desse ponto deve realizar um teste de resistência de Destreza de {@dc 18}, dano 22 ({@damage 4d10}) de dano ácido se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				}
 			],
@@ -1920,13 +1920,13 @@
 				{
 					"name": "Fling",
 					"entries": [
-						"O thessalkraken usa Fling."
+						"O thessalkraken EUA Fling."
 					]
 				},
 				{
 					"name": "Ink Cloud (Costs 3 Actions)",
 					"entries": [
-						"Enquanto está submerso, o thessalkraken expele uma nuvem de tinta em um raio de 18 metros. A nuvem se espalha pelos cantos, e essa área fica fortemente obscurecida para outras criaturas além do Thessalkraken. Cada criatura, exceto o thessalkraken, que termina seu turno lá, deve ser bem-sucedida em um teste de resistência de Constituição {@dc 18}, sofrendo 16 ({@damage 3d10}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso. Uma forte corrente dispersa a nuvem, que de outra forma desaparece no final do próximo turno do thessalkraken."
+						"Enquanto está submerso, o thessalkraken expulsa uma nuvem de tinta em um raio de 18 metros. A nuvem se espalha pelos cantos, e essa área fica fortemente obscura para outras criaturas além do Thessalkraken. Cada criatura, exceto o thessalkraken, que termina seu turno lá, deve ser bem-sucedida em um teste de resistência de Constituição {@dc 18}, sofrer 16 ({@damage 3d10}) de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso. Uma forte corrente dispersa a nuvem, que de outra forma desaparece no final do próximo turno do thessalkraken."
 					]
 				}
 			],

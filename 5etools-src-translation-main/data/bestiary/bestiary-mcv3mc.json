@@ -71,7 +71,7 @@
 				{
 					"name": "Blaze Rod",
 					"entries": [
-						"Quando a chama cai para 0 pontos de vida, ela desaparece em uma nuvem de fumaça e tem 50% de chance de deixar para trás um bastão brilhante no valor de 100 po. A haste emite luz fraca em um raio de 1,5 metro. Como uma ação, uma criatura pode tentar quebrar a vara, fazendo isso com um teste de Força {@dc 14} bem-sucedido. O bastão quebrado libera sua energia ígnea em uma esfera de 1,5 metro de raio centrada em si mesmo. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 14}, sofrendo 6 ({@damage 1d12}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"Quando a chama cai para 0 pontos de vida, ela desaparece em uma nuvem de fumaça e tem 50% de chance de deixar para trás um bastão brilhante no valor de 100 po. A pressa emite luz fraca em um raio de 1,5 metro. Como uma ação, uma criatura pode tentar quebrar a vara, fazendo isso com um teste de Força {@dc 14} bem-sucedido. O básico quebrado libera sua energia ígnea em uma esfera de 1,5 metro de raio focada em si mesmo. Cada criatura na área deve realizar um teste de resistência de Destreza {@dc 14}, dano 6 ({@damage 1d12}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
@@ -103,7 +103,7 @@
 				{
 					"name": "Fiery Doom",
 					"entries": [
-						"{@atk ms,rs} {@hit 6} para acertar; alcance 1,5 m ou alcance de 18 m, um alvo. {@h}8 ({@damage 1d10 + 3}) de dano de fogo e o alvo pega fogo se for uma criatura ou um objeto inflamável. Até que uma criatura realize uma ação para extinguir o fogo, o alvo em chamas sofre 3 ({@damage 1d6}) de dano de fogo no final de cada um de seus turnos."
+						"{@atk ms,rs} {@hit 6} para acertar; alcance 1,5 m ou alcance de 18 m, um alvo. {@h}8 ({@damage 1d10 + 3}) de dano de fogo e o alvo pega fogo é para uma criatura ou um objeto inflamável. Até que uma criatura realize uma ação para extinguir o fogo, o alvo em chamas sofre 3 ({@damage 1d6}) de dano de fogo no final de cada um de seus turnos."
 					]
 				}
 			],
@@ -188,25 +188,25 @@
 				{
 					"name": "Bizarre Physiology",
 					"entries": [
-						"O rastejador não pode realizar ações, exceto {@action Dash}, {@action Disengage}, {@action Hide} e {@action Search}. Não pode realizar ações ou reações bônus."
+						"O rastejador não pode realizar ações, exceto {@action Dash}, {@action Disengage}, {@action Hide} e {@action Search}. Não é possível realizar ações ou respostas bônus."
 					]
 				},
 				{
 					"name": "Creeper Head",
 					"entries": [
-						"Quando uma trepadeira chega a 0 pontos de vida devido à explosão de uma trepadeira carregada (veja a característica Destruição), ela morre e sua cabeça cai. A cabeça caída de uma trepadeira é oca e pode ser usada como máscara com aberturas para os olhos e a boca."
+						"Quando uma trepadeira chega a 0 pontos de vida devido à explosão de uma trepadeira incluída (veja a característica Destruição), ela morre e sua cabeça cai. A cabeça caída de uma trepadeira é oca e pode ser usada como máscara com aberturas para os olhos e a boca."
 					]
 				},
 				{
 					"name": "Destruction",
 					"entries": [
 						"Quando termina seu turno a até 3 metros de um Humanóide que possa ver, a trepadeira para de se mover e emite um silvo alto o suficiente para ser ouvido por criaturas a até 9 metros de si mesmo.",
-						"Se a trepadeira chegar a 0 pontos de vida antes do início do próximo turno, o assobio para e a trepadeira morre. Caso contrário, no início do próximo turno da trepadeira, uma das seguintes coisas acontecerá:",
+						"Se a trepadeira chegar a 0 pontos de vida antes do início do próximo turno, o assobio para e a trepadeira morre. Caso contrário, no início do próximo turno da trepadeira, uma das seguintes coisas aconteceu:",
 						{
 							"type": "list",
 							"items": [
-								"If there are no Humanoids within 10 feet of the hissing creeper, it stops hissing. It then uses any available movement to approach the nearest Humanoid it can see.",
-								"If there are one or more Humanoids within 10 feet of the hissing creeper, the creeper explodes in a ball of energy that fills a 20-foot-radius sphere centered on itself. This energy spreads around corners. The creeper is destroyed, and every other creature in the explosion's area must make a {@dc 12} Dexterity saving throw, taking 14 ({@damage 4d6}) lightning damage on a failed save, or half as much damage on a successful one. Increase this damage by 7 ({@dice 2d6}) if the creeper is charged (see \"Electrical Charge\" below). Objects in the area that aren't being worn or carried take 14 ({@damage 4d6}) lightning damage, or 21 ({@damage 6d6}) lightning damage if the creeper is charged."
+								"Se não houver humanóides a menos de 3 metros da trepadeira sibilante, ela para de assobiar. Em seguida, ele usa qualquer movimento disponível para se aproximar do Humanóide mais próximo que puder ver.",
+								"Se houver um ou mais Humanóides a até 3 metros da trepadeira sibilante, a trepadeira explode em uma bola de energia que preenche uma esfera de 6 metros de raio centrada nela mesma. Essa energia se espalha pelos cantos. A trepadeira é destruída e todas as outras criaturas na área da explosão devem realizar um teste de resistência de Destreza {@dc 12}, sofrendo 14 ({@damage 4d6}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso. Aumente esse dano em 7 ({@dice 2d6}) se a trepadeira estiver carregada (veja \"Carga Elétrica\" ​​abaixo). Objetos na área que não estão sendo usados ​​ou carregados sofrem 14 ({@damage 4d6}) de dano elétrico ou 21 ({@damage 6d6}) de dano elétrico se a trepadeira estiver carregada."
 							]
 						}
 					]
@@ -214,13 +214,13 @@
 				{
 					"name": "Electrical Charge",
 					"entries": [
-						"Sempre que a trepadeira é submetida a dano elétrico, ela não sofre dano e fica carregada por 1 minuto. Enquanto carregada, a trepadeira emite uma luz azul fraca em um raio de 1,5 metro."
+						"Sempre que a trepadeira for submetida a dano elétrico, ela não sofre dano e fica carregada por 1 minuto. Enquanto isso, a trepadeira emite uma luz azul fraca em um raio de 1,5 metro."
 					]
 				},
 				{
 					"name": "Fear of Felines",
 					"entries": [
-						"A trepadeira tem a condição {@condition frightened} sempre que inicia seu turno a até 18 metros de uma criatura felina que possa ver. A condição dura até o início do próximo turno da trepadeira."
+						"A trepadeira tem a condição {@condition frightened} sempre que inicia seu giro a até 18 metros de uma criatura felina que possa ver. A condição dura até o início do próximo giro da trepadeira."
 					]
 				}
 			],
@@ -324,7 +324,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"O dragão faz um ataque de mordida e usa Beating Wings."
+						"O dragão faz um ataque de morte e usa Beating Wings."
 					]
 				},
 				{
@@ -342,7 +342,7 @@
 				{
 					"name": "Harmful Breath {@recharge 5}",
 					"entries": [
-						"O dragão exala gás pútrido em um cone de 18 metros. Cada criatura naquela área deve realizar um teste de resistência de Constituição {@dc 21}, sofrendo 52 ({@damage 15d6}) de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. O dragão então escolhe um ponto que pode ver onde o cone faz contato com o solo. Esse ponto se torna o centro de um cilindro de gás persistente com 3 metros de altura e 3 metros de raio que desaparece no início do próximo turno do dragão. Qualquer criatura que comece seu turno no cilindro sofre 10 ({@damage 3d6}) de dano necrótico."
+						"O dragão exala gás pútrido em um cone de 18 metros. Cada criatura na área deve realizar um teste de resistência de Constituição {@dc 21}, dano 52 ({@damage 15d6}) de dano necrótico se falhar na resistência, ou metade do dano obter sucesso. O dragão então escolhe um ponto que pode ver onde o cone faz contato com o solo. Esse ponto se torna o centro de um cilindro de gás persistente com 3 metros de altura e 3 metros de raio que desaparece no início da próxima volta do dragão. Qualquer criatura que comece seu giro no cilindro sofre 10 ({@damage 3d6}) de dano necrótico."
 					]
 				}
 			],
@@ -438,19 +438,19 @@
 				{
 					"name": "Evasive Teleportation",
 					"entries": [
-						"Sempre que sofrer dano ou for alvo de um ataque à distância, o Enderman pode se teletransportar, junto com qualquer equipamento que esteja vestindo ou carregando, para um espaço desocupado que possa ver a até 6 metros de si mesmo (nenhuma ação necessária). Se este efeito for desencadeado por um ataque à distância, o Enderman se teletransporta pouco antes do ataque acertar, fazendo com que o ataque falhe. Esta característica é suprimida enquanto o Enderman tem a condição {@condition incapacitated}."
+						"Sempre que sofrer dano ou ser alvo de um ataque à distância, o Enderman pode se teletransportar, junto com qualquer equipamento que você usa ou carregando, para um espaço desocupado que possa ver a até 6 metros de si mesmo (nenhuma ação necessária). Se este efeito for desencadeado por um ataque à distância, o Enderman se teletransporta um pouco antes do ataque acertar, fazendo com que o ataque falhe. Esta característica é suprimida enquanto o Enderman tem a condição {@condition incapacitated}."
 					]
 				},
 				{
 					"name": "Implosion",
 					"entries": [
-						"Quando o Enderman chega a 0 pontos de vida, ele morre e seu corpo implode. Role um {@dice d10}. Com um resultado de 9 ou menos, o Enderman não deixa restos. Em um resultado de 10, o Enderman deixa para trás um orbe roxo brilhante chamado pérola de Ender, no valor de 500 po. Uma criatura pode lançar a pérola até 18 metros; se a pérola cair em um espaço desocupado grande o suficiente para conter a criatura, a criatura se teletransporta para aquele espaço, junto com qualquer equipamento que esteja vestindo ou carregando, e a pérola desaparece."
+						"Quando o Enderman chega a 0 pontos de vida, ele morre e seu corpo implode. Função um {@dice d10}. Com um resultado de 9 ou menos, o Enderman não deixa restos. Em um resultado de 10, o Enderman deixa para trás um orbe roxo brilhante chamado pérola de Ender, no valor de 500 po. Uma criatura pode lançar as pérolas até 18 metros; se uma pérola cai em um espaço desocupado grande o suficiente para conter uma criatura, uma criatura se teletransporta para aquele espaço, junto com qualquer equipamento que você usa ou carrega, e as pérolas desaparecem."
 					]
 				},
 				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
-						"Enquanto estiver sob a luz do sol, o Enderman tem desvantagem nas jogadas de ataque."
+						"Enquanto estiver sob a luz do sol, o Enderman tem manobras de ataque."
 					]
 				},
 				{
@@ -543,7 +543,7 @@
 				{
 					"name": "Pack Tactics",
 					"entries": [
-						"O lobo tem vantagem nas jogadas de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition incapacitated}."
+						"O lobo tem vantagem nas estratégias de ataque contra uma criatura se pelo menos um dos aliados do lobo estiver a até 1,5 metro da criatura e o aliado não tiver a condição {@condition incapacitated}."
 					]
 				}
 			],
@@ -571,5 +571,7 @@
 			"hasFluff": true,
 			"hasFluffImages": true
 		}
+	]
+}		}
 	]
 }

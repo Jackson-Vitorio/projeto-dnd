@@ -66,7 +66,7 @@
 				{
 					"name": "Helpful",
 					"entries": [
-						"O especialista pode realizar a ação Ajudar como uma ação bônus, e a criatura que recebe a ajuda ganha um bônus {@dice 1d6} na rolagem de {@dice d20}. Se essa jogada for uma jogada de ataque, a criatura pode renunciar a adicionar o bônus a ela e, então, se o ataque acertar, a criatura pode adicionar o bônus à jogada de dano do ataque contra um alvo."
+						"O especialista pode realizar a ação Ajudar como uma ação bônus, e uma criatura que recebe ajuda ganha um bônus {@dice 1d6} na rolagem de {@dice d20}. Se essa jogada for uma jogada de ataque, a criatura pode renunciar a adicionar o bônus a ela e, então, se o ataque acertar, a criatura pode adicionar os bônus à jogada de dano do ataque contra um alvo."
 					]
 				},
 				{
@@ -86,7 +86,7 @@
 				{
 					"name": "Extra Attack",
 					"entries": [
-						"O especialista pode atacar duas vezes, em vez de uma, sempre que realizar a ação de ataque em seu turno."
+						"O especialista pode atacar duas vezes, em vez de uma, sempre que uma ação de ataque em seu turno for realizada."
 					]
 				},
 				{
@@ -342,7 +342,7 @@
 				{
 					"name": "Legendary Resistance (3/Day)",
 					"entries": [
-						"Se Lhammaruntosz falhar em um teste de resistência, ela pode escolher ter sucesso."
+						"Se Lhammaruntosz falhar em um teste de resistência, ela pode escolher o sucesso."
 					]
 				},
 				{
@@ -380,7 +380,7 @@
 				{
 					"name": "Frightful Presence",
 					"entries": [
-						"Cada criatura, à escolha de Lhammaruntosz, que esteja a até 36 metros dela e ciente dela, deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou se tornará {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtiver sucesso. Se o teste de resistência de uma criatura for bem-sucedido ou o efeito terminar, a criatura ficará imune à Presença Aterrorizante de Lhammaruntosz pelas próximas 24 horas."
+						"Cada criatura, à escolha de Lhammaruntosz, que aproveita até 36 metros dela e sabe dela, deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou se tornará {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso. Se o teste de resistência de uma criatura for bem sucedido ou o efeito terminar, a criatura se tornará imune à Presença Aterrorizante de Lhammaruntosz pelas próximas 24 horas."
 					]
 				},
 				{
@@ -392,20 +392,20 @@
 				{
 					"name": "Lightning Breath",
 					"entries": [
-						"Lhammaruntosz exala raios em uma linha de 27 metros com 1,5 metro de largura. Cada criatura nessa linha deve realizar um teste de resistência de Destreza {@dc 19}, sofrendo 66 ({@damage 12d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						"Lhammaruntosz exala raios em uma linha de 27 metros com 1,5 metro de largura. Cada criatura nessa linha deve realizar um teste de resistência de Destreza {@dc 19}, dano 66 ({@damage 12d10}) de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso."
 					]
 				},
 				{
 					"name": "Repulsion Breath",
 					"entries": [
-						"Lhammaruntosz exala energia de repulsão em um cone de 9 metros. Cada criatura naquela área deve ser bem sucedida em um teste de resistência de Força de {@dc 19}. Se falhar na resistência, a criatura é empurrada para 18 metros de distância do dragão."
+						"Lhammaruntosz exala energia de repulsão em um cone de 9 metros. Cada criatura nesta área deve ser bem sucedida em um teste de resistência de Força de {@dc 19}. Se falhar na resistência, a criatura é empurrada para 18 metros de distância do dragão."
 					]
 				},
 				{
 					"name": "Change Shape",
 					"entries": [
-						"Lhammaruntosz se transforma magicamente em um humanóide ou besta que tem um nível de desafio não superior ao seu, ou volta à sua forma verdadeira. Ela volta à sua verdadeira forma se morrer. Qualquer equipamento que ela esteja usando ou carregando é absorvido ou suportado pela nova forma (escolha de Lhammaruntosz).",
-						"Em uma nova forma, Lhammaruntosz mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária, ações de covil e pontuações de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão substituídas pelas da nova forma, exceto quaisquer características de classe ou ações lendárias dessa forma."
+						"Lhammaruntosz se transforma magicamente em um humanóide ou melhor que tem um nível de desafio não superior ao seu, ou volta à sua forma verdadeira. Ela volta à sua verdadeira forma de morrer. Qualquer equipamento que ela esteja usando ou carregando é absorvido ou suportado pela nova forma (escolha de Lhammaruntosz).",
+						"Em uma nova forma, Lhammaruntosz mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária, ações de covil e orientações de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão mantidas pela nova forma, exceto quaisquer características de classe ou ações emprestadas dessa forma."
 					]
 				}
 			],
@@ -483,9 +483,9 @@
 				"prone"
 			],
 			"conditionInflictSpell": [
-				"charmed",
-				"invisible",
-				"unconscious"
+				"encantado",
+				"invisível",
+				"inconsciente"
 			],
 			"savingThrowForced": [
 				"dexterity",
@@ -496,8 +496,8 @@
 				"constitution"
 			],
 			"savingThrowForcedSpell": [
-				"dexterity",
-				"wisdom"
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -642,11 +642,11 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"incapacitated"
+				"incapacitado"
 			],
 			"savingThrowForcedSpell": [
-				"charisma",
-				"dexterity"
+				"carisma",
+				"destreza"
 			],
 			"hasToken": true
 		},
@@ -791,13 +791,13 @@
 				"MW"
 			],
 			"conditionInflictSpell": [
-				"invisible",
-				"unconscious"
+				"invisível",
+				"inconsciente"
 			],
 			"savingThrowForcedSpell": [
-				"constitution",
-				"dexterity",
-				"wisdom"
+				"constituição",
+				"destreza",
+				"sabedoria"
 			],
 			"hasToken": true
 		},
@@ -830,7 +830,7 @@
 				"walk": 30
 			},
 			"initiative": {
-				"advantageMode": "adv"
+				"advantageMode": "advérbio"
 			},
 			"str": 18,
 			"dex": 14,
@@ -861,13 +861,13 @@
 				{
 					"name": "Improved Critical",
 					"entries": [
-						"As jogadas de ataque do guerreiro obtêm um acerto crítico em uma jogada de 19 ou 20 no {@dice d20}."
+						"As jogadas de ataque do obter guerreirom um acerto crítico em uma jogada de 19 ou 20 no {@dice d20}."
 					]
 				},
 				{
 					"name": "Indomitable (1/Day)",
 					"entries": [
-						"O guerreiro pode rolar novamente um teste de resistência que falhe, mas deve usar o novo resultado."
+						"O guerreiro pode rolar novamente um teste de resistência que falha, mas deve usar o novo resultado."
 					]
 				},
 				{
@@ -876,20 +876,20 @@
 						"O guerreiro possui uma das seguintes características à sua escolha:",
 						{
 							"type": "list",
-							"style": "list-hang-notitle",
+							"style": "lista-pendurar-notitle",
 							"items": [
 								{
 									"name": "Attacker",
 									"type": "item",
 									"entries": [
-										"The warrior gains a +2 bonus to attack rolls."
+										"O guerreiro ganha um bônus de +2 nas jogadas de ataque."
 									]
 								},
 								{
 									"name": "Defender",
 									"type": "item",
 									"entries": [
-										"The warrior gains the Protection reaction below."
+										"O guerreiro ganha a reação de Proteção abaixo."
 									]
 								}
 							]
@@ -899,7 +899,7 @@
 				{
 					"name": "Second Wind (Recharges after a Short or Long Rest)",
 					"entries": [
-						"O guerreiro pode usar uma ação bônus em seu turno para recuperar pontos de vida iguais a {@dice 1d10} + seu nível."
+						"O guerreiro pode usar um bônus de ação em seu turno para recuperar pontos de vida iguais a {@dice 1d10} + seu nível."
 					]
 				}
 			],
@@ -907,7 +907,7 @@
 				{
 					"name": "Extra Attack",
 					"entries": [
-						"O guerreiro pode atacar duas vezes, em vez de uma, sempre que realizar a ação de ataque em seu turno."
+						"O guerreiro pode atacar duas vezes, em vez de uma, sempre que uma ação de ataque em seu turno for realizada."
 					]
 				},
 				{
@@ -927,7 +927,7 @@
 				{
 					"name": "Protection (Defender Only)",
 					"entries": [
-						"Quando uma criatura que o guerreiro pode ver ataca um alvo diferente do guerreiro que está a até 1,5 metro do guerreiro, o guerreiro pode usar sua reação para impor desvantagem na jogada de ataque. O guerreiro deve estar empunhando um escudo."
+						"Quando uma criatura que o guerreiro pode atacar um alvo diferente do guerreiro que está a até 1,5 metro do guerreiro, o guerreiro pode usar sua ocorrência para impor manobra na jogada de ataque. O guerreiro deve estar empunhando um escudo."
 					]
 				}
 			],

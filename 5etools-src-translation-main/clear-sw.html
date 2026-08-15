@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Limpar SW</title></head>
+<body>
+<h1>Limpando Service Worker...</h1>
+<script>
+async function cleanUp() {
+  // Limpar caches
+  if (window.caches) {
+    const keys = await caches.keys();
+    for (const key of keys) {
+      await caches.delete(key);
+      console.log('Cache deletado:', key);
+    }
+  }
+  // Desregistrar SWs
+  if (navigator.serviceWorker) {
+    const regs = await navigator.serviceWorker.getRegistrations();
+    for (const reg of regs) {
+      await reg.unregister();
+      console.log('SW desregistrado');
+    }
+  }
+  document.body.innerHTML += '<p style="color:green">Limpeza concluída!</p>';
+  setTimeout(() => {
+    window.location.href = '/statgen.html?clean=1';
+  }, 1000);
+}
+cleanUp();
+</script>
+</body>
+</html>

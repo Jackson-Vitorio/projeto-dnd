@@ -6,8 +6,8 @@
 
 PROJECT_DIR="5etools-src-translation-main"
 PORT=5000
-PID_FILE="/tmp/5etools-server.pid"
-LOG_FILE="/tmp/5etools-server.log"
+PID_FILE="/tmp/projeto-dnd-server.pid"
+LOG_FILE="/tmp/projeto-dnd-server.log"
 
 cd "$(dirname "$0")"
 

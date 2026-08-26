@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build APK 5eTools via Capacitor + Gradle
+# Build APK projeto-dnd via Capacitor + Gradle
 set -e
 cd "$(dirname "$0")"
 
@@ -7,7 +7,7 @@ PROJECT_DIR="5etools-src-translation-main"
 ANDROID_SDK="${ANDROID_HOME:-/home/jack/Android/Sdk}"
 
 echo "========================================="
-echo " 5eTools APK Builder"
+echo " projeto-dnd APK Builder"
 echo "========================================="
 echo ""
 
@@ -73,11 +73,11 @@ ANDROID_HOME="$ANDROID_SDK" ANDROID_SDK_ROOT="$ANDROID_SDK" \
 APK_PATH="app/build/outputs/apk/release/app-release.apk"
 if [ -f "$APK_PATH" ]; then
     APK_SIZE=$(du -h "$APK_PATH" | cut -f1)
-    cp "$APK_PATH" ../../5etools-app.apk
+    cp "$APK_PATH" ../../projeto-dnd.apk
     echo ""
     echo "========================================="
     echo "BUILD SUCESSO!"
-    echo "APK: ../../5etools-app.apk"
+    echo "APK: ../../projeto-dnd.apk"
     echo "Tamanho: $APK_SIZE"
     echo "========================================="
 else

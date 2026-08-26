@@ -36,15 +36,12 @@ const baseSitemapData = (() => {
 })();
 
 const getTemplate = ({page, name, source, hash, img, textStyle, isFluff}) => `<!DOCTYPE html><html lang="en"><head>
-<!--5ETOOLS_CMP-->
-<!--5ETOOLS_ANALYTICS-->
-<!--5ETOOLS_ADCODE-->
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="mobile-web-app-capable" content="yes">
-<title>5etools</title>
+<title>projeto-dnd</title>
 <link rel="stylesheet" href="/css/bootstrap.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -56,7 +53,7 @@ const getTemplate = ({page, name, source, hash, img, textStyle, isFluff}) => `<!
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/manifest.webmanifest">
-<meta name="application-name" content="5etools">
+<meta name="application-name" content="projeto-dnd">
 <meta name="theme-color" content="#006bc4">
 <meta name="msapplication-config" content="browserconfig.xml"/>
 <meta name="msapplication-TileColor" content="#006bc4">
@@ -65,7 +62,7 @@ const getTemplate = ({page, name, source, hash, img, textStyle, isFluff}) => `<!
 <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
 <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
 <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-<meta name="apple-mobile-web-app-title" content="5etools">
+<meta name="apple-mobile-web-app-title" content="projeto-dnd">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#006bc4">
 <meta property="og:title" content="${name}">
 <meta property="og:url" content="${BASE_SITE_URL}${page}.html#${hash}">
@@ -76,8 +73,6 @@ ${img ? `<meta property="og:image" content="${BASE_SITE_URL}${img}">` : ""}
 <script>globalThis._SEO_PAGE="${page}";globalThis._SEO_SOURCE="${source}";globalThis._SEO_HASH="${hash}";globalThis._SEO_STYLE=${textStyle};globalThis._SEO_FLUFF=${isFluff}</script>
 </head>
 <body>
-<div class="cancer__wrp-sidebar-rhs cancer__anchor"><div class="cancer__disp-cancer"></div><div class="cancer__sidebar-rhs-inner cancer__sidebar-rhs-inner--top cancer__wrp-interactive"><!--5ETOOLS_AD_RIGHT_1--></div><div class="cancer__sidebar-rhs-inner cancer__sidebar-rhs-inner--bottom cancer__wrp-interactive"><!--5ETOOLS_AD_RIGHT_2--></div></div>
-<div class="cancer__wrp-leaderboard cancer__anchor"><div class="cancer__disp-cancer"></div><div class="cancer__wrp-leaderboard-inner cancer__wrp-interactive"><!--5ETOOLS_AD_LEADERBOARD--></div></div>
 
 <header class="hidden-xs hidden-sm page__header"><div class="container ve-flex-v-baseline"><h1 class="page__title no-wrap my-0"></h1></div></header><nav class="container page__nav" id="navigation"><ul class="nav nav-pills page__nav-inner" id="navbar"></ul></nav>
 

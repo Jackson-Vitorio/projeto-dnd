@@ -1,17 +1,15 @@
-# 5e.tools
+# projeto-dnd
 
-Visit the [main site](https://5e.tools/index.html) or go to the unofficial GitHub [mirror](index.html).
+Ferramentas de D&amp;D 5ª edição baseadas em navegador (projeto derivado/adaptado de 5e.tools).
 
-[Join the 5etools Discord here!](https://discord.gg/5etools)
+## Ajuda e Suporte
 
-## Help and Support
+Consulte a [wiki](https://wiki.tercept.net/) para FAQs, guias de instalação, integrações suportadas e mais.
 
-Please see [our wiki](https://wiki.tercept.net/) for FAQs, installation guides, supported integrations, and more.
+## Contribuindo
 
-## Contributing
+Consulte [CONTRIBUTING.md](CONTRIBUTING.md).
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+## Licença
 
-## License
-
-This project is licensed under the terms of the MIT license.
+Este projeto está licenciado sob os termos da licença MIT.

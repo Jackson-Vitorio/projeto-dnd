@@ -12,7 +12,7 @@
 			"srd": true,
 			"basicRules": true,
 			"reprintedAs": [
-				"Ladino|XPHB"
+				"Rogue|XPHB"
 			],
 			"edition": "classic",
 			"hd": {
@@ -66,39 +66,39 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) um {@item rapier|phb} ou (b) um {@item shortsword|phb}",
-					"(a) um {@item shortbow|phb} e {@item quiver|phb} de {@item arrows (20)|phb|20 arrows} ou (b) um {@item shortsword|phb}",
-					"(a) um {@item burglar's pack|phb}, (b) um {@item dungeoneer's pack|phb} ou (c) um {@item explorer's pack|phb}",
-					"{@item Leather armor|phb}, dois {@item dagger|phb|daggers} e {@item thieves' tools|phb}"
+					"(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
+					"(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
+					"(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
+					"{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
 				],
 				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
 				"defaultData": [
 					{
 						"a": [
-							"florete | phb"
+							"rapier|phb"
 						],
 						"b": [
-							"espada curta | phb"
+							"shortsword|phb"
 						]
 					},
 					{
 						"a": [
-							"arco curto | phb",
-							"setas (20)|phb"
+							"shortbow|phb",
+							"arrows (20)|phb"
 						],
 						"b": [
-							"espada curta | phb"
+							"shortsword|phb"
 						]
 					},
 					{
 						"a": [
-							"pacote de ladrão | phb"
+							"burglar's pack|phb"
 						],
 						"b": [
-							"pacote do Dungeoneer | phb"
+							"dungeoneer's pack|phb"
 						],
 						"c": [
-							"pacote do explorador | phb"
+							"explorer's pack|phb"
 						]
 					},
 					{
@@ -401,41 +401,41 @@
 				}
 			],
 			"classFeatures": [
-				"Especialização|Ladino||1",
-				"Ataque Furtivo|Ladino||1",
-				"Cantiga dos Ladrões | Ladino || 1",
-				"Ação astuta|Rogue||2",
+				"Expertise|Rogue||1",
+				"Sneak Attack|Rogue||1",
+				"Thieves' Cant|Rogue||1",
+				"Cunning Action|Rogue||2",
 				{
-					"classFeature": "Arquétipo do Ladino | Ladino || 3",
+					"classFeature": "Roguish Archetype|Rogue||3",
 					"gainSubclassFeature": true
 				},
-				"Mira constante|Rogue||3|TCE",
-				"Melhoria na Pontuação de Habilidade|Ladino||4",
-				"Esquiva Sobrenatural | Ladino || 5",
-				"Especialização | Ladino | | 6",
-				"Evasão | Ladino | | 7",
-				"Melhoria na Pontuação de Habilidade|Ladino||8",
+				"Steady Aim|Rogue||3|TCE",
+				"Ability Score Improvement|Rogue||4",
+				"Uncanny Dodge|Rogue||5",
+				"Expertise|Rogue||6",
+				"Evasion|Rogue||7",
+				"Ability Score Improvement|Rogue||8",
 				{
-					"classFeature": "Recurso Arquétipo Roguish|Rogue||9",
+					"classFeature": "Roguish Archetype feature|Rogue||9",
 					"gainSubclassFeature": true
 				},
-				"Melhoria na Pontuação de Habilidade|Ladino||10",
-				"Talento confiável|Desonestos||11",
-				"Melhoria na Pontuação de Habilidade|Ladino||12",
+				"Ability Score Improvement|Rogue||10",
+				"Reliable Talent|Rogue||11",
+				"Ability Score Improvement|Rogue||12",
 				{
-					"classFeature": "Recurso de Arquétipo Roguish|Rogue||13",
+					"classFeature": "Roguish Archetype feature|Rogue||13",
 					"gainSubclassFeature": true
 				},
-				"Sentido Cego | Ladino | | 14",
-				"Mente Escorregadia|Vampira||15",
-				"Melhoria na Pontuação de Habilidade|Ladino||16",
+				"Blindsense|Rogue||14",
+				"Slippery Mind|Rogue||15",
+				"Ability Score Improvement|Rogue||16",
 				{
-					"classFeature": "Recurso de Arquétipo Roguish|Rogue||17",
+					"classFeature": "Roguish Archetype feature|Rogue||17",
 					"gainSubclassFeature": true
 				},
-				"Elusivo | Ladino | | 18",
-				"Melhoria na Pontuação de Habilidade|Ladino||19",
-				"Golpe de sorte|Vampira||20"
+				"Elusive|Rogue||18",
+				"Ability Score Improvement|Rogue||19",
+				"Stroke of Luck|Rogue||20"
 			],
 			"subclassTitle": "Arquétipo Malandro",
 			"hasFluff": true,
@@ -479,7 +479,7 @@
 				],
 				"weapons": [
 					"simples",
-					"Armas marciais que possuem a propriedade {@filter Finesse or Light|items|type=martial weapon|property=finesse;light}"
+					"Martial weapons that have the {@filter Finesse or Light|items|type=martial weapon|property=finesse;light} property"
 				],
 				"weaponProficiencies": [
 					{
@@ -523,29 +523,29 @@
 					{
 						"A": [
 							{
-								"item": "armadura de couro | xphb"
+								"item": "leather armor|xphb"
 							},
 							{
-								"item": "adaga | xphb",
+								"item": "dagger|xphb",
 								"quantity": 2
 							},
 							{
-								"item": "espada curta | xphb"
+								"item": "shortsword|xphb"
 							},
 							{
-								"item": "arco curto | xphb"
+								"item": "shortbow|xphb"
 							},
 							{
-								"item": "setas (20)|xphb"
+								"item": "arrows (20)|xphb"
 							},
 							{
-								"item": "aljava | xphb"
+								"item": "quiver|xphb"
 							},
 							{
-								"item": "ferramentas de ladrões | xphb"
+								"item": "thieves' tools|xphb"
 							},
 							{
-								"item": "pacote de ladrão | xphb"
+								"item": "burglar's pack|xphb"
 							},
 							{
 								"value": 800
@@ -846,44 +846,44 @@
 				}
 			],
 			"classFeatures": [
-				"Especialização|Desonestos|XPHB|1",
-				"Ataque Furtivo|Rogue|XPHB|1",
-				"Cant dos Ladrões|Rogue|XPHB|1",
-				"Maestria com Armas | Ladino | XPHB | 1",
-				"Ação astuta|Rogue|XPHB|2",
+				"Expertise|Rogue|XPHB|1",
+				"Sneak Attack|Rogue|XPHB|1",
+				"Thieves' Cant|Rogue|XPHB|1",
+				"Weapon Mastery|Rogue|XPHB|1",
+				"Cunning Action|Rogue|XPHB|2",
 				{
-					"classFeature": "Subclasse Rogue|Rogue|XPHB|3",
+					"classFeature": "Rogue Subclass|Rogue|XPHB|3",
 					"gainSubclassFeature": true
 				},
-				"Mira constante|Rogue|XPHB|3",
-				"Melhoria na Pontuação de Habilidade|Rogue|XPHB|4",
-				"Ataque Astuto | Ladino | XPHB | 5",
-				"Esquiva Sobrenatural|Rogue|XPHB|5",
-				"Especialização|Desonestos|XPHB|6",
-				"Evasão | Ladino | XPHB | 7",
-				"Talento confiável|Desonestos|XPHB|7",
-				"Melhoria na Pontuação de Habilidade|Rogue|XPHB|8",
+				"Steady Aim|Rogue|XPHB|3",
+				"Ability Score Improvement|Rogue|XPHB|4",
+				"Cunning Strike|Rogue|XPHB|5",
+				"Uncanny Dodge|Rogue|XPHB|5",
+				"Expertise|Rogue|XPHB|6",
+				"Evasion|Rogue|XPHB|7",
+				"Reliable Talent|Rogue|XPHB|7",
+				"Ability Score Improvement|Rogue|XPHB|8",
 				{
-					"classFeature": "Recurso de subclasse|Rogue|XPHB|9",
+					"classFeature": "Subclass Feature|Rogue|XPHB|9",
 					"gainSubclassFeature": true
 				},
-				"Melhoria na Pontuação de Habilidade|Rogue|XPHB|10",
-				"Ataque Astuto Aprimorado|Rogue|XPHB|11",
-				"Melhoria na Pontuação de Habilidade|Rogue|XPHB|12",
+				"Ability Score Improvement|Rogue|XPHB|10",
+				"Improved Cunning Strike|Rogue|XPHB|11",
+				"Ability Score Improvement|Rogue|XPHB|12",
 				{
-					"classFeature": "Recurso de subclasse|Rogue|XPHB|13",
+					"classFeature": "Subclass Feature|Rogue|XPHB|13",
 					"gainSubclassFeature": true
 				},
-				"Ataques tortuosos|Rogue|XPHB|14",
-				"Mente Escorregadia|Vampira|XPHB|15",
-				"Melhoria na Pontuação de Habilidade|Rogue|XPHB|16",
+				"Devious Strikes|Rogue|XPHB|14",
+				"Slippery Mind|Rogue|XPHB|15",
+				"Ability Score Improvement|Rogue|XPHB|16",
 				{
-					"classFeature": "Recurso de subclasse|Rogue|XPHB|17",
+					"classFeature": "Subclass Feature|Rogue|XPHB|17",
 					"gainSubclassFeature": true
 				},
-				"Elusivo | Ladino | XPHB | 18",
-				"Benefício Épico|Rogue|XPHB|19",
-				"Golpe de sorte|Rogue|XPHB|20"
+				"Elusive|Rogue|XPHB|18",
+				"Epic Boon|Rogue|XPHB|19",
+				"Stroke of Luck|Rogue|XPHB|20"
 			],
 			"subclassTitle": "Subclasse Rogue",
 			"hasFluff": true,
@@ -893,13 +893,13 @@
 	"subclass": [
 		{
 			"name": "Arcane Trickster",
-			"shortName": "Malandro Arcano",
+			"shortName": "Arcane Trickster",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 97,
 			"reprintedAs": [
-				"Malandro Arcano | Ladino | XPHB | XPHB"
+				"Arcane Trickster|Rogue|XPHB|XPHB"
 			],
 			"edition": "classic",
 			"spellcastingAbility": "interno",
@@ -958,25 +958,25 @@
 					"expanded": {
 						"3": [
 							{
-								"all": "nível=0|class=Assistente"
+								"all": "level=0|class=Wizard"
 							},
 							{
-								"all": "nível=1|class=Assistente"
+								"all": "level=1|class=Wizard"
 							}
 						],
 						"7": [
 							{
-								"all": "level=2|class=Assistente"
+								"all": "level=2|class=Wizard"
 							}
 						],
 						"13": [
 							{
-								"all": "nível=3|class=Assistente"
+								"all": "level=3|class=Wizard"
 							}
 						],
 						"19": [
 							{
-								"all": "level=4|class=Assistente"
+								"all": "level=4|class=Wizard"
 							}
 						]
 					}
@@ -1216,17 +1216,17 @@
 				}
 			],
 			"subclassFeatures": [
-				"Malandro Arcano|Ladino||Malandro Arcano||3",
-				"Emboscada Mágica|Ladino||Trapaceiro Arcano||9",
-				"Malandro Versátil|Ladino||Malandro Arcano||13",
-				"Ladrão de Feitiços|Ladino||Malandro Arcano||17"
+				"Arcane Trickster|Rogue||Arcane Trickster||3",
+				"Magical Ambush|Rogue||Arcane Trickster||9",
+				"Versatile Trickster|Rogue||Arcane Trickster||13",
+				"Spell Thief|Rogue||Arcane Trickster||17"
 			]
 		},
 		{
 			"name": "Arcane Trickster",
-			"shortName": "Malandro Arcano",
+			"shortName": "Arcane Trickster",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Arcane Trickster",
@@ -1245,27 +1245,27 @@
 		},
 		{
 			"name": "Assassin",
-			"shortName": "Assassino",
+			"shortName": "Assassin",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 97,
 			"reprintedAs": [
-				"Assassino | Ladino | XPHB | XPHB"
+				"Assassin|Rogue|XPHB|XPHB"
 			],
 			"edition": "classic",
 			"subclassFeatures": [
-				"Assassino | Ladino || Assassino || 3",
-				"Experiência em infiltração|Rogue||Assassino||9",
-				"Impostor|Ladino||Assassino||13",
-				"Ataque Mortal | Ladino || Assassino || 17"
+				"Assassin|Rogue||Assassin||3",
+				"Infiltration Expertise|Rogue||Assassin||9",
+				"Impostor|Rogue||Assassin||13",
+				"Death Strike|Rogue||Assassin||17"
 			]
 		},
 		{
 			"name": "Assassin",
-			"shortName": "Assassino",
+			"shortName": "Assassin",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Assassin",
@@ -1284,29 +1284,29 @@
 		},
 		{
 			"name": "Thief",
-			"shortName": "Ladrão",
+			"shortName": "Thief",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
 			"reprintedAs": [
-				"Ladrão | Ladino | XPHB | XPHB"
+				"Thief|Rogue|XPHB|XPHB"
 			],
 			"edition": "classic",
 			"subclassFeatures": [
-				"Ladrão | Ladino || Ladrão || 3",
-				"Espreitadela Suprema|Vampira||Ladrão||9",
-				"Usar Dispositivo Mágico | Ladino || Ladrão || 13",
-				"Reflexos do Ladrão|Ladino||Ladrão||17"
+				"Thief|Rogue||Thief||3",
+				"Supreme Sneak|Rogue||Thief||9",
+				"Use Magic Device|Rogue||Thief||13",
+				"Thief's Reflexes|Rogue||Thief||17"
 			]
 		},
 		{
 			"name": "Thief",
-			"shortName": "Ladrão",
+			"shortName": "Thief",
 			"source": "PHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Thief",
@@ -1325,24 +1325,24 @@
 		},
 		{
 			"name": "Inquisitive",
-			"shortName": "Inquisitivo",
+			"shortName": "Inquisitive",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 45,
 			"edition": "classic",
 			"subclassFeatures": [
-				"Inquisitivo|Rogue||Inquisitivo|XGE|3",
-				"Olho Firme|Vampira||Inquisitivo|XGE|9",
-				"Olho Infalível|Vampira||Inquisitivo|XGE|13",
-				"Olho para Fraqueza|Rogue||Inquisitivo|XGE|17"
+				"Inquisitive|Rogue||Inquisitive|XGE|3",
+				"Steady Eye|Rogue||Inquisitive|XGE|9",
+				"Unerring Eye|Rogue||Inquisitive|XGE|13",
+				"Eye for Weakness|Rogue||Inquisitive|XGE|17"
 			]
 		},
 		{
 			"name": "Inquisitive",
-			"shortName": "Inquisitivo",
+			"shortName": "Inquisitive",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Inquisitive",
@@ -1361,9 +1361,9 @@
 		},
 		{
 			"name": "Mastermind",
-			"shortName": "Cérebro",
+			"shortName": "Mastermind",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 46,
 			"otherSources": [
@@ -1374,17 +1374,17 @@
 			],
 			"edition": "classic",
 			"subclassFeatures": [
-				"Cérebro|Rogue||Cérebro|XGE|3",
-				"Manipulador perspicaz|Rogue||Mastermind|XGE|9",
-				"Desorientação|Rogue||Mastermind|XGE|13",
-				"Alma do Engano|Rogue||Mastermind|XGE|17"
+				"Mastermind|Rogue||Mastermind|XGE|3",
+				"Insightful Manipulator|Rogue||Mastermind|XGE|9",
+				"Misdirection|Rogue||Mastermind|XGE|13",
+				"Soul of Deceit|Rogue||Mastermind|XGE|17"
 			]
 		},
 		{
 			"name": "Mastermind",
-			"shortName": "Cérebro",
+			"shortName": "Mastermind",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Mastermind",
@@ -1403,24 +1403,24 @@
 		},
 		{
 			"name": "Scout",
-			"shortName": "Escoteiro",
+			"shortName": "Scout",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 47,
 			"edition": "classic",
 			"subclassFeatures": [
-				"Batedor|Rogue||Scout|XGE|3",
-				"Mobilidade Superior|Rogue||Scout|XGE|9",
-				"Mestre da Emboscada|Rogue||Scout|XGE|13",
-				"Ataque Repentino|Rogue||Scout|XGE|17"
+				"Scout|Rogue||Scout|XGE|3",
+				"Superior Mobility|Rogue||Scout|XGE|9",
+				"Ambush Master|Rogue||Scout|XGE|13",
+				"Sudden Strike|Rogue||Scout|XGE|17"
 			]
 		},
 		{
 			"name": "Scout",
-			"shortName": "Escoteiro",
+			"shortName": "Scout",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Scout",
@@ -1439,9 +1439,9 @@
 		},
 		{
 			"name": "Swashbuckler",
-			"shortName": "Espadachim",
+			"shortName": "Swashbuckler",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 48,
 			"otherSources": [
@@ -1452,17 +1452,17 @@
 			],
 			"edition": "classic",
 			"subclassFeatures": [
-				"Espadachim | Ladino || Espadachim | XGE | 3",
-				"Orgulho|Vampira||Espadachim|XGE|9",
-				"Manobra Elegante|Rogue||Swashbuckler|XGE|13",
-				"Duelista Mestre | Ladino || Espadachim | XGE | 17"
+				"Swashbuckler|Rogue||Swashbuckler|XGE|3",
+				"Panache|Rogue||Swashbuckler|XGE|9",
+				"Elegant Maneuver|Rogue||Swashbuckler|XGE|13",
+				"Master Duelist|Rogue||Swashbuckler|XGE|17"
 			]
 		},
 		{
 			"name": "Swashbuckler",
-			"shortName": "Espadachim",
+			"shortName": "Swashbuckler",
 			"source": "XGE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Swashbuckler",
@@ -1481,25 +1481,25 @@
 		},
 		{
 			"name": "Phantom",
-			"shortName": "Fantasma",
+			"shortName": "Phantom",
 			"source": "TCE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 62,
 			"edition": "classic",
 			"subclassFeatures": [
-				"Fantasma|Vampira||Fantasma|TCE|3",
-				"Fichas dos Infiltrados|Rogue||Fantasma|TCE|9",
-				"Caminhada Fantasma|Vampira||Fantasma|TCE|13",
-				"Amigo da Morte | Ladino || Fantasma | TCE | 17"
+				"Phantom|Rogue||Phantom|TCE|3",
+				"Tokens of the Departed|Rogue||Phantom|TCE|9",
+				"Ghost Walk|Rogue||Phantom|TCE|13",
+				"Death's Friend|Rogue||Phantom|TCE|17"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Phantom",
-			"shortName": "Fantasma",
+			"shortName": "Phantom",
 			"source": "TCE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Phantom",
@@ -1527,28 +1527,28 @@
 		},
 		{
 			"name": "Soulknife",
-			"shortName": "Faca da Alma",
+			"shortName": "Soulknife",
 			"source": "TCE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"page": 63,
 			"reprintedAs": [
-				"Faca da Alma|Rogue|XPHB|XPHB"
+				"Soulknife|Rogue|XPHB|XPHB"
 			],
 			"edition": "classic",
 			"subclassFeatures": [
-				"Faca da Alma|Rogue||Faca da Alma|TCE|3",
+				"Soulknife|Rogue||Soulknife|TCE|3",
 				"Soul Blades|Rogue||Soulknife|TCE|9",
-				"Véu Psíquico|Rogue||Soulknife|TCE|13",
+				"Psychic Veil|Rogue||Soulknife|TCE|13",
 				"Rend Mind|Rogue||Soulknife|TCE|17"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Soulknife",
-			"shortName": "Faca da Alma",
+			"shortName": "Soulknife",
 			"source": "TCE",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"_copy": {
 				"name": "Soulknife",
@@ -1576,9 +1576,9 @@
 		},
 		{
 			"name": "Arcane Trickster",
-			"shortName": "Malandro Arcano",
+			"shortName": "Arcane Trickster",
 			"source": "XPHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"page": 132,
 			"edition": "one",
@@ -1633,31 +1633,31 @@
 				{
 					"known": {
 						"3": [
-							"mão mágica | xphb#c"
+							"mage hand|xphb#c"
 						]
 					},
 					"expanded": {
 						"3": [
 							{
-								"all": "nível=0|class=Assistente"
+								"all": "level=0|class=Wizard"
 							},
 							{
-								"all": "nível=1|class=Assistente"
+								"all": "level=1|class=Wizard"
 							}
 						],
 						"7": [
 							{
-								"all": "level=2|class=Assistente"
+								"all": "level=2|class=Wizard"
 							}
 						],
 						"13": [
 							{
-								"all": "nível=3|class=Assistente"
+								"all": "level=3|class=Wizard"
 							}
 						],
 						"19": [
 							{
-								"all": "level=4|class=Assistente"
+								"all": "level=4|class=Wizard"
 							}
 						]
 					}
@@ -1876,34 +1876,34 @@
 				}
 			],
 			"subclassFeatures": [
-				"Malandro Arcano|Vampira|XPHB|Malandro Arcano|XPHB|3",
-				"Emboscada Mágica|Ladino|XPHB|Trapaceiro Arcano|XPHB|9",
-				"Malandro Versátil|Desonestos|XPHB|Malandro Arcano|XPHB|13",
-				"Ladrão de Feitiços|Ladino|XPHB|Trapaceiro Arcano|XPHB|17"
+				"Arcane Trickster|Rogue|XPHB|Arcane Trickster|XPHB|3",
+				"Magical Ambush|Rogue|XPHB|Arcane Trickster|XPHB|9",
+				"Versatile Trickster|Rogue|XPHB|Arcane Trickster|XPHB|13",
+				"Spell Thief|Rogue|XPHB|Arcane Trickster|XPHB|17"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Assassin",
-			"shortName": "Assassino",
+			"shortName": "Assassin",
 			"source": "XPHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"page": 134,
 			"edition": "one",
 			"subclassFeatures": [
-				"Assassino | Ladino | XPHB | Assassino | XPHB | 3",
-				"Experiência em infiltração|Rogue|XPHB|Assassino|XPHB|9",
-				"Armas Envenenadas | Ladino | XPHB | Assassino | XPHB | 13",
-				"Ataque Mortal | Ladino | XPHB | Assassino | XPHB | 17"
+				"Assassin|Rogue|XPHB|Assassin|XPHB|3",
+				"Infiltration Expertise|Rogue|XPHB|Assassin|XPHB|9",
+				"Envenom Weapons|Rogue|XPHB|Assassin|XPHB|13",
+				"Death Strike|Rogue|XPHB|Assassin|XPHB|17"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Soulknife",
-			"shortName": "Faca da Alma",
+			"shortName": "Soulknife",
 			"source": "XPHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"page": 135,
 			"edition": "one",
@@ -2004,27 +2004,27 @@
 				}
 			],
 			"subclassFeatures": [
-				"Faca da Alma|Rogue|XPHB|Faca da Alma|XPHB|3",
-				"Lâminas de Alma|Rogue|XPHB|Soulknife |XPHB|9",
-				"Véu Psíquico|Rogue|XPHB|Soulknife|XPHB|13",
+				"Soulknife|Rogue|XPHB|Soulknife|XPHB|3",
+				"Soul Blades|Rogue|XPHB|Soulknife |XPHB|9",
+				"Psychic Veil|Rogue|XPHB|Soulknife|XPHB|13",
 				"Rend Mind|Rogue|XPHB|Soulknife|XPHB|17"
 			],
 			"hasFluffImages": true
 		},
 		{
 			"name": "Thief",
-			"shortName": "Ladrão",
+			"shortName": "Thief",
 			"source": "XPHB",
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
 			"edition": "one",
 			"subclassFeatures": [
-				"Ladrão|Ladino|XPHB|Ladrão|XPHB|3",
-				"Espreitadela Suprema|Vampira|XPHB|Ladrão|XPHB|9",
-				"Usar Dispositivo Mágico|Rogue|XPHB|Ladrão|XPHB|13",
-				"Reflexos do Ladrão|Vampira|XPHB|Ladrão|XPHB|17"
+				"Thief|Rogue|XPHB|Thief|XPHB|3",
+				"Supreme Sneak|Rogue|XPHB|Thief|XPHB|9",
+				"Use Magic Device|Rogue|XPHB|Thief|XPHB|13",
+				"Thief's Reflexes|Rogue|XPHB|Thief|XPHB|17"
 			],
 			"hasFluffImages": true
 		}
@@ -2036,7 +2036,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
@@ -2050,7 +2050,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
@@ -2065,7 +2065,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
@@ -2079,7 +2079,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 2,
 			"entries": [
@@ -2092,7 +2092,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 3,
 			"entries": [
@@ -2103,7 +2103,7 @@
 			"name": "Steady Aim",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 3,
 			"isClassFeatureVariant": true,
@@ -2118,7 +2118,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 4,
 			"entries": [
@@ -2132,7 +2132,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 5,
 			"entries": [
@@ -2145,7 +2145,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 6,
 			"entries": [
@@ -2158,7 +2158,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 7,
 			"entries": [
@@ -2171,7 +2171,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 8,
 			"entries": [
@@ -2185,7 +2185,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 9,
 			"entries": [
@@ -2198,7 +2198,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 10,
 			"entries": [
@@ -2212,7 +2212,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 11,
 			"entries": [
@@ -2225,7 +2225,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 12,
 			"entries": [
@@ -2239,7 +2239,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 13,
 			"entries": [
@@ -2252,7 +2252,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 14,
 			"entries": [
@@ -2265,7 +2265,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 15,
 			"entries": [
@@ -2278,7 +2278,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 16,
 			"entries": [
@@ -2292,7 +2292,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 17,
 			"entries": [
@@ -2305,7 +2305,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 18,
 			"entries": [
@@ -2318,7 +2318,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 19,
 			"entries": [
@@ -2332,7 +2332,7 @@
 			"page": 94,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
 			"level": 20,
 			"entries": [
@@ -2344,7 +2344,7 @@
 			"name": "Expertise",
 			"source": "XPHB",
 			"page": 128,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 1,
 			"entries": [
@@ -2356,7 +2356,7 @@
 			"name": "Sneak Attack",
 			"source": "XPHB",
 			"page": 128,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 1,
 			"entries": [
@@ -2369,7 +2369,7 @@
 			"name": "Thieves' Cant",
 			"source": "XPHB",
 			"page": 128,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 1,
 			"entries": [
@@ -2380,7 +2380,7 @@
 			"name": "Weapon Mastery",
 			"source": "XPHB",
 			"page": 128,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 1,
 			"entries": [
@@ -2392,7 +2392,7 @@
 			"name": "Cunning Action",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 2,
 			"entries": [
@@ -2403,7 +2403,7 @@
 			"name": "Rogue Subclass",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -2414,7 +2414,7 @@
 			"name": "Steady Aim",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -2425,7 +2425,7 @@
 			"name": "Ability Score Improvement",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 4,
 			"entries": [
@@ -2436,7 +2436,7 @@
 			"name": "Cunning Strike",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 5,
 			"entries": [
@@ -2447,15 +2447,15 @@
 					"entries": [
 						{
 							"type": "refClassFeature",
-							"classFeature": "Veneno (Custo: 1d6) | Ladino | XPHB | 5 | XPHB"
+							"classFeature": "Poison (Cost: 1d6)|Rogue|XPHB|5|XPHB"
 						},
 						{
 							"type": "refClassFeature",
-							"classFeature": "Viagem (Custo: 1d6) | Ladino | XPHB | 5 | XPHB"
+							"classFeature": "Trip (Cost: 1d6)|Rogue|XPHB|5|XPHB"
 						},
 						{
 							"type": "refClassFeature",
-							"classFeature": "Retirar (Custo: 1d6) | Ladino | XPHB | 5 | XPHB"
+							"classFeature": "Withdraw (Cost: 1d6)|Rogue|XPHB|5|XPHB"
 						}
 					]
 				}
@@ -2465,7 +2465,7 @@
 			"name": "Poison (Cost: 1d6)",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 5,
 			"entries": [
@@ -2477,7 +2477,7 @@
 			"name": "Trip (Cost: 1d6)",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 5,
 			"entries": [
@@ -2488,7 +2488,7 @@
 			"name": "Uncanny Dodge",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 5,
 			"entries": [
@@ -2499,7 +2499,7 @@
 			"name": "Withdraw (Cost: 1d6)",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 5,
 			"entries": [
@@ -2510,7 +2510,7 @@
 			"name": "Expertise",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 6,
 			"entries": [
@@ -2521,7 +2521,7 @@
 			"name": "Evasion",
 			"source": "XPHB",
 			"page": 129,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 7,
 			"entries": [
@@ -2532,7 +2532,7 @@
 			"name": "Reliable Talent",
 			"source": "XPHB",
 			"page": 130,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 7,
 			"entries": [
@@ -2543,7 +2543,7 @@
 			"name": "Ability Score Improvement",
 			"source": "XPHB",
 			"page": 130,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 8,
 			"entries": [
@@ -2554,7 +2554,7 @@
 			"name": "Subclass Feature",
 			"source": "XPHB",
 			"page": 130,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 9,
 			"entries": [
@@ -2565,7 +2565,7 @@
 			"name": "Ability Score Improvement",
 			"source": "XPHB",
 			"page": 130,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 10,
 			"entries": [
@@ -2576,7 +2576,7 @@
 			"name": "Improved Cunning Strike",
 			"source": "XPHB",
 			"page": 130,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 11,
 			"entries": [
@@ -2587,7 +2587,7 @@
 			"name": "Ability Score Improvement",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 12,
 			"entries": [
@@ -2598,7 +2598,7 @@
 			"name": "Subclass Feature",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 13,
 			"entries": [
@@ -2609,7 +2609,7 @@
 			"name": "Daze (Cost: 2d6)",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 14,
 			"entries": [
@@ -2620,7 +2620,7 @@
 			"name": "Devious Strikes",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 14,
 			"entries": [
@@ -2630,15 +2630,15 @@
 					"entries": [
 						{
 							"type": "refClassFeature",
-							"classFeature": "Atordoamento (Custo: 2d6) | Ladino | XPHB | 14 | XPHB"
+							"classFeature": "Daze (Cost: 2d6)|Rogue|XPHB|14|XPHB"
 						},
 						{
 							"type": "refClassFeature",
-							"classFeature": "Nocaute (Custo: 6d6) | Ladino | XPHB | 14 | XPHB"
+							"classFeature": "Knock Out (Cost: 6d6)|Rogue|XPHB|14|XPHB"
 						},
 						{
 							"type": "refClassFeature",
-							"classFeature": "Obscuro (Custo: 3d6) | Ladino | XPHB | 14 | XPHB"
+							"classFeature": "Obscure (Cost: 3d6)|Rogue|XPHB|14|XPHB"
 						}
 					]
 				}
@@ -2648,7 +2648,7 @@
 			"name": "Knock Out (Cost: 6d6)",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 14,
 			"entries": [
@@ -2659,7 +2659,7 @@
 			"name": "Obscure (Cost: 3d6)",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 14,
 			"entries": [
@@ -2670,7 +2670,7 @@
 			"name": "Slippery Mind",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 15,
 			"entries": [
@@ -2681,7 +2681,7 @@
 			"name": "Ability Score Improvement",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 16,
 			"entries": [
@@ -2692,7 +2692,7 @@
 			"name": "Subclass Feature",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 17,
 			"entries": [
@@ -2703,7 +2703,7 @@
 			"name": "Elusive",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 18,
 			"entries": [
@@ -2714,7 +2714,7 @@
 			"name": "Epic Boon",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 19,
 			"entries": [
@@ -2725,7 +2725,7 @@
 			"name": "Stroke of Luck",
 			"source": "XPHB",
 			"page": 131,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
 			"level": 20,
 			"entries": [
@@ -2739,20 +2739,20 @@
 			"name": "Arcane Trickster",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
 				"Alguns ladinos aprimoram suas habilidades aprimoradas de furtividade e agilidade com magia, aprendendo truques de encantamento e ilusão. Esses ladinos incluem batedores de carteira e ladrões, mas também brincalhões, travessos e um número significativo de aventureiros.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Conjuração | Ladino || Malandro Arcano || 3"
+					"subclassFeature": "Spellcasting|Rogue||Arcane Trickster||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mão Mágica Legerdemain|Rogue||Arcane Trickster||3"
+					"subclassFeature": "Mage Hand Legerdemain|Rogue||Arcane Trickster||3"
 				}
 			]
 		},
@@ -2760,9 +2760,9 @@
 			"name": "Mage Hand Legerdemain",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -2773,7 +2773,7 @@
 					"items": [
 						"Você pode guardar um objeto que a mão esteja segurando em um recipiente usado ou carregado por outra criatura.",
 						"Você pode recuperar um objeto em um recipiente usado ou carregado por outra criatura.",
-						"Você pode usar {@item thieves' tools|phb} para arrombar fechaduras e desarmar armadilhas à distância."
+						"You can use {@item thieves' tools|phb} to pick locks and disarm traps at range."
 					]
 				},
 				"Você pode realizar uma dessas tarefas sem ser notado por uma criatura se tiver sucesso em um teste de Destreza ({@skill Sleight of Hand}) contestado pelo teste de Sabedoria da criatura ({@skill Perception}).",
@@ -2784,9 +2784,9 @@
 			"name": "Spellcasting",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -2864,9 +2864,9 @@
 			"name": "Magical Ambush",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 9,
 			"header": 2,
@@ -2878,9 +2878,9 @@
 			"name": "Versatile Trickster",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 13,
 			"header": 2,
@@ -2892,9 +2892,9 @@
 			"name": "Spell Thief",
 			"source": "PHB",
 			"page": 97,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -2908,9 +2908,9 @@
 			"name": "Assassin",
 			"source": "PHB",
 			"page": 97,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
@@ -2918,11 +2918,11 @@
 				"Seu arquétipo lhe concede características no 3º nível e novamente no 9º, 13º e 17º níveis.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Assassinar|Vampira||Assassino||3"
+					"subclassFeature": "Assassinate|Rogue||Assassin||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Proficiências Bônus|Ladino||Assassino||3"
+					"subclassFeature": "Bonus Proficiencies|Rogue||Assassin||3"
 				}
 			]
 		},
@@ -2930,9 +2930,9 @@
 			"name": "Assassinate",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -2944,9 +2944,9 @@
 			"name": "Bonus Proficiencies",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -2958,9 +2958,9 @@
 			"name": "Infiltration Expertise",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 9,
 			"header": 2,
@@ -2973,9 +2973,9 @@
 			"name": "Impostor",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 13,
 			"header": 2,
@@ -2988,9 +2988,9 @@
 			"name": "Death Strike",
 			"source": "PHB",
 			"page": 97,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -3004,20 +3004,20 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 3,
 			"entries": [
 				"Você aprimora suas habilidades nas artes do roubo. Ladrões, bandidos, ladrões e outros criminosos normalmente seguem esse arquétipo, mas o mesmo acontece com os ladinos que preferem pensar em si mesmos como caçadores de tesouros profissionais, exploradores, escavadores e investigadores. Além de melhorar sua agilidade e furtividade, você aprende habilidades úteis para investigar ruínas antigas, ler idiomas desconhecidos e usar itens mágicos que normalmente não conseguiria usar.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mãos Rápidas | Ladino || Ladrão || 3"
+					"subclassFeature": "Fast Hands|Rogue||Thief||3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Trabalho de segundo andar | Ladino || Ladrão || 3"
+					"subclassFeature": "Second-Story Work|Rogue||Thief||3"
 				}
 			]
 		},
@@ -3027,9 +3027,9 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -3043,9 +3043,9 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 3,
 			"header": 1,
@@ -3060,9 +3060,9 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 9,
 			"header": 2,
@@ -3076,9 +3076,9 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 13,
 			"header": 2,
@@ -3092,9 +3092,9 @@
 			"page": 97,
 			"srd": true,
 			"basicRules": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "PHB",
 			"level": 17,
 			"header": 2,
@@ -3106,9 +3106,9 @@
 			"name": "Phantom",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
@@ -3117,11 +3117,11 @@
 				"Como você descobriu esse poder sombrio? Você dormiu em um cemitério e despertou para suas novas habilidades? Ou você os cultivou em um templo ou em uma guilda de ladrões dedicada a uma divindade da morte?",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Sussurros dos Mortos|Vampira||Fantasma|TCE|3"
+					"subclassFeature": "Whispers of the Dead|Rogue||Phantom|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Lamentos do Túmulo|Vampira||Fantasma|TCE|3"
+					"subclassFeature": "Wails from the Grave|Rogue||Phantom|TCE|3"
 				}
 			]
 		},
@@ -3129,9 +3129,9 @@
 			"name": "Wails from the Grave",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
@@ -3145,9 +3145,9 @@
 			"name": "Whispers of the Dead",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
@@ -3160,9 +3160,9 @@
 			"name": "Tokens of the Departed",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
@@ -3184,9 +3184,9 @@
 			"name": "Ghost Walk",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 13,
 			"header": 2,
@@ -3200,9 +3200,9 @@
 			"name": "Death's Friend",
 			"source": "TCE",
 			"page": 62,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Fantasma",
+			"subclassShortName": "Phantom",
 			"subclassSource": "TCE",
 			"level": 17,
 			"header": 2,
@@ -3222,9 +3222,9 @@
 			"name": "Psi-Bolstered Knack",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 3,
 			"consumes": {
@@ -3238,9 +3238,9 @@
 			"name": "Psychic Whispers",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
@@ -3252,9 +3252,9 @@
 			"name": "Soulknife",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 3,
 			"entries": [
@@ -3263,11 +3263,11 @@
 				"Como Soulknife, suas habilidades psiônicas podem ter assombrado você desde que você era criança, revelando todo o seu potencial apenas quando você experimentou o estresse da aventura. Ou você pode ter procurado uma ordem reclusa de adeptos psíquicos e passado anos aprendendo como manifestar seu poder.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Poder Psiônico|Rogue||Soulknife|TCE|3"
+					"subclassFeature": "Psionic Power|Rogue||Soulknife|TCE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Lâminas Psíquicas|Rogue||Soulknife|TCE|3"
+					"subclassFeature": "Psychic Blades|Rogue||Soulknife|TCE|3"
 				}
 			]
 		},
@@ -3275,9 +3275,9 @@
 			"name": "Psionic Power",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
@@ -3292,11 +3292,11 @@
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Habilidade com reforço psi|Rogue|PHB|Soulknife|TCE|3"
+							"subclassFeature": "Psi-Bolstered Knack|Rogue|PHB|Soulknife|TCE|3"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Sussurros Psíquicos | Rogue | PHB | Soulknife | TCE | 3"
+							"subclassFeature": "Psychic Whispers|Rogue|PHB|Soulknife|TCE|3"
 						}
 					]
 				}
@@ -3306,9 +3306,9 @@
 			"name": "Psychic Blades",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 3,
 			"header": 1,
@@ -3322,9 +3322,9 @@
 			"name": "Homing Strikes",
 			"source": "TCE",
 			"page": 63,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 9,
 			"entries": [
@@ -3335,9 +3335,9 @@
 			"name": "Psychic Teleportation",
 			"source": "TCE",
 			"page": 63,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 9,
 			"entries": [
@@ -3348,9 +3348,9 @@
 			"name": "Soul Blades",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 9,
 			"header": 2,
@@ -3362,11 +3362,11 @@
 					"entries": [
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Ataques homing|Rogue|PHB|Soulknife|TCE|9"
+							"subclassFeature": "Homing Strikes|Rogue|PHB|Soulknife|TCE|9"
 						},
 						{
 							"type": "refSubclassFeature",
-							"subclassFeature": "Teletransporte Psíquico | Rogue | PHB | Soulknife | TCE | 9"
+							"subclassFeature": "Psychic Teleportation|Rogue|PHB|Soulknife|TCE|9"
 						}
 					]
 				}
@@ -3376,9 +3376,9 @@
 			"name": "Psychic Veil",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 13,
 			"header": 2,
@@ -3392,9 +3392,9 @@
 			"name": "Rend Mind",
 			"source": "TCE",
 			"page": 63,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "TCE",
 			"level": 17,
 			"header": 2,
@@ -3408,24 +3408,24 @@
 			"name": "Inquisitive",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
 				"Como um Inquisitivo arquetípico, você se destaca em desenraizar segredos e desvendar mistérios. Você confia em seu olhar aguçado para detalhes, mas também em sua habilidade apurada de ler as palavras e ações de outras criaturas para determinar suas verdadeiras intenções. Você se destaca em derrotar criaturas que se escondem e atacam pessoas comuns, e seu domínio da tradição e suas deduções aguçadas o tornam bem equipado para expor e acabar com males ocultos.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Ouvido para Engano|Rogue||Inquisitivo|XGE|3"
+					"subclassFeature": "Ear for Deceit|Rogue||Inquisitive|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Olho para detalhes|Rogue||Inquisitivo|XGE|3"
+					"subclassFeature": "Eye for Detail|Rogue||Inquisitive|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Luta Esclarecedora|Rogue||Inquisitivo|XGE|3"
+					"subclassFeature": "Insightful Fighting|Rogue||Inquisitive|XGE|3"
 				}
 			]
 		},
@@ -3433,9 +3433,9 @@
 			"name": "Ear for Deceit",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3447,9 +3447,9 @@
 			"name": "Eye for Detail",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3461,9 +3461,9 @@
 			"name": "Insightful Fighting",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3476,9 +3476,9 @@
 			"name": "Steady Eye",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 9,
 			"header": 2,
@@ -3490,9 +3490,9 @@
 			"name": "Unerring Eye",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 13,
 			"header": 2,
@@ -3505,9 +3505,9 @@
 			"name": "Eye for Weakness",
 			"source": "XGE",
 			"page": 45,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Inquisitivo",
+			"subclassShortName": "Inquisitive",
 			"subclassSource": "XGE",
 			"level": 17,
 			"header": 2,
@@ -3519,20 +3519,20 @@
 			"name": "Mastermind",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
 				"Seu foco está nas pessoas e na influência e nos segredos que elas possuem. Muitos espiões, cortesãos e conspiradores seguem esse arquétipo, levando vidas de intrigas. As palavras são suas armas tão frequentemente quanto facas ou veneno, e segredos e favores são alguns de seus tesouros favoritos.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mestre da Intriga|Rogue||Mastermind|XGE|3"
+					"subclassFeature": "Master of Intrigue|Rogue||Mastermind|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mestre em Táticas|Rogue||Mastermind|XGE|3"
+					"subclassFeature": "Master of Tactics|Rogue||Mastermind|XGE|3"
 				}
 			]
 		},
@@ -3540,9 +3540,9 @@
 			"name": "Master of Intrigue",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3555,9 +3555,9 @@
 			"name": "Master of Tactics",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3569,9 +3569,9 @@
 			"name": "Insightful Manipulator",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 9,
 			"header": 2,
@@ -3593,9 +3593,9 @@
 			"name": "Misdirection",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 13,
 			"header": 2,
@@ -3607,9 +3607,9 @@
 			"name": "Soul of Deceit",
 			"source": "XGE",
 			"page": 46,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Cérebro",
+			"subclassShortName": "Mastermind",
 			"subclassSource": "XGE",
 			"level": 17,
 			"header": 2,
@@ -3622,20 +3622,20 @@
 			"name": "Scout",
 			"source": "XGE",
 			"page": 47,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
 				"Você é hábil em furtividade e em sobreviver longe das ruas de uma cidade, o que lhe permite explorar à frente de seus companheiros durante as expedições. Ladinos que adotam esse arquétipo se sentem em casa na natureza e entre bárbaros e rangers, e muitos Escoteiros servem como olhos e ouvidos de bandos de guerra. Emboscador, espião, caçador de recompensas — esses são apenas alguns dos papéis que os Escoteiros assumem enquanto percorrem o mundo.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Escaramuçador | Ladino | | Batedor | XGE | 3"
+					"subclassFeature": "Skirmisher|Rogue||Scout|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Sobrevivente|Rogue||Scout|XGE|3"
+					"subclassFeature": "Survivalist|Rogue||Scout|XGE|3"
 				}
 			]
 		},
@@ -3643,9 +3643,9 @@
 			"name": "Skirmisher",
 			"source": "XGE",
 			"page": 47,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3657,9 +3657,9 @@
 			"name": "Survivalist",
 			"source": "XGE",
 			"page": 47,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3671,9 +3671,9 @@
 			"name": "Superior Mobility",
 			"source": "XGE",
 			"page": 47,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 9,
 			"header": 2,
@@ -3685,9 +3685,9 @@
 			"name": "Ambush Master",
 			"source": "XGE",
 			"page": 47,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 13,
 			"header": 2,
@@ -3700,9 +3700,9 @@
 			"name": "Sudden Strike",
 			"source": "XGE",
 			"page": 47,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Escoteiro",
+			"subclassShortName": "Scout",
 			"subclassSource": "XGE",
 			"level": 17,
 			"header": 2,
@@ -3714,9 +3714,9 @@
 			"name": "Swashbuckler",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 3,
 			"entries": [
@@ -3724,11 +3724,11 @@
 				"Um Swashbuckler se destaca no combate individual e pode lutar com duas armas enquanto se afasta com segurança de um oponente.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Footwork extravagante|Rogue||Swashbuckler|XGE|3"
+					"subclassFeature": "Fancy Footwork|Rogue||Swashbuckler|XGE|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Audácia Rakish | Ladino || Espadachim | XGE | 3"
+					"subclassFeature": "Rakish Audacity|Rogue||Swashbuckler|XGE|3"
 				}
 			]
 		},
@@ -3736,9 +3736,9 @@
 			"name": "Fancy Footwork",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3750,9 +3750,9 @@
 			"name": "Rakish Audacity",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 3,
 			"header": 1,
@@ -3765,9 +3765,9 @@
 			"name": "Panache",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 9,
 			"header": 2,
@@ -3781,9 +3781,9 @@
 			"name": "Elegant Maneuver",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 13,
 			"header": 2,
@@ -3795,9 +3795,9 @@
 			"name": "Master Duelist",
 			"source": "XGE",
 			"page": 48,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "PHB",
-			"subclassShortName": "Espadachim",
+			"subclassShortName": "Swashbuckler",
 			"subclassSource": "XGE",
 			"level": 17,
 			"header": 2,
@@ -3809,9 +3809,9 @@
 			"name": "Arcane Trickster",
 			"source": "XPHB",
 			"page": 132,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -3819,11 +3819,11 @@
 				"Alguns Ladinos aprimoram suas habilidades de furtividade e agilidade com feitiços, aprendendo truques mágicos para ajudá-los em seu comércio. Alguns Malandros Arcanos usam seus talentos como batedores de carteira e ladrões, enquanto outros são brincalhões.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Conjuração | Ladino | XPHB | Malandro Arcano | XPHB | 3"
+					"subclassFeature": "Spellcasting|Rogue|XPHB|Arcane Trickster|XPHB|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mão Mágica Legerdemain|Rogue|XPHB|Arcane Trickster|XPHB|3"
+					"subclassFeature": "Mage Hand Legerdemain|Rogue|XPHB|Arcane Trickster|XPHB|3"
 				}
 			]
 		},
@@ -3831,9 +3831,9 @@
 			"name": "Mage Hand Legerdemain",
 			"source": "XPHB",
 			"page": 133,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -3844,9 +3844,9 @@
 			"name": "Spellcasting",
 			"source": "XPHB",
 			"page": 132,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -3902,9 +3902,9 @@
 			"name": "Magical Ambush",
 			"source": "XPHB",
 			"page": 133,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -3916,9 +3916,9 @@
 			"name": "Versatile Trickster",
 			"source": "XPHB",
 			"page": 133,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 13,
 			"header": 2,
@@ -3930,9 +3930,9 @@
 			"name": "Spell Thief",
 			"source": "XPHB",
 			"page": 133,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Malandro Arcano",
+			"subclassShortName": "Arcane Trickster",
 			"subclassSource": "XPHB",
 			"level": 17,
 			"header": 2,
@@ -3946,9 +3946,9 @@
 			"name": "Assassin",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -3956,11 +3956,11 @@
 				"O treinamento de um Assassino se concentra no uso de furtividade, veneno e disfarce para eliminar inimigos com eficiência mortal. Embora alguns Ladinos que seguem esse caminho sejam assassinos contratados, espiões ou caçadores de recompensas, as capacidades desta subclasse são igualmente úteis para aventureiros que enfrentam uma variedade de inimigos monstruosos.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Assassinar|Vampira|XPHB|Assassino|XPHB|3"
+					"subclassFeature": "Assassinate|Rogue|XPHB|Assassin|XPHB|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Ferramentas de Assassino|Rogue|XPHB|Assassino|XPHB|3"
+					"subclassFeature": "Assassin's Tools|Rogue|XPHB|Assassin|XPHB|3"
 				}
 			]
 		},
@@ -3968,9 +3968,9 @@
 			"name": "Assassin's Tools",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -3981,9 +3981,9 @@
 			"name": "Assassinate",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -4013,9 +4013,9 @@
 			"name": "Infiltration Expertise",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -4046,9 +4046,9 @@
 			"name": "Envenom Weapons",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 13,
 			"header": 2,
@@ -4060,9 +4060,9 @@
 			"name": "Death Strike",
 			"source": "XPHB",
 			"page": 134,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Assassino",
+			"subclassShortName": "Assassin",
 			"subclassSource": "XPHB",
 			"level": 17,
 			"header": 2,
@@ -4074,9 +4074,9 @@
 			"name": "Soulknife",
 			"source": "XPHB",
 			"page": 135,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -4084,11 +4084,11 @@
 				"Uma Soulknife ataca com a mente, cortando barreiras físicas e psíquicas. Esses Ladinos descobrem o poder psiônico dentro de si e o canalizam para realizar seu trabalho malandro. Como Soulknife, suas habilidades psiônicas podem ter assombrado você desde a infância, revelando todo o seu potencial apenas quando você vivenciava o estresse da aventura. Ou você pode ter procurado uma ordem de adeptos psíquicos e passado anos aprendendo como manifestar seu poder.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Poder Psiônico|Rogue|XPHB|Soulknife|XPHB|3"
+					"subclassFeature": "Psionic Power|Rogue|XPHB|Soulknife|XPHB|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Lâminas Psíquicas|Rogue|XPHB|Soulknife|XPHB|3"
+					"subclassFeature": "Psychic Blades|Rogue|XPHB|Soulknife|XPHB|3"
 				}
 			]
 		},
@@ -4096,9 +4096,9 @@
 			"name": "Psionic Power",
 			"source": "XPHB",
 			"page": 135,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"header": 1,
@@ -4154,11 +4154,11 @@
 				"Você recupera um de seus Dados de Energia Psiônica gastos ao terminar um {@variantrule Short Rest|XPHB} e recupera todos eles ao terminar um {@variantrule Long Rest|XPHB}.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Habilidade com reforço psi|Rogue|XPHB|Soulknife|XPHB|3"
+					"subclassFeature": "Psi-Bolstered Knack|Rogue|XPHB|Soulknife|XPHB|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Sussurros Psíquicos|Rogue|XPHB|Soulknife|XPHB|3"
+					"subclassFeature": "Psychic Whispers|Rogue|XPHB|Soulknife|XPHB|3"
 				},
 				"Na primeira vez que você usa esse poder após cada {@variantrule Long Rest|XPHB}, você não gasta o Dado de Energia Psiônica. Todas as outras vezes que você usa o poder, você gasta o dado."
 			]
@@ -4167,9 +4167,9 @@
 			"name": "Psychic Blades",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"header": 1,
@@ -4189,9 +4189,9 @@
 			"name": "Psi-Bolstered Knack",
 			"source": "XPHB",
 			"page": 135,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"header": 2,
@@ -4206,9 +4206,9 @@
 			"name": "Psychic Whispers",
 			"source": "XPHB",
 			"page": 135,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"header": 2,
@@ -4223,9 +4223,9 @@
 			"name": "Homing Strikes",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Por conta própria",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -4240,9 +4240,9 @@
 			"name": "Psychic Teleportation",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -4257,9 +4257,9 @@
 			"name": "Soul Blades",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -4267,11 +4267,11 @@
 				"Agora você pode usar os seguintes poderes com suas Lâminas Psíquicas.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Ataques Teleguiados|Rogue|XPHB|Soulknife|XPHB|9"
+					"subclassFeature": "Homing Strikes|Rogue|XPHB|Soulknife|XPHB|9"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Teletransporte Psíquico|Rogue|XPHB|Soulknife|XPHB|9"
+					"subclassFeature": "Psychic Teleportation|Rogue|XPHB|Soulknife|XPHB|9"
 				}
 			]
 		},
@@ -4279,9 +4279,9 @@
 			"name": "Psychic Veil",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 13,
 			"header": 2,
@@ -4297,14 +4297,14 @@
 			"name": "Rend Mind",
 			"source": "XPHB",
 			"page": 136,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Faca da Alma",
+			"subclassShortName": "Soulknife",
 			"subclassSource": "XPHB",
 			"level": 17,
 			"header": 2,
 			"entries": [
-				"Você pode varrer suas Lâminas Psíquicas através da mente de uma criatura. Quando você usa suas Lâminas Psíquicas para causar dano de Ataque Furtivo a uma criatura, você pode forçar esse alvo a fazer um teste de resistência de Sabedoria ({@dc 8} mais seu modificador de Destreza e {@variantrule Proficiency|XPHB|Proficiency Bonus}). Se o salvamento falhar, o destino terá a condição %%Tf2eb2eb2391%% por 1 minuto. O alvo {@condition Stunned|XPHB} repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso.",
+				"You can sweep your Psychic Blades through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw ({@dc 8} plus your Dexterity modifier and {@variantrule Proficiency|XPHB|Proficiency Bonus}). If the save fails, the target has the {@condition Stunned|XPHB} condition for 1 minute. The {@condition Stunned|XPHB} target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
 				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}, a menos que gaste três Dados de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
 			]
 		},
@@ -4313,9 +4313,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -4346,9 +4346,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -4379,9 +4379,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 3,
 			"entries": [
@@ -4389,11 +4389,11 @@
 				"Uma mistura de ladrão, caçador de tesouros e explorador, você é o epítome de um aventureiro. Além de melhorar sua agilidade e furtividade, você ganha habilidades úteis para mergulhar em ruínas e obter o máximo benefício dos itens mágicos que encontrar lá.",
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Mãos Rápidas | Ladino | XPHB | Ladrão | XPHB | 3"
+					"subclassFeature": "Fast Hands|Rogue|XPHB|Thief|XPHB|3"
 				},
 				{
 					"type": "refSubclassFeature",
-					"subclassFeature": "Trabalho de segundo andar | Ladino | XPHB | Ladrão | XPHB | 3"
+					"subclassFeature": "Second-Story Work|Rogue|XPHB|Thief|XPHB|3"
 				}
 			]
 		},
@@ -4402,9 +4402,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 9,
 			"header": 2,
@@ -4429,9 +4429,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 13,
 			"header": 2,
@@ -4465,9 +4465,9 @@
 			"source": "XPHB",
 			"page": 137,
 			"freeRules2024": true,
-			"className": "Ladino",
+			"className": "Rogue",
 			"classSource": "XPHB",
-			"subclassShortName": "Ladrão",
+			"subclassShortName": "Thief",
 			"subclassSource": "XPHB",
 			"level": 17,
 			"header": 2,

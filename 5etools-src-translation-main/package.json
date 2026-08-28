@@ -31,7 +31,9 @@
 		"build:seo": "node node/generate-seo.js",
 		"build:sw": "node node/build-sw.mjs",
 		"build:sw:prod": "node node/build-sw.mjs prod",
-		"build": "npm run clean-jsons && npm run gen && npm run build:css && npm run build:sw:prod",
+		"build:android-nav": "node node/build-android-nav.mjs",
+		"build:android-nav:prod": "node node/build-android-nav.mjs prod",
+		"build": "npm run clean-jsons && npm run gen && npm run build:css && npm run build:sw:prod && npm run build:android-nav:prod",
 		"preversion": "npm test",
 		"version": "node node/version-bump.js",
 		"serve:dev": "http-server -c-1 --cors --port 5000",
@@ -77,6 +79,7 @@
 	},
 	"dependencies": {
 		"@capacitor/android": "^8.5.0",
+		"@capacitor/app": "^8.1.1",
 		"@capacitor/cli": "^8.5.0",
 		"@capacitor/core": "^8.5.0"
 	}

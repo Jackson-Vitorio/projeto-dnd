@@ -43,73 +43,73 @@ class NavBar {
 		};
 		document.getElementById("navigation").prepend(btnShowHide);
 
-		this._addElement_li(null, "index.html", "Home", {isRoot: true});
+		this._addElement_li(null, "index.html", "Início", {isRoot: true});
 
 		this._addElement_dropdown(null, NavBar._CAT_RULES);
-		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Rules Glossary");
-		this._addElement_li(NavBar._CAT_RULES, "tables.html", "Tables");
+		this._addElement_li(NavBar._CAT_RULES, "variantrules.html", "Glossário de Regras");
+		this._addElement_li(NavBar._CAT_RULES, "tables.html", "Tabelas");
 		this._addElement_divider(NavBar._CAT_RULES);
 		this._addElement_dropdown(NavBar._CAT_RULES, NavBar._CAT_BOOKS, {isSide: true, page: "books.html"});
-		this._addElement_li(NavBar._CAT_BOOKS, "books.html", "View All/Homebrew");
+		this._addElement_li(NavBar._CAT_BOOKS, "books.html", "Ver Todos/Homebrew");
 		this._addElement_divider(NavBar._CAT_RULES);
-		this._addElement_li(NavBar._CAT_RULES, "quickreference.html", "Quick Reference (2014)");
+		this._addElement_li(NavBar._CAT_RULES, "quickreference.html", "Referência Rápida (2014)");
 
 		this._addElement_dropdown(null, NavBar._CAT_PLAYER);
 		this._addElement_li(NavBar._CAT_PLAYER, "classes.html", "Classes");
-		this._addElement_li(NavBar._CAT_PLAYER, "backgrounds.html", "Backgrounds");
-		this._addElement_li(NavBar._CAT_PLAYER, "feats.html", "Feats");
-		this._addElement_li(NavBar._CAT_PLAYER, "races.html", "Species");
-		this._addElement_li(NavBar._CAT_PLAYER, "charcreationoptions.html", "Other Character Creation Options");
-		this._addElement_li(NavBar._CAT_PLAYER, "optionalfeatures.html", "Other Options & Features");
+		this._addElement_li(NavBar._CAT_PLAYER, "backgrounds.html", "Antecedentes");
+		this._addElement_li(NavBar._CAT_PLAYER, "feats.html", "Talentos");
+		this._addElement_li(NavBar._CAT_PLAYER, "races.html", "Espécies");
+		this._addElement_li(NavBar._CAT_PLAYER, "charcreationoptions.html", "Outras Opções de Criação de Personagem");
+		this._addElement_li(NavBar._CAT_PLAYER, "optionalfeatures.html", "Outras Opções & Recursos");
 		this._addElement_divider(NavBar._CAT_PLAYER);
-		this._addElement_li(NavBar._CAT_PLAYER, "statgen.html", "Stat Generator");
+		this._addElement_li(NavBar._CAT_PLAYER, "statgen.html", "Gerador de Atributos");
 		this._addElement_divider(NavBar._CAT_PLAYER);
-		this._addElement_li(NavBar._CAT_PLAYER, "lifegen.html", "This Is Your Life");
-		this._addElement_li(NavBar._CAT_PLAYER, "names.html", "Names");
+		this._addElement_li(NavBar._CAT_PLAYER, "lifegen.html", "Isto é a Sua Vida");
+		this._addElement_li(NavBar._CAT_PLAYER, "names.html", "Nomes");
 
 		this._addElement_dropdown(null, NavBar._CAT_DUNGEON_MASTER);
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "dmscreen.html", "DM Screen");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "dmscreen.html", "Tela do Mestre");
 		this._addElement_divider(NavBar._CAT_DUNGEON_MASTER);
 		this._addElement_dropdown(NavBar._CAT_DUNGEON_MASTER, NavBar._CAT_ADVENTURES, {isSide: true, page: "adventures.html"});
-		this._addElement_li(NavBar._CAT_ADVENTURES, "adventures.html", "View All/Homebrew");
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "cultsboons.html", "Cults & Supernatural Boons");
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "objects.html", "Objects");
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "trapshazards.html", "Traps & Hazards");
+		this._addElement_li(NavBar._CAT_ADVENTURES, "adventures.html", "Ver Todas/Homebrew");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "cultsboons.html", "Cultos & Bênçãos Sobrenaturais");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "objects.html", "Objetos");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "trapshazards.html", "Armadilhas & Perigos");
 		this._addElement_divider(NavBar._CAT_DUNGEON_MASTER);
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "crcalculator.html", "CR Calculator (2014)");
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "encountergen.html", "Encounter Generator");
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "lootgen.html", "Loot Generator");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "crcalculator.html", "Calculadora de CR (2014)");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "encountergen.html", "Gerador de Encontros");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "lootgen.html", "Gerador de Tesouros");
 		this._addElement_divider(NavBar._CAT_DUNGEON_MASTER);
-		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "maps.html", "Maps");
+		this._addElement_li(NavBar._CAT_DUNGEON_MASTER, "maps.html", "Mapas");
 
 		this._addElement_dropdown(null, NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "actions.html", "Actions");
-		this._addElement_li(NavBar._CAT_REFERENCES, "bastions.html", "Bastions");
-		this._addElement_li(NavBar._CAT_REFERENCES, "bestiary.html", "Bestiary");
-		this._addElement_li(NavBar._CAT_REFERENCES, "conditionsdiseases.html", "Conditions & Diseases");
-		this._addElement_li(NavBar._CAT_REFERENCES, "decks.html", "Decks");
-		this._addElement_li(NavBar._CAT_REFERENCES, "deities.html", "Deities");
-		this._addElement_li(NavBar._CAT_REFERENCES, "items.html", "Items");
-		this._addElement_li(NavBar._CAT_REFERENCES, "languages.html", "Languages");
-		this._addElement_li(NavBar._CAT_REFERENCES, "rewards.html", "Supernatural Gifts & Rewards");
-		this._addElement_li(NavBar._CAT_REFERENCES, "psionics.html", "Psionics");
-		this._addElement_li(NavBar._CAT_REFERENCES, "spells.html", "Spells");
-		this._addElement_li(NavBar._CAT_REFERENCES, "vehicles.html", "Vehicles");
+		this._addElement_li(NavBar._CAT_REFERENCES, "actions.html", "Ações");
+		this._addElement_li(NavBar._CAT_REFERENCES, "bastions.html", "Bastiões");
+		this._addElement_li(NavBar._CAT_REFERENCES, "bestiary.html", "Bestiário");
+		this._addElement_li(NavBar._CAT_REFERENCES, "conditionsdiseases.html", "Condições & Doenças");
+		this._addElement_li(NavBar._CAT_REFERENCES, "decks.html", "Baralhos");
+		this._addElement_li(NavBar._CAT_REFERENCES, "deities.html", "Divindades");
+		this._addElement_li(NavBar._CAT_REFERENCES, "items.html", "Itens");
+		this._addElement_li(NavBar._CAT_REFERENCES, "languages.html", "Idiomas");
+		this._addElement_li(NavBar._CAT_REFERENCES, "rewards.html", "Dons & Recompensas Sobrenaturais");
+		this._addElement_li(NavBar._CAT_REFERENCES, "psionics.html", "Psíônicos");
+		this._addElement_li(NavBar._CAT_REFERENCES, "spells.html", "Magias");
+		this._addElement_li(NavBar._CAT_REFERENCES, "vehicles.html", "Véículos");
 		this._addElement_divider(NavBar._CAT_REFERENCES);
-		this._addElement_li(NavBar._CAT_REFERENCES, "recipes.html", "Recipes");
+		this._addElement_li(NavBar._CAT_REFERENCES, "recipes.html", "Receitas");
 
 		this._addElement_dropdown(null, NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "Search");
+		this._addElement_li(NavBar._CAT_UTILITIES, "search.html", "Buscar");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "blocklist.html", "Content Blocklist");
-		this._addElement_li(NavBar._CAT_UTILITIES, "manageprerelease.html", "Prerelease Content Manager");
-		this._addElement_li(NavBar._CAT_UTILITIES, "managebrew.html", "Homebrew Manager");
+		this._addElement_li(NavBar._CAT_UTILITIES, "blocklist.html", "Lista de Bloqueio de Conteúdo");
+		this._addElement_li(NavBar._CAT_UTILITIES, "manageprerelease.html", "Gerenciador de Conteúdo de Pré-Lançamento");
+		this._addElement_li(NavBar._CAT_UTILITIES, "managebrew.html", "Gerenciador de Homebrew");
 		this._addElement_buttonSplit(
 			NavBar._CAT_UTILITIES,
 			{
 				metas: [
 					{
-						html: "Load All Partnered Content",
+						html: "Carregar Todo o Conteúdo de Parceiros",
 						click: async evt => {
 							evt.stopPropagation();
 							evt.preventDefault();
@@ -119,7 +119,7 @@ class NavBar {
 					},
 					{
 						html: `<span class="glyphicon glyphicon-link"></span>`,
-						title: `Export Prerelease Content/Homebrew List as URL`,
+						title: `Exportar Lista de Pré-Lançamento/Homebrew como URL`,
 						click: async evt => {
 							evt.stopPropagation();
 							evt.preventDefault();
@@ -132,27 +132,27 @@ class NavBar {
 			},
 		);
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "inittrackerplayerview.html", "Initiative Tracker Player View");
+		this._addElement_li(NavBar._CAT_UTILITIES, "inittrackerplayerview.html", "Visão do Jogador do Rastreador de Iniciativa");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "renderdemo.html", "Renderer Demo");
-		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "Homebrew Builder");
-		this._addElement_li(NavBar._CAT_UTILITIES, "makecards.html", "RPG Cards JSON Builder");
-		this._addElement_li(NavBar._CAT_UTILITIES, "converter.html", "Text Converter");
+		this._addElement_li(NavBar._CAT_UTILITIES, "renderdemo.html", "Demonstração do Renderizador");
+		this._addElement_li(NavBar._CAT_UTILITIES, "makebrew.html", "Construtor de Homebrew");
+		this._addElement_li(NavBar._CAT_UTILITIES, "makecards.html", "Construtor de Cartas RPG (JSON)");
+		this._addElement_li(NavBar._CAT_UTILITIES, "converter.html", "Conversor de Texto");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "plutonium.html", "Plutonium (Foundry Module) Features");
+		this._addElement_li(NavBar._CAT_UTILITIES, "plutonium.html", "Recursos do Plutonium (Módulo Foundry)");
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "https://wiki.tercept.net/en/betteR20", "Roll20 Script Help", {isExternal: true});
+		this._addElement_li(NavBar._CAT_UTILITIES, "https://wiki.tercept.net/en/betteR20", "Ajuda do Script Roll20", {isExternal: true});
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "changelog.html", "Changelog");
-		this._addElement_li(NavBar._CAT_UTILITIES, NavBar._getCurrentWikiHelpPage(), "Help", {isExternal: true});
+		this._addElement_li(NavBar._CAT_UTILITIES, "changelog.html", "Registro de Alterações");
+		this._addElement_li(NavBar._CAT_UTILITIES, NavBar._getCurrentWikiHelpPage(), "Ajuda", {isExternal: true});
 		this._addElement_divider(NavBar._CAT_UTILITIES);
-		this._addElement_li(NavBar._CAT_UTILITIES, "privacy-policy.html", "Privacy Policy");
+		this._addElement_li(NavBar._CAT_UTILITIES, "privacy-policy.html", "Política de Privacidade");
 
 		this._addElement_dropdown(null, NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Preferences",
+				html: "Preferências",
 				click: () => {
 					ConfigUi.show();
 					NavBar._closeAllDropdowns();
@@ -163,77 +163,77 @@ class NavBar {
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Save State to File",
+				html: "Salvar Estado em Arquivo",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_saveStateFile(evt),
-				title: "Save any locally-stored data (loaded homebrew, active blocklists, DM Screen configuration,...) to a file.",
+				title: "Salva quaisquer dados armazenados localmente (homebrew carregado, blocklists ativos, configuração da Tela do Mestre...) em um arquivo.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Load State from File",
+				html: "Carregar Estado de Arquivo",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_loadStateFile(evt),
-				title: "Load previously-saved data (loaded homebrew, active blocklists, DM Screen configuration,...) from a file.",
+				title: "Carrega dados salvos anteriormente (homebrew carregado, blocklists ativos, configuração da Tela do Mestre...) de um arquivo.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_SETTINGS);
 		this._addElement_button(
 			NavBar._CAT_SETTINGS,
 			{
-				html: "Add as App",
+				html: "Adicionar como App",
 				click: async (evt) => NavBar.InteractionManager._pOnClick_button_addApp(evt),
-				title: "Add the site to your home screen. When used in conjunction with the Preload Offline Data option, this can create a functional offline copy of the site.",
+				title: "Adiciona o site à sua tela inicial. Quando usado em conjunto com a opção Pré-Carregar Dados Offline, isso pode criar uma cópia offline funcional do site.",
 			},
 		);
 		this._addElement_dropdown(NavBar._CAT_SETTINGS, NavBar._CAT_CACHE, {isSide: true});
-		this._addElement_label(NavBar._CAT_CACHE, `<p>Preload data for offline use.</p><p>Note that visiting a page will automatically preload data for that page.</p><p>Note that data which is already preloaded will not be overwritten, unless it is out of date.</p>`);
+		this._addElement_label(NavBar._CAT_CACHE, `<p>Pré-carregue dados para uso offline.</p><p>Note que visitar uma página carregará automaticamente os dados dela.</p><p>Note que dados já pré-carregados não serão sobrescritos, a menos que estejam desatualizados.</p>`);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload Adventure Text <small>(50MB+)</small>",
+				html: "Pré-carregar Texto de Aventura <small>(50MB+)</small>",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /data\/adventure/}),
-				title: "Preload adventure text for offline use.",
+				title: "Pré-carrega texto de aventuras para uso offline.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload Book Images <small>(1GB+)</small>",
+				html: "Pré-carregar Imagens de Livros <small>(1GB+)</small>",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /img\/book/, isRequireImages: true}),
-				title: "Preload book images offline use. Note that book text is preloaded automatically.",
+				title: "Pré-carrega imagens de livros para uso offline. Note que o texto dos livros é pré-carregado automaticamente.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload Adventure Text and Images <small>(2GB+)</small>",
+				html: "Pré-carregar Texto e Imagens de Aventura <small>(2GB+)</small>",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /(?:data|img)\/adventure/, isRequireImages: true}),
-				title: "Preload adventure text and images for offline use.",
+				title: "Pré-carrega texto e imagens de aventuras para uso offline.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload All Images <small>(4GB+)</small>",
+				html: "Pré-carregar Todas as Imagens <small>(4GB+)</small>",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /img/, isRequireImages: true}),
-				title: "Preload all images for offline use.",
+				title: "Pré-carrega todas as imagens para uso offline.",
 			},
 		);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Preload All <small>(5GB+)</small>",
+				html: "Pré-carregar Tudo <small>(5GB+)</small>",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_preloadOffline(evt, {route: /./, isRequireImages: true}),
-				title: "Preload everything for offline use.",
+				title: "Pré-carrega tudo para uso offline.",
 			},
 		);
 		this._addElement_divider(NavBar._CAT_CACHE);
 		this._addElement_button(
 			NavBar._CAT_CACHE,
 			{
-				html: "Reset Preloaded Data",
+				html: "Redefinir Dados Pré-carregados",
 				click: (evt) => NavBar.InteractionManager._pOnClick_button_clearOffline(evt),
-				title: "Remove all preloaded data, and clear away any caches.",
+				title: "Remove todos os dados pré-carregados e limpa os caches.",
 			},
 		);
 	}
@@ -842,15 +842,15 @@ NavBar._ALT_CHILD_PAGES = {
 	"book.html": "books.html",
 	"adventure.html": "adventures.html",
 };
-NavBar._CAT_RULES = "Rules";
-NavBar._CAT_BOOKS = "Books";
-NavBar._CAT_PLAYER = "Player";
-NavBar._CAT_DUNGEON_MASTER = "Dungeon Master";
-NavBar._CAT_ADVENTURES = "Adventures";
-NavBar._CAT_REFERENCES = "References";
-NavBar._CAT_UTILITIES = "Utilities";
-NavBar._CAT_SETTINGS = "Settings";
-NavBar._CAT_CACHE = "Preload Data";
+NavBar._CAT_RULES = "Regras";
+NavBar._CAT_BOOKS = "Livros";
+NavBar._CAT_PLAYER = "Jogador";
+NavBar._CAT_DUNGEON_MASTER = "Mestre";
+NavBar._CAT_ADVENTURES = "Aventuras";
+NavBar._CAT_REFERENCES = "Referências";
+NavBar._CAT_UTILITIES = "Ferramentas";
+NavBar._CAT_SETTINGS = "Configurações";
+NavBar._CAT_CACHE = "Pré-Carregar Dados";
 
 NavBar._navbar = null;
 

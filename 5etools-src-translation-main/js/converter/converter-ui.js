@@ -497,7 +497,7 @@ ConverterUi._APPEND_PREPEND_MODE__PREPEND = "prepend";
 ConverterUi._DEFAULT_STATE = {
 	hasAppended: false,
 	appendPrependMode: ConverterUi._APPEND_PREPEND_MODE__APPEND,
-	converter: "Creature",
+	converter: "monster",
 	sourceJson: "",
 	inputSeparator: "===",
 };

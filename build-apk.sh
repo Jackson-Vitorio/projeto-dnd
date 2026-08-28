@@ -19,8 +19,10 @@ fi
 echo "Android SDK: $ANDROID_SDK"
 
 echo ""
-echo "Copiando assets web..."
+echo "Gerando android-nav.js (bundled)..."
 cd "$PROJECT_DIR"
+node node/build-android-nav.mjs prod
+cd ..
 rm -rf web/
 mkdir -p web
 

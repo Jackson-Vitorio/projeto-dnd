@@ -1,0 +1,449 @@
+{
+	"spell": [
+		{
+			"name": "Ashardalon's Stride",
+			"source": "FTD",
+			"page": 19,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"As chamas ondulantes de um dragão explodem em seus pés, concedendo-lhe velocidade explosiva. Durante esse período, sua velocidade aumenta em 6 metros e mover-se não provoca ataques de oportunidade.",
+				"Quando você se move a até 1,5 metro de uma criatura ou objeto que não está sendo usado ou carregado, ele sofre {@damage 1d6} de dano de fogo do seu rastro de calor. Uma criatura ou objeto pode sofrer este dano apenas uma vez durante um turno."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjurar esta magia usando um espaço de magia de 4º nível ou superior, aumente sua velocidade em 1,5 metro para cada nível de espaço de magia acima do 3º. O feitiço causa {@scaledamage 1d6|3-9|1d6} de dano de fogo adicional para cada nível de slot acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic Transformation",
+			"source": "FTD",
+			"page": 19,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma estatueta de um dragão, valendo pelo menos 500 PO",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Com um rugido, você recorre à magia dos dragões para se transformar, assumindo características dracônicas. Você ganha os seguintes benefícios até o fim da magia:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blindsight",
+							"entries": [
+								"Você tem {@sense blindsight} com alcance de 30 pés. Dentro desse intervalo, você pode ver efetivamente qualquer coisa que não esteja atrás de {@quickref Cover||3||total cover}, mesmo se você estiver {@condition blinded} ou no escuro. Além disso, você pode ver uma criatura {@condition invisible}, a menos que a criatura se esconda de você com sucesso."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Breath Weapon",
+							"entries": [
+								"Quando você conjura esta magia, e como uma ação bônus nos turnos subsequentes durante a duração, você pode exalar energia cintilante em um cone de 18 metros. Cada criatura naquela área deve fazer um teste de resistência de Destreza, sofrendo {@damage 6d8} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wings",
+							"entries": [
+								"Asas incorpóreas brotam de suas costas, proporcionando a você um deslocamento de vôo de 18 metros."
+							]
+						}
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Fizban's Platinum Shield",
+			"source": "FTD",
+			"page": 20,
+			"level": 6,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma escama de dragão banhada em platina, valendo pelo menos 500 PO",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria um campo de luz prateada que envolve uma criatura de sua escolha dentro do alcance (você mesmo pode escolher). O campo emite luz fraca até 1,5 metro. Enquanto estiver cercada pelo campo, uma criatura ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cover",
+							"entries": [
+								"A criatura tem {@quickref Cover||3||half cover}."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Damage Resistance",
+							"entries": [
+								"A criatura tem resistência a danos de ácido, frio, fogo, raio e veneno."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Evasion",
+							"entries": [
+								"Se a criatura for submetida a um efeito que lhe permita realizar um teste de resistência de Destreza para sofrer apenas metade do dano, a criatura não sofrerá nenhum dano se for bem-sucedida no teste de resistência, e apenas metade do dano se falhar."
+							]
+						}
+					]
+				},
+				"Como uma ação bônus nos turnos subsequentes, você pode mover o campo para outra criatura a até 18 metros do campo."
+			],
+			"miscTags": [
+				"UBA"
+			]
+		},
+		{
+			"name": "Nathair's Mischief",
+			"source": "FTD",
+			"page": 20,
+			"level": 2,
+			"school": "EU",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "um pedaço de crosta de uma torta de maçã"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você preenche um cubo de 6 metros que você pode ver dentro do alcance com magia feérica e dracônica. Role na tabela Surto Travesso para determinar o efeito mágico produzido e role novamente no início de cada um de seus turnos até que o feitiço termine. Você pode mover o cubo até 3 metros antes de rolar.",
+				{
+					"type": "table",
+					"caption": "Surto Travesso",
+					"colLabels": [
+						"d4",
+						"Efeito"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"O cheiro de torta de maçã preenche o ar, e cada criatura no cubo deve ter sucesso em um teste de resistência de Sabedoria ou se tornar {@condition charmed} por você até o início do seu próximo turno."
+						],
+						[
+							"2",
+							"Buquês de flores aparecem por toda parte, e cada criatura no cubo deve ter sucesso em um teste de resistência de Destreza ou será {@condition blinded} até o início do seu próximo turno, enquanto as flores borrifam água em seus rostos."
+						],
+						[
+							"3",
+							"Cada criatura no cubo deve ser bem sucedida num teste de resistência de Sabedoria ou começará a rir até o início do seu próximo turno. Uma criatura risonha é {@condition incapacitated} e usa todo o seu movimento para se mover em uma direção aleatória."
+						],
+						[
+							"4",
+							"Drops of molasses hover in the cube, making it {@quickref difficult terrain||3} until the start of your next turn."
+						]
+					]
+				}
+			],
+			"savingThrow": [
+				"destreza",
+				"sabedoria"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			]
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "FTD",
+			"page": 21,
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você libera uma lança cintilante de poder psíquico de sua testa em uma criatura que você possa ver dentro do alcance. Alternativamente, você pode pronunciar o nome de uma criatura. Se o alvo nomeado estiver dentro do alcance, ele se tornará o alvo do feitiço mesmo que você não consiga vê-lo. Se o alvo nomeado não estiver dentro do alcance, a lança se dissipa sem efeito.",
+				"O alvo deve fazer um teste de resistência de Inteligência. Se falhar na resistência, o alvo sofre {@damage 7d6} de dano psíquico e fica {@condition incapacitated} até o início do seu próximo turno. Em um teste bem-sucedido, a criatura sofre metade do dano e não é {@condition incapacitated}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 5º nível ou superior, o dano aumenta em {@scaledamage 7d6|4-9|1d6} para cada nível do espaço acima do 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Rime's Binding Ice",
+			"source": "FTD",
+			"page": 21,
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "um frasco de água derretida"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma explosão de energia fria emana de você em um cone de 9 metros. Cada criatura naquela área deve fazer um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofre {@damage 3d8} de dano de frio e é prejudicada por formações de gelo por 1 minuto, ou até que ela ou outra criatura ao seu alcance use uma ação para quebrar o gelo. Uma criatura prejudicada pelo gelo tem seu deslocamento reduzido a 0. Se obtiver sucesso, a criatura sofre metade do dano e não é prejudicada pelo gelo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Ao lançar este feitiço usando um espaço de feitiço de 3º nível ou superior, aumente o dano de frio em {@scaledamage 3d8|2-9|1d8} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"frio"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"areaTags": [
+				"N"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Draconic Spirit",
+			"source": "FTD",
+			"page": 21,
+			"reprintedAs": [
+				"Summon Dragon|XPHB"
+			],
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um objeto com a imagem de um dragão gravada, valendo pelo menos 500 PO",
+					"cost": 50000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você invoca um {@creature draconic spirit|FTD}. Ele se manifesta em um espaço desocupado que você pode ver dentro do alcance. Esta forma corpórea usa o bloco de estatísticas do Espírito Dracônico. Ao lançar este feitiço, escolha uma família de dragão: cromático, gema ou metálico. A criatura se assemelha a um dragão da família escolhida, o que determina certas características em seu bloco de estatísticas. A criatura desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"A criatura é uma aliada para você e seus companheiros. Em combate, a criatura compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum, ele executa a ação {@action Dodge} e usa seu movimento para evitar o perigo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjurar esta magia usando um espaço de magia de 6º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas."
+					]
+				}
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		}
+	]
+}

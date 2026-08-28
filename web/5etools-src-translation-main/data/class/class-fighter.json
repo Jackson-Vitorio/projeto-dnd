@@ -1,0 +1,5218 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"subclass"
+		]
+	},
+	"class": [
+		{
+			"name": "Fighter",
+			"source": "PHB",
+			"page": 70,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Fighter|XPHB"
+			],
+			"edition": "classic",
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"str",
+				"golpe"
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Fighting Style",
+					"featureType": [
+						"FS:F"
+					],
+					"progression": {
+						"1": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz",
+					"médio",
+					"pesado",
+					"escudo"
+				],
+				"weapons": [
+					"simples",
+					"marcial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"animal handling",
+								"athletics",
+								"history",
+								"insight",
+								"intimidation",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) {@item chain mail|phb} or (b) {@item leather armor|phb}, {@item longbow|phb}, and {@item arrows (20)|phb|20 arrows}",
+					"(a) a {@filter martial weapon|items|source=phb|category=basic|type=martial weapon} and a {@item shield|phb} or (b) two {@filter martial weapons|items|source=phb|category=basic|type=martial weapon}",
+					"(a) a {@item light crossbow|phb} and {@item crossbow bolts (20)|phb|20 bolts} or (b) two {@item handaxe|phb|handaxes}",
+					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"a": [
+							"chain mail|phb"
+						],
+						"b": [
+							"leather armor|phb",
+							"longbow|phb",
+							"arrows (20)|phb"
+						]
+					},
+					{
+						"a": [
+							{
+								"equipmentType": "armaMarcial"
+							},
+							"shield|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "armaMarcial",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							"light crossbow|phb",
+							"crossbow bolts (20)|phb"
+						],
+						"b": [
+							{
+								"item": "handaxe|phb",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							"dungeoneer's pack|phb"
+						],
+						"b": [
+							"explorer's pack|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"or": [
+						{
+							"str": 13,
+							"dex": 13
+						}
+					]
+				},
+				"proficienciesGained": {
+					"armor": [
+						"luz",
+						"médio",
+						"escudo"
+					],
+					"weapons": [
+						"simples",
+						"marcial"
+					]
+				}
+			},
+			"classFeatures": [
+				"Fighting Style|Fighter||1",
+				"Second Wind|Fighter||1",
+				"Action Surge|Fighter||2",
+				{
+					"classFeature": "Martial Archetype|Fighter||3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter||4",
+				"Martial Versatility|Fighter||4|TCE",
+				"Extra Attack|Fighter||5",
+				"Ability Score Improvement|Fighter||6",
+				{
+					"classFeature": "Martial Archetype feature|Fighter||7",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter||8",
+				"Indomitable|Fighter||9",
+				{
+					"classFeature": "Martial Archetype feature|Fighter||10",
+					"gainSubclassFeature": true
+				},
+				"Extra Attack (2)|Fighter||11",
+				"Ability Score Improvement|Fighter||12",
+				"Indomitable (two uses)|Fighter||13",
+				"Ability Score Improvement|Fighter||14",
+				{
+					"classFeature": "Martial Archetype feature|Fighter||15",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter||16",
+				"Action Surge (two uses)|Fighter||17",
+				"Indomitable (three uses)|Fighter||17",
+				{
+					"classFeature": "Martial Archetype feature|Fighter||18",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter||19",
+				"Extra Attack (3)|Fighter||20"
+			],
+			"subclassTitle": "Arquétipo Marcial",
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fighter",
+			"source": "XPHB",
+			"page": 90,
+			"freeRules2024": true,
+			"edition": "one",
+			"primaryAbility": [
+				{
+					"str": true
+				},
+				{
+					"dex": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"str",
+				"golpe"
+			],
+			"featProgression": [
+				{
+					"name": "Fighting Style",
+					"category": [
+						"FS"
+					],
+					"progression": {
+						"1": 1
+					}
+				},
+				{
+					"name": "Epic Boon",
+					"category": [
+						"BE"
+					],
+					"progression": {
+						"19": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz",
+					"médio",
+					"pesado",
+					"escudo"
+				],
+				"weapons": [
+					"simples",
+					"marcial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"animal handling",
+								"athletics",
+								"history",
+								"insight",
+								"intimidation",
+								"persuasion",
+								"perception",
+								"survival"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "chain mail|xphb"
+							},
+							{
+								"item": "greatsword|xphb"
+							},
+							{
+								"item": "flail|xphb"
+							},
+							{
+								"item": "javelin|xphb",
+								"quantity": 8
+							},
+							{
+								"item": "dungeoneer's pack|xphb"
+							},
+							{
+								"value": 400
+							}
+						],
+						"B": [
+							{
+								"item": "studded leather armor|xphb"
+							},
+							{
+								"item": "scimitar|xphb"
+							},
+							{
+								"item": "shortsword|xphb"
+							},
+							{
+								"item": "longbow|xphb"
+							},
+							{
+								"item": "arrows (20)|xphb"
+							},
+							{
+								"item": "quiver|xphb"
+							},
+							{
+								"item": "dungeoneer's pack|xphb"
+							},
+							{
+								"value": 1100
+							}
+						],
+						"C": [
+							{
+								"value": 15500
+							}
+						]
+					}
+				],
+				"entries": [
+					"{@i Choose A, B, or C:} (A) {@item Chain Mail|XPHB}, {@item Greatsword|XPHB}, {@item Flail|XPHB}, 8 {@item Javelin|XPHB|Javelins}, {@item Dungeoneer's Pack|XPHB} e 4 GP; (B) {@item Studded Leather Armor|XPHB}, {@item Scimitar|XPHB}, {@item Shortsword|XPHB}, {@item Longbow|XPHB}, {@item Arrows (20)|XPHB|20 Arrows}, {@item Quiver|XPHB}, {@item Dungeoneer's Pack|XPHB} e 11 GP; ou (C) 155 GP"
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"luz",
+						"médio",
+						"escudo"
+					],
+					"weapons": [
+						"marcial"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Segundo Vento",
+						"Maestria em Armas"
+					],
+					"rows": [
+						[
+							"2",
+							"3"
+						],
+						[
+							"2",
+							"3"
+						],
+						[
+							"2",
+							"3"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"3",
+							"4"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"5"
+						],
+						[
+							"4",
+							"6"
+						],
+						[
+							"4",
+							"6"
+						],
+						[
+							"4",
+							"6"
+						],
+						[
+							"4",
+							"6"
+						],
+						[
+							"4",
+							"6"
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Fighting Style|Fighter|XPHB|1",
+				"Second Wind|Fighter|XPHB|1",
+				"Weapon Mastery|Fighter|XPHB|1",
+				"Action Surge|Fighter|XPHB|2",
+				"Tactical Mind|Fighter|XPHB|2",
+				{
+					"classFeature": "Fighter Subclass|Fighter|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter|XPHB|4",
+				"Extra Attack|Fighter|XPHB|5",
+				"Tactical Shift|Fighter|XPHB|5",
+				"Ability Score Improvement|Fighter|XPHB|6",
+				{
+					"classFeature": "Subclass Feature|Fighter|XPHB|7",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter|XPHB|8",
+				"Indomitable|Fighter|XPHB|9",
+				"Tactical Master|Fighter|XPHB|9",
+				{
+					"classFeature": "Subclass Feature|Fighter|XPHB|10",
+					"gainSubclassFeature": true
+				},
+				"Two Extra Attacks|Fighter|XPHB|11",
+				"Ability Score Improvement|Fighter|XPHB|12",
+				"Indomitable|Fighter|XPHB|13",
+				"Studied Attacks|Fighter|XPHB|13",
+				"Ability Score Improvement|Fighter|XPHB|14",
+				{
+					"classFeature": "Subclass Feature|Fighter|XPHB|15",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Fighter|XPHB|16",
+				"Action Surge|Fighter|XPHB|17",
+				"Indomitable|Fighter|XPHB|17",
+				{
+					"classFeature": "Subclass Feature|Fighter|XPHB|18",
+					"gainSubclassFeature": true
+				},
+				"Epic Boon|Fighter|XPHB|19",
+				"Three Extra Attacks|Fighter|XPHB|20"
+			],
+			"subclassTitle": "Subclasse de lutador",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "Battle Master",
+			"shortName": "Battle Master",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 73,
+			"reprintedAs": [
+				"Battle Master|Fighter|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"optionalfeatureProgression": [
+				{
+					"name": "Maneuvers",
+					"featureType": [
+						"VM: B"
+					],
+					"progression": {
+						"3": 3,
+						"7": 5,
+						"10": 7,
+						"15": 9
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Battle Master|Fighter||Battle Master||3",
+				"Additional Maneuvers|Fighter||Battle Master||7",
+				"Additional Superiority Die|Fighter||Battle Master||7",
+				"Know Your Enemy|Fighter||Battle Master||7",
+				"Additional Maneuvers|Fighter||Battle Master||10",
+				"Improved Combat Superiority (d10)|Fighter||Battle Master||10",
+				"Additional Maneuvers|Fighter||Battle Master||15",
+				"Additional Superiority Die|Fighter||Battle Master||15",
+				"Relentless|Fighter||Battle Master||15",
+				"Improved Combat Superiority (d12)|Fighter||Battle Master||18"
+			]
+		},
+		{
+			"name": "Battle Master",
+			"shortName": "Battle Master",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Battle Master",
+				"source": "PHB",
+				"shortName": "Battle Master",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Champion",
+			"shortName": "Champion",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Champion|Fighter|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"optionalfeatureProgression": [
+				{
+					"name": "Fighting Style",
+					"featureType": [
+						"FS:F"
+					],
+					"progression": {
+						"10": 1
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Champion|Fighter||Champion||3",
+				"Remarkable Athlete|Fighter||Champion||7",
+				"Additional Fighting Style|Fighter||Champion||10",
+				"Superior Critical|Fighter||Champion||15",
+				"Survivor|Fighter||Champion||18"
+			]
+		},
+		{
+			"name": "Champion",
+			"shortName": "Champion",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Champion",
+				"source": "PHB",
+				"shortName": "Champion",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Eldritch Knight",
+			"shortName": "Eldritch Knight",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Eldritch Knight|Fighter|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"spellcastingAbility": "interno",
+			"casterProgression": "1/3",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"spellsKnownProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=Wizard"
+							},
+							{
+								"all": "level=1|class=Wizard"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=Wizard"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=Wizard"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=Wizard"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Eldritch Knight",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter Cantrips Known|spells|level=0|subclass=Fighter: Eldritch Knight}",
+						"{@filter Spells Known|spells|subclass=Fighter: Eldritch Knight}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							2,
+							3
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							4
+						],
+						[
+							2,
+							5
+						],
+						[
+							2,
+							6
+						],
+						[
+							2,
+							6
+						],
+						[
+							3,
+							7
+						],
+						[
+							3,
+							8
+						],
+						[
+							3,
+							8
+						],
+						[
+							3,
+							9
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							10
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							11
+						],
+						[
+							3,
+							12
+						],
+						[
+							3,
+							13
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"subclasses": [
+						{
+							"name": "Eldritch Knight",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
+						"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
+						"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
+						"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Eldritch Knight|Fighter||Eldritch Knight||3",
+				"War Magic|Fighter||Eldritch Knight||7",
+				"Eldritch Strike|Fighter||Eldritch Knight||10",
+				"Arcane Charge|Fighter||Eldritch Knight||15",
+				"Improved War Magic|Fighter||Eldritch Knight||18"
+			]
+		},
+		{
+			"name": "Eldritch Knight",
+			"shortName": "Eldritch Knight",
+			"source": "PHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Eldritch Knight",
+				"source": "PHB",
+				"shortName": "Eldritch Knight",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Purple Dragon Knight (Banneret)",
+			"shortName": "Purple Dragon Knight (Banneret)",
+			"source": "SCAG",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 128,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Purple Dragon Knight (Banneret)|Fighter||Purple Dragon Knight (Banneret)|SCAG|3",
+				"Royal Envoy|Fighter||Purple Dragon Knight (Banneret)|SCAG|7",
+				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|10",
+				"Bulwark|Fighter||Purple Dragon Knight (Banneret)|SCAG|15",
+				"Inspiring Surge|Fighter||Purple Dragon Knight (Banneret)|SCAG|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Purple Dragon Knight (Banneret)",
+			"shortName": "Purple Dragon Knight (Banneret)",
+			"source": "SCAG",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Purple Dragon Knight (Banneret)",
+				"source": "SCAG",
+				"shortName": "Purple Dragon Knight (Banneret)",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Purple Dragon Knight (Banneret)",
+					"source": "SCAG",
+					"shortName": "Purple Dragon Knight (Banneret)",
+					"className": "Fighter",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Arcane Archer",
+			"shortName": "Arcane Archer",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 28,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"prestidigitação#c"
+						]
+					}
+				},
+				{
+					"known": {
+						"3": [
+							"druida#c"
+						]
+					}
+				}
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Arcane Shots",
+					"featureType": [
+						"COMO"
+					],
+					"progression": {
+						"3": 2,
+						"7": 3,
+						"10": 4,
+						"15": 5,
+						"18": 6
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Arcane Archer|Fighter||Arcane Archer|XGE|3",
+				"Magic Arrow|Fighter||Arcane Archer|XGE|7",
+				"Curving Shot|Fighter||Arcane Archer|XGE|7",
+				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|7",
+				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|10",
+				"Ever-Ready Shot|Fighter||Arcane Archer|XGE|15",
+				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|15",
+				"Additional Arcane Shot Option|Fighter||Arcane Archer|XGE|18"
+			]
+		},
+		{
+			"name": "Arcane Archer",
+			"shortName": "Arcane Archer",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Arcane Archer",
+				"source": "XGE",
+				"shortName": "Arcane Archer",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Cavalier",
+			"shortName": "Cavalier",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 30,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Cavalier|Fighter||Cavalier|XGE|3",
+				"Warding Maneuver|Fighter||Cavalier|XGE|7",
+				"Hold the Line|Fighter||Cavalier|XGE|10",
+				"Ferocious Charger|Fighter||Cavalier|XGE|15",
+				"Vigilant Defender|Fighter||Cavalier|XGE|18"
+			]
+		},
+		{
+			"name": "Cavalier",
+			"shortName": "Cavalier",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Cavalier",
+				"source": "XGE",
+				"shortName": "Cavalier",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Samurai",
+			"shortName": "Samurai",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 31,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Samurai|Fighter||Samurai|XGE|3",
+				"Elegant Courtier|Fighter||Samurai|XGE|7",
+				"Tireless Spirit|Fighter||Samurai|XGE|10",
+				"Rapid Strike|Fighter||Samurai|XGE|15",
+				"Strength before Death|Fighter||Samurai|XGE|18"
+			]
+		},
+		{
+			"name": "Samurai",
+			"shortName": "Samurai",
+			"source": "XGE",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Samurai",
+				"source": "XGE",
+				"shortName": "Samurai",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Scofflaw",
+			"shortName": "Scofflaw",
+			"source": "HWCS",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 41,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Scofflaw|Fighter||Scofflaw|HWCS|3",
+				"Misdirection|Fighter||Scofflaw|HWCS|7",
+				"Blindside|Fighter||Scofflaw|HWCS|10",
+				"Infamy|Fighter||Scofflaw|HWCS|15",
+				"Two For Flinching|Fighter||Scofflaw|HWCS|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scofflaw",
+			"shortName": "Scofflaw",
+			"source": "HWCS",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Scofflaw",
+				"source": "HWCS",
+				"shortName": "Scofflaw",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Scofflaw",
+					"source": "HWCS",
+					"shortName": "Scofflaw",
+					"className": "Fighter",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Echo Knight",
+			"shortName": "Echo Knight",
+			"source": "EGW",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 183,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Echo Knight|Fighter||Echo Knight|EGW|3",
+				"Echo Avatar|Fighter||Echo Knight|EGW|7",
+				"Shadow Martyr|Fighter||Echo Knight|EGW|10",
+				"Reclaim Potential|Fighter||Echo Knight|EGW|15",
+				"Legion of One|Fighter||Echo Knight|EGW|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Echo Knight",
+			"shortName": "Echo Knight",
+			"source": "EGW",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Echo Knight",
+				"source": "EGW",
+				"shortName": "Echo Knight",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Echo Knight",
+					"source": "EGW",
+					"shortName": "Echo Knight",
+					"className": "Fighter",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Psi Warrior",
+			"shortName": "Psi Warrior",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 42,
+			"reprintedAs": [
+				"Psi Warrior|Fighter|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"innate": {
+						"18": {
+							"daily": {
+								"1": [
+									"telecinesia"
+								]
+							}
+						}
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Psi Warrior|Fighter||Psi Warrior|TCE|3",
+				"Telekinetic Adept|Fighter||Psi Warrior|TCE|7",
+				"Guarded Mind|Fighter||Psi Warrior|TCE|10",
+				"Bulwark of Force|Fighter||Psi Warrior|TCE|15",
+				"Telekinetic Master|Fighter||Psi Warrior|TCE|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Psi Warrior",
+			"shortName": "Psi Warrior",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Psi Warrior",
+				"source": "TCE",
+				"shortName": "Psi Warrior",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Psi Warrior",
+					"source": "TCE",
+					"shortName": "Psi Warrior",
+					"className": "Fighter",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Rune Knight",
+			"shortName": "Rune Knight",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "PHB",
+			"page": 44,
+			"edition": "classic",
+			"optionalfeatureProgression": [
+				{
+					"name": "Runes",
+					"featureType": [
+						"Enfermeiro"
+					],
+					"progression": {
+						"3": 2,
+						"7": 3,
+						"10": 4,
+						"15": 5
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Rune Knight|Fighter||Rune Knight|TCE|3",
+				"Runic Shield|Fighter||Rune Knight|TCE|7",
+				"Additional Rune Known|Fighter||Rune Knight|TCE|7",
+				"Great Stature|Fighter||Rune Knight|TCE|10",
+				"Additional Rune Known|Fighter||Rune Knight|TCE|10",
+				"Master of Runes|Fighter||Rune Knight|TCE|15",
+				"Additional Rune Known|Fighter||Rune Knight|TCE|15",
+				"Runic Juggernaut|Fighter||Rune Knight|TCE|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rune Knight",
+			"shortName": "Rune Knight",
+			"source": "TCE",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Rune Knight",
+				"source": "TCE",
+				"shortName": "Rune Knight",
+				"className": "Fighter",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Rune Knight",
+					"source": "TCE",
+					"shortName": "Rune Knight",
+					"className": "Fighter",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Battle Master",
+			"shortName": "Battle Master",
+			"source": "XPHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"page": 93,
+			"edition": "one",
+			"optionalfeatureProgression": [
+				{
+					"name": "Maneuvers",
+					"featureType": [
+						"VM: B"
+					],
+					"progression": {
+						"3": 3,
+						"7": 5,
+						"10": 7,
+						"15": 9
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Battle Master|Fighter|XPHB|Battle Master|XPHB|3",
+				"Know Your Enemy|Fighter|XPHB|Battle Master|XPHB|7",
+				"Improved Combat Superiority|Fighter|XPHB|Battle Master|XPHB|10",
+				"Relentless|Fighter|XPHB|Battle Master|XPHB|15",
+				"Ultimate Combat Superiority|Fighter|XPHB|Battle Master|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Champion",
+			"shortName": "Champion",
+			"source": "XPHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"edition": "one",
+			"featProgression": [
+				{
+					"name": "Fighting Style",
+					"category": [
+						"FS"
+					],
+					"progression": {
+						"7": 1
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Champion|Fighter|XPHB|Champion|XPHB|3",
+				"Additional Fighting Style|Fighter|XPHB|Champion|XPHB|7",
+				"Heroic Warrior|Fighter|XPHB|Champion|XPHB|10",
+				"Superior Critical|Fighter|XPHB|Champion|XPHB|15",
+				"Survivor|Fighter|XPHB|Champion|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eldritch Knight",
+			"shortName": "Eldritch Knight",
+			"source": "XPHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"page": 96,
+			"edition": "one",
+			"spellcastingAbility": "interno",
+			"casterProgression": "1/3",
+			"preparedSpellsProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"preparedSpellsChange": "nível",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"additionalSpells": [
+				{
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=Wizard"
+							},
+							{
+								"all": "level=1|class=Wizard"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=Wizard"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=Wizard"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=Wizard"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Eldritch Knight",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter Spells Prepared|spells|subclass=Fighter: Eldritch Knight}"
+					],
+					"rows": [
+						[
+							0
+						],
+						[
+							0
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							8
+						],
+						[
+							8
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							13
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"subclasses": [
+						{
+							"name": "Eldritch Knight",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 1st|spells|level=1|subclass=Fighter: Eldritch Knight}",
+						"{@filter 2nd|spells|level=2|subclass=Fighter: Eldritch Knight}",
+						"{@filter 3rd|spells|level=3|subclass=Fighter: Eldritch Knight}",
+						"{@filter 4th|spells|level=4|subclass=Fighter: Eldritch Knight}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Eldritch Knight|Fighter|XPHB|Eldritch Knight|XPHB|3",
+				"War Magic|Fighter|XPHB|Eldritch Knight|XPHB|7",
+				"Eldritch Strike|Fighter|XPHB|Eldritch Knight|XPHB|10",
+				"Arcane Charge|Fighter|XPHB|Eldritch Knight|XPHB|15",
+				"Improved War Magic|Fighter|XPHB|Eldritch Knight|XPHB|18"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Psi Warrior",
+			"shortName": "Psi Warrior",
+			"source": "XPHB",
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"page": 98,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"innate": {
+						"18": {
+							"daily": {
+								"1": [
+									"telekinesis|xphb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Psi Warrior",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@tip Die Size|Psionic Energy Die Size}",
+						"{@tip Number|Psionic Energy Die Number}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Psi Warrior|Fighter|XPHB|Psi Warrior|XPHB|3",
+				"Telekinetic Adept|Fighter|XPHB|Psi Warrior|XPHB|7",
+				"Guarded Mind|Fighter|XPHB|Psi Warrior|XPHB|10",
+				"Bulwark of Force|Fighter|XPHB|Psi Warrior|XPHB|15",
+				"Telekinetic Master|Fighter|XPHB|Psi Warrior|XPHB|18"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Fighting Style",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Você adota um estilo particular de luta como sua especialidade. Escolha uma das seguintes opções. Você não pode escolher a mesma opção de estilo de luta mais de uma vez, mesmo que possa escolher novamente.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Archery"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Defense"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Dueling"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Great Weapon Fighting"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Protection"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Two-Weapon Fighting"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Blind Fighting|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Interception|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Superior Technique|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Thrown Weapon Fighting|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Unarmed Fighting|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Second Wind",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Você tem uma reserva limitada de resistência que pode usar para se proteger de perigos. No seu turno, você pode usar uma ação bônus para recuperar pontos de vida iguais a {@dice 1d10} + seu nível de lutador.",
+				"Depois de usar esse recurso, você deve terminar um descanso curto ou longo antes de poder usá-lo novamente."
+			]
+		},
+		{
+			"name": "Action Surge",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"A partir do 2º nível, você pode ultrapassar seus limites normais por um momento. No seu turno, você pode realizar uma ação adicional.",
+				"Depois de usar esse recurso, você deve terminar um descanso curto ou longo antes de poder usá-lo novamente. A partir do 17º nível, você pode usá-lo duas vezes antes de um descanso, mas apenas uma vez no mesmo turno."
+			]
+		},
+		{
+			"name": "Martial Archetype",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"No 3º nível, você escolhe um arquétipo da lista disponível que você se esforça para imitar em seus estilos e técnicas de combate. O arquétipo escolhido concede características no 3º nível e novamente no 7º, 10º, 15º e 18º níveis."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"Quando você alcança o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Martial Versatility",
+			"source": "TCE",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level fighter {@variantrule optional class features|tce|optional feature}}",
+				"Sempre que você atingir um nível nesta classe que conceda o recurso Melhoria de Pontuação de Habilidade, você pode fazer o seguinte, conforme muda o foco de sua prática marcial:",
+				{
+					"type": "list",
+					"items": [
+						"Replace a {@filter fighting style|optionalfeatures|feature type=FS:F} you know with another fighting style available to fighters.",
+						"If you know any {@filter maneuvers|optionalfeatures|feature type=MV:B} from the {@class fighter|phb|Battle Master|Battle Master|phb|2-0} archetype, you can replace one maneuver you know with a different maneuver."
+					]
+				}
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação {@action Attack} no seu turno.",
+				"O número de ataques aumenta para três quando você atinge o 11º nível nesta classe e para quatro quando você atinge o 20º nível nesta classe."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"Quando você alcança o 6º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 7,
+			"entries": [
+				"No 7º nível, você ganha uma característica concedida pelo seu Arquétipo Marcial."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"Quando você alcança o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Indomitable",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 9,
+			"entries": [
+				"A partir do 9º nível, você pode rolar novamente um teste de resistência que falhou. Se fizer isso, você deverá usar o novo teste e não poderá usar esse recurso novamente até terminar um descanso longo.",
+				"Você pode usar esse recurso duas vezes entre descansos longos começando no 13º nível e três vezes entre descansos longos começando no 17º nível."
+			]
+		},
+		{
+			"name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"No 10º nível, você ganha uma característica concedida pelo seu Arquétipo Marcial."
+			]
+		},
+		{
+			"name": "Extra Attack (2)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"No 11º nível, você pode atacar três vezes sempre que realizar a ação {@action Attack} no seu turno."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"Quando você alcança o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Indomitable (two uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"No 13º nível, você pode usar Indomável duas vezes entre descansos longos."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"Quando você alcança o 14º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"No 15º nível, você ganha uma característica concedida pelo seu Arquétipo Marcial."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"Quando você atinge o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Action Surge (two uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"No 17º nível, você pode usar Action Surge duas vezes antes de um descanso, mas apenas uma vez no mesmo turno."
+			]
+		},
+		{
+			"name": "Indomitable (three uses)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"No 17º nível, você pode usar Indomável três vezes entre descansos longos."
+			]
+		},
+		{
+			"name": "Martial Archetype feature",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"No 18º nível, você ganha uma característica concedida pelo seu Arquétipo Marcial."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"Quando você atinge o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Extra Attack (3)",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"No 20º nível, você pode atacar quatro vezes sempre que realizar a ação {@action Attack} no seu turno."
+			]
+		},
+		{
+			"name": "Fighting Style",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você aprimorou suas proezas marciais e ganhou {@filter Fighting Style feat|feats|category=FS} à sua escolha. {@feat Defense|XPHB} é recomendado.",
+				"Sempre que você ganha um nível de Lutador, você pode substituir o talento escolhido por um {@filter Fighting Style feat|feats|category=FS} diferente."
+			]
+		},
+		{
+			"name": "Second Wind",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você tem um poço limitado de resistência física e mental à qual pode recorrer. Como {@variantrule Bonus Action|XPHB}, você pode usá-lo para recuperar {@variantrule Hit Points|XPHB} igual a {@dice 1d10} mais seu nível de Lutador.",
+				"Você pode usar esse recurso duas vezes. Você recupera um uso gasto ao terminar um {@variantrule Short Rest|XPHB} e recupera todos os usos gastos ao terminar um {@variantrule Long Rest|XPHB}.",
+				"Ao atingir determinados níveis de Lutador, você ganha mais usos desse recurso, conforme mostrado na coluna Segundo Vento da tabela Características do Lutador."
+			]
+		},
+		{
+			"name": "Weapon Mastery",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Seu treinamento com armas permite que você use {@variantrule weapon mastery properties|XPHB|mastery properties} de três tipos de armas {@filter Simple|items|type=simple weapon} ou {@filter Martial|items|type=martial weapon} de sua escolha. Sempre que você terminar um {@variantrule Long Rest|XPHB}, poderá praticar exercícios com armas e alterar uma dessas opções de armas.",
+				"Ao atingir determinados níveis de Lutador, você ganha a capacidade de usar {@variantrule weapon mastery properties|XPHB|mastery properties} de mais tipos de armas, conforme mostrado na coluna {@variantrule Weapon|XPHB} Maestria da tabela Características do Lutador."
+			]
+		},
+		{
+			"name": "Action Surge",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Você pode ultrapassar seus limites normais por um momento. No seu turno, você pode realizar uma ação adicional, exceto a ação {@action Magic|XPHB}.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. A partir do nível 17, você pode usá-lo duas vezes antes de um descanso, mas apenas uma vez por turno."
+			]
+		},
+		{
+			"name": "Tactical Mind",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Você tem uma mente para táticas dentro e fora do campo de batalha. Quando você falha em um teste de habilidade, você pode gastar um pouco de seu Segundo Vento para se esforçar para ter sucesso. Em vez de recuperar {@variantrule Hit Points|XPHB}, você rola {@dice 1d10} e adiciona o número obtido ao teste de habilidade, potencialmente transformando-o em um sucesso. Se o teste ainda falhar, este uso de Second Wind não será gasto."
+			]
+		},
+		{
+			"name": "Fighter Subclass",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha uma subclasse de Lutador à sua escolha. Uma subclasse é uma especialização que concede recursos em determinados níveis de Lutador. Pelo resto de sua carreira, você ganha cada uma das características de sua subclasse que sejam do seu nível de Lutador ou inferior."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. Você ganha esse recurso novamente nos níveis de Lutador 6, 8, 12, 14 e 16."
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Você pode atacar duas vezes em vez de uma sempre que realizar a ação {@action Attack|XPHB} no seu turno."
+			]
+		},
+		{
+			"name": "Tactical Shift",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Sempre que você ativa seu Second Wind com um {@variantrule Bonus Action|XPHB}, você pode mover até metade de seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"Você ganha um recurso da sua subclasse de lutador."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"Se você falhar em um teste de resistência, poderá jogá-lo novamente com um bônus igual ao seu nível de Lutador. Você deve usar o novo lançamento e não poderá usar esse recurso novamente até terminar um {@variantrule Long Rest|XPHB}.",
+				"Você pode usar esse recurso duas vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 13 e três vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 17."
+			]
+		},
+		{
+			"name": "Tactical Master",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"Ao atacar com uma arma cuja propriedade de maestria você pode usar, você pode substituir essa propriedade pela propriedade {@itemMastery Push|XPHB}, {@itemMastery Sap|XPHB} ou {@itemMastery Slow|XPHB} para esse ataque."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"Você ganha um recurso da sua subclasse de lutador."
+			]
+		},
+		{
+			"name": "Two Extra Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"Você pode atacar três vezes em vez de uma sempre que realizar a ação {@action Attack|XPHB} no seu turno."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"Se você falhar em um teste de resistência, poderá jogá-lo novamente com um bônus igual ao seu nível de Lutador. Você deve usar o novo teste e não poderá usar esse recurso novamente até terminar um {@variantrule Long Rest|XPHB}.",
+				"Você pode usar esse recurso duas vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 13 e três vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 17."
+			]
+		},
+		{
+			"name": "Studied Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"Você estuda seus oponentes e aprende com cada ataque que faz. Se você fizer uma jogada de ataque contra uma criatura e errar, você terá {@variantrule Advantage|XPHB} em sua próxima jogada de ataque contra aquela criatura antes do final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"Você ganha um recurso da sua subclasse de lutador."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Action Surge",
+			"source": "XPHB",
+			"page": 91,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"Você pode ultrapassar seus limites normais por um momento. No seu turno, você pode realizar uma ação adicional, exceto a ação {@action Magic|XPHB}.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. A partir do nível 17, você pode usá-lo duas vezes antes de um descanso, mas apenas uma vez por turno."
+			]
+		},
+		{
+			"name": "Indomitable",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"Se você falhar em um teste de resistência, poderá jogá-lo novamente com um bônus igual ao seu nível de Lutador. Você deve usar o novo lançamento e não poderá usar esse recurso novamente até terminar {@variantrule Long Rest|XPHB}.",
+				"Você pode usar esse recurso duas vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 13 e três vezes antes de um {@variantrule Long Rest|XPHB} começando no nível 17."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"Você ganha um recurso da sua subclasse de lutador."
+			]
+		},
+		{
+			"name": "Epic Boon",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"Você ganha um {@filter Epic Boon feat|feats|category=EB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. {@feat Boon of Combat Prowess|XPHB} é recomendado."
+			]
+		},
+		{
+			"name": "Three Extra Attacks",
+			"source": "XPHB",
+			"page": 92,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"Você pode atacar quatro vezes em vez de uma vez sempre que realizar a ação {@action Attack|XPHB} no seu turno."
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Echo Knight",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 3,
+			"entries": [
+				"Um misterioso e temido guerreiro da linha de frente da Dinastia Kryn, o Echo Knight dominou a arte de usar dunamis para invocar as sombras desbotadas de linhas do tempo não realizadas para ajudá-los na batalha. Cercados pelos ecos de seu próprio poder, eles entram na briga como um enxame ciclístico de sombras e ataques.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Manifest Echo|Fighter||Echo Knight|EGW|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Unleash Incarnation|Fighter||Echo Knight|EGW|3"
+				}
+			]
+		},
+		{
+			"name": "Manifest Echo",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Echo Knight feature}",
+				"Você pode usar uma ação bônus para manifestar magicamente um eco de si mesmo em um espaço desocupado que você possa ver a até 4,5 metros de você. Este eco é uma imagem mágica, translúcida e cinza de você que dura até ser destruída, até que você a descarte como uma ação bônus, até que você manifeste outro eco ou até que você seja {@condition incapacitated}.",
+				"Seu eco tem CA 14 + seu bônus de proficiência, 1 ponto de vida e imunidade a todas as condições. Se tiver que fazer um teste de resistência, ele usa seu bônus de teste de resistência para o teste. É do mesmo tamanho que você e ocupa seu espaço. No seu turno, você pode comandar mentalmente o eco para se mover até 9 metros em qualquer direção (nenhuma ação é necessária). Se o seu eco estiver a mais de 9 metros de você no final do seu turno, ele será destruído.",
+				"Você pode usar o eco das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Como uma ação bônus, você pode se teletransportar, trocando magicamente de lugar com seu eco a um custo de 4,5 metros de seu movimento, independentemente da distância entre vocês dois.",
+						"Quando você realiza a ação {@action Attack} no seu turno, qualquer ataque que você fizer com essa ação pode se originar do seu espaço ou do espaço do eco. Você faz essa escolha para cada ataque.",
+						"Quando uma criatura que você possa ver a até 1,5 metro do seu eco se mover pelo menos 1,5 metro dele, você pode usar sua reação para fazer um ataque de oportunidade contra aquela criatura como se estivesse no espaço do eco."
+					]
+				}
+			]
+		},
+		{
+			"name": "Unleash Incarnation",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Echo Knight feature}",
+				"Você pode aumentar a fúria do seu eco. Sempre que você executa a ação {@action Attack}, você pode fazer um ataque corpo a corpo adicional a partir da posição do eco.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Constituição (no mínimo uma vez). Você recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Echo Avatar",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Echo Knight feature}",
+				"Você pode transferir temporariamente sua consciência para o seu eco. Como uma ação, você pode ver através dos olhos do seu eco e ouvir através dos seus ouvidos. Durante esse período, você é {@condition deafened} e {@condition blinded}. Você pode sustentar esse efeito por até 10 minutos e pode encerrá-lo a qualquer momento (não requer ação). Enquanto seu eco estiver sendo usado dessa forma, ele pode estar a até 300 metros de você sem ser destruído."
+			]
+		},
+		{
+			"name": "Shadow Martyr",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Echo Knight feature}",
+				"Você pode fazer seu eco se lançar na frente de um ataque direcionado a outra criatura que você possa ver. Antes da jogada de ataque ser feita, você pode usar sua reação para teletransportar o eco para um espaço desocupado a até 1,5 metro da criatura alvo. A jogada de ataque que desencadeou a reação é feita contra o seu eco.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Reclaim Potential",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Echo Knight feature}",
+				"Você aprendeu a absorver a magia fugaz do seu eco. Quando um eco seu é destruído ao receber dano, você pode ganhar um número de pontos de vida temporários igual a {@dice 2d6} + seu modificador de Constituição, desde que ainda não tenha pontos de vida temporários.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Constituição (no mínimo uma vez). Você recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Legion of One",
+			"source": "EGW",
+			"page": 183,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Echo Knight",
+			"subclassSource": "EGW",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18th-level Echo Knight feature}",
+				"Você pode usar uma ação bônus para criar dois ecos com seu recurso Eco de Manifesto, e esses ecos podem coexistir. Se você tentar criar um terceiro eco, os dois ecos anteriores serão destruídos. Qualquer coisa que você possa fazer na posição de um eco pode ser feita na posição do outro.",
+				"Além disso, quando você rola a iniciativa e não tem mais uso do recurso Liberar Encarnação, você recupera um uso desse recurso."
+			]
+		},
+		{
+			"name": "Scofflaw",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"entries": [
+				"Um lutador que bate forte e luta sujo, o Scofflaw recusa os ideais de honra e tradição, fazendo o que precisa para sobreviver. As regras foram feitas para serem quebradas, e o Scofflaw estende essa lógica ao seu estilo de luta. Usando todos os truques à sua disposição para obter vantagem contra seus inimigos, o Scofflaw intimida seu inimigo até a submissão ou subjuga suas defesas com um único tiro barato.",
+				"Os escarnecedores eventualmente confiam em sua notória reputação para fazer grande parte do trabalho para eles, ganhando a habilidade de fazer os inimigos tremerem com uma única ameaça. Os escarnecedores são um grupo diversificado que varia de patifes graciosos, mas mortais, a bandidos brutais. O que os une é a crença de que não existe vitória ruim.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiency|Fighter||Scofflaw|HWCS|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Intimidating Banter|Fighter||Scofflaw|HWCS|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Brutal Brawler|Fighter||Scofflaw|HWCS|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiency",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Ao escolher este Arquétipo Marcial no 3º nível, você ganha proficiência em uma das seguintes habilidades de sua escolha: {@skill Deception}, {@skill Insight}, {@skill Intimidation}, {@skill Sleight of Hand} ou {@skill Stealth}. Alternativamente, você pode aprender {@class rogue|phb|Thieves' Cant||phb|Thieves' Cant 1}."
+			]
+		},
+		{
+			"name": "Brutal Brawler",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"No 3º nível, suas brigas na taverna aprimoraram sua habilidade de causar dano com praticamente qualquer coisa que esteja à mão. Você tem proficiência com armas improvisadas e trata qualquer arma improvisada que manusear como se tivesse a qualidade sutil.",
+				"Além disso, sempre que você acertar com uma arma improvisada, você pode gastar uma ação bônus para quebrá-la sobre seu oponente. Fazer isso destrói a arma, mas causa o número máximo que cada dado de dano da arma poderia causar ao alvo. Quaisquer dados adicionais adicionados à jogada de dano do ataque não são afetados por esta habilidade.",
+				"No 10º nível, as armas improvisadas que você empunha tornam-se ainda mais letais em suas mãos. Quando você gasta sua ação bônus para quebrar uma arma improvisada sobre seu oponente, adicione um {@damage 2d6} adicional aos dados de dano base da arma.",
+				"No 18º nível, você tem vantagem em ataques feitos com armas improvisadas."
+			]
+		},
+		{
+			"name": "Intimidating Banter",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"No 3º nível, você é adepto de integrar insultos e farpas em seu estilo de luta. Enquanto estiver em combate, você pode escolher usar Força ou Destreza para fazer testes de habilidade de Carisma."
+			]
+		},
+		{
+			"name": "Misdirection",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você é adepto de usar palavras e gestos para provocar ou enganar seu oponente, virando a falta de compostura dele contra ele. Isso permite que você incite seu inimigo a atacar de maneiras que podem fazer com que ele atinja seus aliados ou que os deixe abertos a um contra-ataque. Como uma ação bônus, você pode direcionar erroneamente um oponente a até 1,5 metro de você. O alvo deve ser bem sucedido em um teste de resistência de Inteligência contra uma CD igual a 8 + seu bônus de proficiência + seu modificador de Força ou Destreza. Em caso de falha, eles devem gastar sua reação para atacar uma criatura de sua escolha a até 1,5 metro deles. Se nenhuma outra criatura estiver presente a até 1,5 metro deles, eles desperdiçam sua reação atacando o ar onde você estava antes.",
+				"Para que você possa direcionar mal uma criatura dessa forma, ela deve ser capaz de ver, ouvir ou de outra forma ser capaz de entendê-lo."
+			]
+		},
+		{
+			"name": "Blindside",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você é verdadeiramente habilidoso em explorar as aberturas que cria em combate, atingindo oponentes desprevenidos com golpes precisos, rápidos e mortais. Você pode usar esta técnica contra qualquer criatura que ainda não tenha participado de um turno de combate ou que você tenha enganado com sucesso neste turno. Você também pode aplicar esta técnica a qualquer jogada de ataque que fizer com vantagem. Ao acertar, você explora uma abertura nas defesas do alvo, causando {@damage 5d6} pontos extras de dano. Depois de usar esta habilidade, você não poderá usá-la novamente até que tenha feito um descanso curto ou longo.",
+				"No 15º nível, o dano causado pelo seu lado cego aumenta para {@damage 7d6}.",
+				"No 18º nível, o dano causado pelo seu lado cego aumenta para {@damage 9d6}. Se você não tiver uso desta habilidade no início do combate em seu turno, você recupera um uso dela."
+			]
+		},
+		{
+			"name": "Infamy",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, sua reputação o precede, tornando mais fácil para você causar medo nos corações de qualquer um que seja tolo o suficiente para se opor a você. Como parte de sua ação {@action Attack}, você pode proferir ameaças mortais a um único alvo a até 9 metros de você, fazendo com que ele se torne {@condition frightened} seu por 1 minuto se falhar no teste de resistência de Sabedoria. Um alvo afetado pode repetir este teste de resistência no final de cada um de seus turnos, encerrando o efeito se obtiver sucesso. A CD para este teste de resistência é 8 + seu bônus de proficiência + seu modificador de Força ou Destreza. Uma criatura que testemunhou ou ouviu histórias sobre sua crueldade faz este teste de resistência com desvantagem.",
+				"Para que você possa usar esse recurso, uma criatura deve ser capaz de ver, ouvir ou de outra forma ser capaz de entendê-lo."
+			]
+		},
+		{
+			"name": "Two For Flinching",
+			"source": "HWCS",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Scofflaw",
+			"subclassSource": "HWCS",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"No 18º nível, você aperfeiçoou a arte de explorar as fraquezas do seu oponente. Sempre que você realizar uma ação de ataque contra um oponente que você tenha direcionado incorretamente com sucesso neste turno, ou um oponente que esteja afetado por {@book condition|PHB|11}, você poderá realizar um ataque adicional contra esse oponente. Você só pode usar esse recurso uma vez por rodada."
+			]
+		},
+		{
+			"name": "Battle Master",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"Aqueles que imitam o arquétipo do Mestre de Batalha empregam técnicas marciais transmitidas através de gerações. Para um Mestre de Batalha, o combate é um campo acadêmico, às vezes incluindo assuntos além da batalha, como forjamento de armas e caligrafia. Nem todo lutador absorve as lições de história, teoria e arte que são refletidas no arquétipo do Mestre de Batalha, mas aqueles que o fazem são lutadores completos, de grande habilidade e conhecimento.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Student of War|Fighter||Battle Master||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Combat Superiority|Fighter||Battle Master||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Maneuvers|Fighter||Battle Master||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Maneuver Options|Fighter||Battle Master||3|TCE"
+				}
+			]
+		},
+		{
+			"name": "Combat Superiority",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Quando você escolhe este arquétipo no 3º nível, você aprende manobras que são alimentadas por dados especiais chamados dados de superioridade.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Maneuvers",
+							"entries": [
+								"Você aprende três manobras de sua escolha, listadas em “Manobras” abaixo. Muitas manobras melhoram um ataque de alguma forma. Você pode usar apenas uma manobra por ataque.",
+								"Você aprende duas manobras adicionais à sua escolha no 7º, 10º e 15º níveis. Cada vez que você aprende novas manobras, você também pode substituir uma manobra que conhece por outra diferente."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Superiority Dice",
+							"entries": [
+								"Você tem quatro dados de superioridade, que são {@dice d8}s. Um dado de superioridade é gasto quando você o usa. Você recupera todos os seus dados de superioridade gastos ao terminar um descanso curto ou longo.",
+								"Você ganha outro dado de superioridade no 7º nível e mais um no 15º nível."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Saving Throws",
+							"entries": [
+								"Algumas de suas manobras exigem que seu alvo faça um teste de resistência para resistir aos efeitos da manobra. A CD do teste de resistência é calculada da seguinte forma:",
+								{
+									"type": "abilityDc",
+									"name": "Maneuver",
+									"attributes": [
+										"str",
+										"dex"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Maneuver Options",
+			"source": "TCE",
+			"page": 41,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level fighter {@variantrule optional class features|tce|optional feature}}",
+				"Se você tiver acesso a manobras, as seguintes manobras serão adicionadas à lista de opções disponíveis para você. As manobras estão disponíveis para Battle Masters, mas também para personagens que possuem uma característica especial, como o estilo de luta {@optfeature Superior Technique|TCE} ou o talento {@feat Martial Adept}.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "options",
+							"entries": [
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Ambush|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Bait and Switch|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Brace|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Commanding Presence|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Grappling Strike|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Quick Toss|TCE"
+								},
+								{
+									"type": "refOptionalfeature",
+									"optionalfeature": "Tactical Assessment|TCE"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"As manobras são apresentadas em ordem alfabética.",
+				{
+					"type": "options",
+					"count": 3,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commander's Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Disarming Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Distracting Strike"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Evasive Footwork"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Feinting Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Goading Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Lunging Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Maneuvering Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Menacing Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Parry"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Precision Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pushing Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rally"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Riposte"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sweeping Attack"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Trip Attack"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Student of War",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha proficiência com um tipo de {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} à sua escolha."
+			]
+		},
+		{
+			"name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você aprende duas manobras adicionais à sua escolha."
+			]
+		},
+		{
+			"name": "Additional Superiority Die",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você ganha outro dado de superioridade no 7º nível."
+			]
+		},
+		{
+			"name": "Know Your Enemy",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Se você passar pelo menos 1 minuto observando ou interagindo com outra criatura fora do combate, você poderá aprender certas informações sobre suas capacidades em comparação com as suas. O Mestre lhe dirá se a criatura é igual, superior ou inferior a você em relação a duas das seguintes características de sua escolha:",
+				{
+					"type": "list",
+					"items": [
+						"Pontuação de força",
+						"Pontuação de destreza",
+						"Pontuação da Constituição",
+						"Classe de Armadura",
+						"Pontos de vida atuais",
+						"Níveis totais de classe (se houver)",
+						"Níveis de classe de lutador (se houver)"
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você aprende duas manobras adicionais à sua escolha."
+			]
+		},
+		{
+			"name": "Improved Combat Superiority (d10)",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, seus dados de superioridade se transformam em {@dice d10}s."
+			]
+		},
+		{
+			"name": "Additional Maneuvers",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, você aprende duas manobras adicionais à sua escolha."
+			]
+		},
+		{
+			"name": "Additional Superiority Die",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Você ganha outro dado de superioridade no 15º nível."
+			]
+		},
+		{
+			"name": "Relentless",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, quando você rola iniciativa e não tem dados de superioridade restantes, você recupera 1 dado de superioridade."
+			]
+		},
+		{
+			"name": "Improved Combat Superiority (d12)",
+			"source": "PHB",
+			"page": 73,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"No 18º nível, seus dados de superioridade se transformam em {@dice d12}s."
+			]
+		},
+		{
+			"name": "Champion",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"O Campeão arquetípico concentra-se no desenvolvimento da força física bruta, aprimorada até a perfeição mortal. Aqueles que se inspiram neste arquétipo combinam treinamento rigoroso com excelência física para desferir golpes devastadores.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Improved Critical|Fighter||Champion||3"
+				}
+			]
+		},
+		{
+			"name": "Improved Critical",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Começando quando você escolhe este arquétipo no 3º nível, seus ataques com armas obtêm um acerto crítico em uma jogada de 19 ou 20."
+			]
+		},
+		{
+			"name": "Remarkable Athlete",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"A partir do 7º nível, você pode adicionar metade do seu bônus de proficiência (arredondado para cima) a qualquer teste de Força, Destreza ou Constituição que você fizer e que ainda não utilize seu bônus de proficiência.",
+				"Além disso, quando você dá um salto em distância com corrida, a distância que você pode percorrer aumenta em um número de metros igual ao seu modificador de Força."
+			]
+		},
+		{
+			"name": "Additional Fighting Style",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você pode escolher uma segunda opção do recurso de classe Fighting Style."
+			]
+		},
+		{
+			"name": "Superior Critical",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, seus ataques com armas obtêm um acerto crítico em uma jogada de 18-20."
+			]
+		},
+		{
+			"name": "Survivor",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"basicRules": true,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"No 18º nível, você atinge o auge da resiliência em batalha. No início de cada um de seus turnos, você recupera pontos de vida iguais a 5 + seu modificador de Constituição se não tiver mais do que metade de seus pontos de vida restantes. Você não ganha esse benefício se tiver 0 pontos de vida."
+			]
+		},
+		{
+			"name": "Eldritch Knight",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"O arquétipo do Cavaleiro Eldritch combina o domínio marcial comum a todos os lutadores com um estudo cuidadoso da magia. Os Cavaleiros Eldritch usam técnicas mágicas semelhantes às praticadas pelos magos. Eles concentram seu estudo em duas das oito escolas de magia – abjuração e evocação. Feitiços de Abjuração concedem proteção adicional ao Cavaleiro Eldritch em batalha, e feitiços de evocação causam dano a muitos inimigos ao mesmo tempo, ampliando o alcance do lutador em combate. Esses cavaleiros aprendem um número comparativamente pequeno de feitiços, memorizando-os em vez de mantê-los em um livro de feitiços.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spellcasting|Fighter||Eldritch Knight||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Weapon Bond|Fighter||Eldritch Knight||3"
+				}
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao atingir o 3º nível, você aumenta suas proezas marciais com a habilidade de lançar magias. Consulte {@book chapter 10|PHB|10} para as regras gerais de lançamento de feitiços e {@book chapter 11|PHB|11} para {@filter wizard spell list|spells|class=wizard}.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"Você aprende dois truques de sua escolha com {@filter wizard spell list|spells|class=wizard}. Você aprende um truque adicional de mago à sua escolha no 10º nível."
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"A tabela Eldritch Knight Spellcasting mostra quantos slots de feitiço você tem para lançar seu {@filter wizard spells|spells|class=wizard} de 1º nível e superior. Para conjurar uma dessas magias, você deve gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.",
+								"Por exemplo, se você conhece a magia de 1º nível {@spell shield} e tem um espaço de magia de 1º nível e um de 2º nível disponíveis, você pode lançar {@spell shield} usando qualquer um dos espaços."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spells Known of 1st-Level and Higher",
+							"entries": [
+								"Você conhece três magias de mago de 1º nível à sua escolha, duas das quais você deve escolher entre as magias de abjuração e evocação na lista de magias de mago.",
+								"A coluna Magias Conhecidas da tabela Conjuração de Cavaleiro Eldritch mostra quando você aprende mais magias de mago de 1º nível ou superior. Cada uma dessas magias deve ser uma magia de abjuração ou evocação de sua escolha e deve ser de um nível para o qual você tenha espaços de magia. Por exemplo, quando você atinge o 7º nível nesta classe, você pode aprender uma nova magia de 1º ou 2º nível.",
+								"As magias que você aprende no 8º, 14º e 20º nível podem vir de qualquer escola de magia.",
+								"Sempre que você ganha um nível nesta classe, você pode substituir uma das magias de mago que você conhece por outra magia de sua escolha da lista de magias de mago. A nova magia deve ser de um nível para o qual você tenha espaços de magia e deve ser uma magia de abjuração ou evocação, a menos que você esteja substituindo a magia que ganhou no 3º, 8º, 14º ou 20º nível de qualquer escola de magia."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de mago, já que você aprende seus feitiços através do estudo e da memorização. Você usa sua Inteligência sempre que uma magia se refere à sua habilidade de lançar magias. Além disso, você usa seu modificador de Inteligência ao definir a CD do teste de resistência para uma magia de mago que você conjurou e ao fazer uma jogada de ataque com uma.",
+								{
+									"type": "abilityDc",
+									"name": "Spell",
+									"attributes": [
+										"interno"
+									]
+								},
+								{
+									"type": "abilityAttackMod",
+									"name": "Spell",
+									"attributes": [
+										"interno"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Weapon Bond",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você aprende um ritual que cria um vínculo mágico entre você e uma arma. Você realiza o ritual ao longo de 1 hora, o que pode ser feito durante um breve descanso. A arma deve estar ao seu alcance durante todo o ritual, ao final do qual você toca a arma e forja o vínculo.",
+				"Depois de vincular uma arma a si mesmo, você não poderá ser desarmado dessa arma, a menos que seja {@condition incapacitated}. Se ela estiver no mesmo plano de existência, você pode invocar aquela arma como uma ação bônus no seu turno, fazendo com que ela se teletransporte instantaneamente para sua mão.",
+				"Você pode ter até duas armas vinculadas, mas só pode invocar uma de cada vez com sua ação bônus. Se você tentar se vincular com uma terceira arma, deverá romper o vínculo com uma das outras duas."
+			]
+		},
+		{
+			"name": "War Magic",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"A partir do 7º nível, quando você usa sua ação para lançar um truque, você pode realizar um ataque com arma como uma ação bônus."
+			]
+		},
+		{
+			"name": "Eldritch Strike",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você aprende como fazer com que seus ataques com arma diminuam a resistência de uma criatura às suas magias. Quando você atinge uma criatura com um ataque com arma, aquela criatura tem desvantagem no próximo teste de resistência que fizer contra uma magia que você conjurar antes do final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Arcane Charge",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, você ganha a habilidade de se teletransportar até 9 metros para um espaço desocupado que você pode ver quando usa seu Surto de Ação. Você pode se teletransportar antes ou depois da ação adicional."
+			]
+		},
+		{
+			"name": "Improved War Magic",
+			"source": "PHB",
+			"page": 74,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "PHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"A partir do 18º nível, quando você usa sua ação para lançar uma magia, você pode realizar um ataque com arma como uma ação bônus."
+			]
+		},
+		{
+			"name": "Purple Dragon Knight (Banneret)",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"entries": [
+				"Os Cavaleiros Dragões Roxos são guerreiros vindos do reino de Cormyr. Comprometidos a proteger a coroa, eles levam a luta contra o mal para além das fronteiras do reino. Eles têm a tarefa de vagar pela terra como cavaleiros errantes, confiando em seu julgamento, bravura e fidelidade para guiá-los na derrota dos malfeitores.",
+				"Um Cavaleiro Dragão Roxo inspira grandeza em outros ao cometer atos corajosos em batalha. A mera presença de um cavaleiro em uma aldeia é suficiente para fazer com que alguns orcs e bandidos procurem presas mais fáceis. Um cavaleiro solitário é um guerreiro habilidoso, mas um cavaleiro liderando um bando de aliados pode transformar até mesmo a milícia menos equipada em um bando de guerra feroz.",
+				"Um cavaleiro prefere liderar através de ações e não de palavras. Assim como um cavaleiro lidera um ataque, suas ações podem despertar reservas de coragem e convicção em aliados que eles nunca suspeitaram que tivessem.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Restriction: Knighthood|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Rallying Cry|Fighter||Purple Dragon Knight (Banneret)|SCAG|3"
+				}
+			]
+		},
+		{
+			"name": "Rallying Cry",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Quando você escolhe este arquétipo no 3º nível, você aprende como inspirar seus aliados a lutarem após seus ferimentos.",
+				"Ao usar seu recurso Second Wind, você pode escolher até três criaturas a até 18 metros de você que sejam aliadas a você. Cada um recupera pontos de vida iguais ao seu nível de guerreiro, desde que a criatura possa ver ou ouvir você."
+			]
+		},
+		{
+			"name": "Restriction: Knighthood",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Os Cavaleiros Dragões Roxos estão vinculados a uma ordem específica de cavalaria de Cormyre.",
+				"Banneret serve como nome genérico para este arquétipo se você usá-lo em outros cenários de campanha ou para modelar senhores da guerra que não sejam os Cavaleiros Dragões Roxos."
+			]
+		},
+		{
+			"name": "Royal Envoy",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Um Cavaleiro Dragão Roxo serve como enviado da coroa de Cormyre. Espera-se que cavaleiros de alto nível se comportem com graça.",
+				"No 7º nível, você ganha proficiência na habilidade {@skill Persuasion}. Se você já é proficiente nisso, você ganha proficiência em uma das seguintes habilidades de sua escolha: {@skill Animal Handling}, {@skill Insight}, {@skill Intimidation} ou {@skill Performance}.",
+				"Seu bônus de proficiência é duplicado para qualquer teste de habilidade que você fizer que use {@skill Persuasion}. Você recebe esse benefício independentemente da proficiência em habilidade obtida com esse recurso."
+			]
+		},
+		{
+			"name": "Inspiring Surge",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, quando você usa seu recurso Surto de Ação, você pode escolher uma criatura a até 18 metros de você que seja aliada a você. Essa criatura pode realizar um ataque corpo a corpo ou de longo alcance com sua reação, desde que possa ver ou ouvir você.",
+				"A partir do 18º nível, você pode escolher dois aliados a até 18 metros de você, em vez de um."
+			]
+		},
+		{
+			"name": "Bulwark",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, você pode estender o benefício da sua característica Indomável a um aliado. Quando você decide usar Indomável para rolar novamente um teste de resistência de Inteligência, Sabedoria ou Carisma e você não é {@condition incapacitated}, você pode escolher um aliado a até 18 metros de você que também falhou no teste de resistência contra o mesmo efeito. Se aquela criatura puder ver ou ouvir você, ela poderá refazer seu teste de resistência e deverá usar a nova jogada."
+			]
+		},
+		{
+			"name": "Inspiring Surge",
+			"source": "SCAG",
+			"page": 128,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Purple Dragon Knight (Banneret)",
+			"subclassSource": "SCAG",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"A partir do 18º nível, você pode escolher dois aliados a até 18 metros de você, em vez de um."
+			]
+		},
+		{
+			"name": "Protective Field",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 3,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Quando você ou outra criatura que você possa ver a até 9 metros de você sofre dano, você pode usar sua reação para gastar um dado de Energia Psiônica, jogar o dado e reduzir o dano recebido pelo número rolado mais seu modificador de Inteligência (redução mínima de 1), enquanto cria um escudo momentâneo de força telecinética."
+			]
+		},
+		{
+			"name": "Psi Warrior",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Desperto para o poder psiônico interior, um Guerreiro Psi é um lutador que aumenta seu poder físico com ataques de armas infundidos com psi, chicotadas telecinéticas e barreiras de força mental. Muitos githyanki treinam para se tornarem tais guerreiros, assim como alguns dos elfos superiores mais disciplinados. No mundo de Eberron, muitos jovens kalashtar sonham em se tornar Guerreiros Psi.",
+				"Como um Guerreiro Psi, você pode ter aprimorado suas habilidades psiônicas por meio de disciplina solo, desbloqueado sob a tutela de um mestre ou refinado em uma academia dedicada a exercer o poder da mente como arma e escudo.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Power|Fighter||Psi Warrior|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Psionic Strike",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 3,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode impulsionar suas armas com força psiônica. Uma vez em cada um de seus turnos, imediatamente após atingir um alvo a até 9 metros de você com um ataque e causar dano a ele com uma arma, você pode gastar um dado de Energia Psiônica, rolando-o e causando dano de força ao alvo igual ao número obtido mais seu modificador de Inteligência."
+			]
+		},
+		{
+			"name": "Telekinetic Movement",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Você pode mover um objeto ou criatura com sua mente. Com uma ação, você escolhe um objeto solto que seja Grande ou menor ou uma criatura voluntária, que não seja você. Se você puder ver o alvo e ele estiver a até 9 metros de você, você poderá movê-lo até 9 metros para um espaço desocupado que possa ver. Alternativamente, se for um objeto minúsculo, você pode movê-lo para ou de sua mão. De qualquer forma, você pode mover o alvo horizontalmente, verticalmente ou ambos. Depois de realizar esta ação, você não poderá fazê-la novamente até terminar um descanso curto ou longo, a menos que gaste um dado de Energia Psiônica para realizá-la novamente."
+			]
+		},
+		{
+			"name": "Psionic Power",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Psi Warrior feature}",
+				"Você abriga uma fonte de energia psiônica dentro de si. Esta energia é representada pelos seus dados de Energia Psiônica, cada um deles {@dice d6}. Você tem um número desses dados igual ao dobro do seu bônus de proficiência, e eles alimentam vários poderes psiônicos que você possui, que são detalhados abaixo.",
+				"Alguns de seus poderes gastam o dado de Energia Psiônica que usam, conforme especificado na descrição de um poder, e você não pode usar um poder se ele exigir que você use um dado quando todos os seus dados estiverem gastos. Você recupera todos os seus dados de Energia Psiônica gastos ao terminar um descanso longo. Além disso, como uma ação bônus, você pode recuperar um dado de Energia Psiônica gasto, mas não pode fazê-lo novamente até terminar um descanso curto ou longo.",
+				"Quando você atinge certos níveis nesta classe, o tamanho dos seus dados de Energia Psiônica aumenta: no 5º nível ({@dice d8}), no 11º nível ({@dice d10}) e no 17º nível ({@dice d12}).",
+				"Os poderes abaixo usam seus dados de Energia Psiônica.",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Protective Field|Fighter|PHB|Psi Warrior|TCE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psionic Strike|Fighter|PHB|Psi Warrior|TCE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Telekinetic Movement|Fighter|PHB|Psi Warrior|TCE|3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Psi-Powered Leap",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 7,
+			"entries": [
+				"Como uma ação bônus, você pode impulsionar seu corpo com sua mente. Você ganha um deslocamento de voo igual ao dobro do seu deslocamento de caminhada até o final do turno atual. Depois de realizar esta ação bônus, você não poderá fazê-la novamente até terminar um descanso curto ou longo, a menos que gaste um dado de Energia Psiônica para realizá-la novamente."
+			]
+		},
+		{
+			"name": "Telekinetic Thrust",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 7,
+			"entries": [
+				"Quando você causa dano a um alvo com seu Ataque Psiônico, você pode forçar o alvo a fazer um teste de resistência de Força contra uma CD igual a 8 + seu bônus de proficiência + seu modificador de Inteligência. Se o salvamento falhar, você pode derrubar o alvo {@condition prone} ou movê-lo até 3 metros em qualquer direção horizontalmente."
+			]
+		},
+		{
+			"name": "Telekinetic Adept",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Psi Warrior feature}",
+				"Você dominou novas maneiras de usar suas habilidades telecinéticas, detalhadas abaixo.",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psi-Powered Leap|Fighter|PHB|Psi Warrior|TCE|7"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Telekinetic Thrust|Fighter|PHB|Psi Warrior|TCE|7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Guarded Mind",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Psi Warrior feature}",
+				"A energia psiônica que flui através de você fortaleceu sua mente. Você tem resistência a danos psíquicos. Além disso, se você iniciar seu turno {@condition charmed} ou {@condition frightened}, você pode gastar um dado de Energia Psiônica e encerrar todos os efeitos sobre você mesmo, sujeitando-o a essas condições."
+			]
+		},
+		{
+			"name": "Bulwark of Force",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Psi Warrior feature}",
+				"Você pode proteger a si mesmo e aos outros com força telecinética. Como uma ação bônus, você pode escolher criaturas, que podem incluir você, que você possa ver a até 9 metros de você, até um número de criaturas igual ao seu modificador de Inteligência (mínimo de uma criatura). Cada uma das criaturas escolhidas é protegida por {@quickref Cover||3||half cover} por 1 minuto ou até você estar {@condition incapacitated}.",
+				"Depois de realizar esta ação bônus, você não poderá fazê-la novamente até terminar um descanso longo, a menos que gaste um dado de Energia Psiônica para realizá-la novamente."
+			]
+		},
+		{
+			"name": "Telekinetic Master",
+			"source": "TCE",
+			"page": 42,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "TCE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18th-level Psi Warrior feature}",
+				"Sua habilidade de mover criaturas e objetos com sua mente é igualada por poucos. Você pode lançar o feitiço {@spell telekinesis}, sem precisar de componentes, e sua habilidade de lançar o feitiço é Inteligência. Em cada um dos seus turnos enquanto você se concentra na magia, incluindo o turno em que você a conjura, você pode fazer um ataque com uma arma como uma ação bônus.",
+				"Depois de lançar a magia com esta característica, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste um dado de Energia Psiônica para lançá-la novamente."
+			]
+		},
+		{
+			"name": "Rune Knight",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Os Cavaleiros Rúnicos aprimoram suas proezas marciais usando o poder sobrenatural das runas, uma prática antiga que se originou com os gigantes. Cortadores de runas podem ser encontrados em qualquer família de gigantes, e você provavelmente aprendeu seus métodos em primeira ou segunda mão com um artesão tão místico. Quer você tenha encontrado o trabalho do gigante esculpido em uma colina ou caverna, aprendido sobre as runas com um sábio ou conhecido o gigante pessoalmente, você estudou a arte do gigante e aprendeu como aplicar runas mágicas para fortalecer seu equipamento.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Fighter||Rune Knight|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Rune Carver|Fighter||Rune Knight|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Giant's Might|Fighter||Rune Knight|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Rune Knight feature}",
+				"Você ganha proficiência com {@item smith's tools|PHB} e aprende a falar, ler e escrever {@language Giant}."
+			]
+		},
+		{
+			"name": "Giant's Might",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Rune Knight feature}",
+				"Você aprendeu como se imbuir do poder dos gigantes. Como uma ação bônus, você ganha magicamente os seguintes benefícios, que duram 1 minuto:",
+				{
+					"type": "list",
+					"items": [
+						"Se você for menor que Grande, você se tornará Grande, junto com tudo o que estiver vestindo. Se você não tiver espaço para se tornar Grande, seu tamanho não muda.",
+						"Você tem vantagem em testes de Força e testes de resistência de Força.",
+						"Uma vez em cada um de seus turnos, um de seus ataques com uma arma ou um ataque desarmado pode causar {@damage 1d6} de dano extra a um alvo ao acertar."
+					]
+				},
+				"Você pode usar esta característica um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos dela quando terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Rune Carver",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Rune Knight feature}",
+				"Você pode usar runas mágicas para aprimorar seu equipamento. Você aprende duas runas de sua escolha, dentre as runas descritas abaixo, e cada vez que você ganha um nível nesta classe, você pode substituir uma runa que você conhece por uma diferente desta característica. Ao atingir certos níveis nesta classe, você aprende runas adicionais, conforme mostrado na tabela Runas Conhecidas.",
+				"Sempre que você termina um descanso longo, você pode tocar um número de objetos igual ao número de runas que você conhece e inscrever uma runa diferente em cada um dos objetos. Para ser elegível, um objeto deve ser uma arma, uma armadura, um escudo, uma joia ou qualquer outra coisa que você possa usar ou segurar na mão. Sua runa permanece em um objeto até você terminar um descanso longo, e um objeto pode conter apenas uma de suas runas por vez.",
+				{
+					"type": "table",
+					"caption": "Runas Conhecidas",
+					"colLabels": [
+						"Nível de lutador",
+						"Número de Runas"
+					],
+					"colStyles": [
+						"col-6 centro de texto",
+						"col-6 centro de texto"
+					],
+					"rows": [
+						[
+							"3º",
+							"2"
+						],
+						[
+							"7º",
+							"3"
+						],
+						[
+							"10º",
+							"4"
+						],
+						[
+							"15º",
+							"5"
+						]
+					]
+				},
+				"As seguintes runas estão disponíveis para você quando você aprende uma runa. Se uma runa tiver um requisito de nível, você deve ter pelo menos esse nível nesta classe para aprender a runa. Se uma runa requer um teste de resistência, sua CD de resistência de Magia Rúnica é igual a 8 + seu bônus de proficiência + seu modificador de Constituição.",
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Cloud Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Fire Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Frost Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Stone Rune|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Hill Rune|TCE",
+							"name": "Hill Rune (7th Level or Higher)"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Storm Rune|TCE",
+							"name": "Storm Rune (7th Level or Higher)"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Rune Knight feature}",
+				"Você aprende uma runa adicional."
+			]
+		},
+		{
+			"name": "Runic Shield",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Rune Knight feature}",
+				"Você aprende a invocar sua magia rúnica para proteger seus aliados. Quando outra criatura que você pode ver a até 18 metros de você é atingida por uma jogada de ataque, você pode usar sua reação para forçar o atacante a rolar novamente o {@dice d20} e usar a nova jogada.",
+				"Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Rune Knight feature}",
+				"Você aprende uma runa adicional."
+			]
+		},
+		{
+			"name": "Great Stature",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Rune Knight feature}",
+				"A magia de suas runas altera você permanentemente. Ao ganhar esse recurso, role {@dice 3d4}. Você cresce alguns centímetros de altura igual ao rolo.",
+				"Além disso, o dano extra que você causa com o recurso Poder do Gigante aumenta para {@dice 1d8}."
+			]
+		},
+		{
+			"name": "Additional Rune Known",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Rune Knight feature}",
+				"Você aprende uma runa adicional."
+			]
+		},
+		{
+			"name": "Master of Runes",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Rune Knight feature}",
+				"Você pode invocar cada runa que conhece do recurso Rune Carver duas vezes, em vez de uma vez, e recuperar todos os usos gastos ao terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Runic Juggernaut",
+			"source": "TCE",
+			"page": 44,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Rune Knight",
+			"subclassSource": "TCE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"{@i 18th-level Rune Knight feature}",
+				"Você aprende como amplificar sua transformação movida a runas. Como resultado, o dano extra que você causa com o recurso Poder do Gigante aumenta para {@dice 1d10}. Além disso, quando você usa esse recurso, seu tamanho pode aumentar para Enorme e, enquanto você estiver nesse tamanho, seu alcance aumenta em 1,5 metro."
+			]
+		},
+		{
+			"name": "Arcane Archer",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Um Arqueiro Arcano estuda um método élfico único de tiro com arco que mistura magia em ataques para produzir efeitos sobrenaturais. Arqueiros Arcanos são alguns dos guerreiros de elite entre os elfos. Eles vigiam as periferias dos domínios élficos, mantendo-se atentos aos invasores e usando flechas com infusão de magia para derrotar monstros e invasores antes que eles possam chegar aos assentamentos élficos. Ao longo dos séculos, os métodos desses elfos arqueiros foram aprendidos por membros de outras raças que também conseguem equilibrar aptidão arcana com tiro com arco.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Archer Lore|Fighter||Arcane Archer|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Shot|Fighter||Arcane Archer|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Shot Options|Fighter||Arcane Archer|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Arcane Archer Lore",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você aprende a teoria mágica ou alguns dos segredos da natureza – típicos dos praticantes desta tradição marcial élfica. Você escolhe ganhar proficiência na habilidade {@skill Arcana} ou {@skill Nature} e escolhe aprender o truque {@spell prestidigitation} ou {@spell druidcraft}."
+			]
+		},
+		{
+			"name": "Arcane Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você aprende a liberar efeitos mágicos especiais com alguns de seus tiros. Ao ganhar esse recurso, você aprende duas opções de Tiro Arcano de sua escolha (veja \"Opções de Tiro Arcano\" abaixo).",
+				"Uma vez por turno, quando você dispara uma flecha de um arco curto ou longo como parte da ação {@action Attack}, você pode aplicar uma de suas opções de Tiro Arcano a essa flecha. Você decide usar a opção quando a flecha atinge uma criatura, a menos que a opção não envolva uma jogada de ataque. Você tem dois usos dessa habilidade e recupera todos os usos gastos dela ao terminar um descanso curto ou longo.",
+				"Você ganha uma opção adicional de Tiro Arcano à sua escolha quando atinge certos níveis nesta classe: 7º, 10º, 15º e 18º nível. Cada opção também melhora quando você se torna um lutador de 18º nível."
+			]
+		},
+		{
+			"name": "Arcane Shot Options",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"O recurso Arcane Shot permite escolher opções em determinados níveis. As opções são apresentadas aqui em ordem alfabética. Todos são efeitos mágicos e cada um está associado a uma das escolas de magia.",
+				"Se uma opção exigir um teste de resistência, sua CD de salvamento do Tiro Arcano é calculada da seguinte forma:",
+				{
+					"type": "abilityDc",
+					"name": "Arcane Shot",
+					"attributes": [
+						"interno"
+					]
+				},
+				{
+					"type": "options",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Banishing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Beguiling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bursting Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Enfeebling Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Grasping Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Piercing Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Seeking Arrow|XGE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Shadow Arrow|XGE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você ganha uma opção adicional de Tiro Arcano à sua escolha quando atinge o 7º nível."
+			]
+		},
+		{
+			"name": "Curving Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você aprende como direcionar uma flecha errante em direção a um novo alvo. Quando você faz uma jogada de ataque com uma flecha mágica e erra, você pode usar uma ação bônus para rolar novamente a jogada de ataque contra um alvo diferente a até 18 metros do alvo original."
+			]
+		},
+		{
+			"name": "Magic Arrow",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você ganha a habilidade de infundir magia em flechas. Sempre que você disparar uma flecha não-mágica de um arco curto ou longo, você pode torná-la mágica com o propósito de superar a resistência e a imunidade a ataques e danos não-mágicos. A magia desaparece da flecha imediatamente após ela atingir ou errar o alvo."
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Você ganha uma opção adicional de Tiro Arcano à sua escolha quando atinge o 10º nível."
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Você ganha uma opção adicional de Tiro Arcano à sua escolha quando atinge o 15º nível."
+			]
+		},
+		{
+			"name": "Ever-Ready Shot",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, seu arco e flecha mágico estará disponível sempre que a batalha começar. Se você rolar a iniciativa e não tiver nenhum uso restante do Tiro Arcano, você recupera um uso dele."
+			]
+		},
+		{
+			"name": "Additional Arcane Shot Option",
+			"source": "XGE",
+			"page": 28,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Archer",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"Você ganha uma opção adicional de Tiro Arcano à sua escolha quando atinge o 18º nível. Cada opção também melhora quando você se torna um lutador de 18º nível."
+			]
+		},
+		{
+			"name": "Cavalier",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"O Cavalier arquetípico se destaca no combate montado. Geralmente nascido entre a nobreza e criado na corte, um Cavalier se sente igualmente à vontade liderando um ataque de cavalaria ou trocando réplicas em um jantar oficial. Os Cavaliers também aprendem como proteger aqueles sob seus cuidados do perigo, muitas vezes servindo como protetores de seus superiores e dos fracos. Compelidos a corrigir erros ou a ganhar prestígio, muitos desses lutadores deixam suas vidas de conforto para embarcar em aventuras gloriosas.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiency|Fighter||Cavalier|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Born to the Saddle|Fighter||Cavalier|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Unwavering Mark|Fighter||Cavalier|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiency",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha proficiência em uma das seguintes habilidades de sua escolha: {@skill Animal Handling}, {@skill History}, {@skill Insight}, {@skill Performance} ou {@skill Persuasion}. Alternativamente, você aprende um idioma de sua escolha."
+			]
+		},
+		{
+			"name": "Born to the Saddle",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, seu domínio como cavaleiro se torna aparente. Você tem vantagem nos testes de resistência feitos para evitar cair da montaria. Se você cair da montaria e descer não mais que 3 metros, poderá cair de pé se não estiver {@condition incapacitated}.",
+				"Finalmente, montar ou desmontar uma criatura custa apenas 1,5 metro de movimento, em vez de metade do seu deslocamento."
+			]
+		},
+		{
+			"name": "Unwavering Mark",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você pode ameaçar seus inimigos, frustrando seus ataques e punindo-os por prejudicarem outros. Quando você atinge uma criatura com um ataque de arma corpo a corpo, você pode marcar a criatura até o final do seu próximo turno. Este efeito termina mais cedo se você for {@condition incapacitated} ou morrer, ou se alguém marcar a criatura.",
+				"Enquanto estiver a até 1,5 metro de você, uma criatura marcada por você terá desvantagem em qualquer jogada de ataque que não tenha como alvo você.",
+				"Além disso, se uma criatura marcada por você causar dano a alguém que não seja você, você pode realizar um ataque corpo a corpo especial com arma contra a criatura marcada como uma ação bônus em seu próximo turno. Você tem vantagem na jogada de ataque e, se acertar, a arma do ataque causa dano extra ao alvo igual à metade do seu nível de lutador.",
+				"Independentemente do número de criaturas que você marcar, você pode realizar este ataque especial um número de vezes igual ao seu modificador de Força (no mínimo uma vez) e recuperar todos os usos gastos dele quando terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Warding Maneuver",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você aprende a se defender de ataques direcionados a você, sua montaria ou outras criaturas próximas. Se você ou uma criatura que você pode ver a até 1,5 metro de você for atingido por um ataque, você poderá rolar {@dice 1d8} como reação se estiver empunhando uma arma corpo a corpo ou um escudo. Jogue o dado e some o número obtido à CA do alvo contra aquele ataque. Se o ataque ainda acertar, o alvo terá resistência contra o dano do ataque.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Constituição (no mínimo uma vez) e recupera todos os usos gastos dele quando terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Hold the Line",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você se torna um mestre em bloquear seus inimigos. As criaturas provocam um ataque de oportunidade quando elas se movem 1,5 metro ou mais enquanto estão ao seu alcance, e se você atingir uma criatura com um ataque de oportunidade, a velocidade do alvo é reduzida a 0 até o final do turno atual."
+			]
+		},
+		{
+			"name": "Ferocious Charger",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, você pode atropelar seus inimigos, esteja você montado ou não. Se você se mover pelo menos 3 metros em linha reta logo antes de atacar uma criatura e acertá-la com o ataque, esse alvo deve ser bem sucedido em um teste de resistência de Força ({@dc 8} + seu bônus de proficiência + seu modificador de Força) ou será derrubado {@condition prone}. Você pode usar esse recurso apenas uma vez em cada um dos seus turnos."
+			]
+		},
+		{
+			"name": "Vigilant Defender",
+			"source": "XGE",
+			"page": 30,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Cavalier",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"A partir do 18º nível, você responde ao perigo com extraordinária vigilância. Em combate, você obtém uma reação especial que pode realizar uma vez no turno de cada criatura, exceto no seu turno. Você pode usar esta reação especial apenas para fazer um ataque de oportunidade e não pode usá-la no mesmo turno em que realiza sua reação normal."
+			]
+		},
+		{
+			"name": "Samurai",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"O Samurai é um lutador que utiliza um espírito de luta implacável para superar os inimigos. A determinação de um Samurai é quase inquebrável, e os inimigos no caminho de um Samurai têm duas opções: ceder ou morrer lutando.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiency|Fighter||Samurai|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fighting Spirit|Fighter||Samurai|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Bonus Proficiency",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha proficiência em uma das seguintes habilidades de sua escolha: {@skill History}, {@skill Insight}, {@skill Performance} ou {@skill Persuasion}. Alternativamente, você aprende um idioma de sua escolha."
+			]
+		},
+		{
+			"name": "Fighting Spirit",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, sua intensidade na batalha pode protegê-lo e ajudá-lo a acertar. Como uma ação bônus no seu turno, você pode obter vantagem nas jogadas de ataque com arma até o final do turno atual. Ao fazer isso, você também ganha 5 pontos de vida temporários. O número de pontos de vida temporários aumenta quando você atinge certos níveis nesta classe, aumentando para 10 no 10º nível e 15 no 15º nível.",
+				"Você pode usar esse recurso três vezes e recuperar todos os usos gastos dele ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Elegant Courtier",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"A partir do 7º nível, sua disciplina e atenção aos detalhes permitem que você se destaque em situações sociais. Sempre que você faz um teste de Carisma ({@skill Persuasion}), você ganha um bônus no teste igual ao seu modificador de Sabedoria.",
+				"Seu autocontrole também faz com que você ganhe proficiência em testes de resistência de Sabedoria. Se você já possui essa proficiência, você ganha proficiência em testes de resistência de Inteligência ou Carisma (sua escolha)."
+			]
+		},
+		{
+			"name": "Tireless Spirit",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, quando você rola iniciativa e não tem nenhum uso restante de Espírito de Luta, você recupera um uso."
+			]
+		},
+		{
+			"name": "Rapid Strike",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, você aprende a trocar precisão por ataques rápidos. Se você realizar a ação {@action Attack} no seu turno e tiver vantagem em uma jogada de ataque contra um dos alvos, você pode renunciar à vantagem dessa jogada para fazer um ataque com arma adicional contra esse alvo, como parte da mesma ação. Você não pode fazer isso mais do que uma vez por turno."
+			]
+		},
+		{
+			"name": "Strength before Death",
+			"source": "XGE",
+			"page": 31,
+			"className": "Fighter",
+			"classSource": "PHB",
+			"subclassShortName": "Samurai",
+			"subclassSource": "XGE",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"A partir do 18º nível, seu espírito de luta pode retardar o alcance da morte. Se você sofrer um dano que o reduza a 0 pontos de vida e não o mate imediatamente, você pode usar sua reação para atrasar a queda de {@condition unconscious} e pode imediatamente fazer um turno extra, interrompendo o turno atual. Embora você tenha 0 pontos de vida durante esse turno extra, sofrer dano causa falhas no teste de resistência contra a morte normalmente, e três falhas no teste de resistência contra a morte ainda podem matá-lo. Quando o turno extra termina, você cai {@condition unconscious} se ainda tiver 0 pontos de vida.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Battle Master",
+			"source": "XPHB",
+			"page": 93,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Master Sophisticated Battle Maneuvers}",
+				"Battle Masters são estudantes da arte da batalha, aprendendo técnicas marciais transmitidas através de gerações. Os Mestres de Batalha mais talentosos são figuras completas que combinam suas habilidades de combate cuidadosamente aprimoradas com estudos acadêmicos nas áreas de história, teoria e artes.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Combat Superiority|Fighter|XPHB|Battle Master|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Student of War|Fighter|XPHB|Battle Master|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Maneuver Options|Fighter|XPHB|Battle Master|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Combat Superiority",
+			"source": "XPHB",
+			"page": 93,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Sua experiência no campo de batalha aprimorou suas técnicas de luta. Você aprende manobras que são alimentadas por dados especiais chamados Dados de Superioridade.",
+				{
+					"type": "entries",
+					"name": "Maneuvers",
+					"entries": [
+						"Você aprende três manobras de sua escolha na seção \"{@filter Maneuvers Options|optionalfeatures|feature type=MV:B|source=XPHB}\" mais adiante na descrição desta subclasse. Muitas manobras melhoram um ataque de alguma forma. Você pode usar apenas uma manobra por ataque.",
+						"Você aprende duas manobras adicionais de sua escolha quando atinge os níveis de Lutador 7, 10 e 15. Cada vez que você aprende novas manobras, você também pode substituir uma manobra que você conhece por outra diferente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Superiority Dice",
+					"entries": [
+						"Você tem quatro Dados de Superioridade, que são {@dice d8|d8s}. Um Dado de Superioridade é gasto quando você o usa. Você recupera todos os Dados de Superioridade gastos ao terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}.",
+						"Você ganha um Dado de Superioridade adicional quando atinge os níveis de Lutador 7 (cinco dados no total) e 15 (seis dados no total)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Saving Throws",
+					"entries": [
+						"Se uma manobra exigir um teste de resistência, a CD é igual a 8 mais seu modificador de Força ou Destreza (sua escolha) e {@variantrule Proficiency|XPHB|Proficiency Bonus}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Maneuver Options",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"As manobras são apresentadas aqui em ordem alfabética.",
+				{
+					"type": "options",
+					"count": 3,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Ambush|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Bait and Switch|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commander's Strike|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Commanding Presence|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Disarming Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Distracting Strike|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Evasive Footwork|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Feinting Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Goading Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Lunging Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Maneuvering Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Menacing Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Parry|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Precision Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Pushing Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Rally|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Riposte|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sweeping Attack|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Tactical Assessment|XPHB"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Trip Attack|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Student of War",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você ganha proficiência com um tipo de {@item Artisan's Tools|XPHB} de sua escolha e ganha proficiência em uma habilidade de sua escolha dentre as habilidades disponíveis para Lutadores no nível 1."
+			]
+		},
+		{
+			"name": "Know Your Enemy",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode discernir certos pontos fortes e fracos de uma criatura que você pode ver a até 9 metros de você; você sabe se aquela criatura tem alguma Imunidade, Resistência ou Vulnerabilidade e, se a criatura tiver alguma, você sabe quais são.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}. Você também pode restaurar o uso do recurso gastando um Dado de Superioridade (nenhuma ação necessária)."
+			]
+		},
+		{
+			"name": "Improved Combat Superiority",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Seu Dado de Superioridade se torna {@dice d10}."
+			]
+		},
+		{
+			"name": "Relentless",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Uma vez por turno, ao usar uma manobra, você pode rolar {@dice 1d8} e usar o número obtido em vez de gastar um Dado de Superioridade."
+			]
+		},
+		{
+			"name": "Ultimate Combat Superiority",
+			"source": "XPHB",
+			"page": 94,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Battle Master",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"Seu dado de superioridade se torna {@dice d12}."
+			]
+		},
+		{
+			"name": "Champion",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Pursue Physical Excellence in Combat}",
+				"Um Campeão se concentra no desenvolvimento de proezas marciais em uma busca incansável pela vitória. Os campeões combinam treinamento rigoroso com excelência física para desferir golpes devastadores, resistir a perigos e conquistar glória. Seja em competições atléticas ou em batalhas sangrentas, os campeões lutam pela coroa do vencedor.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Improved Critical|Fighter|XPHB|Champion|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Remarkable Athlete|Fighter|XPHB|Champion|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Improved Critical",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Suas jogadas de ataque com armas e ataques desarmados podem pontuar {@variantrule Critical Hit|XPHB} em uma jogada de 19 ou 20 no {@dice d20}."
+			]
+		},
+		{
+			"name": "Remarkable Athlete",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Graças à sua capacidade atlética, você tem {@variantrule Advantage|XPHB} em testes de {@variantrule Initiative|XPHB} e testes de Força ({@skill Athletics|XPHB}).",
+				"Além disso, imediatamente após marcar {@variantrule Critical Hit|XPHB}, você pode mover até metade do seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+			]
+		},
+		{
+			"name": "Additional Fighting Style",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você ganha outro {@filter Fighting Style feat|feats|category=FS} à sua escolha."
+			]
+		},
+		{
+			"name": "Heroic Warrior",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A emoção da batalha leva você à vitória. Durante o combate, você pode conceder {@variantrule Heroic Inspiration|XPHB} sempre que iniciar seu turno sem ele."
+			]
+		},
+		{
+			"name": "Superior Critical",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Suas jogadas de ataque com armas e ataques desarmados agora podem pontuar {@variantrule Critical Hit|XPHB} em uma jogada de 18–20 no {@dice d20}."
+			]
+		},
+		{
+			"name": "Survivor",
+			"source": "XPHB",
+			"page": 96,
+			"freeRules2024": true,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Champion",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"Você atinge o auge da resiliência na batalha, proporcionando esses benefícios.",
+				{
+					"type": "entries",
+					"name": "Defy Death",
+					"entries": [
+						"Você tem {@variantrule Advantage|XPHB} em testes de resistência à morte. Além disso, quando você rola 18–20 em {@variantrule Death Saving Throw|XPHB}, você ganha o benefício de rolar 20 nele."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Heroic Rally",
+					"entries": [
+						"No início de cada um de seus turnos, você recupera {@variantrule Hit Points|XPHB} igual a 5 mais seu modificador de Constituição se você for {@variantrule Bloodied|XPHB} e tiver pelo menos 1 {@variantrule Hit Points|XPHB|Hit Point}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Eldritch Knight",
+			"source": "XPHB",
+			"page": 96,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Support Combat Skills with Arcane Magic}",
+				"Os Cavaleiros Eldritch combinam o domínio marcial comum a todos os Lutadores com um estudo cuidadoso da magia. Seus feitiços complementam e ampliam suas habilidades de combate, fornecendo proteção adicional para reforçar sua armadura e também permitindo que eles enfrentem muitos inimigos ao mesmo tempo com magia explosiva.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spellcasting|Fighter|XPHB|Eldritch Knight|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Weapon Bond|Fighter|XPHB|Eldritch Knight|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "XPHB",
+			"page": 96,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você aprendeu a lançar feitiços. Veja {@book chapter 7|XPHB|7} para as regras sobre lançamento de feitiços. As informações abaixo detalham como você usa essas regras como um Cavaleiro Eldritch.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"Você conhece dois truques de sua escolha do {@filter Wizard spell list|spells|class=Wizard} (veja a seção dessa classe para ver sua lista). {@spell Ray of Frost|XPHB} e {@spell Shocking Grasp|XPHB} são recomendados. Sempre que você ganha um nível de Lutador, você pode substituir um desses truques por outro truque de sua escolha do {@filter Wizard spell list|spells|class=Wizard}.",
+						"Ao atingir o nível 10 de Lutador, você aprende outro truque de Mago de sua escolha."
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"A tabela Eldritch Knight Spellcasting mostra quantos espaços de feitiço você tem para lançar seus feitiços de nível 1+. Você recupera todos os slots gastos ao terminar um {@variantrule Long Rest|XPHB}."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Prepared Spells of Level 1+",
+							"entries": [
+								"Você prepara a lista de magias de nível 1+ que estão disponíveis para serem lançadas com esse recurso. Para começar, escolha três feitiços de nível 1 do {@filter Wizard spell list|spells|class=Wizard}. {@spell Burning Hands|XPHB}, {@spell Jump|XPHB} e {@spell Shield|XPHB} são recomendados.",
+								"O número de feitiços em sua lista aumenta à medida que você ganha níveis de Lutador, conforme mostrado na coluna Feitiços Preparados da tabela Conjuração de Cavaleiro Eldritch. Sempre que esse número aumentar, escolha feitiços adicionais de {@filter Wizard spell list|spells|class=Wizard} até que o número de feitiços em sua lista corresponda ao número na mesa. As magias escolhidas devem ser de um nível para o qual você tenha espaços de magia. Por exemplo, se você for um Lutador de nível 7, sua lista de magias preparadas pode incluir cinco magias de Mago de níveis 1 e 2 em qualquer combinação."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Changing your Prepared Spells",
+							"entries": [
+								"Sempre que você ganha um nível de Lutador, você pode substituir um feitiço de sua lista por outro feitiço de Mago para o qual você tenha espaços de feitiço."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de Mago."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spellcasting Focus",
+							"entries": [
+								"Você pode usar um {@item Arcane Focus|XPHB} como {@variantrule Spellcasting Focus|XPHB} para seus feitiços de mago."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Weapon Bond",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você aprende um ritual que cria um vínculo mágico entre você e uma arma. Você realiza o ritual ao longo de 1 hora, o que pode ser feito durante um {@variantrule Short Rest|XPHB}. A arma deve estar ao seu alcance durante todo o ritual, ao final do qual você toca a arma e forja o vínculo. O vínculo falha se outro Lutador estiver vinculado à arma ou se a arma for um item mágico com o qual outra pessoa esteja sintonizada.",
+				"Depois de vincular uma arma a si mesmo, você não poderá ser desarmado dessa arma, a menos que tenha a condição {@condition Incapacitated|XPHB}. Se estiver no mesmo plano de existência, você pode invocar essa arma como {@variantrule Bonus Action|XPHB}, fazendo com que ela se teletransporte instantaneamente para sua mão.",
+				"Você pode ter até duas armas vinculadas, mas só pode invocar uma de cada vez com {@variantrule Bonus Action|XPHB}. Se você tentar se vincular com uma terceira arma, deverá romper o vínculo com uma das outras duas."
+			]
+		},
+		{
+			"name": "War Magic",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Ao realizar a ação {@action Attack|XPHB} no seu turno, você pode substituir um dos ataques por lançar um de seus truques de Mago que tenha um tempo de lançamento de uma ação."
+			]
+		},
+		{
+			"name": "Eldritch Strike",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Você aprende como fazer com que seus ataques com armas prejudiquem a capacidade de uma criatura de resistir aos seus feitiços. Quando você atinge uma criatura com um ataque usando uma arma, essa criatura tem {@variantrule Disadvantage|XPHB} no próximo teste de resistência que fizer contra um feitiço que você lançou antes do final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Arcane Charge",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Ao usar seu Action Surge, você pode se teletransportar até 9 metros para um espaço desocupado que possa ver. Você pode se teletransportar antes ou depois da ação adicional."
+			]
+		},
+		{
+			"name": "Improved War Magic",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Eldritch Knight",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"entries": [
+				"Quando você realiza a ação {@action Attack|XPHB} em seu turno, você pode substituir dois dos ataques por lançar um de seus feitiços de Mago de nível 1 ou nível 2 que tenha um tempo de lançamento de uma ação."
+			]
+		},
+		{
+			"name": "Psi Warrior",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Augment Physical Might with Psionic Power}",
+				"Os Guerreiros Psíquicos despertam o poder de suas mentes para aumentar seu poder físico. Eles aproveitam esse poder psiônico para infundir seus ataques com armas, atacar com energia telecinética e criar barreiras de força mental.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Power|Fighter|XPHB|Psi Warrior|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Psionic Power",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você abriga uma fonte de energia psiônica dentro de si. Ele é representado por seus Dados de Energia Psiônica, que alimentam os poderes que você possui nesta subclasse. A tabela de Dados de Energia do Psi Warrior mostra o tamanho do dado e o número desses dados que você possui quando atinge determinados níveis de Lutador.",
+				{
+					"type": "table",
+					"caption": "Dados de Energia do Guerreiro Psi",
+					"colLabels": [
+						"Nível de lutador",
+						"Tamanho da matriz",
+						"Número"
+					],
+					"colStyles": [
+						"col-4 centro de texto",
+						"col-4 centro de texto",
+						"col-4 centro de texto"
+					],
+					"rows": [
+						[
+							"3",
+							"{@dice D6}",
+							"4"
+						],
+						[
+							"5",
+							"{@dice D8}",
+							"6"
+						],
+						[
+							"9",
+							"{@dice D8}",
+							"8"
+						],
+						[
+							"11",
+							"{@dice D10}",
+							"8"
+						],
+						[
+							"13",
+							"{@dice D10}",
+							"10"
+						],
+						[
+							"17",
+							"{@dice D12}",
+							"12"
+						]
+					]
+				},
+				"Quaisquer recursos nesta subclasse que usem um Dado de Energia Psiônica usam apenas os dados desta subclasse. Alguns de seus poderes gastam o Dado de Energia Psiônica, conforme especificado na descrição de um poder, e você não pode usar um poder se ele exigir que você use um dado quando todos os seus Dados de Energia Psiônica estiverem gastos.",
+				"Você recupera um de seus Dados de Energia Psiônica gastos ao terminar um {@variantrule Short Rest|XPHB} e recupera todos eles ao terminar um {@variantrule Long Rest|XPHB}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Protective Field|Fighter|XPHB|Psi Warrior|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Strike|Fighter|XPHB|Psi Warrior|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Telekinetic Movement|Fighter|XPHB|Psi Warrior|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Protective Field",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Quando você ou outra criatura que você possa ver a até 9 metros de você sofre dano, você pode receber um {@variantrule Reaction|XPHB} para gastar um Dado de Energia Psiônica, lançar o dado e reduzir o dano recebido pelo número rolado mais seu modificador de Inteligência (redução mínima de 1), ao criar um escudo momentâneo de força telecinética."
+			]
+		},
+		{
+			"name": "Psionic Strike",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode impulsionar suas armas com força psiônica. Uma vez em cada um de seus turnos, imediatamente após atingir um alvo a até 9 metros de você com um ataque e causar dano a ele com uma arma, você pode gastar um Dado de Energia Psiônica, rolando-o e causando dano de Força ao alvo igual ao número obtido mais seu modificador de Inteligência."
+			]
+		},
+		{
+			"name": "Telekinetic Movement",
+			"source": "XPHB",
+			"page": 98,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode mover um objeto ou criatura com sua mente. Como uma ação {@action Magic|XPHB}, escolha um alvo que você possa ver a até 9 metros de você; o alvo deve ser um objeto solto que seja Grande ou menor ou uma criatura voluntária que não seja você. Você transporta o alvo até 9 metros para um espaço desocupado que você possa ver. Alternativamente, se o alvo for um objeto minúsculo, você pode transportá-lo para ou de sua mão.",
+				"Depois de realizar esta ação, você não poderá fazê-la novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}, a menos que gaste um Dado de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
+			]
+		},
+		{
+			"name": "Psi-Powered Leap",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você ganha {@variantrule Fly Speed|XPHB} igual ao dobro do seu {@variantrule Speed|XPHB} até o final do turno atual. Depois de pegar este {@variantrule Bonus Action|XPHB}, você não poderá fazê-lo novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}, a menos que gaste um Dado de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso dele."
+			]
+		},
+		{
+			"name": "Telekinetic Adept",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você dominou novas maneiras de usar suas habilidades telecinéticas, detalhadas abaixo.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psi-Powered Leap|Fighter|XPHB|Psi Warrior|XPHB|7"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Telekinetic Thrust|Fighter|XPHB|Psi Warrior|XPHB|7"
+				}
+			]
+		},
+		{
+			"name": "Telekinetic Thrust",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Quando você causa dano a um alvo com seu Ataque Psiônico, você pode forçar o alvo a fazer um teste de resistência de Força ({@dc 8} mais seu modificador de Inteligência e {@variantrule Proficiency|XPHB|Proficiency Bonus}). Em caso de falha no salvamento, você pode dar ao alvo a condição {@condition Prone|XPHB} ou transportá-lo até 3 metros horizontalmente."
+			]
+		},
+		{
+			"name": "Guarded Mind",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você tem {@variantrule Resistance|XPHB} de dano psíquico. Além disso, se você começar seu turno com a condição {@condition Charmed|XPHB} ou {@condition Frightened|XPHB}, você pode gastar um Dado de Energia Psiônica (nenhuma ação necessária) e encerrar todos os efeitos em si mesmo, dando-lhe essas condições."
+			]
+		},
+		{
+			"name": "Bulwark of Force",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode proteger a si mesmo e aos outros com força telecinética. Como {@variantrule Bonus Action|XPHB}, você pode escolher criaturas, inclusive você, a até 9 metros de você, até um número de criaturas igual ao seu modificador de Inteligência (mínimo de uma criatura). Cada uma das criaturas escolhidas tem {@variantrule Cover|XPHB|Half Cover} por 1 minuto ou até que você tenha a condição {@condition Incapacitated|XPHB}.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}, a menos que gaste um Dado de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
+			]
+		},
+		{
+			"name": "Telekinetic Master",
+			"source": "XPHB",
+			"page": 99,
+			"className": "Fighter",
+			"classSource": "XPHB",
+			"subclassShortName": "Psi Warrior",
+			"subclassSource": "XPHB",
+			"level": 18,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você sempre tem o feitiço {@spell Telekinesis|XPHB} preparado. Com esse recurso, você pode lançá-lo sem um slot de feitiço ou componentes, e sua habilidade de lançar feitiços é Inteligência. Em cada um dos seus turnos enquanto você mantém {@status Concentration|XPHB} nele, incluindo o turno em que você o lança, você pode fazer um ataque com uma arma como {@variantrule Bonus Action|XPHB}.",
+				"Depois de lançar o feitiço com este recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}, a menos que gaste um Dado de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
+			]
+		}
+	]
+}

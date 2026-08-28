@@ -1,0 +1,5781 @@
+{
+	"spell": [
+		{
+			"name": "Abi-Dalzim's Horrid Wilting",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 8,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um pouco de esponja"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você retira a umidade de cada criatura em um cubo de 9 metros centrado em um ponto que você escolher dentro do alcance. Cada criatura naquela área deve realizar um teste de resistência de Constituição. Construtos e mortos-vivos não são afetados, e plantas e elementais da água fazem esse teste de resistência com desvantagem. Uma criatura sofre {@damage 12d8} de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"As plantas não-mágicas da área que não sejam criaturas, como árvores e arbustos, murcham e morrem instantaneamente."
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"affectsCreatureType": [
+				"aberração",
+				"besta",
+				"celestial",
+				"dragão",
+				"elementar",
+				"feérico",
+				"demônio",
+				"gigante",
+				"humanoide",
+				"monstruosidade",
+				"escorrer",
+				"plantar"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Absorb Elements",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "que você sofre quando sofre dano de ácido, frio, fogo, raio ou trovão"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"O feitiço captura parte da energia recebida, diminuindo seu efeito sobre você e armazenando-a para seu próximo ataque corpo a corpo. Você tem resistência ao tipo de dano desencadeado até o início do seu próximo turno. Além disso, na primeira vez que você acertar um ataque corpo a corpo em seu próximo turno, o alvo sofrerá {@damage 1d6} de dano extra do tipo desencadeado e o feitiço terminará."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 2º nível ou superior, o dano extra aumenta em {@scaledamage 1d6|1-9|1d6} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageResist": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"trovão"
+			]
+		},
+		{
+			"name": "Aganazzar's Scorcher",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "escama de um dragão vermelho"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma linha de chamas crepitantes de 9 metros de comprimento e 1,5 metro de largura emana de você na direção que você escolher. Cada criatura na linha deve fazer um teste de resistência de Destreza. Uma criatura sofre {@damage 3d8} de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, o dano aumenta em {@scaledamage 3d8|2-9|1d8} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"eu"
+			]
+		},
+		{
+			"name": "Beast Bond",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um pedaço de pelo enrolado em um pano"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você estabelece uma ligação telepática com uma fera que você toca e que é amigável com você ou {@condition charmed} com você. O feitiço falha se o valor de Inteligência da fera for 4 ou superior. Até que a magia termine, o link estará ativo enquanto você e a fera estiverem na linha de visão um do outro. Através do link, a besta pode entender suas mensagens telepáticas para ela e pode comunicar telepaticamente emoções e conceitos simples para você. Enquanto o link estiver ativo, a fera ganha vantagem nas jogadas de ataque contra qualquer criatura que você possa ver a até 1,5 metro de você."
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"affectsCreatureType": [
+				"besta"
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Bones of the Earth",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você faz com que até seis pilares de pedra explodam de lugares no chão que você pode ver dentro do alcance. Cada pilar é um cilindro com diâmetro de 5 pés e altura de até 30 pés. O solo onde um pilar aparece deve ser largo o suficiente para seu diâmetro, e você pode mirar no solo sob uma criatura se ela for Média ou menor. Cada pilar tem CA 5 e 30 pontos de vida. Quando reduzido a 0 pontos de vida, um pilar se transforma em escombros, o que cria uma área de {@quickref difficult terrain||3} com um raio de 3 metros que dura até que os escombros sejam removidos. Cada porção de 1,5 metro de diâmetro da área requer pelo menos 1 minuto para ser limpa manualmente.",
+				"Se um pilar for criado sob uma criatura, aquela criatura deve ser bem sucedida em um teste de resistência de Destreza ou será levantada pelo pilar. Uma criatura pode optar por falhar no salvamento.",
+				"Se um pilar for impedido de atingir sua altura total por causa de um teto ou outro obstáculo, uma criatura no pilar sofrerá {@damage 6d6} de dano de concussão e será {@condition restrained}, presa entre o pilar e o obstáculo. A criatura {@condition restrained} pode usar uma ação para fazer um teste de Força ou Destreza (à escolha da criatura) contra a CD de resistência da magia. Em caso de sucesso, a criatura não é mais {@condition restrained} e deve sair do pilar ou cair dele."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 7º nível ou superior, você pode criar dois pilares adicionais para cada nível do espaço acima do 6º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"abilityCheck": [
+				"força",
+				"destreza"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Catapult",
+			"source": "XGE",
+			"page": 150,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 15
+				}
+			],
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Escolha um objeto pesando de 1 a 5 libras dentro do alcance que não esteja sendo usado ou carregado. O objeto voa em linha reta até 90 pés em uma direção que você escolher antes de cair no chão, parando cedo se colidir contra uma superfície sólida. Se o objeto atingir uma criatura, essa criatura deve realizar um teste de resistência de Destreza. Se falhar, o objeto atinge o alvo e para de se mover. Quando o objeto atinge algo, o objeto e o que ele atinge recebem {@damage 3d8} de dano de concussão."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, o peso máximo dos objetos que você pode atingir com esta magia aumenta em 5 libras, e o dano aumenta em {@scaledamage 3d8|1-9|1d8}, para cada nível de espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"OBJ"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Catnap",
+			"source": "XGE",
+			"page": 151,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "uma pitada de areia"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					}
+				}
+			],
+			"entries": [
+				"Você faz um gesto calmante e até três criaturas voluntárias de sua escolha que você possa ver dentro do alcance caem {@condition unconscious} durante a duração do feitiço. A magia termina em um alvo mais cedo se ele sofrer dano ou se alguém usar uma ação para sacudi-lo ou esbofeteá-lo. Se um alvo permanecer {@condition unconscious} durante toda a duração, esse alvo ganha o benefício de um descanso curto e não pode ser afetado por este feitiço novamente até que termine um descanso longo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, você pode escolher uma criatura voluntária adicional para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"conditionInflict": [
+				"unconscious"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Cause Fear",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você desperta a sensação de mortalidade em uma criatura que você pode ver dentro do alcance. Um construto ou um morto-vivo é imune a este efeito. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou se tornará {@condition frightened} seu até o feitiço terminar. O alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 2º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 1º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
+					]
+				}
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"affectsCreatureType": [
+				"aberração",
+				"besta",
+				"celestial",
+				"dragão",
+				"elementar",
+				"feérico",
+				"demônio",
+				"gigante",
+				"humanoide",
+				"monstruosidade",
+				"escorrer",
+				"plantar"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Ceremony",
+			"source": "XGE",
+			"page": 151,
+			"level": 1,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "25 po de prata em pó, que o feitiço consome",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Você realiza uma cerimônia religiosa especial repleta de magia. Ao lançar o feitiço, escolha um dos seguintes rituais, cujo alvo deve estar a até 3 metros de você durante o lançamento.",
+				{
+					"type": "entries",
+					"name": "Atonement",
+					"entries": [
+						"Você toca uma criatura voluntária cujo alinhamento mudou e faz um teste de {@dc 20} Sabedoria ({@skill Insight}). Se obtiver sucesso no teste, você restaura o alvo ao seu alinhamento original."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bless Water",
+					"entries": [
+						"Você toca um {@item vial|phb} de água e faz com que ele se transforme em {@item Holy Water (flask)|phb|holy water}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Coming of Age",
+					"entries": [
+						"Você toca um humanóide que é um jovem adulto. Pelas próximas 24 horas, sempre que o alvo fizer um teste de habilidade, ele poderá lançar um {@dice d4} e adicionar o número obtido ao teste de habilidade. Uma criatura só pode se beneficiar deste ritual uma vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dedication",
+					"entries": [
+						"Você toca um humanóide que deseja se dedicar ao serviço de seu deus. Pelas próximas 24 horas, sempre que o alvo fizer um teste de resistência, ele poderá lançar um {@dice d4} e adicionar o número obtido ao teste de resistência. Uma criatura só pode se beneficiar deste ritual uma vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Funeral Rite",
+					"entries": [
+						"Você toca um cadáver e, pelos próximos 7 dias, o alvo não pode se tornar morto-vivo por qualquer meio que não seja um feitiço {@spell wish}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Wedding",
+					"entries": [
+						"Você toca humanóides adultos dispostos a se unirem em casamento. Pelos próximos 7 dias, cada alvo ganha +2 de bônus na CA enquanto estiverem a até 9 metros um do outro. Uma criatura só pode se beneficiar deste ritual novamente se ficar viúva."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"humanoide"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Chaos Bolt",
+			"source": "XGE",
+			"page": 151,
+			"otherSources": [
+				{
+					"source": "GGR"
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você lança uma massa ondulante e vibrante de energia caótica em uma criatura ao alcance. Faça um ataque mágico à distância contra o alvo. Ao acertar, o alvo sofre {@damage 2d8 + 1d6} de dano. Escolha um dos {@dice d8}s. O número obtido nesse dado determina o tipo de dano do ataque, conforme mostrado abaixo.",
+				{
+					"type": "table",
+					"caption": "Raio do Caos",
+					"colLabels": [
+						"{@dice d8}",
+						"Tipo de dano"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 1
+								}
+							},
+							"Ácido"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 2
+								}
+							},
+							"Frio"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 3
+								}
+							},
+							"Fogo"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 4
+								}
+							},
+							"Força"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 5
+								}
+							},
+							"Relâmpago"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 6
+								}
+							},
+							"Veneno"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 7
+								}
+							},
+							"Psíquico"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"exact": 8
+								}
+							},
+							"Trovão"
+						]
+					]
+				},
+				"Se você rolar o mesmo número em ambos {@dice d8}s, a energia caótica salta do alvo para uma criatura diferente de sua escolha a até 9 metros dele. Faça uma nova jogada de ataque contra o novo alvo e faça uma nova jogada de dano, o que pode fazer com que a energia caótica salte novamente.",
+				"Uma criatura pode ser alvo apenas uma vez por cada lançamento desta magia."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, cada alvo sofre {@scaledamage 2d8 + 1d6|1-9|1d6} de dano extra do tipo rolado para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"ácido",
+				"frio",
+				"fogo",
+				"força",
+				"relâmpago",
+				"veneno",
+				"psíquico",
+				"trovão"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"RO"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Charm Monster",
+			"source": "XGE",
+			"page": 151,
+			"reprintedAs": [
+				"Charm Monster|XPHB"
+			],
+			"level": 4,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você tenta encantar uma criatura que você possa ver dentro do alcance. Ele deve realizar um teste de resistência de Sabedoria, e o fará com vantagem se você ou seus companheiros estiverem lutando contra ele. Se ele falhar no teste de resistência, {@condition charmed} será seu até que o feitiço termine ou até que você ou seus companheiros façam algo prejudicial a ele. A criatura {@condition charmed} é amigável com você. Quando o feitiço termina, a criatura sabe que foi {@condition charmed} sua."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 5º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 4º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Control Flames",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você escolhe uma chama não-mágica que você possa ver dentro do alcance e que caiba em um cubo de 1,5 metro. Você o afeta de uma das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Você expande instantaneamente a chama em 1,5 metro em uma direção, desde que haja madeira ou outro combustível no novo local.",
+						"Você apaga instantaneamente as chamas dentro do cubo.",
+						"Você dobra ou reduz pela metade a área de luz brilhante e fraca emitida pela chama, altera sua cor ou ambos. A mudança dura 1 hora.",
+						"Você faz com que formas simples — como a forma vaga de uma criatura, um objeto inanimado ou um local — apareçam dentro das chamas e sejam animadas como desejar. As formas duram 1 hora."
+					]
+				},
+				"Se você conjurar esta magia múltiplas vezes, você pode ter até três efeitos não instantâneos criados por ela ativos por vez, e você pode descartar tal efeito como uma ação."
+			],
+			"miscTags": [
+				"LGT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Control Winds",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você assume o controle do ar em um cubo de 30 metros que pode ser visto dentro do alcance. Escolha um dos seguintes efeitos ao lançar o feitiço. O efeito dura a duração da magia, a menos que você use sua ação em um turno posterior para mudar para um efeito diferente. Você também pode usar sua ação para interromper temporariamente o efeito ou reiniciar um que você interrompeu.",
+				{
+					"type": "entries",
+					"name": "Gusts",
+					"entries": [
+						"Um vento sopra dentro do cubo, soprando continuamente na direção horizontal que você designar. Você escolhe a intensidade do vento: calmo, moderado ou forte. Se o vento for moderado ou forte, ataques com armas de longo alcance que passem por ele ou que sejam feitos contra alvos dentro do cubo terão desvantagem em suas jogadas de ataque. Se o vento estiver forte, qualquer criatura que se mova contra o vento deverá gastar 1 metro extra de movimento para cada pé movido."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Downdraft",
+					"entries": [
+						"Você faz com que uma rajada contínua de vento forte sopre do topo do cubo para baixo. Ataques com armas de longo alcance que passam pelo cubo ou que são feitos contra alvos dentro dele têm desvantagem em suas jogadas de ataque. Uma criatura deve fazer um teste de resistência de Força se ela voar para dentro do cubo pela primeira vez em um turno ou começar seu turno lá voando. Em caso de falha no salvamento, a criatura é derrubada {@condition prone}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Updraft",
+					"entries": [
+						"Você causa uma corrente ascendente sustentada dentro do cubo, subindo a partir da parte inferior do cubo. As criaturas que terminam uma queda dentro do cubo sofrem apenas metade do dano da queda. Quando uma criatura no cubo dá um salto vertical, a criatura pode saltar até 3 metros mais alto que o normal."
+					]
+				}
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Bonfire",
+			"source": "XGE",
+			"page": 152,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 16
+				}
+			],
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria uma fogueira no chão que pode ser vista dentro do alcance. Até que a magia termine, a fogueira mágica preenche um cubo de 1,5 metro. Qualquer criatura no espaço da fogueira quando você lançar o feitiço deve ser bem sucedida em um teste de resistência de Destreza ou sofrerá {@damage 1d8} de dano de fogo. Uma criatura também deve fazer um teste de resistência quando se mover para o espaço da fogueira pela primeira vez em um turno ou terminar seu turno lá.",
+				"A fogueira acende objetos inflamáveis em sua área que não estão sendo usados ou carregados.",
+				"O dano do feitiço aumenta em {@damage 1d8} quando você atinge o 5º nível ({@damage 2d8}), 11º nível ({@damage 3d8}) e 17º nível ({@damage 4d8})."
+			],
+			"scalingLevelDice": {
+				"label": "dano de fogo",
+				"scaling": {
+					"1": "1d8",
+					"5": "2d8",
+					"11": "3d8",
+					"17": "4d8"
+				}
+			},
+			"damageInflict": [
+				"fogo"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"OBJ",
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Create Homunculus",
+			"source": "XGE",
+			"page": 152,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "argila, cinza e raiz de mandrágora, tudo o que o feitiço consome, e uma adaga incrustada de joias no valor de pelo menos 1.000 PO",
+					"cost": 100000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao pronunciar um encantamento complexo, você se corta com uma adaga incrustada de joias, sofrendo {@damage 2d4} de dano perfurante que não pode ser reduzido de forma alguma. Você então pinga seu sangue nos outros componentes do feitiço e os toca, transformando-os em uma construção especial chamada {@creature homunculus}.",
+				"As estatísticas do {@creature homunculus} estão no Manual dos Monstros. É seu companheiro fiel e morre se você morrer. Sempre que você terminar um descanso longo, você pode gastar até metade dos seus Dados de Vida se o homúnculo estiver no mesmo plano de existência que você. Ao fazer isso, jogue cada dado e adicione seu modificador de Constituição a ele. Seu máximo de pontos de vida é reduzido pelo total, e o máximo de pontos de vida do homúnculo e os pontos de vida atuais são aumentados por ele. Este processo pode reduzir você a não menos que 1 ponto de vida, e a mudança nos seus pontos de vida e nos pontos de vida do homúnculo termina quando você termina seu próximo descanso longo. A redução do seu máximo de pontos de vida não pode ser removida de forma alguma antes disso, exceto pela morte do homúnculo.",
+				"Você pode ter apenas um homúnculo por vez. Se você lançar esta magia enquanto seu homúnculo estiver vivo, a magia falhará."
+			],
+			"miscTags": [
+				"PRM"
+			]
+		},
+		{
+			"name": "Crown of Stars",
+			"source": "XGE",
+			"page": 152,
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Sete partículas de luz semelhantes a estrelas aparecem e orbitam sua cabeça até o feitiço terminar. Você pode usar uma ação bônus para enviar uma das partículas em direção a uma criatura ou objeto a até 36 metros de você. Ao fazer isso, faça um ataque mágico à distância. Ao acertar, o alvo sofre {@damage 4d12} de dano radiante. Quer você acerte ou erre, o cisco será gasto. O feitiço termina mais cedo se você gastar a última partícula.",
+				"Se você tiver quatro ou mais partículas restantes, elas emitem luz brilhante em um raio de 9 metros e penumbra por mais 9 metros adicionais. Se você tiver de um a três ciscos restantes, eles emitem luz fraca em um raio de 9 metros."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 8º nível ou superior, o número de partículas criadas aumenta em dois para cada nível do espaço acima do 7º."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"LGT",
+				"OBJ",
+				"UBA"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Danse Macabre",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Fios de poder sombrio saltam de seus dedos para perfurar até cinco cadáveres Pequenos ou Médios que você possa ver dentro do alcance. Cada cadáver imediatamente se levanta e se torna morto-vivo. Você decide se é um {@creature zombie} ou um {@creature skeleton} (as estatísticas para {@creature zombie||zombies} e {@creature skeleton||skeletons} estão no Manual dos Monstros), e ele ganha um bônus em suas jogadas de ataque e dano igual ao seu modificador de habilidade de lançamento de feitiços.",
+				"Você pode usar uma ação bônus para comandar mentalmente as criaturas que você cria com esta magia, emitindo o mesmo comando para todas elas. Para receber o comando, uma criatura deve estar a até 18 metros de você. Você decide qual ação as criaturas realizarão e para onde elas se moverão durante seu próximo turno, ou você pode emitir um comando geral, como proteger uma câmara ou passagem contra seus inimigos. Se você não emitir nenhum comando, as criaturas não farão nada além de se defenderem contra criaturas hostis. Uma vez dada uma ordem, as criaturas continuam a segui-la até que sua tarefa seja concluída.",
+				"As criaturas ficam sob seu controle até o fim da magia, após o que elas se tornam inanimadas novamente."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 6º nível ou superior, você anima até dois cadáveres adicionais para cada nível do espaço acima do 5º."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Dawn",
+			"source": "XGE",
+			"page": 153,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um pingente de raio de sol valendo pelo menos 100 PO",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A luz do amanhecer brilha em um local especificado dentro do alcance. Até que a magia termine, um cilindro de luz brilhante com 9 metros de raio e 12 metros de altura brilha ali. Esta luz é a luz solar.",
+				"Quando o cilindro aparece, cada criatura nele deve fazer um teste de resistência de Constituição, sofrendo {@damage 4d10} de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura também deve realizar este teste de resistência sempre que terminar seu turno no cilindro.",
+				"Se você estiver a até 18 metros do cilindro, você pode movê-lo até 18 metros como uma ação bônus no seu turno."
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"LGTS",
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Dragon's Breath",
+			"source": "XGE",
+			"page": 154,
+			"reprintedAs": [
+				"Dragon's Breath|XPHB"
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma pimenta picante"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você toca uma criatura voluntária e a imbui com o poder de vomitar energia mágica de sua boca, desde que ela tenha uma. Escolha ácido, frio, fogo, raio ou veneno. Até a magia terminar, a criatura pode usar uma ação para exalar energia do tipo escolhido em um cone de 4,5 metros. Cada criatura naquela área deve fazer um teste de resistência de Destreza, sofrendo {@damage 3d6} de dano do tipo escolhido se falhar na resistência, ou metade do dano se obtiver sucesso."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, o dano aumenta em {@scaledamage 3d6|2-9|1d6} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"veneno"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"N",
+				"ST"
+			]
+		},
+		{
+			"name": "Druid Grove",
+			"source": "XGE",
+			"page": 154,
+			"level": 6,
+			"school": "Um",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "visco, que o feitiço consome, que foi colhido com uma foice dourada sob a luz da lua cheia",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Você invoca os espíritos da natureza para proteger uma área externa ou subterrânea. A área pode ser tão pequena quanto um cubo de 30 pés ou tão grande quanto um cubo de 90 pés. Edifícios e outras estruturas estão excluídos da área afetada. Se você lançar esta magia na mesma área todos os dias durante um ano, a magia durará até ser dissipada.",
+				"A magia cria os seguintes efeitos dentro da área. Ao lançar esta mágica, você pode especificar criaturas como amigas que são imunes aos efeitos. Você também pode especificar uma senha que, quando falada em voz alta, torne o locutor imune a esses efeitos.",
+				"Toda a área protegida irradia magia. Um lançamento de {@spell dispel magic} na área, se bem-sucedido, remove apenas um dos seguintes efeitos, não a área inteira. O lançador desse feitiço escolhe qual efeito terminar. Somente quando todos os seus efeitos acabarem este feitiço será dissipado.",
+				{
+					"type": "entries",
+					"name": "Solid Fog",
+					"entries": [
+						"Você pode preencher qualquer número de quadrados de 1,5 metro no chão com neblina espessa, tornando-os fortemente obscurecidos. A neblina atinge 3 metros de altura. Além disso, cada metro de movimento através da neblina custa 60 centímetros extras. Para uma criatura imune a este efeito, a névoa não obscurece nada e parece uma névoa suave, com partículas de luz verde flutuando no ar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grasping Undergrowth",
+					"entries": [
+						"Você pode preencher qualquer número de quadrados de 1,5 metro no chão que não estejam cheios de neblina com ervas daninhas e trepadeiras, como se tivessem sido afetados por um feitiço {@spell entangle}. Para uma criatura imune a este efeito, as ervas daninhas e as vinhas são macias e se remodelam para servir como assentos ou camas temporárias."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Grove Guardians",
+					"entries": [
+						"Você pode animar até quatro árvores na área, fazendo com que elas se desenraízem do chão. Essas árvores têm as mesmas estatísticas de {@creature awakened tree}, que aparece no Manual dos Monstros, exceto que não podem falar e sua casca é coberta com símbolos druidas. Se qualquer criatura não imune a este efeito entrar na área protegida, os guardiões do bosque lutam até expulsarem ou matarem os intrusos. Os guardiões do bosque também obedecem aos seus comandos falados (nenhuma ação exigida por você) que você emite enquanto estiver na área. Se você não lhes der comandos e nenhum intruso estiver presente, os guardiões do bosque não farão nada. Os guardiões do bosque não podem sair da área protegida. Quando o feitiço termina, a magia que os anima desaparece e as árvores criam raízes novamente, se possível."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Additional Spell Effect",
+					"entries": [
+						"Você pode escolher um dos seguintes efeitos mágicos dentro da área protegida:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Uma constante {@spell gust of wind} em dois locais de sua escolha",
+						"{@spell Spike growth} em um local de sua escolha",
+						"{@spell Wind wall} em dois locais de sua escolha"
+					]
+				},
+				"Para uma criatura imune a este efeito, os ventos são uma brisa suave e perfumada, e a área de {@spell spike growth} é inofensiva."
+			],
+			"miscTags": [
+				"OBS",
+				"PIR",
+				"PRM",
+				"SMN"
+			],
+			"areaTags": [
+				"C",
+				"P"
+			]
+		},
+		{
+			"name": "Dust Devil",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma pitada de poeira"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Escolha um cubo de ar desocupado de 1,5 metro que você possa ver dentro do alcance. Uma força elemental que se assemelha a um redemoinho de poeira aparece no cubo e dura a duração do feitiço.",
+				"Qualquer criatura que termine seu turno a até 1,5 metro do redemoinho deve fazer um teste de resistência de Força. Se falhar na resistência, a criatura sofre {@damage 1d8} de dano de concussão e é empurrada a 3 metros de distância do redemoinho de poeira. Se obtiver sucesso, a criatura sofre metade do dano e não é empurrada.",
+				"Como uma ação bônus, você pode mover o redemoinho de poeira até 9 metros em qualquer direção. Se o redemoinho se mover sobre areia, poeira, terra solta ou cascalho leve, ele suga o material e forma uma nuvem de detritos com 3 metros de raio ao seu redor que dura até o início do seu próximo turno. A nuvem obscurece fortemente sua área."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 3º nível ou superior, o dano aumenta em {@scaledamage 1d8|2-9|1d8} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT",
+				"UBA"
+			]
+		},
+		{
+			"name": "Earth Tremor",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você causa um tremor no solo dentro do alcance. Cada criatura que não seja você naquela área deve fazer um teste de resistência de Destreza. Se falhar na resistência, uma criatura sofre {@damage 1d6} de dano de concussão e é derrubada {@condition prone}. Se o solo nessa área for de terra solta ou pedra, ele se tornará {@quickref difficult terrain||3} até ser limpo, com cada porção de 1,5 metro de diâmetro exigindo pelo menos 1 minuto para ser limpa manualmente."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, o dano aumenta em {@scaledamage 1d6|1-9|1d6} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Earthbind",
+			"source": "XGE",
+			"page": 154,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Escolha uma criatura que você possa ver dentro do alcance. Tiras amarelas de energia mágica circulam ao redor da criatura. O alvo deve ser bem sucedido em um teste de resistência de Força, ou seu deslocamento de vôo (se houver) será reduzido para 0 pés durante a duração da magia. Uma criatura aérea afetada por esta magia desce com segurança a 18 metros por rodada até atingir o solo ou a magia terminar."
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Elemental Bane",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Escolha uma criatura que você possa ver dentro do alcance e escolha um dos seguintes tipos de dano: ácido, frio, fogo, raio ou trovão. O alvo deve ser bem sucedido em um teste de resistência de Constituição ou será afetado pelo feitiço durante sua duração. Na primeira vez em cada turno, o alvo afetado sofre dano do tipo escolhido, o alvo sofre {@damage 2d6} de dano extra desse tipo. Além disso, o alvo perde qualquer resistência a esse tipo de dano até o feitiço terminar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 5º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 4º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
+					]
+				}
+			],
+			"damageInflict": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"trovão"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enemies Abound",
+			"source": "XGE",
+			"page": 155,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você alcança a mente de uma criatura que você pode ver e a força a fazer um teste de resistência de Inteligência. Uma criatura obtém sucesso automaticamente se for imune a {@condition frightened}. Se falhar na resistência, o alvo perde a habilidade de distinguir amigo de inimigo, considerando todas as criaturas que ele pode ver como inimigas até que a magia termine. Cada vez que o alvo sofre dano, ele pode repetir o teste de resistência, encerrando o efeito sobre si mesmo com sucesso.",
+				"Sempre que a criatura afetada escolher outra criatura como alvo, ela deverá escolher o alvo aleatoriamente entre as criaturas que puder ver dentro do alcance do ataque, mágica ou outra habilidade que estiver usando. Se um inimigo provocar um ataque de oportunidade da criatura afetada, a criatura deverá realizar esse ataque se for capaz."
+			],
+			"savingThrow": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Enervation",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Uma gavinha de escuridão se estende de você, tocando uma criatura que você pode ver dentro do alcance para drenar a vida dela. O alvo deve fazer um teste de resistência de Destreza. Em um teste bem-sucedido, o alvo sofre {@damage 2d8} de dano necrótico e o feitiço termina. Se falhar, o alvo sofre {@damage 4d8} de dano necrótico e, até o feitiço terminar, você pode usar sua ação em cada um de seus turnos para causar automaticamente {@damage 4d8} de dano necrótico ao alvo. O feitiço termina se você usar sua ação para fazer qualquer outra coisa, se o alvo estiver fora do alcance do feitiço ou se o alvo tiver {@quickref Cover||3||total cover} de você.",
+				"Sempre que o feitiço causar dano a um alvo, você recupera pontos de vida iguais à metade da quantidade de dano necrótico que o alvo sofre."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 6º nível ou superior, o dano aumenta em {@scaledamage 4d8;2d8|5-9|1d8} para cada nível do espaço acima do 5º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Erupting Earth",
+			"source": "XGE",
+			"page": 155,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 17
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um pedaço de obsidiana"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Escolha um ponto que você possa ver no solo dentro do alcance. Uma fonte de terra agitada e pedra irrompe em um cubo de 6 metros centrado naquele ponto. Cada criatura naquela área deve fazer um teste de resistência de Destreza. Uma criatura sofre {@damage 3d12} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso. Além disso, o terreno nessa área se torna {@quickref difficult terrain||3} até ser limpo. Cada porção de 1,5 metro quadrado da área requer pelo menos 1 minuto para ser limpa manualmente."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 4º nível ou superior, o dano aumenta em {@scaledamage 3d12|3-9|1d12} para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Far Step",
+			"source": "XGE",
+			"page": 155,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você se teletransporta até 18 metros para um espaço desocupado que você possa ver. Em cada um dos seus turnos antes do fim da magia, você pode usar uma ação bônus para se teletransportar novamente desta forma."
+			],
+			"miscTags": [
+				"SGT",
+				"TP",
+				"UBA"
+			]
+		},
+		{
+			"name": "Find Greater Steed",
+			"source": "XGE",
+			"page": 156,
+			"additionalSources": [
+				{
+					"source": "FTD",
+					"page": 190
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você invoca um espírito que assume a forma de uma montaria leal e majestosa. Aparecendo em um espaço desocupado dentro do alcance, o espírito assume a forma que você escolher: um {@creature griffon}, um {@creature pegasus}, um {@creature peryton}, um {@creature dire wolf}, um {@creature rhinoceros} ou um {@creature saber-toothed tiger}. A criatura possui as estatísticas fornecidas no Manual dos Monstros para a forma escolhida, embora seja um celestial, uma fada ou um demônio (sua escolha) em vez de seu tipo de criatura normal. Além disso, se ele tiver um valor de Inteligência 5 ou inferior, sua Inteligência se torna 6 e ele ganha a habilidade de compreender um idioma de sua escolha que você fale.",
+				"Você controla a montaria em combate. Enquanto a montaria estiver a até 1,6 km de você, você poderá se comunicar com ela telepaticamente. Enquanto estiver montado nela, você pode fazer qualquer feitiço lançado que tenha como alvo apenas você e a montaria.",
+				"A montaria desaparece temporariamente quando chega a 0 pontos de vida ou quando você a descarta com uma ação. Lançar este feitiço novamente convoca novamente a montaria vinculada, com todos os seus pontos de vida restaurados e quaisquer condições removidas.",
+				"Você não pode ter mais de uma montaria vinculada por este feitiço ou {@spell find steed} ao mesmo tempo. Com uma ação, você pode libertar uma montaria de seu vínculo, fazendo com que ela desapareça permanentemente.",
+				"Sempre que a montaria desaparece, ela deixa para trás todos os objetos que estava vestindo ou carregando.",
+				{
+					"type": "inset",
+					"source": "FTD",
+					"page": 190,
+					"name": "Dragonnel Steeds",
+					"entries": [
+						"Com a permissão do Mestre, um paladino pode invocar um espírito na forma de {@creature dragonnel|ftd} usando o feitiço encontrar corcel maior, que aparece em {@i Xanathar's Guide to Everything}."
+					]
+				}
+			],
+			"miscTags": [
+				"PRM",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flame Arrows",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você toca uma aljava contendo flechas ou virotes. Quando um alvo é atingido por um ataque de arma de longo alcance usando uma munição retirada da aljava, o alvo sofre {@damage 1d6} de dano de fogo extra. A magia do feitiço termina em uma munição quando ela acerta ou erra, e o feitiço termina quando doze peças de munição forem retiradas da aljava."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, o número de peças de munição que você pode afetar com esta magia aumenta em dois para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"miscTags": [
+				"AAD"
+			]
+		},
+		{
+			"name": "Frostbite",
+			"source": "XGE",
+			"page": 156,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 18
+				}
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você causa a formação de gelo entorpecente em uma criatura que você possa ver dentro do alcance. O alvo deve fazer um teste de resistência de Constituição. Se falhar na resistência, o alvo sofre {@damage 1d6} de dano de frio e tem desvantagem na próxima jogada de ataque com arma que fizer antes do final do próximo turno.",
+				"O dano do feitiço aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "dano frio",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"frio"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Guardian of Nature",
+			"source": "XGE",
+			"page": 157,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Um espírito da natureza atende ao seu chamado e transforma você em um poderoso guardião. A transformação dura até o feitiço terminar. Você escolhe uma das seguintes formas para assumir: Besta Primordial ou Grande Árvore.",
+				{
+					"type": "entries",
+					"name": "Primal Beast",
+					"entries": [
+						"Pele bestial cobre seu corpo, suas características faciais tornam-se selvagens e você obtém os seguintes benefícios:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Sua velocidade de caminhada aumenta em 3 metros.",
+						"Você ganha {@sense darkvision} com um alcance de 36 metros.",
+						"Você faz jogadas de ataque baseadas em Força com vantagem.",
+						"Seus ataques com armas corpo a corpo causam {@damage 1d6} de dano de força extra ao acertar."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Great Tree",
+					"entries": [
+						"Sua pele parece descascada, folhas brotam de seu cabelo e você obtém os seguintes benefícios:"
+					]
+				},
+				{
+					"type": "list",
+					"items": [
+						"Você ganha 10 pontos de vida temporários.",
+						"Você faz testes de resistência de Constituição com vantagem.",
+						"Você faz jogadas de ataque baseadas em Destreza e Sabedoria com vantagem.",
+						"While you are on the ground, the ground within 15 feet of you is {@quickref difficult terrain||3} for your enemies."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"DFT",
+				"THP"
+			]
+		},
+		{
+			"name": "Gust",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				},
+				{
+					"source": "ERLW",
+					"page": 50
+				},
+				{
+					"source": "TCE",
+					"page": 50
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você captura o ar e o obriga a criar um dos seguintes efeitos em um ponto que você possa ver dentro do alcance:",
+				{
+					"type": "list",
+					"items": [
+						"Uma criatura Média ou menor que você escolher deve ser bem sucedida em um teste de resistência de Força ou será empurrada até 1,5 metro de distância de você.",
+						"Você cria uma pequena rajada de ar capaz de mover um objeto que não é segurado nem carregado e que não pesa mais do que 2,5 quilos. O objeto é empurrado até 3 metros de distância de você. Não é empurrado com força suficiente para causar danos.",
+						"Você cria um efeito sensorial inofensivo usando o ar, como fazer com que as folhas farfalhem, o vento feche as venezianas ou as suas roupas ondulem com a brisa."
+					]
+				}
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Healing Spirit",
+			"source": "XGE",
+			"page": 157,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você invoca um espírito da natureza para acalmar os feridos. O espírito intangível aparece em um espaço que é um cubo de 1,5 metro que você pode ver dentro do alcance. O espírito se parece com uma besta transparente ou feérica (você escolhe).",
+				"Até que a magia termine, sempre que você ou uma criatura que você pode ver se mover para o espaço do espírito pela primeira vez em um turno ou começar seu turno lá, você pode fazer com que o espírito restaure {@dice 1d6} pontos de vida para aquela criatura (nenhuma ação necessária). O espírito não pode curar construtos ou mortos-vivos. O espírito pode curar um número de vezes igual a 1 + seu modificador de habilidade de conjuração (mínimo de duas vezes). Depois de curar esse número de vezes, o espírito desaparece.",
+				"Como uma ação bônus no seu turno, você pode mover o espírito até 9 metros para um espaço que você possa ver."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, a cura aumenta em {@scaledice 1d6|2-9|1d6} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"affectsCreatureType": [
+				"aberração",
+				"besta",
+				"celestial",
+				"dragão",
+				"elementar",
+				"feérico",
+				"demônio",
+				"gigante",
+				"humanoide",
+				"monstruosidade",
+				"escorrer",
+				"plantar"
+			],
+			"miscTags": [
+				"HL",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Holy Weapon",
+			"source": "XGE",
+			"page": 157,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você imbui uma arma que toca com poder sagrado. Até que a magia termine, a arma emite luz brilhante em um raio de 9 metros e luz fraca por mais 9 metros adicionais. Além disso, os ataques com armas feitos com ela causam {@damage 2d8} de dano radiante extra ao acertar. Se a arma ainda não for uma arma mágica, ela se tornará uma enquanto durar.",
+				"Como uma ação bônus no seu turno, você pode anular esta magia e fazer com que a arma emita uma explosão de brilho. Cada criatura de sua escolha que você possa ver a até 9 metros da arma deve realizar um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofre {@damage 4d8} de dano radiante e é {@condition blinded} por 1 minuto. Em um teste bem-sucedido, uma criatura sofre metade do dano e não é {@condition blinded}. No final de cada um de seus turnos, uma criatura {@condition blinded} pode fazer um teste de resistência de Constituição, encerrando o efeito sobre si mesma em caso de sucesso."
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"AAD",
+				"LGT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Ice Knife",
+			"source": "XGE",
+			"page": 157,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"reprintedAs": [
+				"Ice Knife|XPHB"
+			],
+			"level": 1,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "uma gota de água ou um pedaço de gelo"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você cria um fragmento de gelo e o arremessa em uma criatura dentro do alcance. Faça um ataque mágico à distância contra o alvo. Ao acertar, o alvo sofre {@damage 1d10} de dano perfurante. Acertar ou errar, o fragmento explode. O alvo e cada criatura a até 1,5 metro dele devem ser bem sucedidos em um teste de resistência de Destreza ou sofrerão {@damage 2d6} de dano de frio."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, o dano de frio aumenta em {@scaledamage 2d6|1-9|1d6} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"frio",
+				"piercing"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Illusory Dragon",
+			"source": "XGE",
+			"page": 157,
+			"level": 8,
+			"school": "eu",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ao reunir fios de material sombrio do Pendor das Sombras, você cria um enorme dragão sombrio em um espaço desocupado que você pode ver dentro do alcance. A ilusão dura a duração da magia e ocupa seu espaço, como se fosse uma criatura.",
+				"Quando a ilusão aparecer, qualquer um dos seus inimigos que puder vê-la deve ter sucesso em um teste de resistência de Sabedoria ou se tornar {@condition frightened} dela por 1 minuto. Se uma criatura {@condition frightened} terminar seu turno em um local onde não tenha linha de visão para a ilusão, ela pode repetir o teste de resistência, encerrando o efeito sobre si mesma em caso de sucesso.",
+				"Como uma ação bônus no seu turno, você pode mover a ilusão até 18 metros. A qualquer momento durante seu movimento, você pode fazer com que ele exale uma explosão de energia em um cone de 18 metros originado de seu espaço. Ao criar o dragão, escolha um tipo de dano: ácido, frio, fogo, relâmpago, necrótico ou venenoso. Cada criatura no cone deve fazer um teste de resistência de Inteligência, sofrendo {@damage 7d6} de dano do tipo de dano escolhido se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"A ilusão é tangível por causa da sombra usada para criá-la, mas os ataques a erram automaticamente, ela é bem-sucedida em todos os testes de resistência e é imune a todos os danos e condições. Uma criatura que usa uma ação para examinar o dragão pode determinar que se trata de uma ilusão ao obter sucesso em um teste de Inteligência ({@skill Investigation}) contra sua CD para salvar feitiços. Se uma criatura discernir a ilusão pelo que ela é, a criatura poderá ver através dela e terá vantagem em testes de resistência contra seu sopro."
+			],
+			"damageInflict": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"necrótico",
+				"veneno"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"savingThrow": [
+				"sabedoria",
+				"inteligência"
+			],
+			"abilityCheck": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Immolation",
+			"source": "XGE",
+			"page": 158,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Chamas envolvem uma criatura que você pode ver dentro do alcance. O alvo deve fazer um teste de resistência de Destreza. Recebe {@damage 8d6} de dano de fogo se falhar na resistência ou metade do dano se obtiver sucesso. Se falhar na resistência, o alvo também queima durante a duração do feitiço. O alvo em chamas emite luz brilhante em um raio de 9 metros e luz fraca por mais 9 metros adicionais. No final de cada um dos seus turnos, o alvo repete o teste de resistência. Ele sofre {@damage 4d6} de dano de fogo se falhar na resistência e o feitiço termina se obtiver sucesso. Estas chamas mágicas não podem ser extintas por meios não mágicos.",
+				"Se o dano deste feitiço matar um alvo, o alvo se transformará em cinzas."
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"LGT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Infernal Calling",
+			"source": "XGE",
+			"page": 158,
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um rubi que vale pelo menos 999 PO",
+					"cost": 99900
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Pronunciando um encantamento sombrio, você invoca um demônio dos Nove Infernos. Você escolhe o tipo do diabo, que deve ser {@filter challenge rating 6 or lower|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}, como {@creature barbed devil} ou {@creature bearded devil}. O diabo aparece em um espaço desocupado que você pode ver dentro do alcance. O diabo desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"O diabo é hostil com você e seus companheiros. Role a iniciativa para o diabo, que tem seus próprios turnos. Ele está sob o controle do Mestre e age de acordo com sua natureza em cada um de seus turnos, o que pode resultar em seu ataque se ele achar que pode prevalecer, ou em tentar tentá-lo a realizar um ato maligno em troca de serviço limitado. O Mestre possui as estatísticas da criatura.",
+				"Em cada um dos seus turnos, você pode tentar emitir um comando verbal ao diabo (nenhuma ação necessária de sua parte). Ele obedece ao comando se o resultado provável estiver de acordo com seus desejos, especialmente se o resultado o levar ao mal. Caso contrário, você deve fazer um teste de Carisma ({@skill Deception}, {@skill Intimidation} ou {@skill Persuasion}) contestado por seu teste de Sabedoria ({@skill Insight}). Você faz o teste com vantagem se disser o verdadeiro nome do diabo. Se o seu teste falhar, o diabo se torna imune aos seus comandos verbais durante a duração da magia, embora ainda possa executar seus comandos se assim desejar. Se seu teste for bem-sucedido, o diabo executa seu comando – como “atacar meus inimigos”, “explorar a sala à frente” ou “levar esta mensagem à rainha” – até completar a atividade, momento em que ele retornará a você para relatar ter feito isso.",
+				"Se o seu {@status concentration} terminar antes do feitiço atingir sua duração total, o diabo não desaparece se ele se tornar imune aos seus comandos verbais. Em vez disso, ele age da maneira que escolher por {@dice 3d6} minutos e depois desaparece.",
+				"Se você possuir um talismã do diabo individual, você pode invocar esse demônio se ele tiver o nível de desafio apropriado mais 1, e ele obedecer a todos os seus comandos, sem a necessidade de testes de Carisma."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 6º nível ou superior, o nível de desafio aumenta em 1 para cada nível do espaço acima do 5º."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Infestation",
+			"source": "XGE",
+			"page": 158,
+			"level": 0,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma pulga viva"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você faz com que uma nuvem de ácaros, pulgas e outros parasitas apareça momentaneamente em uma criatura que você possa ver dentro do alcance. O alvo deve ser bem-sucedido em um teste de resistência de Constituição ou sofrerá {@damage 1d6} de dano de veneno e se moverá 1,5 metro em uma direção aleatória se puder se mover e seu deslocamento for de pelo menos 1,5 metro. Role um {@dice d4} para a direção: 1, norte; 2, sul; 3, leste; ou 4, oeste. Este movimento não provoca ataques de oportunidade e se a direção rolada for bloqueada, o alvo não se move.",
+				"O dano do feitiço aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "dano venenoso",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"veneno"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Investiture of Flame",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Chamas percorrem seu corpo, lançando luz brilhante em um raio de 9 metros e penumbra por mais 9 metros adicionais enquanto o feitiço durar. As chamas não fazem mal a você. Até que a magia termine, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você é imune a danos de fogo e tem resistência a danos de frio.",
+						"Qualquer criatura que se mova a até 1,5 metro de você pela primeira vez em um turno ou termine seu turno ali sofre {@damage 1d10} de dano de fogo.",
+						"Você pode usar sua ação para criar uma linha de fogo de 4,5 metros de comprimento e 1,5 metro de largura estendendo-se de você na direção que você escolher. Cada criatura na linha deve fazer um teste de resistência de Destreza. Uma criatura sofre {@damage 4d8} de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"damageResist": [
+				"frio"
+			],
+			"damageImmune": [
+				"fogo"
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"LGT"
+			],
+			"areaTags": [
+				"eu"
+			]
+		},
+		{
+			"name": "Investiture of Ice",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Até que o feitiço termine, o gelo cobre seu corpo e você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você é imune a danos de frio e tem resistência a danos de fogo.",
+						"You can move across {@quickref difficult terrain||3} created by ice or snow without spending extra movement.",
+						"The ground in a 10-foot radius around you is icy and is {@quickref difficult terrain||3} for creatures other than you. The radius moves with you.",
+						"Você pode usar sua ação para criar um cone de vento gelado de 4,5 metros estendendo-se de sua mão estendida na direção que você escolher. Cada criatura no cone deve realizar um teste de resistência de Constituição. Uma criatura sofre {@damage 4d6} de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura que falhar no teste de resistência contra este efeito terá seu deslocamento reduzido pela metade até o início do seu próximo turno."
+					]
+				}
+			],
+			"damageResist": [
+				"fogo"
+			],
+			"damageImmune": [
+				"frio"
+			],
+			"damageInflict": [
+				"frio"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"DFT"
+			],
+			"areaTags": [
+				"N",
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Stone",
+			"source": "XGE",
+			"page": 159,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 19
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Até o feitiço terminar, pedaços de rocha se espalham pelo seu corpo e você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você tem resistência a danos de concussão, perfurantes e cortantes de ataques não mágicos.",
+						"Você pode usar sua ação para criar um pequeno terremoto no solo em um raio de 4,5 metros centrado em você. Outras criaturas naquele terreno devem ter sucesso em um teste de resistência de Destreza ou serão derrubadas {@condition prone}.",
+						"You can move across {@quickref difficult terrain||3} made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
+					]
+				}
+			],
+			"damageResist": [
+				"espancamento",
+				"piercing",
+				"cortando"
+			],
+			"conditionInflict": [
+				"prone",
+				"stunned"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Investiture of Wind",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Até que a magia termine, o vento gira ao seu redor e você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ataques com armas de longo alcance feitos contra você têm desvantagem na jogada de ataque.",
+						"Você ganha deslocamento de voo de 18 metros. Se você ainda estiver voando quando a magia terminar, você cairá, a menos que possa de alguma forma evitá-lo.",
+						"Você pode usar sua ação para criar um cubo de 4,5 metros de vento rodopiante centrado em um ponto que você possa ver a até 18 metros de você. Cada criatura naquela área deve realizar um teste de resistência de Constituição. Uma criatura sofre {@damage 2d10} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso. Se uma criatura Grande ou menor falhar no teste, essa criatura também será empurrada até 3 metros de distância do centro do cubo."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Invulnerability",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um pequeno pedaço de adamantino valendo pelo menos 500 po, que o feitiço consome",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você fica imune a todos os danos até o feitiço terminar."
+			]
+		},
+		{
+			"name": "Life Transference",
+			"source": "XGE",
+			"page": 160,
+			"level": 3,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você sacrifica parte de sua saúde para curar os ferimentos de outra criatura. Você sofre {@damage 4d8} de dano necrótico, que não pode ser reduzido de forma alguma, e uma criatura de sua escolha que você possa ver dentro do alcance recupera um número de pontos de vida igual ao dobro do dano necrótico que você sofre."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 4º nível ou superior, o dano aumenta em {@scaledamage 4d8|3-9|1d8} para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"miscTags": [
+				"HL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Maddening Darkness",
+			"source": "XGE",
+			"page": 160,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "uma gota de piche misturada com uma gota de mercúrio"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"A escuridão mágica se espalha a partir de um ponto que você escolher dentro do alcance para preencher uma esfera de 18 metros de raio até o fim da magia. A escuridão se espalha pelos cantos. Uma criatura com {@sense darkvision} não consegue ver através desta escuridão. A luz não-mágica, assim como a luz criada por magias de 8º nível ou inferior, não pode iluminar a área.",
+				"Gritos, balbucios e risadas loucas podem ser ouvidos dentro da esfera. Sempre que uma criatura inicia seu turno na esfera, ela deve realizar um teste de resistência de Sabedoria, sofrendo {@damage 8d8} de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso."
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Maelstrom",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "papel ou folha em forma de funil"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Uma massa rodopiante de água com 1,5 metro de profundidade aparece em um raio de 9 metros centrado em um ponto que você pode ver dentro do alcance. O ponto deve estar no solo ou em um corpo d'água. Até o feitiço terminar, aquela área é {@quickref difficult terrain||3}, e qualquer criatura que comece seu turno lá deve ser bem sucedida em um teste de resistência de Força ou sofrerá {@damage 6d6} de dano de concussão e será puxada 3 metros em direção ao centro."
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"DFT",
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"R"
+			]
+		},
+		{
+			"name": "Magic Stone",
+			"source": "XGE",
+			"page": 160,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você toca de uma a três pedras e as imbui de magia. Você ou outra pessoa pode fazer um ataque mágico à distância com uma das pedras, jogando-a ou arremessando-a com {@item sling|phb}. Se lançada, uma pedra tem um alcance de 18 metros. Se outra pessoa atacar com uma pedra, esse atacante adiciona seu modificador de habilidade de conjuração, e não o do atacante, à jogada de ataque. Ao acertar, o alvo sofre dano de concussão igual a {@damage 1d6} + seu modificador de habilidade de lançamento de feitiços. Quer o ataque acerte ou erre, o feitiço termina na pedra.",
+				"Se você lançar esta magia novamente, a magia termina em quaisquer pedras ainda afetadas pela sua conjuração anterior."
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mass Polymorph",
+			"source": "XGE",
+			"page": 160,
+			"level": 9,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um casulo de lagarta"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você transforma até dez criaturas à sua escolha que você possa ver dentro do alcance. Um alvo relutante deve ter sucesso em um teste de resistência de Sabedoria para resistir à transformação. Um metamorfo relutante obtém sucesso automaticamente ao salvar.",
+				"Cada alvo assume uma forma de besta à sua escolha, e você pode escolher a mesma forma ou formas diferentes para cada alvo. A nova forma pode ser {@filter any beast|bestiary|type=beast|miscellaneous=!swarm} que você viu cujo nível de desafio é igual ou menor que o do alvo (ou metade do nível do alvo, se o alvo não tiver um nível de desafio). As estatísticas de jogo do alvo, incluindo valores de habilidades mentais, são substituídas pelas estatísticas da fera escolhida, mas o alvo mantém seus pontos de vida, tendência e personalidade.",
+				"Cada alvo ganha um número de pontos de vida temporários igual aos pontos de vida de sua nova forma. Esses pontos de vida temporários não podem ser substituídos por pontos de vida temporários de outra fonte. Um alvo reverte à sua forma normal quando não tiver mais pontos de vida temporários ou morrer. Se a magia terminar antes disso, a criatura perde todos os seus pontos de vida temporários e volta à sua forma normal.",
+				"A criatura é limitada nas ações que pode realizar pela natureza de sua nova forma. Ele não pode falar, lançar feitiços ou fazer qualquer outra coisa que exija mãos ou fala.",
+				"O equipamento do alvo se funde na nova forma. O alvo não pode ativar, usar, empunhar ou de outra forma se beneficiar de qualquer um de seus equipamentos."
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT",
+				"THP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Maximilian's Earthen Grasp",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma mão em miniatura esculpida em argila"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você escolhe um espaço desocupado de 1,5 metro quadrado no chão que você possa ver dentro do alcance. Uma mão Média feita de solo compactado sobe até lá e alcança uma criatura que você possa ver a até 1,5 metro dela. O alvo deve fazer um teste de resistência de Força. Se falhar, o alvo sofre {@damage 2d6} de dano de concussão e é {@condition restrained} durante a duração do feitiço.",
+				"Como uma ação, você pode fazer com que a mão esmague o alvo {@condition restrained}, que deve realizar um teste de resistência de Força. O alvo sofre {@damage 2d6} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"Para escapar, o alvo {@condition restrained} pode usar sua ação para fazer um teste de Força contra sua CD de salvamento de feitiço. Em caso de sucesso, o alvo escapa e não está mais {@condition restrained} pela mão.",
+				"Com uma ação, você pode fazer com que a mão alcance uma criatura diferente ou se mova para um espaço desocupado diferente dentro do alcance. A mão libera um alvo {@condition restrained} se você fizer isso."
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"abilityCheck": [
+				"força"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Melf's Minute Meteors",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 20
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "nitro, enxofre e alcatrão de pinheiro formaram uma conta"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria seis pequenos meteoros em seu espaço. Eles flutuam no ar e orbitam você durante a duração do feitiço. Quando você conjura a magia – e como uma ação bônus em cada um de seus turnos seguintes – você pode gastar um ou dois dos meteoros, enviando-os em direção a um ponto ou pontos que você escolher a até 36 metros de você. Assim que um meteoro chega ao seu destino ou atinge uma superfície sólida, o meteoro explode. Cada criatura a até 1,5 metro do ponto onde o meteoro explode deve fazer um teste de resistência de Destreza. Uma criatura sofre {@damage 2d6} de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, o número de meteoros criados aumenta em dois para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"fogo"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Mental Prison",
+			"source": "XGE",
+			"page": 161,
+			"level": 6,
+			"school": "eu",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você tenta prender uma criatura dentro de uma célula ilusória que só ela percebe. Uma criatura que você possa ver dentro do alcance deve fazer um teste de resistência de Inteligência. O alvo obtém sucesso automaticamente se estiver imune a {@condition charmed}. Em um teste bem-sucedido, o alvo sofre {@damage 5d10} de dano psíquico e o feitiço termina. Se falhar na resistência, o alvo sofre {@damage 5d10} de dano psíquico e você faz com que a área imediatamente ao redor do espaço do alvo pareça perigosa para ele de alguma forma. Você pode fazer com que o alvo se perceba cercado por fogo, navalhas flutuantes ou bocarras horríveis cheias de dentes gotejantes. Qualquer que seja a forma que a ilusão assuma, o alvo não pode ver ou ouvir nada além dela e fica {@condition restrained} durante a duração do feitiço. Se o alvo for movido para fora da ilusão, fizer um ataque corpo a corpo através dele ou atingir qualquer parte de seu corpo através dele, o alvo sofrerá {@damage 10d10} de dano psíquico e o feitiço terminará."
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"savingThrow": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mighty Fortress",
+			"source": "XGE",
+			"page": 161,
+			"otherSources": [
+				{
+					"source": "AitFR-AVT",
+					"page": 10
+				},
+				{
+					"source": "AitFR-FCD",
+					"page": 12
+				}
+			],
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "miles",
+					"amount": 1
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um diamante valendo pelo menos 500 po, que o feitiço consome",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma fortaleza de pedra irrompe de uma área quadrada de terreno de sua escolha que você pode ver dentro do alcance. A área tem 36 metros de cada lado e não deve conter quaisquer edifícios ou outras estruturas. Quaisquer criaturas na área são levantadas inofensivamente à medida que a fortaleza sobe.",
+				"A fortaleza tem quatro torres de base quadrada, cada uma com 6 metros de lado e 9 metros de altura, com uma torre em cada canto. As torres são conectadas entre si por paredes de pedra com 25 metros de comprimento cada, criando uma área fechada. Cada parede tem 30 centímetros de espessura e é composta por painéis de 3 metros de largura e 6 metros de altura. Cada painel é contíguo a dois outros painéis ou a um outro painel e uma torre. Você pode colocar até quatro portas de pedra na parede externa da fortaleza.",
+				"Uma pequena torre de menagem fica dentro da área fechada. A torre de menagem tem uma base quadrada de 15 metros de cada lado e três andares com tetos de 3 metros de altura. Cada um dos andares pode ser dividido em quantos cômodos desejar, desde que cada cômodo tenha pelo menos 1,5 metro de cada lado. Os pisos da torre de menagem são ligados por escadas de pedra, as suas paredes têm 15 centímetros de espessura e os quartos interiores podem ter portas de pedra ou arcos abertos, conforme desejar. A fortaleza é mobiliada e decorada como você quiser e contém comida suficiente para servir um banquete de nove pratos para até 100 pessoas por dia. Móveis, alimentos e outros objetos criados por esta magia se transformam em pó se forem removidos da fortaleza.",
+				"Uma equipe de cem servos invisíveis obedece a qualquer comando dado a eles pelas criaturas que você designou quando lançou a magia. Cada servo funciona como se tivesse sido criado pelo feitiço {@spell unseen servant}.",
+				"As paredes, torres e torres de menagem são todas feitas de pedra que pode ser danificada. Cada seção de pedra de 3 x 3 metros tem CA 15 e 30 pontos de vida por polegada de espessura. É imune a veneno e danos psíquicos. Reduzir uma seção de pedra a 0 pontos de vida a destrói e pode fazer com que seções conectadas entortem e desmoronem a critério do Mestre.",
+				"Após 7 dias ou quando você lançar esta magia em outro lugar, a fortaleza desmorona inofensivamente e afunda de volta no chão, deixando quaisquer criaturas que estavam dentro dela em segurança no chão.",
+				"Lançar este feitiço no mesmo local uma vez a cada 7 dias durante um ano torna a fortaleza permanente."
+			],
+			"damageImmune": [
+				"tóxico",
+				"psíquico"
+			],
+			"miscTags": [
+				"PIR",
+				"PRM",
+				"SGT"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Mind Spike",
+			"source": "XGE",
+			"page": 162,
+			"reprintedAs": [
+				"Mind Spike|XPHB"
+			],
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você alcança a mente de uma criatura que você pode ver dentro do alcance. O alvo deve fazer um teste de resistência de Sabedoria, sofrendo {@damage 3d8} de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso. Se falhar, você também sempre saberá a localização do alvo até a magia terminar, mas apenas enquanto vocês dois estiverem no mesmo plano de existência. Enquanto você tiver esse conhecimento, o alvo não pode ficar escondido de você e, se for {@condition invisible}, ele não ganha nenhum benefício dessa condição contra você."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, o dano aumenta em {@scaledamage 3d8|2-9|1d8} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Mold Earth",
+			"source": "XGE",
+			"page": 162,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você escolhe uma porção de terra ou pedra que você possa ver dentro do alcance e que caiba em um cubo de 1,5 metro. Você o manipula de uma das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Se você mirar em uma área de terra solta, poderá escavá-la instantaneamente, movê-la ao longo do solo e depositá-la a até 1,5 metro de distância. Este movimento não envolve força suficiente para causar danos.",
+						"Você faz com que formas, cores ou ambas apareçam na terra ou na pedra, soletrando palavras, criando imagens ou moldando padrões. As mudanças duram 1 hora.",
+						"If the dirt or stone you target is on the ground, you cause it to become {@quickref difficult terrain||3}. Alternatively, you can cause the ground to become normal terrain if it is already {@quickref difficult terrain||3}. This change lasts for 1 hour."
+					]
+				},
+				"Se você conjurar esta magia diversas vezes, você não poderá ter mais do que dois de seus efeitos não instantâneos ativos por vez e poderá descartar tal efeito como uma ação."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Negative Energy Flood",
+			"source": "XGE",
+			"page": 163,
+			"level": 5,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "um osso quebrado e um quadrado de seda preta"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você envia fitas de energia negativa para uma criatura que você possa ver dentro do alcance. A menos que o alvo seja um morto-vivo, ele deve realizar um teste de resistência de Constituição, sofrendo {@damage 5d12} de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. Um alvo morto por este dano surge como {@creature zombie} no início do seu próximo turno. O zumbi persegue qualquer criatura que possa ver que esteja mais próxima dele. As estatísticas para {@creature zombie} estão no Manual dos Monstros.",
+				"Se você atingir um morto-vivo com esta magia, o alvo não realizará um teste de resistência. Em vez disso, role {@dice 5d12}. O alvo ganha metade do total em pontos de vida temporários."
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN",
+				"THP"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Power Word Pain",
+			"source": "XGE",
+			"page": 163,
+			"level": 7,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você fala uma palavra de poder que causa ondas de dor intensa que atacam uma criatura que você pode ver dentro do alcance. Se o alvo tiver 100 pontos de vida ou menos, ele estará sujeito a uma dor paralisante. Caso contrário, o feitiço não terá efeito sobre ele. Um alvo também não é afetado se for imune a {@condition charmed}.",
+				"Enquanto o alvo estiver afetado por uma dor paralisante, qualquer velocidade que ele tenha não pode ser superior a 3 metros. O alvo também tem desvantagem em jogadas de ataque, testes de habilidade e testes de resistência, exceto testes de resistência de Constituição. Finalmente, se o alvo tentar lançar uma magia, ele deve primeiro ter sucesso em um teste de resistência de Constituição, ou a conjuração falhará e a magia será desperdiçada.",
+				"Um alvo que sofre esta dor pode fazer um teste de resistência de Constituição no final de cada um de seus turnos. Com um salvamento bem-sucedido, a dor termina."
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primal Savagery",
+			"source": "XGE",
+			"page": 163,
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você canaliza magia primordial para fazer com que seus dentes ou unhas fiquem afiados, prontos para desferir um ataque corrosivo. Faça um ataque mágico corpo a corpo contra uma criatura a até 1,5 metro de você. Ao acertar, o alvo sofre {@damage 1d10} de dano ácido. Depois de fazer o ataque, seus dentes ou unhas voltam ao normal.",
+				"O dano do feitiço aumenta em {@damage 1d10} quando você atinge o 5º nível ({@damage 2d10}), 11º nível ({@damage 3d10}) e 17º nível ({@damage 4d10})."
+			],
+			"scalingLevelDice": {
+				"label": "dano ácido",
+				"scaling": {
+					"1": "1d10",
+					"5": "2d10",
+					"11": "3d10",
+					"17": "4d10"
+				}
+			},
+			"damageInflict": [
+				"ácido"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Primordial Ward",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 6,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você tem resistência a danos de ácido, frio, fogo, raio e trovão durante a duração do feitiço.",
+				"Ao sofrer dano de um desses tipos, você pode usar sua reação para ganhar imunidade a esse tipo de dano, inclusive contra o dano desencadeador. Se você fizer isso, as resistências terminam e você terá imunidade até o final do seu próximo turno, quando a magia termina."
+			],
+			"damageResist": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"trovão"
+			],
+			"damageImmune": [
+				"ácido",
+				"frio",
+				"fogo",
+				"relâmpago",
+				"trovão"
+			]
+		},
+		{
+			"name": "Psychic Scream",
+			"source": "XGE",
+			"page": 163,
+			"level": 9,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você libera o poder da sua mente para explodir o intelecto de até dez criaturas de sua escolha que você pode ver dentro do alcance. Criaturas com valor de Inteligência 2 ou inferior não são afetadas.",
+				"Cada alvo deve fazer um teste de resistência de Inteligência. Se falhar na resistência, o alvo sofre {@damage 14d6} de dano psíquico e é {@condition stunned}. Em um teste bem-sucedido, o alvo sofre metade do dano e não é {@condition stunned}. Se um alvo for morto por este dano, sua cabeça explodirá, presumindo que ele tenha uma.",
+				"Um alvo {@condition stunned} pode fazer um teste de resistência de Inteligência no final de cada um de seus turnos. Com um salvamento bem-sucedido, o efeito atordoante termina."
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"savingThrow": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Pyrotechnics",
+			"source": "XGE",
+			"page": 163,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Escolha uma área de chama não-mágica que você possa ver e que caiba em um cubo de 1,5 metro dentro do alcance. Você pode extinguir o fogo naquela área e criar fogos de artifício ou fumaça ao fazer isso.",
+				{
+					"type": "entries",
+					"name": "Fireworks",
+					"entries": [
+						"O alvo explode com uma deslumbrante exibição de cores. Cada criatura a até 3 metros do alvo deve ser bem sucedida em um teste de resistência de Constituição ou se tornará {@condition blinded} até o final do seu próximo turno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Smoke",
+					"entries": [
+						"Uma fumaça preta espessa se espalha do alvo em um raio de 6 metros, movendo-se pelos cantos. A área da fumaça está fortemente obscurecida. A fumaça persiste por 1 minuto ou até que um vento forte a disperse."
+					]
+				}
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"OBS",
+				"SGT"
+			],
+			"areaTags": [
+				"C",
+				"S"
+			]
+		},
+		{
+			"name": "Scatter",
+			"source": "XGE",
+			"page": 164,
+			"level": 6,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"O ar vibra em torno de até cinco criaturas de sua escolha que você pode ver dentro do alcance. Uma criatura relutante deve ter sucesso em um teste de resistência de Sabedoria para resistir a este feitiço. Você teletransporta cada alvo afetado para um espaço desocupado que você possa ver a até 36 metros de você. Esse espaço deve ser no chão ou no chão."
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Shadow Blade",
+			"source": "XGE",
+			"page": 164,
+			"level": 2,
+			"school": "eu",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você entrelaça fios de sombra para criar uma espada de escuridão solidificada em sua mão. Esta espada mágica dura até o feitiço terminar. Conta como uma arma corpo a corpo simples com a qual você é proficiente. Ele causa {@damage 2d8} de dano psíquico ao acertar e tem propriedades de sutileza, luz e arremesso (alcance 20/60). Além disso, quando você usa a espada para atacar um alvo que está na penumbra ou na escuridão, você faz a jogada de ataque com vantagem.",
+				"Se você deixar cair a arma ou jogá-la, ela se dissipará no final do turno. Depois disso, enquanto a magia persistir, você pode usar uma ação bônus para fazer a espada reaparecer em sua mão."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º ou 4º nível, o dano aumenta para {@damage 3d8}. Quando você o lança usando um espaço de magia de 5º ou 6º nível, o dano aumenta para {@damage 4d8}. Quando você o lança usando um espaço de magia de 7º nível ou superior, o dano aumenta para {@damage 5d8}."
+					]
+				}
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"miscTags": [
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shadow of Moil",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um globo ocular morto-vivo envolto em uma gema valendo pelo menos 150 PO",
+					"cost": 15000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Sombras semelhantes a chamas envolvem seu corpo até o fim da magia, fazendo com que você fique fortemente obscurecido para os outros. As sombras transformam a luz fraca a até 3 metros de você em escuridão, e a luz brilhante na mesma área em luz fraca.",
+				"Até que a magia termine, você terá resistência a dano radiante. Além disso, sempre que uma criatura a até 3 metros de você ataca você, as sombras atacam essa criatura, causando-lhe {@damage 2d8} de dano necrótico."
+			],
+			"damageResist": [
+				"radiante"
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"miscTags": [
+				"OBS"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Shape Water",
+			"source": "XGE",
+			"page": 164,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 21
+				},
+				{
+					"source": "EGW"
+				}
+			],
+			"level": 0,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				},
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você escolhe uma área de água que você possa ver dentro do alcance e que caiba em um cubo de 1,5 metro. Você o manipula de uma das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Você move instantaneamente ou altera o fluxo da água conforme direciona, até 1,5 metro em qualquer direção. Este movimento não tem força suficiente para causar danos.",
+						"Você faz com que a água tenha formas simples e se anime conforme sua direção. Essa mudança dura 1 hora.",
+						"Você altera a cor ou opacidade da água. A água deve ser trocada da mesma forma durante todo o processo. Essa mudança dura 1 hora.",
+						"Você congela a água, desde que não haja criaturas nela. A água descongela em 1 hora."
+					]
+				},
+				"Se você conjurar esta magia diversas vezes, você não poderá ter mais do que dois de seus efeitos não instantâneos ativos por vez e poderá descartar tal efeito como uma ação."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Sickening Radiance",
+			"source": "XGE",
+			"page": 164,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Uma luz fraca e esverdeada se espalha dentro de uma esfera de 9 metros de raio centrada em um ponto que você escolher dentro do alcance. A luz se espalha pelos cantos e dura até o feitiço terminar.",
+				"Quando uma criatura se move para a área da magia pela primeira vez em um turno ou começa seu turno lá, aquela criatura deve ser bem sucedida em um teste de resistência de Constituição ou sofrerá {@damage 4d10} de dano radiante, e ela sofre um nível de {@condition exhaustion} e emite uma luz fraca e esverdeada em um raio de 1,5 metro. Esta luz torna impossível para a criatura se beneficiar por ser {@condition invisible}. A luz e quaisquer níveis de {@condition exhaustion} causados ​​por este feitiço desaparecem quando o feitiço termina."
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Skill Empowerment",
+			"source": "XGE",
+			"page": 165,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Sua magia aprofunda a compreensão da criatura sobre seu próprio talento. Você toca uma criatura voluntária e lhe dá perícia em uma perícia de sua escolha; até que a magia termine, a criatura dobra seu bônus de proficiência em testes de habilidade que usem a perícia escolhida.",
+				"Você deve escolher uma perícia na qual o alvo seja proficiente e que ainda não esteja se beneficiando de um efeito, como Especialização, que dobra seu bônus de proficiência."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Skywrite",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "sight"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Você faz com que até dez palavras se formem em uma parte do céu que você pode ver. As palavras parecem ser feitas de nuvens e permanecem no lugar durante a duração do feitiço. As palavras se dissipam quando o feitiço termina. Um vento forte pode dispersar as nuvens e encerrar o feitiço mais cedo."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Snare",
+			"source": "XGE",
+			"page": 165,
+			"level": 1,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "25 pés de corda, que o feitiço consome",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Ao lançar esta magia, você usa a corda para criar um círculo com um raio de 1,5 metro no chão. Ao terminar de lançar, a corda desaparece e o círculo se torna uma armadilha mágica.",
+				"Esta armadilha é quase invisível, exigindo um teste bem-sucedido de Inteligência ({@skill Investigation}) contra sua CD de salvamento de feitiço para ser discernida.",
+				"A armadilha é acionada quando uma criatura Pequena, Média ou Grande se move para o chão ou para o chão no raio da magia. Essa criatura deve ser bem sucedida em um teste de resistência de Destreza ou será içada magicamente no ar, deixando-a pendurada de cabeça para baixo a 3 pés acima do chão. A criatura fica {@condition restrained} lá até o feitiço terminar.",
+				"Uma criatura {@condition restrained} pode fazer um teste de resistência de Destreza no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso. Alternativamente, a criatura ou outra pessoa que possa alcançá-la pode usar uma ação para fazer um teste de Inteligência ({@skill Arcana}) contra sua CD de salvamento de feitiço. Com um sucesso, o efeito {@condition restrained} termina.",
+				"Após a armadilha ser acionada, o feitiço termina quando nenhuma criatura é {@condition restrained} atingida por ele."
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"abilityCheck": [
+				"inteligência"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Snilloc's Snowball Swarm",
+			"source": "XGE",
+			"page": 165,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um pedaço de gelo ou uma pequena lasca de pedra branca"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma rajada de bolas de neve mágicas irrompe de um ponto que você escolher dentro do alcance. Cada criatura em uma esfera de 1,5 metro de raio centrada nesse ponto deve realizar um teste de resistência de Destreza. Uma criatura sofre {@damage 3d6} de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, o dano aumenta em {@scaledamage 3d6|2-9|1d6} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"frio"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Soul Cage",
+			"source": "XGE",
+			"page": 165,
+			"level": 6,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "que você pega quando um humanóide que você pode ver a até 18 metros de você morre"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma pequena gaiola de prata que vale 100 PO",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Este feitiço captura a alma de um humanóide quando ele morre e o prende dentro da pequena gaiola que você usa para o componente material. Uma alma roubada permanece dentro da jaula até o feitiço terminar ou até você destruir a jaula, o que encerra o feitiço. Enquanto você tiver uma alma dentro da jaula, você pode explorá-la de qualquer uma das maneiras descritas abaixo. Você pode usar uma alma presa até seis vezes. Depois de explorar uma alma pela sexta vez, ela é liberada e o feitiço termina. Enquanto uma alma está presa, o humanóide morto de onde ela veio não pode ser revivido.",
+				{
+					"type": "entries",
+					"name": "Steal Life",
+					"entries": [
+						"Você pode usar uma ação bônus para drenar o vigor da alma e recuperar {@dice 2d8} pontos de vida."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Query Soul",
+					"entries": [
+						"Você faz uma pergunta à alma (nenhuma ação é necessária) e recebe uma breve resposta telepática, que você pode entender independentemente da linguagem usada. A alma sabe apenas o que sabia na vida, mas deve responder com sinceridade e com o melhor de sua capacidade. A resposta não passa de uma ou duas frases e pode ser enigmática."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Borrow Experience",
+					"entries": [
+						"Você pode usar uma ação bônus para se fortalecer com a experiência de vida da alma, fazendo sua próxima jogada de ataque, teste de habilidade ou teste de resistência com vantagem. Se você não usar esse benefício antes do início do seu próximo turno, ele será perdido."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Eyes of the Dead",
+					"entries": [
+						"Você pode usar uma ação para nomear um lugar que o humanóide viu em vida, o que cria um sensor invisível em algum lugar daquele lugar se ele estiver no plano de existência em que você está atualmente. O sensor permanece enquanto você se concentra, até 10 minutos (como se você estivesse {@status concentration||concentrating} em um feitiço). Você recebe informações visuais e auditivas do sensor como se estivesse em seu espaço usando seus sentidos."
+					]
+				},
+				"Uma criatura que pode ver o sensor (como uma que usa {@spell see invisibility} ou {@sense truesight}) vê uma imagem translúcida do humanóide atormentado cuja alma você enjaulou."
+			],
+			"affectsCreatureType": [
+				"humanoide"
+			],
+			"miscTags": [
+				"ADV",
+				"HL",
+				"UBA"
+			]
+		},
+		{
+			"name": "Steel Wind Strike",
+			"source": "XGE",
+			"page": 166,
+			"reprintedAs": [
+				"Steel Wind Strike|XPHB"
+			],
+			"level": 5,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "uma arma corpo a corpo que vale pelo menos 1 sp",
+					"cost": 10
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você floresce a arma usada no lançamento e então desaparece para atacar como o vento. Escolha até cinco criaturas que você possa ver dentro do alcance. Faça um ataque mágico corpo a corpo contra cada alvo. Ao acertar, o alvo sofre {@damage 6d10} de dano de força.",
+				"Você pode então se teletransportar para um espaço desocupado que você possa ver a até 1,5 metro de um dos alvos que você acertou ou errou."
+			],
+			"damageInflict": [
+				"força"
+			],
+			"spellAttack": [
+				"M"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Storm Sphere",
+			"source": "XGE",
+			"page": 166,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Uma esfera de ar rodopiante com 6 metros de raio surge, centrada em um ponto que você escolher dentro do alcance. A esfera permanece enquanto durar o feitiço. Cada criatura na esfera quando ela aparecer ou terminar seu turno nela deve ser bem sucedida em um teste de resistência de Força ou sofrerá {@damage 2d6} de dano de concussão. O espaço da esfera é {@quickref difficult terrain||3}.",
+				"Até que a magia termine, você pode usar uma ação bônus em cada um de seus turnos para fazer com que um raio salte do centro da esfera em direção a uma criatura que você escolher, a até 18 metros do centro. Faça um ataque mágico à distância. Você tem vantagem na jogada de ataque se o alvo estiver na esfera. Ao acertar, o alvo sofre {@damage 4d6} de dano elétrico.",
+				"Criaturas a até 9 metros da esfera têm desvantagem em testes de Sabedoria ({@skill Perception}) feitos para ouvir."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 5º nível ou superior, o dano de cada um de seus efeitos aumenta em {@scaledamage 2d6;4d6|4-9|1d6} para cada nível de espaço acima do 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento",
+				"relâmpago"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"DFT",
+				"UBA"
+			],
+			"areaTags": [
+				"S",
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Summon Greater Demon",
+			"source": "XGE",
+			"page": 166,
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um frasco de sangue de um humanóide morto nas últimas 24 horas",
+					"consume": "opcional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você pronuncia palavras obscenas, invocando um demônio do caos do Abismo. Você escolhe o tipo do demônio, que deve ser {@filter one of challenge rating 5 or lower|bestiary|challenge rating=[&0;&5]|tag=demon|miscellaneous=!swarm}, como {@creature shadow demon} ou {@creature barlgura}. O demônio aparece em um espaço desocupado que você pode ver dentro do alcance, e o demônio desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"Role a iniciativa para o demônio, que tem seus próprios turnos. Ao invocá-lo e em cada um de seus turnos seguintes, você pode emitir um comando verbal para ele (não exigindo nenhuma ação de sua parte), dizendo-lhe o que ele deve fazer no próximo turno. Se você não emitir nenhum comando, ele passa seu turno atacando qualquer criatura ao seu alcance que o tenha atacado.",
+				"No final de cada turno do demônio, ele realiza um teste de resistência de Carisma. O demônio tem desvantagem neste teste de resistência se você disser seu nome verdadeiro. Se falhar, o demônio continua a obedecer a você. Em um teste bem-sucedido, seu controle sobre o demônio termina pelo resto da duração, e o demônio passa seus turnos perseguindo e atacando os não-demônios mais próximos com o melhor de sua capacidade. Se você interromper {@status concentration||concentrating} o feitiço antes que ele atinja sua duração total, um demônio descontrolado não desaparecerá por {@dice 1d6} rodadas se ainda tiver pontos de vida.",
+				"Como parte do feitiço, você pode formar um círculo no chão com o sangue usado como componente material. O círculo é grande o suficiente para abranger seu espaço. Enquanto o feitiço durar, o demônio invocado não pode cruzar o círculo ou prejudicá-lo, e não pode atingir ninguém dentro dele. Usar o componente material dessa maneira o consome quando a magia termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 5º nível ou superior, o nível de desafio aumenta em 1 para cada nível do espaço acima do 4º."
+					]
+				}
+			],
+			"savingThrow": [
+				"carisma"
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Summon Lesser Demons",
+			"source": "XGE",
+			"page": 167,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um frasco de sangue de um humanóide morto nas últimas 24 horas",
+					"consume": "opcional"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você pronuncia palavras obscenas, invocando demônios do caos do Abismo. Role na tabela a seguir para determinar o que aparece.",
+				{
+					"type": "table",
+					"colLabels": [
+						"{@dice d6}",
+						"Demônios invocados"
+					],
+					"colStyles": [
+						"col-1 centro de texto",
+						"col-11"
+					],
+					"rows": [
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 1,
+									"max": 2
+								}
+							},
+							"Two {@filter demons of challenge rating 1 or lower|bestiary|challenge rating=[&0;&1]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 3,
+									"max": 4
+								}
+							},
+							"Four {@filter demons of challenge rating 1/2 or lower|bestiary|challenge rating=[&0;&1/2]|tag=demon|miscellaneous=!swarm}"
+						],
+						[
+							{
+								"type": "cell",
+								"roll": {
+									"min": 5,
+									"max": 6
+								}
+							},
+							"Eight {@filter demons of challenge rating 1/4 or lower|bestiary|challenge rating=[&0;&1/4]|tag=demon|miscellaneous=!swarm}"
+						]
+					]
+				},
+				"O Mestre escolhe os demônios, como {@creature manes} ou {@creature dretch||dretches}, e você escolhe os espaços desocupados que pode ver dentro do alcance onde eles aparecem. Um demônio invocado desaparece quando chega a 0 pontos de vida ou quando a magia termina.",
+				"Os demônios são hostis a todas as criaturas, inclusive você. Role a iniciativa para os demônios invocados como um grupo, que tem seus próprios turnos. Os demônios perseguem e atacam os não-demônios mais próximos com o melhor de sua capacidade.",
+				"Como parte do feitiço, você pode formar um círculo no chão com o sangue usado como componente material. O círculo é grande o suficiente para abranger seu espaço. Enquanto o feitiço durar, os demônios invocados não podem cruzar o círculo ou prejudicá-lo, e não podem atingir ninguém dentro dele. Usar o componente material dessa maneira o consome quando a magia termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 6º ou 7º nível, você invoca o dobro de demônios. Se você conjurá-lo usando um espaço de magia de 8º ou 9º nível, você invocará três vezes mais demônios."
+					]
+				}
+			],
+			"miscTags": [
+				"RO",
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Synaptic Static",
+			"source": "XGE",
+			"page": 167,
+			"reprintedAs": [
+				"Synaptic Static|XPHB"
+			],
+			"level": 5,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você escolhe um ponto dentro do alcance e faz com que a energia psíquica exploda ali. Cada criatura em uma esfera de 6 metros de raio centrada naquele ponto deve realizar um teste de resistência de Inteligência. Uma criatura com valor de Inteligência igual ou inferior a 2 não pode ser afetada por esta magia. Um alvo sofre {@damage 8d6} de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"Após uma falha no salvamento, o alvo fica com pensamentos confusos por 1 minuto. Durante esse tempo, ele rola um {@dice d6} e subtrai o número obtido de todas as suas jogadas de ataque e testes de habilidade, bem como seus testes de resistência de Constituição para manter {@status concentration}. O alvo pode fazer um teste de resistência de Inteligência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"savingThrow": [
+				"inteligência",
+				"constituição"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Temple of the Gods",
+			"source": "XGE",
+			"page": 167,
+			"level": 7,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um símbolo sagrado valendo pelo menos 5 PO",
+					"cost": 500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Você faz um templo brilhar em um terreno que você pode ver dentro do alcance. O templo deve caber dentro de um cubo de espaço desocupado, de até 36 metros de cada lado. O templo permanece até que o feitiço termine. É dedicado a qualquer deus, panteão ou filosofia representado pelo símbolo sagrado usado na fundição.",
+				"Você toma todas as decisões sobre a aparência do templo. O interior é fechado por piso, paredes e telhado, com uma porta de acesso ao interior e quantas janelas desejar. Somente você e quaisquer criaturas que você designar ao lançar a magia podem abrir ou fechar a porta.",
+				"O interior do templo é um espaço aberto com um ídolo ou altar numa das extremidades. Você decide se o templo está iluminado e se essa iluminação é clara ou fraca. O cheiro de incenso queimado preenche o ar e a temperatura é amena.",
+				"O templo se opõe aos tipos de criaturas que você escolhe ao conjurar esta magia. Escolha um ou mais dos seguintes: celestiais, elementais, feéricos, demônios ou mortos-vivos. Se uma criatura do tipo escolhido tentar entrar no templo, aquela criatura deverá realizar um teste de resistência de Carisma. Se falhar, ele não poderá entrar no templo por 24 horas. Mesmo que a criatura consiga entrar no templo, a magia ali a impede; sempre que fizer uma jogada de ataque, um teste de habilidade ou um teste de resistência dentro do templo, ele deve lançar um {@dice d4} e subtrair o número obtido da rolagem de {@dice d20}.",
+				"Além disso, os sensores criados por feitiços de adivinhação não podem aparecer dentro do templo e as criaturas dentro dele não podem ser alvo de feitiços de adivinhação.",
+				"Finalmente, sempre que qualquer criatura no templo recuperar pontos de vida de uma magia de 1º nível ou superior, a criatura recupera pontos de vida adicionais iguais ao seu modificador de Sabedoria (mínimo 1 ponto de vida).",
+				"O templo é feito de uma força mágica opaca que se estende até o Plano Etéreo, bloqueando assim a viagem etérea para o interior do templo. Nada pode passar fisicamente pelo exterior do templo. Não pode ser dissipado por {@spell dispel magic} e {@spell antimagic field} não tem efeito sobre ele. Um feitiço {@spell disintegrate} destrói o templo instantaneamente.",
+				"Lançar esta magia no mesmo local todos os dias durante um ano torna este efeito permanente."
+			],
+			"savingThrow": [
+				"carisma"
+			],
+			"affectsCreatureType": [
+				"celestial",
+				"elementar",
+				"feérico",
+				"demônio",
+				"morto-vivo"
+			],
+			"miscTags": [
+				"HL",
+				"LGT",
+				"PIR",
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Tenser's Transformation",
+			"source": "XGE",
+			"page": 168,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "alguns fios de cabelo de um touro"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você se dota de resistência e destreza marcial alimentadas pela magia. Até que a magia termine, você não pode lançar magias e ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha 50 pontos de vida temporários. Se algum deles permanecer quando a magia terminar, eles serão perdidos.",
+						"Você tem vantagem em jogadas de ataque feitas com armas simples e marciais.",
+						"Quando você atinge um alvo com um ataque de arma, esse alvo sofre {@damage 2d12} de dano de força extra.",
+						"Você tem proficiência com todas as armaduras, escudos, armas simples e armas marciais.",
+						"Você tem proficiência em testes de resistência de Força e Constituição.",
+						"Você pode atacar duas vezes, em vez de uma, ao realizar a ação {@action Attack} no seu turno. Você ignora esse benefício se já tiver um recurso, como Ataque Extra, que oferece ataques extras."
+					]
+				},
+				"Imediatamente após o feitiço terminar, você deve ter sucesso em um teste de resistência de Constituição {@dc 15} ou sofrerá um nível de {@condition exhaustion}."
+			],
+			"damageInflict": [
+				"força"
+			],
+			"conditionInflict": [
+				"exhaustion"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV",
+				"THP"
+			]
+		},
+		{
+			"name": "Thunder Step",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você se teletransporta para um espaço desocupado que você pode ver dentro do alcance. Imediatamente após você desaparecer, um estrondo estrondoso soa, e cada criatura a até 3 metros do espaço que você deixou deve fazer um teste de resistência de Constituição, sofrendo {@damage 3d10} de dano trovejante se falhar na resistência, ou metade do dano se obtiver sucesso. O trovão pode ser ouvido a até 300 metros de distância.",
+				"Você pode trazer objetos desde que o peso deles não exceda o que você pode carregar. Você também pode teletransportar uma criatura voluntária do seu tamanho ou menor que esteja carregando equipamento até sua capacidade de carga. A criatura deve estar a até 1,5 metro de você quando você conjurar esta magia, e deve haver um espaço desocupado a até 1,5 metro de seu espaço de destino para a criatura aparecer; caso contrário, a criatura será deixada para trás."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 4º nível ou superior, o dano aumenta em {@scaledamage 3d10|3-9|1d10} para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"trovão"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Thunderclap",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"reprintedAs": [
+				"Thunderclap|XPHB"
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você cria uma explosão de som estrondoso que pode ser ouvido a até 30 metros de distância. Cada criatura dentro do alcance, exceto você, deve realizar um teste de resistência de Constituição ou sofrerá {@damage 1d6} de dano trovejante.",
+				"O dano do feitiço aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "dano de trovão",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"trovão"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCL"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Tidal Wave",
+			"source": "XGE",
+			"page": 168,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma gota de água"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você evoca uma onda de água que cai em uma área dentro do alcance. A área pode ter até 9 metros de comprimento, 3 metros de largura e 3 metros de altura. Cada criatura naquela área deve fazer um teste de resistência de Destreza. Se falhar na resistência, uma criatura sofre {@damage 4d8} de dano de concussão e é derrubada {@condition prone}. Em um teste bem sucedido, uma criatura sofre metade do dano e não é derrubada {@condition prone}. A água então se espalha pelo chão em todas as direções, extinguindo chamas desprotegidas em sua área e até 9 metros dela, e então desaparece."
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Tiny Servant",
+			"source": "XGE",
+			"page": 168,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Você toca um objeto minúsculo e não mágico que não esteja preso a outro objeto ou superfície e que não esteja sendo carregado por outra criatura. O alvo se anima e brota pequenos braços e pernas, tornando-se uma criatura sob seu controle até que a magia termine ou a criatura caia para 0 pontos de vida. Consulte {@creature tiny servant|xge|stat block} para obter suas estatísticas.",
+				"Como uma ação bônus, você pode comandar mentalmente a criatura se ela estiver a até 36 metros de você. (Se você controla múltiplas criaturas com esta mágica, você pode comandar uma ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma.) Você decide qual ação a criatura realizará e para onde ela se moverá durante seu próximo turno, ou você pode emitir um comando simples e geral, como buscar uma chave, ficar de guarda ou empilhar alguns livros. Se você não emitir nenhum comando, o servo não fará nada além de se defender contra criaturas hostis. Uma vez dada uma ordem, o servo continua a segui-la até que sua tarefa seja concluída.",
+				"Quando a criatura chega a 0 pontos de vida, ela reverte à sua forma original e qualquer dano restante é transferido para essa forma."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Ao lançar esta magia usando um espaço de magia de 4º nível ou superior, você pode animar dois objetos adicionais para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"miscTags": [
+				"OBJ",
+				"SMN",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Toll the Dead",
+			"source": "XGE",
+			"page": 169,
+			"reprintedAs": [
+				"Toll the Dead|XPHB"
+			],
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você aponta para uma criatura que pode ver dentro do alcance, e o som de um sino doloroso preenche o ar ao redor dela por um momento. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou sofrerá {@damage 1d8} de dano necrótico. Se o alvo estiver faltando algum de seus pontos de vida, ele sofrerá {@damage 1d12} de dano necrótico.",
+				"O dano do feitiço aumenta em um dado quando você atinge o 5º nível ({@damage 2d8} ou {@damage 2d12}), 11º nível ({@damage 3d8} ou {@damage 3d12}) e 17º nível ({@damage 4d8} ou {@damage 4d12})."
+			],
+			"scalingLevelDice": [
+				{
+					"label": "dano necrótico",
+					"scaling": {
+						"1": "1d8",
+						"5": "2d8",
+						"11": "3d8",
+						"17": "4d8"
+					}
+				},
+				{
+					"label": "dano necrótico à criatura ferida",
+					"scaling": {
+						"1": "1d12",
+						"5": "2d12",
+						"11": "3d12",
+						"17": "4d12"
+					}
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Transmute Rock",
+			"source": "XGE",
+			"page": 169,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 22
+				}
+			],
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "argila e água"
+			},
+			"duration": [
+				{
+					"type": "permanent",
+					"ends": [
+						"dissipar"
+					]
+				}
+			],
+			"entries": [
+				"Você escolhe uma área de pedra ou lama que você possa ver, que caiba em um cubo de 12 metros e esteja dentro do alcance, e escolha um dos seguintes efeitos.",
+				{
+					"type": "entries",
+					"name": "Transmute Rock to Mud",
+					"entries": [
+						"Rochas não-mágicas de qualquer tipo na área tornam-se um volume igual de lama espessa e fluida que permanece durante a duração da magia."
+					]
+				},
+				"O solo na área da magia fica lamacento o suficiente para que as criaturas possam afundar nele. Cada pé que uma criatura move através da lama custa 1,20 metro de movimento, e qualquer criatura no chão quando você conjurar a magia deve fazer um teste de resistência de Força. Uma criatura também deve fazer um teste de resistência quando entrar na área pela primeira vez em um turno ou terminar seu turno ali. Se falhar no salvamento, uma criatura afunda na lama e é {@condition restrained}, embora possa usar uma ação para encerrar a condição {@condition restrained} em si mesma, libertando-se da lama.",
+				"Se você lançar o feitiço no teto, a lama cairá. Qualquer criatura sob a lama quando cair deve fazer um teste de resistência de Destreza. Uma criatura sofre {@damage 4d8} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				{
+					"type": "entries",
+					"name": "Transmute Mud to Rock",
+					"entries": [
+						"Lama não-mágica ou areia movediça em uma área com não mais que 3 metros de profundidade se transforma em pedra macia enquanto a magia durar. Qualquer criatura na lama quando se transformar deve fazer um teste de resistência de Destreza. Se obtiver sucesso, uma criatura é desviada com segurança para a superfície em um espaço desocupado. Se falhar no salvamento, uma criatura se torna {@condition restrained} perto da rocha. Uma criatura {@condition restrained}, ou outra criatura ao alcance, pode usar uma ação para tentar quebrar a rocha obtendo sucesso em um teste de Força {@dc 20} ou causando dano a ela. A rocha tem CA 15 e 25 pontos de vida e é imune a veneno e dano psíquico."
+					]
+				}
+			],
+			"damageImmune": [
+				"veneno",
+				"psíquico"
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"força",
+				"destreza"
+			],
+			"abilityCheck": [
+				"força"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			]
+		},
+		{
+			"name": "Vitriolic Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"reprintedAs": [
+				"Vitriolic Sphere|XPHB"
+			],
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma gota de bile de lesma gigante"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você aponta para um local dentro do alcance, e uma bola brilhante de ácido esmeralda com 30 centímetros de diâmetro se espalha por lá e explode em uma esfera de 6 metros de raio. Cada criatura naquela área deve fazer um teste de resistência de Destreza. Se falhar na resistência, uma criatura sofre {@damage 10d4} de dano de ácido e outro {@damage 5d4} de dano de ácido no final de seu próximo turno. Se obtiver sucesso, a criatura sofre metade do dano inicial e nenhum dano no final do próximo turno."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 5º nível ou superior, o dano inicial aumenta em {@scaledamage 10d4|4-9|2d4} para cada nível do espaço acima do 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"ácido"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Wall of Light",
+			"source": "XGE",
+			"page": 170,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um espelho de mão"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Uma parede cintilante de luz brilhante aparece em um ponto que você escolher dentro do alcance. A parede aparece em qualquer orientação que você escolher: horizontal, vertical ou diagonal. Ele pode flutuar livremente ou pode repousar sobre uma superfície sólida. A parede pode ter até 18 metros de comprimento, 3 metros de altura e 1,5 metro de espessura. A parede bloqueia a linha de visão, mas criaturas e objetos podem passar por ela. Ele emite luz brilhante até 36 metros e luz fraca por mais 36 metros.",
+				"Quando a parede aparecer, cada criatura em sua área deve fazer um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofre {@damage 4d8} de dano radiante e é {@condition blinded} por 1 minuto. Em um salvamento bem-sucedido, sofre metade do dano e não é {@condition blinded}. Uma criatura {@condition blinded} pode fazer um teste de resistência de Constituição no final de cada um de seus turnos, encerrando o efeito sobre si mesma em caso de sucesso.",
+				"Uma criatura que termina seu turno na área da parede sofre {@damage 4d8} de dano radiante.",
+				"Até que a magia termine, você pode usar uma ação para lançar um raio de brilho da parede em uma criatura que você possa ver a até 18 metros dela. Faça um ataque mágico à distância. Ao acertar, o alvo sofre {@damage 4d8} de dano radiante. Quer você acerte ou erre, reduza o comprimento da parede em 3 metros. Se o comprimento da parede cair para 0 metro, a magia termina."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 6º nível ou superior, o dano aumenta em {@scaledamage 4d8|5-9|1d8} para cada nível do espaço acima do 5º."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"LGT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST",
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Sand",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um punhado de areia"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria uma parede de areia rodopiante no chão em um ponto que você pode ver dentro do alcance. Você pode fazer a parede com até 9 metros de comprimento, 3 metros de altura e 3 metros de espessura, e ela desaparece quando a magia termina. Bloqueia a linha de visão, mas não o movimento. Uma criatura está {@condition blinded} enquanto está no espaço da parede e deve gastar 3 pés de movimento para cada 1 pé que se move até lá."
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Wall of Water",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				},
+				{
+					"source": "VGM",
+					"page": 116
+				},
+				{
+					"source": "MOT"
+				}
+			],
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma gota de água"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria uma parede de água no chão em um ponto que você pode ver dentro do alcance. Você pode fazer a parede com até 9 metros de comprimento, 3 metros de altura e 30 centímetros de espessura, ou pode fazer uma parede circular de até 6 metros de diâmetro, 6 metros de altura e 30 centímetros de espessura. A parede desaparece quando o feitiço termina. O espaço da parede é {@quickref difficult terrain||3}.",
+				"Qualquer ataque com arma de longo alcance que entre no espaço da parede tem desvantagem na jogada de ataque, e o dano de fogo é reduzido pela metade se o efeito do fogo passar através da parede para atingir seu alvo. Feitiços que causam dano de frio que atravessam a parede fazem com que a área da parede pela qual eles passam congele (pelo menos uma seção de 1,5 metro quadrado está congelada). Cada seção congelada de 1,5 metro quadrado tem CA 5 e 15 pontos de vida. Reduzir uma seção congelada a 0 pontos de vida a destrói. Quando uma seção é destruída, a água da parede não a enche."
+			],
+			"miscTags": [
+				"DFT",
+				"SGT"
+			],
+			"areaTags": [
+				"W"
+			]
+		},
+		{
+			"name": "Warding Wind",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 2,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Um vento forte (32 quilômetros por hora) sopra ao seu redor em um raio de 3 metros e se move com você, permanecendo centrado em você. O vento dura a duração da magia.",
+				"O vento tem os seguintes efeitos:",
+				{
+					"type": "list",
+					"items": [
+						"It {@condition deafened||deafens} you and other creatures in its area.",
+						"Extingue chamas desprotegidas em sua área, do tamanho de uma tocha ou menor.",
+						"Ele protege vapor, gás e neblina que podem ser dispersados por ventos fortes.",
+						"The area is {@quickref difficult terrain||3} for creatures other than you.",
+						"As jogadas de ataque de ataques com armas de longo alcance têm desvantagem se os ataques passarem contra ou contra o vento."
+					]
+				}
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"miscTags": [
+				"DFT"
+			]
+		},
+		{
+			"name": "Watery Sphere",
+			"source": "XGE",
+			"page": 170,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 23
+				}
+			],
+			"level": 4,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma gota de água"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você conjura uma esfera de água com um raio de 1,5 metro em um ponto que você possa ver dentro do alcance. A esfera pode pairar, mas não a mais de 3 metros do chão. A esfera permanece enquanto durar o feitiço.",
+				"Qualquer criatura no espaço da esfera deve realizar um teste de resistência de Força. Se obtiver sucesso, uma criatura é ejetada daquele espaço para o espaço desocupado mais próximo, à escolha da criatura, fora da esfera. Uma criatura Enorme ou maior obtém sucesso no teste de resistência automaticamente, e uma criatura Grande ou menor pode optar por falhar. Se falhar, uma criatura é {@condition restrained} pela esfera e é engolfada pela água. No final de cada um de seus turnos, um alvo {@condition restrained} pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso.",
+				"A esfera pode conter até quatro criaturas Médias ou menores ou uma criatura Grande. Se a esfera restringe uma criatura que faz com que ela exceda essa capacidade, uma criatura aleatória que já estava {@condition restrained} pela esfera cai dela e cai {@condition prone} em um espaço a até 1,5 metro dela.",
+				"Com uma ação, você pode mover a esfera até 9 metros em linha reta. Se ele se mover sobre um poço, penhasco ou outro declive, ele desce com segurança até pairar 3 metros acima do solo. Qualquer criatura {@condition restrained} próxima à esfera se move com ela. Você pode bater a esfera nas criaturas, forçando-as a fazer o teste de resistência.",
+				"Quando a magia termina, a esfera cai no chão e extingue todas as chamas normais em um raio de 9 metros dela. Qualquer criatura {@condition restrained} atingida pela esfera é derrubada {@condition prone} no espaço onde cai. A água então desaparece."
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Whirlwind",
+			"source": "XGE",
+			"page": 171,
+			"otherSources": [
+				{
+					"source": "EEPC",
+					"page": 24
+				}
+			],
+			"level": 7,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "um pedaço de palha"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Um redemoinho uiva até um ponto que você pode ver no chão, dentro do alcance. O redemoinho é um cilindro de 3 metros de raio e 9 metros de altura centrado nesse ponto. Até que a magia termine, você pode usar sua ação para mover o redemoinho até 9 metros em qualquer direção ao longo do solo. O redemoinho suga quaisquer objetos Médios ou menores que não estejam presos a nada e que não sejam usados ​​ou carregados por ninguém.",
+				"Uma criatura deve fazer um teste de resistência de Destreza na primeira vez em um turno em que ela entrar no redemoinho ou em que o redemoinho entrar em seu espaço, inclusive quando o redemoinho aparecer pela primeira vez. Uma criatura sofre {@damage 10d6} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso. Além disso, uma criatura Grande ou menor que falhar no teste de resistência deve ser bem sucedida em um teste de resistência de Força ou se tornar {@condition restrained} no redemoinho até o feitiço terminar. Quando uma criatura inicia seu turno {@condition restrained} pelo redemoinho, a criatura é puxada 1,5 metro mais alto para dentro dele, a menos que esteja no topo. Uma criatura {@condition restrained} se move com o redemoinho e cai quando a magia termina, a menos que a criatura tenha algum meio de permanecer no ar.",
+				"Uma criatura {@condition restrained} pode usar uma ação para fazer um teste de Força ou Destreza contra sua CD de salvamento de feitiço. Se tiver sucesso, a criatura não será mais {@condition restrained} pelo redemoinho e será arremessada {@dice 3d6 × 10} metros para longe dele em uma direção aleatória."
+			],
+			"damageInflict": [
+				"espancamento"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"destreza",
+				"força"
+			],
+			"abilityCheck": [
+				"força",
+				"destreza"
+			],
+			"miscTags": [
+				"FMV",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Word of Radiance",
+			"source": "XGE",
+			"page": 171,
+			"reprintedAs": [
+				"Word of Radiance|XPHB"
+			],
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 5
+				}
+			},
+			"components": {
+				"v": true,
+				"m": "um símbolo sagrado"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você pronuncia uma palavra divina e um brilho ardente irrompe de você. Cada criatura de sua escolha que você possa ver dentro do alcance deve ser bem sucedida em um teste de resistência de Constituição ou sofrerá {@damage 1d6} de dano radiante.",
+				"O dano do feitiço aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			],
+			"scalingLevelDice": {
+				"label": "dano radiante",
+				"scaling": {
+					"1": "1d6",
+					"5": "2d6",
+					"11": "3d6",
+					"17": "4d6"
+				}
+			},
+			"damageInflict": [
+				"radiante"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Wrath of Nature",
+			"source": "XGE",
+			"page": 171,
+			"level": 5,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você clama aos espíritos da natureza para despertá-los contra seus inimigos. Escolha um ponto que você possa ver dentro do alcance. Os espíritos fazem com que árvores, pedras e grama em um cubo de 18 metros centrado naquele ponto fiquem animados até a magia terminar.",
+				{
+					"type": "entries",
+					"name": "Grasses and Undergrowth",
+					"entries": [
+						"Any area of ground in the cube that is covered by grass or undergrowth is {@quickref difficult terrain||3} for your enemies."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Trees",
+					"entries": [
+						"No início de cada um de seus turnos, cada um de seus inimigos a até 3 metros de qualquer árvore no cubo deve ser bem sucedido em um teste de resistência de Destreza ou sofrerá {@damage 4d6} de dano cortante de galhos chicoteados."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Roots and Vines",
+					"entries": [
+						"No final de cada um de seus turnos, uma criatura de sua escolha que esteja no chão do cubo deve ser bem sucedida em um teste de resistência de Força ou se tornará {@condition restrained} até que a magia termine. Uma criatura {@condition restrained} pode usar uma ação para fazer um teste de Força ({@skill Athletics}) contra sua CD de salvamento de feitiço, encerrando o efeito em si mesma com um sucesso."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rocks",
+					"entries": [
+						"Como uma ação bônus no seu turno, você pode fazer com que uma pedra solta no cubo seja lançada em uma criatura que você possa ver no cubo. Faça um ataque mágico à distância contra o alvo. Ao acertar, o alvo sofre {@damage 3d8} de dano de concussão não mágico e deve ser bem-sucedido em um teste de resistência de Força ou cairá {@condition prone}."
+					]
+				}
+			],
+			"damageInflict": [
+				"espancamento",
+				"cortando"
+			],
+			"conditionInflict": [
+				"prone",
+				"restrained"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"destreza",
+				"força"
+			],
+			"abilityCheck": [
+				"força"
+			],
+			"miscTags": [
+				"DFT",
+				"SGT",
+				"UBA"
+			],
+			"areaTags": [
+				"C",
+				"ST"
+			]
+		},
+		{
+			"name": "Zephyr Strike",
+			"source": "XGE",
+			"page": 171,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você se move como o vento. Até que a magia termine, seu movimento não provoca ataques de oportunidade.",
+				"Uma vez antes do feitiço terminar, você pode obter vantagem em uma jogada de ataque com arma em seu turno. Esse ataque causa {@damage 1d8} de dano de força extra ao acertar. Quer você acerte ou erre, sua velocidade de caminhada aumenta em 9 metros até o final daquele turno."
+			],
+			"damageInflict": [
+				"força"
+			],
+			"miscTags": [
+				"AAD",
+				"ADV"
+			]
+		}
+	]
+}

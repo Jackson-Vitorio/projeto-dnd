@@ -1,0 +1,379 @@
+{
+	"spell": [
+		{
+			"name": "Distort Value",
+			"source": "AI",
+			"page": 75,
+			"level": 1,
+			"school": "eu",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Você precisa arrancar mais algumas peças de ouro de um comerciante enquanto tenta vender aquela estranha estátua de polvo que você libertou do templo do caos? Você precisa minimizar o valor de alguns ativos mágicos quando o coletor de impostos passa por aqui? O valor de distorção cobre você.",
+				"Você lança esta magia em um objeto com não mais que 30 centímetros de lado, dobrando o valor percebido do objeto adicionando floreios ou polimentos ilusórios a ele, ou reduzindo seu valor percebido pela metade com a ajuda de arranhões ilusórios, amassados e outras características desagradáveis. Qualquer um que examine o objeto pode determinar seu verdadeiro valor com um teste bem-sucedido de Inteligência ({@skill Investigation}) contra sua CD de salvamento de feitiço."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 2º nível ou superior, o tamanho máximo do objeto aumenta em 30 centímetros para cada nível do espaço acima do 1º."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fast Friends",
+			"source": "AI",
+			"page": 75,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Quando você precisa garantir que algo seja feito, não pode confiar em promessas vagas, juramentos ou contratos de trabalho vinculativos. Ao lançar esta magia, escolha um humanóide dentro do alcance que possa ver e ouvir você, e que possa entendê-lo. A criatura deve ser bem sucedida em um teste de resistência de Sabedoria ou se tornará {@condition charmed} por você durante a duração. Embora a criatura seja {@condition charmed} desta forma, ela se compromete a realizar quaisquer serviços ou atividades que você solicitar de maneira amigável, da melhor maneira possível.",
+				"Você pode definir novas tarefas para a criatura quando uma tarefa anterior for concluída ou se decidir encerrar a tarefa atual. Se o serviço ou atividade puder causar dano à criatura, ou se entrar em conflito com as atividades e desejos normais da criatura, a criatura pode fazer outro teste de resistência de Sabedoria para tentar encerrar o efeito. Este teste é feito com vantagem se você ou seus companheiros estiverem lutando contra a criatura. Se a atividade resultar em morte certa para a criatura, a magia termina.",
+				"Quando o feitiço termina, a criatura sabe que foi {@condition charmed} sua."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"affectsCreatureType": [
+				"humanoide"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"MT",
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Gab",
+			"source": "AI",
+			"page": 76,
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "que você pega quando fala com outra criatura"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Quando conheci Jim Darkmagic, me perguntei como ele conseguia fazer alguma coisa com aquela roupa. Desde então, aprendi que a maioria de seus talentos envolve ficar em pé e falar. Sua roupa é perfeita para isso."
+					],
+					"by": "Môrgæn"
+				},
+				"Diz-se que Jim Darkmagic inventou esse feitiço, originalmente chamando-o de {@i I said what?!} Você já conversou com o monarca local e acidentalmente mencionou como o filho dele se parece com seu porco favorito de quando você era criança na fazenda da família? Todos nós já estivemos lá! Mas em vez de ser decapitado por um lapso de língua honesto, você pode fingir que isso nunca aconteceu – garantindo que ninguém saiba o que aconteceu.",
+				"Ao lançar esta magia, você remodela habilmente as memórias dos ouvintes em sua área imediata, de modo que cada criatura de sua escolha a até 1,5 metro de você esqueça tudo o que você disse nos últimos 6 segundos. Essas criaturas então se lembram de que você realmente disse as palavras que falou como o componente verbal da magia."
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Incite Greed",
+			"source": "AI",
+			"page": 76,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma joia valendo pelo menos 50 PO",
+					"cost": 5000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ao lançar esta magia, você apresenta a gema usada como componente material e escolhe qualquer número de criaturas dentro do alcance que possam vê-lo. Cada alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou será {@condition charmed} seu até que o feitiço termine ou até que você ou seus companheiros façam algo prejudicial a ele. Enquanto {@condition charmed} está dessa forma, uma criatura não pode fazer nada além de usar seu movimento para se aproximar de você de maneira segura. Enquanto uma criatura afetada estiver a até 1,5 metro de você, ela não poderá se mover, apenas olhará avidamente para a gema que você apresenta.",
+				"No final de cada um de seus turnos, um alvo afetado pode fazer um teste de resistência de Sabedoria. Se tiver sucesso, este efeito termina para aquele alvo."
+			],
+			"conditionInflict": [
+				"charmed"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Jim's Glowing Coin",
+			"source": "AI",
+			"page": 76,
+			"level": 2,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"s": true,
+				"m": "uma moeda",
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Das muitas táticas empregadas pelo mestre mágico e renomado aventureiro Jim Darkmagic, o velho truque da moeda brilhante é um clássico consagrado pelo tempo. Ao lançar a magia, você arremessa a moeda que é o componente material da magia em qualquer local dentro do alcance. A moeda acende como se estivesse sob o efeito de um feitiço {@spell light}. Cada criatura de sua escolha que você possa ver a até 9 metros da moeda deve ser bem sucedida em um teste de resistência de Sabedoria ou ficará distraída enquanto durar. Enquanto distraída, uma criatura tem desvantagem em testes de Sabedoria ({@skill Perception}) e jogadas de iniciativa."
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Jim's Magic Missile",
+			"source": "AI",
+			"page": 76,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"r": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"O míssil mágico de Jim é um feitiço antigo e poderoso, além de ser o nome da minha banda na Wizard Academy."
+					],
+					"by": "Jim Darkmagic"
+				},
+				"Qualquer aprendiz de mago pode lançar um velho e chato míssil mágico. Claro, sempre atinge seu alvo. Bocejar. Acabe com o trabalho enfadonho da magia do seu avô com esta versão melhorada do feitiço, usada por Jim Darkmagic!",
+				"Você cria três dardos de força mágica retorcidos, sibilantes, hipoalergênicos e sem glúten. Cada dardo tem como alvo uma criatura de sua escolha que você possa ver dentro do alcance. Faça um ataque mágico à distância para cada míssil. Ao acertar, um míssil causa {@damage 2d4} de dano de força ao alvo.",
+				"Se a jogada de ataque obtiver um acerto crítico, o alvo desse míssil sofre {@damage 5d4} de dano de força em vez de você causar dano duas vezes por um acerto crítico. Se a jogada de ataque de qualquer míssil for 1, todos os mísseis erram seus alvos e explodem na sua cara, causando 1 de dano de força por míssil a você."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 2º nível ou superior, a magia cria mais um dardo e o componente de royalties aumenta em 1 PO, para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT",
+				"ST"
+			]
+		},
+		{
+			"name": "Motivational Speech",
+			"source": "AI",
+			"page": 77,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Certa vez, ouvi um discurso motivacional de Jim e foram os piores noventa segundos da minha vida. O que Omin vê nele, afinal?"
+					],
+					"by": "Walnut Dankgrass"
+				},
+				"Você se dirige a aliados, funcionários ou espectadores inocentes para exortá-los e inspirá-los à grandeza, tenham eles algo para se entusiasmar ou não. Escolha até cinco criaturas dentro do alcance que possam ouvir você. Durante a duração, cada criatura afetada ganha 5 pontos de vida temporários e tem vantagem em testes de resistência de Sabedoria. Se uma criatura afetada for atingida por um ataque, ela terá vantagem na próxima jogada de ataque que fizer. Uma vez que uma criatura afetada perca os pontos de vida temporários concedidos por esta magia, a magia termina para aquela criatura."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 4º nível ou superior, os pontos de vida temporários aumentam em 5 para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"miscTags": [
+				"ADV",
+				"SGT",
+				"THP"
+			],
+			"areaTags": [
+				"MT"
+			]
+		}
+	]
+}

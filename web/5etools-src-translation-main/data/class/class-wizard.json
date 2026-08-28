@@ -1,0 +1,4680 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"subclass",
+			"subclassFeature"
+		]
+	},
+	"class": [
+		{
+			"name": "Wizard",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Wizard|XPHB"
+			],
+			"edition": "classic",
+			"hd": {
+				"number": 1,
+				"faces": 6
+			},
+			"proficiency": [
+				"interno",
+				"sabia"
+			],
+			"spellcastingAbility": "interno",
+			"casterProgression": "cheio",
+			"preparedSpells": "<$nível$> + <$int_mod$>",
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
+			"spellsKnownProgressionFixed": [
+				6,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"spellsKnownProgressionFixedAllowLowerLevel": true,
+			"startingProficiencies": {
+				"weapons": [
+					"{@item dagger|phb|daggers}",
+					"{@item dart|phb|darts}",
+					"{@item sling|phb|slings}",
+					"{@item quarterstaff|phb|quarterstaffs}",
+					"{@item light crossbow|phb|light crossbows}"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"insight",
+								"investigation",
+								"medicine",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item quarterstaff|phb} or (b) a {@item dagger|phb}",
+					"(a) a {@item component pouch|phb} or (b) an {@item arcane focus|phb}",
+					"(a) a {@item scholar's pack|phb} or (b) an {@item explorer's pack|phb}",
+					"A {@item spellbook|phb}"
+				],
+				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"a": [
+							"quarterstaff|phb"
+						],
+						"b": [
+							"dagger|phb"
+						]
+					},
+					{
+						"a": [
+							"component pouch|phb"
+						],
+						"b": [
+							{
+								"equipmentType": "focoSpellcastingArcano"
+							}
+						]
+					},
+					{
+						"a": [
+							"scholar's pack|phb"
+						],
+						"b": [
+							"explorer's pack|phb"
+						]
+					},
+					{
+						"_": [
+							"spellbook|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"int": 13
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Cantrips Known|spells|level=0|class=Wizard}"
+					],
+					"rows": [
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=Wizard}",
+						"{@filter 2nd|spells|level=2|class=Wizard}",
+						"{@filter 3rd|spells|level=3|class=Wizard}",
+						"{@filter 4th|spells|level=4|class=Wizard}",
+						"{@filter 5th|spells|level=5|class=Wizard}",
+						"{@filter 6th|spells|level=6|class=Wizard}",
+						"{@filter 7th|spells|level=7|class=Wizard}",
+						"{@filter 8th|spells|level=8|class=Wizard}",
+						"{@filter 9th|spells|level=9|class=Wizard}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Arcane Recovery|Wizard||1",
+				"Spellcasting|Wizard||1",
+				{
+					"classFeature": "Arcane Tradition|Wizard||2",
+					"gainSubclassFeature": true
+				},
+				"Cantrip Formulas|Wizard||3|TCE",
+				"Ability Score Improvement|Wizard||4",
+				{
+					"classFeature": "Arcane Tradition feature|Wizard||6",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard||8",
+				{
+					"classFeature": "Arcane Tradition feature|Wizard||10",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard||12",
+				{
+					"classFeature": "Arcane Tradition feature|Wizard||14",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard||16",
+				"Spell Mastery|Wizard||18",
+				"Ability Score Improvement|Wizard||19",
+				"Signature Spells|Wizard||20"
+			],
+			"subclassTitle": "Tradição Arcana",
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Wizard",
+			"source": "XPHB",
+			"page": 164,
+			"freeRules2024": true,
+			"edition": "one",
+			"primaryAbility": [
+				{
+					"int": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 6
+			},
+			"proficiency": [
+				"interno",
+				"sabia"
+			],
+			"spellcastingAbility": "interno",
+			"casterProgression": "cheio",
+			"preparedSpellsProgression": [
+				4,
+				5,
+				6,
+				7,
+				9,
+				10,
+				11,
+				12,
+				14,
+				15,
+				16,
+				16,
+				17,
+				18,
+				19,
+				21,
+				22,
+				23,
+				24,
+				25
+			],
+			"preparedSpellsChange": "descanso longo",
+			"cantripProgression": [
+				3,
+				3,
+				3,
+				4,
+				4,
+				4,
+				4,
+				4,
+				4,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5,
+				5
+			],
+			"spellsKnownProgressionFixed": [
+				6,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			],
+			"spellsKnownProgressionFixedAllowLowerLevel": true,
+			"featProgression": [
+				{
+					"name": "Epic Boon",
+					"category": [
+						"BE"
+					],
+					"progression": {
+						"19": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"weapons": [
+					"simples"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"arcana",
+								"history",
+								"insight",
+								"investigation",
+								"medicine",
+								"religion"
+							],
+							"count": 2
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "dagger|xphb",
+								"quantity": 2
+							},
+							{
+								"item": "quarterstaff|xphb"
+							},
+							{
+								"item": "robe|xphb"
+							},
+							{
+								"special": "Livro de feitiços"
+							},
+							{
+								"item": "scholar's pack|xphb"
+							},
+							{
+								"value": 500
+							}
+						],
+						"B": [
+							{
+								"value": 5500
+							}
+						]
+					}
+				],
+				"entries": [
+					"{@i Choose A or B:} (A) 2 {@item Dagger|XPHB|Daggers}, {@item Arcane Focus|XPHB} ({@item Quarterstaff|XPHB}), {@item Robe|XPHB}, Livro de Feitiços, {@item Scholar's Pack|XPHB} e 5 GP; ou (B) 55 GP"
+				]
+			},
+			"multiclassing": {},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Cantrips|spells|level=0|class=Wizard}",
+						"{@filter Prepared Spells|spells|level=!0|class=Wizard}"
+					],
+					"rows": [
+						[
+							3,
+							4
+						],
+						[
+							3,
+							5
+						],
+						[
+							3,
+							6
+						],
+						[
+							4,
+							7
+						],
+						[
+							4,
+							9
+						],
+						[
+							4,
+							10
+						],
+						[
+							4,
+							11
+						],
+						[
+							4,
+							12
+						],
+						[
+							4,
+							14
+						],
+						[
+							5,
+							15
+						],
+						[
+							5,
+							16
+						],
+						[
+							5,
+							16
+						],
+						[
+							5,
+							17
+						],
+						[
+							5,
+							18
+						],
+						[
+							5,
+							19
+						],
+						[
+							5,
+							21
+						],
+						[
+							5,
+							22
+						],
+						[
+							5,
+							23
+						],
+						[
+							5,
+							24
+						],
+						[
+							5,
+							25
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=Wizard}",
+						"{@filter 2nd|spells|level=2|class=Wizard}",
+						"{@filter 3rd|spells|level=3|class=Wizard}",
+						"{@filter 4th|spells|level=4|class=Wizard}",
+						"{@filter 5th|spells|level=5|class=Wizard}",
+						"{@filter 6th|spells|level=6|class=Wizard}",
+						"{@filter 7th|spells|level=7|class=Wizard}",
+						"{@filter 8th|spells|level=8|class=Wizard}",
+						"{@filter 9th|spells|level=9|class=Wizard}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							1,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							1,
+							1,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							3,
+							2,
+							2,
+							1,
+							1
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Spellcasting|Wizard|XPHB|1",
+				"Ritual Adept|Wizard|XPHB|1",
+				"Arcane Recovery|Wizard|XPHB|1",
+				"Scholar|Wizard|XPHB|2",
+				{
+					"classFeature": "Wizard Subclass|Wizard|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard|XPHB|4",
+				"Memorize Spell|Wizard|XPHB|5",
+				{
+					"classFeature": "Subclass Feature|Wizard|XPHB|6",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard|XPHB|8",
+				{
+					"classFeature": "Subclass Feature|Wizard|XPHB|10",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard|XPHB|12",
+				{
+					"classFeature": "Subclass Feature|Wizard|XPHB|14",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Wizard|XPHB|16",
+				"Spell Mastery|Wizard|XPHB|18",
+				"Epic Boon|Wizard|XPHB|19",
+				"Signature Spells|Wizard|XPHB|20"
+			],
+			"subclassTitle": "Subclasse de assistente",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "School of Abjuration",
+			"shortName": "Abjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 115,
+			"reprintedAs": [
+				"Abjurer|Wizard|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Abjuration|Wizard||Abjuration||2",
+				"Projected Ward|Wizard||Abjuration||6",
+				"Improved Abjuration|Wizard||Abjuration||10",
+				"Spell Resistance|Wizard||Abjuration||14"
+			]
+		},
+		{
+			"name": "School of Abjuration",
+			"shortName": "Abjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Abjuration",
+				"source": "PHB",
+				"shortName": "Abjuration",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Abjuration|Wizard|XPHB|Abjuration||3",
+				"Projected Ward|Wizard||Abjuration||6",
+				"Improved Abjuration|Wizard||Abjuration||10",
+				"Spell Resistance|Wizard||Abjuration||14"
+			]
+		},
+		{
+			"name": "School of Conjuration",
+			"shortName": "Conjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 116,
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Conjuration|Wizard||Conjuration||2",
+				"Benign Transposition|Wizard||Conjuration||6",
+				"Focused Conjuration|Wizard||Conjuration||10",
+				"Durable Summons|Wizard||Conjuration||14"
+			]
+		},
+		{
+			"name": "School of Conjuration",
+			"shortName": "Conjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Conjuration",
+				"source": "PHB",
+				"shortName": "Conjuration",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Conjuration|Wizard|XPHB|Conjuration||3",
+				"Benign Transposition|Wizard||Conjuration||6",
+				"Focused Conjuration|Wizard||Conjuration||10",
+				"Durable Summons|Wizard||Conjuration||14"
+			]
+		},
+		{
+			"name": "School of Divination",
+			"shortName": "Divination",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 116,
+			"reprintedAs": [
+				"Diviner|Wizard|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Divination|Wizard||Divination||2",
+				"Expert Divination|Wizard||Divination||6",
+				"The Third Eye|Wizard||Divination||10",
+				"Greater Portent|Wizard||Divination||14"
+			]
+		},
+		{
+			"name": "School of Divination",
+			"shortName": "Divination",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Divination",
+				"source": "PHB",
+				"shortName": "Divination",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Divination|Wizard|XPHB|Divination||3",
+				"Expert Divination|Wizard||Divination||6",
+				"The Third Eye|Wizard||Divination||10",
+				"Greater Portent|Wizard||Divination||14"
+			]
+		},
+		{
+			"name": "School of Enchantment",
+			"shortName": "Enchantment",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 117,
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Enchantment|Wizard||Enchantment||2",
+				"Instinctive Charm|Wizard||Enchantment||6",
+				"Split Enchantment|Wizard||Enchantment||10",
+				"Alter Memories|Wizard||Enchantment||14"
+			]
+		},
+		{
+			"name": "School of Enchantment",
+			"shortName": "Enchantment",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Enchantment",
+				"source": "PHB",
+				"shortName": "Enchantment",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Enchantment|Wizard|XPHB|Enchantment||3",
+				"Instinctive Charm|Wizard||Enchantment||6",
+				"Split Enchantment|Wizard||Enchantment||10",
+				"Alter Memories|Wizard||Enchantment||14"
+			]
+		},
+		{
+			"name": "School of Evocation",
+			"shortName": "Evocation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Evoker|Wizard|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Evocation|Wizard||Evocation||2",
+				"Potent Cantrip|Wizard||Evocation||6",
+				"Empowered Evocation|Wizard||Evocation||10",
+				"Overchannel|Wizard||Evocation||14"
+			]
+		},
+		{
+			"name": "School of Evocation",
+			"shortName": "Evocation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Evocation",
+				"source": "PHB",
+				"shortName": "Evocation",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Evocation|Wizard|XPHB|Evocation||3",
+				"Potent Cantrip|Wizard||Evocation||6",
+				"Empowered Evocation|Wizard||Evocation||10",
+				"Overchannel|Wizard||Evocation||14"
+			]
+		},
+		{
+			"name": "School of Illusion",
+			"shortName": "Illusion",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 118,
+			"reprintedAs": [
+				"Illusionist|Wizard|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"ilusão menor#c"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"School of Illusion|Wizard||Illusion||2",
+				"Malleable Illusions|Wizard||Illusion||6",
+				"Illusory Self|Wizard||Illusion||10",
+				"Illusory Reality|Wizard||Illusion||14"
+			]
+		},
+		{
+			"name": "School of Illusion",
+			"shortName": "Illusion",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Illusion",
+				"source": "PHB",
+				"shortName": "Illusion",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Illusion|Wizard|XPHB|Illusion||3",
+				"Malleable Illusions|Wizard||Illusion||6",
+				"Illusory Self|Wizard||Illusion||10",
+				"Illusory Reality|Wizard||Illusion||14"
+			]
+		},
+		{
+			"name": "School of Necromancy",
+			"shortName": "Necromancy",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 118,
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Necromancy|Wizard||Necromancy||2",
+				"Undead Thralls|Wizard||Necromancy||6",
+				"Inured to Undeath|Wizard||Necromancy||10",
+				"Command Undead|Wizard||Necromancy||14"
+			]
+		},
+		{
+			"name": "School of Necromancy",
+			"shortName": "Necromancy",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Necromancy",
+				"source": "PHB",
+				"shortName": "Necromancy",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Necromancy|Wizard|XPHB|Necromancy||3",
+				"Undead Thralls|Wizard||Necromancy||6",
+				"Inured to Undeath|Wizard||Necromancy||10",
+				"Command Undead|Wizard||Necromancy||14"
+			]
+		},
+		{
+			"name": "School of Transmutation",
+			"shortName": "Transmutation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 119,
+			"edition": "classic",
+			"subclassFeatures": [
+				"School of Transmutation|Wizard||Transmutation||2",
+				"Transmuter's Stone|Wizard||Transmutation||6",
+				"Shapechanger|Wizard||Transmutation||10",
+				"Master Transmuter|Wizard||Transmutation||14"
+			]
+		},
+		{
+			"name": "School of Transmutation",
+			"shortName": "Transmutation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "School of Transmutation",
+				"source": "PHB",
+				"shortName": "Transmutation",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"School of Transmutation|Wizard|XPHB|Transmutation||3",
+				"Transmuter's Stone|Wizard||Transmutation||6",
+				"Shapechanger|Wizard||Transmutation||10",
+				"Master Transmuter|Wizard||Transmutation||14"
+			]
+		},
+		{
+			"name": "War Magic",
+			"shortName": "War",
+			"source": "XGE",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 59,
+			"edition": "classic",
+			"subclassFeatures": [
+				"War Magic|Wizard||War|XGE|2",
+				"Power Surge|Wizard||War|XGE|6",
+				"Durable Magic|Wizard||War|XGE|10",
+				"Deflecting Shroud|Wizard||War|XGE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "War Magic",
+			"shortName": "War",
+			"source": "XGE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "War Magic",
+				"source": "XGE",
+				"shortName": "War",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"War Magic|Wizard|XPHB|War|XGE|3",
+				"Power Surge|Wizard||War|XGE|6",
+				"Durable Magic|Wizard||War|XGE|10",
+				"Deflecting Shroud|Wizard||War|XGE|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "War Magic",
+					"source": "XGE",
+					"shortName": "War",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Chronurgy Magic",
+			"shortName": "Chronurgy",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 184,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"1": [
+							{
+								"all": "source=EGW"
+							}
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Chronurgy Magic|Wizard||Chronurgy|EGW|2",
+				"Momentary Stasis|Wizard||Chronurgy|EGW|6",
+				"Arcane Abeyance|Wizard||Chronurgy|EGW|10",
+				"Convergent Future|Wizard||Chronurgy|EGW|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Chronurgy Magic",
+			"shortName": "Chronurgy",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Chronurgy Magic",
+				"source": "EGW",
+				"shortName": "Chronurgy",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"Chronurgy Magic|Wizard|XPHB|Chronurgy|EGW|3",
+				"Momentary Stasis|Wizard||Chronurgy|EGW|6",
+				"Arcane Abeyance|Wizard||Chronurgy|EGW|10",
+				"Convergent Future|Wizard||Chronurgy|EGW|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Chronurgy Magic",
+					"source": "EGW",
+					"shortName": "Chronurgy",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Graviturgy Magic",
+			"shortName": "Graviturgy",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 185,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"expanded": {
+						"1": [
+							{
+								"all": "source=EGW"
+							}
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Graviturgy Magic|Wizard||Graviturgy|EGW|2",
+				"Gravity Well|Wizard||Graviturgy|EGW|6",
+				"Violent Attraction|Wizard||Graviturgy|EGW|10",
+				"Event Horizon|Wizard||Graviturgy|EGW|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Graviturgy Magic",
+			"shortName": "Graviturgy",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Graviturgy Magic",
+				"source": "EGW",
+				"shortName": "Graviturgy",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"Graviturgy Magic|Wizard|XPHB|Graviturgy|EGW|3",
+				"Gravity Well|Wizard||Graviturgy|EGW|6",
+				"Violent Attraction|Wizard||Graviturgy|EGW|10",
+				"Event Horizon|Wizard||Graviturgy|EGW|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Graviturgy Magic",
+					"source": "EGW",
+					"shortName": "Graviturgy",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Bladesinging",
+			"shortName": "Bladesinging",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Bladesinging|Wizard||Bladesinging|TCE|2",
+				"Extra Attack|Wizard||Bladesinging|TCE|6",
+				"Song of Defense|Wizard||Bladesinging|TCE|10",
+				"Song of Victory|Wizard||Bladesinging|TCE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Bladesinging",
+			"shortName": "Bladesinging",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Bladesinging",
+				"source": "TCE",
+				"shortName": "Bladesinging",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"Bladesinging|Wizard|XPHB|Bladesinging|TCE|3",
+				"Extra Attack|Wizard||Bladesinging|TCE|6",
+				"Song of Defense|Wizard||Bladesinging|TCE|10",
+				"Song of Victory|Wizard||Bladesinging|TCE|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Bladesinging",
+					"source": "TCE",
+					"shortName": "Bladesinging",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Order of Scribes",
+			"shortName": "Scribes",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 77,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Order of Scribes|Wizard||Scribes|TCE|2",
+				"Manifest Mind|Wizard||Scribes|TCE|6",
+				"Master Scrivener|Wizard||Scribes|TCE|10",
+				"One with the Word|Wizard||Scribes|TCE|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Order of Scribes",
+			"shortName": "Scribes",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Order of Scribes",
+				"source": "TCE",
+				"shortName": "Scribes",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"Order of Scribes|Wizard|XPHB|Scribes|TCE|3",
+				"Manifest Mind|Wizard||Scribes|TCE|6",
+				"Master Scrivener|Wizard||Scribes|TCE|10",
+				"One with the Word|Wizard||Scribes|TCE|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Order of Scribes",
+					"source": "TCE",
+					"shortName": "Scribes",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Blood Magic",
+			"shortName": "Blood Magic",
+			"source": "TDCSR",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 178,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Blood Magic|Wizard|PHB|Blood Magic|TDCSR|2",
+				"Bond of Mutual Suffering|Wizard|PHB|Blood Magic|TDCSR|6",
+				"Glyph of Hemorrhaging|Wizard|PHB|Blood Magic|TDCSR|10",
+				"Bond of Mutual Suffering (14th Level)|Wizard|PHB|Blood Magic|TDCSR|14",
+				"Thicker than Water|Wizard|PHB|Blood Magic|TDCSR|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Blood Magic",
+			"shortName": "Blood Magic",
+			"source": "TDCSR",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Blood Magic",
+				"source": "TDCSR",
+				"shortName": "Blood Magic",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"subclassFeatures": [
+				"Blood Magic|Wizard|XPHB|Blood Magic|TDCSR|3",
+				"Bond of Mutual Suffering|Wizard|PHB|Blood Magic|TDCSR|6",
+				"Glyph of Hemorrhaging|Wizard|PHB|Blood Magic|TDCSR|10",
+				"Bond of Mutual Suffering (14th Level)|Wizard|PHB|Blood Magic|TDCSR|14",
+				"Thicker than Water|Wizard|PHB|Blood Magic|TDCSR|14"
+			],
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Blood Magic",
+					"source": "TDCSR",
+					"shortName": "Blood Magic",
+					"className": "Wizard",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Abjurer",
+			"shortName": "Abjurer",
+			"source": "XPHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"page": 172,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"10": [
+							"counterspell|xphb",
+							"dispel magic|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Abjurer|Wizard|XPHB|Abjurer|XPHB|3",
+				"Projected Ward|Wizard|XPHB|Abjurer|XPHB|6",
+				"Spell Breaker|Wizard|XPHB|Abjurer|XPHB|10",
+				"Spell Resistance|Wizard|XPHB|Abjurer|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Diviner",
+			"shortName": "Diviner",
+			"source": "XPHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"page": 173,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"innate": {
+						"10": [
+							"see invisibility|xphb"
+						]
+					},
+					"known": {
+						"3": [
+							{
+								"choose": "nível=0;1;2|classe=Assistente|escola=D"
+							},
+							{
+								"choose": "nível=0;1;2|classe=Assistente|escola=D"
+							}
+						],
+						"5": [
+							{
+								"choose": "nível=0;1;2;3|classe=Assistente|escola=D"
+							}
+						],
+						"7": [
+							{
+								"choose": "nível=0;1;2;3;4|classe=Assistente|escola=D"
+							}
+						],
+						"9": [
+							{
+								"choose": "nível=0;1;2;3;4;5|classe=Assistente|escola=D"
+							}
+						],
+						"11": [
+							{
+								"choose": "nível=0;1;2;3;4;5;6|classe=Assistente|escola=D"
+							}
+						],
+						"13": [
+							{
+								"choose": "nível=0;1;2;3;4;5;6;7|classe=Assistente|escola=D"
+							}
+						],
+						"15": [
+							{
+								"choose": "nível=0;1;2;3;4;5;6;7;8|classe=Assistente|escola=D"
+							}
+						],
+						"17": [
+							{
+								"choose": "nível=0;1;2;3;4;5;6;7;8;9|classe=Assistente|escola=D"
+							}
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Diviner|Wizard|XPHB|Diviner|XPHB|3",
+				"Expert Divination|Wizard|XPHB|Diviner|XPHB|6",
+				"The Third Eye|Wizard|XPHB|Diviner|XPHB|10",
+				"Greater Portent|Wizard|XPHB|Diviner|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Evoker",
+			"shortName": "Evoker",
+			"source": "XPHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"edition": "one",
+			"subclassFeatures": [
+				"Evoker|Wizard|XPHB|Evoker|XPHB|3",
+				"Sculpt Spells|Wizard|XPHB|Evoker|XPHB|6",
+				"Empowered Evocation|Wizard|XPHB|Evoker|XPHB|10",
+				"Overchannel|Wizard|XPHB|Evoker|XPHB|14"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Illusionist",
+			"shortName": "Illusionist",
+			"source": "XPHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"page": 175,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"minor illusion|xphb#c"
+						]
+					},
+					"prepared": {
+						"6": [
+							"summon beast|xphb",
+							"summon fey|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Illusionist|Wizard|XPHB|Illusionist|XPHB|3",
+				"Phantasmal Creatures|Wizard|XPHB|Illusionist|XPHB|6",
+				"Illusory Self|Wizard|XPHB|Illusionist|XPHB|10",
+				"Illusory Reality|Wizard|XPHB|Illusionist|XPHB|14"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Arcane Recovery",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Você aprendeu a recuperar parte de sua energia mágica estudando seu livro de feitiços. Uma vez por dia, ao terminar um descanso curto, você pode escolher espaços de magia gastos para recuperar. Os espaços de magia podem ter um nível combinado igual ou inferior à metade do seu nível de mago (arredondado para cima), e nenhum dos espaços pode ser de 6º nível ou superior.",
+				"Por exemplo, se você for um mago de 4º nível, poderá recuperar até dois níveis de espaços de magia. Você pode recuperar um espaço de magia de 2º nível ou dois espaços de magia de 1º nível."
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Como estudante de magia arcana, você possui um livro de feitiços contendo magias que mostram os primeiros vislumbres de seu verdadeiro poder. Consulte {@book chapter 10|PHB|10} para as regras gerais de lançamento de feitiços e {@book chapter 11|PHB|11} para {@filter wizard spell list|spells|class=wizard}.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"No 1º nível, você conhece três truques à sua escolha da lista de magias do mago. Você aprende truques adicionais de mago à sua escolha em níveis mais altos, como mostrado na coluna Truques Conhecidos da tabela Mago."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellbook",
+					"entries": [
+						"No 1º nível, você tem um grimório contendo seis {@filter wizard spells|spells|class=wizard} de 1º nível à sua escolha. Seu grimório é o repositório das magias de mago que você conhece, exceto seus truques, que estão fixados em sua mente."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Preparing and Casting Spells",
+					"entries": [
+						"A tabela de Mago mostra quantos espaços de magia você tem para lançar suas magias de mago de 1º nível e superiores. Para conjurar uma dessas magias, você deve gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.",
+						"Você prepara a lista de feitiços de mago que estão disponíveis para serem lançados. Para fazer isso, escolha um número de magias de mago do seu grimório igual ao seu modificador de Inteligência + seu nível de mago (mínimo de uma magia). As magias devem ser de um nível para o qual você tenha espaços de magia.",
+						"Por exemplo, se você for um mago de 3º nível, terá quatro espaços de magia de 1º nível e dois de 2º nível. Com Inteligência 16, sua lista de magias preparadas pode incluir seis magias de 1º ou 2º nível, em qualquer combinação, escolhidas em seu grimório. Se você preparar o feitiço de 1º nível {@spell magic missile}, poderá lançá-lo usando um slot de 1º ou 2º nível. Lançar a magia não a remove da sua lista de magias preparadas.",
+						"Você pode alterar sua lista de magias preparadas ao terminar um descanso longo. Preparar uma nova lista de magias de mago requer tempo gasto estudando seu livro de feitiços e memorizando os encantamentos e gestos que você deve fazer para conjurar a magia: pelo menos 1 minuto por nível de magia para cada magia em sua lista."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de mago, já que você aprende seus feitiços de mago através de estudo e memorização dedicados. Você usa sua Inteligência sempre que uma magia se refere à sua habilidade de lançar magias. Além disso, você usa seu modificador de Inteligência ao definir a CD do teste de resistência para uma magia de mago que você conjurou e ao fazer uma jogada de ataque com uma.",
+						{
+							"type": "abilityDc",
+							"name": "Spell",
+							"attributes": [
+								"interno"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "Spell",
+							"attributes": [
+								"interno"
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ritual Casting",
+					"entries": [
+						"Você pode lançar uma magia de mago como um ritual se essa magia tiver a etiqueta ritual e você tiver a magia em seu livro de feitiços. Você não precisa ter o feitiço preparado."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Focus",
+					"entries": [
+						"Você pode usar um {@item arcane focus|phb} como foco de lançamento de feitiços para seus feitiços de mago."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Learning Spells of 1st Level and Higher",
+					"entries": [
+						"Cada vez que você ganha um nível de mago, você pode adicionar duas magias de mago de sua escolha ao seu grimório. Cada uma dessas magias deve ser de um nível para o qual você possui espaços de magia, conforme mostrado na tabela do Mago. Em suas aventuras, você poderá encontrar outras magias que você pode adicionar ao seu grimório (veja “Seu grimório”)."
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Your Spellbook",
+					"entries": [
+						"Os feitiços que você adiciona ao seu livro de feitiços à medida que ganha níveis refletem a pesquisa misteriosa que você conduz por conta própria, bem como os avanços intelectuais que você obteve sobre a natureza do multiverso. Você pode encontrar outros feitiços durante suas aventuras. Você pode descobrir um feitiço gravado em um pergaminho no baú de um bruxo malvado, por exemplo, ou em um livro empoeirado em uma biblioteca antiga.",
+						"Um livro de feitiços não contém truques.",
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "Copying a Spell into the Book",
+									"entries": [
+										"Quando você encontrar uma magia de mago de 1º nível ou superior, você pode adicioná-la ao seu grimório se ela for de um nível de magia que você possa preparar e se você tiver tempo para decifrá-la e copiá-la.",
+										"Copiar uma magia em seu livro de feitiços envolve reproduzir a forma básica da magia e depois decifrar o sistema único de notação usado pelo mago que a escreveu. Você deve praticar o feitiço até entender os sons ou gestos necessários e depois transcrevê-lo em seu livro de feitiços usando sua própria notação.",
+										"Para cada nível do feitiço, o processo leva 2 horas e custa 50 PO. O custo representa os componentes materiais que você gasta ao experimentar a magia para dominá-la, bem como as tintas finas necessárias para registrá-la. Depois de gastar esse tempo e dinheiro, você poderá preparar o feitiço da mesma forma que seus outros feitiços.",
+										{
+											"type": "entries",
+											"name": "Copying from a Spell Scroll",
+											"source": "DMG",
+											"page": 139,
+											"entries": [
+												"Uma magia de mago em um pergaminho de magia pode ser copiada da mesma forma que as magias em grimórios podem ser copiadas. Quando você copia uma magia de um pergaminho de magia, você deve ter sucesso em um teste de Inteligência ({@skill Arcana}) com uma CD igual a 10 + o nível da magia. Se o teste for bem-sucedido, a magia foi copiada com sucesso. Quer o teste seja bem sucedido ou falhe, o pergaminho mágico é destruído."
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "Replacing the Book",
+									"entries": [
+										"Você pode copiar uma magia do seu próprio grimório para outro livro — por exemplo, se quiser fazer uma cópia de segurança do seu grimório. Isto é como copiar um novo feitiço em seu livro de feitiços, mas mais rápido e fácil, já que você entende sua própria notação e já sabe como lançar o feitiço. Você precisa gastar apenas 1 hora e 10 PO para cada nível da magia copiada.",
+										"Se você perder seu livro de feitiços, poderá usar o mesmo procedimento para transcrever os feitiços que preparou em um novo livro de feitiços. Preencher o restante do seu livro de feitiços exige que você encontre novos feitiços para fazer isso, normalmente. Por esta razão, muitos magos mantêm livros de feitiços de backup em um local seguro."
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"name": "The Book's Appearance",
+									"entries": [
+										"Seu livro de feitiços é uma compilação única de feitiços, com seus próprios floreios decorativos e notas de margem. Pode ser um volume de couro simples e funcional que você recebeu como presente de seu mestre, um tomo com bordas douradas finamente encadernado que você encontrou em uma biblioteca antiga ou até mesmo uma coleção solta de notas reunidas depois que você perdeu seu livro de feitiços anterior em um acidente."
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Arcane Tradition",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Ao atingir o 2º nível, você escolhe uma tradição arcana da lista de tradições disponíveis, moldando sua prática de magia. Sua escolha concede características no 2º nível e novamente no 6º, 10º e 14º níveis."
+			]
+		},
+		{
+			"name": "Cantrip Formulas",
+			"source": "TCE",
+			"page": 75,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 3rd-level wizard {@variantrule optional class features|tce|optional feature}}",
+				"Você escreveu um conjunto de fórmulas misteriosas em seu livro de feitiços que você pode usar para formular um truque em sua mente. Sempre que você terminar um descanso longo e consultar essas fórmulas em seu livro de feitiços, você poderá substituir um truque de mago que você conhece por outro truque da lista de magias de mago."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"Quando você alcança o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"No 6º nível, você ganha uma característica concedida pela sua Tradição Arcana."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"Quando você alcança o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"No 10º nível, você ganha uma característica concedida pela sua Tradição Arcana."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"Quando você alcança o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Arcane Tradition feature",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"No 14º nível, você ganha uma característica concedida pela sua Tradição Arcana."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"Quando você atinge o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Spell Mastery",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"No 18º nível, você alcançou tal domínio sobre certas magias que pode lançá-las à vontade. Escolha uma magia de mago de 1º nível e uma magia de mago de 2º nível que estejam em seu grimório. Você pode lançar essas magias em seu nível mais baixo sem gastar um espaço de magia quando elas estiverem preparadas. Se você quiser lançar qualquer magia em um nível superior, você deve gastar um espaço de magia normalmente.",
+				"Ao passar 8 horas estudando, você pode trocar um ou ambos os feitiços escolhidos por feitiços diferentes do mesmo nível."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"Quando você atinge o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Signature Spells",
+			"source": "PHB",
+			"page": 112,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"Ao atingir o 20º nível, você ganha domínio sobre duas magias poderosas e pode lançá-las com pouco esforço. Escolha duas magias de mago de 3º nível em seu grimório como suas magias características. Você sempre tem essas magias preparadas, elas não contam no número de magias que você preparou e você pode lançar cada uma delas uma vez no 3º nível sem gastar um espaço de magia. Ao fazer isso, você não poderá fazê-lo novamente até terminar um descanso curto ou longo.",
+				"Se você quiser lançar qualquer magia em um nível superior, você deve gastar um espaço de magia normalmente."
+			]
+		},
+		{
+			"name": "Arcane Recovery",
+			"source": "XPHB",
+			"page": 155,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você pode recuperar um pouco de sua energia mágica estudando seu livro de feitiços. Ao terminar um {@variantrule Short Rest|XPHB}, você pode escolher espaços de feitiço gastos para recuperar. Os espaços de magia podem ter um nível combinado igual a não mais que metade do seu nível de Mago (arredondado para cima), e nenhum dos espaços pode ser de nível 6 ou superior. Por exemplo, se você for um Mago de nível 4, você pode recuperar até dois níveis de espaços de magia, recuperando um espaço de magia de nível 2 ou dois espaços de magia de nível 1.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "Ritual Adept",
+			"source": "XPHB",
+			"page": 155,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você pode lançar qualquer feitiço como {@variantrule Ritual|XPHB} se esse feitiço tiver a tag {@variantrule Ritual|XPHB} e o feitiço estiver em seu livro de feitiços. Você não precisa ter o feitiço preparado, mas deve ler o livro para lançar um feitiço dessa maneira."
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "XPHB",
+			"page": 165,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Como estudante de magia arcana, você aprendeu a lançar feitiços. Veja {@book chapter 7|XPHB|7} para as regras sobre lançamento de feitiços. As informações abaixo detalham como você usa essas regras com feitiços de mago, que aparecem em {@filter Wizard spell list|spells|class=Wizard} posteriormente na descrição da classe.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Cantrips",
+							"entries": [
+								"Você conhece três truques de Mago à sua escolha. {@spell Light|XPHB}, {@spell Mage Hand|XPHB} e {@spell Ray of Frost|XPHB} são recomendados. Sempre que você terminar um {@variantrule Long Rest|XPHB}, você pode substituir um de seus truques deste recurso por outro truque do Wizard de sua escolha.",
+								"Ao atingir os níveis 4 e 10 do Wizard, você aprende outro truque do Wizard de sua escolha, conforme mostrado na coluna Truques da tabela Recursos do Wizard."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellbook",
+							"entries": [
+								"Seu aprendizado mágico culminou na criação de um livro único: seu livro de feitiços. É um objeto minúsculo que pesa 3 libras, contém 100 páginas e pode ser lido apenas por você ou por alguém que lançou {@spell Identify|XPHB}. Você determina a aparência e os materiais do livro, como um tomo com bordas douradas ou uma coleção de pergaminho encadernado com barbante.",
+								"O livro contém os feitiços de nível 1+ que você conhece. Começa com seis feitiços de mago de nível 1 à sua escolha. {@spell Detect Magic|XPHB}, {@spell Feather Fall|XPHB}, {@spell Mage Armor|XPHB}, {@spell Magic Missile|XPHB}, {@spell Sleep|XPHB} e {@spell Thunderwave|XPHB} são recomendados.",
+								"Sempre que você ganhar um nível de Mago após o 1, adicione dois feitiços de Mago de sua escolha ao seu grimório. Cada uma dessas magias deve ser de um nível para o qual você possui espaços de magia, conforme mostrado na tabela Recursos do Assistente. Os feitiços são o culminar de pesquisas arcanas que você faz regularmente."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"A tabela de recursos do assistente mostra quantos espaços de feitiço você tem para lançar seus feitiços de nível 1+. Você recupera todos os slots gastos ao terminar um {@variantrule Long Rest|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Prepared Spells of Level 1+",
+							"entries": [
+								"Você prepara a lista de magias de nível 1+ que estão disponíveis para serem lançadas com esse recurso. Para fazer isso, escolha quatro feitiços do seu livro de feitiços. As magias escolhidas devem ser de um nível para o qual você tenha espaços de magia.",
+								"O número de feitiços em sua lista aumenta à medida que você ganha níveis de mago, conforme mostrado na coluna Feitiços Preparados da tabela Recursos do Feiticeiro. Sempre que esse número aumentar, escolha feitiços de Mago adicionais até que o número de feitiços em sua lista corresponda ao número da tabela. As magias escolhidas devem ser de um nível para o qual você tenha espaços de magia. Por exemplo, se você for um Mago de nível 3, sua lista de magias preparadas pode incluir seis magias de níveis 1 e 2 em qualquer combinação, escolhidas em seu livro de feitiços.",
+								"Se outro recurso de Mago fornecer magias que você sempre preparou, essas magias não contam no número de magias que você pode preparar com esse recurso, mas, caso contrário, essas magias contam como magias de Mago para você."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Changing Your Prepared Spells",
+							"entries": [
+								"Sempre que você terminar um {@variantrule Long Rest|XPHB}, você pode alterar sua lista de feitiços preparados, substituindo qualquer um dos feitiços por feitiços do seu livro de feitiços."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de Mago."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Focus",
+							"entries": [
+								"Você pode usar um {@item Arcane Focus|XPHB} ou seu livro de feitiços como {@variantrule Spellcasting Focus|XPHB} para seus feitiços de Mago."
+							]
+						},
+						{
+							"type": "inset",
+							"name": "Expanding and Replacing a Spellbook",
+							"entries": [
+								"As magias que você adiciona ao seu livro de feitiços conforme você ganha níveis refletem sua pesquisa mágica contínua, mas você pode encontrar outras magias durante suas aventuras que você pode adicionar ao livro. Você pode descobrir um feitiço de mago em {@item Spell Scroll|XDMG}, por exemplo, e depois copiá-lo para seu livro de feitiços.",
+								{
+									"type": "entries",
+									"name": "Copying a Spell into the Book",
+									"entries": [
+										"Ao encontrar um feitiço de Mago de nível 1+, você pode copiá-lo em seu grimório se for de um nível que você possa preparar e se tiver tempo para copiá-lo. Para cada nível do feitiço, a transcrição leva 2 horas e custa 50 GP. Depois você pode preparar o feitiço como os outros feitiços do seu livro de feitiços."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Copying the Book",
+									"entries": [
+										"Você pode copiar um feitiço do seu livro de feitiços para outro livro. É como copiar um novo feitiço em seu livro de feitiços, porém mais rápido, pois você já sabe como lançar o feitiço. Você precisa gastar apenas 1 hora e 10 GP para cada nível do feitiço copiado.",
+										"Se você perder seu livro de feitiços, poderá usar o mesmo procedimento para transcrever os feitiços do Mago que preparou em um novo livro de feitiços. Preencher o restante do novo livro exige que você encontre novos feitiços para fazer isso. Por esta razão, muitos magos mantêm um livro de feitiços de backup."
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Scholar",
+			"source": "XPHB",
+			"page": 166,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Enquanto estudava magia, você também se especializou em outra área de estudo. Escolha uma das seguintes habilidades nas quais você tem proficiência: {@skill Arcana|XPHB}, {@skill History|XPHB}, {@skill Investigation|XPHB}, {@skill Medicine|XPHB}, {@skill Nature|XPHB} ou {@skill Religion|XPHB}. Você tem {@variantrule Expertise|XPHB} na habilidade escolhida."
+			]
+		},
+		{
+			"name": "Wizard Subclass",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha uma subclasse de Wizard à sua escolha. Uma subclasse é uma especialização que concede recursos em determinados níveis de Wizard. Pelo resto de sua carreira, você ganha cada uma das características de sua subclasse que sejam do seu nível de Mago ou inferior."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. Você ganha esse recurso novamente nos níveis 8, 12 e 16 do Wizard."
+			]
+		},
+		{
+			"name": "Memorize Spell",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Sempre que você terminar um {@variantrule Short Rest|XPHB}, você pode estudar seu livro de feitiços e substituir um dos feitiços de Mago de nível 1+ que você preparou para seu recurso de Conjuração por outro feitiço de nível 1+ do livro."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Wizard."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Wizard."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Wizard."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Spell Mastery",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"Você alcançou tal domínio sobre certos feitiços que pode lançá-los à vontade. Escolha uma magia de nível 1 e uma magia de nível 2 em seu grimório que tenha um tempo de lançamento de uma ação. Você sempre tem esses feitiços preparados e pode lançá-los no nível mais baixo sem gastar um espaço de feitiço. Para lançar qualquer magia em um nível superior, você deve gastar um espaço de magia.",
+				"Sempre que você terminar um {@variantrule Long Rest|XPHB}, você pode estudar seu livro de feitiços e substituir um desses feitiços por um feitiço elegível do mesmo nível do livro."
+			]
+		},
+		{
+			"name": "Epic Boon",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"Você ganha um {@filter Epic Boon feat|feats|category=EB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. {@feat Boon of Spell Recall|XPHB} é recomendado."
+			]
+		},
+		{
+			"name": "Signature Spells",
+			"source": "XPHB",
+			"page": 167,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"Escolha dois feitiços de nível 3 em seu grimório como seus feitiços característicos. Você sempre tem esses feitiços preparados e pode lançar cada um deles uma vez no nível 3 sem gastar um espaço de feitiço. Ao fazer isso, você não poderá lançá-los desta forma novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. Para lançar qualquer magia em um nível superior, você deve gastar um espaço de magia."
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Chronurgy Magic",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"entries": [
+				"Focando na manipulação do tempo, quem segue a tradição da Cronurgia aprende a alterar o ritmo da realidade ao seu gosto. Usando o aumento da energia antecipatória dunamis, esses magos podem alterar o fluxo do tempo com a mesma habilidade com que um músico habilidoso toca um instrumento, proporcionando a si e a seus aliados uma vantagem em um piscar de olhos.",
+				"{@note Note: This subclass has access to {@book Dunamancy Spells|EGW|5|Dunamancy Spells}}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Chronal Shift|Wizard||Chronurgy|EGW|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Temporal Awareness|Wizard||Chronurgy|EGW|2"
+				}
+			]
+		},
+		{
+			"name": "Chronal Shift",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Chronurgy Magic feature}",
+				"Você pode exercer magicamente controle limitado sobre o fluxo do tempo ao redor de uma criatura. Como reação, depois que você ou uma criatura que você possa ver a até 9 metros de você fizer uma jogada de ataque, um teste de habilidade ou um teste de resistência, você pode forçar a criatura a rolar novamente. Você toma essa decisão depois de ver se o teste foi bem-sucedido ou falhou. O alvo deve usar o resultado do segundo lançamento.",
+				"Você pode usar essa habilidade duas vezes e recuperar quaisquer usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Temporal Awareness",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Chronurgy Magic feature}",
+				"Você pode adicionar seu modificador de Inteligência às suas jogadas de iniciativa."
+			]
+		},
+		{
+			"name": "Momentary Stasis",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Chronurgy Magic feature}",
+				"Como uma ação, você pode forçar magicamente uma criatura Grande ou menor que você possa ver a até 18 metros de você a fazer um teste de resistência de Constituição contra sua CD de resistência de magia. A menos que o teste de resistência seja um sucesso, a criatura fica envolta em um campo de energia mágica até o final do seu próximo turno ou até que a criatura sofra qualquer dano. Enquanto envolta desta forma, a criatura é {@condition incapacitated} e tem velocidade 0.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Inteligência (no mínimo uma vez). Você recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Arcane Abeyance",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Chronurgy Magic feature}",
+				"Quando você conjura uma magia usando um espaço de magia de 4º nível ou inferior, você pode condensar a magia da magia em um grão. O feitiço é congelado no tempo no momento do lançamento e mantido dentro de uma conta cinza por 1 hora. Esta conta é um objeto minúsculo com CA 15 e 1 ponto de vida, e é imune a veneno e dano psíquico. Quando a duração termina, ou se a conta for destruída, ela desaparece em um flash de luz e o feitiço é perdido.",
+				"Uma criatura segurando a conta pode usar sua ação para liberar a magia contida nela, e então a conta desaparece. A magia usa seu bônus de ataque de magia e CD de resistência, e a magia trata a criatura que a lançou como o conjurador para todos os outros propósitos.",
+				"Depois de criar uma conta com esse recurso, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Convergent Future",
+			"source": "EGW",
+			"page": 184,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Chronurgy Magic feature}",
+				"Você pode examinar futuros possíveis e magicamente atrair um deles para os eventos ao seu redor, garantindo um resultado específico. Quando você ou uma criatura que você possa ver a até 18 metros de você faz uma jogada de ataque, um teste de habilidade ou um teste de resistência, você pode usar sua reação para ignorar a jogada do dado e decidir se o número rolado é o mínimo necessário para ter sucesso ou um a menos que esse número (sua escolha).",
+				"Ao usar esse recurso, você ganha um nível de {@condition exhaustion}. Somente ao terminar um descanso longo você poderá remover um nível de {@condition exhaustion} obtido desta forma."
+			]
+		},
+		{
+			"name": "Graviturgy Magic",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"entries": [
+				"Compreendendo e dominando as forças que unem ou separam os corpos da matéria, os estudantes da tradição arcana da Graviturgia aprendem a dobrar e manipular ainda mais a energia violenta da gravidade em seu benefício e em terrível detrimento de seus inimigos.",
+				"{@note Note: This subclass has access to {@book Dunamancy Spells|EGW|5|Dunamancy Spells}}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Adjust Density|Wizard||Graviturgy|EGW|2"
+				}
+			]
+		},
+		{
+			"name": "Adjust Density",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Graviturgy Magic feature}",
+				"Com uma ação, você pode alterar magicamente o peso de um objeto ou criatura que você possa ver a até 9 metros de você. O objeto ou criatura deve ser Grande ou menor. O peso do alvo é reduzido pela metade ou duplicado por até 1 minuto ou até que seu {@status concentration} termine (como se você estivesse {@status concentration||concentrating} em um feitiço).",
+				"Embora o peso de uma criatura seja reduzido pela metade por este efeito, o deslocamento da criatura aumenta em 3 metros, ela pode saltar duas vezes mais longe que o normal e tem desvantagem em testes de Força e testes de resistência de Força. Embora o peso de uma criatura seja duplicado por este efeito, a velocidade da criatura é reduzida em 3 metros e ela tem vantagem em testes de Força e testes de resistência de Força.",
+				"Ao atingir o 10º nível nesta classe, você pode mirar em um objeto ou criatura que seja Enorme ou menor."
+			]
+		},
+		{
+			"name": "Gravity Well",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Graviturgy Magic feature}",
+				"Você aprendeu como manipular a gravidade ao redor de um ser vivo: sempre que lançar uma magia em uma criatura, você pode mover o alvo 1,5 metro para um espaço desocupado de sua escolha se o alvo estiver disposto a se mover, se a magia o atingir com um ataque ou se ele falhar em um teste de resistência contra a magia."
+			]
+		},
+		{
+			"name": "Violent Attraction",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Graviturgy Magic feature}",
+				"Quando outra criatura que você possa ver a até 18 metros de você acerta um ataque com arma, você pode usar sua reação para aumentar a velocidade do ataque, fazendo com que o alvo do ataque receba {@damage 1d10} de dano extra do tipo da arma.",
+				"Alternativamente, se uma criatura a até 18 metros de você sofrer dano de uma queda, você poderá usar sua reação para aumentar o dano da queda em {@dice 2d10}.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Inteligência (no mínimo uma vez). Você recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Event Horizon",
+			"source": "EGW",
+			"page": 185,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Graviturgy Magic feature}",
+				"Como uma ação, você pode emitir magicamente um poderoso campo de energia gravitacional que atrai outras criaturas por até 1 minuto ou até que seu {@status concentration} termine (como se você estivesse {@status concentration||concentrating} em um feitiço). Durante esse período, sempre que uma criatura hostil a você começar seu turno a até 9 metros de você, ela deverá realizar um teste de resistência de Força contra sua CD de resistência de magia. Se falhar no salvamento, ele sofre {@damage 2d10} de dano de força e sua velocidade é reduzida a 0 até o início do próximo turno. Se obtiver sucesso, ele sofre metade do dano e cada metro que ele move neste turno custa 60 centímetros extras de movimento.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um descanso longo ou até gastar um espaço de magia de 3º nível ou superior nele."
+			]
+		},
+		{
+			"name": "School of Abjuration",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"A Escola da Abjuração enfatiza a magia que bloqueia, bane ou protege. Os detratores desta escola dizem que sua tradição é mais sobre negação, negação do que afirmação positiva. Você entende, entretanto, que acabar com os efeitos nocivos, proteger os fracos e banir as influências malignas é tudo menos um vazio filosófico. É uma vocação orgulhosa e respeitada.",
+				"Chamados de abjuradores, os membros desta escola são procurados quando espíritos malignos exigem exorcismo, quando locais importantes devem ser protegidos contra espionagem mágica e quando portais para outros planos de existência devem ser fechados.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Abjuration Savant|Wizard||Abjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Ward|Wizard||Abjuration||2"
+				}
+			]
+		},
+		{
+			"name": "Abjuration Savant",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de abjuração em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Arcane Ward",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, você pode tecer magia ao seu redor para proteção. Ao lançar um {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, você pode usar simultaneamente um fio da magia do feitiço para criar uma proteção mágica em si mesmo que dura até você terminar um descanso longo. A proteção tem um máximo de pontos de vida igual ao dobro do seu nível de mago + seu modificador de Inteligência. Sempre que você sofre dano, a proteção sofre o dano. Se esse dano reduzir a proteção a 0 pontos de vida, você sofre qualquer dano restante.",
+				"Embora a proteção tenha 0 pontos de vida, ela não pode absorver dano, mas sua magia permanece. Sempre que você lança um {@filter abjuration spell of 1st level or higher|spells|school=A|level=!0}, a proteção recupera um número de pontos de vida igual ao dobro do nível do feitiço.",
+				"Depois de criar a sentinela, você não poderá criá-la novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Projected Ward",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, quando uma criatura que você possa ver a até 9 metros de você sofre dano, você pode usar sua reação para fazer com que sua Proteção Arcana absorva esse dano. Se este dano reduzir a proteção a 0 pontos de vida, a criatura protegida sofre qualquer dano restante."
+			]
+		},
+		{
+			"name": "Improved Abjuration",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, quando você conjura uma magia de abjuração que exige que você faça um teste de habilidade como parte da conjuração daquela magia (como em {@spell counterspell} e {@spell dispel magic}), você adiciona seu bônus de proficiência a esse teste de habilidade."
+			]
+		},
+		{
+			"name": "Spell Resistance",
+			"source": "PHB",
+			"page": 115,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, você tem vantagem em testes de resistência contra magias.",
+				"Além disso, você tem resistência contra danos de feitiços."
+			]
+		},
+		{
+			"name": "School of Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Como conjurador, você prefere magias que produzem objetos e criaturas do nada. Você pode conjurar nuvens ondulantes de neblina mortal ou convocar criaturas de outros lugares para lutar em seu nome. À medida que sua maestria aumenta, você aprende feitiços de transporte e pode se teletransportar por vastas distâncias, até mesmo para outros planos de existência, em um instante.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Conjuration Savant|Wizard||Conjuration||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Minor Conjuration|Wizard||Conjuration||2"
+				}
+			]
+		},
+		{
+			"name": "Conjuration Savant",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de conjuração em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Minor Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando no 2º nível quando você seleciona esta escola, você pode usar sua ação para conjurar um objeto inanimado em sua mão ou no chão em um espaço desocupado que você possa ver a até 3 metros de você. Este objeto não pode ter mais que um metro de lado e pesar não mais que 4,5 quilos, e sua forma deve ser a de um objeto não-mágico que você tenha visto. O objeto é visivelmente mágico, irradiando luz fraca até 1,5 metro.",
+				"O objeto desaparece após 1 hora, quando você usa esse recurso novamente, se sofrer algum dano ou se causar algum dano."
+			]
+		},
+		{
+			"name": "Benign Transposition",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, você pode usar sua ação para se teletransportar até 9 metros para um espaço desocupado que você possa ver. Alternativamente, você pode escolher um espaço dentro do alcance que seja ocupado por uma criatura Pequena ou Média. Se aquela criatura quiser, vocês dois se teletransportam, trocando de lugar.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso longo ou lançar uma magia de conjuração de 1º nível ou superior."
+			]
+		},
+		{
+			"name": "Focused Conjuration",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, enquanto você estiver {@status concentration||concentrating} em um feitiço de conjuração, seu {@status concentration} não poderá ser quebrado como resultado de receber dano."
+			]
+		},
+		{
+			"name": "Durable Summons",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, qualquer criatura que você invocar ou criar com uma magia de conjuração terá 30 pontos de vida temporários."
+			]
+		},
+		{
+			"name": "School of Divination",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"O conselho de um adivinho é procurado tanto pela realeza quanto pelos plebeus, pois todos buscam uma compreensão mais clara do passado, presente e futuro. Como adivinho, você se esforça para abrir os véus do espaço, do tempo e da consciência para poder ver claramente. Você trabalha para dominar feitiços de discernimento, visão remota, conhecimento sobrenatural e previsão.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Divination Savant|Wizard||Divination||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Portent|Wizard||Divination||2"
+				}
+			]
+		},
+		{
+			"name": "Divination Savant",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de adivinhação em seu grimório é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Portent",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, quando você escolhe esta escola, vislumbres do futuro começam a pressionar sua consciência. Ao terminar um descanso longo, role dois {@dice d20}s e registre os números obtidos. Você pode substituir qualquer jogada de ataque, teste de resistência ou teste de habilidade feito por você ou por uma criatura que você possa ver por uma dessas jogadas de previsão. Você deve escolher fazer isso antes da jogada e só pode substituir uma jogada dessa forma uma vez por turno.",
+				"Cada teste de previsão pode ser usado apenas uma vez. Ao terminar um descanso longo, você perde quaisquer testes de previsão não utilizados."
+			]
+		},
+		{
+			"name": "Expert Divination",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, lançar magias de adivinhação é tão fácil para você que gasta apenas uma fração de seus esforços para lançar magias. Ao lançar um {@filter divination spell of 2nd level or higher|spells|school=D} usando um espaço de feitiço, você recupera um espaço de feitiço gasto. O espaço que você recupera deve ser de um nível inferior ao da magia que você lançou e não pode ser superior ao 5º nível."
+			]
+		},
+		{
+			"name": "The Third Eye",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, você pode usar sua ação para aumentar seus poderes de percepção. Ao fazer isso, escolha um dos seguintes benefícios, que dura até você estar {@condition incapacitated} ou até você fazer um descanso curto ou longo. Você não pode usar o recurso novamente até terminar um descanso.",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Darkvision",
+							"entries": [
+								"Você ganha {@sense darkvision} em um alcance de 18 metros."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Ethereal Sight",
+							"entries": [
+								"Você pode ver o Plano Etéreo a até 18 metros de você."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Greater Comprehension",
+							"entries": [
+								"Você pode ler qualquer idioma."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "See Invisibility",
+							"entries": [
+								"Você pode ver {@condition invisible} criaturas e objetos a até 3 metros de você que estejam dentro da linha de visão."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Greater Portent",
+			"source": "PHB",
+			"page": 116,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, as visões em seus sonhos se intensificam e pintam uma imagem mais precisa em sua mente do que está por vir. Você rola três {@dice d20}s para seu recurso Portent, em vez de dois."
+			]
+		},
+		{
+			"name": "School of Enchantment",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Como membro da Escola de Encantamento, você aprimorou sua habilidade de entrar e enganar magicamente outras pessoas e monstros. Alguns encantadores são pacificadores que enfeitiçam os violentos para que deponham as armas e encantam os cruéis para que demonstrem misericórdia. Outros são tiranos que magicamente vinculam os relutantes a seu serviço. A maioria dos encantadores fica em algum ponto intermediário.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Enchantment Savant|Wizard||Enchantment||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hypnotic Gaze|Wizard||Enchantment||2"
+				}
+			]
+		},
+		{
+			"name": "Enchantment Savant",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de encantamento em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Hypnotic Gaze",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, quando você escolhe esta escola, suas palavras suaves e seu olhar encantador podem encantar magicamente outra criatura. Com uma ação, escolha uma criatura que você possa ver a até 1,5 metro de você. Se o alvo puder ver ou ouvir você, ele deverá ser bem sucedido em um teste de resistência de Sabedoria contra a CD de salvamento do seu feitiço de mago ou será {@condition charmed} seu até o final do seu próximo turno. A velocidade da criatura {@condition charmed} cai para 0, e a criatura fica {@condition incapacitated} e visivelmente atordoada.",
+				"Nos turnos subsequentes, você pode usar sua ação para manter esse efeito, estendendo sua duração até o final do seu próximo turno. Entretanto, o efeito termina se você se afastar mais de 1,5 metro da criatura, se a criatura não puder ver nem ouvir você, ou se a criatura sofrer dano.",
+				"Uma vez que o efeito termine, ou se a criatura obtiver sucesso em seu teste de resistência inicial contra este efeito, você não poderá usar esta característica naquela criatura novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Instinctive Charm",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, quando uma criatura que você possa ver a até 9 metros de você faz uma jogada de ataque contra você, você pode usar sua reação para desviar o ataque, desde que outra criatura esteja dentro do alcance do ataque. O atacante deve fazer um teste de resistência de Sabedoria contra a CD de salvamento de sua magia de mago. Se falhar na resistência, o atacante deve mirar na criatura que estiver mais próxima dele, não incluindo você ou ele mesmo. Se várias criaturas estiverem mais próximas, o atacante escolhe qual delas será o alvo. Em um salvamento bem-sucedido, você não poderá usar esse recurso no atacante novamente até terminar um descanso longo.",
+				"Você deve escolher usar esse recurso antes de saber se o ataque acerta ou erra. Criaturas que não podem ser {@condition charmed} são imunes a este efeito."
+			]
+		},
+		{
+			"name": "Split Enchantment",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, quando você conjurar uma magia de encantamento de 1º nível ou superior que tenha como alvo apenas uma criatura, você pode fazer com que ela tenha como alvo uma segunda criatura."
+			]
+		},
+		{
+			"name": "Alter Memories",
+			"source": "PHB",
+			"page": 117,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"No 14º nível, você ganha a habilidade de fazer uma criatura ficar inconsciente de sua influência mágica sobre ela. Ao lançar um feitiço de encantamento para encantar uma ou mais criaturas, você pode alterar o entendimento de uma criatura para que ela permaneça inconsciente de ser {@condition charmed}.",
+				"Além disso, uma vez antes do feitiço expirar, você pode usar sua ação para tentar fazer com que a criatura escolhida esqueça parte do tempo que passou {@condition charmed}. A criatura deve ser bem sucedida em um teste de resistência de Inteligência contra a CD de salvamento de sua magia de mago ou perderá um número de horas de suas memórias igual a 1 + seu modificador de Carisma (mínimo de 1). Você pode fazer a criatura esquecer menos tempo, e a quantidade de tempo não pode exceder a duração do seu feitiço de encantamento."
+			]
+		},
+		{
+			"name": "School of Evocation",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Você concentra seu estudo na magia que cria efeitos elementais poderosos, como frio intenso, chamas abrasadoras, trovões, relâmpagos crepitantes e ácido ardente. Alguns evocadores encontram emprego nas forças militares, servindo como artilharia para destruir exércitos inimigos à distância. Outros usam seu poder espetacular para proteger os fracos, enquanto alguns buscam seu próprio ganho como bandidos, aventureiros ou aspirantes a tiranos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Evocation Savant|Wizard||Evocation||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Sculpt Spells|Wizard||Evocation||2"
+				}
+			]
+		},
+		{
+			"name": "Evocation Savant",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de evocação em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Sculpt Spells",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, você pode criar bolsões de relativa segurança dentro dos efeitos de suas magias de evocação. Quando você conjura uma magia de evocação que afeta outras criaturas que você pode ver, você pode escolher um número delas igual a 1 + o nível da magia. As criaturas escolhidas são automaticamente bem-sucedidas em seus testes de resistência contra a magia e não sofrem nenhum dano se normalmente receberiam metade do dano em um teste de resistência bem-sucedido."
+			]
+		},
+		{
+			"name": "Potent Cantrip",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, seus truques de dano afetam até mesmo criaturas que evitam o impacto do efeito. Quando uma criatura obtém sucesso em um teste de resistência contra o seu truque, a criatura sofre metade do dano do truque (se houver), mas não sofre nenhum efeito adicional do truque."
+			]
+		},
+		{
+			"name": "Empowered Evocation",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, você pode adicionar seu modificador de Inteligência a uma jogada de dano de qualquer magia de evocação de mago que você lançar."
+			]
+		},
+		{
+			"name": "Overchannel",
+			"source": "PHB",
+			"page": 117,
+			"srd": true,
+			"basicRules": true,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, você pode aumentar o poder de suas magias mais simples. Quando você conjura uma magia de mago de 1º a 5º nível que causa dano, você pode causar dano máximo com aquela magia.",
+				"Na primeira vez que você fizer isso, você não sofrerá nenhum efeito adverso. Se você usar esse recurso novamente antes de terminar um descanso longo, você sofrerá {@damage 2d12} de dano necrótico para cada nível do feitiço, imediatamente após lançá-lo. Cada vez que você usa esse recurso novamente antes de terminar um descanso longo, o dano necrótico por nível de feitiço aumenta em {@dice 1d12}. Este dano ignora resistência e imunidade."
+			]
+		},
+		{
+			"name": "School of Illusion",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Você concentra seus estudos em magia que deslumbra os sentidos, confunde a mente e engana até as pessoas mais sábias. Sua magia é sutil, mas as ilusões criadas por sua mente aguçada fazem o impossível parecer real. Alguns ilusionistas – incluindo muitos magos gnomos – são trapaceiros benignos que usam seus feitiços para entreter. Outros são mestres mais sinistros do engano, usando suas ilusões para assustar e enganar os outros para ganho pessoal.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Illusion Savant|Wizard||Illusion||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Improved Minor Illusion|Wizard||Illusion||2"
+				}
+			]
+		},
+		{
+			"name": "Illusion Savant",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de ilusão em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Improved Minor Illusion",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Ao escolher esta escola no 2º nível, você aprende o truque {@spell minor illusion}. Se você já conhece esse truque, você aprende um truque de mago diferente de sua escolha. O truque não conta no número de truques conhecidos.",
+				"Ao lançar {@spell minor illusion}, você pode criar um som e uma imagem com um único lançamento do feitiço."
+			]
+		},
+		{
+			"name": "Malleable Illusions",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, quando você conjurar uma magia de ilusão que tenha duração de 1 minuto ou mais, você pode usar sua ação para mudar a natureza daquela ilusão (usando os parâmetros normais da magia para a ilusão), desde que você possa ver a ilusão."
+			]
+		},
+		{
+			"name": "Illusory Self",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, você pode criar uma duplicata ilusória de si mesmo como uma reação instantânea e quase instintiva ao perigo. Quando uma criatura faz uma jogada de ataque contra você, você pode usar sua reação para interpor a duplicata ilusória entre você e o atacante. O ataque automaticamente erra você e então a ilusão se dissipa.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Illusory Reality",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"No 14º nível, você aprendeu o segredo de incorporar a magia das sombras em suas ilusões para dar-lhes uma semi-realidade. Quando você conjura uma magia de ilusão de 1º nível ou superior, você pode escolher um objeto inanimado e não mágico que faça parte da ilusão e tornar esse objeto real. Você pode fazer isso no seu turno como uma ação bônus enquanto a magia estiver em andamento. O objeto permanece real por 1 minuto. Por exemplo, você pode criar a ilusão de uma ponte sobre um abismo e torná-la real por tempo suficiente para que seus aliados a cruzem.",
+				"O objeto não pode causar dano ou prejudicar diretamente ninguém."
+			]
+		},
+		{
+			"name": "School of Necromancy",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"A Escola de Necromancia explora as forças cósmicas da vida, da morte e dos mortos-vivos. Ao concentrar seus estudos nesta tradição, você aprende a manipular a energia que anima todas as coisas vivas. Conforme você avança, você aprende a minar a força vital de uma criatura enquanto sua magia destrói seu corpo, transformando essa energia vital em poder mágico que você pode manipular.",
+				"A maioria das pessoas vê os necromantes como ameaçadores, ou mesmo vilões, devido à estreita associação com a morte. Nem todos os necromantes são maus, mas as forças que eles manipulam são consideradas tabu por muitas sociedades.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Necromancy Savant|Wizard||Necromancy||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Grim Harvest|Wizard||Necromancy||2"
+				}
+			]
+		},
+		{
+			"name": "Grim Harvest",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"No 2º nível, você ganha a habilidade de coletar energia vital das criaturas que você mata com suas magias. Uma vez por turno, quando você mata uma ou mais criaturas com uma magia de 1º nível ou superior, você recupera pontos de vida iguais ao dobro do nível da magia, ou três vezes o seu nível se a magia pertencer a {@filter School of Necromancy|spells|school=N}. Você não ganha esse benefício por matar construtos ou mortos-vivos."
+			]
+		},
+		{
+			"name": "Necromancy Savant",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de necromancia em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Undead Thralls",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"No 6º nível, você adiciona a magia {@spell animate dead} ao seu grimório, se ainda não estiver lá. Ao lançar {@spell animate dead}, você pode mirar em um cadáver ou pilha de ossos adicional, criando outro zumbi ou esqueleto, conforme apropriado.",
+				"Sempre que você cria um morto-vivo usando um feitiço de necromancia, ele traz benefícios adicionais:",
+				{
+					"type": "list",
+					"items": [
+						"O máximo de pontos de vida da criatura é aumentado em uma quantidade igual ao seu nível de mago.",
+						"A criatura adiciona seu bônus de proficiência às jogadas de dano da arma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Inured to Undeath",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, você tem resistência a dano necrótico e seu máximo de pontos de vida não pode ser reduzido. Você passou tanto tempo lidando com mortos-vivos e com as forças que os animam que se habituou a alguns de seus piores efeitos."
+			]
+		},
+		{
+			"name": "Command Undead",
+			"source": "PHB",
+			"page": 118,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, você pode usar magia para controlar mortos-vivos, mesmo aqueles criados por outros magos. Como uma ação, você pode escolher um morto-vivo que você possa ver a até 18 metros de você. Essa criatura deve fazer um teste de resistência de Carisma contra a CD de salvamento de sua magia de mago. Se for bem-sucedido, você não poderá usar esse recurso novamente. Se falhar, ele se tornará amigável com você e obedecerá aos seus comandos até que você use esse recurso novamente.",
+				"Mortos-vivos inteligentes são mais difíceis de controlar dessa forma. Se o alvo tiver Inteligência 8 ou superior, ele terá vantagem no teste de resistência. Se falhar no teste de resistência e tiver Inteligência 12 ou superior, ele pode repetir o teste de resistência no final de cada hora até ter sucesso e se libertar."
+			]
+		},
+		{
+			"name": "School of Transmutation",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"entries": [
+				"Você é um estudante de feitiços que modificam a energia e a matéria. Para você, o mundo não é algo fixo, mas eminentemente mutável, e você tem prazer em ser um agente de mudança. Você maneja a matéria-prima da criação e aprende a alterar tanto as formas físicas quanto as qualidades mentais. Sua magia lhe dá as ferramentas para se tornar um ferreiro na forja da realidade.",
+				"Alguns transmutadores são consertadores e brincalhões, transformando pessoas em sapos e transformando cobre em prata para diversão e lucro ocasional. Outros prosseguem seus estudos mágicos com seriedade mortal, buscando o poder dos deuses para criar e destruir mundos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Transmutation Savant|Wizard||Transmutation||2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Minor Alchemy|Wizard||Transmutation||2"
+				}
+			]
+		},
+		{
+			"name": "Minor Alchemy",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, quando você seleciona esta escola, você pode alterar temporariamente as propriedades físicas de um objeto não-mágico, transformando-o de uma substância em outra. Você realiza um procedimento alquímico especial em um objeto composto inteiramente de madeira, pedra (mas não uma pedra preciosa), ferro, cobre ou prata, transformando-o em um material diferente. Para cada 10 minutos gastos realizando o procedimento, você pode transformar até 1 metro cúbico de material. Após 1 hora, ou até você perder seu {@status concentration} (como se você estivesse {@status concentration||concentrating} em um feitiço), o material volta à sua substância original."
+			]
+		},
+		{
+			"name": "Transmutation Savant",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Começando quando você seleciona esta escola no 2º nível, o ouro e o tempo que você deve gastar para copiar uma magia de transmutação em seu livro de feitiços é reduzido pela metade."
+			]
+		},
+		{
+			"name": "Transmuter's Stone",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, você pode passar 8 horas criando uma pedra transmutadora que armazena magia de transmutação. Você mesmo pode se beneficiar da pedra ou dá-la a outra criatura. Uma criatura ganha um benefício à sua escolha enquanto a pedra estiver em sua posse. Ao criar a pedra, escolha o benefício entre as seguintes opções:",
+				{
+					"type": "list",
+					"items": [
+						"Visão no escuro com alcance de 18 metros, conforme descrito no capítulo 8.",
+						"Um aumento na velocidade de 3 metros enquanto a criatura está desimpedida.",
+						"Proficiência em testes de resistência de Constituição.",
+						"Resistência a danos de ácido, frio, fogo, raio ou trovão (você escolhe sempre que escolher este benefício)."
+					]
+				},
+				"Cada vez que você lança um feitiço de transmutação de 1º nível ou superior, você pode alterar o efeito da sua pedra se ela estiver em sua pessoa.",
+				"Se você criar uma nova pedra transmutadora, a anterior deixará de funcionar."
+			]
+		},
+		{
+			"name": "Shapechanger",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"No 10º nível, você adiciona a magia {@spell polymorph} ao seu grimório, se ainda não estiver lá. Você pode lançar {@spell polymorph} sem gastar um espaço de feitiço. Ao fazer isso, você pode mirar apenas em si mesmo e se transformar em {@filter beast whose challenge rating is 1 or lower|bestiary|challenge rating=[&0;&1]|type=beast|miscellaneous=!swarm}.",
+				"Depois de lançar {@spell polymorph} dessa forma, você não poderá fazê-lo novamente até terminar um descanso curto ou longo, embora ainda possa lançá-lo normalmente usando um espaço de feitiço disponível."
+			]
+		},
+		{
+			"name": "Master Transmuter",
+			"source": "PHB",
+			"page": 119,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, você pode usar sua ação para consumir a reserva de magia de transmutação armazenada em sua pedra transmutadora em uma única explosão. Ao fazer isso, escolha um dos seguintes efeitos. A pedra do seu transmutador é destruída e não pode ser refeita até que você termine um descanso longo.",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Major Transformation",
+							"entries": [
+								"Você pode transmutar um objeto não-mágico – não maior que um cubo de 1,5 metro – em outro objeto não-mágico de tamanho e massa semelhantes e de valor igual ou menor. Você deve gastar 10 minutos manipulando o objeto para transformá-lo."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Panacea",
+							"entries": [
+								"Você remove todas as maldições, doenças e venenos que afetam uma criatura que você toca com a pedra do transmutador. A criatura também recupera todos os seus pontos de vida."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Restore Life",
+							"entries": [
+								"Você lança o feitiço {@spell raise dead} em uma criatura que você toca com a pedra do transmutador, sem gastar um espaço de feitiço ou precisar ter o feitiço em seu livro de feitiços."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Restore Youth",
+							"entries": [
+								"Você toca a pedra do transmutador em uma criatura voluntária e a idade aparente daquela criatura é reduzida em {@dice 3d10} anos, até um mínimo de 13 anos. Este efeito não prolonga a vida útil da criatura."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bladesinging",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"entries": [
+				"Bladesingers dominam uma tradição de magia que incorpora esgrima e dança. Originalmente criada por elfos, esta tradição foi adotada por praticantes não-elfos, que honram e expandem os costumes élficos.",
+				"Em combate, um bladesinger usa uma série de manobras intrincadas e elegantes que evitam danos e permitem que o bladesinger canalize magia em ataques devastadores e uma defesa astuta. Muitos que observaram um bladesinger trabalhando lembram-se da exibição como uma das mais belas experiências de suas vidas, uma dança gloriosa acompanhada por uma lâmina cantante.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Training in War and Song (Bladesinging)|Wizard||Bladesinging|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bladesong|Wizard||Bladesinging|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bladesinger Styles|Wizard||Bladesinging|TCE|2"
+				}
+			]
+		},
+		{
+			"name": "Bladesinger Styles",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"type": "inset",
+			"entries": [
+				"Desde o seu início como uma arte marcial e mágica, Bladesinging esteve ligado à espada, mais especificamente à espada longa. No entanto, muitas gerações de estudo deram origem a vários estilos de Bladesinging baseados na arma corpo-a-corpo empregada. As técnicas desses estilos são passadas do mestre para os alunos em pequenas escolas, algumas das quais possuem um prédio dedicado ao ensino. Mesmo os estilos mais novos têm centenas de anos, mas ainda são ensinados por seus criadores originais devido à longa vida dos elfos. A maioria das escolas de Bladesinging estão em Evermeet ou Evereska. Um foi iniciado em Myth Drannor, mas a destruição da cidade dispersou os estudantes que sobreviveram.",
+				"Os estilos de Bladesinging são amplamente categorizados com base no tipo de arma empregada, e cada um está associado a uma categoria de animal. Dentro desse estilo estão especializações com nomes de tipos específicos de animais, com base nos tipos de feitiços empregados, nas técnicas do mestre e na arma específica usada. Bladesingers que são aprendizes de um mestre normalmente fazem uma tatuagem do animal do estilo escolhido. Alguns cantores de lâmina aprendem vários estilos e carregam muitas tatuagens, exibindo na pele um aviso sobre suas habilidades mortais.",
+				{
+					"type": "entries",
+					"name": "Cat",
+					"entries": [
+						"Os estilos que empregam uma espada pertencem a esta família. O estilo leão, o mais antigo, treina os praticantes no uso da espada longa e não favorece nenhum tipo específico de feitiço. O estilo Leopardo concentra-se na espada curta e nos feitiços de ilusão e furtividade. O tigre vermelho, um estilo de apenas três séculos de idade, tem seus cantadores de lâminas usando a cimitarra em uma dança rodopiante de defesa a partir da qual eles se lançam em saltos e ataques repentinos."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Bird",
+					"entries": [
+						"Os estilos que se concentram no uso de uma arma de cabo, como um machado ou um martelo, foram agrupados como estilos de pássaros, mas variam enormemente. Todos estilos relativamente novos, eles usam armas que normalmente não são preferidas pelos elfos. Bladesingers estilo águia usam machados de mão pequenos, e muitas manobras no estilo se concentram em maneiras fluidas de lançar a arma e sacar uma nova. O estilo Raven usa uma picareta de guerra e os feitiços associados a ela concedem ao bladesinger mais agilidade em combate."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Snake",
+					"entries": [
+						"Os praticantes desses estilos usam mangual, corrente ou chicote. O estilo Víbora usa um chicote, apesar de sua deselegância como arma, e tem uma história quase tão longa quanto o estilo leão. Seus mestres pontuam seu canto das lâminas com um ritmo incrivelmente rápido de estalos de chicote, que podem manter muitos inimigos afastados e permitir que o cantador de lâminas tenha espaço para lançar os feitiços cruéis de veneno e doença favorecidos pelo estilo."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bladesong",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, você pode invocar uma magia élfica secreta chamada Canção da Lâmina, desde que não esteja usando armadura média ou pesada ou escudo. Ele agracia você com velocidade, agilidade e foco sobrenaturais.",
+				"Você pode usar uma ação bônus para iniciar a Canção da Lâmina, que dura 1 minuto. Termina mais cedo se você for {@condition incapacitated}, se usar uma armadura média ou pesada ou um escudo, ou se usar as duas mãos para fazer um ataque com uma arma. Você também pode dispensar Bladesong a qualquer momento que desejar (nenhuma ação é necessária).",
+				"Enquanto sua canção de lâmina estiver ativa, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você ganha um bônus em sua CA igual ao seu modificador de Inteligência (mínimo de +1).",
+						"Sua velocidade de caminhada aumenta em 3 metros.",
+						"Você tem vantagem em testes de Destreza ({@skill Acrobatics}).",
+						"Você ganha um bônus em qualquer teste de resistência de Constituição que fizer para manter {@status concentration} em um feitiço. O bônus é igual ao seu modificador de Inteligência (mínimo de +1)."
+					]
+				},
+				"Você pode usar esta característica um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos dela quando terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Training in War and Song (Bladesinging)",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Quando você adota esta tradição no 2º nível, você ganha proficiência com armaduras leves e com um tipo de arma corpo a corpo de uma mão à sua escolha.",
+				"Você também ganha proficiência na habilidade {@skill Performance} se ainda não a tiver."
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação {@action Attack} no seu turno. Além disso, você pode lançar um de seus truques no lugar de um desses ataques."
+			]
+		},
+		{
+			"name": "Song of Defense",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, você pode direcionar sua magia para absorver dano enquanto sua canção de lâmina estiver ativa. Ao sofrer dano, você pode usar sua reação para gastar um espaço de magia e reduzir esse dano a você em uma quantidade igual a cinco vezes o nível do espaço de magia."
+			]
+		},
+		{
+			"name": "Song of Victory",
+			"source": "TCE",
+			"page": 76,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 141
+				}
+			],
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"A partir do 14º nível, você adiciona seu modificador de Inteligência (mínimo de +1) ao dano de seus ataques com armas corpo a corpo enquanto sua Canção da Lâmina estiver ativa."
+			]
+		},
+		{
+			"name": "Order of Scribes",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"entries": [
+				"Magia do livro – é o que muitas pessoas chamam de magia. O nome é adequado, dado quanto tempo os bruxos passam debruçados sobre tomos e escrevendo teorias sobre a natureza da magia. É raro ver bruxos viajando sem livros e pergaminhos brotando de suas malas, e um bruxo faria um grande esforço para vasculhar um arquivo de conhecimento antigo.",
+				"Entre os magos, a Ordem dos Escribas é a mais estudiosa. Assume muitas formas em mundos diferentes, mas a sua missão principal é a mesma em todo o lado: registar descobertas mágicas para que a magia possa florescer. E embora todos os magos valorizem os livros de feitiços, um mago da Ordem dos Escribas desperta magicamente o seu livro, transformando-o num companheiro de confiança. Todos os bruxos estudam livros, mas um escriba bruxo fala com os deles!",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Wizardly Quill|Wizard||Scribes|TCE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Awakened Spellbook|Wizard||Scribes|TCE|2"
+				}
+			]
+		},
+		{
+			"name": "Awakened Spellbook",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Order of Scribes feature}",
+				"Usando tintas especialmente preparadas e encantamentos antigos transmitidos por sua ordem mágica, você despertou uma senciência misteriosa em seu livro de feitiços.",
+				"Enquanto você segura o livro, ele lhe concede os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Você pode usar o livro como foco de lançamento de feitiços para seus feitiços de mago.",
+						"Quando você conjura uma magia de mago com um espaço de magia, você pode substituir temporariamente seu tipo de dano por um tipo que aparece em outra magia em seu livro de feitiços, o que altera magicamente a fórmula da magia apenas para esta conjuração. A última magia deve ser do mesmo nível do espaço de magia que você gastou.",
+						"Ao lançar uma magia de mago como um ritual, você pode usar o tempo normal de lançamento da magia, em vez de adicionar 10 minutos a ela. Depois de usar esse benefício, você não poderá fazê-lo novamente até terminar um descanso longo."
+					]
+				},
+				"Se necessário, você pode substituir o livro durante um breve descanso usando sua Pena Mágica para escrever sigilos arcanos em um livro em branco ou em um livro de feitiços mágicos com o qual você esteja sintonizado. No final do descanso, a consciência do seu grimório é convocada para o novo livro, que a consciência transforma em seu grimório, junto com todos os seus feitiços. Se o livro anterior ainda existisse em algum lugar, todos os feitiços desapareceriam de suas páginas."
+			]
+		},
+		{
+			"name": "Wizardly Quill",
+			"source": "TCE",
+			"page": 77,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-level Order of Scribes feature}",
+				"Como uma ação bônus, você pode criar magicamente uma Pena Minúscula em sua mão livre. A pena mágica tem as seguintes propriedades:",
+				{
+					"type": "list",
+					"items": [
+						"A pena não requer tinta. Quando você escreve com ele, ele produz tinta na cor de sua escolha na superfície de escrita.",
+						"O tempo que você deve gastar para copiar uma magia em seu grimório é igual a 2 minutos por nível de magia se você usar a pena para a transcrição.",
+						"Você pode apagar qualquer coisa que escrever com a pena se passar a pena sobre o texto como uma ação bônus, desde que o texto esteja a até 1,5 metro de você."
+					]
+				},
+				"Esta pena desaparece se você criar outra ou se morrer."
+			]
+		},
+		{
+			"name": "Manifest Mind",
+			"source": "TCE",
+			"page": 78,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Order of Scribes feature}",
+				"Você pode conjurar a mente do seu Livro de Feitiços Desperto. Como uma ação bônus enquanto o livro estiver com você, você pode fazer com que a mente se manifeste como um minúsculo objeto espectral, pairando em um espaço desocupado, à sua escolha, a até 18 metros de você. A mente espectral é intangível e não ocupa seu espaço, e emite luz fraca em um raio de 3 metros. Parece um livro fantasmagórico, uma cascata de texto ou um estudioso do passado (você escolhe).",
+				"Enquanto manifestada, a mente espectral pode ouvir e ver, e tem {@sense darkvision} com alcance de 18 metros. A mente pode compartilhar telepaticamente com você o que vê e ouve (nenhuma ação é necessária).",
+				"Sempre que você conjurar uma magia de mago em seu turno, você pode lançá-la como se estivesse no espaço da mente espectral, em vez de no seu próprio, usando seus sentidos. Você pode fazer isso um número de vezes por dia igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.",
+				"Como uma ação bônus, você pode fazer a mente espectral pairar até 9 metros em um espaço desocupado que você ou ela possa ver. Pode passar por criaturas, mas não por objetos.",
+				"A mente espectral para de se manifestar se estiver a mais de 90 metros de distância de você, se alguém lançar {@spell dispel magic} nela, se o Livro de Feitiços Desperto for destruído, se você morrer ou se você dispensar a mente espectral como uma ação bônus.",
+				"Depois de conjurar a mente, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste um espaço de magia de qualquer nível para conjurá-la novamente."
+			]
+		},
+		{
+			"name": "Master Scrivener",
+			"source": "TCE",
+			"page": 78,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-level Order of Scribes feature}",
+				"Sempre que você terminar um descanso longo, você pode criar um pergaminho mágico tocando sua Pena Mágica em um pedaço de papel ou pergaminho em branco e fazendo com que um feitiço do seu Livro de Feitiços Desperto seja copiado no pergaminho. O grimório deve estar a até 1,5 metro de você quando você fizer o pergaminho.",
+				"O feitiço escolhido deve ser de 1º ou 2º nível e deve ter tempo de lançamento de 1 ação. Uma vez no pergaminho, o poder do feitiço é aumentado, contando como um nível acima do normal. Você pode lançar a magia do pergaminho lendo-a como uma ação. O pergaminho é ininteligível para qualquer outra pessoa, e a magia desaparece do pergaminho quando você o lança ou quando você termina seu próximo descanso longo.",
+				"Você também é adepto da elaboração de pergaminhos de feitiços, que são descritos no capítulo sobre tesouros do Dungeon Master's Guide. O ouro e o tempo que você deve gastar para fazer tal pergaminho são reduzidos pela metade se você usar sua Pena Mágica."
+			]
+		},
+		{
+			"name": "One with the Word",
+			"source": "TCE",
+			"page": 78,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-level Order of Scribes feature}",
+				"Sua conexão com o seu Livro de Feitiços Desperto tornou-se tão profunda que sua alma ficou entrelaçada com ele. Enquanto o livro estiver com você, você terá vantagem em todos os testes de Inteligência ({@skill Arcana}), já que o livro de feitiços ajuda você a se lembrar do conhecimento mágico.",
+				"Além disso, se você sofrer dano enquanto a mente do seu grimório estiver manifestada, você poderá evitar todo esse dano usando sua reação para descartar a mente espectral, usando sua magia para se salvar. Em seguida, role {@dice 3d6}. O grimório perde temporariamente magias de sua escolha que tenham um nível de magia combinado igual ou superior àquela jogada. Por exemplo, se o total da jogada for 9, as magias que possuem um nível combinado de pelo menos 9 desaparecem do livro, o que pode significar uma magia de 9º nível, três magias de 3º nível ou alguma outra combinação. Se não houver feitiços suficientes no livro para cobrir esse custo, você cai para 0 pontos de vida.",
+				"Até terminar {@dice 1d6} descansos longos, você será incapaz de lançar os feitiços perdidos, mesmo que os encontre em um pergaminho ou em outro livro de feitiços. Depois de terminar o número necessário de descansos, os feitiços reaparecem no livro de feitiços.",
+				"Depois de usar esta reação, você não poderá fazê-la novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Blood Magic",
+			"source": "TDCSR",
+			"page": 178,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Considerado um tabu por muitas sociedades e praticantes de magia, o uso de magia de sangue — também conhecida como {@variantrule hemocraft|TDCSR} — é uma arte rara que aproveita os poderes latentes da vitalidade de uma criatura para alimentar e amplificar as próprias capacidades do lançador, enquanto manipula e enfraquece os corpos dos inimigos por dentro. Alguns dos magos mais macabros que buscam fortalecer suas atividades arcanas recorrem a {@variantrule hemocraft|TDCSR} como um meio de reforçar seus feitiços, dando seu próprio sangue vital para alcançar novos patamares de proezas mágicas assustadoras.",
+				"Os segredos de {@variantrule hemocraft|TDCSR} e outras formas de magia de sangue já foram da competência exclusiva do misterioso {@book Claret Orders|TDCSR|2|Claret Orders}. Nos últimos anos, no entanto, estes segredos começaram a se espalhar para além dos membros da ordem e para as mãos de magos menos escrupulosos. A magia do sangue tem má reputação em Tal'Dorei, embora seus poderes possam ser usados ​​para muito mais do que o mal.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blood Channeling|Wizard|PHB|Blood Magic|TDCSR|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Sanguine Burst|Wizard|PHB|Blood Magic|TDCSR|2"
+				}
+			]
+		},
+		{
+			"name": "Blood Channeling",
+			"source": "TDCSR",
+			"page": 178,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Quando você escolhe esta tradição arcana no 2º nível, você é capaz de usar sua própria essência de vida esgotada para canalizar suas habilidades mágicas. Sempre que seus pontos de vida atuais estiverem abaixo do máximo de pontos de vida, você poderá usar seu próprio corpo como {@item arcane focus|PHB}.",
+				"Além disso, ao lançar um feitiço de mago que requer um componente material caro, você pode renunciar ao componente sofrendo {@damage 1d10} de dano necrótico por 50 PO do custo do componente (mínimo {@damage 1d10}). Este dano não pode ser reduzido de forma alguma. Se esse dano reduzir você a 0 pontos de vida, a magia falha, mas o espaço de magia não é gasto."
+			]
+		},
+		{
+			"name": "Sanguine Burst",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Também no 2º nível, você aprende como transformar sua força vital em um feitiço que você lança, aumentando sua intensidade ao custo de sua vitalidade. Sempre que você rolar dano para uma magia de 1º nível ou superior que você lançou, você pode escolher sofrer dano necrótico igual ao nível da magia para rolar novamente um número de dados de dano até seu modificador de Inteligência (mínimo um). Este dano não pode ser reduzido de forma alguma e você deve usar os novos testes."
+			]
+		},
+		{
+			"name": "Bond of Mutual Suffering",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"No 6º nível, quando uma criatura que você pode ver atinge você com um ataque, você pode usar sua reação para vincular sua vitalidade ao atacante e forçá-lo a compartilhar sua dor. O atacante sofre dano igual ao dano que você sofreu.",
+				"Este recurso não pode ser usado contra construtos ou mortos-vivos. Você pode usar esse recurso uma vez. Você deve concluir um {@quickref resting|PHB|2|0|short or long rest} antes de poder usá-lo novamente."
+			]
+		},
+		{
+			"name": "Glyph of Hemorrhaging",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, quando você causa dano a uma criatura com uma magia, você pode escolher amaldiçoar aquela criatura por 1 minuto. Enquanto amaldiçoada dessa forma, sempre que a criatura for atingida por um ataque, ela sofrerá {@damage 1d6} de dano necrótico extra. No final de cada turno da criatura, ela pode fazer uma Constituição {@quickref saving throws|PHB|2|1|saving throw} contra a CD de salvamento do seu feitiço, encerrando a maldição em caso de sucesso.",
+				"Este recurso não pode ser usado contra criaturas mortas-vivas ou construtos. Depois de usar esse recurso, você não poderá usá-lo novamente até terminar {@quickref resting|PHB|2|0|short or long rest}."
+			]
+		},
+		{
+			"name": "Bond of Mutual Suffering (14th Level)",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"No 14º nível, você pode usar esse recurso duas vezes entre os descansos."
+			]
+		},
+		{
+			"name": "Thicker than Water",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Ao atingir o 14º nível, o sangue que corre em suas veias é fortalecido com um vigor arcano que cura feridas e ajuda a preservar sua vida. Sempre que uma magia ou efeito mágico fizer com que você recupere pontos de vida, você recupera um número adicional de pontos de vida igual ao seu bônus de proficiência.",
+				"Além disso, enquanto estiver concentrado em uma magia, você terá resistência a danos de concussão, perfurantes e cortantes de ataques não-mágicos."
+			]
+		},
+		{
+			"name": "War Magic",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"entries": [
+				"Uma variedade de faculdades arcanas se especializam em treinar magos para a guerra. A tradição da Magia de Guerra combina princípios de evocação e abjuração, em vez de se especializar em qualquer uma dessas escolas. Ele ensina técnicas que fortalecem os feitiços de um lançador, ao mesmo tempo que fornece métodos para os magos reforçarem suas próprias defesas.",
+				"Os seguidores desta tradição são conhecidos como magos de guerra. Eles veem sua magia tanto como arma quanto como armadura, um recurso superior a qualquer peça de aço. Magos de guerra agem rapidamente em batalha, usando seus feitiços para assumir o controle tático de uma situação. Seus feitiços atacam com força, enquanto suas habilidades defensivas frustram as tentativas de contra-ataque de seus oponentes. Os magos de guerra também são adeptos de usar a energia mágica de outros conjuradores contra eles.",
+				"Em grandes batalhas, um mago de guerra geralmente trabalha com evocadores, abjuradores e outros tipos de magos. Os Evocadores, em particular, às vezes provocam os magos de guerra por dividirem sua atenção entre o ataque e a defesa. A resposta típica de um mago de guerra: \"De que adianta ser capaz de lançar um poderoso {@spell fireball} se eu morrer antes de poder lançá-lo?\"",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Deflection|Wizard||War|XGE|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Tactical Wit|Wizard||War|XGE|2"
+				}
+			]
+		},
+		{
+			"name": "Arcane Deflection",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"No 2º nível, você aprendeu a tecer sua magia para se fortalecer contra danos. Quando você é atingido por um ataque ou falha em um teste de resistência, você pode usar sua reação para ganhar um bônus de +2 em sua CA contra esse ataque ou um bônus de +4 naquele teste de resistência.",
+				"Quando você usa esse recurso, você não pode lançar outras magias além de truques até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Tactical Wit",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"A partir do 2º nível, sua habilidade apurada de avaliar situações táticas lhe permite agir rapidamente em batalha. Você pode conceder a si mesmo um bônus em suas jogadas de iniciativa igual ao seu modificador de Inteligência."
+			]
+		},
+		{
+			"name": "Power Surge",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"A partir do 6º nível, você pode armazenar energia mágica dentro de si para posteriormente potencializar suas magias prejudiciais. Na sua forma armazenada, essa energia é chamada de oscilação de energia.",
+				"Você pode armazenar um número máximo de surtos de energia igual ao seu modificador de Inteligência (mínimo de um). Sempre que você termina um descanso longo, seu número de picos de energia é redefinido para um. Sempre que você termina um feitiço com sucesso com {@spell dispel magic} ou {@spell counterspell}, você ganha um aumento de poder, pois rouba a magia do feitiço que você frustrou. Se você terminar um descanso curto sem picos de energia, você ganha um pico de energia.",
+				"Uma vez por turno, quando você causar dano a uma criatura ou objeto com uma magia de mago, você pode gastar um aumento de poder para causar dano de força extra ao alvo. O dano extra equivale à metade do seu nível de mago."
+			]
+		},
+		{
+			"name": "Durable Magic",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"A partir do 10º nível, a magia que você canaliza ajuda a evitar danos. Enquanto você mantém {@status concentration} em um feitiço, você tem um bônus de +2 na CA e em todos os testes de resistência."
+			]
+		},
+		{
+			"name": "Deflecting Shroud",
+			"source": "XGE",
+			"page": 59,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"No 14º nível, sua Deflexão Arcana fica infundida com magia mortal. Ao usar seu recurso Deflexão Arcana, você pode fazer com que a energia mágica saia de você. Até três criaturas de sua escolha, que você possa ver a até 18 metros de você, cada uma sofre dano de força igual à metade do seu nível de mago."
+			]
+		},
+		{
+			"name": "Chronurgy Magic",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Chronurgy",
+			"subclassSource": "EGW",
+			"level": 3,
+			"_copy": {
+				"name": "Chronurgy Magic",
+				"source": "EGW",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Chronurgy",
+				"subclassSource": "EGW",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "Graviturgy Magic",
+			"source": "EGW",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Graviturgy",
+			"subclassSource": "EGW",
+			"level": 3,
+			"_copy": {
+				"name": "Graviturgy Magic",
+				"source": "EGW",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Graviturgy",
+				"subclassSource": "EGW",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Abjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjuration",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Abjuration",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Abjuration",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Conjuration",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Conjuration",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Conjuration",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Conjuration",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Divination",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Divination",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Divination",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Divination",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Enchantment",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Enchantment",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Enchantment",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Enchantment",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Evocation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evocation",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Evocation",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Evocation",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Illusion",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusion",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Illusion",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Illusion",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Necromancy",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Necromancy",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Necromancy",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Necromancy",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "School of Transmutation",
+			"source": "PHB",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Transmutation",
+			"subclassSource": "PHB",
+			"level": 3,
+			"_copy": {
+				"name": "School of Transmutation",
+				"source": "PHB",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Transmutation",
+				"subclassSource": "PHB",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "Bladesinging",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Bladesinging",
+			"subclassSource": "TCE",
+			"level": 3,
+			"_copy": {
+				"name": "Bladesinging",
+				"source": "TCE",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Bladesinging",
+				"subclassSource": "TCE",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "Order of Scribes",
+			"source": "TCE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Scribes",
+			"subclassSource": "TCE",
+			"level": 3,
+			"_copy": {
+				"name": "Order of Scribes",
+				"source": "TCE",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Scribes",
+				"subclassSource": "TCE",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "Blood Magic",
+			"source": "TDCSR",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"_copy": {
+				"name": "Blood Magic",
+				"source": "TDCSR",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "Blood Magic",
+				"subclassSource": "TDCSR",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "War Magic",
+			"source": "XGE",
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "War",
+			"subclassSource": "XGE",
+			"level": 3,
+			"_copy": {
+				"name": "War Magic",
+				"source": "XGE",
+				"className": "Wizard",
+				"classSource": "PHB",
+				"subclassShortName": "War",
+				"subclassSource": "XGE",
+				"level": 2,
+				"_preserve": {
+					"page": true
+				}
+			}
+		},
+		{
+			"name": "Abjurer",
+			"source": "XPHB",
+			"page": 172,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Shield Companions and Banish Foes}",
+				"Seu estudo de magia é focado em feitiços que bloqueiam, banem ou protegem – acabando com efeitos nocivos, banindo influências malignas e protegendo os fracos. Abjuradores são procurados quando espíritos malignos exigem exorcismo, quando locais devem ser protegidos contra espionagem mágica e quando portais para outros planos de existência devem ser fechados. Grupos de aventureiros valorizam os Abjuradores pela proteção que eles fornecem contra uma variedade de magias hostis e outros ataques.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Abjuration Savant|Wizard|XPHB|Abjurer|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Arcane Ward|Wizard|XPHB|Abjurer|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Abjuration Savant",
+			"source": "XPHB",
+			"page": 172,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Escolha dois feitiços de Mago da escola de Abjuração, cada um dos quais não deve ser superior ao nível 2, e adicione-os ao seu livro de feitiços gratuitamente.",
+				"Além disso, sempre que você obtiver acesso a um novo nível de espaços de magia nesta classe, você poderá adicionar uma magia de Mago da escola Abjuração ao seu grimório gratuitamente. A magia escolhida deve ser de um nível para o qual você tenha espaços de magia."
+			]
+		},
+		{
+			"name": "Arcane Ward",
+			"source": "XPHB",
+			"page": 172,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você pode tecer magia ao seu redor para proteção. Ao lançar um feitiço de Abjuração com um slot de feitiço, você pode usar simultaneamente um fio da magia do feitiço para criar uma proteção mágica em si mesmo que dura até você terminar um {@variantrule Long Rest|XPHB}. A ala tem um máximo de {@variantrule Hit Points|XPHB|Hit Point} igual ao dobro do seu nível de Mago mais seu modificador de Inteligência. Sempre que você sofre dano, a proteção sofre o dano e, se você tiver alguma Resistência ou Vulnerabilidade, aplique-as antes de reduzir o {@variantrule Hit Points|XPHB} da proteção. Se o dano reduzir a proteção para 0 {@variantrule Hit Points|XPHB}, você sofre qualquer dano restante. Embora a proteção tenha 0 {@variantrule Hit Points|XPHB}, ela não pode absorver dano, mas sua magia permanece.",
+				"Sempre que você lança um feitiço de Abjuração com um espaço de feitiço, a proteção recupera um número de {@variantrule Hit Points|XPHB} igual ao dobro do nível do espaço de feitiço. Alternativamente, como um {@variantrule Bonus Action|XPHB}, você pode gastar um espaço de feitiço, e a ala recupera um número de {@variantrule Hit Points|XPHB} igual ao dobro do nível do espaço de feitiço gasto.",
+				"Depois de criar a ala, você não poderá criá-la novamente até terminar {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "Projected Ward",
+			"source": "XPHB",
+			"page": 172,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura que você pode ver a até 9 metros de você sofre dano, você pode receber um {@variantrule Reaction|XPHB} para fazer com que sua Proteção Arcana absorva esse dano. Se esse dano reduzir a proteção para 0 {@variantrule Hit Points|XPHB}, a criatura protegida sofrerá qualquer dano restante. Se aquela criatura tiver alguma Resistência ou Vulnerabilidade, aplique-a antes de reduzir o {@variantrule Hit Points|XPHB} da proteção."
+			]
+		},
+		{
+			"name": "Spell Breaker",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Você sempre tem os feitiços {@spell Counterspell|XPHB} e {@spell Dispel Magic|XPHB} preparados. Além disso, você pode lançar {@spell Dispel Magic|XPHB} como um {@variantrule Bonus Action|XPHB} e pode adicionar seu {@variantrule Proficiency|XPHB|Proficiency Bonus} à sua verificação de habilidade.",
+				"Quando você conjura qualquer magia com um espaço de magia, esse espaço não será gasto se a magia não conseguir parar uma magia."
+			]
+		},
+		{
+			"name": "Spell Resistance",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Abjurer",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Você tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e tem {@variantrule Resistance|XPHB} no dano de feitiços."
+			]
+		},
+		{
+			"name": "Diviner",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Learn the Secrets of the Multiverse}",
+				"O conselho de um Adivinho é procurado por aqueles que desejam uma compreensão mais clara do passado, presente e futuro. Como um Adivinho, você se esforça para abrir os véus do espaço, do tempo e da consciência. Você trabalha para dominar feitiços de discernimento, visão remota, conhecimento sobrenatural e previsão.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Divination Savant|Wizard|XPHB|Diviner|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Portent|Wizard|XPHB|Diviner|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Divination Savant",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Escolha dois {@filter Wizard spells from the Divination school|spells|level=0;1;2|class=Wizard|school=D}, cada um dos quais não deve ser superior ao nível 2, e adicione-os ao seu livro de feitiços gratuitamente.",
+				"Além disso, sempre que você obtiver acesso a um novo nível de espaços de magia nesta classe, você poderá adicionar um {@filter Wizard spell from the Divination school|spells|class=Wizard|school=D} ao seu grimório gratuitamente. A magia escolhida deve ser de um nível para o qual você tenha espaços de magia."
+			]
+		},
+		{
+			"name": "Portent",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Vislumbres do futuro começam a pressionar sua consciência. Sempre que você terminar um {@variantrule Long Rest|XPHB}, role dois d20s e registre os números obtidos. Você pode substituir qualquer {@variantrule D20 Test|XPHB} feito por você ou por uma criatura que você possa ver por uma dessas jogadas de previsão. Você deve escolher fazer isso antes da jogada e só pode substituir uma jogada dessa forma uma vez por turno.",
+				"Cada teste de previsão pode ser usado apenas uma vez. Ao terminar um {@variantrule Long Rest|XPHB}, você perde todas as jogadas de previsão não utilizadas."
+			]
+		},
+		{
+			"name": "Expert Divination",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Conjurar magias de Adivinhação é tão fácil para você que gasta apenas uma fração de seus esforços de conjuração. Quando você lança um feitiço de Adivinhação usando um espaço de feitiço de nível 2+, você recupera um espaço de feitiço gasto. O slot que você recupera deve ser de nível inferior ao slot que você gastou e não pode ser superior ao nível 5."
+			]
+		},
+		{
+			"name": "The Third Eye",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Você pode aumentar seus poderes de percepção. Como {@variantrule Bonus Action|XPHB}, escolha um dos seguintes benefícios, que dura até você iniciar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. Você não pode usar esse recurso novamente até terminar {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Darkvision",
+							"entries": [
+								"Você ganha {@sense Darkvision|XPHB} com um alcance de 36 metros."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Greater Comprehension",
+							"entries": [
+								"Você pode ler qualquer idioma."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "See Invisibility",
+							"entries": [
+								"Você pode lançar {@spell See Invisibility|XPHB} sem gastar um espaço de feitiço."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Greater Portent",
+			"source": "XPHB",
+			"page": 173,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Diviner",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"As visões em seus sonhos se intensificam e pintam em sua mente uma imagem mais precisa do que está por vir. Role três d20s para seu recurso Portent em vez de dois."
+			]
+		},
+		{
+			"name": "Evoker",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Create Explosive Elemental Effects}",
+				"Seus estudos se concentram na magia que cria efeitos elementais poderosos, como frio intenso, chamas abrasadoras, trovões, relâmpagos crepitantes e ácido ardente. Alguns Evocadores encontram emprego em forças militares, servindo como artilharia para explodir exércitos à distância. Outros usam seu poder para proteger os outros, enquanto alguns buscam seu próprio ganho.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Evocation Savant|Wizard|XPHB|Evoker|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Potent Cantrip|Wizard|XPHB|Evoker|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Evocation Savant",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Escolha dois feitiços de Mago da escola de Evocação, cada um dos quais não deve ser superior ao nível 2, e adicione-os ao seu livro de feitiços gratuitamente.",
+				"Além disso, sempre que você obtiver acesso a um novo nível de espaços de magia nesta classe, você poderá adicionar uma magia de Mago da escola de Evocação ao seu grimório gratuitamente. A magia escolhida deve ser de um nível para o qual você tenha espaços de magia."
+			]
+		},
+		{
+			"name": "Potent Cantrip",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Seus truques prejudiciais afetam até mesmo criaturas que evitam o impacto do efeito. Quando você lança um truque em uma criatura e erra a jogada de ataque ou o alvo obtém sucesso em um teste de resistência contra o truque, o alvo sofre metade do dano do truque (se houver), mas não sofre nenhum efeito adicional do truque."
+			]
+		},
+		{
+			"name": "Sculpt Spells",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Você pode criar bolsões de relativa segurança dentro dos efeitos de suas evocações. Quando você lança uma magia de Evocação que afeta outras criaturas que você pode ver, você pode escolher um número delas igual a 1 mais o nível da magia. As criaturas escolhidas são automaticamente bem-sucedidas em seus testes de resistência contra a magia e não sofrem nenhum dano se normalmente receberiam metade do dano em um teste de resistência bem-sucedido."
+			]
+		},
+		{
+			"name": "Empowered Evocation",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Sempre que você lançar um feitiço de Mago da escola Evocação, você pode adicionar seu modificador de Inteligência a uma jogada de dano daquele feitiço."
+			]
+		},
+		{
+			"name": "Overchannel",
+			"source": "XPHB",
+			"page": 174,
+			"freeRules2024": true,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Evoker",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Você pode aumentar o poder de seus feitiços. Quando você conjura uma magia de Mago com um espaço de magia de níveis 1 a 5 que causa dano, você pode causar dano máximo com aquela magia no turno em que a conjura.",
+				"Na primeira vez que você fizer isso, você não sofrerá nenhum efeito adverso. Se você usar esse recurso novamente antes de terminar um {@variantrule Long Rest|XPHB}, você sofrerá {@damage 2d12} de dano necrótico para cada nível do slot de feitiço imediatamente após lançá-lo. Este dano ignora {@variantrule Resistance|XPHB} e {@variantrule Immunity|XPHB}.",
+				"Cada vez que você usa esse recurso novamente antes de terminar um {@variantrule Long Rest|XPHB}, o dano necrótico por nível de feitiço aumenta em {@dice 1d12}."
+			]
+		},
+		{
+			"name": "Illusionist",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Weave Subtle Spells of Deception}",
+				"Você é especialista em magia que deslumbra os sentidos e engana a mente, e as ilusões que você cria fazem o impossível parecer real.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Illusion Savant|Wizard|XPHB|Illusionist|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Improved Illusions|Wizard|XPHB|Illusionist|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Illusion Savant",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Escolha dois feitiços de Mago da escola Ilusão, cada um dos quais não deve ser superior ao nível 2, e adicione-os ao seu livro de feitiços gratuitamente.",
+				"Além disso, sempre que você obtiver acesso a um novo nível de espaços de magia nesta classe, você poderá adicionar uma magia de Mago da escola Ilusão ao seu grimório gratuitamente. A magia escolhida deve ser de um nível para o qual você tenha espaços de magia."
+			]
+		},
+		{
+			"name": "Improved Illusions",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você pode lançar feitiços de Ilusão sem fornecer componentes verbais, e se um feitiço de Ilusão que você lançar tiver um alcance de mais de 3 metros, o alcance aumenta em 18 metros.",
+				"Você também conhece o truque {@spell Minor Illusion|XPHB}. Se você já conhece, você aprende um truque diferente de Mago de sua escolha. O truque não conta no número de truques conhecidos. Você pode criar um som e uma imagem com uma única transmissão de {@spell Minor Illusion|XPHB} e pode lançá-la como {@variantrule Bonus Action|XPHB}."
+			]
+		},
+		{
+			"name": "Phantasmal Creatures",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Você sempre tem os feitiços {@spell Summon Beast|XPHB} e {@spell Summon Fey|XPHB} preparados. Sempre que você lançar qualquer um dos feitiços, você pode mudar sua escola para Ilusão, o que faz com que a criatura invocada pareça espectral. Você pode lançar a versão Ilusão de cada feitiço sem gastar um espaço de feitiço, mas lançá-lo sem um espaço reduz pela metade o {@variantrule Hit Points|XPHB} da criatura. Depois de lançar qualquer feitiço sem espaço de feitiço, você deve terminar {@variantrule Long Rest|XPHB} antes de poder lançar o feitiço dessa forma novamente."
+			]
+		},
+		{
+			"name": "Illusory Self",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura atinge você com uma jogada de ataque, você pode usar um {@variantrule Reaction|XPHB} para interpor uma duplicata ilusória sua entre o atacante e você mesmo. O ataque automaticamente erra você e então a ilusão se dissipa.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. Você também pode restaurar seu uso gastando um espaço de magia de nível 2+ (nenhuma ação necessária)."
+			]
+		},
+		{
+			"name": "Illusory Reality",
+			"source": "XPHB",
+			"page": 175,
+			"className": "Wizard",
+			"classSource": "XPHB",
+			"subclassShortName": "Illusionist",
+			"subclassSource": "XPHB",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Você aprendeu a incorporar a magia das sombras em suas ilusões para dar-lhes uma semi-realidade. Quando você conjura uma magia de Ilusão com um espaço de magia, você pode escolher um objeto inanimado e não mágico que faça parte da ilusão e tornar esse objeto real. Você pode fazer isso no seu turno como {@variantrule Bonus Action|XPHB} enquanto o feitiço estiver em andamento. O objeto permanece real por 1 minuto, durante o qual não pode causar dano nem fornecer quaisquer condições. Por exemplo, você pode criar a ilusão de uma ponte sobre um abismo e depois torná-la real e atravessá-la."
+			]
+		}
+	]
+}

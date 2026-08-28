@@ -1,0 +1,1089 @@
+{
+	"action": [
+		{
+			"name": "Activate an Item",
+			"source": "DMG",
+			"page": 141,
+			"srd": true,
+			"basicRules": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ativar alguns itens mágicos exige que o usuário faça algo em particular, como segurar o item e pronunciar uma palavra de comando, ler o item se for um pergaminho ou bebê-lo se for uma poção. A descrição de cada categoria de item ou item individual detalha como um item é ativado. Certos itens usam uma ou mais das seguintes regras relacionadas à sua ativação.",
+				"Se um item requer uma ação para ser ativado, essa ação não é uma função da ação {@action Use an Object}, portanto, um recurso como o {@subclassFeature Fast Hands|Rogue||Thief||3} do ladino não pode ser usado para ativar o item.",
+				{
+					"type": "entries",
+					"name": "Command Word",
+					"entries": [
+						"Uma palavra de comando é uma palavra ou frase que deve ser falada de forma audível para que o item funcione. Um item mágico que exige que o usuário fale uma palavra de comando não pode ser ativado na área de qualquer efeito que impeça o som, como a área criada pela magia silêncio."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Consumables",
+					"entries": [
+						"Alguns itens são usados quando são ativados. Uma poção ou elixir deve ser engolido, ou um óleo aplicado no corpo. A escrita desaparece de um pergaminho quando ele é lido. Uma vez usado, um item consumível perde sua magia e não funciona mais."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spells",
+					"entries": [
+						"Alguns itens mágicos permitem ao usuário lançar um feitiço a partir do item, geralmente gastando cargas dele. A magia é lançada no nível de magia e conjurador mais baixo possível, não gasta nenhum dos espaços de magia do usuário e não requer componentes, a menos que a descrição do item diga o contrário. O feitiço usa seu tempo de lançamento, alcance e duração normais, e o usuário do item deve se concentrar se o feitiço exigir {@status concentration}. Certos itens abrem exceções a essas regras, alterando o tempo de lançamento, a duração ou outras partes de um feitiço.",
+						"Muitos itens, como poções, ignoram o lançamento do feitiço e conferem os efeitos do feitiço. Tal item ainda usa a duração da magia, a menos que a descrição do item diga o contrário.",
+						"Um item mágico, como certos cajados, pode exigir que você use sua própria habilidade de conjuração ao lançar uma magia a partir do item. Se você tiver mais de uma habilidade de conjuração, você escolhe qual usar com o item. Se você não tem uma habilidade de conjuração — talvez você seja um ladino com o recurso Usar Dispositivo Mágico — seu modificador de habilidade de conjuração é +0 para o item, e seu bônus de proficiência se aplica."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Charges",
+					"entries": [
+						"Alguns itens mágicos possuem cargas que você gasta para ativar suas propriedades. O número de cargas restantes de um item é revelado quando uma magia de identificação é lançada no item ou quando uma criatura se sintoniza com o item. Além disso, quando um item recupera cargas, a criatura sintonizada com aquele item aprende quantas cargas ele recuperou."
+					]
+				}
+			]
+		},
+		{
+			"name": "Attack",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Attack|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"A ação mais comum a ser realizada em combate é a ação de Ataque, seja você brandindo uma espada, atirando uma flecha com um arco ou brigando com os punhos.",
+				"Com esta ação, você realiza um ataque corpo a corpo ou à distância. Consulte a seção \"{@book Making an Attack|phb|9|making an attack}\" para ver as regras que regem os ataques.",
+				"Certos recursos, como o Extra Attack do lutador, permitem que você faça mais de um ataque com esta ação."
+			],
+			"seeAlsoAction": [
+				"Disarm|DMG",
+				"Agarrar",
+				"Mark|DMG",
+				"Empurrar",
+				"Shove Aside|DMG",
+				"Combate com duas armas"
+			]
+		},
+		{
+			"name": "Attack",
+			"source": "XPHB",
+			"page": 361,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação de Ataque, você pode fazer uma jogada de ataque com uma arma ou um {@variantrule Unarmed Strike|XPHB}.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Equipping and Unequipping Weapons",
+							"entries": [
+								"Você pode equipar ou desequipar uma arma ao realizar um ataque como parte desta ação. Você faz isso antes ou depois do ataque. Se você equipar uma arma antes de um ataque, não precisará usá-la para esse ataque. Equipar uma arma inclui retirá-la de uma bainha ou pegá-la. Desequipar uma arma inclui embainhá-la, guardá-la ou deixá-la cair."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Moving Between Attacks",
+							"entries": [
+								"Se você se mover no seu turno e tiver um recurso, como Ataque Extra, que lhe dá mais de um ataque como parte da ação de Ataque, você pode usar parte ou todo esse movimento para se mover entre esses ataques."
+							]
+						}
+					]
+				}
+			],
+			"seeAlsoAction": [
+				"Two-Weapon Fighting|XPHB"
+			]
+		},
+		{
+			"name": "Cast a Spell",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Magic|XPHB"
+			],
+			"time": [
+				"Varia"
+			],
+			"entries": [
+				"Conjuradores como magos e clérigos, assim como muitos monstros, têm acesso a feitiços e podem usá-los com grande efeito em combate. Cada feitiço tem um tempo de lançamento, que especifica se o lançador deve usar uma ação, reação, minutos ou mesmo horas para lançar o feitiço. Lançar um feitiço não é, portanto, necessariamente uma ação. A maioria das magias tem um tempo de lançamento de 1 ação, então um conjurador geralmente usa sua ação em combate para lançar tal magia. Veja {@book chapter 10|phb|10|casting a spell} para as regras sobre lançamento de feitiços."
+			]
+		},
+		{
+			"name": "Climb onto a Bigger Creature",
+			"source": "DMG",
+			"page": 271,
+			"fromVariant": "Opções de ação",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Se uma criatura quiser pular em outra criatura, ela poderá fazê-lo em {@action grapple||grappling}. Entretanto, uma criatura Pequena ou Média tem poucas chances de realizar um ataque bem-sucedido contra uma criatura Enorme ou Imenso, a menos que a magia tenha concedido poder sobrenatural ao lutador.",
+				"Como alternativa, um oponente adequadamente grande pode ser tratado como terreno com o propósito de pular de costas ou agarrar-se a um membro. Depois de fazer quaisquer testes de habilidade necessários para se posicionar e subir na criatura maior, a criatura menor usa sua ação para fazer um teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) contestado pelo teste de Destreza ({@skill Acrobatics}) do alvo. Se vencer a disputa, a criatura menor se move com sucesso para o espaço da criatura alvo, a criatura menor se move com o alvo e tem vantagem nas jogadas de ataque contra ele.",
+				"A criatura menor pode se mover dentro do espaço da criatura maior, tratando o espaço como {@quickref difficult terrain||3}. A capacidade da criatura maior de atacar a criatura menor depende da localização da criatura menor e fica a seu critério. A criatura maior pode desalojar a criatura menor como uma ação - derrubando-a, raspando-a contra uma parede ou agarrando-a e jogando-a - fazendo um teste de Força ({@skill Athletics}) contestado pelo teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) da criatura menor. A criatura menor escolhe qual habilidade usar."
+			]
+		},
+		{
+			"name": "Dash",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Dash|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Correr, você ganha movimento extra para o turno atual. O aumento é igual à sua velocidade, após aplicar quaisquer modificadores. Com uma velocidade de 9 metros, por exemplo, você pode se mover até 18 metros em seu turno se correr.",
+				"Qualquer aumento ou diminuição na sua velocidade altera esse movimento adicional na mesma proporção. Se seu deslocamento de 9 metros for reduzido para 4,5 metros, por exemplo, você poderá se mover até 9 metros neste turno se correr."
+			]
+		},
+		{
+			"name": "Dash",
+			"source": "XPHB",
+			"page": 365,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Correr, você ganha movimento extra para o turno atual. O aumento é igual ao seu {@variantrule Speed|XPHB} após aplicar quaisquer modificadores. Com um {@variantrule Speed|XPHB} de 30 pés, por exemplo, você pode se mover até 60 pés no seu turno se usar Dash. Se seu {@variantrule Speed|XPHB} de 9 metros for reduzido para 4,5 metros, você poderá se mover até 9 metros neste turno se você Correr.",
+				"Se você tiver uma velocidade especial, como {@variantrule Fly Speed|XPHB} ou {@variantrule Swim Speed|XPHB}, poderá usar essa velocidade em vez de {@variantrule Speed|XPHB} ao realizar esta ação. Você escolhe qual velocidade usar cada vez que fizer isso."
+			]
+		},
+		{
+			"name": "Disarm",
+			"source": "DMG",
+			"page": 271,
+			"fromVariant": "Opções de ação",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Uma criatura pode usar um ataque com arma para tirar uma arma ou outro item do alcance do alvo. O atacante faz uma jogada de ataque contestada pelo teste de Força ({@skill Athletics}) ou de Destreza ({@skill Acrobatics}) do alvo. Se o atacante vencer a disputa, o ataque não causa nenhum dano ou outro efeito negativo, mas o defensor deixa cair o item.",
+				"O atacante tem desvantagem em sua jogada de ataque se o alvo estiver segurando o item com duas ou mais mãos. O alvo tem vantagem em seu teste de habilidade se for maior que a criatura atacante, ou desvantagem se for menor."
+			],
+			"seeAlsoAction": [
+				"Ataque"
+			]
+		},
+		{
+			"name": "Disengage",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Disengage|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Se você realizar a ação Desengajar, seu movimento não provoca ataques de oportunidade pelo resto do turno."
+			]
+		},
+		{
+			"name": "Disengage",
+			"source": "XPHB",
+			"page": 366,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Se você realizar a ação Desengajar, seu movimento não provoca {@action Opportunity Attack|XPHB|Opportunity Attacks} pelo resto do turno atual."
+			]
+		},
+		{
+			"name": "Dodge",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Dodge|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Esquivar, você se concentra inteiramente em evitar ataques. Até o início do seu próximo turno, qualquer jogada de ataque feita contra você terá desvantagem se você puder ver o atacante e você fizer testes de resistência de Destreza com vantagem. Você perde esse benefício se estiver incapacitado (conforme explicado no apêndice) ou se seu deslocamento cair para 0."
+			]
+		},
+		{
+			"name": "Dodge",
+			"source": "XPHB",
+			"page": 366,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Se você realizar a ação Esquivar, você ganha os seguintes benefícios: até o início do seu próximo turno, qualquer jogada de ataque feita contra você terá {@variantrule Disadvantage|XPHB} se você puder ver o atacante, e você fizer Destreza {@variantrule Saving Throw|XPHB|saving throws} com {@variantrule Advantage|XPHB}.",
+				"Você perde esses benefícios se tiver a condição {@condition Incapacitated|XPHB} ou se seu {@variantrule Speed|XPHB} for 0."
+			]
+		},
+		{
+			"name": "Don or Doff a Shield",
+			"source": "PHB",
+			"page": 146,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Don or Doff a Shield|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"O tempo que leva para vestir ou retirar a armadura {@table Getting Into and Out of Armor; Donning and Doffing Armor|phb|depends on the armor's category}. Um {@item shield|phb} pode ser colocado ou retirado como uma ação."
+			]
+		},
+		{
+			"name": "Don or Doff a Shield",
+			"source": "XPHB",
+			"page": 219,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Um {@item Shield|XPHB} pode ser colocado ou retirado como uma ação."
+			]
+		},
+		{
+			"name": "End Concentration",
+			"source": "PHB",
+			"page": 203,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"End Concentration|XPHB"
+			],
+			"time": [
+				"Grátis"
+			],
+			"entries": [
+				"Se um feitiço precisar ser mantido com {@status concentration}, esse fato aparecerá em sua entrada de Duração e o feitiço especificará por quanto tempo você pode se concentrar nele. Você pode encerrar {@status concentration} a qualquer momento (nenhuma ação é necessária)."
+			]
+		},
+		{
+			"name": "End Concentration",
+			"source": "XPHB",
+			"page": 363,
+			"freeRules2024": true,
+			"time": [
+				"Grátis"
+			],
+			"entries": [
+				"Alguns feitiços e outros efeitos requerem Concentração para permanecerem ativos, conforme especificado em suas descrições. Você pode encerrar a Concentração a qualquer momento (nenhuma ação é necessária)."
+			]
+		},
+		{
+			"name": "Escape a Grapple",
+			"source": "PHB",
+			"page": 195,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Escape a Grapple|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Uma criatura {@condition grappled} pode usar sua ação para escapar. Para fazer isso, ele deve ter sucesso em um teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) contestado por seu teste de Força ({@skill Athletics})."
+			],
+			"seeAlsoAction": [
+				"Agarrar"
+			]
+		},
+		{
+			"name": "Escape a Grapple",
+			"source": "XPHB",
+			"page": 367,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Uma criatura Agarrada pode usar sua ação para fazer um teste de Força ({@skill Athletics|XPHB}) ou Destreza ({@skill Acrobatics|XPHB}) contra a CD de fuga do agarrar, encerrando o {@variantrule Condition|XPHB|condition} em si mesma com um sucesso. O {@variantrule Condition|XPHB|condition} também termina se o grappler tiver a condição {@condition Incapacitated|XPHB} ou se a distância entre o alvo agarrado e o grappler exceder o alcance do grapple."
+			]
+		},
+		{
+			"name": "Grapple",
+			"source": "PHB",
+			"page": 195,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				{
+					"uid": "Unarmed Strike|XPHB",
+					"tag": "variantrule"
+				}
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Quando você quiser agarrar uma criatura ou lutar com ela, você pode usar a ação {@action Attack} para fazer um ataque corpo a corpo especial, um agarrar. Se você conseguir realizar vários ataques com a ação {@action Attack}, esse ataque substituirá um deles. O alvo do seu agarrar não deve ser maior que um tamanho maior que você e deve estar ao seu alcance.",
+				"Usando pelo menos uma mão livre, você tenta agarrar o alvo fazendo um teste de agarrar, um teste de Força ({@skill Athletics}) contestado pelo teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) do alvo (o alvo escolhe a habilidade a ser usada). Você terá sucesso automaticamente se o alvo for {@condition incapacitated}. Se tiver sucesso, você sujeita o alvo à condição {@condition grappled} (veja o apêndice). A condição especifica as coisas que a encerram, e você pode liberar o alvo sempre que quiser (nenhuma ação é necessária).",
+				{
+					"type": "entries",
+					"name": "Moving a Grappled Target",
+					"entries": [
+						"Ao se mover, você pode arrastar ou carregar a criatura {@condition grappled} com você, mas sua velocidade é reduzida pela metade, a menos que a criatura seja dois ou mais tamanhos menor que você."
+					]
+				}
+			],
+			"seeAlsoAction": [
+				"Fuja de uma luta"
+			]
+		},
+		{
+			"name": "Healing Surge",
+			"source": "DMG",
+			"page": 266,
+			"fromVariant": "Cura",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Como uma ação, um personagem pode usar um surto de cura e gastar até metade de seus Dados de Vida. Para cada Dado de Vida gasto desta forma, o jogador lança o dado e adiciona o modificador de Constituição do personagem. O personagem recupera pontos de vida iguais ao total. O jogador pode decidir gastar um Dado de Vida adicional após cada lançamento.",
+				"Um personagem que usa um surto de cura não pode fazê-lo novamente até terminar um descanso curto ou longo. Sob esta regra opcional, um personagem recupera todos os Dados de Vida gastos no final de um descanso longo. Com um descanso curto, um personagem recupera Dados de Vida iguais ao seu nível dividido por quatro (mínimo de um dado)."
+			]
+		},
+		{
+			"name": "Help",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Help|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Você pode ajudar outra criatura na conclusão de uma tarefa. Quando você realiza a ação Ajudar, a criatura que você ajuda ganha vantagem no próximo teste de habilidade que fizer para realizar a tarefa que você está ajudando, desde que ela faça o teste antes do início do seu próximo turno.",
+				"Alternativamente, você pode ajudar uma criatura aliada a atacar uma criatura a até 1,5 metro de você. Você finta, distrai o alvo ou de alguma outra forma forma uma equipe para tornar o ataque do seu aliado mais eficaz. Se o seu aliado atacar o alvo antes do seu próximo turno, a primeira jogada de ataque será feita com vantagem."
+			]
+		},
+		{
+			"name": "Help",
+			"source": "XPHB",
+			"page": 368,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao executar a ação Ajuda, você executa um dos seguintes procedimentos.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Assist an Ability Check",
+							"entries": [
+								"Escolha uma de suas perícias ou proficiências com ferramentas e um aliado que esteja próximo o suficiente para que você possa ajudá-lo verbal ou fisicamente quando ele fizer um teste de habilidade. Esse aliado tem {@variantrule Advantage|XPHB} no próximo teste de habilidade que fizer com a habilidade ou ferramenta escolhida. Este benefício expira se o aliado não o utilizar antes do início do seu próximo turno. O DM tem a palavra final sobre se a sua assistência é possível."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Assist an Attack Roll",
+							"entries": [
+								"Você distrai momentaneamente um inimigo a até 1,5 metro de você, dando {@variantrule Advantage|XPHB} para a próxima jogada de ataque de um de seus aliados contra esse inimigo. Este benefício expira no início do seu próximo turno."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Hide",
+			"source": "PHB",
+			"page": 192,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Hide|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Esconder-se, você faz um teste de Destreza ({@skill Stealth}) na tentativa de se esconder, seguindo as regras em {@book chapter 7 |phb|7|hiding} para se esconder. Se tiver sucesso, você ganha certos benefícios, conforme descrito na seção \"{@book Unseen Attackers and Targets|PHB|9|unseen attackers and targets}\" do Livro do Jogador."
+			]
+		},
+		{
+			"name": "Hide",
+			"source": "XPHB",
+			"page": 368,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Com a ação Esconder, você tenta se esconder. Para fazer isso, você deve ter sucesso em um teste de {@dc 15} Destreza ({@skill Stealth|XPHB}) enquanto estiver {@variantrule Heavily Obscured|XPHB} ou atrás de {@variantrule Cover|XPHB|Three-Quarters Cover or Total Cover}, e você deve estar fora da linha de visão de qualquer inimigo; se você pode ver uma criatura, você pode discernir se ela pode ver você.",
+				"Em uma verificação bem-sucedida, você terá a condição {@condition Invisible|XPHB}. Anote o total do seu teste, que é a CD para uma criatura encontrá-lo com um teste de Sabedoria ({@skill Perception|XPHB}).",
+				"A condição termina em você imediatamente após ocorrer qualquer uma das seguintes situações: você emite um som mais alto que um sussurro, um inimigo o encontra, você faz uma jogada de ataque ou lança uma magia com componente verbal."
+			]
+		},
+		{
+			"name": "Identify a Spell",
+			"source": "XGE",
+			"page": 85,
+			"fromVariant": "Conjuração|XGE",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction"
+				},
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Às vezes, um personagem deseja identificar uma magia que outra pessoa está lançando ou que já foi lançada. Para fazer isso, um personagem pode usar sua reação para identificar um feitiço conforme ele está sendo lançado, ou pode usar uma ação em seu turno para identificar um feitiço por seu efeito após ser lançado.",
+				"Se o personagem percebeu o lançamento, o efeito do feitiço ou ambos, o personagem pode fazer um teste de Inteligência ({@skill Arcana}) com a reação ou ação. A CD é igual a 15 + o nível da magia. Se a magia for conjurada como uma magia de classe e o personagem for membro daquela classe, o teste será feito com vantagem. Por exemplo, se o conjurador conjurar uma magia como um clérigo, outro clérigo terá vantagem no teste para identificar a magia. Alguns feitiços não estão associados a nenhuma classe quando são lançados, como quando um monstro usa sua característica Conjuração Inata.",
+				"Este teste de Inteligência ({@skill Arcana}) representa o fato de que identificar uma magia requer uma mente rápida e familiaridade com a teoria e prática de conjuração. Isto é verdade mesmo para um personagem cuja habilidade de conjuração seja Sabedoria ou Carisma. Ser capaz de lançar feitiços por si só não o torna apto a deduzir exatamente o que os outros estão fazendo quando lançam seus feitiços."
+			]
+		},
+		{
+			"name": "Improvising an Action",
+			"source": "PHB",
+			"page": 193,
+			"basicRules": true,
+			"reprintedAs": [
+				"Improvising an Action|XPHB"
+			],
+			"time": [
+				"Varia"
+			],
+			"entries": [
+				"Seu personagem pode fazer coisas não cobertas pelas ações deste capítulo, como arrombar portas, intimidar inimigos, sentir fraquezas nas defesas mágicas ou pedir uma negociação com um inimigo. Os únicos limites para as ações que você pode tentar são sua imaginação e os valores de habilidade do seu personagem. Veja as descrições dos valores de habilidade em {@book chapter 7|phb|7|Ability Scores and Modifiers} para se inspirar enquanto improvisa.",
+				"Quando você descreve uma ação não detalhada em outras partes das regras, o Mestre lhe diz se aquela ação é possível e que tipo de teste você precisa fazer, se houver, para determinar o sucesso ou o fracasso."
+			]
+		},
+		{
+			"name": "Improvising an Action",
+			"source": "XPHB",
+			"page": 15,
+			"freeRules2024": true,
+			"time": [
+				"Varia"
+			],
+			"entries": [
+				"Os personagens dos jogadores e os monstros também podem fazer coisas não abrangidas por outras ações. Muitas características de classe e outras habilidades oferecem opções de ação adicionais, e você pode improvisar outras ações. Quando você descreve uma ação não detalhada em outras partes das regras, o Dungeon Master lhe diz se aquela ação é possível e que tipo de {@variantrule D20 Test|XPHB} você precisa fazer, se houver."
+			]
+		},
+		{
+			"name": "Influence",
+			"source": "XPHB",
+			"page": 369,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Com a ação Influência, você incita um monstro a fazer algo. Descreva ou interprete como você está se comunicando com o monstro. Você está tentando enganar, intimidar, divertir ou persuadir gentilmente? O Mestre então determina se o monstro se sente disposto, relutante ou hesitante devido à sua interação; esta determinação estabelece se um teste de habilidade é necessário, conforme explicado abaixo.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Willing",
+							"entries": [
+								"Se o seu desejo estiver alinhado com os desejos do monstro, nenhum teste de habilidade será necessário; o monstro atende ao seu pedido da maneira que preferir."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Unwilling",
+							"entries": [
+								"Se o seu impulso for repugnante ao monstro ou contrário ao seu alinhamento, nenhum teste de habilidade será necessário; não cumpre."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hesitant",
+							"entries": [
+								"Se você incitar o monstro a fazer algo que ele está hesitante em fazer, você deve fazer um teste de habilidade, que é afetado pela atitude do monstro: Indiferente, Amigável ou Hostil, cada um dos quais é definido neste glossário. A tabela de Verificações de Influência sugere qual teste de habilidade fazer com base em como você está interagindo com o monstro. O Mestre escolhe o teste, que tem uma CD padrão igual a 15 ou o valor de Inteligência do monstro, o que for maior. Se obtiver sucesso no teste, o monstro faz o que lhe é pedido. Se o teste falhar, você deve esperar 24 horas (ou uma duração definida pelo Mestre) antes de insistir da mesma forma novamente."
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Verificações de influência",
+							"colLabels": [
+								"Verificação de habilidade",
+								"Interação"
+							],
+							"colStyles": [
+								"col-4",
+								"col-8"
+							],
+							"rows": [
+								[
+									"Charisma ({@skill Deception|XPHB})",
+									"Enganando um monstro que te entende"
+								],
+								[
+									"Charisma ({@skill Intimidation|XPHB})",
+									"Intimidando um monstro"
+								],
+								[
+									"Charisma ({@skill Performance|XPHB})",
+									"Divertindo um monstro"
+								],
+								[
+									"Charisma ({@skill Persuasion|XPHB})",
+									"Persuadindo um monstro que te entende"
+								],
+								[
+									"Wisdom ({@skill Animal Handling|XPHB})",
+									"Persuadir suavemente uma Besta ou Monstruosidade"
+								]
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Magic",
+			"source": "XPHB",
+			"page": 371,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Quando você realiza a ação de Magia, você conjura uma magia que tem um tempo de lançamento de uma ação ou usa um recurso ou item mágico que requer uma ação de Magia para ser ativado.",
+				"Se você lançar um feitiço que tenha um tempo de lançamento de 1 minuto ou mais, você deverá realizar a ação de Magia em cada turno desse lançamento e deverá manter {@status Concentration|XPHB} enquanto faz isso. Se seu {@status Concentration|XPHB} for quebrado, o feitiço falha, mas você não gasta um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Mark",
+			"source": "DMG",
+			"page": 271,
+			"fromVariant": "Opções de ação",
+			"entries": [
+				"Esta opção torna mais fácil para os combatentes corpo a corpo atacarem uns aos outros com ataques de oportunidade.",
+				"Quando uma criatura realiza um ataque corpo a corpo, ela também pode marcar seu alvo. Até o final do próximo turno do atacante, qualquer ataque de oportunidade que ele fizer contra o alvo marcado terá vantagem. O ataque de oportunidade não gasta a reação do atacante, mas o atacante não pode fazer o ataque se alguma coisa, como a condição {@condition incapacitated} ou o feitiço {@spell shocking grasp}, o estiver impedindo de realizar reações. O atacante está limitado a um ataque de oportunidade por turno."
+			],
+			"seeAlsoAction": [
+				"Ataque"
+			]
+		},
+		{
+			"name": "Opportunity Attack",
+			"source": "PHB",
+			"page": 195,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Opportunity Attack|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction"
+				}
+			],
+			"entries": [
+				"Em uma luta, todos estão constantemente atentos para que os inimigos baixem a guarda. Você raramente consegue passar descuidadamente por seus inimigos sem se colocar em perigo; fazer isso provoca um ataque de oportunidade.",
+				"Você pode fazer um ataque de oportunidade quando uma criatura hostil que você pode ver se move para fora do seu alcance. Para realizar o ataque de oportunidade, você usa sua reação para realizar um ataque corpo a corpo contra a criatura provocadora. O ataque interrompe o movimento da criatura provocadora, ocorrendo logo antes de a criatura sair do seu alcance.",
+				"Você pode evitar provocar um ataque de oportunidade executando a ação {@action Disengage}. Você também não provoca um ataque de oportunidade quando se teletransporta ou quando alguém ou algo o move sem usar seu movimento, ação ou reação. Por exemplo, você não provoca um ataque de oportunidade se uma explosão o arremessar para fora do alcance de um inimigo ou se a gravidade fizer com que você passe por um inimigo."
+			]
+		},
+		{
+			"name": "Opportunity Attack",
+			"source": "XPHB",
+			"page": 371,
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction"
+				}
+			],
+			"entries": [
+				"Você pode fazer um Ataque de Oportunidade quando uma criatura que você pode ver sai do seu alcance usando sua ação, seu {@variantrule Bonus Action|XPHB}, seu {@variantrule Reaction|XPHB} ou uma de suas velocidades. Para fazer o Ataque de Oportunidade, pegue um {@variantrule Reaction|XPHB} para fazer um ataque corpo a corpo com uma arma ou um {@variantrule Unarmed Strike|XPHB} contra a criatura provocadora. O ataque ocorre logo antes da criatura sair do seu alcance."
+			]
+		},
+		{
+			"name": "Other Activity",
+			"source": "PHB",
+			"page": 190,
+			"srd": true,
+			"basicRules": true,
+			"time": [
+				"Varia"
+			],
+			"entries": [
+				"Seu turno pode incluir uma variedade de floreios que não exigem nem sua ação nem seu movimento.",
+				"Você pode se comunicar da maneira que puder, por meio de breves declarações e gestos, conforme for sua vez.",
+				"Você também pode interagir com um objeto ou recurso do ambiente gratuitamente, durante seu movimento ou ação. Por exemplo, você pode abrir uma porta durante seu movimento enquanto avança em direção a um inimigo, ou pode sacar sua arma como parte da mesma ação que usa para atacar.",
+				"Se quiser interagir com um segundo objeto, você precisa usar sua ação. Alguns itens mágicos e outros objetos especiais sempre exigem uma ação para serem usados, conforme indicado em suas descrições.",
+				"O Mestre pode exigir que você use uma ação para qualquer uma dessas atividades quando ela precisar de cuidados especiais ou quando apresentar um obstáculo incomum. Por exemplo, o Mestre poderia razoavelmente esperar que você usasse uma ação para abrir uma porta emperrada ou girar uma manivela para abaixar uma ponte levadiça.",
+				{
+					"type": "inset",
+					"name": "Interacting with Objects Around You",
+					"entries": [
+						"Aqui estão alguns exemplos do tipo de coisa que você pode fazer em conjunto com seu movimento e ação:",
+						{
+							"type": "list",
+							"items": [
+								"desembainhar ou embainhar uma espada",
+								"abrir ou fechar uma porta",
+								"retire uma poção da sua mochila",
+								"pegue um machado caído",
+								"pegue uma bugiganga de uma mesa",
+								"remova um anel do seu dedo",
+								"enfiar um pouco de comida na boca",
+								"plante uma bandeira no chão",
+								"pesque algumas moedas da bolsa do seu cinto",
+								"beba toda a cerveja em uma jarra",
+								"jogue uma alavanca ou um interruptor",
+								"puxe uma tocha de uma arandela",
+								"pegue um livro de uma estante que você possa alcançar",
+								"apagar uma pequena chama",
+								"coloque uma máscara",
+								"puxe o capuz da sua capa para cima e sobre a cabeça",
+								"coloque seu ouvido em uma porta",
+								"chutar uma pequena pedra",
+								"virar uma chave em uma fechadura",
+								"bata no chão com uma vara de 3 metros",
+								"entregar um item para outro personagem"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Overrun",
+			"source": "DMG",
+			"page": 272,
+			"fromVariant": "Opções de ação",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				},
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"entries": [
+				"Quando uma criatura tenta se mover através do espaço de uma criatura hostil, o movedor pode tentar forçar sua passagem ultrapassando a criatura hostil. Como uma ação ou ação bônus, o movedor faz um teste de Força ({@skill Athletics}) contestado pelo teste de Força da criatura hostil ({@skill Athletics}). A criatura que tenta invadir tem vantagem neste teste se for maior que a criatura hostil, ou desvantagem se for menor. Se o motor vencer a disputa, ele poderá se mover pelo espaço da criatura hostil uma vez neste turno."
+			],
+			"seeAlsoAction": [
+				"Tumble|DMG"
+			]
+		},
+		{
+			"name": "Ready",
+			"source": "PHB",
+			"page": 193,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Ready|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Às vezes você quer saltar sobre um inimigo ou esperar por uma circunstância específica antes de agir. Para fazer isso, você pode realizar a ação Preparar no seu turno, o que lhe permite agir usando sua reação antes do início do seu próximo turno.",
+				"Primeiro, você decide qual circunstância perceptível irá desencadear sua reação. Em seguida, você escolhe a ação que executará em resposta a esse gatilho ou escolhe aumentar sua velocidade em resposta a ele. Os exemplos incluem \"Se o cultista pisar no alçapão, puxarei a alavanca que o abre\" e \"Se o goblin pisar perto de mim, eu me afastarei\".",
+				"Quando o gatilho ocorre, você pode reagir logo após o gatilho terminar ou ignorá-lo. Lembre-se de que você pode realizar apenas uma reação por rodada.",
+				"Ao preparar um feitiço, você o lança normalmente, mas retém sua energia, que você libera com sua reação quando o gatilho ocorre. Para ser preparado, um feitiço deve ter um tempo de lançamento de 1 ação, e manter a magia do feitiço requer {@status concentration} (explicado em {@book chapter 10|phb|10|concentration}). Se o seu {@status concentration} for quebrado, o feitiço se dissipa sem fazer efeito. Por exemplo, se você estiver {@status concentration||concentrating} no feitiço da teia e preparar o míssil mágico, seu feitiço da teia terminará e se você sofrer dano antes de lançar o míssil mágico com sua reação, seu {@status concentration} poderá ser quebrado.",
+				"Você tem até o início do seu próximo turno para usar uma ação preparada."
+			]
+		},
+		{
+			"name": "Ready",
+			"source": "XPHB",
+			"page": 372,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Você executa a ação Preparar para esperar por uma circunstância específica antes de agir. Para fazer isso, você realiza esta ação no seu turno, o que lhe permite agir realizando um {@variantrule Reaction|XPHB} antes do início do seu próximo turno.",
+				"Primeiro, você decide qual circunstância perceptível acionará seu {@variantrule Reaction|XPHB}. Em seguida, você escolhe a ação que executará em resposta a esse gatilho ou opta por avançar para {@variantrule Speed|XPHB} em resposta a ele. Os exemplos incluem \"Se o cultista pisar no alçapão, puxarei a alavanca que o abre\" e \"Se o zumbi pisar perto de mim, eu me afasto\".",
+				"Quando o gatilho ocorre, você pode pegar seu {@variantrule Reaction|XPHB} logo após o gatilho terminar ou ignorá-lo.",
+				"Ao preparar um feitiço, você o lança normalmente (gastando todos os recursos usados para lançá-lo), mas retém sua energia, que você libera com seu {@variantrule Reaction|XPHB} quando o gatilho ocorre. Para ser preparado, um feitiço deve ter um tempo de lançamento de uma ação, e manter a magia do feitiço requer {@status Concentration|XPHB}, que você pode manter até o início do seu próximo turno. Se seu {@status Concentration|XPHB} for quebrado, o feitiço se dissipa sem fazer efeito."
+			]
+		},
+		{
+			"name": "Search",
+			"source": "PHB",
+			"page": 193,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Search|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Procurar, você dedica sua atenção a encontrar algo. Dependendo da natureza da sua busca, o Mestre pode pedir que você faça um teste de Sabedoria ({@skill Perception}) ou de Inteligência ({@skill Investigation})."
+			]
+		},
+		{
+			"name": "Search",
+			"source": "XPHB",
+			"page": 373,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Ao realizar a ação Procurar, você faz um teste de Sabedoria para discernir algo que não seja óbvio. A tabela Pesquisar sugere quais habilidades são aplicáveis ​​quando você executa essa ação, dependendo do que você está tentando detectar.",
+				{
+					"type": "table",
+					"caption": "Pesquisar",
+					"colLabels": [
+						"Habilidade",
+						"Coisa para detectar"
+					],
+					"colStyles": [
+						"col-4",
+						"col-8"
+					],
+					"rows": [
+						[
+							"{@skill Insight|XPHB}",
+							"O estado de espírito da criatura"
+						],
+						[
+							"{@skill Medicine|XPHB}",
+							"Doença da criatura ou causa da morte"
+						],
+						[
+							"{@skill Perception|XPHB}",
+							"Criatura ou objeto escondido"
+						],
+						[
+							"{@skill Survival|XPHB}",
+							"Trilhas ou comida"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Shove",
+			"source": "PHB",
+			"page": 195,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				{
+					"uid": "Unarmed Strike|XPHB",
+					"tag": "variantrule"
+				}
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Usando a ação {@action Attack}, você pode fazer um ataque corpo a corpo especial para empurrar uma criatura, seja para derrubá-la {@condition prone} ou empurrá-la para longe de você. Se você conseguir realizar vários ataques com a ação {@action Attack}, esse ataque substituirá um deles.",
+				"O alvo do seu empurrão não deve ser maior que um tamanho maior que você e deve estar ao seu alcance. Você faz um teste de Força ({@skill Athletics}) contestado pelo teste de Força ({@skill Athletics}) ou Destreza ({@skill Acrobatics}) do alvo (o alvo escolhe a habilidade a ser usada). Você terá sucesso automaticamente se o alvo for {@condition incapacitated}. Se tiver sucesso, você derruba o alvo {@condition prone} ou o empurra a 1,5 metro de distância de você."
+			],
+			"seeAlsoAction": [
+				"Ataque",
+				"Shove Aside|DMG"
+			]
+		},
+		{
+			"name": "Shove Aside",
+			"source": "DMG",
+			"page": 272,
+			"fromVariant": "Opções de ação",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Com esta opção, uma criatura usa o ataque especial {@action shove} do {@book Player's Handbook|PHB|9|Shoving a Creature} para forçar um alvo para o lado, em vez de se afastar. O atacante tem desvantagem em seu teste de Força ({@skill Athletics}) quando faz isso. Se o teste for bem sucedido, o atacante move o alvo 1,5 metro para um espaço diferente ao seu alcance."
+			]
+		},
+		{
+			"name": "Stabilize a Creature",
+			"source": "PHB",
+			"page": 197,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Help|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Você pode usar sua ação para administrar primeiros socorros a uma criatura {@condition unconscious} e tentar estabilizá-la, o que requer um teste bem-sucedido de {@dc 10} Sabedoria ({@skill Medicine}).",
+				"Uma criatura estável não faz testes de resistência contra a morte, mesmo tendo 0 pontos de vida, mas permanece {@condition unconscious}. A criatura deixa de ser estável e deve começar a fazer testes de resistência contra a morte novamente, se sofrer algum dano. Uma criatura estável que não é curada recupera 1 ponto de vida após {@dice 1d4} horas."
+			]
+		},
+		{
+			"name": "Study",
+			"source": "XPHB",
+			"page": 375,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Quando você realiza a ação Estudar, você faz um teste de Inteligência para estudar sua memória, um livro, uma pista ou outra fonte de conhecimento e relembrar uma informação importante sobre isso.",
+				"A tabela Áreas de Conhecimento sugere quais competências são aplicáveis às diversas áreas do conhecimento.",
+				{
+					"type": "table",
+					"caption": "Áreas de Conhecimento",
+					"colLabels": [
+						"Habilidade",
+						"Áreas"
+					],
+					"colStyles": [
+						"col-3",
+						"col-9"
+					],
+					"rows": [
+						[
+							"{@skill Arcana|XPHB}",
+							"Feitiços, itens mágicos, símbolos sobrenaturais, tradições mágicas, planos de existência e certas criaturas (Aberrações, Construtos, Elementais, Fey e Monstruosidades)"
+						],
+						[
+							"{@skill History|XPHB}",
+							"Eventos e pessoas históricas, civilizações antigas, guerras e certas criaturas (gigantes e humanóides)"
+						],
+						[
+							"{@skill Investigation|XPHB}",
+							"Armadilhas, cifras, enigmas e dispositivos"
+						],
+						[
+							"{@skill Nature|XPHB}",
+							"Terreno, flora, clima e certas criaturas (Bestas, Dragões, Lodos e Plantas)"
+						],
+						[
+							"{@skill Religion|XPHB}",
+							"Divindades, hierarquias e ritos religiosos, símbolos sagrados, cultos e certas criaturas (Celestiais, Demônios e Mortos-vivos)"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Tumble",
+			"source": "DMG",
+			"page": 272,
+			"fromVariant": "Opções de ação",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				},
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"entries": [
+				"Uma criatura pode tentar passar pelo espaço de uma criatura hostil, esquivando-se e passando pelo oponente. Como uma ação ou ação bônus, o acrobata faz um teste de Destreza ({@skill Acrobatics}) contestado pelo teste de Destreza ({@skill Acrobatics}) da criatura hostil. Se o acrobata vencer a disputa, ele poderá se mover pelo espaço da criatura hostil uma vez neste turno."
+			],
+			"seeAlsoAction": [
+				"Overrun|DMG"
+			]
+		},
+		{
+			"name": "Two-Weapon Fighting",
+			"source": "PHB",
+			"page": 195,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Two-Weapon Fighting|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"entries": [
+				"Quando você executa a ação {@action Attack} e ataca com uma arma corpo a corpo leve que está segurando em uma mão, você pode usar uma ação bônus para atacar com uma arma corpo a corpo leve diferente que está segurando na outra mão. Você não adiciona seu modificador de habilidade ao dano do ataque bônus, a menos que esse modificador seja negativo.",
+				"Se alguma das armas tiver a propriedade de arremesso, você poderá arremessar a arma, em vez de fazer um ataque corpo a corpo com ela."
+			],
+			"seeAlsoAction": [
+				"Ataque"
+			]
+		},
+		{
+			"name": "Two-Weapon Fighting",
+			"source": "XPHB",
+			"page": 213,
+			"freeRules2024": true,
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"entries": [
+				"Quando você realiza a ação {@action Attack|XPHB} em seu turno e ataca com uma arma leve, você pode fazer um ataque extra como {@variantrule Bonus Action|XPHB} mais tarde no mesmo turno. Esse ataque extra deve ser feito com uma arma leve diferente, e você não adiciona seu modificador de habilidade ao dano do ataque extra, a menos que esse modificador seja negativo. Por exemplo, você pode atacar com um {@item Shortsword|XPHB} em uma mão e um {@item Dagger|XPHB} na outra usando a ação {@action Attack|XPHB} e um {@variantrule Bonus Action|XPHB}, mas você não adiciona seu modificador de Força ou Destreza à jogada de dano do {@variantrule Bonus Action|XPHB}, a menos que esse modificador seja negativo."
+			],
+			"seeAlsoAction": [
+				"Attack|XPHB"
+			]
+		},
+		{
+			"name": "Use an Object",
+			"source": "PHB",
+			"page": 193,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Utilize|XPHB"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Você normalmente interage com um objeto enquanto faz outra coisa, como quando desembainha uma espada como parte de um ataque. Quando um objeto requer sua ação para ser usado, você executa a ação Usar um Objeto. Esta ação também é útil quando você deseja interagir com mais de um objeto no seu turno."
+			]
+		},
+		{
+			"name": "Utilize",
+			"source": "XPHB",
+			"page": 377,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Você normalmente interage com um objeto enquanto faz outra coisa, como quando desembainha uma espada como parte da ação {@action Attack|XPHB}. Quando um objeto requer uma ação para seu uso, você realiza a ação Utilizar."
+			]
+		},
+		{
+			"name": "Waking Someone",
+			"source": "XGE",
+			"page": 77,
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"entries": [
+				"Uma criatura que está dormindo naturalmente, em vez de estar em um sono induzido magicamente ou quimicamente, acorda se sofrer algum dano ou se alguém usar uma ação para sacudir ou dar um tapa na criatura para acordá-la. Um barulho repentino e alto – como um grito, um trovão ou um sino tocando – também desperta alguém que está dormindo naturalmente.",
+				"Sussurros não perturbam o sono, a menos que o valor de Sabedoria passiva ({@skill Perception}) do dorminhoco seja 20 ou superior e os sussurros estejam a até 3 metros do dorminhoco. A fala em volume normal desperta quem está dormindo se o ambiente estiver silencioso (sem vento, canto de pássaros, grilos, sons de rua ou algo parecido) e se o dorminhoco tiver uma pontuação de Sabedoria passiva ({@skill Perception}) de 15 ou superior."
+			]
+		}
+	]
+}

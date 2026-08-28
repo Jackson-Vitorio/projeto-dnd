@@ -1,0 +1,300 @@
+{
+	"spell": [
+		{
+			"name": "Arboreal Curse",
+			"source": "GHLoE",
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma xícara de seiva"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você tenta transformar uma criatura que você possa ver dentro do alcance em madeira. Se o corpo do alvo for feito de carne, a criatura deve realizar um teste de resistência de Constituição. Se falhar no salvamento, ele é {@condition restrained} quando sua carne começa a endurecer e se transformar em casca. Se obtiver sucesso, a criatura não é afetada.",
+				"Uma criatura {@condition restrained} afetada por esta magia deve realizar outro teste de resistência de Constituição no final de cada um de seus turnos. Se ele resistir com sucesso contra esta magia três vezes, a magia termina. Se falhar três vezes no teste de resistência de Constituição, ele será transformado em uma árvore e sujeito à condição {@condition petrified} durante o período. Os sucessos e fracassos não precisam ser consecutivos; acompanhe ambos até que o alvo colete uma trinca.",
+				"Se a criatura transformada for queimada, cortada ou destruída de outra forma enquanto {@condition petrified}, a criatura será morta.",
+				"Uma criatura permanece transformada a menos que o efeito seja revertido dentro de um ano com {@spell greater restoration}, {@spell wish} ou efeitos mágicos semelhantes. Se a criatura passar um ano e um dia como uma árvore, a transformação se tornará permanente e nada poderá devolver a criatura à sua forma original."
+			],
+			"conditionInflict": [
+				"petrified",
+				"restrained"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			]
+		},
+		{
+			"name": "Consume Mind",
+			"source": "GHLoE",
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma porção fresca ou magicamente preservada de 30 gramas do cérebro de outra criatura"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você consome o cérebro do cadáver de outra criatura, ganhando suas memórias e conhecimento. O cadáver deve ter cérebro e não pode ser morto-vivo. A magia falha se o cadáver estiver morto (e não preservado) por mais de três dias.",
+				"Até que a magia termine, você pode tentar recordar qualquer fato importante conhecido pela criatura – história familiar, eventos recentes, layouts de construção, senhas, detalhes da morte da criatura e informações similares. Para recordar uma informação, você deve fazer um teste de habilidade usando seu modificador de conjuração. A CD é igual ao valor de Inteligência do cadáver.",
+				"Uma vez que o conjurador faça um teste para determinar se ele se lembra de um fato, ele não poderá tentar lembrá-lo novamente."
+			]
+		},
+		{
+			"name": "Heartseeker",
+			"source": "GHLoE",
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 300
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um rubi que vale pelo menos 100 PO",
+					"cost": 10000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Como parte da conjuração desta magia você deve gastar seis dados de vida ou a magia falhará automaticamente. Quando você faz isso, o sangue flui de seu corpo e então se cristaliza em uma flecha farpada, que é lançada em uma criatura de sua escolha dentro do alcance. Faça um ataque mágico à distância contra a criatura escolhida. Se acertar, role os dados de vida gastos para lançar esta magia e a criatura sofre dano perfurante igual ao resultado.",
+				"Uma vez alojada na criatura, a flecha sangrenta começa a penetrar em seu coração, tornando-a vulnerável a novos ataques. No início do próximo turno da criatura, ela deve realizar um teste de resistência de Constituição. Em caso de falha, os ataques contra a criatura resultam em acertos críticos em 19 ou 20 na jogada de ataque.",
+				"No início de cada turno da criatura depois disso, ela deve repetir o teste de resistência de Constituição ou o alcance de acerto crítico em ataques contra a criatura aumenta em 1 novamente. Se a criatura obtiver sucesso em três desses testes de resistência (esses sucessos não precisam ser consecutivos), esta magia termina. O alcance aumentado do acerto crítico termina quando o feitiço termina."
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constituição"
+			]
+		},
+		{
+			"name": "Hunter Sense",
+			"source": "GHLoE",
+			"level": 0,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você toca uma criatura voluntária. Enquanto este feitiço estiver ativo, os sentidos do alvo serão aguçados. Se o alvo obtiver um 9 ou menos no dado ao fazer um teste de Sabedoria ({@skill Perception}), ele agirá como se tivesse obtido um 10."
+			]
+		},
+		{
+			"name": "Magic Mirror",
+			"source": "GHLoE",
+			"level": 5,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "que você pega quando é alvo de um feitiço"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um mármore prateado polido"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma bolha momentânea de energia iridescente brilha no ar entre você e o lançador do feitiço desencadeador. A magia é redirecionada para uma criatura de sua escolha que você possa ver em um raio de 18 metros. Se a magia for de 5º nível ou inferior, você não será mais alvo da magia e a criatura escolhida será. Se a magia for de 6º nível ou superior, faça um teste de habilidade usando sua habilidade de conjuração. A CD é igual a 10 + o nível da magia. Se obtiver sucesso no teste, você não será mais alvo da magia e a criatura escolhida será. Se falhar no teste, você continua sendo o alvo da magia desencadeadora."
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Suffocate",
+			"source": "GHLoE",
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma luva de couro"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria um par de mãos que agarram feitas de forças de {@condition invisible}. Faça um ataque mágico contra uma criatura que você possa ver dentro do alcance. Ao acertar, a criatura fica {@condition restrained} enquanto as mãos esmagam sua garganta ou equivalente corporal.",
+				"Se a criatura precisar de ar para respirar, ela começará a sufocar. Uma criatura sufocante pode sobreviver por um número de rodadas igual a 1 + seu modificador de Constituição (mínimo de 1 rodada). No início do próximo turno, após o término dessas rodadas, ele se torna {@condition unconscious} e não pode recuperar pontos de vida até que possa respirar novamente.",
+				"Uma criatura consciente {@condition restrained} pelas mãos pode usar sua ação para fazer um teste de Força ou Destreza (à sua escolha) contra sua CD de salvamento de feitiço. Se obtiver sucesso, a magia termina no alvo."
+			],
+			"conditionInflict": [
+				"invisible",
+				"restrained",
+				"unconscious"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Wrack",
+			"source": "GHLoE",
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um pedaço de corda desgastado"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Escolha uma criatura que você possa ver dentro do alcance. O alvo deve ser bem sucedido em um teste de resistência de Constituição ou sofrerá espasmos musculares excruciantes durante a duração. Uma criatura afetada desta forma tem seu deslocamento reduzido pela metade e rola ataques com desvantagem. No final de cada um de seus turnos, o alvo pode realizar outro teste de resistência de Constituição. Se obtiver sucesso, a magia termina no alvo."
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		}
+	]
+}

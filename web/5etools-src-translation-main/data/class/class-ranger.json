@@ -1,0 +1,4411 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"subclass"
+		]
+	},
+	"class": [
+		{
+			"name": "Ranger",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"reprintedAs": [
+				"Ranger|XPHB"
+			],
+			"edition": "classic",
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"str",
+				"dex"
+			],
+			"spellcastingAbility": "sabia",
+			"casterProgression": "1/2",
+			"spellsKnownProgression": [
+				0,
+				2,
+				3,
+				3,
+				4,
+				4,
+				5,
+				5,
+				6,
+				6,
+				7,
+				7,
+				8,
+				8,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Fighting Style",
+					"featureType": [
+						"FS:R"
+					],
+					"progression": {
+						"2": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz",
+					"médio",
+					"escudo"
+				],
+				"weapons": [
+					"simples",
+					"marcial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"animal handling",
+								"athletics",
+								"insight",
+								"investigation",
+								"nature",
+								"perception",
+								"stealth",
+								"survival"
+							],
+							"count": 3
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) {@item scale mail|phb} or (b) {@item leather armor|phb}",
+					"(a) two {@item shortsword|phb|shortswords} or (b) two {@filter simple melee weapons|items|source=phb|category=basic|type=simple weapon;melee weapon=sand}",
+					"(a) a {@item dungeoneer's pack|phb} or (b) an {@item explorer's pack|phb}",
+					"A {@item longbow|phb} and a {@item quiver|phb} of {@item arrows (20)|phb|20 arrows}"
+				],
+				"goldAlternative": "{@dice 5d4 × 10|5d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"a": [
+							"scale mail|phb"
+						],
+						"b": [
+							"leather armor|phb"
+						]
+					},
+					{
+						"a": [
+							{
+								"item": "shortsword|phb",
+								"quantity": 2
+							}
+						],
+						"b": [
+							{
+								"equipmentType": "armaSimpleMelee",
+								"quantity": 2
+							}
+						]
+					},
+					{
+						"a": [
+							"dungeoneer's pack|phb"
+						],
+						"b": [
+							"explorer's pack|phb"
+						]
+					},
+					{
+						"_": [
+							"longbow|phb",
+							"arrows (20)|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"dex": 13,
+					"wis": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"luz",
+						"médio",
+						"escudo"
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"animal handling",
+									"athletics",
+									"insight",
+									"investigation",
+									"nature",
+									"perception",
+									"stealth",
+									"survival"
+								],
+								"count": 1
+							}
+						}
+					],
+					"weapons": [
+						"simples",
+						"marcial"
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"{@filter Spells Known|spells|class=ranger}"
+					],
+					"rows": [
+						[
+							0
+						],
+						[
+							2
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							7
+						],
+						[
+							8
+						],
+						[
+							8
+						],
+						[
+							9
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=Ranger}",
+						"{@filter 2nd|spells|level=2|class=Ranger}",
+						"{@filter 3rd|spells|level=3|class=Ranger}",
+						"{@filter 4th|spells|level=4|class=Ranger}",
+						"{@filter 5th|spells|level=5|class=Ranger}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Favored Enemy|Ranger||1",
+				"Favored Foe|Ranger||1|TCE",
+				"Natural Explorer|Ranger||1",
+				"Deft Explorer|Ranger||1|TCE",
+				"Fighting Style|Ranger||2",
+				"Spellcasting|Ranger||2",
+				"Spellcasting Focus|Ranger||2|TCE",
+				{
+					"classFeature": "Ranger Archetype|Ranger||3",
+					"gainSubclassFeature": true
+				},
+				"Primeval Awareness|Ranger||3",
+				"Primal Awareness|Ranger||3|TCE",
+				"Ability Score Improvement|Ranger||4",
+				"Martial Versatility|Ranger||4|TCE",
+				"Extra Attack|Ranger||5",
+				"Favored Enemy and Natural Explorer improvements|Ranger||6",
+				"Deft Explorer Improvement|Ranger||6|TCE",
+				{
+					"classFeature": "Ranger Archetype feature|Ranger||7",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger||8",
+				"Land's Stride|Ranger||8",
+				"Hide in Plain Sight|Ranger||10",
+				"Nature's Veil|Ranger||10|TCE",
+				"Natural Explorer improvement|Ranger||10",
+				"Deft Explorer Improvement|Ranger||10|TCE",
+				{
+					"classFeature": "Ranger Archetype feature|Ranger||11",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger||12",
+				"Vanish|Ranger||14",
+				"Favored Enemy improvement|Ranger||14",
+				{
+					"classFeature": "Ranger Archetype feature|Ranger||15",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger||16",
+				"Feral Senses|Ranger||18",
+				"Ability Score Improvement|Ranger||19",
+				"Foe Slayer|Ranger||20"
+			],
+			"subclassTitle": "Arquétipo do Ranger",
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ranger",
+			"source": "XPHB",
+			"page": 118,
+			"edition": "one",
+			"primaryAbility": [
+				{
+					"dex": true,
+					"wis": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 10
+			},
+			"proficiency": [
+				"str",
+				"dex"
+			],
+			"spellcastingAbility": "sabia",
+			"casterProgression": "artífice",
+			"preparedSpellsProgression": [
+				2,
+				3,
+				4,
+				5,
+				6,
+				6,
+				7,
+				7,
+				9,
+				9,
+				10,
+				10,
+				11,
+				11,
+				12,
+				12,
+				14,
+				14,
+				15,
+				15
+			],
+			"preparedSpellsChange": "descanso longo",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"hunter's mark|xphb"
+						]
+					}
+				}
+			],
+			"featProgression": [
+				{
+					"name": "Fighting Style",
+					"category": [
+						"FS",
+						"FS:R"
+					],
+					"progression": {
+						"2": 1
+					}
+				},
+				{
+					"name": "Epic Boon",
+					"category": [
+						"BE"
+					],
+					"progression": {
+						"19": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz",
+					"médio",
+					"escudo"
+				],
+				"weapons": [
+					"simples",
+					"marcial"
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"animal handling",
+								"athletics",
+								"insight",
+								"investigation",
+								"nature",
+								"perception",
+								"stealth",
+								"survival"
+							],
+							"count": 3
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "studded leather armor|xphb"
+							},
+							{
+								"item": "scimitar|xphb"
+							},
+							{
+								"item": "shortsword|xphb"
+							},
+							{
+								"item": "longbow|xphb"
+							},
+							{
+								"item": "arrows (20)|xphb"
+							},
+							{
+								"item": "quiver|xphb"
+							},
+							{
+								"item": "sprig of mistletoe|xphb"
+							},
+							{
+								"item": "explorer's pack|xphb"
+							},
+							{
+								"value": 700
+							}
+						],
+						"B": [
+							{
+								"value": 15000
+							}
+						]
+					}
+				],
+				"entries": [
+					"{@i Choose A or B:} (A) {@item Studded Leather Armor|XPHB}, {@item Scimitar|XPHB}, {@item Shortsword|XPHB}, {@item Longbow|XPHB}, {@item Arrows (20)|XPHB|20 Arrows}, {@item Quiver|XPHB}, {@item Druidic Focus|XPHB} ({@item sprig of mistletoe|XPHB}), {@item Explorer's Pack|XPHB} e 7 GP; ou (B) 150 GP"
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"weapons": [
+						"marcial"
+					],
+					"armor": [
+						"luz",
+						"médio",
+						"escudo"
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"animal handling",
+									"athletics",
+									"insight",
+									"investigation",
+									"nature",
+									"perception",
+									"stealth",
+									"survival"
+								],
+								"count": 1
+							}
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Inimigo Favorito"
+					],
+					"rows": [
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							2
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							6
+						]
+					]
+				},
+				{
+					"colLabels": [
+						"Feitiços Preparados"
+					],
+					"rows": [
+						[
+							2
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							7
+						],
+						[
+							9
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							12
+						],
+						[
+							14
+						],
+						[
+							14
+						],
+						[
+							15
+						],
+						[
+							15
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"colLabels": [
+						"{@filter 1st|spells|level=1|class=ranger}",
+						"{@filter 2nd|spells|level=2|class=ranger}",
+						"{@filter 3rd|spells|level=3|class=ranger}",
+						"{@filter 4th|spells|level=4|class=ranger}",
+						"{@filter 5th|spells|level=5|class=ranger}"
+					],
+					"rowsSpellProgression": [
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						],
+						[
+							4,
+							3,
+							3,
+							3,
+							2
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Spellcasting|Ranger|XPHB|1",
+				"Favored Enemy|Ranger|XPHB|1",
+				"Weapon Mastery|Ranger|XPHB|1",
+				"Deft Explorer|Ranger|XPHB|2",
+				"Fighting Style|Ranger|XPHB|2",
+				{
+					"classFeature": "Ranger Subclass|Ranger|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger|XPHB|4",
+				"Extra Attack|Ranger|XPHB|5",
+				"Roving|Ranger|XPHB|6",
+				{
+					"classFeature": "Subclass Feature|Ranger|XPHB|7",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger|XPHB|8",
+				"Expertise|Ranger|XPHB|9",
+				"Tireless|Ranger|XPHB|10",
+				{
+					"classFeature": "Subclass Feature|Ranger|XPHB|11",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger|XPHB|12",
+				"Relentless Hunter|Ranger|XPHB|13",
+				"Nature's Veil|Ranger|XPHB|14",
+				{
+					"classFeature": "Subclass Feature|Ranger|XPHB|15",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Ranger|XPHB|16",
+				"Precise Hunter|Ranger|XPHB|17",
+				"Feral Senses|Ranger|XPHB|18",
+				"Epic Boon|Ranger|XPHB|19",
+				"Foe Slayer|Ranger|XPHB|20"
+			],
+			"subclassTitle": "Subclasse de Ranger",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "Beast Master",
+			"shortName": "Beast Master",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 93,
+			"reprintedAs": [
+				"Beast Master|Ranger|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Beast Master|Ranger||Beast Master||3",
+				"Exceptional Training|Ranger||Beast Master||7",
+				"Bestial Fury|Ranger||Beast Master||11",
+				"Share Spells|Ranger||Beast Master||15"
+			]
+		},
+		{
+			"name": "Beast Master",
+			"shortName": "Beast Master",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Beast Master",
+				"source": "PHB",
+				"shortName": "Beast Master",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Hunter",
+			"shortName": "Hunter",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 93,
+			"srd": true,
+			"reprintedAs": [
+				"Hunter|Ranger|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Hunter|Ranger||Hunter||3",
+				"Defensive Tactics|Ranger||Hunter||7",
+				"Multiattack|Ranger||Hunter||11",
+				"Superior Hunter's Defense|Ranger||Hunter||15"
+			]
+		},
+		{
+			"name": "Hunter",
+			"shortName": "Hunter",
+			"source": "PHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Hunter",
+				"source": "PHB",
+				"shortName": "Hunter",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Gloom Stalker",
+			"shortName": "Gloom Stalker",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 41,
+			"reprintedAs": [
+				"Gloom Stalker|Ranger|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"disfarçar-se"
+						],
+						"5": [
+							"truque de corda"
+						],
+						"9": [
+							"medo"
+						],
+						"13": [
+							"maior invisibilidade"
+						],
+						"17": [
+							"parecendo"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Gloom Stalker|Ranger||Gloom Stalker|XGE|3",
+				"Iron Mind|Ranger||Gloom Stalker|XGE|7",
+				"Stalker's Flurry|Ranger||Gloom Stalker|XGE|11",
+				"Shadowy Dodge|Ranger||Gloom Stalker|XGE|15"
+			]
+		},
+		{
+			"name": "Gloom Stalker",
+			"shortName": "Gloom Stalker",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Gloom Stalker",
+				"source": "XGE",
+				"shortName": "Gloom Stalker",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Horizon Walker",
+			"shortName": "Horizon Walker",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 42,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"proteção contra o mal e o bem"
+						],
+						"5": [
+							"passo enevoado"
+						],
+						"9": [
+							"pressa"
+						],
+						"13": [
+							"banimento"
+						],
+						"17": [
+							"círculo de teletransporte"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Horizon Walker|Ranger||Horizon Walker|XGE|3",
+				"Ethereal Step|Ranger||Horizon Walker|XGE|7",
+				"Distant Strike|Ranger||Horizon Walker|XGE|11",
+				"Spectral Defense|Ranger||Horizon Walker|XGE|15"
+			]
+		},
+		{
+			"name": "Horizon Walker",
+			"shortName": "Horizon Walker",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Horizon Walker",
+				"source": "XGE",
+				"shortName": "Horizon Walker",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Monster Slayer",
+			"shortName": "Monster Slayer",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 43,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"proteção contra o mal e o bem"
+						],
+						"5": [
+							"zona da verdade"
+						],
+						"9": [
+							"círculo mágico"
+						],
+						"13": [
+							"banimento"
+						],
+						"17": [
+							"segure monstro"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Monster Slayer|Ranger||Monster Slayer|XGE|3",
+				"Supernatural Defense|Ranger||Monster Slayer|XGE|7",
+				"Magic-User's Nemesis|Ranger||Monster Slayer|XGE|11",
+				"Slayer's Counter|Ranger||Monster Slayer|XGE|15"
+			]
+		},
+		{
+			"name": "Monster Slayer",
+			"shortName": "Monster Slayer",
+			"source": "XGE",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Monster Slayer",
+				"source": "XGE",
+				"shortName": "Monster Slayer",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Fey Wanderer",
+			"shortName": "Fey Wanderer",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 58,
+			"reprintedAs": [
+				"Fey Wanderer|Ranger|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"encantar pessoa"
+						],
+						"5": [
+							"passo enevoado"
+						],
+						"9": [
+							"dissipar magia"
+						],
+						"13": [
+							"porta de dimensão"
+						],
+						"17": [
+							"enganar"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Fey Wanderer|Ranger||Fey Wanderer|TCE|3",
+				"Beguiling Twist|Ranger||Fey Wanderer|TCE|7",
+				"Fey Reinforcements|Ranger||Fey Wanderer|TCE|11",
+				"Misty Wanderer|Ranger||Fey Wanderer|TCE|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fey Wanderer",
+			"shortName": "Fey Wanderer",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Fey Wanderer",
+				"source": "TCE",
+				"shortName": "Fey Wanderer",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Fey Wanderer",
+					"source": "TCE",
+					"shortName": "Fey Wanderer",
+					"className": "Ranger",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Swarmkeeper",
+			"shortName": "Swarmkeeper",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 59,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"mão mágica#c",
+							"fogo de fada"
+						],
+						"5": [
+							"rede"
+						],
+						"9": [
+							"forma gasosa"
+						],
+						"13": [
+							"olho arcano"
+						],
+						"17": [
+							"praga de insetos"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Swarmkeeper|Ranger||Swarmkeeper|TCE|3",
+				"Writhing Tide|Ranger||Swarmkeeper|TCE|7",
+				"Mighty Swarm|Ranger||Swarmkeeper|TCE|11",
+				"Swarming Dispersal|Ranger||Swarmkeeper|TCE|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Swarmkeeper",
+			"shortName": "Swarmkeeper",
+			"source": "TCE",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Swarmkeeper",
+				"source": "TCE",
+				"shortName": "Swarmkeeper",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Swarmkeeper",
+					"source": "TCE",
+					"shortName": "Swarmkeeper",
+					"className": "Ranger",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Drakewarden",
+			"shortName": "Drakewarden",
+			"source": "FTD",
+			"className": "Ranger",
+			"classSource": "PHB",
+			"page": 15,
+			"edition": "classic",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"taumaturgia#c"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Drakewarden|Ranger||Drakewarden|FTD|3",
+				"Bond of Fang and Scale|Ranger||Drakewarden|FTD|7",
+				"Drake's Breath|Ranger||Drakewarden|FTD|11",
+				"Perfected Bond|Ranger||Drakewarden|FTD|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Drakewarden",
+			"shortName": "Drakewarden",
+			"source": "FTD",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Drakewarden",
+				"source": "FTD",
+				"shortName": "Drakewarden",
+				"className": "Ranger",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Drakewarden",
+					"source": "FTD",
+					"shortName": "Drakewarden",
+					"className": "Ranger",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Beast Master",
+			"shortName": "Beast Master",
+			"source": "XPHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"page": 123,
+			"edition": "one",
+			"subclassFeatures": [
+				"Beast Master|Ranger|XPHB|Beast Master|XPHB|3",
+				"Exceptional Training|Ranger|XPHB|Beast Master|XPHB|7",
+				"Bestial Fury|Ranger|XPHB|Beast Master|XPHB|11",
+				"Share Spells|Ranger|XPHB|Beast Master|XPHB|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fey Wanderer",
+			"shortName": "Fey Wanderer",
+			"source": "XPHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"page": 124,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"charm person|xphb"
+						],
+						"5": [
+							"misty step|xphb"
+						],
+						"9": [
+							"summon fey|xphb"
+						],
+						"13": [
+							"dimension door|xphb"
+						],
+						"17": [
+							"mislead|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Fey Wanderer|Ranger|XPHB|Fey Wanderer|XPHB|3",
+				"Beguiling Twist|Ranger|XPHB|Fey Wanderer|XPHB|7",
+				"Fey Reinforcements|Ranger|XPHB|Fey Wanderer|XPHB|11",
+				"Misty Wanderer|Ranger|XPHB|Fey Wanderer|XPHB|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gloom Stalker",
+			"shortName": "Gloom Stalker",
+			"source": "XPHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"page": 125,
+			"edition": "one",
+			"additionalSpells": [
+				{
+					"prepared": {
+						"3": [
+							"disguise self|xphb"
+						],
+						"5": [
+							"rope trick|xphb"
+						],
+						"9": [
+							"fear|xphb"
+						],
+						"13": [
+							"greater invisibility|xphb"
+						],
+						"17": [
+							"seeming|xphb"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Gloom Stalker|Ranger|XPHB|Gloom Stalker|XPHB|3",
+				"Iron Mind|Ranger|XPHB|Gloom Stalker|XPHB|7",
+				"Stalker's Flurry|Ranger|XPHB|Gloom Stalker|XPHB|11",
+				"Shadowy Dodge|Ranger|XPHB|Gloom Stalker|XPHB|15"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hunter",
+			"shortName": "Hunter",
+			"source": "XPHB",
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"page": 127,
+			"edition": "one",
+			"subclassFeatures": [
+				"Hunter|Ranger|XPHB|Hunter|XPHB|3",
+				"Defensive Tactics|Ranger|XPHB|Hunter|XPHB|7",
+				"Superior Hunter's Prey|Ranger|XPHB|Hunter|XPHB|11",
+				"Superior Hunter's Defense|Ranger|XPHB|Hunter|XPHB|15"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Deft Explorer",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 1,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, que substitui o recurso Natural Explorer}",
+				"Você é um explorador e sobrevivente insuperável, tanto na natureza quanto no trato com outras pessoas em suas viagens. Você ganha o benefício Astuto abaixo e um benefício adicional abaixo quando atinge o 6º nível e o 10º nível nesta classe.",
+				{
+					"name": "Canny",
+					"type": "entries",
+					"entries": [
+						"Escolha uma de suas proficiências. Seu bônus de proficiência é duplicado para qualquer teste de habilidade que você fizer que utilize a perícia escolhida.",
+						"Você também pode falar, ler e escrever dois idiomas adicionais de sua escolha."
+					]
+				}
+			]
+		},
+		{
+			"name": "Favored Enemy",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Começando no 1º nível, você tem uma experiência significativa em estudar, rastrear, caçar e até mesmo conversar com um certo tipo de inimigo.",
+				"Escolha um tipo de inimigo favorito: {@filter aberrations|bestiary|type=aberration}, {@filter beasts|bestiary|type=beast}, {@filter celestials|bestiary|type=celestial}, {@filter constructs|bestiary|type=construct}, {@filter dragons|bestiary|type=dragon}, {@filter elementals|bestiary|type=elemental}, {@filter fey|bestiary|type=fey}, {@filter fiends|bestiary|type=fiend}, {@filter giants|bestiary|type=giant}, {@filter monstrosities|bestiary|type=monstrosity}, {@filter oozes|bestiary|type=ooze}, {@filter plants|bestiary|type=plant} ou {@filter undead|bestiary|type=undead}. Alternativamente, você pode selecionar duas raças de {@filter humanoid|bestiary|type=humanoid} (como {@creature gnoll||gnolls} e {@creature orc||orcs}) como inimigos favoritos.",
+				"Você tem vantagem em testes de Sabedoria ({@skill Survival}) para rastrear seus inimigos favoritos, bem como em testes de Inteligência para recuperar informações sobre eles.",
+				"Ao ganhar esse recurso, você também aprende um idioma de sua escolha que é falado por seus inimigos favoritos, se é que eles falam algum.",
+				"Você escolhe um inimigo favorito adicional, bem como um idioma associado, no 6º e 14º níveis. À medida que você ganha níveis, suas escolhas devem refletir os tipos de monstros que você encontrou em suas aventuras."
+			]
+		},
+		{
+			"name": "Favored Foe",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 1,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 1st-level ranger {@variantrule optional class features|tce|optional feature}, que substitui o recurso Favored Enemy e funciona com o recurso Foe Slayer}",
+				"Ao atingir uma criatura com uma jogada de ataque, você pode invocar seu vínculo místico com a natureza para marcar o alvo como seu inimigo favorito por 1 minuto ou até perder seu {@status concentration} (como se você fosse {@status concentration||concentrating} em um feitiço).",
+				"Na primeira vez em cada um dos seus turnos, você atinge o inimigo favorito e causa dano a ele, inclusive ao marcá-lo, você pode aumentar esse dano em {@dice 1d4}.",
+				"Você pode usar esse recurso para marcar um inimigo favorito um número de vezes igual ao seu bônus de proficiência e recuperar todos os usos gastos ao terminar um descanso longo.",
+				"O dano extra deste recurso aumenta quando você atinge certos níveis nesta classe: para {@dice 1d6} no 6º nível e para {@dice 1d8} no 14º nível."
+			]
+		},
+		{
+			"name": "Natural Explorer",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Você está particularmente familiarizado com um tipo de ambiente natural e é adepto de viajar e sobreviver nessas regiões. Escolha um tipo de terreno preferido: ártico, costeiro, deserto, floresta, pastagem, montanha, pântano ou Subterrâneo. Quando você faz um teste de Inteligência ou Sabedoria relacionado ao seu terreno favorito, seu bônus de proficiência é dobrado se você estiver usando uma perícia na qual seja proficiente.",
+				"Ao viajar por uma hora ou mais em seu terreno preferido, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Terreno difícil não retarda a viagem do seu grupo.",
+						"Seu grupo não pode se perder, exceto por meios mágicos.",
+						"Mesmo quando você está envolvido em outra atividade durante a viagem (como procurar alimentos, navegar ou rastrear), você permanece alerta ao perigo.",
+						"Se você estiver viajando sozinho, poderá se mover furtivamente em um ritmo normal.",
+						"Quando você procura alimentos, encontra o dobro de comida do que normalmente encontraria.",
+						"Ao rastrear outras criaturas, você também aprende seu número exato, seus tamanhos e há quanto tempo elas passaram pela área."
+					]
+				},
+				"Você escolhe tipos de terreno favoritos adicionais no 6º e 10º nível."
+			]
+		},
+		{
+			"name": "Fighting Style",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"No 2º nível, você adota um estilo particular de luta como especialidade. Escolha uma das seguintes opções. Você não pode escolher uma opção de estilo de luta mais de uma vez, mesmo que mais tarde possa escolher novamente.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Archery"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Defense"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Dueling"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Two-Weapon Fighting"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Blind Fighting|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Druidic Warrior|TCE"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Thrown Weapon Fighting|TCE"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"No momento em que você alcança o 2º nível, você aprendeu a usar a essência mágica da natureza para lançar magias, assim como um druida faz. Consulte {@book chapter 10|PHB|10} para as regras gerais de lançamento de feitiços e {@book chapter 11|PHB|11} para {@filter ranger spell list|spells|class=ranger}.",
+				{
+					"type": "entries",
+					"name": "Spell Slots",
+					"entries": [
+						"A tabela Ranger mostra quantos slots de feitiço você tem para lançar seu {@filter ranger spells|spells|class=ranger} de 1º nível e superior. Para conjurar uma dessas magias, você deve gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.",
+						"Por exemplo, se você conhece a magia de 1º nível {@spell animal friendship} e tem um espaço de magia de 1º nível e um de 2º nível disponíveis, você pode lançar {@spell animal friendship} usando qualquer um dos espaços."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spells Known of 1st Level and Higher",
+					"entries": [
+						"Você conhece duas magias de 1º nível, à sua escolha, da lista de magias do ranger.",
+						"A coluna Feitiços Conhecidos da tabela Ranger mostra quando você aprende mais feitiços de ranger de sua escolha. Cada uma dessas magias deve ser de um nível para o qual você possui espaços de magia. Por exemplo, quando você atinge o 5º nível nesta classe, você pode aprender uma nova magia de 1º ou 2º nível.",
+						"Além disso, quando você ganha um nível nesta classe, você pode escolher uma das magias de ranger que você conhece e substituí-la por outra magia da lista de magias de ranger, que também deve ser de um nível para o qual você tenha espaços de magia."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Sabedoria é sua habilidade de conjurar magias de ranger, já que sua magia depende de sua sintonia com a natureza. Você usa sua Sabedoria sempre que uma magia se refere à sua habilidade de lançar magias. Além disso, você usa seu modificador de Sabedoria ao definir a CD do teste de resistência para uma magia de ranger que você conjura e ao fazer uma jogada de ataque com uma.",
+						{
+							"type": "abilityDc",
+							"name": "Spell",
+							"attributes": [
+								"sabia"
+							]
+						},
+						{
+							"type": "abilityAttackMod",
+							"name": "Spell",
+							"attributes": [
+								"sabia"
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Spellcasting Focus",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 2,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 2nd-level ranger {@variantrule optional class features|tce|optional feature}}",
+				"Você pode usar um {@item druidic focus|phb} como foco de lançamento de feitiços para seus feitiços de ranger. Um foco druídico pode ser um ramo de visco ou azevinho, uma varinha ou bastão feito de teixo ou outra madeira especial, um bastão retirado inteiro de uma árvore viva ou um objeto incorporando penas, pêlo, ossos e dentes de animais sagrados."
+			]
+		},
+		{
+			"name": "Primal Awareness",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 3rd-level ranger {@variantrule optional class features|tce|optional feature}, que substitui o recurso Primeval Awareness}",
+				"Você pode focar sua consciência através das interconexões da natureza: você aprende feitiços adicionais quando atinge certos níveis nesta classe, caso ainda não os conheça, conforme mostrado na tabela Feitiços de Consciência Primitiva. Esses feitiços não contam no número de feitiços de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Consciência Primitiva",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiço"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell speak with animals}"
+						],
+						[
+							"5º",
+							"{@spell beast sense}"
+						],
+						[
+							"9º",
+							"{@spell speak with plants}"
+						],
+						[
+							"13º",
+							"{@spell locate creature}"
+						],
+						[
+							"17º",
+							"{@spell commune with nature}"
+						]
+					]
+				},
+				"Você pode lançar cada uma dessas magias uma vez sem gastar um espaço de magia. Depois de lançar uma magia dessa maneira, você não poderá fazê-lo novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Primeval Awareness",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"A partir do 3º nível, você pode usar sua ação e gastar um espaço de magia de patrulheiro para focar sua consciência na região ao seu redor. Por 1 minuto por nível do espaço de magia que você gasta, você pode sentir se os seguintes tipos de criaturas estão presentes dentro de 1 milha de você (ou dentro de até 6 milhas se você estiver em seu terreno favorito): aberrações, celestiais, dragões, elementais, feéricos, demônios e mortos-vivos. Este recurso não revela a localização ou número das criaturas."
+			]
+		},
+		{
+			"name": "Ranger Archetype",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"No 3º nível, você escolhe um arquétipo que você se esforça para imitar da lista de arquétipos disponíveis. Sua escolha concede características no 3º nível e novamente no 7º, 11º e 15º níveis."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"Quando você alcança o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá pegar um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Martial Versatility",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 4,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 4th-level ranger {@variantrule optional class features|tce|optional feature}}",
+				"Sempre que você atingir um nível nesta classe que conceda o recurso Melhoria de Pontuação de Habilidade, você poderá substituir um estilo de luta que você conhece por outro estilo de luta disponível para rangers. Esta substituição representa uma mudança de foco em sua prática marcial."
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"A partir do 5º nível, você pode atacar duas vezes, em vez de uma, sempre que realizar a ação {@action Attack} no seu turno."
+			]
+		},
+		{
+			"name": "Deft Explorer Improvement",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 6,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"Você ganha um benefício adicional ao atingir o 6º nível nesta classe.",
+				{
+					"type": "entries",
+					"name": "Roving",
+					"entries": [
+						"Seu deslocamento de caminhada aumenta em 5 e você ganha deslocamento de escalada e deslocamento de natação igual ao seu deslocamento de caminhada."
+					]
+				}
+			]
+		},
+		{
+			"name": "Favored Enemy and Natural Explorer improvements",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"No 6º nível, você ganha um terreno favorito adicional.",
+				"No 6º nível, você escolhe um inimigo favorito adicional, bem como um idioma associado. Sua escolha deve refletir os tipos de monstros que você encontrou em suas aventuras."
+			]
+		},
+		{
+			"name": "Ranger Archetype feature",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 7,
+			"entries": [
+				"No 7º nível, você ganha uma característica concedida pelo seu Arquétipo de Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"Quando você alcança o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Land's Stride",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"A partir do 8º nível, passar por {@quickref difficult terrain||3} não mágico não custa nenhum movimento extra. Você também pode passar por plantas não-mágicas sem ser retardado por elas e sem sofrer danos se elas tiverem espinhos, espinhos ou perigos semelhantes.",
+				"Além disso, você tem vantagem em testes de resistência contra plantas que são criadas ou manipuladas magicamente para impedir o movimento, como aquelas criadas pelo feitiço {@spell entangle}."
+			]
+		},
+		{
+			"name": "Deft Explorer Improvement",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 10,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"Você ganha um benefício adicional ao atingir o 10º nível nesta classe.",
+				{
+					"type": "entries",
+					"name": "Tireless",
+					"entries": [
+						"Como uma ação, você pode conceder a si mesmo um número de pontos de vida temporários igual a {@dice 1d8} + seu modificador de Sabedoria (mínimo de 1 ponto de vida temporário). Você pode usar esta ação um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo.",
+						"Além disso, sempre que você termina um descanso curto, seu nível de {@condition exhaustion}, se houver, é diminuído em 1."
+					]
+				}
+			]
+		},
+		{
+			"name": "Hide in Plain Sight",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"A partir do 10º nível, você pode gastar 1 minuto criando camuflagem para si mesmo. Você deve ter acesso a lama fresca, sujeira, plantas, fuligem e outros materiais naturais para criar sua camuflagem.",
+				"Uma vez camuflado dessa forma, você pode tentar se esconder pressionando-se contra uma superfície sólida, como uma árvore ou parede, que seja pelo menos tão alta e larga quanto você. Você ganha um bônus de +10 em testes de Destreza ({@skill Stealth}) enquanto permanecer lá sem se mover ou realizar ações. Depois de se mover ou realizar uma ação ou reação, você deve se camuflar novamente para obter esse benefício."
+			]
+		},
+		{
+			"name": "Natural Explorer improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"Você ganha um terreno favorito adicional."
+			]
+		},
+		{
+			"name": "Nature's Veil",
+			"source": "TCE",
+			"page": 56,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 10,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 10th-level ranger {@variantrule optional class features|tce|optional feature}, que substitui o recurso Hide in Plain Sight}",
+				"Você recorre aos poderes da natureza para se esconder brevemente. Como uma ação bônus, você pode se tornar magicamente {@condition invisible}, junto com qualquer equipamento que esteja vestindo ou carregando, até o início do seu próximo turno.",
+				"Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Ranger Archetype feature",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"No 11º nível, você ganha uma característica concedida pelo seu Arquétipo de Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"Quando você alcança o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Favored Enemy improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"No 14º nível, você escolhe um inimigo favorito adicional, bem como um idioma associado. Sua escolha deve refletir os tipos de monstros que você encontrou em suas aventuras."
+			]
+		},
+		{
+			"name": "Vanish",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"A partir do 14º nível, você pode usar a ação {@action Hide} como ação bônus no seu turno. Além disso, você não pode ser rastreado por meios não mágicos, a menos que decida deixar um rastro."
+			]
+		},
+		{
+			"name": "Ranger Archetype feature",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"No 15º nível, você ganha uma característica concedida pelo seu Arquétipo de Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"Quando você atinge o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Feral Senses",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"No 18º nível, você ganha sentidos sobrenaturais que o ajudam a lutar contra criaturas que você não pode ver. Quando você ataca uma criatura que você não pode ver, sua incapacidade de vê-la não impõe desvantagem em suas jogadas de ataque contra ela. Você também está ciente da localização de qualquer criatura {@condition invisible} a até 9 metros de você, desde que a criatura não esteja escondida de você e você não esteja {@condition blinded} ou {@condition deafened}."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"Quando você atinge o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá pegar um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Foe Slayer",
+			"source": "PHB",
+			"page": 89,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"No 20º nível, você se torna um caçador incomparável de seus inimigos. Uma vez em cada um de seus turnos, você pode adicionar seu modificador de Sabedoria à jogada de ataque ou à jogada de dano de um ataque que você fizer contra um de seus inimigos favoritos. Você pode optar por usar esse recurso antes ou depois da rolagem, mas antes de quaisquer efeitos da rolagem serem aplicados."
+			]
+		},
+		{
+			"name": "Favored Enemy",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você sempre tem o feitiço {@spell Hunter's Mark|XPHB} preparado. Você pode lançá-la duas vezes sem gastar um espaço de feitiço e recupera todos os usos gastos dessa habilidade ao terminar um {@variantrule Long Rest|XPHB}.",
+				"O número de vezes que você pode lançar o feitiço sem um espaço de feitiço aumenta quando você atinge certos níveis de Ranger, conforme mostrado na coluna Favorecido {@variantrule Enemy|XPHB} da tabela Recursos do Ranger."
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "XPHB",
+			"page": 119,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você aprendeu a canalizar a essência mágica da natureza para lançar feitiços. Veja {@book chapter 7|XPHB|7} para as regras sobre lançamento de feitiços. As informações abaixo detalham como você usa essas regras com feitiços de Ranger, que aparecem em {@filter Ranger spell list|spells|class=Ranger} posteriormente na descrição da classe.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"A tabela Recursos do Ranger mostra quantos espaços de feitiço você tem para lançar seus feitiços de nível 1+. Você recupera todos os slots gastos ao terminar um {@variantrule Long Rest|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Prepared Spells of Level 1+",
+							"entries": [
+								"Você prepara a lista de magias de nível 1+ que estão disponíveis para serem lançadas com esse recurso. Para começar, escolha dois {@filter level 1 Ranger spells|spells|class=Ranger|level=1}. {@spell Cure Wounds|XPHB} e {@spell Ensnaring Strike|XPHB} são recomendados.",
+								"O número de feitiços em sua lista aumenta à medida que você ganha níveis de Ranger, conforme mostrado na coluna Feitiços Preparados da tabela Características do Ranger. Sempre que esse número aumentar, escolha feitiços adicionais de Ranger até que o número de feitiços em sua lista corresponda ao número na tabela Características do Ranger. As magias escolhidas devem ser de um nível para o qual você tenha espaços de magia. Por exemplo, se você for um Ranger de nível 5, sua lista de magias preparadas pode incluir seis magias de Ranger de nível 1 ou 2 em qualquer combinação.",
+								"Se outra característica de Ranger fornecer magias que você sempre preparou, essas magias não contam no número de magias que você pode preparar com esta característica, mas essas magias contam como magias de Ranger para você."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Changing Your Prepared Spells",
+							"entries": [
+								"Sempre que você terminar um {@variantrule Long Rest|XPHB}, você pode substituir um feitiço da sua lista por outro feitiço de Ranger para o qual você tenha espaços de feitiço."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Sabedoria é sua habilidade de lançar feitiços para seus feitiços de Ranger."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Focus",
+							"entries": [
+								"Você pode usar um {@item Druidic Focus|XPHB} como {@variantrule Spellcasting Focus|XPHB} para seus feitiços de Ranger."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Weapon Mastery",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Seu treinamento com armas permite que você use {@variantrule weapon mastery properties|XPHB|mastery properties} de dois tipos de {@filter weapons|items|type=simple weapon;martial weapon} de sua escolha com os quais você tem proficiência, como {@item Longbow|XPHB|Longbows} e {@item Shortsword|XPHB|Shortswords}.",
+				"Sempre que você termina um {@variantrule Long Rest|XPHB}, você pode alterar os tipos de armas que escolheu. Por exemplo, você pode passar a usar {@variantrule weapon mastery properties|XPHB|mastery properties} de {@item Scimitar|XPHB|Scimitars} e {@item Longsword|XPHB|Longswords}."
+			]
+		},
+		{
+			"name": "Deft Explorer",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Graças às suas viagens, você ganha os seguintes benefícios.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Expertise",
+							"entries": [
+								"Escolha uma de suas proficiências de habilidade com a qual você não possui {@variantrule Expertise|XPHB}. Você ganha {@variantrule Expertise|XPHB} nessa habilidade."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Languages",
+							"entries": [
+								"Você conhece dois idiomas de sua escolha nas tabelas de idiomas em {@book chapter 2|XPHB|2|Choose Languages}."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fighting Style",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Você ganha um {@filter Fighting Style feat|feats|category=FS} à sua escolha. Em vez de escolher um desses talentos, você pode escolher a opção abaixo.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refFeat",
+							"feat": "Druidic Warrior|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ranger Subclass",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha uma subclasse de Ranger à sua escolha. Uma subclasse é uma especialização que concede recursos em determinados níveis de Ranger. Pelo resto de sua carreira, você ganha cada uma das características de sua subclasse que sejam do seu nível de Ranger ou inferior."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. Você ganha esse recurso novamente nos níveis 8, 12 e 16 de Ranger."
+			]
+		},
+		{
+			"name": "Extra Attack",
+			"source": "XPHB",
+			"page": 120,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Você pode atacar duas vezes em vez de uma sempre que realizar a ação {@action Attack|XPHB} no seu turno."
+			]
+		},
+		{
+			"name": "Roving",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"Seu {@variantrule Speed|XPHB} aumenta em 3 metros enquanto você não está usando armadura pesada. Você também tem um {@variantrule Climb Speed|XPHB} e um {@variantrule Swim Speed|XPHB} igual ao seu {@variantrule Speed|XPHB}."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"Você ganha uma característica da sua subclasse Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Expertise",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"Escolha duas de suas proficiências em habilidades com as quais você não possui {@variantrule Expertise|XPHB}. Você ganha {@variantrule Expertise|XPHB} nessas habilidades."
+			]
+		},
+		{
+			"name": "Tireless",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"As forças primordiais agora ajudam a abastecê-lo em suas jornadas, garantindo os seguintes benefícios.",
+				{
+					"type": "entries",
+					"name": "Temporary Hit Points",
+					"entries": [
+						"Como uma ação {@action Magic|XPHB}, você pode atribuir a si mesmo um número de {@variantrule Temporary Hit Points|XPHB} igual a {@dice 1d8} mais seu modificador de Sabedoria (mínimo de 1). Você pode usar esta ação um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recupera todos os usos gastos ao terminar um {@variantrule Long Rest|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Decrease Exhaustion",
+					"entries": [
+						"Sempre que você termina um {@variantrule Short Rest|XPHB}, seu nível {@condition Exhaustion|XPHB}, se houver, diminui em 1."
+					]
+				}
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"Você ganha uma característica da sua subclasse Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Relentless Hunter",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"Receber dano não pode quebrar seu {@status Concentration|XPHB} na Marca do Caçador."
+			]
+		},
+		{
+			"name": "Nature's Veil",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"Você invoca espíritos da natureza para se esconder magicamente. Como {@variantrule Bonus Action|XPHB}, você pode obter a condição {@condition Invisible|XPHB} até o final do seu próximo turno.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recuperar todos os usos gastos ao terminar um {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"Você ganha uma característica da sua subclasse Ranger."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Precise Hunter",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"Você tem {@variantrule Advantage|XPHB} nas jogadas de ataque contra a criatura atualmente marcada pela sua Marca do Caçador."
+			]
+		},
+		{
+			"name": "Feral Senses",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"Sua conexão com as forças da natureza concede a {@sense Blindsight|XPHB} um alcance de 9 metros."
+			]
+		},
+		{
+			"name": "Epic Boon",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"Você ganha um {@filter Epic Boon feat|feats|category=EB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. {@feat Boon of Dimensional Travel|XPHB} é recomendado."
+			]
+		},
+		{
+			"name": "Foe Slayer",
+			"source": "XPHB",
+			"page": 121,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"O dado de dano da sua Marca do Caçador é {@dice d10} em vez de {@dice d6}."
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Drakewarden",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 3,
+			"entries": [
+				"Sua conexão com o mundo natural assume a forma de um espírito dracônico, que pode se manifestar na forma física como um dragão. À medida que seus poderes aumentam, seu dragão também cresce, passando de um pequeno companheiro de quatro patas a uma majestosa criatura alada, grande e forte o suficiente para você cavalgar. Ao longo do caminho, você ganha uma parcela cada vez maior do poder inspirador dos dragões.",
+				"Considere a fonte do espírito dracônico ao qual você se ligou. A tabela Drakewarden Origin oferece exemplos.",
+				{
+					"type": "table",
+					"caption": "Origem Drakewarden",
+					"colLabels": [
+						"d6",
+						"Origem"
+					],
+					"colStyles": [
+						"col-1 centro de texto",
+						"col-11"
+					],
+					"rows": [
+						[
+							"1",
+							"Você estudou a escama ou garra de um dragão, ou uma bugiganga do tesouro de um dragão, criando seu vínculo através da magia dracônica persistente daquela ficha."
+						],
+						[
+							"2",
+							"Uma ordem secreta de rangers que coletam e guardam o conhecimento dracônico lhe ensinou seus caminhos."
+						],
+						[
+							"3",
+							"Um dragão deu a você um geodo ou pedra preciosa para cuidar. Para sua surpresa, o dragão nasceu daquela pedra."
+						],
+						[
+							"4",
+							"Você ingeriu algumas gotas de sangue de dragão, infundindo para sempre sua magia natural com poder dracônico."
+						],
+						[
+							"5",
+							"Uma antiga inscrição Dracônica em uma pedra ereta fortaleceu você quando você a leu em voz alta."
+						],
+						[
+							"6",
+							"Você teve um sonho vívido com uma figura misteriosa acompanhada por sete canários amarelos, que o alertaram sobre uma destruição iminente. Quando você acordou, seu dragão estava lá, observando você."
+						]
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Draconic Gift|Ranger||Drakewarden|FTD|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Drake Companion|Ranger||Drakewarden|FTD|3"
+				}
+			]
+		},
+		{
+			"name": "Draconic Gift",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Drakewarden feature}",
+				"O vínculo que você compartilha com seu dragão cria uma conexão com os dragões, concedendo-lhe compreensão e fortalecendo sua presença. Você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Thaumaturgy",
+							"entry": "Você aprende o truque {@spell thaumaturgy}, que é um feitiço de ranger para você."
+						},
+						{
+							"type": "item",
+							"name": "Tongue of Dragons",
+							"entry": "Você aprende a falar, ler e escrever Dracônico ou outro idioma de sua escolha."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Drake Companion",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Drakewarden feature}",
+				"Com uma ação, você pode invocar magicamente o dragão que está vinculado a você. Ele aparece em um espaço desocupado, à sua escolha, a até 9 metros de você.",
+				"O dragão é amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas do jogo no bloco de estatísticas {@creature Drake Companion|FTD} que o acompanha, que usa seu bônus de proficiência (PB) em vários lugares. Sempre que você invocar o drake, escolha um tipo de dano listado em sua característica Essência Dracônica. Você pode determinar as características cosméticas do dragão, como sua cor, textura de escamas ou qualquer efeito visível de sua Essência Dracônica; sua escolha não afeta as estatísticas do jogo.",
+				"Em combate, o dragão compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza no seu turno é a ação {@action Dodge}, a menos que você execute uma ação bônus no seu turno para ordená-lo a realizar outra ação. Essa ação pode ser uma em seu bloco de estatísticas ou alguma outra ação. Se você for {@condition incapacitated}, o drake poderá realizar qualquer ação de sua escolha, não apenas {@action Dodge}.",
+				"O drake permanece até que seja reduzido a 0 pontos de vida, até que você use esse recurso para invocar o drake novamente ou até que você morra. Qualquer coisa que o dragão estava vestindo ou carregando é deixado para trás quando o dragão desaparece.",
+				"Depois de invocar o dragão, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste um espaço de magia de 1º nível ou superior para invocá-lo."
+			]
+		},
+		{
+			"name": "Bond of Fang and Scale",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Drakewarden feature}",
+				"O vínculo que você compartilha com seu dragão se intensifica, protegendo você e alimentando a fúria do dragão. Quando você invoca seu dragão, ele cria asas nas costas e ganha velocidade de voo igual à sua velocidade de caminhada.",
+				"Além disso, enquanto seu drake é convocado, você e ele ganham os seguintes benefícios:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Drake Mount",
+							"entries": [
+								"O drake atinge o tamanho médio. Refletindo seu vínculo especial, você pode usar o dragão como montaria se seu tamanho for Médio ou menor. Enquanto você estiver montando seu dragão, ele não poderá usar a velocidade de vôo desse recurso."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Magic Fang",
+							"entries": [
+								"O ataque de mordida do dragão causa um dano extra de {@damage 1d6} do tipo escolhido para a Essência Dracônica do dragão."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Resistance",
+							"entries": [
+								"Você ganha resistência ao tipo de dano escolhido para a Essência Dracônica do dragão."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Drake's Breath",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"{@i 11th-level Drakewarden feature}",
+				"Como uma ação, você pode exalar um cone de 9 metros de hálito prejudicial ou fazer com que seu dragão o expire. Escolha dano de ácido, frio, fogo, raio ou veneno (sua escolha não precisa corresponder à Essência Dracônica do seu dragão). Cada criatura no cone deve fazer um teste de resistência de Destreza contra sua CD de salvamento de feitiço, sofrendo {@damage 8d6} de dano em caso de falha na resistência, ou metade do dano em caso de sucesso.",
+				"Este dano aumenta para {@dice 10d6} quando você atinge o 15º nível nesta classe.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste um espaço de magia de 3º nível ou superior para usá-lo novamente."
+			]
+		},
+		{
+			"name": "Perfected Bond",
+			"source": "FTD",
+			"page": 15,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Drakewarden",
+			"subclassSource": "FTD",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Drakewarden feature}",
+				"Seu vínculo com seu dragão atinge o auge de seu poder. Enquanto seu dragão é convocado, você e ele ganham os seguintes benefícios:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Empowered Bite",
+							"entries": [
+								"O ataque de mordida do dragão causa um dano extra de {@damage 1d6} do tipo escolhido para sua Essência Dracônica (para um total de {@damage 2d6} de dano extra)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Large Drake",
+							"entries": [
+								"O drake cresce para um tamanho grande. Quando você monta seu dragão, não é mais proibido usar a velocidade de vôo de Bond of Fang and Scale."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Reflexive Resistance",
+							"entries": [
+								"Quando você ou o drake sofrem dano enquanto estão a até 9 metros um do outro, você pode usar sua reação para dar a si mesmo ou ao drake resistência a esse dano. Você pode usar esta reação um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Beast Master",
+			"source": "PHB",
+			"page": 93,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"O arquétipo do Mestre das Feras incorpora uma amizade entre as raças civilizadas e as feras do mundo. Unidos em foco, besta e ranger trabalham como um só para combater os monstruosos inimigos que ameaçam a civilização e a natureza selvagem. Emular o arquétipo do Mestre das Feras significa comprometer-se com esse ideal, trabalhando em parceria com um animal como seu companheiro e amigo.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ranger's Companion|Ranger||Beast Master||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Primal Companion|Ranger||Beast Master||3|TCE"
+				}
+			]
+		},
+		{
+			"name": "Primal Companion",
+			"source": "TCE",
+			"page": 61,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Beast Master variant feature, which replaces the Ranger's Companion feature}",
+				"Você invoca magicamente uma fera primordial, que extrai força de seu vínculo com a natureza. A fera é amigável com você e seus companheiros e obedece aos seus comandos. Escolha seu bloco de estatísticas —{@creature Beast of the Land|TCE}, {@creature Beast of the Sea|TCE} ou {@creature Beast of the Sky|TCE} — que usa seu bônus de proficiência (PB) em vários lugares. Você também determina o tipo de animal que a fera é, escolhendo um tipo apropriado para o bloco de estatísticas. Seja qual for o tipo que você escolher, a besta possui marcas primitivas, indicando sua origem mística.",
+				"Em combate, a fera atua durante o seu turno. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza é a ação {@action Dodge}, a menos que você execute uma ação bônus em seu turno para ordená-lo a realizar outra ação. Essa ação pode ser uma em seu bloco de estatísticas ou alguma outra ação. Você também pode sacrificar um de seus ataques ao realizar a ação {@action Attack} para comandar a fera para realizar a ação {@action Attack}. Se você for {@condition incapacitated}, a fera poderá realizar qualquer ação de sua escolha, não apenas {@action Dodge}.",
+				"Se a fera morreu na última hora, você pode usar sua ação para tocá-la e gastar um espaço de magia de 1º nível ou superior. A fera retorna à vida após 1 minuto com todos os seus pontos de vida restaurados.",
+				"Ao terminar um descanso longo, você pode invocar uma fera primordial diferente. A nova fera aparece em um espaço desocupado a até 1,5 metro de você, e você escolhe seu bloco de estatísticas e sua aparência. Se você já possui uma fera deste recurso, ela desaparece quando a nova fera aparece. A besta também desaparece se você morrer."
+			]
+		},
+		{
+			"name": "Ranger's Companion",
+			"source": "PHB",
+			"page": 93,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você ganha uma fera companheira que o acompanha em suas aventuras e é treinada para lutar ao seu lado. Escolha um {@filter beast that is no larger than Medium and that has a challenge rating of 1/4 or lower|bestiary|challenge rating=[&0;&1/4]|type=beast|size=f;d;t;s;m|miscellaneous=!swarm}. Adicione seu bônus de proficiência à CA, jogadas de ataque e jogadas de dano da besta, bem como a quaisquer testes de resistência e habilidades nas quais ela seja proficiente. Seu máximo de pontos de vida é igual ao máximo normal ou quatro vezes seu nível de ranger, o que for maior. Como qualquer criatura, a fera pode gastar Dados de Vida durante um breve descanso.",
+				"A fera obedece aos seus comandos da melhor maneira possível. Depende de sua iniciativa. No seu turno, você pode comandar verbalmente a fera para onde se mover (nenhuma ação necessária de sua parte). Você pode usar sua ação para comandá-lo verbalmente para executar a ação {@action Attack}, {@action Dash}, {@action Disengage} ou {@action Help}. Se você não emitir um comando, a fera realizará a ação {@action Dodge}. Depois de ter o recurso Ataque Extra, você mesmo pode fazer um ataque com arma ao comandar a fera para realizar a ação {@action Attack}.",
+				"Se você estiver {@condition incapacitated} ou ausente, seu companheiro fera age por conta própria, concentrando-se em proteger você e a si mesmo. Nunca exige que seu comando use sua reação, como ao fazer um ataque de oportunidade.",
+				"Ao viajar pelo seu terreno favorito apenas com a fera, você pode se mover furtivamente em um ritmo normal.",
+				"Se a fera morrer, você poderá obter um novo companheiro gastando 8 horas criando laços mágicos com uma fera que não seja hostil a você e que atenda aos requisitos."
+			]
+		},
+		{
+			"name": "Exceptional Training",
+			"source": "PHB",
+			"page": 93,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Começando no 7º nível, em qualquer um de seus turnos quando sua companheira fera não atacar, você pode usar uma ação bônus para ordenar que a fera execute a ação {@action Dash}, {@action Disengage} ou {@action Help} em seu turno. Além disso, os ataques da fera agora contam como mágicos com o propósito de superar a resistência e a imunidade a ataques e danos não mágicos."
+			]
+		},
+		{
+			"name": "Bestial Fury",
+			"source": "PHB",
+			"page": 93,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"A partir do 11º nível, quando você ordena que sua companheira fera realize a ação {@action Attack}, a fera pode realizar dois ataques ou pode realizar a ação de Ataque Múltiplo se tiver essa ação."
+			]
+		},
+		{
+			"name": "Share Spells",
+			"source": "PHB",
+			"page": 93,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, quando você conjura uma magia tendo como alvo você mesmo, você também pode afetar sua companheira fera com a magia se a fera estiver a até 9 metros de você."
+			]
+		},
+		{
+			"name": "Hunter",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"Emular o arquétipo do Caçador significa aceitar seu lugar como um baluarte entre a civilização e os terrores da natureza selvagem. Ao percorrer o caminho do Caçador, você aprende técnicas especializadas para combater as ameaças que enfrenta, desde ogros furiosos e hordas de orcs até gigantes imponentes e dragões aterrorizantes.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hunter's Prey|Ranger||Hunter||3"
+				}
+			]
+		},
+		{
+			"name": "Horde Breaker",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Uma vez em cada um de seus turnos, ao realizar um ataque com arma, você pode realizar outro ataque com a mesma arma contra uma criatura diferente que esteja a até 1,5 metro do alvo original e dentro do alcance de sua arma."
+			]
+		},
+		{
+			"name": "Hunter's Prey",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha uma das seguintes características à sua escolha.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Colossus Slayer|Ranger||Hunter||3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Giant Killer|Ranger||Hunter||3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Horde Breaker|Ranger||Hunter||3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Colossus Slayer",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Sua tenacidade pode desgastar os inimigos mais poderosos. Quando você atinge uma criatura com um ataque de arma, a criatura sofre {@damage 1d8} de dano extra se estiver abaixo de seu ponto de vida máximo. Você pode causar esse dano extra apenas uma vez por turno."
+			]
+		},
+		{
+			"name": "Giant Killer",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura Grande ou maior a até 1,5 metro de você acerta ou erra um ataque, você pode usar sua reação para atacar aquela criatura imediatamente após o ataque, desde que você possa ver a criatura."
+			]
+		},
+		{
+			"name": "Defensive Tactics",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você ganha uma das seguintes características à sua escolha.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Escape the Horde|Ranger||Hunter||7"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Multiattack Defense|Ranger||Hunter||7"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Steel Will|Ranger||Hunter||7"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Escape the Horde",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Ataques de oportunidade contra você são feitos com desvantagem."
+			]
+		},
+		{
+			"name": "Multiattack Defense",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura atinge você com um ataque, você ganha +4 de bônus na CA contra todos os ataques subsequentes feitos por aquela criatura pelo resto do turno."
+			]
+		},
+		{
+			"name": "Steel Will",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você tem vantagem em testes de resistência contra ser {@condition frightened}."
+			]
+		},
+		{
+			"name": "Multiattack",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"No 11º nível, você ganha uma das seguintes características à sua escolha.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Volley|Ranger||Hunter||11"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Whirlwind Attack|Ranger||Hunter||11"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Volley",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"Você pode usar sua ação para realizar um ataque à distância contra qualquer número de criaturas dentro de um raio de 3 metros de um ponto que você possa ver dentro do alcance de sua arma. Você deve ter munição para cada alvo, normalmente, e fazer uma jogada de ataque separada para cada alvo."
+			]
+		},
+		{
+			"name": "Whirlwind Attack",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"Você pode usar sua ação para realizar um ataque corpo a corpo contra qualquer número de criaturas a até 1,5 metro de você, com uma jogada de ataque separada para cada alvo."
+			]
+		},
+		{
+			"name": "Evasion",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Você pode se esquivar agilmente de certos efeitos de área, como o sopro ardente de um dragão vermelho ou um feitiço {@spell lightning bolt}. Quando você está sujeito a um efeito que permite que você faça um teste de resistência de Destreza para sofrer apenas metade do dano, você não sofre nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+			]
+		},
+		{
+			"name": "Stand Against the Tide",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura hostil erra você em um ataque corpo a corpo, você pode usar sua reação para forçar aquela criatura a repetir o mesmo ataque contra outra criatura (que não seja ela mesma) de sua escolha."
+			]
+		},
+		{
+			"name": "Superior Hunter's Defense",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, você ganha uma das seguintes características à sua escolha.",
+				{
+					"type": "options",
+					"count": 1,
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Evasion|Ranger||Hunter||15"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Stand Against the Tide|Ranger||Hunter||15"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Uncanny Dodge|Ranger||Hunter||15"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Uncanny Dodge",
+			"source": "PHB",
+			"page": 93,
+			"srd": true,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "PHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Quando um atacante que você pode ver acerta você com um ataque, você pode usar sua reação para reduzir pela metade o dano do ataque contra você."
+			]
+		},
+		{
+			"name": "Fey Wanderer",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Uma mística feérica envolve você, graças à dádiva de uma arquifada, à fruta brilhante que você comeu de uma árvore falante, à fonte mágica em que você nadou ou a algum outro evento auspicioso. Independentemente de como você adquiriu sua magia feérica, você agora é um Fey Wanderer, um ranger que representa tanto o reino mortal quanto o reino das fadas. Enquanto você vaga pelo multiverso, sua risada alegre ilumina os corações dos oprimidos e sua habilidade marcial aterroriza seus inimigos, pois grande é a alegria das fadas e terrível é sua fúria.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dreadful Strikes|Ranger||Fey Wanderer|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fey Wanderer Magic|Ranger||Fey Wanderer|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Otherworldly Glamour|Ranger||Fey Wanderer|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Dreadful Strikes",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Fey Wanderer feature}",
+				"Você pode aumentar seus ataques com armas com magia assustadora, extraída das cavidades sombrias da Agrestia das Fadas. Quando você atinge uma criatura com uma arma, você pode causar {@damage 1d4} de dano psíquico extra ao alvo, que pode sofrer esse dano extra apenas uma vez por turno.",
+				"O dano extra aumenta para {@dice 1d6} quando você atinge o 11º nível nesta classe."
+			]
+		},
+		{
+			"name": "Fey Wanderer Magic",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Fey Wanderer feature}",
+				"Você aprende um feitiço adicional quando atinge certos níveis nesta classe, conforme mostrado na tabela Feitiços do Fey Wanderer. Cada magia conta como uma magia de ranger para você, mas não conta no número de magias de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Fey Wanderer",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell charm person}"
+						],
+						[
+							"5º",
+							"{@spell misty step}"
+						],
+						[
+							"9º",
+							"{@spell dispel magic}"
+						],
+						[
+							"13º",
+							"{@spell dimension door}"
+						],
+						[
+							"17º",
+							"{@spell mislead}"
+						]
+					]
+				},
+				"Você também possui uma bênção sobrenatural de um aliado feérico ou de um local de poder feérico. Escolha sua bênção na tabela Feywild Gifts ou determine-a aleatoriamente.",
+				{
+					"type": "table",
+					"caption": "Presentes Feywild",
+					"colLabels": [
+						"d6",
+						"Presente"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Borboletas ilusórias voam ao seu redor enquanto você descansa um pouco ou um pouco."
+						],
+						[
+							"2",
+							"Flores frescas e sazonais brotam do seu cabelo a cada amanhecer."
+						],
+						[
+							"3",
+							"Você sente um leve cheiro de canela, lavanda, noz-moscada ou outra erva ou tempero reconfortante."
+						],
+						[
+							"4",
+							"Sua sombra dança enquanto ninguém olha diretamente para ela."
+						],
+						[
+							"5",
+							"Chifres ou galhadas brotam de sua cabeça."
+						],
+						[
+							"6",
+							"Sua pele e seu cabelo mudam de cor para combinar com a estação a cada amanhecer."
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Otherworldly Glamour",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Fey Wanderer feature}",
+				"Suas qualidades feéricas lhe conferem um encanto sobrenatural. Como resultado, sempre que você fizer um teste de Carisma, você ganha um bônus no teste igual ao seu modificador de Sabedoria (mínimo de +1).",
+				"Além disso, você ganha proficiência em uma das seguintes habilidades de sua escolha: {@skill Deception}, {@skill Performance} ou {@skill Persuasion}."
+			]
+		},
+		{
+			"name": "Beguiling Twist",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Fey Wanderer feature}",
+				"A magia da Agrestia das Fadas protege sua mente. Você tem vantagem em testes de resistência contra ser {@condition charmed} ou {@condition frightened}.",
+				"Além disso, sempre que você ou uma criatura que você pode ver a até 36 metros de você tiver sucesso em um teste de resistência contra ser {@condition charmed} ou {@condition frightened}, você pode usar sua reação para forçar uma criatura diferente que você possa ver a até 36 metros de você a fazer um teste de resistência de Sabedoria contra sua CD de salvamento de feitiço. Se o salvamento falhar, o alvo será {@condition charmed} ou {@condition frightened} por você (sua escolha) por 1 minuto. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+			]
+		},
+		{
+			"name": "Fey Reinforcements",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"{@i 11th-level Fey Wanderer feature}",
+				"As cortes reais da Agrestia das Fadas abençoaram você com a ajuda de seres feéricos: você conhece {@spell summon fey|tce}. Não conta no número de feitiços de ranger que você conhece e você pode lançá-lo sem um componente material. Você também pode lançá-lo uma vez sem espaço de magia e recupera a habilidade de fazê-lo ao terminar um descanso longo.",
+				"Sempre que você começar a lançar o feitiço, poderá modificá-lo para que não exija {@status concentration}. Se você fizer isso, a duração da magia passa a ser de 1 minuto para aquela conjuração."
+			]
+		},
+		{
+			"name": "Misty Wanderer",
+			"source": "TCE",
+			"page": 58,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Fey Wanderer feature}",
+				"Você pode entrar e sair da Agrestia das Fadas para se mover em um piscar de olhos: você pode lançar {@spell misty step} sem gastar um espaço de feitiço. Você pode fazer isso um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recupera todos os usos gastos ao terminar um descanso longo.",
+				"Além disso, sempre que você conjurar {@i misty step}, você pode trazer consigo uma criatura voluntária que você possa ver a até 1,5 metro de você. Aquela criatura se teletransporta para um espaço desocupado, à sua escolha, a até 1,5 metro do seu espaço de destino."
+			]
+		},
+		{
+			"name": "Swarmkeeper",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Sentindo uma profunda conexão com o ambiente ao seu redor, alguns rangers alcançam através de sua conexão mágica com o mundo e se unem a um enxame de espíritos da natureza. O enxame se torna uma força poderosa em batalha, bem como uma companhia útil para o ranger. Alguns Swarmkeepers são párias ou eremitas, mantendo-se isolados e com seus enxames, em vez de lidar com o desconforto dos outros. Outros Swarmkeepers gostam de construir comunidades vibrantes que trabalham para o benefício mútuo de todos aqueles que consideram parte do seu enxame.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Gathered Swarm|Ranger||Swarmkeeper|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Swarmkeeper Magic|Ranger||Swarmkeeper|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Gathered Swarm",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Swarmkeeper feature}",
+				"Um enxame de espíritos intangíveis da natureza se uniu a você e pode ajudá-lo na batalha. Enquanto você estiver vivo, o enxame permanecerá em seu espaço, rastejando sobre você ou voando e deslizando ao seu redor dentro de seu espaço. Você determina sua aparência ou gera sua aparência rolando na tabela Aparência do Enxame.",
+				{
+					"type": "table",
+					"caption": "Aparência do Enxame",
+					"colLabels": [
+						"d4",
+						"Aparência"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Enxameando insetos"
+						],
+						[
+							"2",
+							"Pragas de galhos em miniatura"
+						],
+						[
+							"3",
+							"Pássaros esvoaçantes"
+						],
+						[
+							"4",
+							"Duendes brincalhões"
+						]
+					]
+				},
+				"Uma vez em cada um de seus turnos, você pode fazer com que o enxame o ajude de uma das seguintes maneiras, imediatamente após atingir uma criatura com um ataque:",
+				{
+					"type": "list",
+					"items": [
+						"O alvo do ataque sofre {@damage 1d6} de dano perfurante do enxame.",
+						"O alvo do ataque deve ser bem sucedido em um teste de resistência de Força contra sua CD de resistência de feitiço ou será movido pelo enxame até 4,5 metros horizontalmente em uma direção de sua escolha.",
+						"Você é movido pelo enxame 1,5 metro horizontalmente na direção de sua escolha."
+					]
+				},
+				{
+					"type": "inset",
+					"name": "It's Your Swarm",
+					"entries": [
+						"O enxame e os feitiços de um Swarmkeeper são reflexos do vínculo do personagem com os espíritos da natureza. Aproveite a oportunidade para descrever o enxame e a magia do ranger em jogo. Por exemplo, quando seu ranger lança a forma gasosa, eles podem parecer derreter no enxame, em vez de uma nuvem de névoa, ou o feitiço {@spell arcane eye} pode criar uma extensão do seu enxame que espiona para você. Essas descrições não alteram os efeitos dos feitiços, mas são uma excelente oportunidade para explorar a narrativa do seu personagem através de suas habilidades de classe. Para obter mais orientações sobre como personalizar feitiços, consulte a seção “Personalizando feitiços” no capítulo 3.",
+						"Além disso, lembre-se de que a aparência do enxame pode ser personalizada por você e não se sinta confinado a uma única aparência. Talvez a aparência dos espíritos mude com o humor do guarda-florestal ou com as estações do ano. Você decide!"
+					]
+				}
+			]
+		},
+		{
+			"name": "Swarmkeeper Magic",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Swarmkeeper feature}",
+				"Você aprende o truque {@spell mage hand} se ainda não o conhece. Quando você o lança, a mão assume a forma de um enxame de espíritos da natureza.",
+				"Você também aprende uma magia adicional de 1º nível ou superior quando atinge certos níveis nesta classe, conforme mostrado na tabela Magias do Swarmkeeper. Cada magia conta como uma magia de ranger para você, mas não conta no número de magias de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Enxameador",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell faerie fire}"
+						],
+						[
+							"5º",
+							"{@spell web}"
+						],
+						[
+							"9º",
+							"{@spell gaseous form}"
+						],
+						[
+							"13º",
+							"{@spell arcane eye}"
+						],
+						[
+							"17º",
+							"{@spell insect plague}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Writhing Tide",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"{@i 7th-level Swarmkeeper feature}",
+				"Você pode condensar parte do seu enxame em uma massa focada que o eleva. Como uma ação bônus, você ganha deslocamento de vôo de 3 metros e pode pairar. Este efeito dura 1 minuto ou até você atingir {@condition incapacitated}.",
+				"Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Mighty Swarm",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"{@i 11th-level Swarmkeeper feature}",
+				"Seu Enxame Reunido fica mais poderoso das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"O dano do Gathered Swarm aumenta para {@dice 1d8}.",
+						"Se uma criatura falhar no teste de resistência contra ser movida pelo Enxame Reunido, você também pode fazer com que o enxame derrube a criatura {@condition prone}.",
+						"When you are moved by Gathered Swarm, it gives you {@quickref Cover||3||half cover} until the start of your next turn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Swarming Dispersal",
+			"source": "TCE",
+			"page": 59,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Swarmkeeper",
+			"subclassSource": "TCE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"{@i 15th-level Swarmkeeper feature}",
+				"Você pode se desintegrar em seu enxame, evitando o perigo. Ao sofrer dano, você pode usar sua reação para obter resistência a esse dano. Você desaparece em seu enxame e então se teletransporta para um espaço desocupado que você pode ver a até 9 metros de você, onde reaparece com o enxame.",
+				"Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Gloom Stalker",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Gloom Stalkers se sentem em casa nos lugares mais escuros: nas profundezas da terra, em becos sombrios, em florestas primitivas e em qualquer outro lugar onde a luz diminua. A maioria das pessoas entra nesses lugares com receio, mas um Espreitador Sombrio se aventura corajosamente na escuridão, buscando emboscar ameaças antes que elas possam alcançar o mundo mais amplo. Tais rangers são frequentemente encontrados no Subterrâneo, mas irão a qualquer lugar onde o mal se esconde nas sombras.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Gloom Stalker Magic|Ranger||Gloom Stalker|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dread Ambusher|Ranger||Gloom Stalker|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Umbral Sight|Ranger||Gloom Stalker|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Dread Ambusher",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível você domina a arte da emboscada. Você pode conceder a si mesmo um bônus em suas jogadas de iniciativa igual ao seu modificador de Sabedoria.",
+				"No início do seu primeiro turno de cada combate, sua velocidade de caminhada aumenta em 3 metros, que dura até o final desse turno. Se você realizar a ação {@action Attack} naquele turno, você poderá realizar um ataque com arma adicional como parte dessa ação. Se o ataque acertar, o alvo sofre {@damage 1d8} de dano extra do tipo de dano da arma."
+			]
+		},
+		{
+			"name": "Gloom Stalker Magic",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você aprende uma magia adicional quando atinge certos níveis nesta classe, como mostrado na tabela Magias do Espreitador Gloom. A magia conta como uma magia de ranger para você, mas não conta no número de magias de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Perseguidor Sombrio",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell disguise self}"
+						],
+						[
+							"5º",
+							"{@spell rope trick}"
+						],
+						[
+							"9º",
+							"{@spell fear}"
+						],
+						[
+							"13º",
+							"{@spell greater invisibility}"
+						],
+						[
+							"17º",
+							"{@spell seeming}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Umbral Sight",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha {@sense darkvision} em um alcance de 18 metros. Se você já possui {@sense darkvision} de sua raça, seu alcance aumenta em 9 metros.",
+				"Você também é adepto de fugir de criaturas que dependem de {@sense darkvision}. Enquanto estiver na escuridão, você estará {@condition invisible} diante de qualquer criatura que dependa de {@sense darkvision} para vê-lo naquela escuridão."
+			]
+		},
+		{
+			"name": "Iron Mind",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você aprimorou sua habilidade de resistir aos poderes de alteração mental de sua presa. Você ganha proficiência em testes de resistência de Sabedoria. Se você já possui essa proficiência, você ganha proficiência em testes de resistência de Inteligência ou Carisma (sua escolha)."
+			]
+		},
+		{
+			"name": "Stalker's Flurry",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"No 11º nível, você aprende a atacar com uma velocidade tão inesperada que pode transformar um erro em outro ataque. Uma vez em cada um de seus turnos, quando você errar um ataque com arma, você pode realizar outro ataque com arma como parte da mesma ação."
+			]
+		},
+		{
+			"name": "Shadowy Dodge",
+			"source": "XGE",
+			"page": 41,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"A partir do 15º nível, você pode se esquivar de maneiras imprevistas, com fragmentos de sombras sobrenaturais ao seu redor. Sempre que uma criatura fizer uma jogada de ataque contra você e não tiver vantagem na jogada, você pode usar sua reação para impor desvantagem a ela. Você deve usar esse recurso antes de saber o resultado da jogada de ataque."
+			]
+		},
+		{
+			"name": "Horizon Walker",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Os Horizon Walkers protegem o mundo contra ameaças que se originam de outros planos ou que procuram devastar o reino mortal com magia de outro mundo. Eles procuram portais planares e os vigiam, aventurando-se nos Planos Internos e nos Planos Externos conforme necessário para perseguir seus inimigos. Esses rangers também são amigos de quaisquer forças do multiverso – especialmente dragões, fadas e elementais benevolentes – que trabalham para preservar a vida e a ordem dos planos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Horizon Walker Magic|Ranger||Horizon Walker|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Detect Portal|Ranger||Horizon Walker|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Planar Warrior|Ranger||Horizon Walker|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Detect Portal",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha a habilidade de sentir magicamente a presença de um portal planar. Como uma ação, você detecta a distância e a direção do portal planar mais próximo dentro de 1,6 km de você.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo.",
+				"Veja a seção “Viagem Planar” no capítulo 2 do Dungeon Master’s Guide para exemplos de portais planares."
+			]
+		},
+		{
+			"name": "Horizon Walker Magic",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você aprende uma magia adicional ao atingir certos níveis nesta classe, conforme mostrado na tabela Magias do Andarilho do Horizonte. A magia conta como uma magia de ranger para você, mas não conta no número de magias de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços do Horizon Walker",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell protection from evil and good}"
+						],
+						[
+							"5º",
+							"{@spell misty step}"
+						],
+						[
+							"9º",
+							"{@spell haste}"
+						],
+						[
+							"13º",
+							"{@spell banishment}"
+						],
+						[
+							"17º",
+							"{@spell teleportation circle}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Planar Warrior",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você aprende a aproveitar a energia do multiverso para aumentar seus ataques.",
+				"Como uma ação bônus, escolha uma criatura que você possa ver a até 9 metros de você. Na próxima vez que você atingir aquela criatura neste turno com um ataque de arma, todo o dano causado pelo ataque se tornará dano de força e a criatura sofrerá {@damage 1d8} de dano de força extra do ataque. Quando você atinge o 11º nível nesta classe, o dano extra aumenta para {@dice 2d8}."
+			]
+		},
+		{
+			"name": "Ethereal Step",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você aprende a atravessar o Plano Etéreo. Como uma ação bônus, você pode lançar a magia {@spell etherealness} com esta característica, sem gastar um espaço de magia, mas a magia termina no final do turno atual.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Distant Strike",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"No 11º nível, você ganha a habilidade de passar entre os planos num piscar de olhos. Ao realizar a ação {@action Attack}, você pode se teletransportar até 3 metros antes de cada ataque para um espaço desocupado que você possa ver.",
+				"Se você atacar pelo menos duas criaturas diferentes com a ação, você pode fazer um ataque adicional com ela contra uma terceira criatura."
+			]
+		},
+		{
+			"name": "Spectral Defense",
+			"source": "XGE",
+			"page": 42,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Horizon Walker",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, sua habilidade de se mover entre planos permite que você ultrapasse os limites planares para diminuir o dano causado a você durante a batalha. Ao receber dano de um ataque, você pode usar sua reação para obter resistência a todo o dano daquele ataque neste turno."
+			]
+		},
+		{
+			"name": "Monster Slayer",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Você se dedicou a caçar criaturas da noite e detentores de magia sombria. Um Monster Slayer procura vampiros, dragões, fadas malignas, demônios e outras ameaças mágicas. Treinados em técnicas sobrenaturais para superar tais monstros, os matadores são especialistas em desenterrar e derrotar inimigos poderosos e místicos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Monster Slayer Magic|Ranger||Monster Slayer|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hunter's Sense|Ranger||Monster Slayer|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Slayer's Prey|Ranger||Monster Slayer|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Hunter's Sense",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha a habilidade de observar uma criatura e discernir magicamente a melhor forma de feri-la. Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. Você aprende imediatamente se a criatura tem alguma imunidade a danos, resistências ou vulnerabilidades e quais são. Se a criatura estiver escondida da magia de adivinhação, você sente que ela não tem imunidade a danos, resistências ou vulnerabilidades.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez). Você recupera todos os usos gastos quando termina um descanso longo."
+			]
+		},
+		{
+			"name": "Monster Slayer Magic",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você aprende uma magia adicional ao atingir certos níveis nesta classe, conforme mostrado na tabela de Magias do Exterminador de Monstros. A magia conta como uma magia de ranger para você, mas não conta no número de magias de ranger que você conhece.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Matador de Monstros",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell protection from evil and good}"
+						],
+						[
+							"5º",
+							"{@spell zone of truth}"
+						],
+						[
+							"9º",
+							"{@spell magic circle}"
+						],
+						[
+							"13º",
+							"{@spell banishment}"
+						],
+						[
+							"17º",
+							"{@spell hold monster}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Slayer's Prey",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você pode concentrar sua ira em um inimigo, aumentando o dano que inflige a ele. Como uma ação bônus, você designa uma criatura que você possa ver a até 18 metros de você como alvo deste recurso. Na primeira vez em cada turno que você atingir o alvo com um ataque de arma, ele sofrerá um dano extra de {@damage 1d6} da arma.",
+				"Este benefício dura até você terminar um descanso curto ou longo. Termina mais cedo se você designar uma criatura diferente."
+			]
+		},
+		{
+			"name": "Supernatural Defense",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"No 7º nível, você ganha resiliência extra contra os ataques de suas presas à sua mente e ao seu corpo. Sempre que o alvo da sua Presa do Slayer forçar você a fazer um teste de resistência e sempre que você fizer um teste de habilidade para escapar do agarrão do alvo, adicione {@dice 1d6} à sua rolagem."
+			]
+		},
+		{
+			"name": "Magic-User's Nemesis",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"No 11º nível, você ganha a habilidade de frustrar a magia de outra pessoa. Quando você vê uma criatura lançando um feitiço ou se teletransportando a até 18 metros de você, você pode usar sua reação para tentar frustrar magicamente. A criatura deve ser bem sucedida em um teste de resistência de Sabedoria contra sua CD de resistência de feitiço, ou seu feitiço ou teletransporte falhará e será desperdiçado.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Slayer's Counter",
+			"source": "XGE",
+			"page": 43,
+			"className": "Ranger",
+			"classSource": "PHB",
+			"subclassShortName": "Monster Slayer",
+			"subclassSource": "XGE",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"No 15º nível, você ganha a habilidade de contra-atacar quando sua presa tenta sabotá-lo. Se o alvo da sua Presa do Slayer forçar você a fazer um teste de resistência, você pode usar sua reação para fazer um ataque com arma contra a presa. Você faz esse ataque imediatamente antes de fazer o teste de resistência. Se o seu ataque acertar, seu salvamento será automaticamente bem-sucedido, além dos efeitos normais do ataque."
+			]
+		},
+		{
+			"name": "Beast Master",
+			"source": "XPHB",
+			"page": 123,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Bond with a Primal Beast}",
+				"Um Mestre das Feras forma um vínculo místico com um animal especial, recorrendo à magia primordial e a uma profunda conexão com o mundo natural.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Primal Companion|Ranger|XPHB|Beast Master|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Primal Companion",
+			"source": "XPHB",
+			"page": 123,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você invoca magicamente uma fera primordial, que extrai força de seu vínculo com a natureza. Escolha seu bloco de estatísticas: {@creature Beast of the Land|XPHB}, {@creature Beast of the Sea|XPHB} ou {@creature Beast of the Sky|XPHB}. Você também determina o tipo de animal, escolhendo um tipo apropriado para o bloco de estatísticas. Seja qual for a fera que você escolher, ela possui marcas primitivas que indicam sua origem sobrenatural.",
+				"A fera é amigável com você e seus aliados e obedece aos seus comandos. Ele desaparece se você morrer.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "The Beast in Combat",
+							"entries": [
+								"Em combate, a fera atua durante o seu turno. Ele pode se mover e usar seu {@variantrule Reaction|XPHB} sozinho, mas a única ação que ele executa é a ação {@action Dodge|XPHB}, a menos que você execute um {@variantrule Bonus Action|XPHB} para comandá-lo a executar uma ação em seu bloco de estatísticas ou alguma outra ação. Você também pode sacrificar um de seus ataques ao realizar a ação {@action Attack|XPHB} para comandar a fera para realizar a ação Golpe da Fera. Se você tiver a condição {@condition Incapacitated|XPHB}, a besta age por conta própria e não está limitada à ação {@action Dodge|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Restoring or Replacing the Beast",
+							"entries": [
+								"Se a fera morreu na última hora, você pode realizar uma ação {@action Magic|XPHB} para tocá-la e gastar um espaço de magia. A fera retorna à vida após 1 minuto com todos os seus {@variantrule Hit Points|XPHB} restaurados.",
+								"Sempre que você termina um {@variantrule Long Rest|XPHB}, você pode invocar uma fera primal diferente, que aparece em um espaço desocupado a até 1,5 metro de você. Você escolhe seu bloco de estatísticas e aparência. Se você já possui uma fera desse recurso, a antiga desaparece quando a nova aparece."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Exceptional Training",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Quando você usa um {@variantrule Bonus Action|XPHB} para comandar sua besta Companheira Primordial para realizar uma ação, você também pode comandá-la para executar a ação {@action Dash|XPHB}, {@action Disengage|XPHB}, {@action Dodge|XPHB} ou {@action Help|XPHB} usando seu {@variantrule Bonus Action|XPHB}.",
+				"Além disso, sempre que acertar uma jogada de ataque e causar dano, ele pode causar dano de Força à sua escolha ou seu tipo de dano normal."
+			]
+		},
+		{
+			"name": "Bestial Fury",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"Quando você comanda sua besta Companheira Primordial para realizar a ação Golpe da Besta, a besta pode usá-la duas vezes.",
+				"Além disso, na primeira vez em cada turno, ela atinge uma criatura sob o efeito do seu feitiço {@spell Hunter's Mark|XPHB}, a fera causa dano de Força extra igual ao dano bônus daquele feitiço."
+			]
+		},
+		{
+			"name": "Share Spells",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Beast Master",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Quando você lança um feitiço visando você mesmo, você também pode afetar sua besta Companheira Primordial com o feitiço se a besta estiver a até 9 metros de você."
+			]
+		},
+		{
+			"name": "Fey Wanderer",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Wield Fey Mirth and Fury}",
+				"Uma mística feérica envolve você, graças à bênção de uma arquifada ou a um local na Agrestia das Fadas que o transformou. Não importa como você ganhou magia feérica, agora você é um Fey Wanderer. Sua risada alegre ilumina os corações dos oprimidos, e sua destreza marcial causa terror em seus inimigos, pois grande é a alegria das fadas e terrível é sua fúria.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dreadful Strikes|Ranger|XPHB|Fey Wanderer|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fey Wanderer Spells|Ranger|XPHB|Fey Wanderer|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Otherworldly Glamour|Ranger|XPHB|Fey Wanderer|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Dreadful Strikes",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você pode aumentar seus ataques com armas com magia assustadora extraída das cavidades obscuras da Agrestia das Fadas. Ao atingir uma criatura com uma arma, você pode causar {@damage 1d4} de dano psíquico extra ao alvo, que pode sofrer esse dano extra apenas uma vez por turno. O dano extra aumenta para {@dice 1d6} quando você atinge o nível 11 de Ranger."
+			]
+		},
+		{
+			"name": "Fey Wanderer Spells",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Quando você atinge um nível de Ranger especificado na tabela de Feitiços do Fey Wanderer, você sempre terá os feitiços listados preparados.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Fey Wanderer",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell Charm Person|XPHB}"
+						],
+						[
+							"5º",
+							"{@spell Misty Step|XPHB}"
+						],
+						[
+							"9º",
+							"{@spell Summon Fey|XPHB}"
+						],
+						[
+							"13º",
+							"{@spell Dimension Door|XPHB}"
+						],
+						[
+							"17º",
+							"{@spell Mislead|XPHB}"
+						]
+					]
+				},
+				"Você também possui uma bênção feérica. Escolha-o na tabela Feywild Gifts ou determine-o aleatoriamente.",
+				{
+					"type": "table",
+					"caption": "Presentes Feywild",
+					"colLabels": [
+						"1d6",
+						"Presente"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Illusory butterflies flutter around you while you take a {@variantrule Short Rest|XPHB|Short} or {@variantrule Long Rest|XPHB}."
+						],
+						[
+							"2",
+							"Flores desabrocham em seus cabelos a cada amanhecer."
+						],
+						[
+							"3",
+							"Você sente um leve cheiro de canela, lavanda, noz-moscada ou outra erva ou tempero reconfortante."
+						],
+						[
+							"4",
+							"Sua sombra dança enquanto ninguém olha diretamente para ela."
+						],
+						[
+							"5",
+							"Chifres ou galhadas brotam de sua cabeça."
+						],
+						[
+							"6",
+							"Sua pele e seu cabelo mudam de cor a cada amanhecer."
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Otherworldly Glamour",
+			"source": "XPHB",
+			"page": 124,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Sempre que você faz um teste de Carisma, você ganha um bônus no teste igual ao seu modificador de Sabedoria (mínimo de +1).",
+				"Você também ganha proficiência em uma destas habilidades de sua escolha: {@skill Deception|XPHB}, {@skill Performance|XPHB} ou {@skill Persuasion|XPHB}."
+			]
+		},
+		{
+			"name": "Beguiling Twist",
+			"source": "XPHB",
+			"page": 125,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"A magia da Agrestia das Fadas protege sua mente. Você tem {@variantrule Advantage|XPHB} em testes de resistência para evitar ou encerrar a condição {@condition Charmed|XPHB} ou {@condition Frightened|XPHB}.",
+				"Além disso, sempre que você ou uma criatura que você pode ver a até 36 metros de você tiver sucesso em um teste de resistência para evitar ou encerrar a condição {@condition Charmed|XPHB} ou {@condition Frightened|XPHB}, você pode realizar um teste de resistência {@variantrule Reaction|XPHB} para forçar uma criatura diferente que você possa ver a até 36 metros de você a fazer um salvamento de Sabedoria contra sua CD de salvamento de feitiço. Em caso de falha no salvamento, o alvo é {@condition Charmed|XPHB} ou {@condition Frightened|XPHB} (sua escolha) por 1 minuto. O alvo repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+			]
+		},
+		{
+			"name": "Fey Reinforcements",
+			"source": "XPHB",
+			"page": 125,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"Você pode lançar {@spell Summon Fey|XPHB} sem um componente Material. Você também pode lançá-lo uma vez sem um slot de feitiço e recuperar a capacidade de lançá-lo dessa forma ao terminar um {@variantrule Long Rest|XPHB}.",
+				"Sempre que você começar a lançar o feitiço, poderá modificá-lo para que não exija {@status Concentration|XPHB}. Se você fizer isso, a duração da magia passa a ser de 1 minuto para aquela conjuração."
+			]
+		},
+		{
+			"name": "Misty Wanderer",
+			"source": "XPHB",
+			"page": 125,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Fey Wanderer",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Você pode lançar {@spell Misty Step|XPHB} sem gastar um espaço de feitiço. Você pode fazer isso um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recupera todos os usos gastos ao terminar um {@variantrule Long Rest|XPHB}.",
+				"Além disso, sempre que você conjurar {@spell Misty Step|XPHB}, você pode trazer consigo uma criatura voluntária que você possa ver a até 1,5 metro de você. Aquela criatura se teletransporta para um espaço desocupado, à sua escolha, a até 1,5 metro do seu espaço de destino."
+			]
+		},
+		{
+			"name": "Dread Ambusher",
+			"source": "XPHB",
+			"page": 125,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você dominou a arte de criar emboscadas assustadoras, o que lhe concede os seguintes benefícios.",
+				{
+					"type": "entries",
+					"name": "Ambusher's Leap",
+					"entries": [
+						"No início do seu primeiro turno de cada combate, seu {@variantrule Speed|XPHB} aumenta em 3 metros até o final desse turno."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dreadful Strike",
+					"entries": [
+						"Quando você ataca uma criatura e a acerta com uma arma, você pode causar {@damage 2d6} de dano psíquico extra. Você pode usar esse benefício apenas uma vez por turno, pode usá-lo um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recupera todos os usos gastos ao terminar um {@variantrule Long Rest|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Initiative Bonus",
+					"entries": [
+						"Ao rolar {@variantrule Initiative|XPHB}, você pode adicionar seu modificador de Sabedoria à rolagem."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gloom Stalker",
+			"source": "XPHB",
+			"page": 125,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Draw on Shadow Magic to Fight Your Foes}",
+				"Gloom Stalkers se sentem em casa nos lugares mais sombrios, empunhando magia extraída do Pendor das Sombras para combater inimigos que se escondem na escuridão.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Dread Ambusher|Ranger|XPHB|Gloom Stalker|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Gloom Stalker Spells|Ranger|XPHB|Gloom Stalker|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Umbral Sight|Ranger|XPHB|Gloom Stalker|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Gloom Stalker Spells",
+			"source": "XPHB",
+			"page": 126,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Quando você atinge um nível de Ranger especificado na tabela Feitiços do Espreitador Sombrio, você sempre terá os feitiços listados preparados.",
+				{
+					"type": "table",
+					"caption": "Feitiços de Perseguidor Sombrio",
+					"colLabels": [
+						"Nível de Ranger",
+						"Feitiços"
+					],
+					"colStyles": [
+						"col-1 centro de texto",
+						"col-11"
+					],
+					"rows": [
+						[
+							"3º",
+							"{@spell Disguise Self|XPHB}"
+						],
+						[
+							"5º",
+							"{@spell Rope Trick|XPHB}"
+						],
+						[
+							"9º",
+							"{@spell Fear|XPHB}"
+						],
+						[
+							"13º",
+							"{@spell Greater Invisibility|XPHB}"
+						],
+						[
+							"17º",
+							"{@spell Seeming|XPHB}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Umbral Sight",
+			"source": "XPHB",
+			"page": 126,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha {@sense Darkvision|XPHB} com um alcance de 18 metros. Se você já tiver {@sense Darkvision|XPHB} ao ganhar esse recurso, seu alcance aumentará em 18 metros.",
+				"Você também é adepto de fugir de criaturas que dependem de {@sense Darkvision|XPHB}. Enquanto estiver inteiramente em {@variantrule Darkness|XPHB}, você tem a condição {@condition Invisible|XPHB} para qualquer criatura que dependa de {@sense Darkvision|XPHB} para vê-lo naquele {@variantrule Darkness|XPHB}."
+			]
+		},
+		{
+			"name": "Iron Mind",
+			"source": "XPHB",
+			"page": 126,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você aprimorou sua capacidade de resistir aos poderes que alteram a mente. Você ganha proficiência em testes de resistência de Sabedoria. Se você já possui essa proficiência, você ganha proficiência em testes de resistência de Inteligência ou Carisma (sua escolha)."
+			]
+		},
+		{
+			"name": "Stalker's Flurry",
+			"source": "XPHB",
+			"page": 126,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"O dano psíquico do seu Golpe Terrível se torna {@dice 2d8}. Além disso, ao usar o efeito Golpe Terrível do recurso Emboscador Medonho, você pode causar um dos seguintes efeitos adicionais.",
+				{
+					"type": "entries",
+					"name": "Sudden Strike",
+					"entries": [
+						"Você pode realizar outro ataque com a mesma arma contra uma criatura diferente que esteja a até 1,5 metro do alvo original e que esteja dentro do alcance da arma."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mass Fear",
+					"entries": [
+						"O alvo e cada criatura a até 3 metros dele devem fazer um teste de resistência de Sabedoria contra a CD de sua magia. Se falhar na resistência, uma criatura terá a condição {@condition Frightened|XPHB} até o início do seu próximo turno."
+					]
+				}
+			]
+		},
+		{
+			"name": "Shadowy Dodge",
+			"source": "XPHB",
+			"page": 126,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Gloom Stalker",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Quando uma criatura faz uma jogada de ataque contra você, você pode usar um {@variantrule Reaction|XPHB} para impor {@variantrule Disadvantage|XPHB} nessa jogada. Quer o ataque acerte ou erre, você pode se teletransportar até 9 metros para um espaço desocupado que você possa ver."
+			]
+		},
+		{
+			"name": "Hunter",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Protect Nature and People from Destruction}",
+				"Você persegue presas na selva e em outros lugares, usando suas habilidades como Caçador para proteger a natureza e as pessoas em todos os lugares de forças que as destruiriam.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hunter's Prey|Ranger|XPHB|Hunter|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Hunter's Lore|Ranger|XPHB|Hunter|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Hunter's Lore",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você pode invocar as forças da natureza para revelar certos pontos fortes e fracos de sua presa. Enquanto uma criatura estiver marcada pela sua Marca do Caçador, você sabe se aquela criatura tem alguma Imunidade, Resistência ou Vulnerabilidade e, se a criatura tiver alguma, você sabe quais são."
+			]
+		},
+		{
+			"name": "Hunter's Prey",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha uma das seguintes opções de recursos à sua escolha. Sempre que terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}, você pode substituir a opção escolhida pela outra.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Colossus Slayer",
+							"entries": [
+								"Sua tenacidade pode desgastar até mesmo os inimigos mais resistentes. Quando você atinge uma criatura com uma arma, a arma causa um dano extra de {@damage 1d8} ao alvo se estiver faltando algum de seus {@variantrule Hit Points|XPHB}. Você pode causar esse dano extra apenas uma vez por turno."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Horde Breaker",
+							"entries": [
+								"Uma vez em cada um de seus turnos, quando você fizer um ataque com uma arma, você pode fazer outro ataque com a mesma arma contra uma criatura diferente que esteja a até 1,5 metro do alvo original, que esteja dentro do alcance da arma e que você não tenha atacado neste turno."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Defensive Tactics",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 7,
+			"header": 2,
+			"entries": [
+				"Você ganha uma das seguintes opções de recursos à sua escolha. Sempre que terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}, você pode substituir a opção escolhida pela outra.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Escape the Horde",
+							"entries": [
+								"{@action Opportunity Attack|XPHB|Opportunity Attacks} tem {@variantrule Disadvantage|XPHB} contra você."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Multiattack Defense",
+							"entries": [
+								"Quando uma criatura atinge você com uma jogada de ataque, essa criatura tem {@variantrule Disadvantage|XPHB} em todas as outras jogadas de ataque contra você neste turno."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Superior Hunter's Prey",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 11,
+			"header": 2,
+			"entries": [
+				"Uma vez por turno, quando você causar dano a uma criatura marcada pela sua Marca do Caçador, você também pode causar o dano extra daquele feitiço a uma criatura diferente que você possa ver a até 9 metros da primeira criatura."
+			]
+		},
+		{
+			"name": "Superior Hunter's Defense",
+			"source": "XPHB",
+			"page": 127,
+			"className": "Ranger",
+			"classSource": "XPHB",
+			"subclassShortName": "Hunter",
+			"subclassSource": "XPHB",
+			"level": 15,
+			"header": 2,
+			"entries": [
+				"Ao receber dano, você pode receber um {@variantrule Reaction|XPHB} para causar {@variantrule Resistance|XPHB} a esse dano e a qualquer outro dano do mesmo tipo até o final do turno atual."
+			]
+		}
+	]
+}

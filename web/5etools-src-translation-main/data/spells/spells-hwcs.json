@@ -1,0 +1,503 @@
+{
+	"spell": [
+		{
+			"name": "Ambush Prey",
+			"source": "HWCS",
+			"page": 49,
+			"level": 2,
+			"school": "eu",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "um galho quebrado"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você canaliza energias predatórias primordiais para ocultar perfeitamente sua presença e surpreender seu alvo. Você se torna {@condition invisible} durante a duração do feitiço, concedendo vantagem em todos os testes de Destreza ({@skill Stealth}) para permanecer oculto. A invisibilidade durará enquanto durar o feitiço, entretanto, mover-se 1,5 metro ou mais de sua posição quando você lançou o feitiço encerrará o efeito.",
+				"Enquanto você permanecer invisível, o primeiro ataque que você fizer contra qualquer alvo que não esteja ciente de sua presença causará {@damage 1d6} pontos de dano adicionais. Este ataque encerra o feitiço."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço acima do 2º nível, o dano do seu primeiro ataque aumenta em {@scaledamage 1d6|2-9|1d6} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"conditionInflict": [
+				"invisible"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Elevated Sight",
+			"source": "HWCS",
+			"page": 49,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você olha para o céu, garantindo a visão de um ponto de vista mais elevado. Você projeta sua visão para ver através de um sensor invisível que aparece em um local a até 36 metros acima de você. Você pode ver através do sensor como se estivesse voando, garantindo uma visão completa de 360 ​​graus de sua localização.",
+				"O sensor se move com você, mantendo sua altura em relação a você. Você pode usar uma ação bônus para ajustar a altura do sensor, mas apenas até um máximo de 36 metros acima de você.",
+				"Ao olhar através deste sensor, você é {@condition blinded|PHB|blind}, embora possa alternar entre ver através do sensor ou através de seus próprios olhos a qualquer momento durante seu turno."
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"miscTags": [
+				"SGT",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Feathered Reach",
+			"source": "HWCS",
+			"page": 50,
+			"level": 3,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true,
+				"m": {
+					"text": "uma pequena pena"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você transforma seus braços em asas poderosas e seus dedos em penas longas e graciosas. Os efeitos deste feitiço duram 1 minuto, momento em que as penas caem gradualmente, fazendo com que você flutue suavemente até o chão enquanto seus braços retornam à forma original. Este feitiço confere uma série de benefícios ao lançador:",
+				{
+					"type": "list",
+					"items": [
+						"Como uma ação bônus, você pode voar até dobrar sua velocidade de movimento. Você deve pousar assim que terminar seu movimento, embora não sofra dano de queda enquanto este feitiço estiver ativo, pois seus braços emplumados o levam suavemente ao chão.",
+						"Você pode usar seus poderosos braços emplumados para se impulsionar para cima a uma distância igual à metade de sua velocidade de movimento. Você pode fazer isso uma vez durante o seu turno e pode usá-lo em conjunto com um salto normal.",
+						"Ao cair, você pode usar sua reação para enrijecer os braços e deslizar com o vento. Você pode voar até sua velocidade de movimento, em qualquer direção, escolhendo onde pousar.",
+						"Você ganha vantagem em todos os testes de {@skill Athletics} usados para fazer um salto em distância ou em altura. Você não precisa se mover 3 metros antes de pular para ganhar distância e triplica a distância que saltaria normalmente."
+					]
+				},
+				"Para se beneficiar deste feitiço, suas mãos devem estar livres de escudos e armas pesadas, e você não pode ficar sobrecarregado."
+			],
+			"miscTags": [
+				"ADV",
+				"UBA"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Globe of Twilight",
+			"source": "HWCS",
+			"page": 50,
+			"level": 3,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um pouco de piche e um saco de areia brilhante"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você envolve a área ao seu redor em uma esfera de céu noturno, pontilhada de estrelas em miniatura. O crepúsculo esconde seus aliados, mas ilumina claramente seus inimigos.",
+				"A área afetada por este feitiço é levemente obscurecida por uma sombra mágica, dentro da qual pequenas constelações brilham suavemente. Além dessas estrelas, apenas a luz produzida por uma magia de 3º nível ou superior pode iluminar adequadamente qualquer área dentro da esfera. A luz não-mágica não funciona dentro da esfera, e todas as outras formas de brilho mágico só podem produzir luz fraca em um espaço de 1,5 metro.",
+				"Ao lançar esta magia, você pode designar qualquer número de criaturas que você possa ver como ocultadas pelas sombras sobrenaturais enquanto estiver na esfera. Uma criatura escondida tem vantagem em testes de Destreza ({@skill Stealth}) quando dentro da esfera e pode tentar se esconder a qualquer momento. Como a área da magia é levemente obscurecida, as criaturas dentro da área da magia têm desvantagem em testes de Sabedoria ({@skill Perception}) feitos para ver aqueles que estão fora dela.",
+				"Todas as outras criaturas na área ficam ofuscadas pela luz das estrelas em miniatura, fazendo com que tenham desvantagem em todos os testes de percepção dentro da esfera. Quando tal criatura entra na área da magia pela primeira vez, ou começa seu turno lá, ela deve fazer um teste de resistência de Sabedoria ou será {@condition blinded} até o final do seu turno."
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gust Barrier",
+			"source": "HWCS",
+			"page": 50,
+			"level": 0,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você abre bem os braços, permitindo-se ser envolvido pelo ar ao seu redor. Até o final do seu próximo turno, qualquer ataque à distância contra você será realizado com desvantagem.",
+				"Os atacantes corpo a corpo que acertarem você com sucesso devem fazer um teste de resistência de Constituição contra sua CD de resistência de feitiço. Em caso de falha, o atacante é arremessado para longe de você até 3 metros e é derrubado {@condition prone}."
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Invoke the Amaranthine",
+			"source": "HWCS",
+			"page": 51,
+			"level": 3,
+			"school": "D",
+			"time": [
+				{
+					"number": 10,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um símbolo sagrado do Amarantina"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Você invoca o poder de um Amaranthine para se conceder uma visão do Grande Ritmo que move todas as coisas. Ao lançar este feitiço, role dois {@dice d20}s e registre o que você lançou. Para cada dado, escolha uma jogada de ataque, teste de perícia ou teste de resistência. Você pode escolher cada opção várias vezes. Pelas próximas 24 horas, você pode substituir qualquer jogada de um aliado ou inimigo que você possa ver em um raio de 18 metros por um dos números registrados que corresponda ao tipo de jogada que você deseja substituir (rolada de ataque, teste de perícia ou teste de resistência). O alvo ainda adiciona quaisquer modificadores relevantes a este número, mas caso contrário, trata o número substituído como o número que ele rolou.",
+				"Para fazer isso, você deve realizar uma reação para apresentar seu símbolo sagrado e invocar o nome do Amarantina cujas energias você invocou. Você pode fazer isso a qualquer momento após o teste de habilidade, teste de resistência ou ataque ter sido rolado, mas antes que o resultado do evento tenha sido determinado. O feitiço termina após 24 horas ou quando ambos os dados forem gastos."
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shape Plants",
+			"source": "HWCS",
+			"page": 51,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você invoca magias naturais suaves para alterar o crescimento das plantas. Qualquer planta que você possa ver dentro do alcance e que caiba em um cubo de 1,5 metro pode assumir a forma que você desejar. Além disso, se a planta for um arbusto ou capaz de produzir espinhos, você pode transformar a área afetada em um terreno difícil, causando {@damage 2d4} pontos de dano perfurante para cada 1,5 metro movido pela área que você moldou. Você também pode aumentar ou diminuir o número de flores, vinhas, folhas, espinhos, galhos ou frutos produzidos por qualquer planta que você moldar.",
+				"Depois de uma hora, a magia do seu feitiço desaparece e a planta volta à sua forma normal. Se você puder falar com plantas (ou uma habilidade semelhante) para se comunicar com a planta, você poderá persuadi-la a manter sua nova forma. Plantas diferentes têm sentimentos e atitudes diferentes e, se a forma for muito diferente da sua forma natural, é provável que diminua. Se a planta aceitar, a critério do Mestre, ela manterá a forma que você a esculpiu, caso em que o efeito se tornará permanente."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia acima do 4º nível, o tamanho do cubo de vida vegetal que você pode afetar com a magia aumenta em 1,5 metro adicional para cada nível do espaço acima do 4º nível."
+					]
+				}
+			],
+			"damageInflict": [
+				"piercing"
+			],
+			"miscTags": [
+				"PRM",
+				"SGT"
+			],
+			"areaTags": [
+				"C"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Spiny Shield",
+			"source": "HWCS",
+			"page": 51,
+			"level": 1,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma pequena pena"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Uma barreira etérea de espinhos, feita de força mágica, se interpõe entre você e um atacante. Até o seu próximo turno, quando você for atingido por um ataque corpo a corpo, a barreira reduz o dano causado em {@dice 2d4} e causa a mesma quantidade de dano perfurante ao atacante. O escudo é ineficaz contra atacantes de longo alcance, mas ainda fornece um bônus de +2 na CA (tratado como {@quickref Cover||3||half cover}) contra eles durante a duração."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço acima do 1º nível, aumenta o efeito do feitiço em {@scaledice 2d4|1-9|1d4} adicional para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"piercing"
+			],
+			"miscTags": [
+				"MAC"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Stellar Bodies",
+			"source": "HWCS",
+			"page": 52,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "special"
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você cria duas pequenas estrelas que orbitam você. Eles brilham agradavelmente, lançando luz fraca em um raio de 3 metros centrado em você. As estrelas protegem você. Se uma criatura a até 1,5 metro de você atingir você com um ataque corpo a corpo, ela deverá fazer um teste de resistência de Sabedoria ou sofrerá {@damage 1d8} pontos de dano radiante para cada estrela orbitando você.",
+				"Uma vez por rodada, no seu turno, você pode usar sua ação para fazer com que uma estrela voe em direção a um inimigo, gastando-a enquanto ela explode em um clarão ofuscante. Faça um ataque mágico à distância contra um inimigo em um raio de 36 metros, causando {@damage 4d8} pontos de dano radiante ao acertar. O alvo deve então fazer um teste de resistência de Constituição ou será {@condition blinded} até o início do seu próximo turno.",
+				"O feitiço termina quando sua duração expira, você cai {@condition unconscious} ou gasta todas as suas estrelas."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Ao lançar esta magia usando um espaço de magia acima do 4º nível, você pode criar uma estrela adicional para cada dois níveis de espaço acima do 4º nível. Para cada estrela adicional orbitando você, o raio da luz fraca centrada em você aumenta em 1,5 metro."
+					]
+				}
+			],
+			"damageInflict": [
+				"radiante"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"spellAttack": [
+				"R"
+			],
+			"savingThrow": [
+				"constituição",
+				"sabedoria"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Veil of Dusk",
+			"source": "HWCS",
+			"page": 52,
+			"level": 1,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma pitada de fuligem"
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você invoca uma criatura, envolvendo-a em um véu sombrio de escuridão e silêncio. O alvo ganha um bônus de +1 em sua classe de armadura e faz testes de {@skill Stealth} com vantagem durante a duração do feitiço."
+			],
+			"hasFluffImages": true
+		}
+	]
+}

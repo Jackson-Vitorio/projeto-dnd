@@ -1,0 +1,905 @@
+{
+	"_meta": {
+		"otherSources": {
+			"monster": {
+				"XMM": "ABH"
+			}
+		}
+	},
+	"monster": [
+		{
+			"name": "Fiendish Icon",
+			"source": "ABH",
+			"page": 14,
+			"size": [
+				"S"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d6 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 13,
+			"int": 6,
+			"wis": 11,
+			"cha": 6,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"Darkvision 60"
+			],
+			"passive": 10,
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed",
+				"petrified",
+				"poisoned"
+			],
+			"languages": [
+				"understands Common and Infernal but can't speak"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O ícone tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O ícone faz dois ataques Slam e usa Fiery Eruption."
+					]
+				},
+				{
+					"name": "Slam",
+					"entries": [
+						"{@atkr m} {@hit 4}, alcance 5 pés. {@h}4 ({@damage 1d4 + 2}) Dano de concussão."
+					]
+				},
+				{
+					"name": "Fiery Eruption",
+					"entries": [
+						"{@actSave dex} {@dc 11}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 1,5 metro originando-se do ícone. {@actSaveFail} 7 ({@damage 2d6}) Dano de fogo."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"I"
+			],
+			"damageTags": [
+				"B",
+				"F"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Harvester Devil",
+			"source": "ABH",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"average": 65,
+				"formula": "10d8 + 20"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 17,
+			"con": 14,
+			"int": 14,
+			"wis": 13,
+			"cha": 19,
+			"save": {
+				"con": "+4",
+				"wis": "+3"
+			},
+			"skill": {
+				"perception": "+3",
+				"persuasion": "+8",
+				"stealth": "+5"
+			},
+			"senses": [
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+			],
+			"passive": 13,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal; telepathy 120 ft."
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Diabolic Ward",
+					"entries": [
+						"As jogadas de ataque contra o diabo têm {@variantrule Disadvantage|XPHB}. Se o diabo fizer uma jogada de ataque, essa característica será suprimida até o início do próximo turno."
+					]
+				},
+				{
+					"name": "Diabolical Restoration",
+					"entries": [
+						"Se o demônio morrer fora dos Nove Infernos, seu corpo desaparece em fumaça sulfurosa, e ele ganha um novo corpo instantaneamente, revivendo com todos os seus {@variantrule Hit Points|XPHB} em algum lugar dos Nove Infernos."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O diabo tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O diabo faz dois ataques, usando Infernal Blade ou Confounding Ray em qualquer combinação."
+					]
+				},
+				{
+					"name": "Infernal Blade",
+					"entries": [
+						"{@atkr m} {@hit 5}, alcance 5 pés. {@h}6 ({@damage 1d6 + 3}) Dano cortante e 7 ({@damage 2d6}) Dano de fogo."
+					]
+				},
+				{
+					"name": "Confounding Ray",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 120 pés. {@h}13 ({@damage 2d12}) Dano psíquico. Se o alvo for uma criatura, ele não conseguirá sobreviver {@action Opportunity Attack|XPHB|Opportunity Attacks} até o início do próximo turno do diabo."
+					]
+				},
+				{
+					"name": "Compelling Contract (1/Day)",
+					"entries": [
+						"{@actSave cha} {@dc 14}, uma criatura a até 9 metros do diabo. {@actSaveFail} O destino tem a condição {@condition Charmed|XPHB}. Embora seja {@condition Charmed|XPHB}, ele tem a condição {@condition Stunned|XPHB}, exceto que o alvo pode falar. Se o alvo concordar com o contrato do diabo, o efeito termina. Caso contrário, o alvo repete o salvamento sempre que sofrer dano e no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso. Após 1 minuto, ele será bem-sucedido automaticamente."
+					]
+				}
+			],
+			"environment": [
+				"planar, nine hells"
+			],
+			"traitTags": [
+				"Devil's Sight",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"F",
+				"S",
+				"Y"
+			],
+			"miscTags": [
+				"MA",
+				"RA"
+			],
+			"conditionInflict": [
+				"charmed",
+				"stunned"
+			],
+			"savingThrowForced": [
+				"charisma"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Speaker Devil",
+			"source": "ABH",
+			"page": 17,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "fiend",
+				"tags": [
+					"devil"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				17
+			],
+			"hp": {
+				"average": 189,
+				"formula": "18d10 + 90"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"str": 21,
+			"dex": 19,
+			"con": 20,
+			"int": 22,
+			"wis": 18,
+			"cha": 17,
+			"save": {
+				"con": "+9",
+				"int": "+10",
+				"wis": "+8",
+				"cha": "+7"
+			},
+			"skill": {
+				"arcana": "+10",
+				"history": "+10",
+				"perception": "+8"
+			},
+			"senses": [
+				"Darkvision 120 ft."
+			],
+			"passive": 18,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				"fire",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Infernal; telepathy 120 ft."
+			],
+			"cr": "12",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The devil casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save {@dc 18}):"
+					],
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Detect Thoughts|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Dimension Door|XPHB}",
+							"{@spell Modify Memory|XPHB}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Diabolical Restoration",
+					"entries": [
+						"Se o demônio morrer fora dos Nove Infernos, seu corpo desaparece em fumaça sulfurosa, e ele ganha um novo corpo instantaneamente, revivendo com todos os seus {@variantrule Hit Points|XPHB} em algum lugar dos Nove Infernos."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O diabo tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O diabo faz dois ataques da Alabarda Trovejante."
+					]
+				},
+				{
+					"name": "Thundering Halberd",
+					"entries": [
+						"{@atkr m} {@hit 9}, alcance 10 pés. {@h}16 ({@damage 2d10 + 5}) Dano cortante mais 14 ({@damage 4d6}) Dano trovejante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Utterance of Pain",
+					"entries": [
+						"{@actSave wis} {@dc 18}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 6 metros originária do diabo. {@actSaveFail} O alvo tem a condição {@condition Stunned|XPHB} até o final do próximo turno do diabo."
+					]
+				},
+				{
+					"name": "Utterance of Unmaking",
+					"entries": [
+						"{@actSave con} {@dc 18}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 6 metros originária do diabo. {@actSaveFail} 22 ({@damage 4d10}) Dano de força. {@actSaveSuccess} Metade de dano."
+					]
+				}
+			],
+			"environment": [
+				"planar, nine hells"
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"I",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"S",
+				"T"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"stunned"
+			],
+			"conditionInflictSpell": [
+				"Encantado",
+				"incapacitado"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Infernalist",
+			"source": "ABH",
+			"page": 18,
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"average": 172,
+				"formula": "23d8 + 69"
+			},
+			"speed": {
+				"walk": 40,
+				"fly": 40
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 19,
+			"dex": 16,
+			"con": 17,
+			"int": 20,
+			"wis": 16,
+			"cha": 18,
+			"save": {
+				"con": "+8",
+				"int": "+10"
+			},
+			"skill": {
+				"arcana": "+10",
+				"perception": "+8",
+				"religion": "+10",
+				"stealth": "+8"
+			},
+			"senses": [
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+			],
+			"passive": 18,
+			"resist": [
+				"fire",
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Common",
+				"Infernal"
+			],
+			"cr": {
+				"cr": "14",
+				"xpLair": 13000
+			},
+			"gear": [
+				"orb|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The vampire casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 18}):"
+					],
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Detect Thoughts|XPHB}",
+						"{@spell Dispel Magic|XPHB}",
+						"{@spell Fireball|XPHB} (level 4 version)",
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Prestidigitation|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Wall of Fire|XPHB}"
+						],
+						"2": [
+							"{@spell Scrying|XPHB}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+					"entries": [
+						"Se o vampiro falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Misty Escape",
+					"entries": [
+						"Se o vampiro cair para 0 {@variantrule Hit Points|XPHB} fora de seu local de descanso, o vampiro usa Mudança de Forma para se tornar névoa (nenhuma ação necessária). Se não puder usar Shape-Shift, será destruído.",
+						"Embora tenha 0 {@variantrule Hit Points|XPHB} em forma de névoa, ele não pode retornar à sua forma de vampiro e deve chegar ao seu local de descanso dentro de 2 horas ou será destruído. Uma vez em seu local de descanso, ele retorna à sua forma de vampiro e tem a condição {@condition Paralyzed|XPHB} até recuperar qualquer {@variantrule Hit Points|XPHB}, e recupera 1 {@variantrule Hit Points|XPHB|Hit Point} após passar 1 hora lá."
+					]
+				},
+				{
+					"name": "Vampire Weakness",
+					"entries": [
+						"O vampiro tem essas fraquezas:",
+						{
+							"type": "list",
+							"style": "list-hang-subtrait",
+							"items": [
+								{
+									"type": "itemSub",
+									"name": "Forbiddance",
+									"entries": [
+										"O vampiro não pode entrar numa residência sem o convite de um ocupante."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Running Water",
+									"entries": [
+										"O vampiro sofre 20 de dano de Ácido se terminar seu turno em água corrente."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Stake to the Heart",
+									"entries": [
+										"Se uma arma que causa dano perfurante for cravada no coração do vampiro enquanto o vampiro estiver com a condição {@condition Incapacitated|XPHB} em seu local de descanso, o vampiro terá a condição {@condition Paralyzed|XPHB} até que a arma seja removida."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Sunlight",
+									"entries": [
+										"O vampiro sofre 20 de dano Radiante se começar seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack (Vampire Form Only)",
+					"entries": [
+						"O vampiro faz dois ataques Hellfire Claw e usa Bite."
+					]
+				},
+				{
+					"name": "Hellfire Claw (Vampire Form Only)",
+					"entries": [
+						"{@atkr m} {@hit 9}, alcance 5 pés. {@h}13 ({@damage 2d8 + 4}) Dano cortante mais 10 ({@damage 3d6}) Dano de fogo. Se o alvo for uma criatura média ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 17}) de uma das duas garras."
+					]
+				},
+				{
+					"name": "Bite (Imp or Vampire Form Only)",
+					"entries": [
+						"{@actSave con} {@dc 18}, uma criatura de até 1,5 metro que está disponível ou que tenha a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 6 ({@damage 1d4 + 4}) Dano perfurante mais 16 ({@damage 3d10}) Dano necrótico e uma criatura perdem seu espaço de feitiço disponível de nível mais alto (se houver). O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e o vampiro recupera {@variantrule Hit Points|XPHB} igual a essa quantidade. Um Humanóide limitado a 0 {@variantrule Hit Points|XPHB} por este dano e então enterrado surge no pôr do sol seguinte como uma Cria de Vampiro sob o controle do vampiro."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shape-Shift",
+					"entries": [
+						"Se o vampiro não estiver sob a luz do sol ou em água corrente, ele muda de forma para um diabrete minúsculo ({@variantrule Speed|XPHB} 20 pés, {@variantrule Fly Speed|XPHB} 40 pés) ou uma nuvem média de névoa ({@variantrule Speed|XPHB} 5 pés, {@variantrule Fly Speed|XPHB} 20 pés [pair]), ou retorna para seu vampiro. Qualquer coisa que ele usa se transforma com ele.",
+						"Enquanto estiver na forma de diabrete, as estatísticas do jogo do vampiro, exceto seu tamanho e {@variantrule Speed|XPHB}, permanecem inalteradas.",
+						"Enquanto estiver na forma de névoa, o vampiro não poderá realizar nenhuma ação, falar ou manipular objetos. Não tem peso e pode entrar no espaço do inimigo e parar aí. Se o ar consegue passar através de um espaço, a névoa consegue, mas não consegue passar através do líquido. Possui {@variantrule Resistance|XPHB} de todos os danos, exceto o dano que sofre da luz solar."
+					]
+				}
+			],
+			"legendaryActionsLair": 4,
+			"legendary": [
+				{
+					"name": "Hellfire Strike",
+					"entries": [
+						"O vampiro se move até metade de seu {@variantrule Speed|XPHB} e faz um ataque da Garra Fogo do Inferno."
+					]
+				},
+				{
+					"name": "Infernal Majesty",
+					"entries": [
+						"{@actSave cha} {@dc 17}, cada criatura em um {@variantrule Emanation [Area of Effect]|XPHB|Emanation} de 6 metros originada do vampiro. {@actSaveFail} 9 ({@damage 2d8}) Dano psíquico e o alvo tem a condição {@condition Frightened|XPHB} até o início do próximo turno. {@actSaveSuccess} Apenas metade do dano. {@actSaveSuccessOrFail} O vampiro não pode realizar esta ação novamente até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Teleport",
+					"entries": [
+						"O vampiro se teletransporta até 9 metros para um espaço desocupado que possa ver."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Vampire Infernalist",
+				"source": "ABH"
+			},
+			"environment": [
+				"planar, nine hells",
+				"underdark",
+				"urban"
+			],
+			"traitTags": [
+				"Devil's Sight",
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"I"
+			],
+			"damageTags": [
+				"A",
+				"F",
+				"N",
+				"P",
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"F"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MA"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"destreza",
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Vampire Warden",
+			"source": "ABH",
+			"page": 20,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				18
+			],
+			"hp": {
+				"average": 190,
+				"formula": "21d8 + 96"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 21,
+			"dex": 15,
+			"con": 18,
+			"int": 10,
+			"wis": 14,
+			"cha": 17,
+			"save": {
+				"con": "+8",
+				"wis": "+6"
+			},
+			"skill": {
+				"athletics": "+9",
+				"perception": "+10"
+			},
+			"senses": [
+				"Darkvision 120 ft."
+			],
+			"passive": 20,
+			"resist": [
+				"necrotic"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "10",
+			"spellcasting": [
+				{
+					"name": "Guardian's Command",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The vampire casts {@spell Compulsion|XPHB}, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 15})."
+					],
+					"will": [
+						"{@spell Compulsion|XPHB}"
+					],
+					"ability": "cha",
+					"displayAs": "action",
+					"hidden": [
+						"will"
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O vampiro tem {@variantrule Advantage|XPHB} em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Vampire Weakness",
+					"entries": [
+						"O vampiro tem essas fraquezas:",
+						{
+							"type": "list",
+							"style": "list-hang-subtrait",
+							"items": [
+								{
+									"type": "itemSub",
+									"name": "Forbiddance",
+									"entries": [
+										"O vampiro não pode entrar numa residência sem o convite de um ocupante."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Running Water",
+									"entries": [
+										"O vampiro sofre 20 de dano de Ácido se terminar seu turno em água corrente."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Stake to the Heart",
+									"entries": [
+										"Se uma arma que causa dano perfurante for cravada no coração do vampiro enquanto o vampiro tiver a condição {@condition Incapacitated|XPHB}, o vampiro terá a condição {@condition Paralyzed|XPHB} até que a arma seja removida."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Sunlight",
+									"entries": [
+										"O vampiro sofre 20 de dano Radiante se começar seu turno sob a luz do sol. Enquanto está sob a luz do sol, ele possui {@variantrule Disadvantage|XPHB} em jogadas de ataque e testes de habilidade."
+									]
+								},
+								{
+									"type": "itemSub",
+									"name": "Immobile Restoration",
+									"entries": [
+										"Se o vampiro cair para 0 {@variantrule Hit Points|XPHB} enquanto não tiver a condição {@condition Petrified|XPHB}, ele se transformará em pedra, recuperará 50 {@variantrule Hit Points|XPHB} e terá a condição {@condition Petrified|XPHB} por 1 hora."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O vampiro faz dois ataques de Garra e usa Mordida ou Comando do Guardião."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 9}, alcance 5 pés. {@h}14 ({@damage 2d8 + 5}) Dano cortante mais 7 ({@damage 2d6}) Dano necrótico. Se o alvo for uma criatura grande ou menor, ele terá a condição {@condition Grappled|XPHB} (escapar {@dc 16}) de uma das duas garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@actSave con} {@dc 16}, uma criatura de até 1,5 metro que está disponível ou que tenha a condição {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB} ou {@condition Restrained|XPHB}. {@actSaveFail} 7 ({@damage 1d4 + 5}) Dano perfurante mais 7 ({@damage 2d6}) Dano necrótico. O máximo de {@variantrule Hit Points|XPHB|Hit Point} do alvo diminui em uma quantidade igual ao dano necrótico recebido, e o vampiro recupera {@variantrule Hit Points|XPHB} igual a essa quantidade."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Resilient Flesh",
+					"entries": [
+						"{@actTrigger} O vampiro é atingido por uma jogada de ataque corpo a corpo de um atacante que o vampiro pode ver. {@actResponse} O vampiro reduz o dano que recebe do ataque em 11 ({@dice 2d6 + 4})."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"tokenCredit": "ThePrisoner",
+			"tokenCustom": true,
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"A",
+				"N",
+				"P",
+				"S"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"HPR",
+				"MA"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"conditionInflictSpell": [
+				"encantado"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true
+		}
+	]
+}

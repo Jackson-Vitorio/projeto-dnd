@@ -1,0 +1,161 @@
+{
+	"spell": [
+		{
+			"name": "Antagonize",
+			"source": "BMT",
+			"page": 50,
+			"level": 3,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma carta de baralho representando um ladino"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você sussurra palavras mágicas que antagonizam uma criatura de sua escolha dentro do alcance. O alvo deve fazer um teste de resistência de Sabedoria. Se falhar na resistência, o alvo sofre {@damage 4d4} de dano psíquico e deve usar imediatamente sua reação para fazer um ataque corpo a corpo contra outra criatura de sua escolha que você possa ver. Se o alvo não puder realizar este ataque (por exemplo, porque não há ninguém ao seu alcance ou porque sua reação não está disponível), o alvo terá desvantagem na próxima jogada de ataque que realizar antes do início do seu próximo turno. Em um teste bem-sucedido, o alvo sofre apenas metade do dano."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 4º nível ou superior, o dano aumenta em {@damage 1d4} para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"psíquico"
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Spirit of Death",
+			"source": "BMT",
+			"page": 50,
+			"level": 4,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma carta de baralho dourada valendo pelo menos 400 PO e representando um avatar da morte",
+					"cost": 40000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você invoca um espírito que incorpora a morte. O espírito se manifesta em um espaço desocupado que você pode ver dentro do alcance e usa o bloco de estatísticas {@creature reaper spirit|BMT}. O espírito desaparece quando é reduzido a 0 pontos de vida ou quando o feitiço termina.",
+				"O espírito é um aliado de você e de seus companheiros. Em combate, o espírito compartilha sua contagem de iniciativa e executa seu turno imediatamente após o seu. Ele obedece aos seus comandos verbais (nenhuma ação exigida por você). Se você não emitir nenhum comando ao espírito, ele realizará a ação {@action Dodge} e usará seu movimento para evitar o perigo."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjurar esta magia usando um espaço de magia de 5º nível ou superior, use o nível mais alto onde quer que o nível da magia apareça no bloco de estatísticas do espírito ceifador."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT",
+				"SMN"
+			]
+		},
+		{
+			"name": "Spray of Cards",
+			"source": "BMT",
+			"page": 50,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um baralho de cartas"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você pulveriza um cone de cartas espectrais de 4,5 metros. Cada criatura naquela área deve fazer um teste de resistência de Destreza. Se falhar na resistência, uma criatura sofre {@damage 2d10} de dano de força e tem a condição {@condition blinded} até o final de seu próximo turno. Em um teste bem-sucedido, a criatura sofre apenas metade do dano."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 3º nível ou superior, o dano aumenta em {@damage 1d10} para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrow": [
+				"destreza"
+			]
+		}
+	]
+}

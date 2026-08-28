@@ -1,0 +1,738 @@
+{
+	"spell": [
+		{
+			"name": "Conjure the Deep Haze",
+			"source": "DoDk",
+			"page": 226,
+			"level": 5,
+			"school": "C",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 10
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}.",
+				"Você cria uma esfera de Deep Haze com 6 metros de raio em um ponto que você escolher dentro do alcance. A neblina se espalha pelas esquinas. Dura pela duração ou até que um vento forte disperse a neblina, encerrando o feitiço. Sua área está fortemente obscurecida.",
+				"Quando uma criatura entra na área da magia pela primeira vez em um turno ou começa seu turno lá, aquela criatura deve ser bem sucedida em um teste de resistência de Constituição. Se falhar no teste de resistência, ele sofre ({@dice 8d6}) de dano necrótico e ganha um {@adventure level of contamination|DoDk|12}. Em um teste bem-sucedido, a criatura sofre metade do dano e não ganha nenhum {@adventure contamination levels|DoDk|12}. As criaturas são afetadas mesmo que prendam a respiração ou não precisem respirar."
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"OBS"
+			]
+		},
+		{
+			"name": "Contaminated Power",
+			"source": "DoDk",
+			"page": 226,
+			"level": 8,
+			"school": "T",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 500 po, que o feitiço consome",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Você extrai magia arcana desenfreada do fragmento de delerium que tem em sua mão. Até que a magia termine, você ganha os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ao lançar um feitiço que causa dano de ácido, fogo, frio, raio ou veneno, você pode alterar o tipo de dano para dano de força, necrótico, psíquico ou radiante.",
+						"Once per turn when you deal damage with a spell, you can deal an extra {@damage 1d12} necrotic damage for each {@adventure contamination level|DoDk|12} you have gained to one target of that spell.",
+						"When you cast a spell that forces a creature to make a saving throw to resist its effects, you can choose to gain one {@adventure level of contamination|DoDk|12}. If you do, one target of the spell has disadvantage on its first saving throw made against that spell."
+					]
+				},
+				"Este feitiço não pode ser dissipado por {@spell dispel magic}."
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Contamination Immunity",
+			"source": "DoDk",
+			"page": 226,
+			"level": 7,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Um lírio sobrenatural misturado com 250 po de fluidos purificados especialmente preparados, que o feitiço consome",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Até que o feitiço termine, uma criatura voluntária que você tocar ficará imune a dano necrótico e não poderá ganhar {@adventure contamination levels|DoDk|12}. A criatura afetada pode descansar normalmente dentro da Névoa.",
+				"Esta magia termina imediatamente se a criatura lançar uma magia contaminada."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Delerium Blast",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "V",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}.",
+				"Você acende energias arcanas armazenadas dentro de um fragmento de delerium em sua mão e o arremessa em um espaço que você possa ver, dentro do alcance. Ele explode em uma esfera de energia psíquica errática de 6 metros de raio que domina as mentes e os sentidos daqueles que estão dentro dela. Cada criatura na esfera deve ser bem sucedida num teste de resistência de Inteligência. Se falhar na resistência, uma criatura sofre ({@dice 10d6}) de dano psíquico e se torna {@condition incapacitated} até o final do próximo turno. Se obtiver sucesso, o alvo sofre metade do dano e não sofre nenhum dos outros efeitos da magia."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 5º nível ou superior, o dano aumenta em {@damage 2d6} para cada nível do espaço acima do 4º."
+					]
+				}
+			],
+			"conditionInflict": [
+				"incapacitated"
+			],
+			"savingThrow": [
+				"inteligência"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Delerium Orb",
+			"source": "DoDk",
+			"page": 227,
+			"level": 1,
+			"school": "V",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Você extrai poder mágico caótico do fragmento de delerium em sua mão e ataca uma criatura que você pode ver dentro do alcance com poder paradoxal. Escolha um valor de habilidade e, em seguida, escolha dano de frio, fogo, raio, necrótico, psíquico ou radiante. O alvo deve ser bem sucedido em um teste de resistência usando o valor de habilidade escolhido; sofre {@damage 6d6} de dano do tipo escolhido em um teste de resistência falhado, ou metade desse dano em um teste bem-sucedido."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, o dano aumenta em {@damage 2d6} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Forced Evolution",
+			"source": "DoDk",
+			"page": 227,
+			"level": 4,
+			"school": "T",
+			"time": [
+				{
+					"number": 8,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Um coquetel alquímico feito de componentes raros e pó de delerium no valor de 250 ouro, que o alvo consome como parte do feitiço",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Por meio deste feitiço, você transforma uma mutação obtida de {@adventure contamination|DoDk|12}. Uma das mutações existentes no alvo é removida e substituída por uma diferente. Esta mutação pode ser escolhida pelo Mestre do Jogo ou determinada aleatoriamente (ver Apêndice C de Dungeons of Drakkenheim)."
+			]
+		},
+		{
+			"name": "Neutralizing Field",
+			"source": "DoDk",
+			"page": 228,
+			"level": 5,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "sphere",
+				"distance": {
+					"type": "feet",
+					"amount": 10
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "Um cristal delerium ou relíquia sagrada no valor de 1.000 po",
+					"cost": 100000
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você nega energias mágicas contaminadas em uma esfera de 3 metros de raio. Até a magia terminar, a esfera se move com você, centrada em você. As criaturas na esfera (incluindo você) não podem ganhar {@adventure contamination levels|DoDk|12} e têm imunidade a dano necrótico. Feitiços contaminados não podem ser lançados por criaturas na área."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Octarine Spray",
+			"source": "DoDk",
+			"page": 228,
+			"level": 7,
+			"school": "V",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Raios octarinos de luz brilham em sua mão. Cada raio tem uma cor diferente e tem um poder e finalidade diferentes, veja a tabela abaixo. Cada criatura em um cone de 18 metros deve ser bem sucedida em um teste de resistência de Constituição. Para cada alvo, role um {@dice d8} para determinar qual raio colorido o afeta.",
+				{
+					"type": "table",
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"colLabels": [
+						"d8",
+						"Efeito Spray Octarina"
+					],
+					"rows": [
+						[
+							"1",
+							"O alvo sofre {@damage 20d6} de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"2",
+							"O alvo sofre {@damage 20d6} de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"3",
+							"O alvo sofre {@damage 20d6} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"4",
+							"O alvo sofre {@damage 20d6} de dano radiante se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"5",
+							"O alvo sofre {@damage 20d6} de dano trovejante se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"6",
+							"No início de cada um de seus turnos, o alvo afetado usa todo o seu movimento para se mover diretamente em direção à criatura mais próxima que puder ver. Então, o alvo afetado usa sua ação para realizar um ataque corpo a corpo contra uma criatura determinada aleatoriamente ao seu alcance. Se não houver nenhuma criatura ao seu alcance, o alvo afetado não faz nada neste turno. No final de cada um de seus turnos, o alvo afetado pode realizar um teste de resistência de Sabedoria. Se tiver sucesso, este efeito termina para aquele alvo."
+						],
+						[
+							"7",
+							"At the start of each of its turns, the affected target gains one {@adventure level of contamination|DoDk|12}. At the end of each of its turns, an affected target can make a Constitution saving throw. If it succeeds, this effect ends for that target, but any {@adventure contamination levels|DoDk|12} gained remain."
+						],
+						[
+							"8",
+							"{@b Special.} O alvo é atingido por um raio adicional. Role novamente duas vezes. Não há limite para quantos raios adicionais podem atingir uma única criatura dessa maneira."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"força",
+				"necrótico",
+				"psíquico",
+				"radiante",
+				"trovão"
+			],
+			"savingThrow": [
+				"constituição",
+				"sabedoria"
+			],
+			"miscTags": [
+				"RO"
+			]
+		},
+		{
+			"name": "Purge Contamination",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "100 PO de fluidos alquímicos ou água benta, que a magia consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você aplica fluidos alquímicos ou água benta a uma criatura humanóide contaminada enquanto recita um canto mágico que expele contaminantes sobrenaturais do corpo do alvo. Quando você terminar de lançar o feitiço, todos os {@adventure contamination levels|DoDk|12} e mutações serão removidos da criatura. Em seguida, ele ganha um nível de {@condition exhaustion} para cada {@adventure contamination level|DoDk|12} removido com este feitiço."
+			],
+			"conditionInflict": [
+				"exhaustion"
+			]
+		},
+		{
+			"name": "Ray of Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "N",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Um raio octarino salta do seu dedo apontando para uma criatura que você pode ver dentro do alcance. O alvo deve ser bem sucedido em um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofre {@damage 16d6} de dano necrótico e ganha {@dice 1d4} {@adventure levels of contamination|DoDk|12}. Em um teste bem-sucedido, o alvo sofre metade do dano e não ganha nenhum {@adventure contamination levels|DoDk|12}."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 7º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 6º. As criaturas devem estar a até 9 metros uma da outra quando você as atingir."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			]
+		},
+		{
+			"name": "Ride the Rifts",
+			"source": "DoDk",
+			"page": 228,
+			"level": 3,
+			"school": "C",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Um raio sobrenatural formando uma linha de 18 metros de comprimento e 1,5 metro de largura sai de você na direção que você escolher. Cada criatura na linha deve ser bem sucedida num teste de resistência de Destreza. Uma criatura sofre {@damage 10d6} de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso. Você então se teletransporta para um espaço desocupado que você pode ver dentro da área da linha."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 4º nível ou superior, o dano aumenta em {@damage 2d6} para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"relâmpago"
+			],
+			"savingThrow": [
+				"destreza"
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Sacrament of the Falling Fire",
+			"source": "DoDk",
+			"page": 229,
+			"level": 9,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po para cada criatura participante, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Este feitiço só pode ser lançado em uma área coberta pela Deep Haze.",
+				"Você realiza uma cerimônia sagrada envolvendo até 12 criaturas humanóides fiéis e dispostas que termina quando cada criatura participante enfia um fragmento de delerium em seu peito. Essas criaturas são santificadas (veja o dossiê Seguidores da Queda do Fogo no capítulo 3 de Dungeons of Drakkenheim).",
+				"Quando você termina de lançar este feitiço, um {@creature shadow} hostil aparece e ataca cada participante, como uma manifestação da escuridão interior daquele personagem. O Mestre pode determinar que um personagem que carregue muita raiva, medo ou ódio em seu coração faça com que {@creature wraith} se manifeste."
+			]
+		},
+		{
+			"name": "Siphon Contamination",
+			"source": "DoDk",
+			"page": 229,
+			"level": 6,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "500 PO em fluidos alquímicos especialmente preparados e um geodo de delerium no valor de 5.000 PO, todos consumidos pelo feitiço",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Este feitiço exigente transfere {@adventure contamination|DoDk|12} de uma criatura para outra. Ao lançar este feitiço, você deve primeiro tocar uma criatura humanóide voluntária com um ou mais {@adventure levels of contamination|DoDk|12}, ou uma antiga criatura humanóide cuja forma atual é o resultado de uma transformação monstruosa. Você então toca uma criatura humanóide voluntária diferente.",
+				"Se ambas as criaturas tocadas fossem criaturas humanóides voluntárias, você remove todos os {@adventure contamination levels|DoDk|12} e mutações da primeira criatura, então a segunda criatura que você toca ganha um número de {@adventure contamination levels|DoDk|12} igual ao número de níveis removidos da primeira criatura.",
+				"Se a primeira criatura que você toca for um ex-humanóide que sofreu um monstruoso {@adventure contamination|DoDk|12}, e a segunda criatura for uma criatura humanóide voluntária com um nível de personagem ou classificação de desafio igual ou superior à classificação de desafio da criatura transformada, você restaura a criatura totalmente contaminada à sua forma original, então a criatura humanóide imediatamente sofre uma transformação monstruosa como se tivesse ganhado seis {@adventure contamination levels|DoDk|12}.",
+				"A segunda criatura tocada não pode prevenir ou negar estes {@adventure contamination levels|DoDk|12} ou uma transformação subsequente de qualquer forma, ou então o feitiço falha sem efeito."
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Warp Bolt",
+			"source": "DoDk",
+			"page": 229,
+			"level": 2,
+			"school": "V",
+			"subschools": [
+				"contaminado"
+			],
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de delerium no valor de 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Ao lançar este feitiço, você ganha um {@adventure level of contamination|DoDk|12}. Um arco de raio octarino atinge uma criatura dentro do alcance. Se o alvo tiver um ou mais {@adventure contamination levels|DoDk|12}, ele será atingido automaticamente. Caso contrário, faça um ataque mágico à distância contra aquela criatura. Ao acertar, o alvo sofre {@damage 6d6} de dano necrótico e ganha um {@adventure level of contamination|DoDk|12}.",
+				"Você pode criar um novo raio como sua ação em qualquer turno até que a magia termine."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 3º nível ou superior, você pode escolher 1 criatura adicional para cada nível de magia acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"spellAttack": [
+				"R"
+			]
+		}
+	]
+}

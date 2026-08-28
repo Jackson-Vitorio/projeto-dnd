@@ -1,0 +1,95 @@
+{
+	"spell": [
+		{
+			"name": "Gate Seal",
+			"source": "SatO",
+			"page": 12,
+			"level": 4,
+			"school": "Um",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma chave de portal quebrada, que o feitiço consome",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 24
+					}
+				}
+			],
+			"entries": [
+				"Você fortalece a estrutura dos aviões em um cubo de 9 metros que você pode ver dentro do alcance. Dentro dessa área, os portais fecham e não podem ser abertos durante esse período. Feitiços e outros efeitos que permitem viagens planas ou portais abertos, como {@spell gate} ou {@spell plane shift}, falham se usados ​​para entrar ou sair da área. O cubo está parado."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 6º nível ou superior, a magia dura até ser dissipada."
+					]
+				}
+			],
+			"miscTags": [
+				"SGT"
+			]
+		},
+		{
+			"name": "Warp Sense",
+			"source": "SatO",
+			"page": 12,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma folha de navalha"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Durante esse período, você sente a presença de portais, mesmo os inativos, a até 9 metros de você.",
+				"Se você detectar um portal dessa forma, poderá usar sua ação para estudá-lo. Faça um teste de habilidade {@dc 15} usando sua habilidade de conjuração. Com um teste bem sucedido, você descobre o plano de destino do portal e qual chave do portal ele requer, então a magia termina. Se falhar no teste, você não aprende nada e não pode estudar aquele portal novamente usando esta magia até lançá-la novamente.",
+				"A magia pode penetrar a maioria das barreiras, mas é bloqueada por 30 centímetros de pedra, 2,5 centímetros de metal comum, uma folha fina de chumbo ou 90 centímetros de madeira ou terra."
+			]
+		}
+	]
+}

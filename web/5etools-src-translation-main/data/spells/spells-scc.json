@@ -1,0 +1,229 @@
+{
+	"spell": [
+		{
+			"name": "Borrowed Knowledge",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um livro que vale pelo menos 25 PO",
+					"cost": 2500
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você recorre ao conhecimento de espíritos do passado. Escolha uma habilidade na qual você não tenha proficiência. Durante a duração da magia, você terá proficiência na perícia escolhida. A magia termina mais cedo se você lançá-la novamente."
+			]
+		},
+		{
+			"name": "Kinetic Jaunt",
+			"source": "SCC",
+			"page": 37,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "bonus"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você fortalece magicamente seu movimento com passos de dança, proporcionando os seguintes benefícios durante o período.",
+				{
+					"type": "list",
+					"items": [
+						"Sua velocidade de caminhada aumenta em 3 metros.",
+						"Você não provoca ataques de oportunidade.",
+						"You can move through the space of another creature, and it doesn't count as {@quickref difficult terrain||3}. If you end your turn in another creature's space, you are shunted to the last unoccupied space you occupied, and you take {@damage 1d8} force damage."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			]
+		},
+		{
+			"name": "Silvery Barbs",
+			"source": "SCC",
+			"page": 38,
+			"level": 1,
+			"school": "E",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "que você escolhe quando uma criatura que você pode ver a até 18 metros de você é bem-sucedida em uma jogada de ataque, um teste de habilidade ou um teste de resistência"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você distrai magicamente a criatura desencadeadora e transforma sua incerteza momentânea em encorajamento para outra criatura. A criatura desencadeadora deve rolar novamente o {@dice d20} e usar o lançamento inferior.",
+				"Você pode então escolher uma criatura diferente que possa ver dentro do alcance (você pode escolher você mesmo). A criatura escolhida tem vantagem na próxima jogada de ataque, teste de habilidade ou teste de resistência que fizer dentro de 1 minuto. Uma criatura só pode ser fortalecida por um uso desta magia por vez."
+			],
+			"miscTags": [
+				"ADV",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Vortex Warp",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você magicamente gira o espaço em torno de outra criatura que você pode ver dentro do alcance. O alvo deve ser bem sucedido em um teste de resistência de Constituição (o alvo pode escolher falhar), ou o alvo será teletransportado para um espaço desocupado de sua escolha que você possa ver dentro do alcance. O espaço escolhido deve estar em uma superfície ou em um líquido que possa suportar o alvo sem que o alvo precise se apertar."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 3º nível ou superior, o alcance da magia aumenta em 9 metros para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT",
+				"TP"
+			]
+		},
+		{
+			"name": "Wither and Bloom",
+			"source": "SCC",
+			"page": 38,
+			"level": 2,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma videira murcha torcida em um laço"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você invoca a morte e a vida em uma esfera de 3 metros de raio centrada em um ponto dentro do alcance. Cada criatura de sua escolha naquela área deve fazer um teste de resistência de Constituição, sofrendo {@damage 2d6} de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. A vegetação não-mágica naquela área murcha.",
+				"Além disso, uma criatura de sua escolha naquela área pode gastar e rolar um de seus Dados de Vida não gastos e recuperar um número de pontos de vida igual ao resultado da jogada mais seu modificador de habilidade de conjuração."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 3º nível ou superior, o dano aumenta em {@scaledamage 2d6|2-9|1d6} para cada espaço acima do 2º, e o número de Dados de Vida que podem ser gastos e adicionados à jogada de cura aumenta em um para cada espaço acima do 2º."
+					]
+				}
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"HL"
+			]
+		}
+	]
+}

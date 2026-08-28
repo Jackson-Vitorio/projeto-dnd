@@ -1,0 +1,1112 @@
+{
+	"object": [
+		{
+			"name": "Ballista",
+			"source": "DMG",
+			"page": 255,
+			"reprintedAs": [
+				"Ballista|XDMG"
+			],
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 50,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Uma balista é uma besta enorme que dispara flechas pesadas. Antes de poder ser disparado, ele deve ser carregado e apontado. É necessária uma ação para carregar a arma, uma ação para mirá-la e uma ação para dispará-la."
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Bolt",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"{@hit +6} para acertar, alcance 120/480 pés, um alvo."
+							],
+							"hitEntries": [
+								"16 ({@damage 3d10}) de dano perfurante."
+							]
+						}
+					]
+				}
+			],
+			"tokenCredit": "warmtail",
+			"hasToken": true
+		},
+		{
+			"name": "Ballista",
+			"source": "XDMG",
+			"page": 96,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 50,
+			"entries": [
+				"Uma Balista é uma besta enorme que dispara flechas pesadas. Carregar uma Balista requer a ação {@action Utilize|XPHB}, e mirá-la requer outra ação {@action Utilize|XPHB}. Então, um membro da tripulação pode realizar a ação Balista Bolt."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Ballista Bolt (Requires Load and Aim)",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance 120/480 pés. {@h}16 ({@damage 3d10}) Dano perfurante."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Boilerdrak",
+			"source": "DSotDQ",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Este dispositivo do tamanho de uma carroça foi projetado para se parecer aproximadamente com um dragão. Antes de poder ser usado, o boilerdrak deve estar aceso e apontado. É necessária 1 ação para acender a arma, 1 ação para mirar e 1 ação para dispará-la. Ao usar sua ação para dispará-lo, role um {@dice d20}. Se você obtiver um 2 ou mais, use a ação Chamas. Se você obtiver 1, use a ação Explosão."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Flames",
+					"entries": [
+						"O caldeiradrak expele chamas em um cone de 18 metros. Cada criatura naquela área deve realizar um teste de resistência de Destreza de {@dc 15}, sofrendo 27 ({@dice 5d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Explosion",
+					"entries": [
+						"O boilerdrak explode em uma esfera de 9 metros de raio e é destruído. Cada criatura naquela área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 27 ({@dice 5d10}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cannon",
+			"source": "DMG",
+			"page": 255,
+			"reprintedAs": [
+				"Cannon|XDMG"
+			],
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 75,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Um canhão usa pólvora para lançar pesadas bolas de ferro fundido no ar em velocidades destrutivas. Em uma campanha sem pólvora, um canhão pode ser um dispositivo arcano construído por gnomos inteligentes ou engenheiros bruxos.",
+				"Um canhão geralmente é apoiado em uma estrutura de madeira com rodas. Antes de poder ser disparado, o canhão deve ser carregado e apontado. É necessária uma ação para carregar a arma, uma ação para mirá-la e uma ação para dispará-la."
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Cannon Ball",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"{@hit +6} para acertar, alcance 600/2.400 pés, um alvo."
+							],
+							"hitEntries": [
+								"44 ({@damage 8d10}) de dano por concussão."
+							]
+						}
+					]
+				}
+			],
+			"tokenCredit": "Hitokiri",
+			"hasToken": true
+		},
+		{
+			"name": "Cannon",
+			"source": "XDMG",
+			"page": 96,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 75,
+			"entries": [
+				"Um canhão usa pólvora ou poder arcano para impulsionar pesadas bolas de ferro em velocidades destrutivas. Um canhão geralmente é preso a uma estrutura de madeira com rodas. Carregar um canhão requer a ação {@action Utilize|XPHB}, e apontá-lo requer outra ação {@action Utilize|XPHB}. Então um membro da tripulação pode realizar a ação Bala de Canhão."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Cannonball (Requires Load and Aim)",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance 600/2.400 pés. {@h}44 ({@damage 8d10}) Dano de concussão."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Captain A-Hole",
+			"isNpc": true,
+			"source": "RMBRE",
+			"page": 21,
+			"size": [
+				"L"
+			],
+			"objectType": "Você",
+			"ac": 17,
+			"hp": 50,
+			"speed": 0,
+			"str": 14,
+			"dex": 10,
+			"int": 3,
+			"wis": 3,
+			"cha": 1,
+			"senses": [
+				"blindsight 30 ft. (blind beyond this radius)"
+			],
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Cannon",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"{@hit +5} para acertar, alcance de 30 pés, um alvo."
+							],
+							"hitEntries": [
+								"3 ({@damage 1d6}) de dano por concussão."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eldritch Cannon, Flamethrower",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "Você",
+			"ac": 18,
+			"hp": {
+				"special": "equal to five times your artificer level"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"stunned",
+				"unconscious"
+			],
+			"entries": [
+				"recurso de subclasse {@note Created by the {@subclassFeature Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3}.}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Flamethrower",
+					"entries": [
+						"O canhão exala fogo em um cone adjacente de 4,5 metros que você designar. Cada criatura naquela área deve fazer um teste de resistência de Destreza contra sua CD de salvamento de feitiço, sofrendo {@damage 2d8} de dano de fogo se falhar na resistência ou metade do dano se obtiver sucesso. O fogo acende quaisquer objetos inflamáveis ​​na área que não estejam sendo usados ​​ou carregados."
+					]
+				}
+			],
+			"token": {
+				"name": "Eldritch Cannon",
+				"source": "TCE"
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eldritch Cannon, Force Ballista",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "Você",
+			"ac": 18,
+			"hp": {
+				"special": "equal to five times your artificer level"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"stunned",
+				"unconscious"
+			],
+			"entries": [
+				"Recurso de subclasse {@note Created by the {@subclassFeature Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3}.}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Force Ballista",
+					"entries": [
+						"Faça um ataque mágico à distância, originado do canhão, em uma criatura ou objeto a até 36 metros dele. Ao acertar, o alvo sofre {@damage 2d8} de dano de força e, se o alvo for uma criatura, ele é empurrado até 1,5 metro de distância do canhão."
+					]
+				}
+			],
+			"token": {
+				"name": "Eldritch Cannon",
+				"source": "TCE"
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Eldritch Cannon, Protector",
+			"source": "TCE",
+			"page": 17,
+			"size": [
+				"T",
+				"S"
+			],
+			"objectType": "Você",
+			"ac": 18,
+			"hp": {
+				"special": "equal to five times your artificer level"
+			},
+			"str": 10,
+			"dex": 10,
+			"con": 10,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"incapacitated",
+				"invisible",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"stunned",
+				"unconscious"
+			],
+			"entries": [
+				"recurso de subclasse {@note Created by the {@subclassFeature Eldritch Cannon|Artificer|TCE|Artillerist|TCE|3}.}"
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Protector",
+					"entries": [
+						"O canhão emite uma explosão de energia positiva que concede a si mesmo e a cada criatura de sua escolha a até 3 metros dele um número de pontos de vida temporários igual a {@damage 1d8} + seu modificador de Inteligência (mínimo de +1)."
+					]
+				}
+			],
+			"token": {
+				"name": "Eldritch Cannon",
+				"source": "TCE"
+			},
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flamethrower Coach",
+			"source": "XDMG",
+			"page": 96,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 100,
+			"entries": [
+				"Alimentada por magia, esta carruagem de ferro tem uma torre lança-chamas montada em cima dela.",
+				"A carruagem pode acomodar até duas criaturas Médias. Uma escotilha de ferro na parte inferior do veículo dá acesso. Fendas estreitas na frente, nas laterais e na traseira do ônibus permitem que seus ocupantes vejam o exterior. Uma criatura na carruagem tem {@table Cover|XPHB|Three-Quarters Cover} contra ataques e outros efeitos originados fora dela.",
+				"O ônibus foi projetado para uma tripulação de duas pessoas: um motorista e um artilheiro. O motorista pode realizar a ação {@action Utilize|XPHB} para mover e virar o ônibus, que tem velocidade de 30 pés, usando alavancas e pedais internos. O artilheiro pode usar a ação Lança-chamas para mirar e disparar."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Flamethrower",
+					"entries": [
+						"{@actSave dex} {@dc 15}, cada criatura em um {@variantrule Line [Area of Effect]|XPHB|Line} de 18 metros de comprimento e 1,5 metro de largura. {@actSaveFail} 14 ({@damage 4d6}) Dano de fogo e a criatura começa a queimar. {@actSaveSuccess} Apenas metade do dano."
+					]
+				}
+			],
+			"tokenCredit": "Ruane Manning",
+			"hasToken": true
+		},
+		{
+			"name": "Generic Object",
+			"source": "DMG",
+			"page": 246,
+			"srd": true,
+			"size": [
+				"V"
+			],
+			"objectType": "GER",
+			"ac": {
+				"special": "Varies (see below)"
+			},
+			"hp": {
+				"special": "Varies (see below)"
+			},
+			"immune": [
+				{
+					"special": "Varies (see below)"
+				}
+			],
+			"entries": [
+				"Quando os personagens precisam serrar cordas, quebrar uma janela ou quebrar o caixão de um vampiro, a única regra rígida e rápida é esta: com tempo suficiente e as ferramentas certas, os personagens podem destruir qualquer objeto destrutível. Use o bom senso ao determinar o sucesso de um personagem em danificar um objeto. Um lutador pode cortar uma seção de um muro de pedra com uma espada? Não, é provável que a espada se quebre antes da parede.",
+				"Para os fins destas regras, um objeto é um item discreto e inanimado como uma janela, porta, espada, livro, mesa, cadeira ou pedra, e não um edifício ou veículo composto de muitos outros objetos.",
+				{
+					"type": "entries",
+					"name": "Statistics for Objects",
+					"entries": [
+						"Quando o tempo é um fator importante, você pode atribuir uma classe de armadura e pontos de vida a um objeto destrutível. Você também pode conceder imunidades, resistências e vulnerabilidades a tipos específicos de danos.",
+						{
+							"type": "entries",
+							"name": "Armor Class",
+							"entries": [
+								"A Classe de Armadura de um objeto é uma medida de quão difícil é causar dano ao objeto ao acertá-lo (porque o objeto não tem chance de se esquivar). A tabela Object Armor Class fornece valores AC sugeridos para várias substâncias.",
+								{
+									"type": "table",
+									"caption": "Classe de Armadura de Objeto",
+									"colLabels": [
+										"Substância",
+										"AC"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"Pano, papel, corda",
+											"11"
+										],
+										[
+											"Cristal, vidro, gelo",
+											"13"
+										],
+										[
+											"Madeira, osso",
+											"15"
+										],
+										[
+											"Pedra",
+											"17"
+										],
+										[
+											"Ferro, aço",
+											"19"
+										],
+										[
+											"Mitral",
+											"21"
+										],
+										[
+											"Adamantino",
+											"23"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hit Points",
+							"entries": [
+								"Os pontos de vida de um objeto medem quanto dano ele pode sofrer antes de perder sua integridade estrutural. Objetos resilientes têm mais pontos de vida do que objetos frágeis. Objetos grandes também tendem a ter mais pontos de vida do que os pequenos, a menos que quebrar uma pequena parte do objeto seja tão eficaz quanto quebrar tudo. A tabela Object Hit Points fornece sugestões de pontos de vida para objetos frágeis e resilientes que sejam Grandes ou menores.",
+								{
+									"type": "table",
+									"caption": "Pontos de impacto do objeto",
+									"colLabels": [
+										"Tamanho",
+										"Frágil",
+										"Resiliente"
+									],
+									"colStyles": [
+										"col-6",
+										"col-6"
+									],
+									"rows": [
+										[
+											"Minúsculo (garrafa, fechadura)",
+											"2 (1d4)",
+											"5 (2d4)"
+										],
+										[
+											"Pequeno (peito, alaúde)",
+											"3 (1d6)",
+											"10 (3d6)"
+										],
+										[
+											"Médio (barril, lustre)",
+											"4 (1d8)",
+											"18 (4d8)"
+										],
+										[
+											"Grande (carrinho, janela de 10 pés por 10 pés)",
+											"5 (1d10)",
+											"27 (5d10)"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Huge and Gargantuan Objects",
+							"entries": [
+								"Armas normais são de pouca utilidade contra muitos objetos enormes e gigantescos, como uma estátua colossal, uma imponente coluna de pedra ou uma pedra enorme. Dito isto, uma tocha pode queimar uma tapeçaria enorme, e um feitiço de terremoto pode reduzir um colosso a escombros. Você pode rastrear os pontos de vida de um objeto Enorme ou Imenso, se quiser, ou pode simplesmente decidir por quanto tempo o objeto pode resistir a qualquer arma ou força que esteja agindo contra ele. Se você rastrear pontos de vida do objeto, divida-o em seções grandes ou menores e rastreie os pontos de vida de cada seção separadamente. Destruir uma dessas seções poderia arruinar todo o objeto. Por exemplo, uma estátua gigantesca de um humano pode tombar quando uma de suas pernas grandes for reduzida a 0 pontos de vida."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Objects and Damage Types",
+							"entries": [
+								"Os objetos são imunes a veneno e danos psíquicos. Você pode decidir que alguns tipos de dano são mais eficazes contra um determinado objeto ou substância do que outros. Por exemplo, dano por concussão funciona bem para quebrar coisas, mas não para cortar corda ou couro. Objetos de papel ou tecido podem ser vulneráveis ​​a incêndios e raios. Uma picareta pode lascar pedras, mas não pode cortar uma árvore com eficácia. Como sempre, use seu bom senso."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Damage Threshold",
+							"entries": [
+								"Objetos grandes, como muralhas de castelos, costumam ter resiliência extra representada por um limite de dano. Um objeto com limite de dano tem imunidade a todos os danos, a menos que sofra uma quantidade de dano de um único ataque ou efeito igual ou superior ao seu limite de dano, caso em que ele sofre dano normalmente. Qualquer dano que não atinja ou exceda o limite de dano do objeto é considerado superficial e não reduz os pontos de vida do objeto."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Gnomeflinger",
+			"source": "DSotDQ",
+			"page": 189,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"O gnomeflinger é uma catapulta projetada para lançar criaturas, em vez de projéteis, em um arco alto. O gnomeflinger foi projetado em conjunto com o {@item narycrash|DSotDQ} (veja a seção {@area \"Adventuring Gear\"|498|x}) para acelerar o transporte. O dispositivo pode conter uma criatura Média ou menor. Antes de poder ser usado, o gnomeflinger deve ser carregado e apontado. É necessária 1 ação para carregar o gnomeflinger, 1 ação para mirar e 1 ação para dispará-lo.",
+				"Ao realizar uma ação para mirar o gnomeflinger, você define a distância horizontal máxima da ação Arremessar Pessoal para 18 metros, 150 metros ou 90 metros."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Fling Personnel",
+					"entries": [
+						"O gnomeflinger catapulta uma criatura Média ou menor a pelo menos 18 metros de distância horizontalmente, com uma distância horizontal máxima de 18 metros, 45 metros ou 90 metros, dependendo da opção escolhida quando a catapulta foi apontada. Durante esta trajetória, a criatura sempre atinge uma altura de 18 metros verticalmente.",
+						"Uma criatura que colide com outra criatura ou objeto durante esta trajetória sofre 3 ({@dice 1d6}) de dano de concussão para cada 3 metros de distância do gnomeflinger que estiver."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gulthias Tree",
+			"source": "TftYP",
+			"page": 31,
+			"size": [
+				"G"
+			],
+			"objectType": "Você",
+			"ac": 10,
+			"hp": 35,
+			"immune": [
+				"necrotic",
+				"poison",
+				"psychic"
+			],
+			"resist": [
+				"piercing"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Fruit",
+					"entries": [
+						"Dois frutos mágicos (escola de evocação) amadurecem na árvore a cada ano. Cada fruta se assemelha a uma maçã, mas sai lentamente da árvore como um cisto.",
+						"Até uma semana antes do solstício de verão, cresce uma fruta vermelho rubi. Alguém que não seja um constructo e que coma um quarto ou mais dele recupera 70 pontos de vida. Além disso, qualquer {@condition blinded||blindness}, {@condition deafened||deafness} e doenças que afetam o comedor acabam.",
+						"Até uma semana antes do solstício de inverno, cresce uma fruta branca e doentia. Alguém que come um quarto ou mais sofre 70 de dano necrótico. Cada fruta tem sementes {@dice 1d4} que, se plantadas, produzem arbustos lenhosos sem folhas que se animam como queimaduras nos galhos após um ano."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Tree Thralls",
+					"entries": [
+						"Se um humanóide estiver preso ao tronco da Árvore Gulthias, nas próximas 24 horas a vítima será completamente sugada para dentro da árvore. Uma vez que a vítima é completamente absorvida pela árvore, ela se torna escrava da árvore e é expulsa ao longo de 1 hora. A Árvore Gulthias pode ter apenas quatro escravos por vez. A pele da vítima é áspera, cinza e semelhante a uma casca. Um escravo é totalmente corrompido, tornando-se neutro e mau. Tal criatura existe apenas para servir a Árvore Gulthias e aqueles que cuidam dela (como Belak). Possui todas as suas habilidades anteriores e ganha as seguintes características:",
+						{
+							"type": "entries",
+							"name": "Barkskin",
+							"entries": [
+								"A CA do escravo não pode ser inferior a 16."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tree Thrall",
+							"entries": [
+								"Se a Árvore Gulthias morrer, o servo morre 24 horas depois."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ice Troll Heart",
+			"source": "IDRotF",
+			"page": 294,
+			"size": [
+				"T"
+			],
+			"objectType": "Você",
+			"ac": 13,
+			"hp": 4,
+			"immune": [
+				"acid",
+				"bludgeoning",
+				"cold",
+				"force",
+				"lightning",
+				"necrotic",
+				"piercing",
+				"poison",
+				"psychic",
+				"radiant",
+				"slashing",
+				"thunder"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Heart Effects",
+					"entries": [
+						"O coração de um troll de gelo permanece frio mesmo após a destruição do troll. Enquanto o troll não puder se regenerar, seu coração poderá ser removido com segurança de seus restos mortais, manuseado e guardado. O coração de um troll de gelo, uma vez removido, torna-se um objeto minúsculo inofensivo. Nas próximas 24 horas, o coração terá as seguintes propriedades mágicas:",
+						{
+							"type": "list",
+							"items": [
+								"Uma criatura que come o coração ganha a habilidade de se regenerar pelas próximas 24 horas, recuperando 5 pontos de vida no início de cada um de seus turnos. Se a criatura sofrer dano de ácido ou fogo, esta característica não funciona no início do próximo turno. A criatura morre apenas se começar seu turno com 0 pontos de vida e não se regenerar.",
+								"Se enterrado sob trinta centímetros ou mais de terra, o coração derrete e invoca uma nevasca como a criada pelo feitiço {@spell control weather}. Demora 10 minutos para o coração derreter e a nevasca se formar. A nevasca dura 8 horas.",
+								"A hag or similar creature can perform a ritual that turns the heart into a magical talisman that acts like a patch of brown mold (see \"{@hazard Brown Mold}\" in the {@book Dungeon Master's Guide|DMG}). This effect lasts until the heart is destroyed.",
+								"A creature proficient with alchemist's supplies can squeeze enough residual fluid out of the heart to mix with other alchemical ingredients, creating one {@item Potion of Cold Resistance||potion of resistance (cold)}. It takes 1 hour to create this potion. "
+							]
+						}
+					]
+				}
+			],
+			"tokenCredit": "Unfor art",
+			"hasToken": true
+		},
+		{
+			"name": "Keg Launcher",
+			"source": "XDMG",
+			"page": 96,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 30,
+			"entries": [
+				"Uma catapulta de madeira montada na parte traseira lança pequenos barris de gás tóxico. Carregar um lançador de barril requer a ação {@action Utilize|XPHB}, e apontá-lo requer outra ação {@action Utilize|XPHB}. Então um membro da tripulação pode realizar a ação Barril Tóxico."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Toxic Keg (Requires Load and Aim)",
+					"entries": [
+						"{@actSave con} {@dc 15}, cada criatura em um raio de 20 pés {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centralizado em um ponto de 30 a 300 pés do lançador. {@actSaveFail} 14 ({@damage 4d6}) Dano de veneno. {@actSaveSuccess} Metade do dano."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lightning Cannon",
+			"source": "XDMG",
+			"page": 96,
+			"size": [
+				"M"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 30,
+			"entries": [
+				"Um Canhão de Relâmpago é um pequeno canhão de bronze incrustado com runas arcanas e montado em um tripé pesado. Ele lança bolas de eletricidade crepitante. Mirar um Canhão Relâmpago requer a ação {@action Utilize|XPHB}, então um membro da tripulação pode realizar a ação Bola Relâmpago."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Lightning Ball (Requires Aim)",
+					"entries": [
+						"{@atkr r} {@hit 6}, alcance 300/1.200 pés. {@h}22 ({@damage 4d10}) Dano de raio."
+					]
+				}
+			],
+			"tokenCredit": "Games Workshop",
+			"hasToken": true
+		},
+		{
+			"name": "Mangonel",
+			"source": "DMG",
+			"page": 255,
+			"reprintedAs": [
+				"Mangonel|XDMG"
+			],
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Uma manganela é um tipo de catapulta que lança projéteis pesados em um arco alto. Esta carga útil pode atingir alvos escondidos. Antes que a manganela possa ser disparada, ela deve ser carregada e apontada. São necessárias duas ações para carregar a arma, duas ações para mirá-la e uma ação para dispará-la.",
+				"Uma manganela normalmente atira uma pedra pesada, embora possa lançar outros tipos de projéteis, com efeitos diferentes."
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Mangonel Stone",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"{@hit +5} para acertar, alcance 200/800 pés (não pode atingir alvos a até 60 pés dele), um alvo."
+							],
+							"hitEntries": [
+								"27 ({@damage 5d10}) de dano por concussão."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Mangonel",
+			"source": "XDMG",
+			"page": 97,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"entries": [
+				"Uma Mangonel é uma catapulta que lança projéteis pesados ​​em um arco alto, para que possa atingir alvos atrás de paredes. Carregar uma Mangonel requer duas ações de {@action Utilize|XPHB}, e mirá-la requer mais duas ações de {@action Utilize|XPHB}. Então um membro da tripulação pode realizar a ação da Pedra Manganel."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Mangonel Stone (Requires Load and Aim)",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 200/800 pés (não pode atingir alvos a até 60 pés de si mesmo). {@h}27 ({@damage 5d10}) Dano de concussão."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ram",
+			"source": "DMG",
+			"page": 255,
+			"reprintedAs": [
+				"Ram|XDMG"
+			],
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Um aríete consiste em uma galeria móvel equipada com um tronco pesado suspenso por correntes em duas vigas do telhado.",
+				"A tora é calçada em ferro e usada para arrombar portas e barricadas.",
+				"São necessárias no mínimo quatro criaturas Médias para operar um aríete. Por causa do teto da galeria, esses operadores têm {@quickref Cover||3||total cover} contra ataques vindos de cima."
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Ram",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "PM",
+							"attackEntries": [
+								"{@hit +8} para acertar, alcance 1,5 m, um objeto."
+							],
+							"hitEntries": [
+								"16 ({@damage 3d10}) de dano por concussão."
+							]
+						}
+					]
+				}
+			],
+			"tokenCredit": "WTactics",
+			"hasToken": true
+		},
+		{
+			"name": "Ram",
+			"source": "XDMG",
+			"page": 97,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 100,
+			"entries": [
+				"Um Ram consiste em uma galeria móvel equipada com um pesado tronco suspenso por correntes em duas vigas do telhado. A tora é calçada em ferro e usada para arrombar portas e barricadas. Posicionar um Ram requer três ações {@action Utilize|XPHB}. Então um membro da tripulação pode usar a ação Ram.",
+				"O teto da galeria oferece aos operadores {@table Cover|XPHB|Total Cover} contra ataques e outros efeitos vindos de cima."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Ram (Requires Position)",
+					"entries": [
+						"{@atkr m} {@hit 8}, alcance 5 pés. {@h}16 ({@damage 3d10}) Dano de concussão."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Siege Tower",
+			"source": "DMG",
+			"page": 256,
+			"reprintedAs": [
+				"Siege Tower|XDMG"
+			],
+			"size": [
+				"G"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 200,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Uma torre de cerco é uma estrutura móvel de madeira com uma estrutura de viga e ripas nas paredes. Grandes rodas ou rolos de madeira permitem que a torre seja empurrada ou puxada por soldados ou animais de carga. Criaturas médias ou menores podem usar a torre de cerco para alcançar o topo de muralhas de até 12 metros de altura. Uma criatura na torre sofre {@quickref Cover||3||total cover} de ataques fora da torre."
+			],
+			"tokenCredit": "Roman Topchiy",
+			"hasToken": true
+		},
+		{
+			"name": "Siege Tower",
+			"source": "XDMG",
+			"page": 97,
+			"size": [
+				"G"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 200,
+			"entries": [
+				"Uma Torre de Cerco é uma estrutura móvel de madeira com uma estrutura de viga e ripas nas paredes. Grandes rodas ou rolos de madeira permitem que a torre seja empurrada ou puxada por soldados ou animais de carga. Criaturas médias ou menores podem usar a Torre de Cerco para alcançar o topo de muralhas de até 12 metros de altura. Uma criatura na torre tem {@table Cover|XPHB|Total Cover} contra ataques e outros efeitos originados fora dela."
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Spirit Blister",
+			"source": "JttRC",
+			"page": 142,
+			"size": [
+				"M"
+			],
+			"objectType": "SO",
+			"ac": 17,
+			"hp": 30,
+			"immune": [
+				"acid",
+				"necrotic",
+				"psychic"
+			],
+			"vulnerable": [
+				"fire",
+				"radiant"
+			],
+			"entries": [
+				"Se destruída, a bolha explode com um coro de suspiros distantes. Um momento depois, {@adventure a spectral figure appears|JttRC|10|Memory of Peace}."
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Suspended Cauldron",
+			"source": "DMG",
+			"page": 255,
+			"reprintedAs": [
+				"Suspended Cauldron|XDMG"
+			],
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 20,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Um caldeirão é uma panela de ferro suspensa de forma que possa ser derrubada facilmente, derramando seu conteúdo. Uma vez esvaziado, um caldeirão deve ser reabastecido - e seu conteúdo geralmente deve ser reaquecido - antes de poder ser usado novamente. São necessárias três ações para encher um caldeirão e uma ação para incliná-lo.",
+				"Caldeirões podem ser preenchidos com outros líquidos, como ácido ou {@hazard green slime}, com efeitos diferentes."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Boiling Oil",
+					"entries": [
+						"O caldeirão derrama óleo fervente em uma área de 3 metros quadrados diretamente abaixo dele. Qualquer criatura na área deve realizar um teste de resistência de Destreza {@dc 15}, sofrendo 10 ({@damage 3d6}) de dano de fogo se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"tokenCredit": "Funcom",
+			"hasToken": true
+		},
+		{
+			"name": "Suspended Cauldron",
+			"source": "XDMG",
+			"page": 97,
+			"size": [
+				"L"
+			],
+			"objectType": "SO",
+			"ac": 19,
+			"hp": 20,
+			"entries": [
+				"Uma panela de ferro é suspensa para que possa ser derrubada facilmente, derramando seu conteúdo. Depois de esvaziado, o caldeirão deve ser reabastecido antes de poder ser usado novamente. Encher o caldeirão requer três ações {@action Utilize|XPHB}. Então um membro da tripulação pode realizar a ação Derramar.",
+				"Caldeirões são normalmente preenchidos com óleo fervente, mas podem ser preenchidos com outras substâncias, como ácido ou {@hazard green slime|XDMG} (consulte \"{@book Hazards|XDMG|2|Hazards}\"), com efeitos diferentes."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Spill (Requires a Full Cauldron)",
+					"entries": [
+						"{@actSave dex} {@dc 15}, cada criatura em um quadrado de 3 metros diretamente abaixo do caldeirão. {@actSaveFail} 10 ({@damage 3d6}) Dano de fogo. {@actSaveSuccess} Metade do dano."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "The Head",
+			"isNpc": true,
+			"source": "RMBRE",
+			"page": 25,
+			"size": [
+				"L"
+			],
+			"objectType": "Você",
+			"ac": 17,
+			"hp": 50,
+			"speed": 0,
+			"str": 14,
+			"dex": 3,
+			"int": 3,
+			"wis": 3,
+			"cha": 10,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Trebuchet",
+			"source": "DMG",
+			"page": 256,
+			"reprintedAs": [
+				"Trebuchet|XDMG"
+			],
+			"size": [
+				"H"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 150,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"Um trabuco é uma catapulta poderosa que lança sua carga em um arco alto, para que possa atingir alvos protegidos.",
+				"Antes que o trabuco possa ser disparado, ele deve ser carregado e apontado. São necessárias duas ações para carregar a arma, duas ações para mirá-la e uma ação para dispará-la.",
+				"Um trabuco normalmente atira uma pedra pesada. Porém, pode lançar outros tipos de projéteis, como barris de petróleo ou esgoto, com efeitos diversos."
+			],
+			"actionEntries": [
+				{
+					"type": "actions",
+					"name": "Trebuchet Stone",
+					"entries": [
+						{
+							"type": "attack",
+							"attackType": "RW",
+							"attackEntries": [
+								"{@hit +5} para acertar, alcance 300/1.200 pés (não pode atingir alvos a até 60 pés dele), um alvo."
+							],
+							"hitEntries": [
+								"44 ({@damage 8d10}) de dano por concussão."
+							]
+						}
+					]
+				}
+			],
+			"tokenCredit": "Roman Topchiy",
+			"hasToken": true
+		},
+		{
+			"name": "Trebuchet",
+			"source": "XDMG",
+			"page": 97,
+			"size": [
+				"H"
+			],
+			"objectType": "SO",
+			"ac": 15,
+			"hp": 150,
+			"entries": [
+				"Um Trebuchet é uma catapulta que lança sua carga em um arco alto para atingir alvos atrás de paredes. Carregar um Trebuchet requer duas ações {@action Utilize|XPHB}, e mirá-lo requer mais duas ações {@action Utilize|XPHB}. Então um membro da tripulação pode realizar a ação da Pedra Trebuchet."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Trebuchet Stone (Requires Load and Aim)",
+					"entries": [
+						"{@atkr r} {@hit 5}, alcance 300/1.200 pés (não pode atingir alvos a até 60 pés de si mesmo). {@h}44 ({@damage 8d10}) Dano de concussão."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Unborn Palanquin",
+			"source": "BMT",
+			"page": 173,
+			"size": [
+				"G"
+			],
+			"objectType": "Você",
+			"ac": 20,
+			"hp": 250,
+			"speed": {
+				"walk": 50,
+				"burrow": 30
+			},
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"O Palanquim Não Nascido é um leviatã semelhante a um verme de engrenagens estridentes composto por centenas de incansáveis {@creature mezzoloth||mezzoloths}. É um veículo único que serve tanto como meio de transporte primário de {@creature Malaxxix|BMT} quanto como covil do Demônio."
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		}
+	]
+}

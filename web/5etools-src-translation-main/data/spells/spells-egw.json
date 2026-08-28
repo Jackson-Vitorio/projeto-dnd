@@ -1,0 +1,845 @@
+{
+	"spell": [
+		{
+			"name": "Dark Star",
+			"source": "EGW",
+			"page": 186,
+			"level": 8,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 150
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um fragmento de ônix e uma gota de sangue do lançador, ambos consumidos pelo feitiço",
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Esta magia cria uma esfera centrada em um ponto que você escolher dentro do alcance. A esfera pode ter um raio de até 12 metros. A área dentro desta esfera está repleta de escuridão mágica e força gravitacional esmagadora.",
+				"Durante a duração, a área do feitiço é {@quickref difficult terrain||3}. Uma criatura com visão no escuro não pode ver através da escuridão mágica, e a luz não-mágica não pode iluminá-la. Nenhum som pode ser criado ou passar pela área. Qualquer criatura ou objeto inteiramente dentro da esfera é imune a dano trovejante, e as criaturas são {@condition deafened} enquanto estão inteiramente dentro dela. Lançar um feitiço que inclua um componente verbal é impossível lá.",
+				"Qualquer criatura que entre na área da magia pela primeira vez em um turno ou comece seu turno lá deve realizar um teste de resistência de Constituição. A criatura sofre {@damage 8d10} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso. Uma criatura reduzida a 0 pontos de vida por este dano é desintegrada. Uma criatura desintegrada e tudo o que ela veste e carrega, exceto itens mágicos, são reduzidos a uma pilha de pó cinza e fino."
+			],
+			"damageInflict": [
+				"força"
+			],
+			"conditionInflict": [
+				"deafened"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"DFT",
+				"OBJ"
+			],
+			"areaTags": [
+				"S"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Fortune's Favor",
+			"source": "EGW",
+			"page": 186,
+			"level": 2,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma pérola branca valendo pelo menos 100 po, que o feitiço consome",
+					"cost": 10000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você concede sorte latente a si mesmo ou a uma criatura voluntária que você possa ver dentro do alcance. Quando a criatura escolhida faz uma jogada de ataque, um teste de habilidade ou um teste de resistência antes do feitiço terminar, ela pode descartar esse feitiço para lançar um {@dice d20} adicional e escolher qual dos {@dice d20}s usar. Alternativamente, quando uma jogada de ataque é feita contra a criatura escolhida, ela pode descartar este feitiço em si mesma para lançar um {@dice d20} e escolher qual dos {@dice d20}s usar, aquele que ele rolou ou aquele que o atacante rolou.",
+				"Se o lançamento original de {@dice d20} tiver vantagem ou desvantagem, a criatura rola o {@dice d20} adicional após a vantagem ou desvantagem ter sido aplicada ao lançamento original."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 3º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 2º."
+					]
+				}
+			],
+			"miscTags": [
+				"SCT",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gift of Alacrity",
+			"source": "EGW",
+			"page": 186,
+			"level": 1,
+			"school": "D",
+			"time": [
+				{
+					"number": 1,
+					"unit": "minute"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 8
+					}
+				}
+			],
+			"entries": [
+				"Você toca uma criatura voluntária. Durante esse período, o alvo pode adicionar {@dice 1d8} às suas jogadas de iniciativa."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Gravity Fissure",
+			"source": "EGW",
+			"page": 187,
+			"level": 6,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "line",
+				"distance": {
+					"type": "feet",
+					"amount": 100
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um punhado de limalha de ferro"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você manifesta uma ravina de energia gravitacional em uma linha originária de você que tem 30 metros de comprimento e 1,5 metro de largura. Cada criatura naquela linha deve fazer um teste de resistência de Constituição, sofrendo {@damage 8d8} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"Cada criatura dentro de 3 metros da linha, mas fora dela, deve ser bem sucedida em um teste de resistência de Constituição ou sofrerá {@damage 8d8} de dano de força e será puxada em direção à linha até que a criatura esteja em sua área."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 7º nível ou superior, o dano aumenta em {@scaledamage 8d8|6-9|1d8} para cada nível do espaço acima do 6º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"areaTags": [
+				"eu"
+			]
+		},
+		{
+			"name": "Gravity Sinkhole",
+			"source": "EGW",
+			"page": 187,
+			"level": 4,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um mármore preto"
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Uma esfera de força esmagadora com 6 metros de raio se forma em um ponto que você pode ver dentro do alcance e puxa as criaturas ali. Cada criatura na esfera deve realizar um teste de resistência de Constituição. Se falhar, a criatura sofre {@damage 5d10} de dano de força e é puxada em linha reta em direção ao centro da esfera, terminando em um espaço desocupado o mais próximo possível do centro (mesmo que esse espaço esteja no ar). Se obtiver sucesso, a criatura sofre metade do dano e não é puxada."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 5º nível ou superior, o dano aumenta em {@scaledamage 5d10|4-9|1d10} para cada nível do espaço acima do 4º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Immovable Object",
+			"source": "EGW",
+			"page": 187,
+			"level": 2,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "pó de ouro valendo pelo menos 25 po, que o feitiço consome",
+					"cost": 2500,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você toca um objeto que não pesa mais do que 4,5 quilos e faz com que ele fique magicamente fixado no lugar. Você e as criaturas que você designou ao lançar esta mágica podem mover o objeto normalmente. Você também pode definir uma senha que, quando falada a até 1,5 metro do objeto, suprime esse feitiço por 1 minuto.",
+				"Se o objeto estiver fixo no ar, ele pode suportar até 4.000 libras de peso. Mais peso faz com que o objeto caia. Caso contrário, uma criatura pode usar uma ação para fazer um teste de Força contra sua CD para salvar feitiços. Se obtiver sucesso, a criatura pode mover o objeto até 3 metros."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Se você conjurar esta magia usando um espaço de magia de 4º ou 5º nível, a CD para mover o objeto aumenta em 5, ele pode carregar até 8.000 libras de peso e a duração aumenta para 24 horas. Se você conjurar esta magia usando um espaço de magia de 6º nível ou superior, a CD para mover o objeto aumenta em 10, ele pode carregar até 20.000 libras de peso e o efeito é permanente até ser dissipado."
+					]
+				}
+			],
+			"abilityCheck": [
+				"força"
+			],
+			"miscTags": [
+				"OBJ",
+				"PRM"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Magnify Gravity",
+			"source": "EGW",
+			"page": 188,
+			"level": 1,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"A gravidade em uma esfera de 3 metros de raio centrada em um ponto que você pode ver dentro do alcance aumenta por um momento. Cada criatura na esfera no turno em que você conjurou a mágica deve realizar um teste de resistência de Constituição. Se falhar na resistência, uma criatura sofre {@damage 2d8} de dano de força e sua velocidade é reduzida pela metade até o final do próximo turno. Se obtiver sucesso, a criatura sofre metade do dano e não sofre redução em seu deslocamento.",
+				"Até o início do seu próximo turno, qualquer objeto que não esteja sendo usado ou carregado na esfera requer um teste bem-sucedido de Força contra sua CD de resistência de magia para ser pego ou movido."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 2º nível ou superior, o dano aumenta em {@scaledamage 2d8|1-9|1d8} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Pulse Wave",
+			"source": "EGW",
+			"page": 188,
+			"level": 3,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você cria uma pressão intensa, libera-a em um cone de 9 metros e decide se a pressão puxa ou empurra criaturas e objetos. Cada criatura naquele cone deve realizar um teste de resistência de Constituição. Uma criatura sofre {@damage 6d6} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso. E toda criatura que falhar no teste será puxada 4,5 metros em sua direção ou empurrada 4,5 metros para longe de você, dependendo da escolha que você fez para a magia.",
+				"Além disso, objetos não protegidos que estão completamente dentro do cone também são puxados ou empurrados por 4,5 metros."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança esta magia usando um espaço de magia de 4º nível ou superior, o dano aumenta em {@scaledamage 6d6|3-9|1d6} e a distância puxada ou empurrada aumenta em 1,5 metro para cada nível do espaço acima do 3º."
+					]
+				}
+			],
+			"damageInflict": [
+				"força"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"FMV",
+				"OBJ"
+			],
+			"areaTags": [
+				"N"
+			]
+		},
+		{
+			"name": "Ravenous Void",
+			"source": "EGW",
+			"page": 188,
+			"level": 9,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 1000
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "uma pequena estrela de nove pontas feita de ferro"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você cria uma esfera de força gravitacional destrutiva com 6 metros de raio centrada em um ponto que você pode ver dentro do alcance. Durante a duração do feitiço, a esfera e qualquer espaço a até 30 metros dela são {@quickref difficult terrain||3}, e objetos não mágicos totalmente dentro da esfera são destruídos se não estiverem sendo usados ​​ou carregados.",
+				"Quando a esfera aparece e no início de cada um de seus turnos até o fim da magia, objetos não protegidos a até 30 metros da esfera são puxados em direção ao centro da esfera, terminando em um espaço desocupado o mais próximo possível do centro.",
+				"Uma criatura que comece seu turno a até 30 metros da esfera deve ser bem sucedida em um teste de resistência de Força ou será puxada diretamente para o centro da esfera, terminando em um espaço desocupado o mais próximo possível do centro. Uma criatura que entra na esfera pela primeira vez em um turno ou inicia seu turno lá sofre {@damage 5d10} de dano de força e é {@condition restrained} até que não esteja mais na esfera. Se a esfera estiver no ar, a criatura {@condition restrained} paira dentro da esfera. Uma criatura pode usar sua ação para fazer um teste de Força contra sua CD de salvamento de feitiço, encerrando esta condição {@condition restrained} em si mesma ou em outra criatura na esfera que ela pode alcançar. Uma criatura reduzida a 0 pontos de vida por esta magia é aniquilada, junto com quaisquer itens não mágicos que ela esteja vestindo ou carregando."
+			],
+			"damageInflict": [
+				"força"
+			],
+			"conditionInflict": [
+				"restrained"
+			],
+			"savingThrow": [
+				"força"
+			],
+			"abilityCheck": [
+				"força"
+			],
+			"miscTags": [
+				"OBJ",
+				"SGT"
+			],
+			"areaTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Reality Break",
+			"source": "EGW",
+			"page": 189,
+			"level": 8,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": "um prisma de cristal"
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "minute",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Você quebra as barreiras entre realidades e cronogramas, levando uma criatura à turbulência e à loucura. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou não poderá realizar reações até que a magia termine. O alvo afetado também deve rolar um {@dice d10} no início de cada um de seus turnos; o número obtido determina o que acontece com o alvo, conforme mostrado na tabela Efeitos de Quebra de Realidade.",
+				"No final de cada um de seus turnos, o alvo afetado pode repetir o teste de resistência de Sabedoria, encerrando o feitiço em si mesmo se obtiver sucesso.",
+				{
+					"type": "table",
+					"caption": "Efeitos de quebra de realidade",
+					"colLabels": [
+						"d10",
+						"Efeito"
+					],
+					"colStyles": [
+						"col-2 centro de texto",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1-2",
+							"{@b Vision of the Far Realm.} O alvo sofre {@damage 6d12} de dano psíquico e é {@condition stunned} até o final do turno."
+						],
+						[
+							"3-5",
+							"{@b Rending Rift.} O alvo deve fazer um teste de resistência de Destreza, sofrendo {@damage 8d12} de dano de força se falhar na resistência, ou metade do dano se obtiver sucesso."
+						],
+						[
+							"6-8",
+							"{@b Wormhole.} O alvo é teletransportado, junto com tudo que ele está vestindo e carregando, até 9 metros para um espaço desocupado de sua escolha que você possa ver. O alvo também sofre {@damage 10d12} de dano de força e é derrubado {@condition prone}."
+						],
+						[
+							"9-10",
+							"{@b Chill of the Dark Void.} O alvo sofre {@damage 10d12} de dano de frio e é {@condition blinded} até o final do turno."
+						]
+					]
+				}
+			],
+			"damageInflict": [
+				"psíquico",
+				"força",
+				"frio"
+			],
+			"conditionInflict": [
+				"stunned",
+				"prone",
+				"blinded"
+			],
+			"savingThrow": [
+				"sabedoria",
+				"destreza"
+			],
+			"miscTags": [
+				"RO",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Sapping Sting",
+			"source": "EGW",
+			"page": 189,
+			"level": 0,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 30
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você suga a vitalidade de uma criatura que você pode ver ao alcance. O alvo deve ter sucesso em um teste de resistência de Constituição ou sofrerá {@damage 1d4} de dano necrótico e cairá {@condition prone}.",
+				"O dano deste feitiço aumenta em {@damage 1d4} quando você atinge o 5º nível ({@damage 2d4}), 11º nível ({@damage 3d4}) e 17º nível ({@damage 4d4})."
+			],
+			"scalingLevelDice": {
+				"label": "dano necrótico",
+				"scaling": {
+					"1": "1d4",
+					"5": "2d4",
+					"11": "3d4",
+					"17": "4d4"
+				}
+			},
+			"damageInflict": [
+				"necrótico"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SCL",
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Temporal Shunt",
+			"source": "EGW",
+			"page": 189,
+			"level": 5,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "reaction",
+					"condition": "tomada quando uma criatura que você pode ver faz uma jogada de ataque ou começa a lançar um feitiço"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 120
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "round",
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"Você tem como alvo a criatura desencadeadora, que deve ser bem sucedida em um teste de resistência de Sabedoria ou desaparecerá, sendo lançada para outro ponto no tempo e fazendo com que o ataque falhe ou a magia seja desperdiçada. No início do próximo turno, o alvo reaparece onde estava ou no espaço desocupado mais próximo. O alvo não se lembra de você ter lançado o feitiço ou de ter sido afetado por ele."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você conjura esta magia usando um espaço de magia de 6º nível ou superior, você pode escolher uma criatura adicional para cada nível do espaço acima do 5º. Todos os alvos devem estar a até 30 pés um do outro."
+					]
+				}
+			],
+			"savingThrow": [
+				"sabedoria"
+			],
+			"miscTags": [
+				"SCT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Tether Essence",
+			"source": "EGW",
+			"page": 189,
+			"level": 7,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 60
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um carretel de cordão de platina no valor de pelo menos 250 po, que o feitiço consome",
+					"cost": 25000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"entries": [
+				"Duas criaturas que você possa ver dentro do alcance devem fazer um teste de resistência de Constituição, com desvantagem se estiverem a até 9 metros uma da outra. Qualquer criatura pode falhar voluntariamente no salvamento. Se qualquer um dos testes for bem-sucedido, o feitiço não terá efeito. Se ambos os testes falharem, as criaturas ficarão magicamente ligadas durante o período, independentemente da distância entre elas. Quando o dano é causado a um deles, o mesmo dano é causado ao outro. Se os pontos de vida forem restaurados para um deles, o mesmo número de pontos de vida será restaurado para o outro. Se qualquer uma das criaturas amarradas for reduzida a 0 pontos de vida, a magia termina em ambas. Se a magia terminar em uma criatura, ela terminará em ambas."
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"MT"
+			]
+		},
+		{
+			"name": "Time Ravage",
+			"source": "EGW",
+			"page": 189,
+			"level": 9,
+			"school": "N",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "feet",
+					"amount": 90
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "uma ampulheta cheia de pó de diamante valendo pelo menos 5.000 po, que o feitiço consome",
+					"cost": 500000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Você tem como alvo uma criatura que você pode ver dentro do alcance, submetendo sua forma física à devastação do envelhecimento rápido. O alvo deve fazer um teste de resistência de Constituição, sofrendo {@damage 10d12} de dano necrótico se falhar na resistência, ou metade do dano se obtiver sucesso. Se o salvamento falhar, o alvo também envelhece até o ponto em que lhe restam apenas 30 dias antes de morrer de velhice. Neste estado envelhecido, o alvo tem desvantagem em jogadas de ataque, testes de habilidade e testes de resistência, e sua velocidade de caminhada é reduzida pela metade. Somente o feitiço {@spell wish} ou o feitiço {@spell greater restoration} lançado com um espaço de feitiço de 9º nível pode encerrar esses efeitos e restaurar o alvo à sua idade anterior."
+			],
+			"damageInflict": [
+				"necrótico"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"miscTags": [
+				"SGT"
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Wristpocket",
+			"source": "EGW",
+			"page": 190,
+			"level": 2,
+			"school": "C",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "self"
+				}
+			},
+			"components": {
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "timed",
+					"duration": {
+						"type": "hour",
+						"amount": 1
+					},
+					"concentration": true
+				}
+			],
+			"meta": {
+				"ritual": true
+			},
+			"entries": [
+				"Você balança o pulso, fazendo com que um objeto em sua mão desapareça. O objeto, que só você pode segurar e não pode pesar mais de 2,5 quilos, é transportado para um espaço extradimensional, onde permanece durante todo o tempo.",
+				"Até que a magia termine, você pode usar sua ação para invocar o objeto para sua mão livre e pode usar sua ação para devolver o objeto ao espaço extradimensional. Um objeto que ainda esteja no bolso plano quando a magia terminar aparece no seu espaço, aos seus pés."
+			],
+			"areaTags": [
+				"ST"
+			]
+		}
+	]
+}

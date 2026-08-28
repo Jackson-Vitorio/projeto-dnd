@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Gerenciador de fichas de personagem D&D 5e">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<!--
+		Content-Security-Policy (hardening).
+		- script-src 'self': somente scripts da própria origem (sem 'unsafe-inline'/
+		  'unsafe-eval'). O bloco inline de limpeza de SW foi movido para
+		  js/clear-legacy-sw.js justamente para permitir isso.
+		- style-src: 'unsafe-inline' necessário pois o app injeta style="..." no HTML.
+		- connect-src 'self': os fetch de dados (data/*.json) são todos da mesma origem.
+		- base-uri/form-action/object-src dezenados; iframes/plugins bloqueados.
+		Observação: a página envia também X-Frame-Options: DENY via servidor quando
+		servida pelo tools/serve.py, cobrindo a proteção anti-clickjacking no transporte.
+	-->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; frame-src 'none'; child-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; manifest-src 'self'">
+
+	<title>Fichas de Personagem - projeto-dnd</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/characters.css">
+
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="icon" type="image/png" sizes="256x256" href="favicon-256x256.png">
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="application-name" content="5eTools">
+	<meta name="theme-color" content="#006bc4">
+</head>
+
+<body>
+
+<div class="overlay-noise no-print"></div>
+
+<div class="viewport-wrapper">
+	<header class="hidden-xs hidden-sm page__header">
+		<div class="container ve-flex-v-baseline">
+			<h1 class="page__title no-wrap my-0" id="page__title">Fichas de Personagem</h1>
+			<p class="page__subtitle no-wrap my-0" id="page__subtitle">Crie, salve e gerencie suas fichas de personagem de D&D 5e.</p>
+		</div>
+	</header>
+
+	<nav class="container page__nav" id="navigation">
+		<ul class="nav nav-pills page__nav-inner" id="navbar"></ul>
+	</nav>
+
+	<div class="container container--main h-100 min-h-0">
+		<div class="ve-flex-col w-100 h-100 pt-2" id="characters-main">
+			<div class="ve-flex-vh-center initial-message initial-message--large w-100 h-100">Carregando...</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/clear-legacy-sw.js"></script>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="js/characters-app.js"></script>
+
+</body>
+</html>

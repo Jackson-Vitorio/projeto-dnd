@@ -1,0 +1,320 @@
+{
+	"monster": [
+		{
+			"name": "Adult Sapphire Dragon",
+			"source": "SADS",
+			"page": 1,
+			"size": [
+				"H"
+			],
+			"type": "dragon",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 207,
+				"formula": "18d12 + 60"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"fly": 80,
+				"burrow": 40
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 21,
+			"int": 18,
+			"wis": 17,
+			"cha": 18,
+			"save": {
+				"dex": "+8",
+				"con": "+10",
+				"wis": "+8",
+				"cha": "+9"
+			},
+			"skill": {
+				"history": "+9",
+				"perception": "+13",
+				"persuasion": "+14",
+				"stealth": "+8"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 23,
+			"immune": [
+				"thunder"
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"languages": [
+				"telepathy 120 ft.",
+				"Common",
+				"Draconic"
+			],
+			"cr": "15",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting (Psionics)",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The dragon's innate spellcasting ability is Intelligence (spell save {@dc 17}). It can innately cast the following spells, requiring no components:"
+					],
+					"daily": {
+						"1e": [
+							"{@spell scrying}",
+							"{@spell telekinesis}",
+							"{@spell teleportation circle}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se o dragão falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O dragão pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade."
+					]
+				},
+				{
+					"name": "Tunneler",
+					"entries": [
+						"O dragão pode escavar rocha sólida com metade de sua velocidade de escavação e pode optar por deixar um túnel de 3 metros de diâmetro em seu rastro."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dragão pode usar sua Presença Assustadora. Em seguida, ele faz dois ataques corpo a corpo, um com sua mordida e outro com suas garras."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}17 ({@damage 2d10 + 6}) de dano perfurante mais 3 ({@damage 1d6}) de dano trovejante."
+					]
+				},
+				{
+					"name": "Claws",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}19 ({@damage 3d8 + 6}) dano cortante."
+					]
+				},
+				{
+					"name": "Tail",
+					"entries": [
+						"{@atk mw} {@hit 11} para acertar, alcance 3 metros, um alvo. {@h}15 ({@damage 2d8 + 6}) dano de concussão."
+					]
+				},
+				{
+					"name": "Frightful Presence",
+					"entries": [
+						"Cada criatura, à escolha do dragão, que aproveita até 36 metros do dragão e sabe disso, deve ser bem sucedida em um teste de resistência de Sabedoria {@dc 17} ou se tornar {@condition frightened} por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesma se obtendo sucesso. Se o teste de resistência de uma criatura for bem-sucedido ou o efeito final, a criatura ficará imune à Presença Aterrorizante do Dragão pelas próximas 24 horas."
+					]
+				},
+				{
+					"name": "Debilitating Breath {@recharge 5}",
+					"entries": [
+						"O dragão exala uma pulsação de som agudo e quase inaudível em um cone de 18 metros. Cada criatura naquele cone deve realizar um teste de resistência de Constituição {@dc 18}. Se falhar na resistência, a criatura sofre 45 ({@damage 13d6}) de dano trovejante e fica {@condition incapacitated} até o final do próximo turno. Em um teste bem-sucedido, uma criatura sofre metade do dano e não é {@condition incapacitated}."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tail Attack",
+					"entries": [
+						"O dragão faz um ataque com a cauda."
+					]
+				},
+				{
+					"name": "Telekinetic Fling",
+					"entries": [
+						"O dragão escolhe um objeto pequeno ou menor que não esteja sendo usado ou carregado e que ele possa ver a até 18 metros dele, e magicamente arremessa o objeto em uma criatura que ele possa ver a até 18 metros do objeto. O alvo deve ter sucesso em um teste de resistência de Destreza {@dc 17} ou sofrerá 15 ({@damage 4d6}) de dano de concussão."
+					]
+				},
+				{
+					"name": "Teleport (Costs 2 Actions)",
+					"entries": [
+						"O dragão se teletransporta magicamente para um espaço desocupado que pode chegar a até 9 metros dele."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Sapphire Dragon",
+				"source": "SADS"
+			},
+			"variant": [
+				{
+					"type": "inset",
+					"name": "Customizing Dragons",
+					"source": "FTD",
+					"page": 33,
+					"entries": [
+						"Você pode personalizar o bloco de estatísticas de qualquer dragão para refletir o caráter único do dragão. Pequenas alterações como as abaixo são fáceis de fazer e não têm impacto no nível de desafio do dragão.",
+						{
+							"type": "entries",
+							"name": "Languages",
+							"entries": [
+								"A maioria dos dragões prefere falar Dracônico, mas aprende Comum para lidar com aliados e lacaios. Mas dada a sua alta inteligência e longa vida útil, os dragões podem facilmente aprender idiomas adicionais. Você pode adicionar idiomas ao bloco de estatísticas de um dragão."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Skills",
+							"entries": [
+								"A maioria dos dragões são proficientes nas habilidades {@skill Perception} e {@skill Stealth}, e muitos dragões têm proficiências em habilidades adicionais. Tal como acontece com os idiomas, você pode personalizar a lista de habilidades de um dragão (até mesmo dobrando seu bônus de proficiência com certas habilidades) para refletir interesses e atividades específicas. Você também pode dar proficiência em ferramentas a um dragão, especialmente se o dragão passar algum tempo na forma humanóide."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spells",
+							"entries": [
+								"{@note See the \"Variant: Dragons as Innate Spellcasters\" inset(s), below.}"
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Other Traits and Actions",
+							"entries": [
+								"Você pode emprestar características e ações de outros monstros para adicionar um sabor único a um dragão. Considere estes exemplos:",
+								{
+									"type": "list",
+									"style": "list-hang-notitle",
+									"items": [
+										{
+											"type": "item",
+											"name": "Change Shape",
+											"entries": [
+												"Você pode decidir que um dragão adquira esta ação em uma idade mais jovem do que o normal, especialmente se quiser apresentar um dragão na forma Humanóide em sua campanha:",
+												"O dragão se transforma magicamente em um humanóide ou besta que tem um nível de desafio não superior ao seu, ou retorna à sua forma verdadeira. Ele reverte à sua verdadeira forma se morrer. Qualquer equipamento que ele esteja vestindo ou carregando é absorvido ou suportado pela nova forma (a escolha do dragão).",
+												"Em uma nova forma, o dragão mantém seu alinhamento, pontos de vida, Dados de Vida, habilidade de falar, proficiências, Resistência Lendária, ações de covil e valores de Inteligência, Sabedoria e Carisma, bem como esta ação. Suas estatísticas e capacidades serão substituídas pelas da nova forma, exceto quaisquer características de classe ou ações lendárias dessa forma."
+											]
+										},
+										{
+											"type": "item",
+											"name": "Flyby",
+											"entries": [
+												"O dragão é um voador ágil, rápido para voar para fora do alcance dos inimigos.",
+												"O dragão não provoca um ataque de oportunidade quando voa para fora do alcance do inimigo."
+											]
+										},
+										{
+											"type": "item",
+											"name": "Mimicry",
+											"entries": [
+												"Personificar personagens ou seus aliados pode ser um truque divertido para um dragão astuto.",
+												"O dragão pode imitar qualquer som que tenha ouvido, incluindo vozes. Uma criatura que ouve os sons pode dizer que são imitações com um teste bem-sucedido de {@dc 12} Sabedoria ({@skill Insight})."
+											]
+										},
+										{
+											"type": "item",
+											"name": "Rejuvenation",
+											"entries": [
+												"Você pode decidir que os dragões em sua campanha, sendo uma parte essencial do Plano Material, são quase impossíveis de destruir. A essência vital de um dragão pode ser preservada no ovo do qual ele emergiu, em seu tesouro ou em um salão cavernoso no centro do mundo, assim como a essência de um lich está escondida em um filactério.",
+												"Se tiver um objeto de preservação de essência, um dragão destruído ganha um novo corpo em {@dice 1d10} dias, recuperando todos os seus pontos de vida e tornando-se ativo novamente. O novo corpo aparece a até 1,5 metro do objeto."
+											]
+										},
+										{
+											"type": "item",
+											"name": "Special Senses",
+											"entries": [
+												"A maioria dos dragões tem {@sense blindsight} e {@sense darkvision}. Você pode atualizar {@sense blindsight} para {@sense truesight} ou pode dar a um dragão uma velocidade de escavação {@sense tremorsense|MM}."
+											]
+										},
+										{
+											"type": "item",
+											"name": "Tunneler",
+											"entries": [
+												"O dragão pode escavar rocha sólida com metade de sua velocidade de escavação e deixar um túnel em seu rastro."
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"dragonAge": "adulto",
+			"traitTags": [
+				"Legendary Resistances",
+				"Spider Climb",
+				"Tunneler"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Frightful Presence",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S",
+				"T"
+			],
+			"spellcastingTags": [
+				"I",
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"incapacitated"
+			],
+			"conditionInflictLegendary": [
+				"charmed"
+			],
+			"conditionInflictSpell": [
+				"contido"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedLegendary": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

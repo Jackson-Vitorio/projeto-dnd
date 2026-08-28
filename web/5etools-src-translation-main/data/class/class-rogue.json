@@ -1,0 +1,4479 @@
+{
+	"_meta": {
+		"internalCopies": [
+			"subclass"
+		]
+	},
+	"class": [
+		{
+			"name": "Rogue",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Rogue|XPHB"
+			],
+			"edition": "classic",
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"dex",
+				"interno"
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz"
+				],
+				"weapons": [
+					"simples",
+					"{@item hand crossbow|phb|hand crossbows}",
+					"{@item longsword|phb|longswords}",
+					"{@item rapier|phb|rapiers}",
+					"{@item shortsword|phb|shortswords}"
+				],
+				"tools": [
+					"{@item thieves' tools|PHB}"
+				],
+				"toolProficiencies": [
+					{
+						"thieves' tools": true
+					}
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"athletics",
+								"deception",
+								"insight",
+								"intimidation",
+								"investigation",
+								"perception",
+								"performance",
+								"persuasion",
+								"sleight of hand",
+								"stealth"
+							],
+							"count": 4
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"default": [
+					"(a) a {@item rapier|phb} or (b) a {@item shortsword|phb}",
+					"(a) a {@item shortbow|phb} and {@item quiver|phb} of {@item arrows (20)|phb|20 arrows} or (b) a {@item shortsword|phb}",
+					"(a) a {@item burglar's pack|phb}, (b) a {@item dungeoneer's pack|phb}, or (c) an {@item explorer's pack|phb}",
+					"{@item Leather armor|phb}, two {@item dagger|phb|daggers}, and {@item thieves' tools|phb}"
+				],
+				"goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
+				"defaultData": [
+					{
+						"a": [
+							"rapier|phb"
+						],
+						"b": [
+							"shortsword|phb"
+						]
+					},
+					{
+						"a": [
+							"shortbow|phb",
+							"arrows (20)|phb"
+						],
+						"b": [
+							"shortsword|phb"
+						]
+					},
+					{
+						"a": [
+							"burglar's pack|phb"
+						],
+						"b": [
+							"dungeoneer's pack|phb"
+						],
+						"c": [
+							"explorer's pack|phb"
+						]
+					},
+					{
+						"_": [
+							"Leather armor|phb",
+							{
+								"item": "dagger|phb",
+								"quantity": 2
+							},
+							"thieves' tools|phb"
+						]
+					}
+				]
+			},
+			"multiclassing": {
+				"requirements": {
+					"dex": 13
+				},
+				"proficienciesGained": {
+					"armor": [
+						"luz"
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"acrobatics",
+									"athletics",
+									"deception",
+									"insight",
+									"intimidation",
+									"investigation",
+									"perception",
+									"performance",
+									"persuasion",
+									"sleight of hand",
+									"stealth"
+								],
+								"count": 1
+							}
+						}
+					],
+					"tools": [
+						"{@item thieves' tools|PHB}"
+					],
+					"toolProficiencies": [
+						{
+							"thieves' tools": true
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Ataque furtivo"
+					],
+					"rows": [
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 2,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 2,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 3,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 3,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 4,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 4,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 5,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 5,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 6,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 6,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 7,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 7,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 8,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 8,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 9,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 9,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 10,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 10,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Expertise|Rogue||1",
+				"Sneak Attack|Rogue||1",
+				"Thieves' Cant|Rogue||1",
+				"Cunning Action|Rogue||2",
+				{
+					"classFeature": "Roguish Archetype|Rogue||3",
+					"gainSubclassFeature": true
+				},
+				"Steady Aim|Rogue||3|TCE",
+				"Ability Score Improvement|Rogue||4",
+				"Uncanny Dodge|Rogue||5",
+				"Expertise|Rogue||6",
+				"Evasion|Rogue||7",
+				"Ability Score Improvement|Rogue||8",
+				{
+					"classFeature": "Roguish Archetype feature|Rogue||9",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Rogue||10",
+				"Reliable Talent|Rogue||11",
+				"Ability Score Improvement|Rogue||12",
+				{
+					"classFeature": "Roguish Archetype feature|Rogue||13",
+					"gainSubclassFeature": true
+				},
+				"Blindsense|Rogue||14",
+				"Slippery Mind|Rogue||15",
+				"Ability Score Improvement|Rogue||16",
+				{
+					"classFeature": "Roguish Archetype feature|Rogue||17",
+					"gainSubclassFeature": true
+				},
+				"Elusive|Rogue||18",
+				"Ability Score Improvement|Rogue||19",
+				"Stroke of Luck|Rogue||20"
+			],
+			"subclassTitle": "Arquétipo Malandro",
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Rogue",
+			"source": "XPHB",
+			"page": 128,
+			"freeRules2024": true,
+			"edition": "one",
+			"primaryAbility": [
+				{
+					"dex": true
+				}
+			],
+			"hd": {
+				"number": 1,
+				"faces": 8
+			},
+			"proficiency": [
+				"dex",
+				"interno"
+			],
+			"spellcastingAbility": "sabia",
+			"casterProgression": "cheio",
+			"featProgression": [
+				{
+					"name": "Epic Boon",
+					"category": [
+						"BE"
+					],
+					"progression": {
+						"19": 1
+					}
+				}
+			],
+			"startingProficiencies": {
+				"armor": [
+					"luz"
+				],
+				"weapons": [
+					"simples",
+					"Martial weapons that have the {@filter Finesse or Light|items|type=martial weapon|property=finesse;light} property"
+				],
+				"weaponProficiencies": [
+					{
+						"simple": true,
+						"all": {
+							"fromFilter": "tipo=arma marcial|propriedade=luz;delicadeza"
+						}
+					}
+				],
+				"tools": [
+					"{@item Thieves' Tools|XPHB}"
+				],
+				"toolProficiencies": [
+					{
+						"thieves' tools": true
+					}
+				],
+				"skills": [
+					{
+						"choose": {
+							"from": [
+								"acrobatics",
+								"athletics",
+								"deception",
+								"insight",
+								"intimidation",
+								"investigation",
+								"perception",
+								"persuasion",
+								"sleight of hand",
+								"stealth"
+							],
+							"count": 4
+						}
+					}
+				]
+			},
+			"startingEquipment": {
+				"additionalFromBackground": true,
+				"defaultData": [
+					{
+						"A": [
+							{
+								"item": "leather armor|xphb"
+							},
+							{
+								"item": "dagger|xphb",
+								"quantity": 2
+							},
+							{
+								"item": "shortsword|xphb"
+							},
+							{
+								"item": "shortbow|xphb"
+							},
+							{
+								"item": "arrows (20)|xphb"
+							},
+							{
+								"item": "quiver|xphb"
+							},
+							{
+								"item": "thieves' tools|xphb"
+							},
+							{
+								"item": "burglar's pack|xphb"
+							},
+							{
+								"value": 800
+							}
+						],
+						"B": [
+							{
+								"value": 10000
+							}
+						]
+					}
+				],
+				"entries": [
+					"{@i Choose A or B:} (A) {@item Leather Armor|XPHB}, 2 {@item Dagger|XPHB|Daggers}, {@item Shortsword|XPHB}, {@item Shortbow|XPHB}, {@item Arrows (20)|XPHB|20 Arrows}, {@item Quiver|XPHB}, {@item Thieves' Tools|XPHB}, {@item Burglar's Pack|XPHB} e 8 GP; ou (B) 100 GP"
+				]
+			},
+			"multiclassing": {
+				"proficienciesGained": {
+					"armor": [
+						"luz"
+					],
+					"tools": [
+						"{@item Thieves' Tools|XPHB}"
+					],
+					"toolProficiencies": [
+						{
+							"thieves' tools": true
+						}
+					],
+					"skills": [
+						{
+							"choose": {
+								"from": [
+									"acrobatics",
+									"athletics",
+									"deception",
+									"insight",
+									"intimidation",
+									"investigation",
+									"perception",
+									"persuasion",
+									"sleight of hand",
+									"stealth"
+								],
+								"count": 1
+							}
+						}
+					]
+				}
+			},
+			"classTableGroups": [
+				{
+					"colLabels": [
+						"Ataque furtivo"
+					],
+					"rows": [
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 1,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 2,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 2,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 3,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 3,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 4,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 4,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 5,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 5,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 6,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 6,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 7,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 7,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 8,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 8,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 9,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 9,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 10,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						],
+						[
+							{
+								"type": "dice",
+								"toRoll": [
+									{
+										"number": 10,
+										"faces": 6
+									}
+								],
+								"rollable": true
+							}
+						]
+					]
+				}
+			],
+			"classFeatures": [
+				"Expertise|Rogue|XPHB|1",
+				"Sneak Attack|Rogue|XPHB|1",
+				"Thieves' Cant|Rogue|XPHB|1",
+				"Weapon Mastery|Rogue|XPHB|1",
+				"Cunning Action|Rogue|XPHB|2",
+				{
+					"classFeature": "Rogue Subclass|Rogue|XPHB|3",
+					"gainSubclassFeature": true
+				},
+				"Steady Aim|Rogue|XPHB|3",
+				"Ability Score Improvement|Rogue|XPHB|4",
+				"Cunning Strike|Rogue|XPHB|5",
+				"Uncanny Dodge|Rogue|XPHB|5",
+				"Expertise|Rogue|XPHB|6",
+				"Evasion|Rogue|XPHB|7",
+				"Reliable Talent|Rogue|XPHB|7",
+				"Ability Score Improvement|Rogue|XPHB|8",
+				{
+					"classFeature": "Subclass Feature|Rogue|XPHB|9",
+					"gainSubclassFeature": true
+				},
+				"Ability Score Improvement|Rogue|XPHB|10",
+				"Improved Cunning Strike|Rogue|XPHB|11",
+				"Ability Score Improvement|Rogue|XPHB|12",
+				{
+					"classFeature": "Subclass Feature|Rogue|XPHB|13",
+					"gainSubclassFeature": true
+				},
+				"Devious Strikes|Rogue|XPHB|14",
+				"Slippery Mind|Rogue|XPHB|15",
+				"Ability Score Improvement|Rogue|XPHB|16",
+				{
+					"classFeature": "Subclass Feature|Rogue|XPHB|17",
+					"gainSubclassFeature": true
+				},
+				"Elusive|Rogue|XPHB|18",
+				"Epic Boon|Rogue|XPHB|19",
+				"Stroke of Luck|Rogue|XPHB|20"
+			],
+			"subclassTitle": "Subclasse Rogue",
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	],
+	"subclass": [
+		{
+			"name": "Arcane Trickster",
+			"shortName": "Arcane Trickster",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 97,
+			"reprintedAs": [
+				"Arcane Trickster|Rogue|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"spellcastingAbility": "interno",
+			"casterProgression": "1/3",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"spellsKnownProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"mão mágica#c"
+						]
+					},
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=Wizard"
+							},
+							{
+								"all": "level=1|class=Wizard"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=Wizard"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=Wizard"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=Wizard"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Arcane Trickster",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter Cantrips Known|spells|level=0|subclass=Rogue: Arcane Trickster}",
+						"{@filter Spells Known|spells|subclass=Rogue: Arcane Trickster}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							3,
+							3
+						],
+						[
+							3,
+							4
+						],
+						[
+							3,
+							4
+						],
+						[
+							3,
+							4
+						],
+						[
+							3,
+							5
+						],
+						[
+							3,
+							6
+						],
+						[
+							3,
+							6
+						],
+						[
+							4,
+							7
+						],
+						[
+							4,
+							8
+						],
+						[
+							4,
+							8
+						],
+						[
+							4,
+							9
+						],
+						[
+							4,
+							10
+						],
+						[
+							4,
+							10
+						],
+						[
+							4,
+							11
+						],
+						[
+							4,
+							11
+						],
+						[
+							4,
+							11
+						],
+						[
+							4,
+							12
+						],
+						[
+							4,
+							13
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"subclasses": [
+						{
+							"name": "Arcane Trickster",
+							"source": "PHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 1st|spells|level=1|subclass=Rogue: Arcane Trickster}",
+						"{@filter 2nd|spells|level=2|subclass=Rogue: Arcane Trickster}",
+						"{@filter 3rd|spells|level=3|subclass=Rogue: Arcane Trickster}",
+						"{@filter 4th|spells|level=4|subclass=Rogue: Arcane Trickster}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Arcane Trickster|Rogue||Arcane Trickster||3",
+				"Magical Ambush|Rogue||Arcane Trickster||9",
+				"Versatile Trickster|Rogue||Arcane Trickster||13",
+				"Spell Thief|Rogue||Arcane Trickster||17"
+			]
+		},
+		{
+			"name": "Arcane Trickster",
+			"shortName": "Arcane Trickster",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Arcane Trickster",
+				"source": "PHB",
+				"shortName": "Arcane Trickster",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Assassin",
+			"shortName": "Assassin",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 97,
+			"reprintedAs": [
+				"Assassin|Rogue|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Assassin|Rogue||Assassin||3",
+				"Infiltration Expertise|Rogue||Assassin||9",
+				"Impostor|Rogue||Assassin||13",
+				"Death Strike|Rogue||Assassin||17"
+			]
+		},
+		{
+			"name": "Assassin",
+			"shortName": "Assassin",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Assassin",
+				"source": "PHB",
+				"shortName": "Assassin",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Thief",
+			"shortName": "Thief",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"reprintedAs": [
+				"Thief|Rogue|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Thief|Rogue||Thief||3",
+				"Supreme Sneak|Rogue||Thief||9",
+				"Use Magic Device|Rogue||Thief||13",
+				"Thief's Reflexes|Rogue||Thief||17"
+			]
+		},
+		{
+			"name": "Thief",
+			"shortName": "Thief",
+			"source": "PHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Thief",
+				"source": "PHB",
+				"shortName": "Thief",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Inquisitive",
+			"shortName": "Inquisitive",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 45,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Inquisitive|Rogue||Inquisitive|XGE|3",
+				"Steady Eye|Rogue||Inquisitive|XGE|9",
+				"Unerring Eye|Rogue||Inquisitive|XGE|13",
+				"Eye for Weakness|Rogue||Inquisitive|XGE|17"
+			]
+		},
+		{
+			"name": "Inquisitive",
+			"shortName": "Inquisitive",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Inquisitive",
+				"source": "XGE",
+				"shortName": "Inquisitive",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Mastermind",
+			"shortName": "Mastermind",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 46,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 135
+				}
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Mastermind|Rogue||Mastermind|XGE|3",
+				"Insightful Manipulator|Rogue||Mastermind|XGE|9",
+				"Misdirection|Rogue||Mastermind|XGE|13",
+				"Soul of Deceit|Rogue||Mastermind|XGE|17"
+			]
+		},
+		{
+			"name": "Mastermind",
+			"shortName": "Mastermind",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Mastermind",
+				"source": "XGE",
+				"shortName": "Mastermind",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Scout",
+			"shortName": "Scout",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 47,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Scout|Rogue||Scout|XGE|3",
+				"Superior Mobility|Rogue||Scout|XGE|9",
+				"Ambush Master|Rogue||Scout|XGE|13",
+				"Sudden Strike|Rogue||Scout|XGE|17"
+			]
+		},
+		{
+			"name": "Scout",
+			"shortName": "Scout",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Scout",
+				"source": "XGE",
+				"shortName": "Scout",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Swashbuckler",
+			"shortName": "Swashbuckler",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 48,
+			"otherSources": [
+				{
+					"source": "SCAG",
+					"page": 135
+				}
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Swashbuckler|Rogue||Swashbuckler|XGE|3",
+				"Panache|Rogue||Swashbuckler|XGE|9",
+				"Elegant Maneuver|Rogue||Swashbuckler|XGE|13",
+				"Master Duelist|Rogue||Swashbuckler|XGE|17"
+			]
+		},
+		{
+			"name": "Swashbuckler",
+			"shortName": "Swashbuckler",
+			"source": "XGE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Swashbuckler",
+				"source": "XGE",
+				"shortName": "Swashbuckler",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			}
+		},
+		{
+			"name": "Phantom",
+			"shortName": "Phantom",
+			"source": "TCE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 62,
+			"edition": "classic",
+			"subclassFeatures": [
+				"Phantom|Rogue||Phantom|TCE|3",
+				"Tokens of the Departed|Rogue||Phantom|TCE|9",
+				"Ghost Walk|Rogue||Phantom|TCE|13",
+				"Death's Friend|Rogue||Phantom|TCE|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Phantom",
+			"shortName": "Phantom",
+			"source": "TCE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Phantom",
+				"source": "TCE",
+				"shortName": "Phantom",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Phantom",
+					"source": "TCE",
+					"shortName": "Phantom",
+					"className": "Rogue",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Soulknife",
+			"shortName": "Soulknife",
+			"source": "TCE",
+			"className": "Rogue",
+			"classSource": "PHB",
+			"page": 63,
+			"reprintedAs": [
+				"Soulknife|Rogue|XPHB|XPHB"
+			],
+			"edition": "classic",
+			"subclassFeatures": [
+				"Soulknife|Rogue||Soulknife|TCE|3",
+				"Soul Blades|Rogue||Soulknife|TCE|9",
+				"Psychic Veil|Rogue||Soulknife|TCE|13",
+				"Rend Mind|Rogue||Soulknife|TCE|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Soulknife",
+			"shortName": "Soulknife",
+			"source": "TCE",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"_copy": {
+				"name": "Soulknife",
+				"source": "TCE",
+				"shortName": "Soulknife",
+				"className": "Rogue",
+				"classSource": "PHB",
+				"_preserve": {
+					"page": true,
+					"otherSources": true,
+					"srd": true,
+					"basicRules": true,
+					"reprintedAs": true
+				}
+			},
+			"fluff": {
+				"_subclassFluff": {
+					"name": "Soulknife",
+					"source": "TCE",
+					"shortName": "Soulknife",
+					"className": "Rogue",
+					"classSource": "PHB"
+				}
+			}
+		},
+		{
+			"name": "Arcane Trickster",
+			"shortName": "Arcane Trickster",
+			"source": "XPHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"page": 132,
+			"edition": "one",
+			"spellcastingAbility": "interno",
+			"casterProgression": "1/3",
+			"preparedSpellsProgression": [
+				0,
+				0,
+				3,
+				4,
+				4,
+				4,
+				5,
+				6,
+				6,
+				7,
+				8,
+				8,
+				9,
+				10,
+				10,
+				11,
+				11,
+				11,
+				12,
+				13
+			],
+			"preparedSpellsChange": "nível",
+			"cantripProgression": [
+				0,
+				0,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3,
+				3
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"3": [
+							"mage hand|xphb#c"
+						]
+					},
+					"expanded": {
+						"3": [
+							{
+								"all": "level=0|class=Wizard"
+							},
+							{
+								"all": "level=1|class=Wizard"
+							}
+						],
+						"7": [
+							{
+								"all": "level=2|class=Wizard"
+							}
+						],
+						"13": [
+							{
+								"all": "level=3|class=Wizard"
+							}
+						],
+						"19": [
+							{
+								"all": "level=4|class=Wizard"
+							}
+						]
+					}
+				}
+			],
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Arcane Trickster",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter Prepared Spells|spells|subclass=Rogue: Arcane Trickster}"
+					],
+					"rows": [
+						[
+							0
+						],
+						[
+							0
+						],
+						[
+							3
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							4
+						],
+						[
+							5
+						],
+						[
+							6
+						],
+						[
+							6
+						],
+						[
+							7
+						],
+						[
+							8
+						],
+						[
+							8
+						],
+						[
+							9
+						],
+						[
+							10
+						],
+						[
+							10
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							11
+						],
+						[
+							12
+						],
+						[
+							13
+						]
+					]
+				},
+				{
+					"title": "Espaços de Feitiço por Nível de Feitiço",
+					"subclasses": [
+						{
+							"name": "Arcane Trickster",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@filter 1st|spells|level=1|subclass=Rogue: Arcane Trickster}",
+						"{@filter 2nd|spells|level=2|subclass=Rogue: Arcane Trickster}",
+						"{@filter 3rd|spells|level=3|subclass=Rogue: Arcane Trickster}",
+						"{@filter 4th|spells|level=4|subclass=Rogue: Arcane Trickster}"
+					],
+					"rowsSpellProgression": [
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							0,
+							0,
+							0,
+							0
+						],
+						[
+							2,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							3,
+							0,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							2,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							0,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							2,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							0
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						],
+						[
+							4,
+							3,
+							3,
+							1
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Arcane Trickster|Rogue|XPHB|Arcane Trickster|XPHB|3",
+				"Magical Ambush|Rogue|XPHB|Arcane Trickster|XPHB|9",
+				"Versatile Trickster|Rogue|XPHB|Arcane Trickster|XPHB|13",
+				"Spell Thief|Rogue|XPHB|Arcane Trickster|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Assassin",
+			"shortName": "Assassin",
+			"source": "XPHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"page": 134,
+			"edition": "one",
+			"subclassFeatures": [
+				"Assassin|Rogue|XPHB|Assassin|XPHB|3",
+				"Infiltration Expertise|Rogue|XPHB|Assassin|XPHB|9",
+				"Envenom Weapons|Rogue|XPHB|Assassin|XPHB|13",
+				"Death Strike|Rogue|XPHB|Assassin|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Soulknife",
+			"shortName": "Soulknife",
+			"source": "XPHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"page": 135,
+			"edition": "one",
+			"subclassTableGroups": [
+				{
+					"subclasses": [
+						{
+							"name": "Soulknife",
+							"source": "XPHB"
+						}
+					],
+					"colLabels": [
+						"{@tip Die Size|Soulknife Energy Die Size}",
+						"{@tip Number|Soulknife Energy Die Number}"
+					],
+					"rows": [
+						[
+							0,
+							0
+						],
+						[
+							0,
+							0
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D6}",
+							4
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							6
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D8}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							8
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D10}",
+							10
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						],
+						[
+							"{@dice D12}",
+							12
+						]
+					]
+				}
+			],
+			"subclassFeatures": [
+				"Soulknife|Rogue|XPHB|Soulknife|XPHB|3",
+				"Soul Blades|Rogue|XPHB|Soulknife |XPHB|9",
+				"Psychic Veil|Rogue|XPHB|Soulknife|XPHB|13",
+				"Rend Mind|Rogue|XPHB|Soulknife|XPHB|17"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thief",
+			"shortName": "Thief",
+			"source": "XPHB",
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"edition": "one",
+			"subclassFeatures": [
+				"Thief|Rogue|XPHB|Thief|XPHB|3",
+				"Supreme Sneak|Rogue|XPHB|Thief|XPHB|9",
+				"Use Magic Device|Rogue|XPHB|Thief|XPHB|13",
+				"Thief's Reflexes|Rogue|XPHB|Thief|XPHB|17"
+			],
+			"hasFluffImages": true
+		}
+	],
+	"classFeature": [
+		{
+			"name": "Expertise",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"No 1º nível, escolha duas de suas proficiências em habilidades, ou uma de suas proficiências em habilidades e sua proficiência com {@item thieves' tools|phb}. Seu bônus de proficiência é duplicado para qualquer teste de habilidade que você fizer que utilize qualquer uma das perícias escolhidas.",
+				"No 6º nível, você pode escolher mais duas de suas proficiências (em habilidades ou com {@item thieves' tools|phb}) para obter este benefício."
+			]
+		},
+		{
+			"name": "Sneak Attack",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Começando no 1º nível, você sabe como atacar sutilmente e explorar a distração do inimigo. Uma vez por turno, você pode causar {@damage 1d6} de dano extra a uma criatura que você atingiu com um ataque se tiver vantagem na jogada de ataque. O ataque deve usar sutileza ou arma de longo alcance.",
+				"Você não precisa de vantagem na jogada de ataque se outro inimigo do alvo estiver a até 1,5 metro dele, esse inimigo não for {@condition incapacitated} e você não tiver desvantagem na jogada de ataque.",
+				"A quantidade de dano extra aumenta à medida que você ganha níveis nesta classe, conforme mostrado na coluna Ataque Furtivo da tabela Ladino."
+			]
+		},
+		{
+			"name": "Thieves' Cant",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 1,
+			"entries": [
+				"Durante seu treinamento de ladino, você aprendeu a hipocrisia dos ladrões, uma mistura secreta de dialeto, jargão e código que permite ocultar mensagens em conversas aparentemente normais. Somente outra criatura que conheça as habilidades dos ladrões entende tais mensagens. Leva quatro vezes mais tempo para transmitir tal mensagem do que para falar claramente a mesma ideia.",
+				"Além disso, você entende um conjunto de sinais e símbolos secretos usados para transmitir mensagens curtas e simples, como se uma área é perigosa ou o território de uma guilda de ladrões, se o saque está próximo ou se as pessoas em uma área são alvos fáceis ou fornecerão um lar seguro para ladrões em fuga."
+			]
+		},
+		{
+			"name": "Cunning Action",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 2,
+			"entries": [
+				"A partir do 2º nível, seu raciocínio rápido e agilidade permitem que você se mova e aja rapidamente. Você pode realizar uma ação bônus em cada um dos seus turnos de combate. Esta ação pode ser usada apenas para executar a ação {@action Dash}, {@action Disengage} ou {@action Hide}."
+			]
+		},
+		{
+			"name": "Roguish Archetype",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 3,
+			"entries": [
+				"No 3º nível, você escolhe um arquétipo que você emula no exercício de suas habilidades de ladino da lista de arquétipos disponíveis. Sua escolha de arquétipo concede características no 3º nível e novamente no 9º, 13º e 17º níveis."
+			]
+		},
+		{
+			"name": "Steady Aim",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 3,
+			"isClassFeatureVariant": true,
+			"entries": [
+				"{@i 3rd-level rogue {@variantrule optional class features|tce|optional feature}}",
+				"Como uma ação bônus, você ganha vantagem em sua próxima jogada de ataque no turno atual. Você pode usar esta ação bônus apenas se não tiver se movido durante este turno e, depois de usar a ação bônus, seu deslocamento será 0 até o final do turno atual."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 4,
+			"entries": [
+				"Quando você alcança o 4º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher um {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Uncanny Dodge",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 5,
+			"entries": [
+				"A partir do 5º nível, quando um atacante que você pode ver acerta você com um ataque, você pode usar sua reação para reduzir pela metade o dano do ataque contra você."
+			]
+		},
+		{
+			"name": "Expertise",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 6,
+			"entries": [
+				"No 6º nível, você pode escolher mais duas de suas proficiências (em habilidades ou com {@item thieves' tools|phb}) para obter o benefício de Especialização."
+			]
+		},
+		{
+			"name": "Evasion",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 7,
+			"entries": [
+				"A partir do 7º nível, você pode se esquivar agilmente de certos efeitos de área, como o sopro ardente de um dragão vermelho ou um feitiço {@spell ice storm}. Quando você está sujeito a um efeito que permite que você faça um teste de resistência de Destreza para sofrer apenas metade do dano, você não sofre nenhum dano se tiver sucesso no teste de resistência, e apenas metade do dano se falhar."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 8,
+			"entries": [
+				"Quando você alcança o 8º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Roguish Archetype feature",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 9,
+			"entries": [
+				"No 9º nível, você ganha uma característica concedida pelo seu Arquétipo do Ladino."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 10,
+			"entries": [
+				"Quando você alcança o 10º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Reliable Talent",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 11,
+			"entries": [
+				"No 11º nível, você refinou as perícias escolhidas até que elas se aproximem da perfeição. Sempre que você fizer um teste de habilidade que permita adicionar seu bônus de proficiência, você pode tratar uma rolagem de {@dice d20} de 9 ou menos como 10."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 12,
+			"entries": [
+				"Quando você alcança o 12º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Roguish Archetype feature",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 13,
+			"entries": [
+				"No 13º nível, você ganha uma característica concedida pelo seu Arquétipo do Ladino."
+			]
+		},
+		{
+			"name": "Blindsense",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 14,
+			"entries": [
+				"A partir do 14º nível, se você for capaz de ouvir, você estará ciente da localização de qualquer criatura oculta ou {@condition invisible} a até 3 metros de você."
+			]
+		},
+		{
+			"name": "Slippery Mind",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 15,
+			"entries": [
+				"No 15º nível, você adquiriu maior força mental. Você ganha proficiência em testes de resistência de Sabedoria."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 16,
+			"entries": [
+				"Quando você atinge o 16º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Roguish Archetype feature",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 17,
+			"entries": [
+				"No 17º nível, você ganha uma característica concedida pelo seu Arquétipo do Ladino."
+			]
+		},
+		{
+			"name": "Elusive",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 18,
+			"entries": [
+				"A partir do 18º nível, você é tão evasivo que os atacantes raramente ganham vantagem contra você. Nenhuma jogada de ataque tem vantagem contra você enquanto você não estiver {@condition incapacitated}."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 19,
+			"entries": [
+				"Quando você atinge o 19º nível, você pode aumentar um valor de habilidade de sua escolha em 2, ou você pode aumentar dois valores de habilidade de sua escolha em 1. Como normal, você não pode aumentar um valor de habilidade acima de 20 usando esta característica.",
+				"Se o seu Mestre permitir o uso de talentos, você poderá escolher {@5etools feat|feats.html}."
+			]
+		},
+		{
+			"name": "Stroke of Luck",
+			"source": "PHB",
+			"page": 94,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"level": 20,
+			"entries": [
+				"No 20º nível, você tem uma habilidade incrível para ter sucesso quando necessário. Se o seu ataque errar um alvo dentro do alcance, você pode transformar o erro em um acerto. Alternativamente, se você falhar em um teste de habilidade, você pode tratar o lançamento de {@dice d20} como um 20.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Expertise",
+			"source": "XPHB",
+			"page": 128,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você ganha {@variantrule Expertise|XPHB} em duas de suas proficiências de habilidade à sua escolha. {@skill Sleight of Hand|XPHB} ​​e {@skill Stealth|XPHB} são recomendados se você tiver proficiência neles.",
+				"No nível 6 do Ladino, você ganha {@variantrule Expertise|XPHB} em mais duas de suas proficiências de habilidade à sua escolha."
+			]
+		},
+		{
+			"name": "Sneak Attack",
+			"source": "XPHB",
+			"page": 128,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você sabe como atacar sutilmente e explorar a distração do inimigo. Uma vez por turno, você pode causar um dano extra de {@damage 1d6} a uma criatura que você atingiu em uma jogada de ataque se você tiver {@variantrule Advantage|XPHB} na jogada e o ataque usar uma arma de Finesse ou de longo alcance. O tipo de dano extra é igual ao tipo da arma.",
+				"Você não precisa de {@variantrule Advantage|XPHB} na jogada de ataque se pelo menos um de seus aliados estiver a 1,5 metro do alvo, o aliado não tiver a condição {@condition Incapacitated|XPHB} e você não tiver {@variantrule Disadvantage|XPHB} na jogada de ataque.",
+				"O dano extra aumenta à medida que você ganha níveis de Rogue, conforme mostrado na coluna Ataque Furtivo da tabela Recursos do Rogue."
+			]
+		},
+		{
+			"name": "Thieves' Cant",
+			"source": "XPHB",
+			"page": 128,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Você aprendeu vários idiomas nas comunidades onde utilizou seus talentos malandros. Você conhece Thieves' Cant e um outro idioma de sua escolha, que você escolhe nas tabelas de idiomas em {@book chapter 2|XPHB|2|Choose Languages}."
+			]
+		},
+		{
+			"name": "Weapon Mastery",
+			"source": "XPHB",
+			"page": 128,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 1,
+			"entries": [
+				"Seu treinamento com armas permite que você use {@variantrule weapon mastery properties|XPHB|mastery properties} de dois tipos de {@filter weapons|items|type=simple weapon;martial weapon} de sua escolha com os quais você tem proficiência, como {@item Dagger|XPHB|Daggers} e {@item Shortbow|XPHB|Shortbows}.",
+				"Sempre que você termina um {@variantrule Long Rest|XPHB}, você pode alterar os tipos de armas que escolheu. Por exemplo, você pode passar a usar {@variantrule weapon mastery properties|XPHB|mastery properties} de {@item Scimitar|XPHB|Scimitars} e {@item Shortsword|XPHB|Shortswords}."
+			]
+		},
+		{
+			"name": "Cunning Action",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 2,
+			"entries": [
+				"Seu pensamento rápido e agilidade permitem que você se mova e aja rapidamente. No seu turno, você pode realizar uma das seguintes ações como {@variantrule Bonus Action|XPHB}: {@action Dash|XPHB}, {@action Disengage|XPHB} ou {@action Hide|XPHB}."
+			]
+		},
+		{
+			"name": "Rogue Subclass",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha uma subclasse Rogue de sua escolha. Uma subclasse é uma especialização que concede recursos em certos níveis de Rogue. Pelo resto de sua carreira, você ganha cada uma das características de sua subclasse que sejam do seu nível Ladino ou inferior."
+			]
+		},
+		{
+			"name": "Steady Aim",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você recebe {@variantrule Advantage|XPHB} em sua próxima jogada de ataque no turno atual. Você só pode usar esse recurso se não tiver se movido durante este turno e, depois de usá-lo, seu {@variantrule Speed|XPHB} será 0 até o final do turno atual."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 4,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. Você ganha esse recurso novamente nos níveis 8, 10, 12 e 16 do Rogue."
+			]
+		},
+		{
+			"name": "Cunning Strike",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Você desenvolveu maneiras astutas de usar seu ataque furtivo. Ao causar dano de Ataque Furtivo, você pode adicionar um dos seguintes efeitos de Golpe Astuto. Cada efeito tem um custo de dado, que é o número de dados de dano do Ataque Furtivo que você deve abrir mão para adicionar o efeito. Você remove o dado antes de rolar e o efeito ocorre imediatamente após o dano do ataque ser causado. Por exemplo, se você adicionar o efeito Veneno, remova {@dice 1d6} do dano do Ataque Furtivo antes de rolar.",
+				"Se um efeito de Golpe Astuto exigir um teste de resistência, a CD será igual a 8 mais seu modificador de Destreza e {@variantrule Proficiency|XPHB|Proficiency Bonus}.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refClassFeature",
+							"classFeature": "Poison (Cost: 1d6)|Rogue|XPHB|5|XPHB"
+						},
+						{
+							"type": "refClassFeature",
+							"classFeature": "Trip (Cost: 1d6)|Rogue|XPHB|5|XPHB"
+						},
+						{
+							"type": "refClassFeature",
+							"classFeature": "Withdraw (Cost: 1d6)|Rogue|XPHB|5|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Poison (Cost: 1d6)",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Você adiciona uma toxina ao seu ataque, forçando o alvo a fazer um teste de resistência de Constituição. Em caso de falha no salvamento, o alvo terá a condição {@condition Poisoned|XPHB} por 1 minuto. No final de cada um de seus turnos, o alvo {@condition Poisoned|XPHB} repete o salvamento, encerrando o efeito sobre si mesmo em caso de sucesso.",
+				"Para usar este efeito, você deve ter um {@item Poisoner's Kit|XPHB} consigo."
+			]
+		},
+		{
+			"name": "Trip (Cost: 1d6)",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Se o alvo for Grande ou menor, ele deve ter sucesso em um teste de resistência de Destreza ou ter a condição {@condition Prone|XPHB}."
+			]
+		},
+		{
+			"name": "Uncanny Dodge",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Quando um atacante que você pode ver acerta você com uma jogada de ataque, você pode usar {@variantrule Reaction|XPHB} para reduzir pela metade o dano do ataque contra você (arredondado para baixo)."
+			]
+		},
+		{
+			"name": "Withdraw (Cost: 1d6)",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 5,
+			"entries": [
+				"Imediatamente após o ataque, você move até metade do seu {@variantrule Speed|XPHB} sem provocar {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+			]
+		},
+		{
+			"name": "Expertise",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 6,
+			"entries": [
+				"Você ganha {@variantrule Expertise|XPHB} em duas de suas Proficiências em Habilidades à sua escolha."
+			]
+		},
+		{
+			"name": "Evasion",
+			"source": "XPHB",
+			"page": 129,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"Você pode se esquivar agilmente de certos perigos. Quando você está sujeito a um efeito que permite que você faça um teste de resistência de Destreza para sofrer apenas metade do dano, você não sofre nenhum dano se tiver sucesso no teste de resistência e apenas metade do dano se falhar. Você não poderá usar esse recurso se tiver a condição {@condition Incapacitated|XPHB}."
+			]
+		},
+		{
+			"name": "Reliable Talent",
+			"source": "XPHB",
+			"page": 130,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 7,
+			"entries": [
+				"Sempre que você fizer um teste de habilidade que use uma de suas perícias ou proficiências em ferramentas, você pode tratar uma rolagem de {@dice d20} de 9 ou inferior como 10."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 130,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 8,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 130,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 9,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Rogue."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 130,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 10,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Improved Cunning Strike",
+			"source": "XPHB",
+			"page": 130,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 11,
+			"entries": [
+				"Você pode usar até dois efeitos de Golpe Astuto ao causar dano de Ataque Furtivo, pagando o custo do dado para cada efeito."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 12,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 13,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Rogue."
+			]
+		},
+		{
+			"name": "Daze (Cost: 2d6)",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"O alvo deve ter sucesso em um teste de resistência de Constituição ou, em seu próximo turno, ele pode fazer apenas um dos seguintes: mover-se ou realizar uma ação ou {@variantrule Bonus Action|XPHB}."
+			]
+		},
+		{
+			"name": "Devious Strikes",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"Você praticou novas maneiras de usar seu Ataque Furtivo de maneira tortuosa. Os efeitos a seguir estão agora entre suas opções de Golpe Astuto.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "refClassFeature",
+							"classFeature": "Daze (Cost: 2d6)|Rogue|XPHB|14|XPHB"
+						},
+						{
+							"type": "refClassFeature",
+							"classFeature": "Knock Out (Cost: 6d6)|Rogue|XPHB|14|XPHB"
+						},
+						{
+							"type": "refClassFeature",
+							"classFeature": "Obscure (Cost: 3d6)|Rogue|XPHB|14|XPHB"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Knock Out (Cost: 6d6)",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"O alvo deve ser bem sucedido em um teste de resistência de Constituição ou terá a condição {@condition Unconscious|XPHB} por 1 minuto ou até sofrer qualquer dano. O alvo {@condition Unconscious|XPHB} repete o salvamento no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+			]
+		},
+		{
+			"name": "Obscure (Cost: 3d6)",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 14,
+			"entries": [
+				"O alvo deve ter sucesso em um teste de resistência de Destreza ou terá a condição {@condition Blinded|XPHB} até o final do próximo turno."
+			]
+		},
+		{
+			"name": "Slippery Mind",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 15,
+			"entries": [
+				"Sua mente astuta é excepcionalmente difícil de controlar. Você ganha proficiência em testes de resistência de Sabedoria e Carisma."
+			]
+		},
+		{
+			"name": "Ability Score Improvement",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 16,
+			"entries": [
+				"Você ganha o talento {@feat Ability Score Improvement|XPHB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica."
+			]
+		},
+		{
+			"name": "Subclass Feature",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 17,
+			"entries": [
+				"Você ganha um recurso da sua subclasse Rogue."
+			]
+		},
+		{
+			"name": "Elusive",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 18,
+			"entries": [
+				"Você é tão evasivo que os atacantes raramente ganham vantagem contra você. Nenhuma jogada de ataque pode ter {@variantrule Advantage|XPHB} contra você, a menos que você tenha a condição {@condition Incapacitated|XPHB}."
+			]
+		},
+		{
+			"name": "Epic Boon",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 19,
+			"entries": [
+				"Você ganha um {@filter Epic Boon feat|feats|category=EB} ou outro {@5etools feat|feats.html} de sua escolha para o qual você se qualifica. {@feat Boon of the Night Spirit|XPHB} é recomendado."
+			]
+		},
+		{
+			"name": "Stroke of Luck",
+			"source": "XPHB",
+			"page": 131,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"level": 20,
+			"entries": [
+				"Você tem um talento maravilhoso para ter sucesso quando precisa. Se você falhar em {@variantrule D20 Test|XPHB}, poderá transformar o resultado em 20.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}."
+			]
+		}
+	],
+	"subclassFeature": [
+		{
+			"name": "Arcane Trickster",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"Alguns ladinos aprimoram suas habilidades aprimoradas de furtividade e agilidade com magia, aprendendo truques de encantamento e ilusão. Esses ladinos incluem batedores de carteira e ladrões, mas também brincalhões, travessos e um número significativo de aventureiros.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spellcasting|Rogue||Arcane Trickster||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Mage Hand Legerdemain|Rogue||Arcane Trickster||3"
+				}
+			]
+		},
+		{
+			"name": "Mage Hand Legerdemain",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, ao conjurar {@spell mage hand}, você pode fazer a mão espectral {@condition invisible} e pode realizar as seguintes tarefas adicionais com ela:",
+				{
+					"type": "list",
+					"items": [
+						"Você pode guardar um objeto que a mão esteja segurando em um recipiente usado ou carregado por outra criatura.",
+						"Você pode recuperar um objeto em um recipiente usado ou carregado por outra criatura.",
+						"You can use {@item thieves' tools|phb} to pick locks and disarm traps at range."
+					]
+				},
+				"Você pode realizar uma dessas tarefas sem ser notado por uma criatura se tiver sucesso em um teste de Destreza ({@skill Sleight of Hand}) contestado pelo teste de Sabedoria da criatura ({@skill Perception}).",
+				"Além disso, você pode usar a ação bônus concedida pela sua Ação Astuta para controlar a mão."
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao atingir o 3º nível, você ganha a habilidade de lançar magias. Consulte {@book chapter 10|PHB|10} para as regras gerais de lançamento de feitiços e {@book chapter 11|PHB|11} para {@filter wizard spell list|spells|class=wizard}.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Cantrips",
+							"entries": [
+								"Você aprende três truques: {@spell mage hand} e dois outros truques de sua escolha da lista de magias do mago. Você aprende outro truque de mago à sua escolha no 10º nível."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spell Slots",
+							"entries": [
+								"A tabela Arcane Trickster Spellcasting mostra quantos slots de feitiço você tem para lançar seu {@filter wizard spells|spells|class=wizard} de 1º nível e superior. Para conjurar uma dessas magias, você deve gastar um espaço do nível da magia ou superior. Você recupera todos os espaços de magia gastos ao terminar um descanso longo.",
+								"Por exemplo, se você conhece a magia de 1º nível {@spell charm person} e tem um espaço de magia de 1º nível e um de 2º nível disponíveis, você pode lançar {@spell charm person} usando qualquer um dos espaços."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spells Known of 1st-Level and Higher",
+							"entries": [
+								"Você conhece três magias de mago de 1º nível à sua escolha, duas das quais você deve escolher entre as magias de encantamento e ilusão na lista de magias de mago.",
+								"A coluna Magias Conhecidas da tabela Conjuração do Trapaceiro Arcano mostra quando você aprende mais magias de mago de 1º nível ou superior. Cada uma dessas magias deve ser uma magia de encantamento ou ilusão de sua escolha e deve ser de um nível para o qual você tenha espaços de magia. Por exemplo, quando você atinge o 7º nível nesta classe, você pode aprender uma nova magia de 1º ou 2º nível.",
+								"As magias que você aprende no 8º, 14º e 20º nível podem vir de qualquer escola de magia.",
+								"Sempre que você ganha um nível nesta classe, você pode substituir uma das magias de mago que você conhece por outra magia de sua escolha da lista de magias de mago. A nova magia deve ser de um nível para o qual você tenha espaços de magia e deve ser uma magia de encantamento ou ilusão, a menos que você esteja substituindo a magia que ganhou no 3º, 8º, 14º ou 20º nível de qualquer escola de magia."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Spellcasting Ability",
+							"entries": [
+								"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de mago, já que você aprende seus feitiços através de estudo e memorização dedicados. Você usa sua Inteligência sempre que uma magia se refere à sua habilidade de lançar magias. Além disso, você usa seu modificador de Inteligência ao definir a CD do teste de resistência para uma magia de mago que você conjurou e ao fazer uma jogada de ataque com uma.",
+								{
+									"type": "abilityDc",
+									"name": "Spell",
+									"attributes": [
+										"interno"
+									]
+								},
+								{
+									"type": "abilityAttackMod",
+									"name": "Spell",
+									"attributes": [
+										"interno"
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Magical Ambush",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"A partir do 9º nível, se você estiver escondido de uma criatura ao lançar uma magia nela, a criatura terá desvantagem em qualquer teste de resistência que fizer contra a magia neste turno."
+			]
+		},
+		{
+			"name": "Versatile Trickster",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"No 13º nível, você ganha a habilidade de distrair alvos com seu {@spell mage hand}. Como uma ação bônus no seu turno, você pode designar uma criatura a até 1,5 metro da mão espectral criada pela magia. Fazer isso lhe dá vantagem nas jogadas de ataque contra aquela criatura até o final do turno."
+			]
+		},
+		{
+			"name": "Spell Thief",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "PHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"No 17º nível, você ganha a habilidade de roubar magicamente o conhecimento de como lançar uma magia de outro conjurador.",
+				"Imediatamente após uma criatura conjurar uma magia que tenha como alvo você ou inclua você em sua área de efeito, você pode usar sua reação para forçar a criatura a fazer um teste de resistência com seu modificador de habilidade de conjuração. A CD é igual à sua CD de salvamento de feitiço. Se falhar na resistência, você nega o efeito da magia contra você e rouba o conhecimento da magia se ela for de pelo menos 1º nível e de um nível que você possa conjurar (não precisa ser uma magia de mago). Pelas próximas 8 horas, você conhece o feitiço e pode lançá-lo usando seus espaços de feitiço. A criatura não pode lançar esse feitiço até que 8 horas tenham passado.",
+				"Depois de usar esse recurso, você não poderá usá-lo novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Assassin",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"Você concentra seu treinamento na sombria arte da morte. Aqueles que aderem a esse arquétipo são diversos – assassinos de aluguel, espiões, caçadores de recompensas e até mesmo sacerdotes especialmente ungidos e treinados para exterminar os inimigos de sua divindade. Furtividade, veneno e disfarce ajudam você a eliminar seus inimigos com eficiência mortal.",
+				"Seu arquétipo lhe concede características no 3º nível e novamente no 9º, 13º e 17º níveis.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Assassinate|Rogue||Assassin||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Rogue||Assassin||3"
+				}
+			]
+		},
+		{
+			"name": "Assassinate",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você se torna mais mortal quando derruba seus inimigos. Você tem vantagem nas jogadas de ataque contra qualquer criatura que ainda não tenha participado do combate. Além disso, qualquer acerto obtido contra uma criatura que seja {@status surprised} é um acerto crítico."
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha proficiência com o {@item disguise kit|phb} e o {@item poisoner's kit|phb}."
+			]
+		},
+		{
+			"name": "Infiltration Expertise",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"A partir do 9º nível, você pode infalivelmente criar identidades falsas para si mesmo. Você deve gastar sete dias e 25 PO para estabelecer a história, a profissão e as afiliações de uma identidade. Você não pode estabelecer uma identidade que pertença a outra pessoa. Por exemplo, você pode adquirir roupas adequadas, cartas de apresentação e certificação de aparência oficial para se estabelecer como membro de uma casa comercial de uma cidade remota, para que possa se insinuar na companhia de outros comerciantes ricos.",
+				"Depois disso, se você adotar a nova identidade como disfarce, outras criaturas acreditarão que você é essa pessoa até receberem uma razão óbvia para não fazê-lo."
+			]
+		},
+		{
+			"name": "Impostor",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"No 13º nível, você ganha a habilidade de imitar infalivelmente a fala, a escrita e o comportamento de outra pessoa. Você deve passar pelo menos três horas estudando esses três componentes do comportamento da pessoa, ouvindo a fala, examinando a caligrafia e observando o maneirismo.",
+				"Seu estratagema é indiscernível para o observador casual. Se uma criatura cautelosa suspeitar que algo está errado, você terá vantagem em qualquer teste de Carisma ({@skill Deception}) que fizer para evitar a detecção."
+			]
+		},
+		{
+			"name": "Death Strike",
+			"source": "PHB",
+			"page": 97,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "PHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"A partir do 17º nível, você se torna um mestre da morte instantânea. Quando você ataca e atinge uma criatura que é {@status surprised}, ela deve realizar um teste de resistência de Constituição ({@dc 8} + seu modificador de Destreza + seu bônus de proficiência). Se falhar na resistência, dobre o dano do seu ataque contra a criatura."
+			]
+		},
+		{
+			"name": "Thief",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 3,
+			"entries": [
+				"Você aprimora suas habilidades nas artes do roubo. Ladrões, bandidos, ladrões e outros criminosos normalmente seguem esse arquétipo, mas o mesmo acontece com os ladinos que preferem pensar em si mesmos como caçadores de tesouros profissionais, exploradores, escavadores e investigadores. Além de melhorar sua agilidade e furtividade, você aprende habilidades úteis para investigar ruínas antigas, ler idiomas desconhecidos e usar itens mágicos que normalmente não conseguiria usar.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fast Hands|Rogue||Thief||3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Second-Story Work|Rogue||Thief||3"
+				}
+			]
+		},
+		{
+			"name": "Fast Hands",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você pode usar a ação bônus concedida por sua Ação Astuta para fazer um teste de Destreza ({@skill Sleight of Hand}), usar seu {@item thieves' tools|phb} para desarmar uma armadilha ou abrir uma fechadura, ou realizar a ação {@action Use an Object}."
+			]
+		},
+		{
+			"name": "Second-Story Work",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha a habilidade de escalar mais rápido que o normal; escalar não custa mais movimento extra.",
+				"Além disso, quando você dá um salto com corrida, a distância percorrida aumenta em um número de metros igual ao seu modificador de Destreza."
+			]
+		},
+		{
+			"name": "Supreme Sneak",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"A partir do 9º nível, você tem vantagem em um teste de Destreza ({@skill Stealth}) se você não se mover mais do que metade de seu deslocamento no mesmo turno."
+			]
+		},
+		{
+			"name": "Use Magic Device",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"No 13º nível, você aprendeu o suficiente sobre o funcionamento da magia para poder improvisar o uso de itens mesmo quando eles não são destinados a você. Você ignora todos os requisitos de classe, raça e nível para o uso de itens mágicos."
+			]
+		},
+		{
+			"name": "Thief's Reflexes",
+			"source": "PHB",
+			"page": 97,
+			"srd": true,
+			"basicRules": true,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "PHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Ao atingir o 17º nível, você se torna adepto de armar emboscadas e escapar rapidamente do perigo. Você pode jogar dois turnos durante a primeira rodada de qualquer combate. Você realiza seu primeiro turno com sua iniciativa normal e seu segundo turno com sua iniciativa menos 10. Você não pode usar esse recurso quando estiver {@status surprised}."
+			]
+		},
+		{
+			"name": "Phantom",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Muitos bandidos andam na linha tênue entre a vida e a morte, arriscando suas próprias vidas e tirando a vida de outras pessoas. Enquanto se aventuram nessa linha, alguns ladinos descobrem uma conexão mística com a própria morte. Esses ladinos pegam o conhecimento dos mortos e ficam imersos em energia negativa, tornando-se eventualmente como fantasmas. As guildas de ladrões os valorizam como coletores de informações e espiões altamente eficazes.",
+				"Muitos shadar-kai do Pendor das Sombras são mestres nessas técnicas macabras, e alguns estão dispostos a ensinar esse caminho. Em lugares como Thay nos Reinos Esquecidos e Karrnath em Eberron, onde muitos necromantes praticam seu ofício, um Fantasma pode se tornar o confidente e o braço direito de um mago. Nos templos dos deuses da morte, o Fantasma pode funcionar como um agente para rastrear aqueles que tentam enganar a morte e para recuperar conhecimento que de outra forma poderia ser perdido no túmulo.",
+				"Como você descobriu esse poder sombrio? Você dormiu em um cemitério e despertou para suas novas habilidades? Ou você os cultivou em um templo ou em uma guilda de ladrões dedicada a uma divindade da morte?",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Whispers of the Dead|Rogue||Phantom|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Wails from the Grave|Rogue||Phantom|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Wails from the Grave",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Phantom feature}",
+				"Ao empurrar alguém para mais perto do túmulo, você pode canalizar o poder da morte para prejudicar outra pessoa também. Imediatamente após causar o dano do seu Ataque Furtivo a uma criatura no seu turno, você pode escolher uma segunda criatura que você possa ver a até 9 metros da primeira criatura. Role metade do número de dados de Ataque Furtivo para o seu nível (arredondado para cima), e a segunda criatura sofre dano necrótico igual ao total da jogada, enquanto os lamentos dos mortos soam ao seu redor por um momento.",
+				"Você pode usar esse recurso um número de vezes igual ao seu bônus de proficiência e recupera todos os usos gastos ao terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Whispers of the Dead",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Phantom feature}",
+				"Ecos daqueles que morreram se apegam a você. Sempre que você terminar um descanso curto ou longo, você pode escolher uma perícia ou proficiência em ferramenta que lhe falta e ganhá-la, pois uma presença fantasmagórica compartilha seu conhecimento com você. Você perde essa proficiência quando usa esse recurso para escolher uma proficiência diferente que lhe falta."
+			]
+		},
+		{
+			"name": "Tokens of the Departed",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"{@i 9th-level Phantom feature}",
+				"Quando uma vida termina em sua presença, você é capaz de pegar um token da alma que está partindo, um pedaço de sua essência de vida que assume forma física: como uma reação quando uma criatura que você pode ver morre a 9 metros de você, você pode abrir sua mão livre e fazer com que uma pequena bugiganga apareça lá, uma bugiganga de alma. O Mestre determina a forma da bugiganga ou faz você rolar na tabela {@item Trinket|phb|Trinkets} no {@i Player's Handbook} para gerá-la. Você pode ter um número máximo de berloques de alma igual ao seu bônus de proficiência e não pode criar um enquanto estiver no máximo.",
+				"Você pode usar bugigangas da alma das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Enquanto um amuleto da alma estiver com você, você terá vantagem em testes de resistência contra a morte e testes de resistência de Constituição, pois sua vitalidade é aprimorada pela essência de vida dentro do objeto.",
+						"Quando você causa dano de Ataque Furtivo em seu turno, você pode destruir uma de suas bugigangas de alma que está com você e imediatamente usar Lamentos do Túmulo, sem gastar o uso desse recurso.",
+						"Com uma ação, você pode destruir uma de suas bugigangas da alma, não importa onde ela esteja. Ao fazer isso, você pode fazer uma pergunta ao espírito associado à bugiganga. O espírito aparece para você e responde em uma linguagem que conheceu em vida. Não tem obrigação de ser verdadeiro e responde da forma mais concisa possível, ansioso por ser livre. O espírito sabe apenas o que sabia em vida, conforme determinado pelo Mestre."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ghost Walk",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"{@i 13th-level Phantom feature}",
+				"Você pode entrar parcialmente no reino dos mortos, tornando-se como um fantasma. Com uma ação bônus, você assume uma forma espectral. Enquanto estiver nesta forma, você tem um deslocamento de vôo de 3 metros, você pode pairar e as jogadas de ataque têm desvantagem contra você. Você também pode se mover através de criaturas e objetos como se eles fossem {@quickref difficult terrain||3}, mas sofrerá {@damage 1d10} de dano de força se terminar seu turno dentro de uma criatura ou objeto.",
+				"Você permanece nesta forma por 10 minutos ou até encerrá-la como uma ação bônus. Para usar esse recurso novamente, você deve terminar um descanso longo ou destruir uma de suas bugigangas de alma como parte da ação bônus usada para ativar o Caminhada Fantasma."
+			]
+		},
+		{
+			"name": "Death's Friend",
+			"source": "TCE",
+			"page": 62,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Phantom",
+			"subclassSource": "TCE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"{@i 17th-level Phantom feature}",
+				"Sua associação com a morte tornou-se tão próxima que você obtém os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"Ao usar seus Lamentos do Túmulo, você pode causar dano necrótico à primeira e à segunda criatura.",
+						"No final de um descanso longo, uma bugiganga de alma aparece em sua mão se você não tiver nenhuma bugiganga de alma, pois os espíritos dos mortos são atraídos para você."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psi-Bolstered Knack",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Quando seu treinamento não-psiônico falha, seu poder psiônico pode ajudar: se você falhar em um teste de habilidade usando uma perícia ou ferramenta com a qual você tem proficiência, você pode jogar um dado de Energia Psiônica e adicionar o número obtido ao teste, potencialmente transformando o fracasso em sucesso. Você gasta o dado somente se o teste for bem-sucedido."
+			]
+		},
+		{
+			"name": "Psychic Whispers",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"Você pode estabelecer comunicação telepática entre você e outras pessoas – perfeita para uma infiltração silenciosa. Como uma ação, escolha uma ou mais criaturas que você possa ver, até um número de criaturas igual ao seu bônus de proficiência, e então jogue um dado de Energia Psiônica. Por um número de horas igual ao número obtido, as criaturas escolhidas podem falar telepaticamente com você, e você pode falar telepaticamente com elas. Para enviar ou receber uma mensagem (nenhuma ação necessária), você e a outra criatura devem estar a até 1 milha um do outro. Uma criatura não pode usar esta telepatia se não puder falar nenhum idioma, e uma criatura pode encerrar a conexão telepática a qualquer momento (nenhuma ação é necessária). Você e a criatura não precisam falar uma língua comum para se entenderem.",
+				"A primeira vez que você usa este poder após cada descanso longo, você não gasta o dado de Energia Psiônica. Todas as outras vezes que você usa o poder, você gasta o dado."
+			]
+		},
+		{
+			"name": "Soulknife",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"entries": [
+				"A maioria dos assassinos ataca com armas físicas, e muitos ladrões e espiões usam {@item thieves' tools|PHB} para se infiltrar em locais seguros. Em contraste, um Soulknife ataca e se infiltra na mente, cortando barreiras físicas e psíquicas. Esses ladinos descobrem o poder psiônico dentro de si e o canalizam para realizar seu trabalho malandro. Eles encontram emprego fácil como membros de guildas de ladrões, embora muitas vezes sejam desconfiados por ladinos que desconfiam de qualquer pessoa que use poderes mentais estranhos para conduzir seus negócios. A maioria dos governos também ficaria feliz em empregar um Soulknife como espião.",
+				"Entre as árvores de florestas antigas no Plano Material e na Agrestia das Fadas, alguns elfos da floresta trilham o caminho da Faca da Alma, servindo como guardiões silenciosos e letais de suas florestas. Na guerra sem fim entre os gith, um githzerai é encorajado a se tornar um Soulknife quando a furtividade é necessária contra o inimigo githyanki.",
+				"Como Soulknife, suas habilidades psiônicas podem ter assombrado você desde que você era criança, revelando todo o seu potencial apenas quando você experimentou o estresse da aventura. Ou você pode ter procurado uma ordem reclusa de adeptos psíquicos e passado anos aprendendo como manifestar seu poder.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Power|Rogue||Soulknife|TCE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psychic Blades|Rogue||Soulknife|TCE|3"
+				}
+			]
+		},
+		{
+			"name": "Psionic Power",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Soulknife feature}",
+				"Você abriga uma fonte de energia psiônica dentro de si. Esta energia é representada pelos seus dados de Energia Psiônica, cada um deles {@dice d6}. Você tem um número desses dados igual ao dobro do seu bônus de proficiência, e eles alimentam vários poderes psiônicos que você possui, que são detalhados abaixo.",
+				"Alguns de seus poderes gastam o dado de Energia Psiônica que usam, conforme especificado na descrição de um poder, e você não pode usar um poder se ele exigir que você use um dado quando todos os seus dados estiverem gastos. Você recupera todos os seus dados de Energia Psiônica gastos ao terminar um descanso longo. Além disso, como uma ação bônus, você pode recuperar um dado de Energia Psiônica gasto, mas não pode fazê-lo novamente até terminar um descanso curto ou longo.",
+				"Quando você atinge certos níveis nesta classe, o tamanho dos seus dados de Energia Psiônica aumenta: no 5º nível ({@dice d8}), no 11º nível ({@dice d10}) e no 17º nível ({@dice d12}).",
+				"Os poderes abaixo usam seus dados de Energia Psiônica.",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psi-Bolstered Knack|Rogue|PHB|Soulknife|TCE|3"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psychic Whispers|Rogue|PHB|Soulknife|TCE|3"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Blades",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"{@i 3rd-level Soulknife feature}",
+				"Você pode manifestar seu poder psiônico como lâminas cintilantes de energia psíquica. Sempre que você realiza a ação {@action Attack}, você pode manifestar uma lâmina psíquica com sua mão livre e fazer o ataque com essa lâmina. Esta lâmina mágica é uma arma corpo a corpo simples com delicadeza e propriedades de arremesso. Ele tem um alcance normal de 18 metros e não de longo alcance e, ao acertar, causa dano psíquico igual a {@dice 1d6} mais o modificador de habilidade que você usou para a jogada de ataque. A lâmina desaparece imediatamente após atingir ou errar o alvo e não deixa marcas no alvo se causar dano.",
+				"Depois de atacar com a lâmina, você pode fazer um ataque corpo a corpo ou de longo alcance com uma segunda lâmina psíquica como uma ação bônus no mesmo turno, desde que sua outra mão esteja livre para criá-la. O dado de dano deste ataque bônus é {@dice 1d4}, em vez de {@dice 1d6}."
+			]
+		},
+		{
+			"name": "Homing Strikes",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 9,
+			"entries": [
+				"Se você fizer uma jogada de ataque com suas Lâminas Psíquicas e errar o alvo, você pode jogar um dado de Energia Psiônica e adicionar o número obtido à jogada de ataque. Se isso fizer com que o ataque acerte, você gasta o dado de Energia Psiônica."
+			]
+		},
+		{
+			"name": "Psychic Teleportation",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 9,
+			"entries": [
+				"Como uma ação bônus, você manifesta uma de suas Lâminas Psíquicas, gasta um dado de Energia Psiônica e joga-o, e lança a lâmina em um espaço desocupado que você possa ver, até um número de metros de distância igual a 10 vezes o número obtido. Você então se teletransporta para aquele espaço e a lâmina desaparece."
+			]
+		},
+		{
+			"name": "Soul Blades",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"{@i 9th-level Soulknife feature}",
+				"Suas Lâminas Psíquicas agora são uma expressão de sua alma impregnada de psi, dando a você estes poderes que usam seus dados de Energia Psiônica:",
+				{
+					"type": "options",
+					"entries": [
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Homing Strikes|Rogue|PHB|Soulknife|TCE|9"
+						},
+						{
+							"type": "refSubclassFeature",
+							"subclassFeature": "Psychic Teleportation|Rogue|PHB|Soulknife|TCE|9"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Veil",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"{@i 13th-level Soulknife feature}",
+				"Você pode tecer um véu de estática psíquica para se mascarar. Com uma ação, você pode se tornar magicamente {@condition invisible}, junto com qualquer coisa que esteja vestindo ou carregando, por 1 hora ou até que você desfaça este efeito (nenhuma ação é necessária). Esta invisibilidade termina logo após você causar dano a uma criatura ou forçar uma criatura a fazer um teste de resistência.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste um dado de Energia Psiônica para usá-lo novamente."
+			]
+		},
+		{
+			"name": "Rend Mind",
+			"source": "TCE",
+			"page": 63,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "TCE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"{@i 17th-level Soulknife feature}",
+				"Você pode passar suas Lâminas Psíquicas diretamente pela mente de uma criatura. Quando você usa suas Lâminas Psíquicas para causar dano de Ataque Furtivo a uma criatura, você pode forçar o alvo a fazer um teste de resistência de Sabedoria (CD igual a 8 + seu bônus de proficiência + seu modificador de Destreza). Se o salvamento falhar, o alvo será {@condition stunned} por 1 minuto. O alvo {@condition stunned} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso.",
+				"Depois de usar esta característica, você não poderá fazê-lo novamente até terminar um descanso longo, a menos que gaste três dados de Energia Psiônica para usá-la novamente."
+			]
+		},
+		{
+			"name": "Inquisitive",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Como um Inquisitivo arquetípico, você se destaca em desenraizar segredos e desvendar mistérios. Você confia em seu olhar aguçado para detalhes, mas também em sua habilidade apurada de ler as palavras e ações de outras criaturas para determinar suas verdadeiras intenções. Você se destaca em derrotar criaturas que se escondem e atacam pessoas comuns, e seu domínio da tradição e suas deduções aguçadas o tornam bem equipado para expor e acabar com males ocultos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ear for Deceit|Rogue||Inquisitive|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Eye for Detail|Rogue||Inquisitive|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Insightful Fighting|Rogue||Inquisitive|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Ear for Deceit",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Quando você escolhe esse arquétipo no 3º nível, você desenvolve um talento para descobrir mentiras. Sempre que você fizer um teste de Sabedoria ({@skill Insight}) para determinar se uma criatura está mentindo, trate um resultado de 7 ou menos em {@dice d20} como um 8."
+			]
+		},
+		{
+			"name": "Eye for Detail",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você pode usar uma ação bônus para fazer um teste de Sabedoria ({@skill Perception}) para localizar uma criatura ou objeto escondido ou para fazer um teste de Inteligência ({@skill Investigation}) para descobrir ou decifrar pistas."
+			]
+		},
+		{
+			"name": "Insightful Fighting",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"No 3º nível, você ganha a habilidade de decifrar as táticas de um oponente e desenvolver um contra-ataque. Como uma ação bônus, você pode fazer um teste de Sabedoria ({@skill Insight}) contra uma criatura que você pode ver que não seja {@condition incapacitated}, contestado pelo teste de Carisma ({@skill Deception}) do alvo. Se tiver sucesso, você pode usar seu Ataque Furtivo contra aquele alvo mesmo que não tenha vantagem na jogada de ataque, mas não se tiver desvantagem nela.",
+				"Este benefício dura 1 minuto ou até você usar esse recurso com sucesso contra um alvo diferente."
+			]
+		},
+		{
+			"name": "Steady Eye",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"A partir do 9º nível, você tem vantagem em qualquer teste de Sabedoria ({@skill Perception}) ou Inteligência ({@skill Investigation}) se você não se mover mais do que metade de seu deslocamento no mesmo turno."
+			]
+		},
+		{
+			"name": "Unerring Eye",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"A partir do 13º nível, seus sentidos são quase impossíveis de serem frustrados. Como uma ação, você sente a presença de ilusões, metamorfos que não estão em sua forma original e outras magias projetadas para enganar os sentidos a até 9 metros de você, desde que você não seja {@condition blinded} ou {@condition deafened}. Você sente que um efeito está tentando enganá-lo, mas você não obtém nenhum insight sobre o que está oculto ou sobre sua verdadeira natureza.",
+				"Você pode usar esse recurso um número de vezes igual ao seu modificador de Sabedoria (no mínimo uma vez) e recupera todos os usos gastos dele quando terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Eye for Weakness",
+			"source": "XGE",
+			"page": 45,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Inquisitive",
+			"subclassSource": "XGE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"No 17º nível, você aprende a explorar as fraquezas de uma criatura estudando cuidadosamente suas táticas e movimentos. Enquanto seu recurso Insightful Fighting se aplica a uma criatura, o dano do seu Ataque Furtivo contra essa criatura aumenta em {@dice 3d6}."
+			]
+		},
+		{
+			"name": "Mastermind",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Seu foco está nas pessoas e na influência e nos segredos que elas possuem. Muitos espiões, cortesãos e conspiradores seguem esse arquétipo, levando vidas de intrigas. As palavras são suas armas tão frequentemente quanto facas ou veneno, e segredos e favores são alguns de seus tesouros favoritos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Master of Intrigue|Rogue||Mastermind|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Master of Tactics|Rogue||Mastermind|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Master of Intrigue",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha proficiência com o {@item disguise kit|phb}, o {@item forgery kit|phb} e um {@item gaming set|PHB} de sua escolha. Você também aprende dois idiomas de sua escolha.",
+				"Além disso, você pode imitar infalivelmente os padrões de fala e o sotaque de uma criatura que você ouve falar por pelo menos 1 minuto, permitindo que você se faça passar por um falante nativo de uma determinada terra, desde que conheça o idioma."
+			]
+		},
+		{
+			"name": "Master of Tactics",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você pode usar a ação {@action Help} como ação bônus. Além disso, quando você usa a ação {@action Help} para ajudar um aliado a atacar uma criatura, o alvo desse ataque pode estar a até 9 metros de você, em vez de a 1,5 metro de você, se o alvo puder ver ou ouvir você."
+			]
+		},
+		{
+			"name": "Insightful Manipulator",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"A partir do 9º nível, se você passar pelo menos 1 minuto observando ou interagindo com outra criatura fora do combate, você poderá aprender certas informações sobre suas capacidades em comparação com as suas. O Mestre lhe dirá se a criatura é igual, superior ou inferior a você em relação a duas das seguintes características de sua escolha:",
+				{
+					"type": "list",
+					"items": [
+						"Pontuação de inteligência",
+						"Pontuação de sabedoria",
+						"Pontuação de carisma",
+						"Níveis de classe (se houver)"
+					]
+				},
+				"A critério do Mestre, você também pode perceber que conhece um pedaço da história da criatura ou um de seus traços de personalidade, se ela tiver algum."
+			]
+		},
+		{
+			"name": "Misdirection",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"A partir do 13º nível, você às vezes pode fazer com que outra criatura sofra um ataque destinado a você. Quando você é alvo de um ataque enquanto uma criatura a até 1,5 metro de você lhe concede cobertura contra aquele ataque, você pode usar sua reação para fazer com que o ataque tenha como alvo aquela criatura em vez de você."
+			]
+		},
+		{
+			"name": "Soul of Deceit",
+			"source": "XGE",
+			"page": 46,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Mastermind",
+			"subclassSource": "XGE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"A partir do 17º nível, seus pensamentos não podem ser lidos por telepatia ou outros meios, a menos que você permita. Você pode apresentar pensamentos falsos obtendo sucesso em um teste de Carisma ({@skill Deception}) contestado pelo teste de Sabedoria do leitor de mentes ({@skill Insight}).",
+				"Além disso, não importa o que você diga, a magia que determinaria se você está dizendo a verdade indica que você está sendo verdadeiro se assim desejar, e você não pode ser obrigado a dizer a verdade por meio de magia."
+			]
+		},
+		{
+			"name": "Scout",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Você é hábil em furtividade e em sobreviver longe das ruas de uma cidade, o que lhe permite explorar à frente de seus companheiros durante as expedições. Ladinos que adotam esse arquétipo se sentem em casa na natureza e entre bárbaros e rangers, e muitos Escoteiros servem como olhos e ouvidos de bandos de guerra. Emboscador, espião, caçador de recompensas — esses são apenas alguns dos papéis que os Escoteiros assumem enquanto percorrem o mundo.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Skirmisher|Rogue||Scout|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Survivalist|Rogue||Scout|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Skirmisher",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, você é difícil de definir durante uma luta. Você pode se mover até metade de sua velocidade como reação quando um inimigo termina seu turno a até 1,5 metro de você. Este movimento não provoca ataques de oportunidade."
+			]
+		},
+		{
+			"name": "Survivalist",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Ao escolher este arquétipo no 3º nível, você ganha proficiência nas habilidades {@skill Nature} e {@skill Survival} se ainda não as tiver. Seu bônus de proficiência é duplicado para qualquer teste de habilidade que você fizer que utilize qualquer uma dessas proficiências."
+			]
+		},
+		{
+			"name": "Superior Mobility",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"No 9º nível, sua velocidade de caminhada aumenta em 3 metros. Se você tiver velocidade de escalada ou natação, esse aumento também se aplica a essa velocidade."
+			]
+		},
+		{
+			"name": "Ambush Master",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"A partir do 13º nível, você se destaca em liderar emboscadas e agir primeiro em uma luta.",
+				"Você tem vantagem em jogadas de iniciativa. Além disso, a primeira criatura que você atingir durante a primeira rodada de um combate torna-se mais fácil para você e outros atacarem; jogadas de ataque contra esse alvo têm vantagem até o início do seu próximo turno."
+			]
+		},
+		{
+			"name": "Sudden Strike",
+			"source": "XGE",
+			"page": 47,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Scout",
+			"subclassSource": "XGE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"A partir do 17º nível, você pode atacar com velocidade mortal. Se você realizar a ação {@action Attack} no seu turno, poderá realizar um ataque adicional como ação bônus. Este ataque pode se beneficiar do seu Ataque Furtivo mesmo que você já o tenha usado neste turno, mas você não pode usar seu Ataque Furtivo contra o mesmo alvo mais de uma vez por turno."
+			]
+		},
+		{
+			"name": "Swashbuckler",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 3,
+			"entries": [
+				"Você concentra seu treinamento na arte da lâmina, contando com velocidade, elegância e charme em partes iguais. Embora alguns guerreiros sejam brutos vestidos com armaduras pesadas, seu método de luta parece quase uma performance. Duelistas e piratas normalmente pertencem a esse arquétipo.",
+				"Um Swashbuckler se destaca no combate individual e pode lutar com duas armas enquanto se afasta com segurança de um oponente.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fancy Footwork|Rogue||Swashbuckler|XGE|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Rakish Audacity|Rogue||Swashbuckler|XGE|3"
+				}
+			]
+		},
+		{
+			"name": "Fancy Footwork",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Quando você escolhe este arquétipo no 3º nível, você aprende como acertar um ataque e então escapar sem represálias. Durante o seu turno, se você realizar um ataque corpo a corpo contra uma criatura, essa criatura não poderá realizar ataques de oportunidade contra você pelo resto do seu turno."
+			]
+		},
+		{
+			"name": "Rakish Audacity",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"A partir do 3º nível, sua confiança o impulsiona para a batalha. Você pode conceder a si mesmo um bônus em suas jogadas de iniciativa igual ao seu modificador de Carisma.",
+				"Você também ganha uma maneira adicional de usar seu Ataque Furtivo; você não precisa de vantagem em sua jogada de ataque para usar o Ataque Furtivo contra uma criatura se você estiver a até 1,5 metro dela, nenhuma outra criatura estiver a 1,5 metro de você e você não tiver desvantagem na jogada de ataque. Todas as outras regras do Ataque Furtivo ainda se aplicam a você."
+			]
+		},
+		{
+			"name": "Panache",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"No 9º nível, seu charme se torna extraordinariamente sedutor. Como uma ação, você pode fazer um teste de Carisma ({@skill Persuasion}) contestado pelo teste de Sabedoria ({@skill Insight}) de uma criatura. A criatura deve ser capaz de ouvir você e vocês dois devem compartilhar a mesma língua.",
+				"Se você obtiver sucesso no teste e a criatura for hostil a você, ela terá desvantagem nas jogadas de ataque contra alvos que não sejam você e não poderá realizar ataques de oportunidade contra alvos que não sejam você. Este efeito dura 1 minuto, até que um de seus companheiros ataque o alvo ou o afete com um feitiço, ou até que você e o alvo estejam a mais de 18 metros de distância.",
+				"Se você tiver sucesso no teste e a criatura não for hostil a você, ela será {@condition charmed} por você por 1 minuto. Embora {@condition charmed}, ele considera você um conhecido amigável. Este efeito termina imediatamente se você ou seus companheiros fizerem algo prejudicial a ele."
+			]
+		},
+		{
+			"name": "Elegant Maneuver",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"A partir do 13º nível, você pode usar uma ação bônus em seu turno para ganhar vantagem no próximo teste de Destreza ({@skill Acrobatics}) ou Força ({@skill Athletics}) que você fizer durante o mesmo turno."
+			]
+		},
+		{
+			"name": "Master Duelist",
+			"source": "XGE",
+			"page": 48,
+			"className": "Rogue",
+			"classSource": "PHB",
+			"subclassShortName": "Swashbuckler",
+			"subclassSource": "XGE",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"A partir do 17º nível, seu domínio da lâmina permite que você transforme o fracasso em sucesso no combate. Se você errar uma jogada de ataque, poderá lançá-la novamente com vantagem. Depois de fazer isso, você não poderá usar esse recurso novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Arcane Trickster",
+			"source": "XPHB",
+			"page": 132,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Enhance Stealth with Arcane Spells}",
+				"Alguns Ladinos aprimoram suas habilidades de furtividade e agilidade com feitiços, aprendendo truques mágicos para ajudá-los em seu comércio. Alguns Malandros Arcanos usam seus talentos como batedores de carteira e ladrões, enquanto outros são brincalhões.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spellcasting|Rogue|XPHB|Arcane Trickster|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Mage Hand Legerdemain|Rogue|XPHB|Arcane Trickster|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Mage Hand Legerdemain",
+			"source": "XPHB",
+			"page": 133,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Ao lançar {@spell Mage Hand|XPHB}, você pode lançá-lo como um {@variantrule Bonus Action|XPHB} e pode fazer a mão espectral {@condition Invisible|XPHB}. Você pode controlar a mão como {@variantrule Bonus Action|XPHB} e, através dela, fazer testes de Destreza ({@skill Sleight of Hand|XPHB})."
+			]
+		},
+		{
+			"name": "Spellcasting",
+			"source": "XPHB",
+			"page": 132,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você aprendeu a lançar feitiços. Veja {@book chapter 7|XPHB|7} para as regras sobre lançamento de feitiços. As informações abaixo detalham como você usa essas regras como um Malandro Arcano.",
+				{
+					"type": "entries",
+					"name": "Cantrips",
+					"entries": [
+						"Você conhece três truques: {@spell Mage Hand|XPHB} e dois outros truques de sua escolha do {@filter Wizard spell list|spells|class=Wizard} (veja a seção dessa classe para ver sua lista). {@spell Mind Sliver|XPHB} e {@spell Minor Illusion|XPHB} são recomendados.",
+						"Sempre que você ganha um nível de Ladino, você pode substituir um de seus truques, exceto {@spell Mage Hand|XPHB}, por outro truque de Mago de sua escolha.",
+						"Ao atingir o nível 10 de Ladino, você aprende outro truque de Mago de sua escolha."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spell Slots",
+					"entries": [
+						"A tabela Arcane Trickster Spellcasting mostra quantos espaços de feitiço você tem para lançar seus feitiços de nível 1+. Você recupera todos os slots de feitiço gastos ao terminar um {@variantrule Long Rest|XPHB}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Prepared Spells of 1st+ Level",
+					"entries": [
+						"Você prepara a lista de magias de nível 1+ que estão disponíveis para serem lançadas com esse recurso. Para começar, escolha três feitiços de mago de nível 1. {@spell Charm Person|XPHB}, {@spell Disguise Self|XPHB} e {@spell Fog Cloud|XPHB} são recomendados.",
+						"O número de feitiços em sua lista aumenta à medida que você ganha níveis de Ladino, conforme mostrado na coluna Feitiços Preparados da tabela Conjuração do Trapaceiro Arcano. Sempre que esse número aumentar, escolha feitiços de Mago adicionais até que o número de feitiços em sua lista corresponda ao número na tabela de Conjuração do Trapaceiro Arcano. As magias escolhidas devem ser de um nível para o qual você tenha espaços de magia. Por exemplo, se você for um Ladino de nível 7, sua lista de magias preparadas pode incluir cinco magias de Mago de nível 1 ou 2 em qualquer combinação."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Changing Your Prepared Spells",
+					"entries": [
+						"Sempre que você ganha um nível de Ladino, você pode substituir um feitiço de sua lista por outro feitiço de Mago para o qual você tenha espaços de feitiço."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Ability",
+					"entries": [
+						"Inteligência é a sua habilidade de lançar feitiços para seus feitiços de Mago."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spellcasting Focus",
+					"entries": [
+						"Você pode usar um {@item Arcane Focus|XPHB} como {@variantrule Spellcasting Focus|XPHB} para seus feitiços de mago."
+					]
+				}
+			]
+		},
+		{
+			"name": "Magical Ambush",
+			"source": "XPHB",
+			"page": 133,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"Se você tiver a condição {@condition Invisible|XPHB} ao lançar um feitiço em uma criatura, ela terá {@variantrule Disadvantage|XPHB} em qualquer teste de resistência que fizer contra o feitiço no mesmo turno."
+			]
+		},
+		{
+			"name": "Versatile Trickster",
+			"source": "XPHB",
+			"page": 133,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"Você ganha a habilidade de distrair alvos com seu {@spell Mage Hand|XPHB}. Quando você usa a opção Trip do seu Golpe Astuto em uma criatura, você também pode usar essa opção em outra criatura a até 1,5 metro da mão espectral."
+			]
+		},
+		{
+			"name": "Spell Thief",
+			"source": "XPHB",
+			"page": 133,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Arcane Trickster",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Você ganha a habilidade de roubar magicamente o conhecimento de como lançar um feitiço de outro conjurador.",
+				"Imediatamente após uma criatura lançar um feitiço que tenha como alvo você ou inclua você em sua área de efeito, você pode realizar um {@variantrule Reaction|XPHB} para forçar a criatura a fazer um teste de resistência de Inteligência. A CD é igual à sua CD de salvamento de feitiço. Se falhar na resistência, você nega o efeito da magia contra você e rouba o conhecimento da magia se ela for pelo menos de nível 1 e de um nível que você possa conjurar (não precisa ser uma magia de Mago). Pelas próximas 8 horas, você terá o feitiço preparado. A criatura não pode lançá-lo até que 8 horas tenham passado.",
+				"Depois de roubar um feitiço com esse recurso, você não poderá usá-lo novamente até terminar um {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "Assassin",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Practice the Grim Art of Death}",
+				"O treinamento de um Assassino se concentra no uso de furtividade, veneno e disfarce para eliminar inimigos com eficiência mortal. Embora alguns Ladinos que seguem esse caminho sejam assassinos contratados, espiões ou caçadores de recompensas, as capacidades desta subclasse são igualmente úteis para aventureiros que enfrentam uma variedade de inimigos monstruosos.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Assassinate|Rogue|XPHB|Assassin|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Assassin's Tools|Rogue|XPHB|Assassin|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Assassin's Tools",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você ganha um {@item Disguise Kit|XPHB} e um {@item Poisoner's Kit|XPHB} e tem proficiência com eles."
+			]
+		},
+		{
+			"name": "Assassinate",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você é especialista em emboscar um alvo, garantindo os seguintes benefícios.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Initiative",
+							"entries": [
+								"Você tem {@variantrule Advantage|XPHB} em rolagens de {@variantrule Initiative|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Surprising Strikes",
+							"entries": [
+								"Durante a primeira rodada de cada combate, você tem {@variantrule Advantage|XPHB} nas jogadas de ataque contra qualquer criatura que não tenha jogado um turno. Se o seu Ataque Furtivo atingir qualquer alvo durante essa rodada, o alvo sofre dano extra do tipo da arma igual ao seu nível de Ladino."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Infiltration Expertise",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"Você é especialista nas seguintes técnicas que auxiliam em suas infiltrações.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Masterful Mimicry",
+							"entries": [
+								"Você pode imitar infalivelmente a fala, a caligrafia ou ambos de outra pessoa se tiver passado pelo menos 1 hora estudando-a."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Roving Aim",
+							"entries": [
+								"Seu {@variantrule Speed|XPHB} não é reduzido a 0 usando Steady Aim."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Envenom Weapons",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"Quando você usa a opção Veneno do seu Golpe Astuto, o alvo também sofre {@damage 2d6} de dano de Veneno sempre que falha no teste de resistência. Este dano ignora {@variantrule Resistance|XPHB} do dano de Veneno."
+			]
+		},
+		{
+			"name": "Death Strike",
+			"source": "XPHB",
+			"page": 134,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Assassin",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Quando você acerta seu Ataque Furtivo na primeira rodada de um combate, o alvo deve ser bem sucedido em um teste de resistência de Constituição ({@dc 8} mais seu modificador de Destreza e {@variantrule Proficiency|XPHB|Proficiency Bonus}), ou o dano do ataque é dobrado contra o alvo."
+			]
+		},
+		{
+			"name": "Soulknife",
+			"source": "XPHB",
+			"page": 135,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Strike Foes with Psionic Blades}",
+				"Uma Soulknife ataca com a mente, cortando barreiras físicas e psíquicas. Esses Ladinos descobrem o poder psiônico dentro de si e o canalizam para realizar seu trabalho malandro. Como Soulknife, suas habilidades psiônicas podem ter assombrado você desde a infância, revelando todo o seu potencial apenas quando você vivenciava o estresse da aventura. Ou você pode ter procurado uma ordem de adeptos psíquicos e passado anos aprendendo como manifestar seu poder.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psionic Power|Rogue|XPHB|Soulknife|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psychic Blades|Rogue|XPHB|Soulknife|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Psionic Power",
+			"source": "XPHB",
+			"page": 135,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você abriga uma fonte de energia psiônica dentro de si. É representado pelos seus Dados de Energia Psiônica, que alimentam certos poderes que você possui nesta subclasse. A tabela Soulknife Energy Dice mostra o número desses dados que você tem quando atinge certos níveis de Rogue, e a tabela mostra o tamanho do dado.",
+				{
+					"type": "table",
+					"caption": "Dados de Energia Soulknife",
+					"colLabels": [
+						"Nível desonesto",
+						"Tamanho da matriz",
+						"Número"
+					],
+					"colStyles": [
+						"col-4 centro de texto",
+						"col-4 centro de texto",
+						"col-4 centro de texto"
+					],
+					"rows": [
+						[
+							"3",
+							"{@dice D6}",
+							"4"
+						],
+						[
+							"5",
+							"{@dice D8}",
+							"6"
+						],
+						[
+							"9",
+							"{@dice D8}",
+							"8"
+						],
+						[
+							"11",
+							"{@dice D10}",
+							"8"
+						],
+						[
+							"13",
+							"{@dice D10}",
+							"10"
+						],
+						[
+							"17",
+							"{@dice D12}",
+							"12"
+						]
+					]
+				},
+				"Quaisquer recursos nesta subclasse que usem um Dado de Energia Psiônica usam apenas os dados desta subclasse. Alguns de seus poderes gastam um Dado de Energia Psiônica, conforme especificado na descrição de um poder, e você não pode usar um poder se ele exigir que você use um dado quando todos os seus Dados de Energia Psiônica estiverem gastos.",
+				"Você recupera um de seus Dados de Energia Psiônica gastos ao terminar um {@variantrule Short Rest|XPHB} e recupera todos eles ao terminar um {@variantrule Long Rest|XPHB}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psi-Bolstered Knack|Rogue|XPHB|Soulknife|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psychic Whispers|Rogue|XPHB|Soulknife|XPHB|3"
+				},
+				"Na primeira vez que você usa esse poder após cada {@variantrule Long Rest|XPHB}, você não gasta o Dado de Energia Psiônica. Todas as outras vezes que você usa o poder, você gasta o dado."
+			]
+		},
+		{
+			"name": "Psychic Blades",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Você pode manifestar lâminas cintilantes de energia psíquica. Sempre que você realiza a ação {@action Attack|XPHB} ou faz um {@action Opportunity Attack|XPHB}, você pode manifestar um {@item Psychic Blade|XPHB} em sua mão livre e fazer o ataque com aquela lâmina. A lâmina mágica possui as seguintes características:",
+				{
+					"type": "statblock",
+					"tag": "item",
+					"name": "Psychic Blade",
+					"source": "XPHB"
+				},
+				"A lâmina desaparece imediatamente após atingir ou errar o alvo e não deixa marcas se causar dano.",
+				"Depois de atacar com a lâmina no seu turno, você pode fazer um ataque corpo a corpo ou à distância com uma segunda lâmina psíquica como {@variantrule Bonus Action|XPHB} no mesmo turno se sua outra mão estiver livre para criá-la. O dado de dano deste ataque bônus é {@dice 1d4} em vez de {@dice 1d6}."
+			]
+		},
+		{
+			"name": "Psi-Bolstered Knack",
+			"source": "XPHB",
+			"page": 135,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Se você falhar em um teste de habilidade usando uma perícia ou ferramenta com a qual você tem proficiência, você pode rolar um Dado de Energia Psiônica e adicionar o número obtido ao teste, potencialmente transformando o fracasso em sucesso. O dado é gasto somente se o lançamento for bem-sucedido."
+			]
+		},
+		{
+			"name": "Psychic Whispers",
+			"source": "XPHB",
+			"page": 135,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode estabelecer comunicação telepática entre você e outras pessoas. Como uma ação {@action Magic|XPHB}, escolha uma ou mais criaturas que você possa ver, até um número de criaturas igual ao seu {@variantrule Proficiency|XPHB|Proficiency Bonus}, e então jogue um Dado de Energia Psiônica. Por um número de horas igual ao número obtido, as criaturas escolhidas podem falar telepaticamente com você, e você pode falar telepaticamente com elas. Para enviar ou receber uma mensagem (nenhuma ação necessária), você e a outra criatura devem estar a até 1 milha um do outro. Uma criatura pode encerrar a conexão telepática a qualquer momento (nenhuma ação é necessária)."
+			]
+		},
+		{
+			"name": "Homing Strikes",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Se você fizer uma jogada de ataque com seu {@item Psychic Blade|XPHB} e errar o alvo, você pode lançar um Dado de Energia Psiônica e adicionar o número obtido à jogada de ataque. Se isso fizer com que o ataque acerte, o dado será gasto."
+			]
+		},
+		{
+			"name": "Psychic Teleportation",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Como um {@variantrule Bonus Action|XPHB}, você manifesta um {@item Psychic Blade|XPHB}, gasta um Dado de Energia Psiônica e o rola, e lança a lâmina em um espaço desocupado que você pode ver até um número de metros de distância igual a 10 vezes o número rolado. Você então se teletransporta para aquele espaço e a lâmina desaparece."
+			]
+		},
+		{
+			"name": "Soul Blades",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"Agora você pode usar os seguintes poderes com suas Lâminas Psíquicas.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Homing Strikes|Rogue|XPHB|Soulknife|XPHB|9"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Psychic Teleportation|Rogue|XPHB|Soulknife|XPHB|9"
+				}
+			]
+		},
+		{
+			"name": "Psychic Veil",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 13,
+			"header": 2,
+			"consumes": {
+				"name": "Psionic Energy Die"
+			},
+			"entries": [
+				"Você pode tecer um véu de estática psíquica para se mascarar. Como uma ação {@action Magic|XPHB}, você ganha a condição {@condition Invisible|XPHB} por 1 hora ou até descartar este efeito (nenhuma ação necessária). Esta invisibilidade termina logo após você causar dano a uma criatura ou forçar uma criatura a fazer um teste de resistência.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}, a menos que gaste um Dado de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
+			]
+		},
+		{
+			"name": "Rend Mind",
+			"source": "XPHB",
+			"page": 136,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Soulknife",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"You can sweep your Psychic Blades through a creature's mind. When you use your Psychic Blades to deal Sneak Attack damage to a creature, you can force that target to make a Wisdom saving throw ({@dc 8} plus your Dexterity modifier and {@variantrule Proficiency|XPHB|Proficiency Bonus}). If the save fails, the target has the {@condition Stunned|XPHB} condition for 1 minute. The {@condition Stunned|XPHB} target repeats the save at the end of each of its turns, ending the effect on itself on a success.",
+				"Depois de usar esse recurso, você não poderá fazê-lo novamente até terminar um {@variantrule Long Rest|XPHB}, a menos que gaste três Dados de Energia Psiônica (nenhuma ação necessária) para restaurar seu uso."
+			]
+		},
+		{
+			"name": "Fast Hands",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode executar um dos seguintes procedimentos.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Sleight of Hand",
+							"entries": [
+								"Faça um teste de Destreza ({@skill Sleight of Hand|XPHB}) para arrombar uma fechadura ou desarmar uma armadilha com {@item Thieves' Tools|XPHB} ou para arrombar um bolso."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Use an Object",
+							"entries": [
+								"Execute a ação {@action Utilize|XPHB} ou execute a ação {@action Magic|XPHB} para usar um item mágico que requer essa ação."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Second-Story Work",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"Você treinou para entrar em lugares especialmente difíceis de alcançar, garantindo esses benefícios.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Climber",
+							"entries": [
+								"Você ganha um {@variantrule Climb Speed|XPHB} igual ao seu {@variantrule Speed|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Jumper",
+							"entries": [
+								"Você pode determinar a distância do salto usando sua Destreza em vez de sua Força."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Thief",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 3,
+			"entries": [
+				"{@i Hunt for Treasure as a Classic Adventurer}",
+				"Uma mistura de ladrão, caçador de tesouros e explorador, você é o epítome de um aventureiro. Além de melhorar sua agilidade e furtividade, você ganha habilidades úteis para mergulhar em ruínas e obter o máximo benefício dos itens mágicos que encontrar lá.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Fast Hands|Rogue|XPHB|Thief|XPHB|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Second-Story Work|Rogue|XPHB|Thief|XPHB|3"
+				}
+			]
+		},
+		{
+			"name": "Supreme Sneak",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 9,
+			"header": 2,
+			"entries": [
+				"Você ganha a seguinte opção Ataque Astuto.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Stealth Attack (Cost: 1d6)",
+							"entries": [
+								"Se você tiver a condição {@condition Invisible|XPHB} da ação {@action Hide|XPHB}, este ataque não encerra essa condição se você terminar o turno atrás de {@variantrule Cover|XPHB|Three-Quarters Cover} ou {@variantrule Cover|XPHB|Total Cover}."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Use Magic Device",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 13,
+			"header": 2,
+			"entries": [
+				"Você aprendeu como maximizar o uso de itens mágicos, garantindo os seguintes benefícios.",
+				{
+					"type": "entries",
+					"name": "Attunement",
+					"entries": [
+						"Você pode sintonizar até quatro itens mágicos de uma vez."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Charges",
+					"entries": [
+						"Sempre que você usar uma propriedade de item mágico que gaste cargas, role {@dice 1d6}. Com um resultado de 6, você usa a propriedade sem gastar as cobranças."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Scrolls",
+					"entries": [
+						"Você pode usar qualquer {@item Spell Scroll|XDMG}, usando Inteligência como sua habilidade de lançamento de feitiços. Se a magia for um truque ou uma magia de nível 1, você poderá lançá-la de forma confiável. Se o pergaminho contém um feitiço de nível superior, você deve primeiro ter sucesso em um teste de Inteligência ({@skill Arcana|XPHB}) ({@dc 10} mais o nível do feitiço). Se obtiver sucesso no teste, você lança a magia do pergaminho. Se falhar no teste, o pergaminho se desintegra."
+					]
+				}
+			]
+		},
+		{
+			"name": "Thief's Reflexes",
+			"source": "XPHB",
+			"page": 137,
+			"freeRules2024": true,
+			"className": "Rogue",
+			"classSource": "XPHB",
+			"subclassShortName": "Thief",
+			"subclassSource": "XPHB",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"Você é especialista em armar emboscadas e escapar rapidamente do perigo. Você pode jogar dois turnos durante a primeira rodada de qualquer combate. Você faz seu primeiro turno no {@variantrule Initiative|XPHB} normal e seu segundo turno no {@variantrule Initiative|XPHB} menos 10."
+			]
+		}
+	]
+}

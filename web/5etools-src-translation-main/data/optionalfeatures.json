@@ -1,0 +1,5261 @@
+{
+	"optionalfeature": [
+		{
+			"name": "Acrobatics Lessons",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"Certa vez, um ladino astuto lhe deu algumas dicas sobre ziguezaguear e zagar. Quando você ou um aliado faz um teste de resistência de Destreza, você pode gastar um uso de sua Inspiração de Bardo, rolando um dado de Inspiração de Bardo e adicionando o resultado ao teste de resistência. Um aliado deve estar a até 18 metros de você e ser capaz de ver e ouvir você para se beneficiar deste truque.",
+				"No 6º nível, se o alvo obtiver sucesso no teste de resistência contra um efeito que causaria metade do dano em um teste de resistência bem sucedido, o alvo não sofre nenhum dano.",
+				"No 14º nível, mesmo que o alvo falhe no teste de resistência, ele sofre apenas metade do dano do efeito."
+			]
+		},
+		{
+			"name": "Agonizing Blast",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"reprintedAs": [
+				"Agonizing Blast|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"eldritch blast#c"
+					]
+				}
+			],
+			"entries": [
+				"Ao lançar {@spell eldritch blast}, adicione seu modificador de Carisma ao dano que ele causa ao acertar."
+			]
+		},
+		{
+			"name": "Agonizing Blast",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						{
+							"choose": "nível=0|class=Bruxo",
+							"entry": "um truque de bruxo que causa dano",
+							"entrySummary": "Truque de Warlock que causa dano"
+						}
+					],
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Escolha um dos {@filter Warlock cantrips|spells|level=0|class=Warlock} conhecidos que causa dano. Você pode adicionar seu modificador de Carisma às jogadas de dano desse feitiço.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Repeatable",
+							"entries": [
+								"Você pode obter esta invocação mais de uma vez. Cada vez que você fizer isso, escolha uma viagem elegível diferente."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ambush",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				"Ambush|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Destreza ({@skill Stealth}) ou uma jogada de iniciativa, você pode gastar um dado de superioridade e adicionar o dado à jogada, desde que você não seja {@condition incapacitated}."
+			]
+		},
+		{
+			"name": "Ambush",
+			"source": "XPHB",
+			"page": 94,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Destreza ({@skill Stealth|XPHB}) ou um teste de {@variantrule Initiative|XPHB}, você pode gastar um Dado de Superioridade e adicionar o dado ao teste, a menos que você tenha a condição {@condition Incapacitated|XPHB}."
+			]
+		},
+		{
+			"name": "Arcane Propulsion Armor",
+			"source": "TCE",
+			"page": 20,
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 14,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A suit of armor (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"O usuário desta armadura ganha estes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"A velocidade de caminhada do usuário aumenta em 1,5 metro.",
+						"A armadura inclui manoplas, cada uma das quais é uma arma mágica corpo a corpo que só pode ser empunhada quando a mão não está segurando nada. O usuário é proficiente com as manoplas, e cada uma causa {@damage 1d8} de dano de força ao acertar e tem a propriedade de arremesso, com alcance normal de 6 metros e longo alcance de 18 metros. Quando lançada, a manopla se desprende e voa em direção ao alvo do ataque, retornando imediatamente ao usuário e se prendendo novamente.",
+						"A armadura não pode ser removida contra a vontade do usuário.",
+						"Se faltar algum membro ao usuário, a armadura substitui esses membros – mãos, braços, pés, pernas ou apêndices semelhantes. As substituições funcionam de forma idêntica às partes do corpo que substituem."
+					]
+				}
+			]
+		},
+		{
+			"name": "Archery",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "PHB",
+					"page": 91
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Archery|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:R"
+			],
+			"entries": [
+				"Você ganha um bônus de +2 nas jogadas de ataque realizadas com armas de longo alcance."
+			]
+		},
+		{
+			"name": "Armed Combat Lessons",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"Um lutador experiente ensinou como usar uma postura de combate simples para manejar suas armas com mais eficácia. Ao selecionar esta opção, escolha entre os seguintes {@b Fighting Styles}:",
+				{
+					"type": "list",
+					"items": [
+						"{@optfeature Archery}: Você ganha um bônus de +2 nas jogadas de ataque feitas com armas de longo alcance.",
+						"{@optfeature Dueling}: Quando você está empunhando uma arma corpo-a-corpo em uma mão e nenhuma outra arma, você ganha um bônus de +2 nas jogadas de dano com aquela arma.",
+						"{@optfeature Great Weapon Fighting}: Quando você rola um 1 ou 2 em um dado de dano para um ataque que você faz com uma arma corpo a corpo que você está empunhando com as duas mãos, você pode rolar novamente o dado e deve usar a nova jogada, mesmo que a nova jogada seja 1 ou 2. A arma deve ter a propriedade de duas mãos ou versátil para você obter este benefício.",
+						"{@optfeature Two-Weapon Fighting}: Ao se envolver em um combate com duas armas, você pode adicionar seu modificador de habilidade."
+					]
+				},
+				"Quando você faz um ataque com arma, você pode gastar um uso de sua Inspiração de Bardo, adicionando seu dado de Inspiração de Bardo ao ataque ou jogada de dano. Ao fazer isso, você ganha os benefícios do estilo de luta escolhido por 10 minutos.",
+				"No 6º nível, você aprende como usar sua postura para encadear seus ataques em combinações mortais. Uma vez, enquanto seu Estilo de Luta estiver ativo, você poderá atacar duas vezes, em vez de uma, ao realizar a ação de Ataque no seu turno.",
+				"No 14º nível você aprendeu a reforçar qualquer fraqueza em sua postura. Você ganha +1 em sua CA enquanto durar o efeito."
+			]
+		},
+		{
+			"name": "Armor of Magical Strength",
+			"source": "TCE",
+			"page": 20,
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A suit of armor (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Esta armadura tem 6 cargas. O usuário pode gastar as cargas da armadura das seguintes maneiras:",
+				{
+					"type": "list",
+					"items": [
+						"Quando o usuário faz um teste de Força ou um teste de resistência de Força, ele pode gastar 1 carga para adicionar um bônus ao teste igual ao seu modificador de Inteligência.",
+						"Se a criatura for derrubada {@condition prone}, ela pode usar sua reação para gastar 1 carga para evitar ser derrubada."
+					]
+				},
+				"A armadura recupera {@dice 1d6} de cargas gastas diariamente ao amanhecer."
+			]
+		},
+		{
+			"name": "Armor of Shadows",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"reprintedAs": [
+				"Armor of Shadows|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"mage armor"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell mage armor} em si mesmo à vontade, sem gastar espaço de feitiço ou componentes materiais."
+			]
+		},
+		{
+			"name": "Armor of Shadows",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"mage armor|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Mage Armor|XPHB} em si mesmo sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Ascendant Step",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"reprintedAs": [
+				"Ascendant Step|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"levitate"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell levitate} em si mesmo à vontade, sem gastar espaço de feitiço ou componentes materiais."
+			]
+		},
+		{
+			"name": "Ascendant Step",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"levitate|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Levitate|XPHB} em si mesmo sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Aspect of the Moon",
+			"source": "XGE",
+			"page": 56,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Tomo"
+				}
+			],
+			"entries": [
+				"Você não precisa mais dormir e não pode ser forçado a dormir de forma alguma. Para obter os benefícios de um descanso longo, você pode passar todas as 8 horas fazendo atividades leves, como ler seu Livro das Sombras e vigiar."
+			]
+		},
+		{
+			"name": "Bait and Switch",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				"Bait and Switch|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você estiver a 1,5 metro de uma criatura em seu turno, você pode gastar um dado de superioridade e trocar de lugar com aquela criatura, desde que gaste pelo menos 1,5 metro de movimento e a criatura esteja disposta e não seja {@condition incapacitated}. Este movimento não provoca ataques de oportunidade.",
+				"Jogue o dado de superioridade. Até o início do seu próximo turno, você ou a outra criatura (à sua escolha) ganha um bônus na CA igual ao número rolado."
+			]
+		},
+		{
+			"name": "Bait and Switch",
+			"source": "XPHB",
+			"page": 94,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você estiver a 1,5 metro de uma criatura em seu turno, você pode gastar um Dado de Superioridade e trocar de lugar com aquela criatura, desde que gaste pelo menos 1,5 metro de movimento e a criatura esteja disposta e não tenha a condição {@condition Incapacitated|XPHB}. Este movimento não provoca {@action Opportunity Attack|XPHB|Opportunity Attacks}.",
+				"Role o Dado de Superioridade. Até o início do seu próximo turno, você ou a outra criatura (à sua escolha) ganha um bônus na CA igual ao número rolado."
+			]
+		},
+		{
+			"name": "Banishing Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Você usa magia de abjuração para tentar banir temporariamente seu alvo para um local inofensivo na Agrestia das Fadas. A criatura atingida pela flecha também deve ser bem sucedida num teste de resistência de Carisma ou será banida. Enquanto banido desta forma, a velocidade do alvo é 0 e é {@condition incapacitated}. No final do seu próximo turno, o alvo reaparece no espaço que desocupou ou no espaço desocupado mais próximo, se esse espaço estiver ocupado.",
+				"Depois de atingir o 18º nível nesta classe, um alvo também sofre {@damage 2d6} de dano de força quando a flecha o atinge."
+			]
+		},
+		{
+			"name": "Beast Speech",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with animals"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell speak with animals} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Beguiling Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Sua magia de encantamento faz com que esta flecha seduza temporariamente seu alvo. A criatura atingida pela flecha sofre {@damage 2d6} de dano psíquico extra e escolhe um de seus aliados a até 9 metros do alvo. O alvo deve ter sucesso em um teste de resistência de Sabedoria ou será {@condition charmed} do aliado escolhido até o início do seu próximo turno. Este efeito termina mais cedo se o aliado escolhido atacar o alvo {@condition charmed}, causar dano a ele ou forçá-lo a fazer um teste de resistência.",
+				"O dano psíquico aumenta para {@damage 4d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Beguiling Influence",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"persuasion": true
+				}
+			],
+			"entries": [
+				"Você ganha proficiência nas habilidades {@skill Deception} e {@skill Persuasion}."
+			]
+		},
+		{
+			"name": "Bewitching Whispers",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"compulsion"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell compulsion} uma vez usando um espaço de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Bind the Wound",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"Um paladino experiente instruiu você nos fundamentos da triagem de combate. Quando você ou um aliado a até 1,5 metro de você recebe cura de qualquer tipo, você pode usar sua reação para gastar um uso de sua Inspiração de Bardo e fornecer cura extra igual ao número na jogada do dado de Inspiração de Bardo + seu modificador de Sabedoria (mínimo de 1). Você deve ter pelo menos uma mão livre para estancar rapidamente o ferimento do alvo.",
+				"No 6º nível, você aprendeu a identificar uma seleção de ervas úteis que pode carregar consigo. Ao fornecer cura adicional com este truque, você também pode remover a condição envenenada ou paralisada do alvo.",
+				"No 14º nível, você desenvolveu um verdadeiro talento para triagem de emergência. Você também pode remover uma única doença que afete o alvo desta habilidade."
+			]
+		},
+		{
+			"name": "Blessed Warrior",
+			"source": "TCE",
+			"page": 52,
+			"reprintedAs": [
+				{
+					"uid": "Blessed Warrior|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:P"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=cleric",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você aprende dois truques de sua escolha com {@filter cleric spell list|spells|level=0|class=Cleric}. Eles contam como feitiços de paladino para você, e Carisma é sua habilidade de lançar feitiços para eles. Sempre que você ganha um nível nesta classe, você pode substituir um desses truques por outro truque da lista de magias do clérigo."
+			]
+		},
+		{
+			"name": "Blind Fighting",
+			"source": "TCE",
+			"page": 41,
+			"reprintedAs": [
+				{
+					"uid": "Blind Fighting|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			],
+			"senses": [
+				{
+					"blindsight": 10
+				}
+			],
+			"entries": [
+				"Você tem {@sense blindsight} com alcance de 3 metros. Dentro desse intervalo, você pode ver efetivamente qualquer coisa que não esteja atrás de {@quickref Cover||3||total cover}, mesmo se você estiver {@condition blinded} ou no escuro. Além disso, você pode ver uma criatura {@condition invisible} dentro desse alcance, a menos que a criatura se esconda de você com sucesso."
+			]
+		},
+		{
+			"name": "Bond of the Talisman",
+			"source": "TCE",
+			"page": 70,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 12,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Talismã"
+				}
+			],
+			"entries": [
+				"Enquanto outra pessoa estiver usando seu talismã, você pode usar sua ação para se teletransportar para o espaço desocupado mais próximo dela, desde que vocês dois estejam no mesmo plano de existência. O usuário do seu talismã pode fazer a mesma coisa, usando sua ação para se teletransportar até você. O teletransporte pode ser usado um número de vezes igual ao seu bônus de proficiência, e todos os usos gastos são restaurados quando você termina um descanso longo."
+			]
+		},
+		{
+			"name": "Book of Ancient Secrets",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Tomo"
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								{
+									"choose": "Components & Miscellaneous=ritual|level=1",
+									"count": 2
+								}
+							]
+						}
+					}
+				}
+			],
+			"entries": [
+				"Agora você pode inscrever rituais mágicos em seu Livro das Sombras. Escolha dois {@filter 1st-level spells that have the ritual tag from any class's spell list|spells|Components & Miscellaneous=ritual|level=1}. Os feitiços não precisam ser da mesma lista de feitiços. Os feitiços aparecem no livro e não contam no número de feitiços que você conhece. Com seu Livro das Sombras em mãos, você pode lançar os feitiços escolhidos como rituais. Você não pode conjurar magias exceto como rituais, a menos que as tenha aprendido por algum outro meio. Você também pode lançar um feitiço de bruxo que você conhece como ritual se ele tiver a etiqueta ritual.",
+				"Em suas aventuras, você pode adicionar outras magias rituais ao seu Livro das Sombras. Ao encontrar tal magia, você pode adicioná-la ao livro se o nível da magia for igual ou inferior à metade do seu nível de bruxo (arredondado para cima) e se você tiver tempo para transcrever a magia. Para cada nível da magia, o processo de transcrição leva 2 horas e custa 50 PO pelas tintas raras necessárias para inscrevê-la."
+			]
+		},
+		{
+			"name": "Boots of the Winding Path",
+			"source": "TCE",
+			"page": 21,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A pair of boots (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Enquanto estiver usando essas botas, uma criatura pode se teletransportar até 4,5 metros como uma ação bônus para um espaço desocupado que a criatura possa ver. A criatura deve ter ocupado esse espaço em algum momento durante o turno atual."
+			]
+		},
+		{
+			"name": "Boxing Lessons",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"Um monge sábio ficou feliz em compartilhar a forma básica do golpe e da tecelagem. Ao realizar a ação {@action Attack}, você pode gastar um uso de sua Inspiração de Bardo para executar rapidamente dois ataques desarmados contra uma ou mais criaturas que você possa atingir. Você pode usar Destreza em vez de Força para as jogadas de ataque e dano desses ataques desarmados. O dado de dano usado para esses ataques desarmados é o mesmo do seu dado de Inspiração de Bardo.",
+				"No 6º nível, você finalmente domina a parte de “tecelagem” de sua técnica. Você não provoca {@action opportunity attack|phb|attacks of opportunity} neste turno.",
+				"No 14º nível, sua prática valeu a pena, concedendo-lhe o uso de um ataque levemente infundido com ki. Ao acertar um desses ataques, você pode tentar um golpe atordoante. O alvo deve ser bem sucedido em um teste de resistência de Constituição ou ficará atordoado até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Brace",
+			"source": "TCE",
+			"page": 42,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando uma criatura que você pode ver se move para o alcance que você tem com a arma corpo a corpo que você está empunhando, você pode usar sua reação para gastar um dado de superioridade e fazer um ataque contra a criatura, usando aquela arma. Se o ataque acertar, adicione o dado de superioridade à jogada de dano da arma."
+			]
+		},
+		{
+			"name": "Breath of Winter",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"cone of cold"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 6 pontos de ki para lançar {@spell cone of cold}."
+			]
+		},
+		{
+			"name": "Bursting Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Você imbui sua flecha com energia de força extraída da escola de evocação. A energia detona após o seu ataque. Imediatamente após a flecha atingir a criatura, o alvo e todas as outras criaturas a até 3 metros dele sofrem {@damage 2d6} de dano de força cada.",
+				"O dano de força aumenta para {@damage 4d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Careful Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Careful Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia que força outras criaturas a fazerem um teste de resistência, você pode proteger algumas dessas criaturas da força total da magia. Para fazer isso, você gasta 1 ponto de feitiçaria e escolhe um número dessas criaturas até seu modificador de Carisma (mínimo de uma criatura). Uma criatura escolhida obtém sucesso automaticamente em seu teste de resistência contra a magia."
+			]
+		},
+		{
+			"name": "Careful Spell",
+			"source": "XPHB",
+			"page": 141,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia que força outras criaturas a fazerem um teste de resistência, você pode proteger algumas dessas criaturas da força total da magia. Para fazer isso, gaste 1 Ponto de Feitiçaria e escolha um número dessas criaturas até o seu modificador de Carisma (mínimo de uma criatura). Uma criatura escolhida obtém sucesso automaticamente em seu teste de resistência contra a magia e não sofre nenhum dano se normalmente sofreria metade do dano em um teste de resistência bem-sucedido."
+			]
+		},
+		{
+			"name": "Chains of Carceri",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Corrente",
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"hold monster"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell hold monster} à vontade — visando um celestial, demoníaco ou elemental — sem gastar um espaço de feitiço ou componentes materiais. Você deve terminar um descanso longo antes de poder usar esta invocação na mesma criatura novamente."
+			]
+		},
+		{
+			"name": "Clench of the North Wind",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"hold person"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 3 pontos de ki para lançar {@spell hold person}."
+			]
+		},
+		{
+			"name": "Cloak of Flies",
+			"source": "XGE",
+			"page": 56,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como uma ação bônus, você pode se cercar de uma aura mágica que se parece com moscas zumbindo. A aura se estende a 1,5 metro de você em todas as direções, mas não através de {@quickref Cover||3||total cover}. Ela dura até você atingir {@condition incapacitated} ou ser descartada como uma ação bônus.",
+				"A aura concede vantagem em testes de Carisma ({@skill Intimidation}) mas desvantagem em todos os outros testes de Carisma. Qualquer outra criatura que comece seu turno na aura sofre dano de veneno igual ao seu modificador de Carisma (mínimo de 0 de dano).",
+				"Depois de usar esta invocação, você não poderá usá-la novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Cloud Rune",
+			"source": "TCE",
+			"page": 44,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"entries": [
+				"Esta runa emula a magia enganosa usada por alguns gigantes das nuvens. Enquanto estiver vestindo ou carregando um objeto inscrito com esta runa, você tem vantagem em testes de Destreza ({@skill Sleight of Hand}) e testes de Carisma ({@skill Deception}).",
+				"Além disso, quando você ou uma criatura que você possa ver a até 9 metros de você é atingido por uma jogada de ataque, você pode usar sua reação para invocar a runa e escolher uma criatura diferente a até 9 metros de você, que não seja o atacante. A criatura escolhida se torna o alvo do ataque, usando a mesma jogada. Esta magia pode transferir os efeitos do ataque independentemente do alcance do ataque. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Commander's Strike",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Commander's Strike|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você realiza a ação {@action Attack} no seu turno, você pode renunciar a um de seus ataques e usar uma ação bônus para direcionar um de seus companheiros para atacar. Ao fazer isso, escolha uma criatura amigável que possa ver ou ouvir você e gaste um dado de superioridade. Aquela criatura pode usar imediatamente sua reação para realizar um ataque com arma, adicionando o dado de superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Commander's Strike",
+			"source": "XPHB",
+			"page": 94,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Ao realizar a ação {@action Attack|XPHB} no seu turno, você pode substituir um de seus ataques para direcionar um de seus companheiros para atacar. Ao fazer isso, escolha uma criatura voluntária que possa ver ou ouvir você e gaste um Dado de Superioridade. Essa criatura pode usar imediatamente seu {@variantrule Reaction|XPHB} para fazer um ataque com uma arma ou um {@variantrule Unarmed Strike|XPHB}, adicionando o Dado de Superioridade à jogada de dano do ataque em um acerto."
+			]
+		},
+		{
+			"name": "Commanding Presence",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				"Commanding Presence|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Carisma ({@skill Intimidation}), um teste de Carisma ({@skill Performance}) ou de Carisma ({@skill Persuasion}), você pode gastar um dado de superioridade e adicionar o dado de superioridade ao teste de habilidade."
+			]
+		},
+		{
+			"name": "Commanding Presence",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Carisma ({@skill Intimidation|XPHB}, {@skill Performance|XPHB} ou {@skill Persuasion|XPHB}), você pode gastar um Dado de Superioridade e adicioná-lo ao teste."
+			]
+		},
+		{
+			"name": "Conjure Woodland Spirit",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"{@note This is a magical effect.} Um druida paciente compartilhou os segredos da magia da floresta com você. Você pode gastar um uso de sua Inspiração de Bardo como uma ação para conjurar um espírito guardião da floresta em um espaço desocupado que você possa ver a até 18 metros de você. O espírito guardião é Grande e tem a aparência de um gato predador espectral. Qualquer inimigo que entrar ou sair de um espaço adjacente ao espírito guardião deve realizar um teste de resistência de Sabedoria, sofrendo dano mágico cortante igual ao seu dado de Inspiração de Bardo em caso de falha. O espírito guardião permanecerá enquanto você se concentrar nele, até 10 minutos.",
+				"No 6º nível, seu vínculo com o espírito guardião fica ainda mais profundo. Qualquer criatura que sofra dano pelo seu espírito guardião tem sua velocidade reduzida a 0 pelo resto do turno.",
+				"No 14º nível, qualquer criatura Grande ou menor que tenha sua velocidade reduzida a 0 pelo espírito guardião será restringida enquanto você mantiver sua concentração, enquanto seu espírito guardião a imobiliza no lugar. O alvo pode se libertar gastando uma ação para fazer um teste de Força ({@skill Athletics}) contra a CD de salvamento do Truque do Viajante."
+			]
+		},
+		{
+			"name": "Dark Bargain",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"{@note This is a magical effect.} Você fez um acordo duvidoso com um feiticeiro abatido. Ao selecionar esta opção, escolha um {@filter Eldritch Invocation|optionalfeatures|type=EI} na lista de recursos de classe do Bruxo para os quais você atende aos pré-requisitos. Você pode gastar um uso de sua Inspiração de Bardo para obter os benefícios desta Invocação Negra por 10 minutos. Fazer isso exige que você jogue seu dado de Inspiração de Bardo e sofra uma quantidade de dano necrótico igual ao resultado.",
+				"No 6º nível, você aprendeu como aprofundar seu pacto com o bruxo que conheceu. Você pode optar por sofrer o dobro do dano necrótico obtido em seu dado de Inspiração de Bardo para, em vez disso, fazer com que o efeito dure 1 hora.",
+				"No 14º nível, seu pacto com o bruxo desbloqueia um novo poder assustador. Ao atingir o 14º nível, escolha um único feitiço de 7º nível ou inferior do {@filter warlock's spell list|spells|level=0;1;2;3;4;5;6;7|class=warlock}. Você pode conjurar a magia uma vez durante este efeito sem gastar nenhum espaço de magia, embora você deva conjurá-la no nível de seu maior espaço de magia. Em troca, o feitiço causa dano necrótico adicional igual ao dobro do nível em que foi lançado."
+			]
+		},
+		{
+			"name": "Defense",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "PHB",
+					"page": 84
+				},
+				{
+					"source": "PHB",
+					"page": 91
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Defense|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:P",
+				"FS:R"
+			],
+			"entries": [
+				"Enquanto estiver usando armadura, você ganha +1 de bônus na CA."
+			]
+		},
+		{
+			"name": "Devil's Sight",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"reprintedAs": [
+				"Devil's Sight|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Você pode ver normalmente na escuridão, tanto mágica quanto não mágica, a uma distância de 36 metros."
+			]
+		},
+		{
+			"name": "Devil's Sight",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode ver normalmente em {@variantrule Dim Light|XPHB} e {@variantrule Darkness|XPHB} — mágicos e não mágicos — a até 36 metros de você."
+			]
+		},
+		{
+			"name": "Devouring Blade",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 12,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"thirsting blade|xphb"
+					]
+				}
+			],
+			"entries": [
+				"O Ataque Extra da sua invocação {@optfeature Thirsting Blade|XPHB} confere dois ataques extras em vez de um."
+			]
+		},
+		{
+			"name": "Disarming Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Disarming Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar desarmar o alvo, forçando-o a derrubar um item de sua escolha que esteja segurando. Você adiciona o dado de superioridade à jogada de dano do ataque e o alvo deve fazer um teste de resistência de Força. Em caso de falha no salvamento, ele descarta o objeto que você escolher. O objeto cai a seus pés."
+			]
+		},
+		{
+			"name": "Disarming Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque, você pode gastar um Dado de Superioridade para tentar desarmar o alvo. Adicione a jogada do Dado de Superioridade à jogada de dano do ataque. O alvo deve ser bem sucedido em um teste de resistência de Força ou deixar cair um objeto de sua escolha que esteja segurando, com o objeto caindo em seu espaço."
+			]
+		},
+		{
+			"name": "Distant Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Distant Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia com alcance de 1,5 metro ou mais, você pode gastar 1 ponto de feitiçaria para dobrar o alcance da magia.",
+				"Quando você conjura uma magia que tenha alcance de toque, você pode gastar 1 ponto de feitiçaria para aumentar o alcance da magia em 9 metros."
+			]
+		},
+		{
+			"name": "Distant Spell",
+			"source": "XPHB",
+			"page": 141,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia que tenha alcance de pelo menos 1,5 metro, você pode gastar 1 Ponto de Feitiçaria para dobrar o alcance da magia. Ou quando você conjura uma magia que tem alcance de Toque, você pode gastar 1 Ponto de Feitiçaria para aumentar o alcance da magia em 9 metros."
+			]
+		},
+		{
+			"name": "Distracting Strike",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Distracting Strike|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para distrair a criatura, dando uma abertura aos seus aliados. Você adiciona o dado de superioridade à jogada de dano do ataque. A próxima jogada de ataque contra o alvo feita por um atacante que não seja você terá vantagem se o ataque for feito antes do início do seu próximo turno."
+			]
+		},
+		{
+			"name": "Distracting Strike",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque, você pode gastar um Dado de Superioridade para distrair o alvo. Adicione a jogada do Dado de Superioridade à jogada de dano do ataque. A próxima jogada de ataque contra o alvo por um atacante que não seja você terá {@variantrule Advantage|XPHB} se o ataque for feito antes do início do seu próximo turno."
+			]
+		},
+		{
+			"name": "Dreadful Word",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"confusion"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell confusion} uma vez usando um slot de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Druidic Warrior",
+			"source": "TCE",
+			"page": 57,
+			"reprintedAs": [
+				{
+					"uid": "Druidic Warrior|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:R"
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=druid",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você aprende dois truques de sua escolha com {@filter druid spell list|spells|level=0|class=druid}. Eles contam como feitiços de ranger para você, e Sabedoria é sua habilidade de lançar feitiços para eles. Sempre que você ganha um nível nesta classe, você pode substituir um desses truques por outro truque da lista de magias do druida."
+			]
+		},
+		{
+			"name": "Dueling",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "XGE",
+					"page": 15
+				},
+				{
+					"source": "PHB",
+					"page": 84
+				},
+				{
+					"source": "PHB",
+					"page": 91
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Dueling|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:B",
+				"FS:P",
+				"FS:R"
+			],
+			"entries": [
+				"Quando você estiver empunhando uma arma corpo a corpo em uma mão e nenhuma outra arma, você ganha +2 de bônus nas jogadas de dano com aquela arma."
+			]
+		},
+		{
+			"name": "Eldritch Mind",
+			"source": "TCE",
+			"page": 71,
+			"reprintedAs": [
+				"Eldritch Mind|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Você tem vantagem nos testes de resistência de Constituição que faz para manter seu {@status concentration} em um feitiço."
+			]
+		},
+		{
+			"name": "Eldritch Mind",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Você tem {@variantrule Advantage|XPHB} nos testes de resistência de Constituição que você faz para manter {@status Concentration|XPHB}."
+			]
+		},
+		{
+			"name": "Eldritch Sight",
+			"source": "PHB",
+			"page": 110,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"detect magic"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell detect magic} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Eldritch Smite",
+			"source": "XGE",
+			"page": 56,
+			"reprintedAs": [
+				"Eldritch Smite|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Lâmina",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Uma vez por turno, quando você atinge uma criatura com sua arma do pacto, você pode gastar um espaço de feitiço de bruxo para causar um {@damage 1d8} de dano de força extra ao alvo, além de outro {@damage 1d8} por nível do espaço de feitiço, e você pode derrubar o alvo {@condition prone} se ele for Enorme ou menor."
+			]
+		},
+		{
+			"name": "Eldritch Smite",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"pact of the blade|xphb"
+					]
+				}
+			],
+			"entries": [
+				"Uma vez por turno, quando você atinge uma criatura com sua arma de pacto, você pode gastar um espaço de feitiço Magia do Pacto para causar um {@damage 1d8} de dano de Força extra ao alvo, além de outro {@dice 1d8} por nível do espaço de feitiço, e você pode dar ao alvo a condição {@condition Prone|XPHB} se ele for Enorme ou menor."
+			]
+		},
+		{
+			"name": "Eldritch Spear",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Eldritch Spear|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"eldritch blast#c"
+					]
+				}
+			],
+			"entries": [
+				"Quando você lança {@spell eldritch blast}, seu alcance é de 300 pés."
+			]
+		},
+		{
+			"name": "Eldritch Spear",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						{
+							"choose": "nível=0|class=Bruxo",
+							"entry": "um truque de bruxo que causa dano",
+							"entrySummary": "Truque de Warlock que causa dano"
+						}
+					],
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Escolha um dos seus {@filter Warlock cantrips|spells|level=0|class=Warlock} conhecidos que cause dano e tenha um alcance de mais de 3 metros. Quando você lança esse feitiço, seu alcance aumenta em um número de pés igual a 30 vezes o seu nível de Bruxo.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Repeatable",
+							"entries": [
+								"Você pode obter esta invocação mais de uma vez. Cada vez que você fizer isso, escolha uma viagem elegível diferente."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Elemental Attunement",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"entries": [
+				"Você pode usar sua ação para controlar brevemente forças elementais a até 9 metros de você, causando um dos seguintes efeitos à sua escolha:",
+				{
+					"type": "list",
+					"items": [
+						"Crie um efeito sensorial inofensivo e instantâneo relacionado ao ar, terra, fogo ou água, como uma chuva de faíscas, uma lufada de vento, um jato de névoa leve ou um suave estrondo de pedra.",
+						"Acenda ou apague instantaneamente uma vela, uma tocha ou uma pequena fogueira.",
+						"Resfrie ou aqueça até 1 quilo de material inanimado por até 1 hora.",
+						"Faça com que terra, fogo, água ou névoa que possa caber em um cubo de 30 centímetros se transforme em uma forma bruta que você designar por 1 minuto."
+					]
+				}
+			]
+		},
+		{
+			"name": "Empowered Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Empowered Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você rola o dano de uma magia, você pode gastar 1 ponto de feitiçaria para rolar novamente um número de dados de dano até o seu modificador de Carisma (mínimo de um). Você deve usar os novos rolos.",
+				"Você pode usar Feitiço Potencializado mesmo se já tiver usado uma opção Metamágica diferente durante o lançamento do feitiço."
+			]
+		},
+		{
+			"name": "Empowered Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você rola dano para uma magia, você pode gastar 1 Ponto de Feitiçaria para rolar novamente um número de dados de dano até seu modificador de Carisma (mínimo de um), e você deve usar as novas jogadas.",
+				"Você pode usar Feitiço Potencializado mesmo se já tiver usado uma opção Metamágica diferente durante o lançamento do feitiço."
+			]
+		},
+		{
+			"name": "Enfeebling Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Você tece magia necromântica em sua flecha. A criatura atingida pela flecha sofre {@damage 2d6} de dano necrótico extra. O alvo também deve ser bem sucedido em um teste de resistência de Constituição, ou o dano causado por seus ataques com arma será reduzido pela metade até o início do seu próximo turno.",
+				"O dano necrótico aumenta para {@damage 4d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Enhanced Arcane Focus",
+			"source": "TCE",
+			"page": 21,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A rod, staff, or wand (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Enquanto estiver segurando este item, uma criatura ganha um bônus de +1 nas jogadas de ataque mágico. Além disso, a criatura ignora {@quickref Cover||3||half cover} ao fazer um ataque mágico.",
+				"O bônus aumenta para +2 quando você atinge o 10º nível nesta classe."
+			]
+		},
+		{
+			"name": "Enhanced Defense",
+			"source": "TCE",
+			"page": 21,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A suit of armor or a shield"
+					]
+				}
+			],
+			"entries": [
+				"Uma criatura ganha um bônus de +1 na Classe de Armadura enquanto estiver usando (armadura) ou empunhando (escudo) o item infundido.",
+				"O bônus aumenta para +2 quando você atinge o 10º nível nesta classe."
+			]
+		},
+		{
+			"name": "Enhanced Weapon",
+			"source": "TCE",
+			"page": 21,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon"
+					]
+				}
+			],
+			"entries": [
+				"Esta arma mágica concede um bônus de +1 nas jogadas de ataque e dano feitas com ela.",
+				"O bônus aumenta para +2 quando você atinge o 10º nível nesta classe."
+			]
+		},
+		{
+			"name": "Eternal Mountain Defense",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"stoneskin"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 5 pontos de ki para lançar {@spell stoneskin}, visando você mesmo."
+			]
+		},
+		{
+			"name": "Evasive Footwork",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Evasive Footwork|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você se move, você pode gastar um dado de superioridade, lançando o dado e adicionando o número obtido à sua CA até parar de se mover."
+			]
+		},
+		{
+			"name": "Evasive Footwork",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode gastar um Dado de Superioridade e realizar a ação {@action Disengage|XPHB}. Você também lança o dado e adiciona o número obtido à sua CA até o início do seu próximo turno."
+			]
+		},
+		{
+			"name": "Evocation Lessons",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"{@note This is a magical effect.} Um venerável mago compartilhou segredos da magia de evocação com você. Ao selecionar esta opção, escolha um feitiço de dano que você possa lançar. Você pode gastar um uso de sua Inspiração de Bardo ao lançar esta magia para alterar o tipo de dano que ela causa de acordo com sua escolha entre ácido, frio, fogo, raio ou trovão (escolhido quando você lança a magia). Adicione o número obtido no seu dado de Inspiração de Bardo + seu modificador de Sabedoria (mínimo de 1) ao dano causado pela magia.",
+				"No 6º nível você pode escolher mudar a magia que você selecionou anteriormente com esta característica para outra magia que você conheça.",
+				"No 14º nível você pode escolher mudar a magia que você selecionou anteriormente com esta característica para outra magia que você conheça."
+			]
+		},
+		{
+			"name": "Extended Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Extended Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 1
+			},
+			"entries": [
+				"Quando você conjura uma magia com duração de 1 minuto ou mais, você pode gastar 1 ponto de feitiço para dobrar sua duração, até uma duração máxima de 24 horas."
+			]
+		},
+		{
+			"name": "Extended Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 1
+			},
+			"entries": [
+				"Ao lançar um feitiço com duração de 1 minuto ou mais, você pode gastar 1 Ponto de Feitiço para dobrar sua duração até um máximo de 24 horas.",
+				"Se o feitiço afetado exigir {@status Concentration|XPHB}, você terá {@variantrule Advantage|XPHB} em qualquer teste de resistência que fizer para manter esse {@status Concentration|XPHB}."
+			]
+		},
+		{
+			"name": "Eyes of the Rune Keeper",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Você pode ler todos os escritos."
+			]
+		},
+		{
+			"name": "Fangs of the Fire Snake",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"entries": [
+				"Ao usar a ação {@action Attack} em seu turno, você pode gastar 1 ponto de ki para fazer com que gavinhas de chamas se estiquem de seus punhos e pés. Seu alcance com seus ataques desarmados aumenta em 3 metros para essa ação, assim como para o resto do turno. Um acerto com tal ataque causa dano de fogo em vez de dano de concussão, e se você gastar 1 ponto de ki quando o ataque acertar, ele também causará {@damage 1d10} de dano de fogo extra."
+			]
+		},
+		{
+			"name": "Far Scribe",
+			"source": "TCE",
+			"page": 71,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Tomo"
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"sending"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Uma nova página aparece em seu Livro das Sombras. Com sua permissão, uma criatura pode usar sua ação para escrever seu nome naquela página, que pode conter um número de nomes igual ao seu bônus de proficiência.",
+				"Você pode lançar o feitiço {@spell sending}, tendo como alvo uma criatura cujo nome esteja na página, sem usar um espaço de feitiço e sem usar componentes materiais. Para fazer isso, você deve escrever a mensagem na página. O alvo ouve a mensagem em sua mente e, se responder, a mensagem dele aparece na página, e não em sua mente. A escrita desaparece após 1 minuto.",
+				"Com uma ação, você pode apagar magicamente um nome da página tocando nele."
+			]
+		},
+		{
+			"name": "Feinting Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Feinting Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Você pode gastar um dado de superioridade e usar uma ação bônus em seu turno para fingir, escolhendo uma criatura a até 1,5 metro de você como alvo. Você tem vantagem na sua próxima jogada de ataque contra aquela criatura neste turno. Se o ataque acertar, adicione o dado de superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Feinting Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode gastar um Dado de Superioridade para fintar, escolhendo uma criatura a até 1,5 metro de você como alvo. Você tem {@variantrule Advantage|XPHB} em sua próxima jogada de ataque contra esse alvo neste turno. Se o ataque acertar, adicione o Dado de Superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Fiendish Vigor",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Fiendish Vigor|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"false life"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell false life} em si mesmo à vontade como uma magia de 1º nível, sem gastar um espaço de magia ou componentes materiais."
+			]
+		},
+		{
+			"name": "Fiendish Vigor",
+			"source": "XPHB",
+			"page": 155,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"false life|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell False Life|XPHB} em si mesmo sem gastar um espaço de feitiço. Ao lançar o feitiço com esse recurso, você não lança o dado para {@variantrule Temporary Hit Points|XPHB}; você obtém automaticamente o número mais alto no dado."
+			]
+		},
+		{
+			"name": "Fire Rune",
+			"source": "TCE",
+			"page": 44,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"entries": [
+				"A magia desta runa canaliza a habilidade magistral de grandes ferreiros. Enquanto estiver usando ou carregando um objeto inscrito com esta runa, seu bônus de proficiência é dobrado para qualquer teste de habilidade que você faça que use sua proficiência com uma ferramenta.",
+				"Além disso, quando você atinge uma criatura com um ataque usando uma arma, você pode invocar a runa para invocar algemas de fogo: o alvo sofre {@damage 2d6} de dano de fogo extra e deve ter sucesso em um teste de resistência de Força ou será {@condition restrained} por 1 minuto. Enquanto {@condition restrained} está preso nas algemas, o alvo sofre {@damage 2d6} de dano de fogo no início de cada um de seus turnos. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, banindo as algemas em caso de sucesso. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Fist of Four Thunders",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"thunderwave"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 2 pontos de ki para lançar {@spell thunderwave}."
+			]
+		},
+		{
+			"name": "Flames of the Phoenix",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fireball"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 4 pontos de ki para lançar {@spell fireball}."
+			]
+		},
+		{
+			"name": "Frost Rune",
+			"source": "TCE",
+			"page": 45,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"entries": [
+				"A magia desta runa evoca o poder daqueles que sobrevivem na selva invernal, como os gigantes do gelo. Ao usar ou carregar um objeto inscrito com esta runa, você tem vantagem em testes de Sabedoria ({@skill Animal Handling}) e de Carisma ({@skill Intimidation}).",
+				"Além disso, você pode invocar a runa como uma ação bônus para aumentar sua robustez. Por 10 minutos, você ganha um bônus de +2 em todos os testes de habilidade e testes de resistência que usam Força ou Constituição. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Gaze of Two Minds",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Gaze of Two Minds|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Você pode usar sua ação para tocar um humanoide voluntário e perceber através de seus sentidos até o final do seu próximo turno. Contanto que a criatura esteja no mesmo plano de existência que você, você pode usar sua ação nos turnos subsequentes para manter essa conexão, estendendo a duração até o final do seu próximo turno. Ao perceber através dos sentidos da outra criatura, você se beneficia de quaisquer sentidos especiais possuídos por aquela criatura e você está {@condition blinded} e {@condition deafened} em relação ao seu próprio entorno."
+			]
+		},
+		{
+			"name": "Gaze of Two Minds",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode usar um {@variantrule Bonus Action|XPHB} para tocar uma criatura voluntária e perceber através de seus sentidos até o final do seu próximo turno. Contanto que a criatura esteja no mesmo plano de existência que você, você pode usar {@variantrule Bonus Action|XPHB} nos turnos subsequentes para manter essa conexão, estendendo a duração até o final do seu próximo turno. A conexão termina se você não a mantiver dessa forma.",
+				"Enquanto percebe através dos sentidos da outra criatura, você se beneficia de quaisquer sentidos especiais possuídos por aquela criatura, e você pode lançar magias como se estivesse no seu espaço ou no espaço da outra criatura se vocês dois estiverem a até 18 metros um do outro."
+			]
+		},
+		{
+			"name": "Ghostly Gaze",
+			"source": "XGE",
+			"page": 56,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Com uma ação, você ganha a habilidade de ver através de objetos sólidos até um alcance de 9 metros. Dentro desse intervalo, você tem {@sense darkvision} se ainda não o tiver. Esta visão especial dura 1 minuto ou até que seu {@status concentration} termine (como se você estivesse {@status concentration||concentrating} em um feitiço). Durante esse tempo, você percebe os objetos como imagens transparentes e fantasmagóricas.",
+				"Depois de usar esta invocação, você não poderá usá-la novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Gift of the Depths",
+			"source": "XGE",
+			"page": 57,
+			"reprintedAs": [
+				"Gift of the Depths|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode respirar debaixo d'água e ganha um deslocamento de natação igual ao seu deslocamento de caminhada.",
+				"Você também pode lançar {@spell water breathing} uma vez sem gastar um espaço de feitiço. Você recupera a capacidade de fazer isso quando termina um descanso longo."
+			]
+		},
+		{
+			"name": "Gift of the Depths",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing|xphb"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode respirar debaixo d’água e ganha {@variantrule Swim Speed|XPHB} igual ao seu {@variantrule Speed|XPHB}.",
+				"Você também pode lançar {@spell Water Breathing|XPHB} uma vez sem gastar um espaço de feitiço. Você recupera a capacidade de lançá-lo desta forma novamente ao terminar um {@variantrule Long Rest|XPHB}."
+			]
+		},
+		{
+			"name": "Gift of the Ever-Living Ones",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Corrente"
+				}
+			],
+			"entries": [
+				"Sempre que você recuperar pontos de vida enquanto seu familiar estiver a até 30 metros de você, considere quaisquer dados lançados para determinar os pontos de vida que você recuperou como tendo rolado seu valor máximo para você."
+			]
+		},
+		{
+			"name": "Gift of the Protectors",
+			"source": "TCE",
+			"page": 71,
+			"reprintedAs": [
+				"Gift of the Protectors|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Tomo"
+				}
+			],
+			"entries": [
+				"Uma nova página aparece em seu Livro das Sombras. Com sua permissão, uma criatura pode usar sua ação para escrever seu nome naquela página, que pode conter um número de nomes igual ao seu bônus de proficiência.",
+				"Quando qualquer criatura cujo nome está na página é reduzida a 0 pontos de vida, mas não é morta imediatamente, a criatura cai magicamente para 1 ponto de vida. Uma vez que esta magia seja ativada, nenhuma criatura poderá se beneficiar dela até que você termine um descanso longo.",
+				"Com uma ação, você pode apagar magicamente um nome da página tocando nele."
+			]
+		},
+		{
+			"name": "Gift of the Protectors",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"pact of the tome|xphb"
+					]
+				}
+			],
+			"entries": [
+				"Uma nova página aparece em seu Livro das Sombras quando você a conjura. Com a sua permissão, uma criatura pode realizar uma ação para escrever seu nome naquela página, que pode conter um número de nomes igual ao seu modificador de Carisma (mínimo de um nome).",
+				"Quando qualquer criatura cujo nome está na página é reduzida a 0 {@variantrule Hit Points|XPHB}, mas não é morta imediatamente, a criatura cai magicamente para 1 {@variantrule Hit Points|XPHB|Hit Point}. Uma vez que esta magia é acionada, nenhuma criatura pode se beneficiar dela até que você conclua um {@variantrule Long Rest|XPHB}.",
+				"Como uma ação {@action Magic|XPHB}, você pode apagar um nome da página tocando nele."
+			]
+		},
+		{
+			"name": "Goading Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Goading Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar incitar o alvo a atacar você. Você adiciona o dado de superioridade à jogada de dano do ataque e o alvo deve fazer um teste de resistência de Sabedoria. Se falhar na resistência, o alvo terá desvantagem em todas as jogadas de ataque contra alvos que não sejam você até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Goading Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque, você pode gastar um Dado de Superioridade para tentar incitar o alvo a atacar você. Adicione o Dado de Superioridade à jogada de dano do ataque. O alvo deve ter sucesso em um teste de resistência de Sabedoria ou ter {@variantrule Disadvantage|XPHB} em jogadas de ataque contra alvos que não sejam você até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Gong of the Summit",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"shatter"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 3 pontos de ki para lançar {@spell shatter}."
+			]
+		},
+		{
+			"name": "Grappling Strike",
+			"source": "TCE",
+			"page": 42,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Imediatamente após atingir uma criatura com um ataque corpo a corpo no seu turno, você pode gastar um dado de superioridade e então tentar agarrar o alvo como uma ação bônus (veja o Livro do Jogador para regras sobre agarrar). Adicione o dado de superioridade ao seu teste de Força ({@skill Athletics})."
+			]
+		},
+		{
+			"name": "Grasp of Hadar",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"eldritch blast#c"
+					]
+				}
+			],
+			"entries": [
+				"Uma vez em cada um de seus turnos, quando você atingir uma criatura com seu {@spell eldritch blast}, você pode mover essa criatura em linha reta 3 metros mais perto de você."
+			]
+		},
+		{
+			"name": "Grasping Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Quando esta flecha atinge seu alvo, a magia de conjuração cria arbustos venenosos e agarradores, que envolvem o alvo. A criatura atingida pela flecha sofre {@damage 2d6} de dano venenoso extra, sua velocidade é reduzida em 3 metros e sofre {@damage 2d6} de dano cortante na primeira vez em cada turno em que se move 30 centímetros ou mais sem se teletransportar. O alvo ou qualquer criatura que possa alcançá-lo pode usar sua ação para remover as amoreiras com um teste bem-sucedido de Força ({@skill Athletics}) contra sua CD de salvamento de Tiro Arcano. Caso contrário, as amoreiras duram 1 minuto ou até você usar esta opção novamente.",
+				"O dano de veneno e o dano cortante aumentam para {@damage 4d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Great Weapon Fighting",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "PHB",
+					"page": 84
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Great Weapon Fighting|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:P"
+			],
+			"entries": [
+				"Quando você rola um 1 ou 2 em um dado de dano para um ataque que você faz com uma arma corpo a corpo que você está empunhando com as duas mãos, você pode rolar novamente o dado e deve usar a nova jogada, mesmo que a nova jogada seja 1 ou 2. A arma deve ter a propriedade de duas mãos ou versátil para que você possa obter esse benefício."
+			]
+		},
+		{
+			"name": "Heightened Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Heightened Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 3
+			},
+			"entries": [
+				"Quando você conjura uma magia que força uma criatura a fazer um teste de resistência para resistir aos seus efeitos, você pode gastar 3 pontos de feitiçaria para dar desvantagem a um alvo da magia em seu primeiro teste de resistência feito contra a magia."
+			]
+		},
+		{
+			"name": "Heightened Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 2
+			},
+			"entries": [
+				"Quando você lança um feitiço que força uma criatura a fazer um teste de resistência, você pode gastar 2 Pontos de Feitiçaria para dar a um alvo do feitiço {@variantrule Disadvantage|XPHB} em testes de resistência contra o feitiço."
+			]
+		},
+		{
+			"name": "Helm of Awareness",
+			"source": "TCE",
+			"page": 21,
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 10,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A helmet (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Enquanto estiver usando este capacete, uma criatura tem vantagem nas jogadas de iniciativa. Além disso, o usuário não pode ser {@status surprised}, desde que não seja {@condition incapacitated}."
+			]
+		},
+		{
+			"name": "Hill Rune",
+			"source": "TCE",
+			"page": 45,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Fighter"
+						},
+						"subclass": {
+							"name": "Rune Knight",
+							"source": "TCE"
+						}
+					}
+				}
+			],
+			"entries": [
+				"A magia desta runa confere uma resiliência que lembra um gigante da colina. Ao usar ou carregar um objeto que contenha esta runa, você tem vantagem em testes de resistência contra ser {@condition poisoned} e tem resistência contra dano de veneno.",
+				"Além disso, você pode invocar a runa como uma ação bônus, ganhando resistência a danos de concussão, perfurantes e cortantes por 1 minuto. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Homunculus Servant",
+			"source": "TCE",
+			"page": 21,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A gem or crystal worth at least 100 gp"
+					]
+				}
+			],
+			"entries": [
+				"Você aprende métodos complexos para criar magicamente um {@creature Homunculus Servant|TCE|homunculus} especial que serve a você. O item que você infunde serve como o coração da criatura, em torno do qual o corpo da criatura se forma instantaneamente.",
+				"Você determina a aparência do homúnculo. Alguns artífices preferem pássaros de aparência mecânica, enquanto outros preferem frascos alados ou caldeirões animados em miniatura.",
+				"O homúnculo é amigável com você e seus companheiros e obedece aos seus comandos. Veja as estatísticas de jogo desta criatura no bloco de estatísticas Homunculus Servant, que usa seu bônus de proficiência (PB) em vários lugares.",
+				"Em combate, o homúnculo compartilha sua contagem de iniciativa, mas realiza seu turno imediatamente após o seu. Ele pode se mover e usar sua reação por conta própria, mas a única ação que ele realiza no seu turno é a ação {@action Dodge}, a menos que você execute uma ação bônus no seu turno para ordená-lo a realizar outra ação. Essa ação pode ser uma em seu bloco de estatísticas ou alguma outra ação. Se você for {@condition incapacitated}, o homúnculo pode realizar qualquer ação de sua escolha, não apenas {@action Dodge}.",
+				"O homúnculo recupera {@dice 2d6} pontos de vida se o feitiço {@spell mending} for lançado nele. Se você ou o homúnculo morrerem, ele desaparecerá, deixando seu coração em seu espaço."
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hunting Lessons",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"{@note This is a magical effect.} Um ranger habilidoso lhe ensinou como usar sua magia para identificar os pontos fracos de sua presa. Você pode gastar um uso de sua Inspiração de Bardo para atingir uma criatura que você possa ver a até 27 metros de você como sua presa. Enquanto você se concentrar nesta habilidade, até 1 hora, todos os ataques com arma que você fizer contra o alvo causarão dano adicional igual ao seu dado de Inspiração de Bardo.",
+				"No 6º nível, você aprimorou suas habilidades a ponto de poder rastrear facilmente sua presa. Durante a duração do efeito, você estará ciente da distância e direção aproximada do alvo em relação a você, desde que esteja no mesmo plano.",
+				"No 14º nível, você pode manter esse efeito por até 24 horas."
+			]
+		},
+		{
+			"name": "Improved Pact Weapon",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Lâmina"
+				}
+			],
+			"entries": [
+				"Você pode usar qualquer arma que invocar com seu recurso Pacto da Lâmina como foco de lançamento de seus feitiços de bruxo.",
+				"Além disso, a arma ganha um bônus de +1 em suas jogadas de ataque e dano, a menos que seja uma arma mágica que já tenha um bônus nessas jogadas.",
+				"Finalmente, a arma que você conjura pode ser {@item shortbow|phb}, {@item longbow|phb}, {@item light crossbow|phb} ou {@item heavy crossbow|phb}."
+			]
+		},
+		{
+			"name": "Interception",
+			"source": "TCE",
+			"page": 41,
+			"reprintedAs": [
+				{
+					"uid": "Interception|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:F",
+				"FS:P"
+			],
+			"entries": [
+				"Quando uma criatura que você pode ver atinge um alvo, que não seja você, a até 1,5 metro de você com um ataque, você pode usar sua reação para reduzir o dano que o alvo sofre em {@dice 1d10} + seu bônus de proficiência (até um mínimo de 0 de dano). Você deve estar empunhando um {@item shield|phb} ou um {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon} para usar esta reação."
+			]
+		},
+		{
+			"name": "Investment of the Chain Master",
+			"source": "TCE",
+			"page": 71,
+			"reprintedAs": [
+				"Investment of the Chain Master|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Corrente"
+				}
+			],
+			"entries": [
+				"Ao lançar {@spell find familiar}, você infunde no familiar invocado uma medida de seu poder sobrenatural, concedendo à criatura os seguintes benefícios:",
+				{
+					"type": "list",
+					"items": [
+						"O familiar ganha deslocamento de voo ou deslocamento de natação (sua escolha) de 12 metros.",
+						"Como uma ação bônus, você pode comandar o familiar para realizar a ação {@action Attack}.",
+						"Os ataques com armas do familiar são considerados mágicos com o propósito de superar imunidade e resistência a ataques não mágicos.",
+						"Se o familiar forçar uma criatura a fazer um teste de resistência, ele usará sua CD de resistência de magia.",
+						"Quando o familiar sofre dano, você pode usar sua reação para conceder-lhe resistência contra esse dano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Investment of the Chain Master",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"pact of the chain|xphb"
+					]
+				}
+			],
+			"entries": [
+				"Ao lançar {@spell Find Familiar|XPHB}, você infunde no familiar invocado uma medida de seu poder sobrenatural, concedendo à criatura os seguintes benefícios.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Aerial or Aquatic",
+							"entries": [
+								"O familiar ganha {@variantrule Fly Speed|XPHB} ou {@variantrule Swim Speed|XPHB} (sua escolha) de 12 metros."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Quick Attack",
+							"entries": [
+								"Como {@variantrule Bonus Action|XPHB}, você pode comandar o familiar para executar a ação {@action Attack|XPHB}."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Necrotic or Radiant Damage",
+							"entries": [
+								"Sempre que o familiar causar dano de concussão, perfurante ou cortante, você pode fazer com que ele cause dano necrótico ou radiante."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Your Save DC",
+							"entries": [
+								"Se o familiar forçar uma criatura a fazer um teste de resistência, ele usará sua CD de resistência de magia."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resistance",
+							"entries": [
+								"Quando o familiar sofre dano, você pode receber um {@variantrule Reaction|XPHB} para conceder-lhe {@variantrule Resistance|XPHB} contra esse dano."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lance of Lethargy",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"eldritch blast#c"
+					]
+				}
+			],
+			"entries": [
+				"Uma vez em cada um dos seus turnos, quando você atingir uma criatura com seu {@spell eldritch blast}, você pode reduzir a velocidade daquela criatura em 3 metros até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Lessons of the First Ones",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"featProgression": [
+				{
+					"name": "Origin Feat",
+					"category": [
+						"Ó"
+					],
+					"progression": {
+						"*": 1
+					}
+				}
+			],
+			"entries": [
+				"Você recebeu conhecimento de uma entidade anciã do multiverso, o que lhe permite ganhar um {@filter Origin feat|feats|category=o} de sua escolha.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Repeatable",
+							"entries": [
+								"Você pode obter esta invocação mais de uma vez. Cada vez que você fizer isso, escolha um talento de Origem diferente."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lifedrinker",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Lifedrinker|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 12,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Lâmina"
+				}
+			],
+			"entries": [
+				"Quando você atinge uma criatura com sua arma do pacto, a criatura sofre dano necrótico extra igual ao seu modificador de Carisma (mínimo de 1)."
+			]
+		},
+		{
+			"name": "Lifedrinker",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"pact of the blade|xphb"
+					]
+				}
+			],
+			"entries": [
+				"Uma vez por turno, quando você atinge uma criatura com sua arma do pacto, você pode causar um {@damage 1d6} de dano Necrótico, Psíquico ou Radiante extra (à sua escolha) à criatura, e você pode gastar um de seus {@variantrule Hit Point Dice|XPHB} para rolar e recuperar um número de {@variantrule Hit Points|XPHB} igual ao lançamento mais seu modificador de Constituição (mínimo de 1 {@variantrule Hit Points|XPHB|Hit Point})."
+			]
+		},
+		{
+			"name": "Lunging Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Lunging Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um ataque corpo a corpo com arma em seu turno, você pode gastar um dado de superioridade para aumentar o alcance desse ataque em 1,5 metro. Se acertar, você adiciona o dado de superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Lunging Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode gastar um Dado de Superioridade e realizar a ação {@action Dash|XPHB}. Se você se mover pelo menos 1,5 metro em linha reta imediatamente antes de atacar com um ataque corpo a corpo como parte da ação {@action Attack|XPHB} neste turno, você pode adicionar o Dado de Superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Maddening Hex",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"spell": [
+						"hex/curse#x"
+					]
+				}
+			],
+			"entries": [
+				"Como uma ação bônus, você causa um distúrbio psíquico ao redor do alvo amaldiçoado pelo seu feitiço {@spell hex} ou por um recurso de bruxo seu, como Maldição da Lâmina Maldita ou Sinal de Mau Presságio. Ao fazer isso, você causa dano psíquico ao alvo amaldiçoado e a cada criatura de sua escolha que você possa ver a até 1,5 metro dele. O dano psíquico é igual ao seu modificador de Carisma (mínimo de 1 dano). Para usar esta invocação, você deve ser capaz de ver o alvo amaldiçoado e ele deve estar a até 9 metros de você."
+			]
+		},
+		{
+			"name": "Maneuvering Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Maneuvering Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para manobrar um de seus camaradas para uma posição mais vantajosa. Você adiciona o dado de superioridade à jogada de dano do ataque e escolhe uma criatura aliada que possa ver ou ouvir você. Essa criatura pode usar sua reação para se mover até metade de seu deslocamento sem provocar ataques de oportunidade do alvo do seu ataque."
+			]
+		},
+		{
+			"name": "Maneuvering Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque, você pode gastar um Dado de Superioridade para manobrar um de seus camaradas para outra posição. Adicione a jogada do Dado de Superioridade à jogada de dano do ataque e escolha uma criatura voluntária que possa ver ou ouvir você. Essa criatura pode usar seu {@variantrule Reaction|XPHB} para mover até metade de seu {@variantrule Speed|XPHB} sem provocar um {@action Opportunity Attack|XPHB} do alvo do seu ataque."
+			]
+		},
+		{
+			"name": "Mask of Many Faces",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Mask of Many Faces|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"disguise self"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell disguise self} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Mask of Many Faces",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"disguise self|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Disguise Self|XPHB} sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Master of Myriad Forms",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Master of Myriad Forms|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"alter self"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell alter self} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Master of Myriad Forms",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"alter self|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Alter Self|XPHB} sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Menacing Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Menacing Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar assustar o alvo. Você adiciona o dado de superioridade à jogada de dano do ataque e o alvo deve fazer um teste de resistência de Sabedoria. Em caso de falha no salvamento, {@condition frightened} será seu até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Menacing Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque, você pode gastar um Dado de Superioridade para tentar assustar o alvo. Adicione o Dado de Superioridade à jogada de dano do ataque. O alvo deve ter sucesso em um teste de resistência de Sabedoria ou ter a condição {@condition Frightened|XPHB} até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Mind Sharpener",
+			"source": "TCE",
+			"page": 22,
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A suit of armor or robes"
+					]
+				}
+			],
+			"entries": [
+				"O item infundido pode dar um choque ao usuário para reorientar sua mente. O item tem 4 cargas. Quando o usuário falha em um teste de resistência de Constituição para manter {@status concentration} em um feitiço, o usuário pode usar sua reação para gastar 1 das cargas do item para ter sucesso. O item recupera {@dice 1d4} de cargas gastas diariamente ao amanhecer."
+			]
+		},
+		{
+			"name": "Minions of Chaos",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"conjure elemental"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell conjure elemental} uma vez usando um espaço de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Mire the Mind",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"slow"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell slow} uma vez usando um slot de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Mist Stance",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"gaseous form"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 4 pontos de ki para lançar {@spell gaseous form}, visando você mesmo."
+			]
+		},
+		{
+			"name": "Misty Visions",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Misty Visions|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"silent image"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell silent image} à vontade, sem gastar espaço de feitiço ou componentes materiais."
+			]
+		},
+		{
+			"name": "Misty Visions",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"silent image|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Silent Image|XPHB} sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "One with Shadows",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"One with Shadows|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Quando você está em uma área de pouca luz ou escuridão, você pode usar sua ação para se tornar {@condition invisible} até se mover ou realizar uma ação ou reação."
+			]
+		},
+		{
+			"name": "One with Shadows",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Enquanto estiver em uma área de {@variantrule Dim Light|XPHB} ou {@variantrule Darkness|XPHB}, você pode lançar {@spell Invisibility|XPHB} em si mesmo sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Otherworldly Leap",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Otherworldly Leap|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"jump"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell jump} em si mesmo à vontade, sem gastar espaço de feitiço ou componentes materiais."
+			]
+		},
+		{
+			"name": "Otherworldly Leap",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"jump|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Jump|XPHB} em si mesmo sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Pact of the Blade",
+			"source": "PHB",
+			"page": 107,
+			"srd": true,
+			"reprintedAs": [
+				"Pact of the Blade|XPHB"
+			],
+			"featureType": [
+				"OP"
+			],
+			"entries": [
+				"Você pode usar sua ação para criar uma arma de pacto em sua mão vazia. Você pode escolher a forma que esta arma corpo-a-corpo assume cada vez que você a cria (veja o capítulo 5 para opções de armas). Você é proficiente com ela enquanto a maneja. Esta arma conta como mágica com o propósito de superar a resistência e imunidade a ataques e danos não mágicos.",
+				"Sua arma do pacto desaparece se estiver a mais de 1,5 metro de você por 1 minuto ou mais. Ele também desaparece se você usar esse recurso novamente, se você descartar a arma (nenhuma ação é necessária) ou se você morrer.",
+				"Você pode transformar uma arma mágica em sua arma do pacto realizando um ritual especial enquanto segura a arma. Você realiza o ritual ao longo de 1 hora, o que pode ser feito durante um breve descanso. Você pode então dispensar a arma, desviando-a para um espaço extradimensional, e ela aparecerá sempre que você criar sua arma de pacto depois disso. Você não pode afetar um artefato ou uma arma senciente desta forma. A arma deixa de ser sua arma de pacto se você morrer, se você realizar o ritual de 1 hora em uma arma diferente, ou se você usar um ritual de 1 hora para quebrar seu vínculo com ela. A arma aparece aos seus pés se estiver no espaço extradimensional quando o vínculo se rompe."
+			]
+		},
+		{
+			"name": "Pact of the Blade",
+			"source": "XPHB",
+			"page": 156,
+			"featureType": [
+				"EI"
+			],
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode conjurar uma arma de pacto em sua mão – uma arma Corpo a Corpo Simples ou Marcial de sua escolha com a qual você se vincula – ou criar um vínculo com uma arma mágica que você toca; você não pode se vincular a uma arma mágica se outra pessoa estiver sintonizada com ela ou se outro Warlock estiver vinculado a ela. Até o fim do vínculo, você tem proficiência com a arma e pode usá-la como {@variantrule Spellcasting Focus|XPHB}.",
+				"Sempre que você atacar com a arma vinculada, você pode usar seu modificador de Carisma para as jogadas de ataque e dano em vez de usar Força ou Destreza; e você pode fazer com que a arma cause dano Necrótico, Psíquico ou Radiante ou seu tipo de dano normal.",
+				"Seu vínculo com a arma termina se você usar {@variantrule Bonus Action|XPHB} deste recurso novamente, se a arma estiver a mais de 1,5 metro de distância de você por 1 minuto ou mais, ou se você morrer. Uma arma conjurada desaparece quando o vínculo termina."
+			]
+		},
+		{
+			"name": "Pact of the Chain",
+			"source": "PHB",
+			"page": 107,
+			"srd": true,
+			"reprintedAs": [
+				"Pact of the Chain|XPHB"
+			],
+			"featureType": [
+				"OP"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"find familiar"
+							]
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você aprende o feitiço {@spell find familiar} e pode lançá-lo como um ritual. O feitiço não conta no número de feitiços conhecidos.",
+				"Ao lançar o feitiço, você pode escolher uma das formas normais para o seu familiar ou uma das seguintes formas especiais: {@creature imp}, {@creature pseudodragon}, {@creature quasit} ou {@creature sprite}.",
+				"Além disso, ao realizar a ação {@action Attack}, você pode renunciar a um de seus próprios ataques para permitir que seu familiar use sua reação para realizar um ataque próprio."
+			]
+		},
+		{
+			"name": "Pact of the Chain",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"find familiar|xphb"
+							]
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você aprende o feitiço {@spell Find Familiar|XPHB} e pode lançá-lo como uma ação {@action Magic|XPHB} sem gastar um espaço de feitiço.",
+				"Ao lançar o feitiço, você escolhe uma das formas normais para o seu familiar ou uma das seguintes formas especiais: {@creature Imp|XPHB}, {@creature Pseudodragon|XPHB}, {@creature Quasit|XPHB}, {@creature Skeleton|XPHB}, {@creature Slaad Tadpole|XPHB}, {@creature Sphinx of Wonder|XPHB}, {@creature Sprite|XPHB}, ou {@creature Venomous Snake|XPHB} (veja o apêndice B para o bloco de estatísticas do familiar).",
+				"Além disso, ao realizar a ação {@action Attack|XPHB}, você pode renunciar a um de seus próprios ataques para permitir que seu familiar faça um ataque próprio com seu {@variantrule Reaction|XPHB}."
+			]
+		},
+		{
+			"name": "Pact of the Talisman",
+			"source": "TCE",
+			"page": 71,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"OP"
+			],
+			"entries": [
+				"Seu patrono lhe dá um amuleto, um talismã que pode ajudar o usuário quando a necessidade for grande. Quando o usuário falha em um teste de habilidade, ele pode adicionar {@dice d4} ao teste, potencialmente transformando o teste em um sucesso. Este benefício pode ser usado um número de vezes igual ao seu bônus de proficiência, e todos os usos gastos são restaurados quando você termina um descanso longo.",
+				"Se você perder o talismã, poderá realizar uma cerimônia de 1 hora para receber um substituto do seu patrono. Esta cerimônia pode ser realizada durante um descanso curto ou longo e destrói o amuleto anterior. O talismã vira cinzas quando você morre."
+			]
+		},
+		{
+			"name": "Pact of the Tome",
+			"source": "PHB",
+			"page": 108,
+			"srd": true,
+			"reprintedAs": [
+				"Pact of the Tome|XPHB"
+			],
+			"featureType": [
+				"OP"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0",
+								"count": 3
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"Seu patrono lhe dá um grimório chamado Livro das Sombras. Ao ganhar esse recurso, escolha três {@filter cantrips|spells|level=0} da lista de magias de qualquer classe. Os truques não precisam ser da mesma lista de magias. Enquanto o livro estiver com você, você pode lançar esses truques à vontade. Eles não contam no número de truques conhecidos. Qualquer truque que você lançar com esse recurso será considerado um truque de bruxo para você. Se você perder seu Livro das Sombras, poderá realizar uma cerimônia de 1 hora para receber um substituto de seu patrono. Esta cerimônia pode ser realizada durante um descanso curto ou longo e destrói o livro anterior. O livro vira cinzas quando você morre."
+			]
+		},
+		{
+			"name": "Pact of the Tome",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"known": {
+						"_": [
+							{
+								"choose": "level=0",
+								"count": 3
+							}
+						]
+					},
+					"prepared": {
+						"_": [
+							{
+								"choose": "level=1|components & miscellaneous=ritual",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
+			"entries": [
+				"Costurando fios de sombra, você evoca um livro em suas mãos no final de um {@variantrule Short Rest|XPHB|Short} ou {@variantrule Long Rest|XPHB}. Este Livro das Sombras (você determina sua aparência) contém magia sobrenatural que somente você pode acessar, garantindo os benefícios abaixo. O livro desaparece se você invocar outro livro com esse recurso ou se você morrer.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Cantrips and Rituals",
+							"entries": [
+								"Quando o livro aparecer, escolha três {@filter cantrips|spells|level=0} e escolha dois {@filter level 1 spells|spells|level=1|components & miscellaneous=ritual} que tenham a tag {@variantrule Ritual|XPHB}. Os feitiços podem ser da lista de feitiços de qualquer classe e devem ser feitiços que você ainda não tenha preparado. Enquanto o livro estiver com você, você terá os feitiços escolhidos preparados e eles funcionarão como feitiços de Warlock para você."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Spellcasting Focus",
+							"entries": [
+								"Você pode usar o livro como {@variantrule Spellcasting Focus|XPHB}."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Parry",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Parry|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando outra criatura causar dano a você com um ataque corpo a corpo, você pode usar sua reação e gastar um dado de superioridade para reduzir o dano pelo número obtido em seu dado de superioridade + seu modificador de Destreza."
+			]
+		},
+		{
+			"name": "Parry",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando outra criatura causa dano a você com uma jogada de ataque corpo a corpo, você pode pegar um {@variantrule Reaction|XPHB} e gastar um Dado de Superioridade para reduzir o dano pelo número obtido em seu Dado de Superioridade mais seu modificador de Força ou Destreza (sua escolha)."
+			]
+		},
+		{
+			"name": "Piercing Arrow",
+			"source": "XGE",
+			"page": 29,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Você usa magia de transmutação para dar à sua flecha uma qualidade etérea. Ao usar esta opção, você não faz uma jogada de ataque para o ataque. Em vez disso, a flecha dispara para frente em uma linha de 30 centímetros de largura e 9 metros de comprimento, antes de desaparecer. A flecha passa inofensivamente pelos objetos, ignorando a cobertura. Cada criatura naquela linha deve fazer um teste de resistência de Destreza. Se falhar na resistência, a criatura sofre dano como se tivesse sido atingida pela flecha, além de um dano perfurante extra de {@damage 1d6}. Em um teste bem-sucedido, o alvo sofre metade do dano.",
+				"O dano perfurante aumenta para {@damage 2d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Precision Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Precision Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz uma jogada de ataque com arma contra uma criatura, você pode gastar um dado de superioridade para adicioná-lo à jogada. Você pode usar esta manobra antes ou depois de fazer a jogada de ataque, mas antes de qualquer efeito do ataque ser aplicado."
+			]
+		},
+		{
+			"name": "Precision Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você erra uma jogada de ataque, você pode gastar um Dado de Superioridade, rolar esse dado e adicioná-lo à jogada de ataque, potencialmente fazendo com que o ataque acerte."
+			]
+		},
+		{
+			"name": "Protection",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "PHB",
+					"page": 84
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Protection|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:P"
+			],
+			"entries": [
+				"Quando uma criatura que você pode ver ataca um alvo que não seja você e que está a até 1,5 metro de você, você pode usar sua reação para impor desvantagem na jogada de ataque. Você deve estar empunhando um escudo."
+			]
+		},
+		{
+			"name": "Protection of the Talisman",
+			"source": "TCE",
+			"page": 71,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"pact": "Talismã"
+				}
+			],
+			"entries": [
+				"Quando o usuário do seu talismã falha em um teste de resistência, ele pode adicionar {@dice d4} ao teste, potencialmente transformando o salvamento em um sucesso. Este benefício pode ser usado um número de vezes igual ao seu bônus de proficiência, e todos os usos gastos são restaurados quando você termina um descanso longo."
+			]
+		},
+		{
+			"name": "Pushing Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Pushing Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar repelir o alvo. Você adiciona o dado de superioridade à jogada de dano do ataque e, se o alvo for Grande ou menor, ele deve realizar um teste de resistência de Força. Se falhar na resistência, você empurra o alvo até 4,5 metros de distância de você."
+			]
+		},
+		{
+			"name": "Pushing Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque usando uma arma ou um {@variantrule Unarmed Strike|XPHB}, você pode gastar um Dado de Superioridade para tentar empurrar o alvo para trás. Adicione o Dado de Superioridade à jogada de dano do ataque. Se o alvo for Grande ou menor, ele deve ser bem sucedido em um teste de resistência de Força ou será empurrado até 4,5 metros diretamente para longe de você."
+			]
+		},
+		{
+			"name": "Quick Toss",
+			"source": "TCE",
+			"page": 42,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como uma ação bônus, você pode gastar um dado de superioridade e fazer um ataque à distância com uma arma que possua a propriedade de arremesso. Você pode sacar a arma como parte do ataque. Se você acertar, adicione o dado de superioridade à jogada de dano da arma."
+			]
+		},
+		{
+			"name": "Quickened Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Quickened Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 2
+			},
+			"entries": [
+				"Quando você conjura uma magia que tem um tempo de conjuração de 1 ação, você pode gastar 2 pontos de feitiçaria para alterar o tempo de conjuração para 1 ação bônus para esta conjuração."
+			]
+		},
+		{
+			"name": "Quickened Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 2
+			},
+			"entries": [
+				"Quando você lança um feitiço que tem um tempo de lançamento de uma ação, você pode gastar 2 Pontos de Feitiçaria para alterar o tempo de lançamento para {@variantrule Bonus Action|XPHB} para este lançamento. Você não pode modificar uma magia desta forma se já tiver lançado uma magia de nível 1+ no turno atual, nem pode lançar uma magia de nível 1+ neste turno após modificar uma magia desta forma."
+			]
+		},
+		{
+			"name": "Radiant Weapon",
+			"source": "TCE",
+			"page": 22,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A simple or martial weapon (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Esta arma mágica concede um bônus de +1 nas jogadas de ataque e dano feitas com ela. Enquanto estiver segurando-o, o usuário pode realizar uma ação bônus para fazer com que ele emita luz brilhante em um raio de 9 metros e penumbra por mais 9 metros adicionais. O usuário pode apagar a luz como uma ação bônus.",
+				"A arma tem 4 cargas. Como reação imediatamente após ser atingido por um ataque, o portador pode gastar 1 carga e fazer com que o atacante fique {@condition blinded} até o final do próximo turno do atacante, a menos que o atacante tenha sucesso em um teste de resistência de Constituição contra sua CD de salvamento de feitiço. A arma recupera {@dice 1d4} de cargas gastas diariamente ao amanhecer."
+			]
+		},
+		{
+			"name": "Rally",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Rally|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"No seu turno, você pode usar uma ação bônus e gastar um dado de superioridade para reforçar a determinação de um de seus companheiros. Ao fazer isso, escolha uma criatura amigável que possa ver ou ouvir você. Essa criatura ganha pontos de vida temporários iguais ao resultado do dado de superioridade + seu modificador de Carisma."
+			]
+		},
+		{
+			"name": "Rally",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Como {@variantrule Bonus Action|XPHB}, você pode gastar um Dado de Superioridade para reforçar a determinação de um companheiro. Escolha um aliado seu a até 9 metros de você que possa ver ou ouvir você. Essa criatura ganha {@variantrule Temporary Hit Points|XPHB} igual ao teste do Dado de Superioridade mais metade do seu nível de Lutador (arredondado para baixo)."
+			]
+		},
+		{
+			"name": "Rebuke of the Talisman",
+			"source": "TCE",
+			"page": 71,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Talismã"
+				}
+			],
+			"entries": [
+				"Quando o usuário do seu talismã é atingido por um atacante que você pode ver a até 9 metros de você, você pode usar sua reação para causar dano psíquico ao atacante igual ao seu bônus de proficiência e empurrá-lo até 3 metros de distância do usuário do talismã."
+			]
+		},
+		{
+			"name": "Reckless Tactics",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"Você aprendeu com um bárbaro endurecido que às vezes você tem que entrar em combate sem se preocupar com sua própria segurança. Quando você faz um ataque com uma arma corpo a corpo que tenha qualidade pesada, de duas mãos ou versátil, você pode gastar um uso de sua Inspiração de Bardo para obter vantagem no ataque. Adicione o número obtido em seu dado de Inspiração de Bardo + seu modificador de Sabedoria (mínimo de 1) à jogada de dano do ataque. Os ataques feitos contra você nesta rodada têm vantagem.",
+				"No 6º nível você aprendeu, através da prática, como levar seu ataque ainda mais longe. Você pode impor uma penalidade de -5 nesta jogada de ataque. Se o ataque acertar, você adiciona +10 ao dano do ataque.",
+				"No 14º nível, sua experiência lhe ensinou como realmente apostar tudo. Se você não se moveu neste turno, você pode voluntariamente reduzir sua velocidade para 0 até seu próximo turno para resolver este ataque contra qualquer número de criaturas a até 1,5 metro de você, fazendo uma jogada de ataque separada para cada alvo."
+			]
+		},
+		{
+			"name": "Relentless Hex",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					},
+					"spell": [
+						"hex/curse#x"
+					]
+				}
+			],
+			"entries": [
+				"Sua maldição cria um vínculo temporário entre você e seu alvo. Como uma ação bônus, você pode se teletransportar magicamente até 9 metros para um espaço desocupado que você possa ver a até 1,5 metros do alvo amaldiçoado por seu feitiço {@spell hex} ou por um recurso de bruxo seu, como Maldição da Lâmina Maldita ou Sinal de Mau Presságio. Para se teletransportar desta forma, você deve ser capaz de ver o alvo amaldiçoado."
+			]
+		},
+		{
+			"name": "Repeating Shot",
+			"source": "TCE",
+			"page": 22,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 62
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon with the ammunition property (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Esta arma mágica concede um bônus de +1 nas jogadas de ataque e dano feitas com ela quando é usada para fazer um ataque à distância e ignora a propriedade de carregamento, se a tiver.",
+				"Se a arma não tiver munição, ela produz a sua própria, criando automaticamente uma peça de munição mágica quando o usuário faz um ataque à distância com ela. A munição criada pela arma desaparece no instante após atingir ou errar um alvo."
+			]
+		},
+		{
+			"name": "Repelling Blast",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Repelling Blast|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						"eldritch blast#c"
+					]
+				}
+			],
+			"entries": [
+				"Ao atingir uma criatura com {@spell eldritch blast}, você pode empurrar a criatura até 3 metros de distância de você em linha reta."
+			]
+		},
+		{
+			"name": "Repelling Blast",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"spell": [
+						{
+							"choose": "nível=0|class=Bruxo",
+							"entry": "um truque de bruxo que causa dano por meio de uma jogada de ataque",
+							"entrySummary": "Truque de Warlock que causa dano por meio de uma jogada de ataque"
+						}
+					],
+					"level": {
+						"level": 2,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"entries": [
+				"Escolha um dos seus {@filter Warlock cantrips|spells|level=0|class=Warlock} conhecidos que requer uma jogada de ataque. Quando você atinge uma criatura Grande ou menor com esse truque, você pode empurrar a criatura até 3 metros de distância de você.",
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Repeatable",
+							"entries": [
+								"Você pode obter esta invocação mais de uma vez. Cada vez que você fizer isso, escolha uma viagem elegível diferente."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Replicate Magic Item",
+			"source": "TCE",
+			"page": 22,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 63
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"entries": [
+				"Usando esta infusão, você replica um item mágico específico. Você pode aprender esta infusão várias vezes; cada vez que fizer isso, escolha um item mágico que você possa fazer com ele, escolhendo na tabela de Itens Replicáveis ​​abaixo. O título de uma tabela informa o nível que você deve estar na classe para escolher um item da tabela. Alternativamente, você pode escolher o item mágico entre os {@filter common magic items|items|type=!potion;!scroll|rarity=common} do jogo, sem incluir poções ou pergaminhos.",
+				"Nas tabelas, a entrada de um item informa se o item requer sintonização. Veja a descrição do item no {@book Dungeon Master's Guide|DMG} para mais informações sobre ele, inclusive o tipo de objeto necessário para sua confecção.",
+				{
+					"type": "table",
+					"caption": "Itens Replicáveis (Artífice de 2º Nível)",
+					"colLabels": [
+						"Item Mágico",
+						"Sintonização"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 centro de texto"
+					],
+					"rows": [
+						[
+							"{@item Alchemy jug}",
+							"Não"
+						],
+						[
+							"{@item Bag of holding}",
+							"Não"
+						],
+						[
+							"{@item Cap of water breathing}",
+							"Não"
+						],
+						[
+							"{@item Goggles of night}",
+							"Não"
+						],
+						[
+							"{@item Rope of climbing}",
+							"Não"
+						],
+						[
+							"{@item Sending stones}",
+							"Não"
+						],
+						[
+							"{@item Wand of magic detection}",
+							"Não"
+						],
+						[
+							"{@item Wand of secrets}",
+							"Não"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Itens Replicáveis (Artífice de 6º Nível)",
+					"colLabels": [
+						"Item Mágico",
+						"Sintonização"
+					],
+					"colStyles": [
+						"col-10",
+						"col-2 centro de texto"
+					],
+					"rows": [
+						[
+							"{@item Boots of elvenkind}",
+							"Não"
+						],
+						[
+							"{@item Cloak of elvenkind}",
+							"Sim"
+						],
+						[
+							"{@item Cloak of the manta ray}",
+							"Não"
+						],
+						[
+							"{@item Eyes of charming}",
+							"Sim"
+						],
+						[
+							"{@item Gloves of thievery}",
+							"Não"
+						],
+						[
+							"{@item Lantern of revealing}",
+							"Não"
+						],
+						[
+							"{@item Pipes of haunting}",
+							"Não"
+						],
+						[
+							"{@item Ring of water walking}",
+							"Não"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Itens Replicáveis (Artífice de 10º Nível)",
+					"colLabels": [
+						"Item Mágico",
+						"Sintonização"
+					],
+					"colStyles": [
+						"col-11",
+						"col-2 centro de texto"
+					],
+					"rows": [
+						[
+							"{@item Boots of striding and springing}",
+							"Sim"
+						],
+						[
+							"{@item Boots of the winterlands}",
+							"Sim"
+						],
+						[
+							"{@item Bracers of archery}",
+							"Sim"
+						],
+						[
+							"{@item Brooch of shielding}",
+							"Sim"
+						],
+						[
+							"{@item Cloak of protection}",
+							"Sim"
+						],
+						[
+							"{@item Eyes of the eagle}",
+							"Sim"
+						],
+						[
+							"{@item Gauntlets of ogre power}",
+							"Sim"
+						],
+						[
+							"{@item Gloves of missile snaring}",
+							"Sim"
+						],
+						[
+							"{@item Gloves of swimming and climbing}",
+							"Sim"
+						],
+						[
+							"{@item Hat of disguise}",
+							"Sim"
+						],
+						[
+							"{@item Headband of intellect}",
+							"Sim"
+						],
+						[
+							"{@item Helm of telepathy}",
+							"Sim"
+						],
+						[
+							"{@item Medallion of thoughts}",
+							"Sim"
+						],
+						[
+							"{@item Necklace of adaptation}",
+							"Sim"
+						],
+						[
+							"{@item Periapt of wound closure}",
+							"Sim"
+						],
+						[
+							"{@item Pipes of the sewers}",
+							"Sim"
+						],
+						[
+							"{@item Quiver of Ehlonna}",
+							"Não"
+						],
+						[
+							"{@item Ring of jumping}",
+							"Sim"
+						],
+						[
+							"{@item Ring of mind shielding}",
+							"Sim"
+						],
+						[
+							"{@item Slippers of spider climbing}",
+							"Sim"
+						],
+						[
+							"{@item Ventilating lungs|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Sim"
+						],
+						[
+							"{@item Winged boots}",
+							"Sim"
+						]
+					]
+				},
+				{
+					"type": "table",
+					"caption": "Itens Replicáveis (Artífice de 14º Nível)",
+					"colLabels": [
+						"Item Mágico",
+						"Sintonização"
+					],
+					"colStyles": [
+						"col-11",
+						"col-1 centro de texto"
+					],
+					"rows": [
+						[
+							"{@item Amulet of health}",
+							"Sim"
+						],
+						[
+							"{@item Arcane propulsion arm|ERLW} (detailed in {@book chapter 5|ERLW|13})",
+							"Sim"
+						],
+						[
+							"{@item Belt of hill giant strength}",
+							"Sim"
+						],
+						[
+							"{@item Boots of levitation}",
+							"Sim"
+						],
+						[
+							"{@item Boots of speed}",
+							"Sim"
+						],
+						[
+							"{@item Bracers of defense}",
+							"Sim"
+						],
+						[
+							"{@item Cloak of the bat}",
+							"Sim"
+						],
+						[
+							"{@item Dimensional shackles}",
+							"Não"
+						],
+						[
+							"{@item Gem of seeing}",
+							"Sim"
+						],
+						[
+							"{@item Horn of blasting}",
+							"Não"
+						],
+						[
+							"{@item Ring of free action}",
+							"Sim"
+						],
+						[
+							"{@item Ring of protection}",
+							"Sim"
+						],
+						[
+							"{@item Ring of the ram}",
+							"Sim"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Repulsion Shield",
+			"source": "TCE",
+			"page": 23,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 63
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A shield (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Uma criatura ganha +1 de bônus na Classe de Armadura enquanto empunhar este escudo.",
+				"O escudo tem 4 cargas. Enquanto o segura, o usuário pode usar uma reação imediatamente após ser atingido por um ataque corpo a corpo para gastar 1 das cargas do escudo e empurrar o atacante até 4,5 metros de distância. O escudo recupera {@dice 1d4} de cargas gastas diariamente ao amanhecer."
+			]
+		},
+		{
+			"name": "Resistant Armor",
+			"source": "TCE",
+			"page": 23,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 63
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A suit of armor (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Enquanto estiver usando esta armadura, uma criatura tem resistência a um dos seguintes tipos de dano, que você escolhe ao infundir o item: ácido, frio, fogo, força, raio, necrótico, venenoso, psíquico, radiante ou trovão."
+			]
+		},
+		{
+			"name": "Returning Weapon",
+			"source": "TCE",
+			"page": 23,
+			"otherSources": [
+				{
+					"source": "ERLW",
+					"page": 63
+				}
+			],
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"item": [
+						"A simple or martial weapon with the thrown property"
+					]
+				}
+			],
+			"entries": [
+				"Esta arma mágica concede um bônus de +1 nas jogadas de ataque e dano feitas com ela, e retorna para a mão do usuário imediatamente após ser usada para fazer um ataque à distância."
+			]
+		},
+		{
+			"name": "Ride the Wind",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 11,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fly"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 4 pontos de ki para lançar {@spell fly}, visando você mesmo."
+			]
+		},
+		{
+			"name": "Riposte",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Riposte|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando uma criatura erra você em um ataque corpo a corpo, você pode usar sua reação e gastar um dado de superioridade para fazer um ataque corpo a corpo com arma contra a criatura. Se acertar, você adiciona o dado de superioridade à jogada de dano do ataque."
+			]
+		},
+		{
+			"name": "Riposte",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando uma criatura erra você em uma jogada de ataque corpo a corpo, você pode pegar um {@variantrule Reaction|XPHB} e gastar um Dado de Superioridade para fazer uma jogada de ataque corpo a corpo com uma arma ou um {@variantrule Unarmed Strike|XPHB} contra a criatura. Se acertar, adicione o Dado de Superioridade ao dano do ataque."
+			]
+		},
+		{
+			"name": "River of Hungry Flame",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"wall of fire"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 5 pontos de ki para lançar {@spell wall of fire}."
+			]
+		},
+		{
+			"name": "Rush of the Gale Spirits",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"gust of wind"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 2 pontos de ki para lançar {@spell gust of wind}."
+			]
+		},
+		{
+			"name": "Sculptor of Flesh",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"polymorph"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell polymorph} uma vez usando um slot de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Seeking Arrow",
+			"source": "XGE",
+			"page": 30,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Usando magia de adivinhação, você concede à sua flecha a habilidade de procurar um alvo. Ao usar esta opção, você não faz uma jogada de ataque para o ataque. Em vez disso, escolha uma criatura que você viu no último minuto. A flecha voa em direção àquela criatura, movendo-se pelos cantos se necessário e ignorando {@quickref Cover||3||three-quarters cover} e {@quickref Cover||3||half cover}. Se o alvo estiver dentro do alcance da arma e houver um caminho grande o suficiente para a flecha viajar até o alvo, o alvo deve fazer um teste de resistência de Destreza. Caso contrário, a seta desaparece depois de viajar o mais longe possível. Se falhar no salvamento, o alvo sofre dano como se tivesse sido atingido pela flecha, além de um {@damage 1d6} de dano de força extra, e você aprende a localização atual do alvo. Se obtiver sucesso, o alvo sofre metade do dano e você não descobre sua localização.",
+				"O dano de força aumenta para {@damage 2d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Seeking Spell",
+			"source": "TCE",
+			"page": 66,
+			"reprintedAs": [
+				"Seeking Spell|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 2
+			},
+			"entries": [
+				"Se você fizer uma jogada de ataque para um feitiço e errar, você pode gastar 2 pontos de feitiçaria para rolar novamente o {@dice d20} e deverá usar a nova jogada.",
+				"Você pode usar o Feitiço de Busca mesmo se já tiver usado uma opção Metamágica diferente durante o lançamento do feitiço."
+			]
+		},
+		{
+			"name": "Seeking Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amount": 1
+			},
+			"entries": [
+				"Se você fizer uma jogada de ataque para um feitiço e errar, você pode gastar 1 Ponto de Feitiçaria para rolar novamente o {@dice d20} e deverá usar a nova jogada.",
+				"Você pode usar o Feitiço de Busca mesmo se já tiver usado uma opção Metamágica diferente durante o lançamento do feitiço."
+			]
+		},
+		{
+			"name": "Shadow Arrow",
+			"source": "XGE",
+			"page": 30,
+			"featureType": [
+				"COMO"
+			],
+			"consumes": {
+				"name": "Arcane Shot"
+			},
+			"entries": [
+				"Você entrelaça magia de ilusão em sua flecha, fazendo com que ela obstrua a visão de seu inimigo com sombras. A criatura atingida pela flecha sofre {@damage 2d6} de dano psíquico extra e deve ser bem sucedida em um teste de resistência de Sabedoria ou será incapaz de ver qualquer coisa a mais de 1,5 metro de distância até o início do seu próximo turno.",
+				"O dano psíquico aumenta para {@damage 4d6} quando você atinge o 18º nível nesta classe."
+			]
+		},
+		{
+			"name": "Shape the Flowing River",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"entries": [
+				"Como uma ação, você pode gastar 1 ponto de ki para escolher uma área de gelo ou água não maior que 9 metros de lado, a até 36 metros de você. Você pode transformar água em gelo dentro da área e vice-versa, e pode remodelar o gelo na área da maneira que desejar. Você pode aumentar ou diminuir a elevação do gelo, criar ou preencher uma trincheira, erguer ou nivelar uma parede ou formar um pilar. A extensão de tais alterações não pode exceder metade da maior dimensão da área. Por exemplo, se você afetar um quadrado de 9 metros, poderá criar um pilar de até 4,5 metros de altura. aumentar ou diminuir a elevação do quadrado em até 4,5 metros, cavar uma trincheira de até 4,5 metros de profundidade e assim por diante. Você não pode moldar o gelo para prender ou ferir uma criatura na área."
+			]
+		},
+		{
+			"name": "Shroud of Shadow",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell invisibility} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Sign of Ill Omen",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bestow curse"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell bestow curse} uma vez usando um slot de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Spell-Refueling Ring",
+			"source": "TCE",
+			"page": 23,
+			"featureType": [
+				"IA"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 6,
+						"class": {
+							"name": "Artificer",
+							"source": "TCE"
+						}
+					},
+					"item": [
+						"A ring (requires attunement)"
+					]
+				}
+			],
+			"entries": [
+				"Enquanto estiver usando este anel, a criatura pode recuperar um espaço de magia gasto como uma ação. O slot recuperado pode ser de 3º nível ou inferior. Uma vez usado, o anel não poderá ser usado novamente até o próximo amanhecer."
+			]
+		},
+		{
+			"name": "Stone Rune",
+			"source": "TCE",
+			"page": 45,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"senses": [
+				{
+					"darkvision": 120
+				}
+			],
+			"entries": [
+				"A magia desta runa canaliza a sensatez associada aos gigantes de pedra. Ao usar ou carregar um objeto inscrito com esta runa, você tem vantagem em testes de Sabedoria ({@skill Insight}) e tem {@sense darkvision} em um alcance de 36 metros.",
+				"Além disso, quando uma criatura que você pode ver termina seu turno a até 9 metros de você, você pode usar sua reação para invocar a runa e forçar a criatura a fazer um teste de resistência de Sabedoria. A menos que o salvamento seja bem-sucedido, a criatura estará {@condition charmed} perto de você por 1 minuto. Enquanto {@condition charmed} desta forma, a criatura tem uma velocidade de 0 e é {@condition incapacitated}, caindo em um estupor sonhador. A criatura repete o teste de resistência no final de cada um de seus turnos, encerrando o efeito se obtiver sucesso. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Storm Rune",
+			"source": "TCE",
+			"page": 45,
+			"featureType": [
+				"Enfermeiro"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Fighter"
+						},
+						"subclass": {
+							"name": "Rune Knight",
+							"source": "TCE"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Usando esta runa, você pode vislumbrar o futuro como um vidente gigante da tempestade. Ao usar ou carregar um objeto inscrito com esta runa, você tem vantagem em testes de Inteligência ({@skill Arcana}) e não pode ser {@status surprised} contanto que não seja {@condition incapacitated}.",
+				"Além disso, você pode invocar a runa como uma ação bônus para entrar em um estado profético por 1 minuto ou até estar {@condition incapacitated}. Até que o estado termine, quando você ou outra criatura que você possa ver a até 18 metros de você fizer uma jogada de ataque, um teste de resistência ou um teste de habilidade, você pode usar sua reação para fazer com que a jogada tenha vantagem ou desvantagem. Depois de invocar esta runa, você não poderá fazê-lo novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Subtle Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Subtle Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Ao lançar uma magia, você pode gastar 1 ponto de feitiçaria para lançá-la sem quaisquer componentes somáticos ou verbais."
+			]
+		},
+		{
+			"name": "Subtle Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Ao lançar uma mágica, você pode gastar 1 Ponto de Feitiço para lançá-la sem quaisquer componentes Verbais, Somáticos ou Materiais, exceto componentes materiais que são consumidos pela magia ou que têm um custo especificado na magia."
+			]
+		},
+		{
+			"name": "Superior Technique",
+			"source": "TCE",
+			"page": 41,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:F"
+			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Maneuvers",
+					"featureType": [
+						"VM: B"
+					],
+					"progression": {
+						"*": 1
+					}
+				}
+			],
+			"entries": [
+				"Você aprende um {@filter maneuver|optionalfeatures|feature type=MV:B} de sua escolha entre aqueles disponíveis para o arquétipo {@class fighter|phb|Battle Master|Battle Master|phb|2-0}. Se uma manobra que você usa exige que seu alvo faça um teste de resistência para resistir aos efeitos da manobra, a CD do teste de resistência é igual a 8 + seu bônus de proficiência + seu modificador de Força ou Destreza (sua escolha).",
+				"Você ganha um dado de superioridade, que é {@dice d6} (este dado é adicionado a qualquer dado de superioridade que você tenha de outra fonte). Este dado é usado para alimentar suas manobras. Um dado de superioridade é gasto quando você o usa. Você recupera seus dados de superioridade gastos ao terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Sweeping Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Sweeping Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma corpo a corpo, você pode gastar um dado de superioridade para tentar causar dano a outra criatura com o mesmo ataque. Escolha outra criatura a até 1,5 metro do alvo original e ao seu alcance. Se a jogada de ataque original atingir a segunda criatura, ela sofrerá dano igual ao número obtido no seu dado de superioridade. O dano é do mesmo tipo causado pelo ataque original."
+			]
+		},
+		{
+			"name": "Sweeping Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque corpo a corpo usando uma arma ou um {@variantrule Unarmed Strike|XPHB}, você pode gastar um Dado de Superioridade para tentar causar dano a outra criatura. Escolha outra criatura a até 1,5 metro do alvo original e ao seu alcance. Se a jogada de ataque original atingir a segunda criatura, ela sofrerá dano igual ao número obtido em seu Dado de Superioridade. O dano é do mesmo tipo causado pelo ataque original."
+			]
+		},
+		{
+			"name": "Sweeping Cinder Strike",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"burning hands"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 2 pontos de ki para lançar {@spell burning hands}."
+			]
+		},
+		{
+			"name": "Tactical Assessment",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				"Tactical Assessment|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Inteligência ({@skill Investigation}), Inteligência ({@skill History}) ou Sabedoria ({@skill Insight}), você pode gastar um dado de superioridade e adicionar o dado de superioridade ao teste de habilidade."
+			]
+		},
+		{
+			"name": "Tactical Assessment",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você faz um teste de Inteligência ({@skill History|XPHB} ou {@skill Investigation|XPHB}) ou de Sabedoria ({@skill Insight|XPHB}), você pode gastar um Dado de Superioridade e adicionar esse dado ao teste de habilidade."
+			]
+		},
+		{
+			"name": "Thief of Five Fates",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bane"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell bane} uma vez usando um espaço de feitiço de bruxo. Você não pode fazer isso novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Thirsting Blade",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Thirsting Blade|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Lâmina",
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode atacar com sua arma do pacto duas vezes, em vez de uma, sempre que realizar a ação {@action Attack} no seu turno."
+			]
+		},
+		{
+			"name": "Thirsting Blade",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					},
+					"optionalfeature": [
+						"pact of the blade|xphb"
+					]
+				}
+			],
+			"entries": [
+				"Você ganha o recurso Ataque Extra apenas para sua arma do pacto. Com esse recurso, você pode atacar duas vezes com a arma em vez de uma vez ao realizar a ação {@action Attack|XPHB} no seu turno."
+			]
+		},
+		{
+			"name": "Thrown Weapon Fighting",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				{
+					"uid": "Thrown Weapon Fighting|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:F",
+				"FS:R"
+			],
+			"entries": [
+				"Você pode sacar uma arma que tenha a propriedade de arremesso como parte do ataque que você faz com a arma.",
+				"Além disso, quando você acerta um ataque à distância usando uma arma de arremesso, você ganha +2 de bônus na jogada de dano."
+			]
+		},
+		{
+			"name": "Tomb of Levistus",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Como reação ao sofrer dano, você pode sepultar-se no gelo, que derrete no final do seu próximo turno. Você ganha 10 pontos de vida temporários por nível de bruxo, que recebem o máximo possível do dano desencadeado. Imediatamente após receber o dano, você ganha vulnerabilidade ao dano de fogo, sua velocidade é reduzida a 0 e você é {@condition incapacitated}. Esses efeitos, incluindo quaisquer pontos de vida temporários restantes, terminam quando o gelo derrete.",
+				"Depois de usar esta invocação, você não poderá usá-la novamente até terminar um descanso curto ou longo."
+			]
+		},
+		{
+			"name": "Transmuted Spell",
+			"source": "TCE",
+			"page": 66,
+			"reprintedAs": [
+				"Transmuted Spell|XPHB"
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia que causa um tipo de dano da lista a seguir, você pode gastar 1 ponto de feitiçaria para mudar esse tipo de dano para um dos outros tipos listados: ácido, frio, fogo, raio, veneno, trovão."
+			]
+		},
+		{
+			"name": "Transmuted Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Quando você conjura uma magia que causa um tipo de dano da lista a seguir, você pode gastar 1 Ponto de Feitiçaria para mudar esse tipo de dano para um dos outros tipos listados: Ácido, Frio, Fogo, Raio, Veneno, Trovão."
+			]
+		},
+		{
+			"name": "Trickster's Escape",
+			"source": "XGE",
+			"page": 57,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"freedom of movement"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell freedom of movement} uma vez em si mesmo sem gastar um espaço de feitiço. Você recupera a capacidade de fazer isso quando termina um descanso longo."
+			]
+		},
+		{
+			"name": "Trip Attack",
+			"source": "PHB",
+			"page": 74,
+			"reprintedAs": [
+				"Trip Attack|XPHB"
+			],
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com um ataque com arma, você pode gastar um dado de superioridade para tentar derrubar o alvo. Você adiciona o dado de superioridade à jogada de dano do ataque e, se o alvo for Grande ou menor, ele deve realizar um teste de resistência de Força. Em caso de falha no salvamento, você derruba o alvo {@condition prone}."
+			]
+		},
+		{
+			"name": "Trip Attack",
+			"source": "XPHB",
+			"page": 95,
+			"featureType": [
+				"VM: B"
+			],
+			"consumes": {
+				"name": "Superiority Die"
+			},
+			"entries": [
+				"Quando você atinge uma criatura com uma jogada de ataque usando uma arma ou um {@variantrule Unarmed Strike|XPHB}, você pode gastar um Dado de Superioridade e adicionar o dado à jogada de dano do ataque. Se o alvo for Grande ou menor, ele deve ter sucesso em um teste de resistência de Força ou ter a condição {@condition Prone|XPHB}."
+			]
+		},
+		{
+			"name": "Twinned Spell",
+			"source": "PHB",
+			"page": 102,
+			"srd": true,
+			"reprintedAs": [
+				"Twinned Spell|XPHB"
+			],
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point",
+				"amountMin": 1,
+				"amountMax": 9
+			},
+			"entries": [
+				"Quando você conjura uma magia que tem como alvo apenas uma criatura e não tem alcance próprio, você pode gastar um número de pontos de feitiçaria igual ao nível da magia para atingir uma segunda criatura no alcance com a mesma magia (1 ponto de feitiçaria se a magia for um truque).",
+				"Para ser elegível, um feitiço deve ser incapaz de atingir mais de uma criatura no nível atual do feitiço. Por exemplo, {@spell magic missile} e {@spell scorching ray} não são elegíveis, mas {@spell ray of frost} e {@spell chromatic orb} são."
+			]
+		},
+		{
+			"name": "Twinned Spell",
+			"source": "XPHB",
+			"page": 142,
+			"featureType": [
+				"Milímetros"
+			],
+			"consumes": {
+				"name": "Sorcery Point"
+			},
+			"entries": [
+				"Ao lançar uma magia, como {@spell Charm Person|XPHB}, que pode ser lançada com um espaço de magia de nível superior para atingir uma criatura adicional, você pode gastar 1 Ponto de Feitiço para aumentar o nível efetivo da magia em 1."
+			]
+		},
+		{
+			"name": "Two-Weapon Fighting",
+			"source": "PHB",
+			"page": 72,
+			"srd": true,
+			"otherSources": [
+				{
+					"source": "XGE",
+					"page": 15
+				},
+				{
+					"source": "PHB",
+					"page": 91
+				}
+			],
+			"reprintedAs": [
+				{
+					"uid": "Two-Weapon Fighting|XPHB",
+					"tag": "feat"
+				}
+			],
+			"featureType": [
+				"FS:F",
+				"FS:B",
+				"FS:R"
+			],
+			"entries": [
+				"Quando você se envolve em um combate com duas armas, você pode adicionar seu modificador de habilidade ao dano do segundo ataque."
+			]
+		},
+		{
+			"name": "Unarmed Fighting",
+			"source": "TCE",
+			"page": 42,
+			"reprintedAs": [
+				{
+					"uid": "Unarmed Fighting|XPHB",
+					"tag": "feat"
+				}
+			],
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"FS:F"
+			],
+			"entries": [
+				"Seus ataques desarmados podem causar dano de concussão igual a {@damage 1d6} + seu modificador de Força em um acerto. Se você não estiver empunhando nenhuma arma ou um {@item shield|phb} ao fazer a jogada de ataque, o {@damage d6} se tornará um {@damage d8}.",
+				"No início de cada um de seus turnos, você pode causar {@damage 1d4} de dano de concussão a uma criatura {@condition grappled} por você."
+			]
+		},
+		{
+			"name": "Unbroken Air",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"entries": [
+				"Você pode criar uma rajada de ar comprimido que atinge como um punho poderoso. Com uma ação, você pode gastar 2 pontos de ki e escolher uma criatura a até 9 metros de você. Essa criatura deve fazer um teste de resistência de Força. Se falhar na resistência, a criatura sofre {@damage 3d10} de dano de concussão, mais um {@damage 1d10} de dano de concussão extra para cada ponto de ki adicional gasto, e você pode empurrar a criatura até 6 metros de distância de você e derrubá-la {@condition prone}. Em um teste bem-sucedido, a criatura sofre metade do dano e você não a empurra nem a derruba {@condition prone}."
+			]
+		},
+		{
+			"name": "Undying Servitude",
+			"source": "TCE",
+			"page": 71,
+			"isClassFeatureVariant": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 5,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"animate dead"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell animate dead} sem usar um slot de feitiço. Depois de fazer isso, você não poderá lançá-lo desta forma novamente até terminar um descanso longo."
+			]
+		},
+		{
+			"name": "Visions of Distant Realms",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Visions of Distant Realms|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"arcane eye"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell arcane eye} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Visions of Distant Realms",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"arcane eye|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Arcane Eye|XPHB} sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Voice of the Chain Master",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"pact": "Corrente"
+				}
+			],
+			"entries": [
+				"Você pode se comunicar telepaticamente com seu familiar e perceber através dos sentidos dele, desde que esteja no mesmo plano de existência. Além disso, enquanto percebe através dos sentidos do seu familiar, você também pode falar através do seu familiar com sua própria voz, mesmo que ele normalmente seja incapaz de falar."
+			]
+		},
+		{
+			"name": "Warding Trick",
+			"source": "HWCS",
+			"page": 36,
+			"featureType": [
+				"TT"
+			],
+			"entries": [
+				"{@note This is a magical effect.} Um clérigo gentil lhe ensinou como canalizar sua magia em um véu protetor. Você pode gastar um uso de sua Inspiração de Bardo como uma ação para conceder a um aliado que você possa ver, a até 18 metros de você, um número de pontos de vida temporários igual ao seu teste no dado de Inspiração de Bardo + seu modificador de Sabedoria (mínimo de 1). Esta proteção dura enquanto você mantiver concentração nela, até 10 minutos.",
+				"No 6º nível, sua prática lhe permite criar proteções que retaliam contra aqueles que prejudicariam seus aliados. Qualquer criatura que causar dano a um aliado com pontos de vida temporários concedidos por este efeito deve realizar um teste de resistência de Sabedoria. Em caso de falha, a criatura que causa o dano sofre uma quantidade de dano radiante igual ao seu dado de Inspiração de Bardo.",
+				"No 14º nível, você aprendeu como tornar sua ala ainda mais resistente. Durante o efeito, no início de cada rodada do seu turno, o alvo ganha um número de pontos de vida temporários igual ao seu dado de Inspiração de Bardo + seu modificador de Sabedoria (mínimo de 1). Eles substituem quaisquer pontos de vida temporários anteriores."
+			]
+		},
+		{
+			"name": "Water Whip",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"entries": [
+				"Você pode gastar 2 pontos de ki como uma ação para criar um chicote de água que empurra e puxa uma criatura para desequilibrá-la. Uma criatura que você possa ver e que esteja a até 9 metros de você deve fazer um teste de resistência de Destreza. Se falhar na resistência, a criatura sofre {@damage 3d10} de dano de concussão, mais um {@damage 1d10} de dano de concussão extra para cada ponto de ki adicional gasto, e você pode derrubá-la {@condition prone} ou puxá-la até 25 pés para mais perto de você. Em um teste bem-sucedido, a criatura sofre metade do dano e você não a puxa nem a derruba {@condition prone}."
+			]
+		},
+		{
+			"name": "Wave of Rolling Earth",
+			"source": "PHB",
+			"page": 81,
+			"featureType": [
+				"DE"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 17,
+						"class": {
+							"name": "Monk"
+						},
+						"subclass": {
+							"name": "Four Elements"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"wall of stone"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki",
+					"ability": "wis"
+				}
+			],
+			"entries": [
+				"Você pode gastar 6 pontos de ki para lançar {@spell wall of stone}."
+			]
+		},
+		{
+			"name": "Whispers of the Grave",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Whispers of the Grave|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 9,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with dead"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell speak with dead} à vontade, sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Whispers of the Grave",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 7,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with dead|xphb"
+						]
+					}
+				}
+			],
+			"entries": [
+				"Você pode lançar {@spell Speak with Dead|XPHB} sem gastar um espaço de feitiço."
+			]
+		},
+		{
+			"name": "Witch Sight",
+			"source": "PHB",
+			"page": 111,
+			"srd": true,
+			"reprintedAs": [
+				"Witch Sight|XPHB"
+			],
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"entries": [
+				"Você pode ver a verdadeira forma de qualquer metamorfo ou criatura escondida por ilusão ou magia de transmutação enquanto a criatura estiver a até 9 metros de você e dentro de sua linha de visão."
+			]
+		},
+		{
+			"name": "Witch Sight",
+			"source": "XPHB",
+			"page": 157,
+			"featureType": [
+				"EI"
+			],
+			"prerequisite": [
+				{
+					"level": {
+						"level": 15,
+						"class": {
+							"name": "Warlock",
+							"source": "XPHB",
+							"visible": true
+						}
+					}
+				}
+			],
+			"senses": [
+				{
+					"truesight": 30
+				}
+			],
+			"entries": [
+				"Você tem {@sense Truesight|XPHB} com alcance de 30 pés."
+			]
+		}
+	]
+}

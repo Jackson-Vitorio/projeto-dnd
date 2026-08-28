@@ -1,0 +1,2785 @@
+{
+	"psionic": [
+		{
+			"name": "Adaptive Body",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você pode alterar seu corpo para combinar com o ambiente, permitindo-lhe resistir a ambientes agressivos. Com maior energia psi, você pode estender essa proteção a outras pessoas."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você não precisa comer, respirar ou dormir. Para obter os benefícios de um descanso longo, você pode passar 8 horas envolvido em atividades leves, em vez de dormir durante qualquer uma delas.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Environmental Adaptation",
+					"entries": [
+						"Com uma ação, você ou uma criatura que você toca ignora os efeitos de calor ou frio extremo (mas não o dano de frio ou fogo) pela próxima hora."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Adaptive Shield",
+					"entries": [
+						"Quando você sofre dano de ácido, frio, fogo, raio ou trovão, você pode usar sua reação para ganhar resistência a danos desse tipo — incluindo o dano desencadeador — até o final do seu próximo turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Adaptation",
+					"entries": [
+						"Como uma ação, você pode tocar uma criatura e dar-lhe resistência a danos de ácido, frio, fogo, raio ou trovão (sua escolha), que dura até seu {@status concentration} terminar."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Energy Immunity",
+					"entries": [
+						"Como uma ação, você pode tocar uma criatura e dar-lhe imunidade a danos de ácido, frio, fogo, raio ou trovão (sua escolha), que dura até seu {@status concentration} terminar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aura Sight",
+			"source": "UATheMysticClass",
+			"page": 10,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você reorienta sua visão para ver a energia que envolve todas as criaturas. Você percebe auras, assinaturas de energia que podem revelar elementos-chave da natureza de uma criatura."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Sabedoria ({@skill Insight}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Assess Foe",
+					"entries": [
+						"Como uma ação bônus, você analisa a aura de uma criatura que você vê. Você aprende seu total de pontos de vida atual e todas as suas imunidades, resistências e vulnerabilidades."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Read Moods",
+					"entries": [
+						"Como uma ação bônus, você aprende um resumo de uma palavra do estado emocional de até seis criaturas que você pode ver, como felizes, confusas, com medo ou violentas."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "View Aura",
+					"entries": [
+						"Como uma ação, você estuda a aura de uma criatura. Até que seu {@status concentration} termine, enquanto você puder ver o alvo, você saberá se ele está sob o efeito de algum efeito mágico ou psiônico, seu total de pontos de vida atual e seu estado emocional básico. Enquanto este efeito durar, você tem vantagem em testes de Sabedoria ({@skill Insight}) e Carisma que fizer contra ele."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Perceive the Unseen",
+					"entries": [
+						"Como uma ação bônus, você ganha a habilidade de ver auras até mesmo de {@condition invisible} ou criaturas ocultas. Até que seu {@status concentration} termine, você poderá ver todas as criaturas, incluindo as ocultas e {@condition invisible}, independentemente das condições de iluminação."
+					]
+				}
+			]
+		},
+		{
+			"name": "Beacon",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Como uma ação bônus, você faz com que luz brilhante irradie de seu corpo em um raio de 6 metros e luz fraca por mais 6 metros adicionais. A luz pode ser colorida como você quiser. A luz dura 1 hora e você pode apagá-la mais cedo como uma ação bônus."
+			]
+		},
+		{
+			"name": "Bestial Form",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você transforma seu corpo, ganhando características de diferentes feras."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Sabedoria ({@skill Animal Handling}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Bestial Claws",
+					"entries": [
+						"Você manifesta longas garras por um instante e realiza um ataque corpo a corpo com arma contra uma criatura a até 1,5 metro de você. Ao acertar, este ataque causa {@scaledamage 1d10|1-7|1d10|psi} de dano cortante por ponto psi gasto."
+					]
+				},
+				{
+					"name": "Bestial Transformation",
+					"entries": [
+						"Como uma ação bônus, você altera sua forma física para ganhar características diferentes. Ao usar esta habilidade, você pode escolher um ou mais dos seguintes efeitos. Cada efeito tem seu próprio custo em pontos psi. Some-os para determinar o custo total. Esta transformação dura 1 hora, até você morrer ou até encerrá-la como uma ação bônus."
+					],
+					"submodes": [
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Amphibious",
+							"entries": [
+								"Você ganha guelras; você pode respirar ar e água."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Climbing",
+							"entries": [
+								"Você desenvolve pequenas garras em forma de gancho que lhe dão uma velocidade de escalada igual à sua velocidade de caminhada."
+							]
+						},
+						{
+							"cost": {
+								"min": 5,
+								"max": 5
+							},
+							"name": "Flight",
+							"entries": [
+								"Asas brotam de suas costas. Você ganha um deslocamento de voo igual ao seu deslocamento de caminhada."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Keen Senses",
+							"entries": [
+								"Seus olhos e ouvidos ficam mais sensíveis. Você ganha vantagem em testes de Sabedoria ({@skill Perception})."
+							]
+						},
+						{
+							"cost": {
+								"min": 3,
+								"max": 3
+							},
+							"name": "Perfect Senses",
+							"entries": [
+								"Você ganha um olfato apurado e um instinto para detectar presas. Você pode ver {@condition invisible} criaturas e objetos a até 3 metros de você, mesmo se você estiver {@condition blinded}."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Swimming",
+							"entries": [
+								"Você ganha barbatanas e membranas entre os dedos das mãos e dos pés; você ganha um deslocamento de natação igual ao seu deslocamento de caminhada."
+							]
+						},
+						{
+							"cost": {
+								"min": 2,
+								"max": 2
+							},
+							"name": "Tough Hide",
+							"entries": [
+								"Sua pele fica tão dura quanto couro; você ganha um bônus de +2 na CA."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Blade Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Como uma ação bônus, uma arma corpo a corpo de uma mão que você segura torna-se uma com a sua mão. No minuto seguinte, você não pode largar a arma nem pode forçá-la a sair do seu alcance."
+			]
+		},
+		{
+			"name": "Blind Spot",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você apaga sua imagem da mente de uma criatura que você possa ver a até 36 metros de você; o alvo deve ter sucesso em um teste de resistência de Sabedoria, ou você estará {@condition invisible} até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Brute Force",
+			"source": "UATheMysticClass",
+			"page": 11,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você aumenta sua força natural com energia psiônica, concedendo-lhe a capacidade de realizar feitos incríveis de poder."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Força ({@skill Athletics})",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Brute Strike",
+					"entries": [
+						"Como uma ação bônus, você ganha um bônus em sua próxima jogada de dano contra um alvo que você atingiu com um ataque corpo a corpo durante o turno atual. O bônus é igual a +{@scaledamage 1d6|1-7|1d6|psi} por ponto psi gasto, e o dano bônus é do mesmo tipo do ataque. Se o ataque tiver mais de um tipo de dano, você escolhe qual usar para o dano adicional."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Knock Back",
+					"entries": [
+						"Ao atingir um alvo com um ataque corpo a corpo, você pode ativar essa habilidade como uma reação. O alvo deve ser bem sucedido em um teste de resistência de Força ou será derrubado a 3 metros de você por ponto psi gasto. O alvo se move em linha reta. Se atingir um objeto, esse movimento termina imediatamente e o alvo sofre {@scaledamage 1d6|1-7|1d6|psi} de dano de concussão por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mighty Leap",
+					"entries": [
+						"Como parte de seu movimento, você salta em qualquer direção até 6 metros por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Feat of Strength",
+					"entries": [
+						"Como uma ação bônus, você ganha +5 de bônus em testes de Força até o final do seu próximo turno."
+					]
+				}
+			]
+		},
+		{
+			"name": "Celerity",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você canaliza poder psiônico em seu corpo, aprimorando seus reflexos e agilidade em um grau incrível. O mundo parece desacelerar enquanto você continua se movendo normalmente."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, sua velocidade de caminhada aumenta em 3 metros.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Rapid Step",
+					"entries": [
+						"Como uma ação bônus, você aumenta sua velocidade de caminhada em 3 metros por ponto psi gasto até o final do turno atual. Se você tiver velocidade de escalada ou natação, esse aumento também se aplica a essa velocidade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Agile Defense",
+					"entries": [
+						"Como uma ação bônus, você realiza a ação Esquivar."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Blur of Motion",
+					"entries": [
+						"Como uma ação, você fica {@condition invisible} durante qualquer um dos seus movimentos durante o turno atual."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Surge of Speed",
+					"entries": [
+						"Como uma ação bônus, você ganha dois benefícios até o final do turno atual: você não provoca ataques de oportunidade e tem deslocamento de escalada igual ao seu deslocamento de caminhada."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Surge of Action",
+					"entries": [
+						"Como uma ação bônus, você pode Correr ou fazer um ataque com arma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Corrosive Metabolism",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Seu controle sobre seu corpo permite que você desfera ataques de ácido ou veneno."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você terá resistência a danos ácidos e venenosos",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Corrosive Touch",
+					"entries": [
+						"Com uma ação, você aplica um toque de ácido em uma criatura ao seu alcance. O alvo deve fazer um teste de resistência de Destreza, sofrendo {@scaledamage 1d10|1-7|1d10|psi} de dano de ácido por ponto psi gasto em uma falha na resistência, ou metade do dano em uma falha."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Venom Strike",
+					"entries": [
+						"Com uma ação, você cria um spray venenoso que atinge uma criatura que você possa ver a até 9 metros de você. O alvo deve fazer um teste de resistência de Constituição. Em caso de falha no salvamento, ele sofre {@scaledamage 1d6|1-7|1d6|psi} de dano de veneno por ponto psi gasto e é {@condition poisoned} até o final do seu próximo turno. Em um teste bem-sucedido, o alvo sofre metade do dano e não é {@condition poisoned}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Acid Spray",
+					"entries": [
+						"Como reação quando você sofre danos perfurantes ou cortantes, você faz com que ácido espirre de seu ferimento; cada criatura a até 1,5 metro de você sofre {@damage 2d6} de dano de ácido."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Breath of the Black Dragon",
+					"entries": [
+						"Você exala uma onda de ácido em uma linha de 18 metros com 1,5 metro de largura. Cada criatura na linha deve fazer um teste de resistência de Constituição, sofrendo {@damage 6d6} de dano de ácido se falhar na resistência, ou metade desse dano se obtiver sucesso. Você pode aumentar o dano em {@scaledamage 6d6|5-7|1d6|psi} por ponto psi adicional gasto nele."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Breath of the Green Dragon",
+					"entries": [
+						"Você exala uma nuvem de veneno em um cone de 27 metros. Cada criatura na linha deve fazer um teste de resistência de Constituição, sofrendo {@damage 10d6} de dano de veneno se falhar na resistência, ou metade do dano se obtiver sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Despair",
+			"source": "UATheMysticClass",
+			"page": 12,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você aprendeu a colher sementes de desespero na psique de uma criatura, destruindo-a com dúvidas e inação."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Carisma ({@skill Intimidation}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crowned in Sorrow",
+					"entries": [
+						"Como uma ação, uma criatura que você possa ver a até 18 metros de você deve realizar um teste de resistência de Carisma. Se falhar no salvamento, ele sofre {@damage 1d8} de dano psíquico por ponto psi gasto e não pode realizar reações até o início do próximo turno. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Call to Inaction",
+					"entries": [
+						"Se você passar 1 minuto conversando com uma criatura, você pode tentar semeá-la com um tédio avassalador. No final do minuto, você pode usar uma ação para forçar a criatura a fazer um teste de resistência de Sabedoria. O salvamento será automaticamente bem-sucedido se o alvo estiver imune a {@condition charmed}. Em uma falha no salvamento, ele permanece {@condition incapacitated} até que seu {@status concentration} termine. Este efeito termina imediatamente se o alvo ou qualquer aliado que ele possa ver for atacado ou sofrer dano. Em um teste bem-sucedido, a criatura não é afetada e não tem a menor ideia de sua tentativa de subjugar sua vontade."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Visions of Despair",
+					"entries": [
+						"Com uma ação, você força uma criatura que você possa ver a até 18 metros de você a fazer um teste de resistência de Carisma. Se falhar no salvamento, ele sofre {@damage 3d6} de dano psíquico e sua velocidade é reduzida a 0 até o final do próximo turno. Em um teste bem-sucedido, sofre metade do dano. Você pode aumentar o dano em {@scaledamage 3d6|3-7|1d6|psi} por ponto psi adicional gasto nele."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Dolorous Mind",
+					"entries": [
+						"Como uma ação, você escolhe uma criatura que você possa ver a até 18 metros de você. Ele deve ter sucesso em um teste de resistência de Carisma ou é {@condition incapacitated} e tem velocidade 0 até que seu {@status concentration} termine. Ele pode repetir este teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo com um sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Disgust",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você faz com que uma criatura seja inundada por emoções de desgosto."
+			],
+			"focus": "Enquanto você estiver focado nesta disciplina, a área em um raio de 1,5 metro ao seu redor será {@quickref difficult terrain||3} para qualquer inimigo que não esteja imune a ser {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Eye of Horror",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Carisma. Se falhar no salvamento, ele sofre {@scaledamage 1d6|1-7|1d6|psi} de dano psíquico por ponto psi gasto e não pode se aproximar de você até o final do próximo turno. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Repulsion",
+					"entries": [
+						"Com uma ação, você cria uma parede de energia invisível e insubstancial a até 18 metros de você, com até 9 metros de comprimento, 3 metros de altura e 30 centímetros de espessura. A parede dura até que seu {@status concentration} termine. Qualquer criatura que tentar passar por ela deve realizar um teste de resistência de Sabedoria. Se falhar na resistência, uma criatura não pode se mover através da parede até o início do seu próximo turno. Se obtiver sucesso, a criatura pode passar por ele. Uma criatura deve fazer este teste sempre que tentar atravessar a parede, seja voluntária ou involuntariamente."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Visions of Disgust",
+					"entries": [
+						"Você faz com que uma criatura considere todos os outros seres como entidades alienígenas horríveis. Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Sabedoria. Se falhar na resistência, ele sofre {@damage 5d6} de dano psíquico e, até que seu {@status concentration} termine, ele sofre {@damage 1d6} de dano psíquico por criatura a até 1,5 metro dele no final de cada um de seus turnos. Se obtiver sucesso, o alvo sofre apenas metade do dano inicial e não sofre nenhum dos outros efeitos."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "World of Horror",
+					"entries": [
+						"Com uma ação, escolha até seis criaturas a até 18 metros de você. Cada alvo deve fazer um teste de resistência de Carisma. Em caso de falha no salvamento, o alvo sofre {@damage 8d6} de dano psíquico e é {@condition frightened} até que seu {@status concentration} termine. Em um teste bem-sucedido, o alvo sofre metade do dano. Enquanto {@condition frightened} por este efeito, a velocidade do alvo é reduzida a 0, e o alvo pode usar sua ação, e qualquer ação bônus que possa ter, apenas para fazer ataques corpo a corpo. O alvo {@condition frightened} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Crown of Rage",
+			"source": "UATheMysticClass",
+			"page": 13,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você coloca um grão de pura fúria na mente de uma criatura, fazendo com que sua sede de sangue supere seus sentidos e faça com que ela aja como você deseja."
+			],
+			"focus": "Enquanto você estiver focado nesta disciplina, qualquer inimigo a até 1,5 metro de você que fizer uma jogada de ataque corpo a corpo contra criaturas que não sejam você, o fará com desvantagem.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Primal Fury",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ter sucesso em um teste de resistência de Carisma ou sofrerá {@scaledamage 1d6|1-7|1d6|psi} de dano psíquico por ponto psi gasto nesta habilidade e imediatamente usar sua reação para mover sua velocidade em linha reta em direção ao inimigo mais próximo. O salvamento será automaticamente bem-sucedido se o alvo estiver imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Fighting Words",
+					"entries": [
+						"Se você passar 1 minuto conversando com uma criatura, você pode tentar deixar uma violência latente em sua mente. No final do minuto, você pode usar uma ação para forçar a criatura a fazer um teste de resistência de Sabedoria para resistir a sentimentos violentos contra uma criatura que você descreve ou nomeia. O salvamento é automaticamente bem-sucedido se o alvo estiver imune a {@condition charmed}. Se falhar, o alvo ataca a criatura escolhida se vir aquela criatura antes de seu {@status concentration} terminar, usando armas ou feitiços contra uma criatura contra a qual já era hostil ou atacando desarmado contra um aliado ou criatura contra a qual era neutra. Assim que a luta começar, ele continua atacando por 5 rodadas antes que esse efeito termine. Este efeito termina imediatamente se o alvo ou qualquer aliado que ele possa ver for atacado ou sofrer dano de qualquer criatura que não seja aquela contra a qual foi incitado. Em um teste bem-sucedido, a criatura não é afetada e não tem a menor ideia de sua tentativa de subjugar sua vontade."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Courage",
+					"entries": [
+						"Você faz com que a sede de sangue de uma criatura supere seu senso de preservação. Como ação bônus, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou, até o final do seu próximo turno, ele não poderá se mover voluntariamente, a menos que seu movimento o aproxime do inimigo mais próximo que ele possa ver. O salvamento é automaticamente bem-sucedido se o alvo estiver imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Punishing Fury",
+					"entries": [
+						"Você faz com que a fúria de uma criatura cresça tanto que ela ataca sem se preocupar com sua própria segurança. Como ação bônus, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou, até que seu {@status concentration} termine, qualquer criatura a até 1,5 metro dele pode usar uma reação para fazer um ataque corpo a corpo contra ele sempre que o alvo fizer um ataque corpo a corpo. O salvamento é automaticamente bem-sucedido se o alvo estiver imune a {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Delusion",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você planta uma crença falsa na mente de uma criatura que você pode ver a até 18 metros de você. Você pode criar um som ou uma imagem. Somente o alvo deste talento percebe o som ou a imagem que você cria.",
+				"Se você criar um som, seu volume poderá variar de um sussurro a um grito. Pode ser a sua voz, a voz de outra pessoa, o rugido de uma criatura, um instrumento musical ou qualquer outro som que você escolher. Dura 1 minuto.",
+				"Se você criar um objeto, ele deverá caber em um cubo de 1,5 metro e não poderá se mover ou ser refletivo. A imagem não pode criar nenhum efeito que influencie outro sentido além da visão. A imagem dura 1 minuto e desaparece se a criatura a tocar."
+			]
+		},
+		{
+			"name": "Diminution",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você manipula a matéria que compõe seu corpo, reduzindo drasticamente seu tamanho sem abrir mão de seu poder."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Destreza ({@skill Stealth}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Miniature Form",
+					"entries": [
+						"Como uma ação bônus, você se torna Minúsculo até que seu {@status concentration} termine. Enquanto estiver neste tamanho, você ganha um bônus de +5 em testes de Destreza ({@skill Stealth}) e pode se mover através de espaços de até 15 centímetros de largura sem se apertar."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Toppling Shift",
+					"entries": [
+						"Como uma ação bônus, você muda para um tamanho incrivelmente pequeno e de repente retorna ao normal, fazendo um oponente voar para trás. Escolha uma criatura que você possa ver a até 1,5 metro de você. Ele deve ter sucesso em um teste de resistência de Força ou será derrubado {@condition prone}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Sudden Shift",
+					"entries": [
+						"Como reação quando você é atingido por um ataque, você muda para o tamanho mínimo para evitar o ataque. O ataque erra e você se move até 1,5 metro sem provocar ataques de oportunidade antes de retornar ao tamanho normal."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Microscopic Form",
+					"entries": [
+						"Como uma ação bônus, você se torna menor que Tiny até que seu {@status concentration} termine. Enquanto estiver neste tamanho, você ganha um bônus de +10 em testes de Destreza ({@skill Stealth}) e um bônus de +5 em CA, você pode se mover através de lacunas de até 1 polegada de largura sem apertar e não pode fazer ataques com arma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Energy Beam",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você escolhe uma criatura que você possa ver a até 27 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Destreza ou sofrerá {@damage 1d8} de dano de ácido, frio, fogo, raio ou trovão (sua escolha).",
+				"O dano do talento aumenta em {@damage 1d8} quando você atinge o 5º nível ({@damage 2d8}), 11º nível ({@damage 3d8}) e 17º nível ({@damage 4d8})."
+			]
+		},
+		{
+			"name": "Giant Growth",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você se infunde com energia psiônica para crescer até um tamanho tremendo, aumentando sua força e durabilidade."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, seu alcance aumenta em 1,5 metro.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Ogre Form",
+					"entries": [
+						"Como uma ação bônus, você ganha 10 pontos de vida temporários. Além disso, até que seu {@status concentration} termine, seus ataques com armas corpo a corpo causam {@damage 1d4} de dano de concussão extra ao acertar e seu alcance aumenta em 1,5 metro. Se você for menor que Grande, você também se tornará Grande enquanto durar."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Giant Form",
+					"entries": [
+						"Como ação bônus, você ganha 30 pontos de vida temporários. Além disso, até que seu {@status concentration} termine, seus ataques com armas corpo a corpo causam um dano de concussão extra de {@damage 2d6} ao acertar e seu alcance aumenta em 3 metros. Se você for menor que Enorme, você também se tornará Enorme enquanto durar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Intellect Fortress",
+			"source": "UATheMysticClass",
+			"page": 14,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você forja uma parede indomável de energia psiônica ao redor de sua mente – uma parede que lhe permite lançar contra-ataques contra seus oponentes."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha resistência a danos psíquicos.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Psychic Backlash",
+					"entries": [
+						"Como reação, você pode impor desvantagem em uma jogada de ataque contra você se puder ver o atacante. Se o ataque ainda atingir você, o atacante sofrerá {@damage 2d10} de dano psíquico."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psychic Parry",
+					"entries": [
+						"Como reação quando você faz um teste de resistência de Inteligência, Sabedoria ou Carisma, você ganha um bônus de +1 naquele teste de resistência para cada ponto psi gasto nesta habilidade. Você pode usar esta habilidade depois de lançar o dado, mas antes de sofrer os resultados."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Psychic Redoubt",
+					"entries": [
+						"Com uma ação, você cria um campo de energia psíquica protetora. Escolha qualquer número de criaturas a até 9 metros de você. Até que seu {@status concentration} termine, cada alvo terá resistência a dano psíquico e vantagem em testes de resistência de Inteligência, Sabedoria e Carisma."
+					]
+				}
+			]
+		},
+		{
+			"name": "Iron Durability",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você transforma seu corpo para se tornar um metal vivo, permitindo que você evite ataques que paralisariam criaturas mais fracas."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha um bônus de +1 na CA.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Iron Hide",
+					"entries": [
+						"Como reação quando você é atingido por um ataque, você ganha +1 de bônus na CA para cada ponto psi gasto nesta habilidade. O bônus dura até o final do seu próximo turno. Este bônus se aplica contra o ataque desencadeador."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Steel Hide",
+					"entries": [
+						"Como uma ação bônus, você ganha resistência a danos de concussão, perfurantes e cortantes até o final do seu próximo turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Iron Resistance",
+					"entries": [
+						"Como uma ação, você ganha resistência a dano de concussão, perfurante ou cortante (sua escolha), que dura até seu {@status concentration} terminar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Light Step",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Como uma ação bônus, você altera sua densidade e peso para melhorar sua mobilidade. Pelo resto do seu turno, seu deslocamento de caminhada aumenta em 3 metros e, na primeira vez que você se levanta neste turno, você o faz sem gastar nenhum movimento se seu deslocamento for maior que 0."
+			]
+		},
+		{
+			"name": "Mantle of Awe",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você aprende a usar energia psiônica para manipular outras pessoas com uma combinação sutil de psi e seu próprio charme natural."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha um bônus em testes de Carisma. O bônus é igual a metade do seu modificador de Inteligência (mínimo de +1).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Charming Presence",
+					"entries": [
+						"Como ação, você exerce uma aura de poder solidário. Role {@dice 2d8} por ponto psi gasto nesta habilidade; o total é quantos pontos de vida das criaturas que esta opção pode afetar. Criaturas a até 9 metros de você são afetadas em ordem crescente de seus pontos de vida máximos, ignorando {@condition incapacitated} criaturas, criaturas imunes a serem {@condition charmed} e criaturas envolvidas em combate.",
+						"Começando com a criatura que tem o menor ponto de vida máximo, cada criatura afetada por esta opção é {@condition charmed} por você por 10 minutos, considerando você como um conhecido amigável. Subtraia o máximo de pontos de vida de cada criatura do total antes de passar para a próxima criatura. O máximo de pontos de vida de uma criatura deve ser igual ou menor que o total restante para que aquela criatura seja afetada."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Center of Attention",
+					"entries": [
+						"Com uma ação, você exerce uma aura de poder que chama a atenção de uma criatura. Escolha uma criatura que você possa ver a até 18 metros de você. Ele deve fazer um teste de resistência de Carisma. Em uma falha no salvamento, a criatura fica tão distraída com você que todas as outras criaturas ficam {@condition invisible} com ela até que seu {@status concentration} termine. Este efeito termina se a criatura não puder mais ver ou ouvir você ou se sofrer dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Invoke Awe",
+					"entries": [
+						"Como ação, você exerce uma aura que inspira admiração nos outros. Escolha até 5 criaturas que você possa ver a até 18 metros de você. Cada alvo deve ter sucesso em um teste de resistência de Inteligência ou será {@condition charmed} por você até que seu {@status concentration} termine. Enquanto {@condition charmed}, o alvo obedece a todos os seus comandos verbais da melhor maneira possível e sem fazer nada obviamente autodestrutivo. O alvo {@condition charmed} atacará apenas criaturas que ele viu atacar você desde que era {@condition charmed} ou contra as quais já era hostil. No final de cada um de seus turnos, ele pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Command",
+			"source": "UATheMysticClass",
+			"page": 15,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você exerce uma aura de confiança e autoridade, melhorando a coordenação entre seus aliados."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, quando você terminar seu turno e não se mover durante ele, você pode usar sua reação para permitir que um aliado que você possa ver a até 9 metros de você se mova até metade de sua velocidade, seguindo um caminho de sua escolha. Para se mover desta forma, o aliado não deve ser {@condition incapacitated}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Coordinated Movement",
+					"entries": [
+						"Como ação bônus, escolha até cinco aliados que você possa ver a até 18 metros de você. Cada um desses aliados pode usar sua reação para se mover até metade de sua velocidade, seguindo um caminho de sua escolha."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Commander's Sight",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. Até o início do seu próximo turno, seus aliados têm vantagem nas jogadas de ataque contra aquele alvo."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Command to Strike",
+					"entries": [
+						"Com uma ação, escolha um aliado que você possa ver a até 18 metros de você. Esse aliado pode usar sua reação para realizar imediatamente a ação de Ataque. Você escolhe os alvos."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Strategic Mind",
+					"entries": [
+						"Como ação, você exerce uma aura de confiança e comando que une seus aliados em uma unidade coesa. Até que seu {@status concentration} termine, qualquer aliado a até 18 metros de você em seu turno pode, como uma ação bônus, realizar a ação Correr ou Desengajar ou lançar um {@dice d4} e adicionar o número obtido a cada jogada de ataque que fizer naquele turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Overwhelming Attack",
+					"entries": [
+						"Com uma ação, escolha até cinco aliados que você possa ver a até 18 metros de você. Cada um desses aliados pode usar sua reação para realizar a ação de Ataque. Você escolhe o alvo dos ataques."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Courage",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você concentra sua mente na coragem, irradiando confiança e bravata para seus aliados."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você e aliados a até 3 metros de você que podem ver você têm vantagem em testes de resistência contra ser {@condition frightened}.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Incite Courage",
+					"entries": [
+						"Como uma ação bônus, escolha até seis criaturas que você possa ver a até 18 metros de você. Se alguma dessas criaturas for {@condition frightened}, essa condição termina naquela criatura."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Aura of Victory",
+					"entries": [
+						"Como uma ação bônus, você projeta energia psiônica até que seu {@status concentration} termine. A energia fortalece você e seus aliados quando seus inimigos são derrubados; sempre que um inimigo que você pode ver é reduzido a 0 pontos de vida, você e cada um de seus aliados a até 9 metros de você ganham pontos de vida temporários iguais ao dobro dos pontos psi gastos para ativar este efeito."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "rnd"
+					},
+					"name": "Pillar of Confidence",
+					"entries": [
+						"Como uma ação, você e até cinco criaturas que você possa ver a até 18 metros de você ganham uma ação extra para usar em seus turnos individuais. A ação desaparece se não for usada antes do final do seu próximo turno. a ação pode ser usada apenas para fazer um ataque com arma ou para realizar a ação Correr ou Desengajar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fear",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você entra em um poço de medo primordial e se transforma em um farol de terror para seus inimigos."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Carisma ({@skill Intimidation}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fear",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ser bem-sucedido em um teste de resistência de Sabedoria ou se tornará {@condition frightened} seu até que seu {@status concentration} termine. Sempre que o alvo {@condition frightened} terminar seu turno em um local onde não possa ver você, ele poderá repetir o teste de resistência, encerrando o efeito sobre si mesmo com sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Unsettling Aura",
+					"entries": [
+						"Como uma ação bônus, você se envolve em uma energia psíquica perturbadora. Até que seu {@status concentration} termine, qualquer inimigo a até 18 metros de você que possa ver você deve gastar 30 centímetros extras de movimento para cada metro que se mover em sua direção. Uma criatura ignora este efeito se for imune a {@condition frightened}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Panic",
+					"entries": [
+						"Como uma ação, escolha até oito criaturas que você possa ver a até 27 metros de você e que possam ver você. No início de cada turno de um alvo, antes de seu {@status concentration} terminar, o alvo deve fazer um teste de resistência de Sabedoria. Em caso de falha no salvamento, o alvo é {@condition frightened} até o início do próximo turno e você lança um dado. Se você rolar um número ímpar, o alvo {@condition frightened} se moverá metade de sua velocidade em uma direção aleatória e não realizará nenhuma ação nesse turno, a não ser gritar de terror. Se você obtiver um número par, o alvo {@condition frightened} fará um ataque corpo a corpo contra um alvo aleatório ao seu alcance. Se não existir tal alvo, ele se move metade de seu deslocamento em uma direção aleatória e não realiza nenhuma ação naquele turno. Este efeito termina no alvo se ele obtiver sucesso em três testes de resistência contra ele."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Fury",
+			"source": "UATheMysticClass",
+			"page": 16,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você permite que a fúria primitiva que se esconde nas profundezas de sua mente irrompa, pegando você e seus aliados em uma sede de sangue implacável."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina em combate, você e qualquer aliado que iniciar seu turno a até 3 metros de você ganham um aumento de 1,5 metro em sua velocidade de caminhada durante esse turno.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Incite Fury",
+					"entries": [
+						"Como ação bônus, escolha até três aliados que você possa ver a até 18 metros de você (você pode escolher você mesmo no lugar de um dos aliados). Até que seu {@status concentration} termine, cada alvo pode rolar um {@dice d4} ao rolar o dano de um ataque com arma corpo a corpo e adicionar o número rolado à jogada de dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Mindless Charge",
+					"entries": [
+						"Como uma ação bônus, escolha até três criaturas que você possa ver a até 18 metros de você. Cada alvo pode usar imediatamente sua reação para aumentar sua velocidade em linha reta em direção ao inimigo mais próximo."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Bloodletting",
+					"entries": [
+						"Com uma ação bônus, você libera uma aura de raiva. Até que seu {@status concentration} termine, você e qualquer criatura a até 18 metros de você terão vantagem em jogadas de ataque corpo a corpo."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Overwhelming Fury",
+					"entries": [
+						"Com uma ação, você inunda a fúria em uma criatura que você possa ver a até 18 metros de você. O alvo deve ter sucesso em um teste de resistência de Carisma ou pode usar suas ações apenas para fazer ataques corpo a corpo até que seu {@status concentration} termine. Ele pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo com um sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mantle of Joy",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "avatar",
+			"entries": [
+				"Você aproveita a alegria dentro de você, irradiando-a em uma energia psíquica calmante que traz esperança e conforto às criaturas ao seu redor."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Carisma ({@skill Persuasion})",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Soothing Presence",
+					"entries": [
+						"Como uma ação bônus, escolha até três criaturas que você possa ver a até 18 metros de você. Cada alvo ganha 3 pontos de vida temporários por ponto psi gasto neste efeito."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Comforting Aura",
+					"entries": [
+						"Como ação bônus, escolha até três aliados que você possa ver (você pode escolher você mesmo no lugar de um dos aliados). Até que seu {@status concentration} termine, cada alvo pode rolar um {@dice d4} ao fazer um teste de resistência e adicionar o número obtido ao total."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Aura of Jubilation",
+					"entries": [
+						"Como uma ação bônus, você irradia uma alegria perturbadora até que seu {@status concentration} termine. Cada criatura a até 18 metros de você que possa vê-lo sofre desvantagem em qualquer teste usando as habilidades {@skill Perception} e {@skill Investigation}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Beacon of Recovery",
+					"entries": [
+						"Como uma ação bônus, você e até cinco aliados que você pode ver a até 18 metros de você podem imediatamente fazer testes de resistência contra todos os efeitos que eles estão sofrendo que permitam um teste de resistência no início ou no final de seus turnos."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Air",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Você se torna um com o poder do ar elementar."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você não sofre danos de queda e ignora {@quickref difficult terrain||3} ao caminhar.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Step",
+					"entries": [
+						"Como parte do seu movimento no seu turno, você pode voar até 6 metros para cada ponto psi gasto. Se você terminar este vôo no ar, você cairá, a menos que algo o mantenha no ar."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Wind Stream",
+					"entries": [
+						"Como uma ação, você cria uma linha de ar concentrado com 9 metros de comprimento e 1,5 metro de largura. Cada criatura naquela área deve fazer um teste de resistência de Força, sofrendo {@scaledamage 1d8|1-7|1d8|psi} de dano de concussão por ponto psi gasto e sendo derrubada {@condition prone} em caso de falha na resistência, ou metade do dano em caso de sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloak of Air",
+					"entries": [
+						"Como uma ação bônus, você assume o controle do ar ao seu redor para criar um véu protetor. Até que seu {@status concentration} termine, as jogadas de ataque contra você têm desvantagem, e quando uma criatura que você pode ver erra um ataque corpo a corpo, você pode usar sua reação para forçar a criatura a repetir a jogada de ataque contra si mesma."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wind Form",
+					"entries": [
+						"Como uma ação bônus, você ganha deslocamento de vôo de 18 metros, que dura até seu {@status concentration} terminar."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Misty Form",
+					"entries": [
+						"Como uma ação, seu corpo se torna como uma nuvem nebulosa até que seu {@status concentration} termine. Nesta forma, você ganha resistência a danos de concussão, perfurantes e cortantes e não pode realizar outras ações além da ação Correr. Você pode passar por aberturas com no máximo 2,5 cm de largura sem apertar."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Air",
+					"entries": [
+						"Com uma ação, você faz com que um {@creature air elemental} apareça em um espaço desocupado que você possa ver a até 36 metros de você. O elemental dura até que seu {@status concentration} termine e obedece aos seus comandos verbais. Em combate, role sua iniciativa e escolha seu comportamento durante seus turnos. Quando este efeito termina, o elemental desaparece. Veja o Manual dos Monstros para seu bloco de estatísticas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Fire",
+			"source": "UATheMysticClass",
+			"page": 17,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Você alinha sua mente com a energia do fogo elementar."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha resistência a dano de fogo e ganha +2 de bônus nas jogadas de dano de fogo.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Combustion",
+					"entries": [
+						"Com uma ação, escolha uma criatura ou objeto que você possa ver a até 36 metros de você. O alvo deve fazer um salvamento de Constituição. Se falhar, o alvo sofre {@scaledamage 1d10|1-7|1d10|psi} de dano de fogo por ponto psi gasto e pega fogo, sofrendo {@damage 1d6} de dano de fogo no final de cada um de seus turnos até que seu {@status concentration} termine ou até que ele ou uma criatura adjacente a ele extinga as chamas com uma ação. Se obtiver sucesso, o alvo sofre metade do dano e não pega fogo."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Rolling Flame",
+					"entries": [
+						"Com uma ação, você cria fogo em um cubo de 6 metros por 6 metros a até 1,5 metros de você. O fogo dura até que seu {@status concentration} termine. Qualquer criatura naquela área quando você usar esta habilidade e qualquer criatura que termine seu turno lá sofre 5 de dano de fogo."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Detonation",
+					"entries": [
+						"Com uma ação, você cria uma explosão de fogo em um ponto que você pode ver a até 36 metros de você. Cada criatura em uma esfera de 6 metros de raio centrada nesse ponto deve fazer um teste de resistência de Constituição, sofrendo {@damage 7d6} de dano de fogo e sendo derrubada {@condition prone} em caso de falha na resistência, ou metade do dano em caso de sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Fire Form",
+					"entries": [
+						"Como uma ação bônus, você fica envolto em chamas até que seu {@status concentration} termine. Qualquer criatura que termine seu turno a até 1,5 metro de você sofre {@damage 3d6} de dano de fogo."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Fire",
+					"entries": [
+						"Com uma ação, você faz com que {@creature fire elemental} apareça em um espaço desocupado que você possa ver a até 36 metros de você. O elemental dura até que seu {@status concentration} termine e obedece aos seus comandos verbais. Em combate, role sua iniciativa e escolha seu comportamento durante seus turnos. Quando este efeito termina, o elemental desaparece. Veja o Manual dos Monstros para seu bloco de estatísticas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Force",
+			"source": "UATheMysticClass",
+			"page": 18,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Como estudante do poder psiônico, você percebe a energia potencial que flui através de todas as coisas. Você alcança com sua mente, transformando o potencial em real. Objetos e criaturas se movem sob seu comando."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Força.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Push",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Força. Se falhar no salvamento, ele sofre {@scaledamage 1d8|1-7|1d8|psi} de dano de força por ponto psi gasto e é empurrado até 1,5 metro por ponto gasto em linha reta para longe de você. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Escolha um objeto que você possa ver a até 18 metros de você que não esteja sendo usado ou carregado por outra criatura e que não esteja preso no lugar. Ela não pode ter mais de 6 metros de lado e seu peso máximo depende dos pontos psi gastos nesta habilidade, conforme mostrado abaixo.",
+						"Com uma ação, você move o objeto até 18 metros e deve mantê-lo à vista durante esse movimento. Se o objeto terminar esse movimento no ar, ele cai. Se o objeto cair sobre uma criatura, a criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 10} ou sofrerá dano conforme listado na tabela abaixo.",
+						{
+							"type": "table",
+							"colLabels": [
+								"Psi gasto",
+								"Peso Máximo",
+								"Dano de concussão"
+							],
+							"colStyles": [
+								"col-3 centro de texto",
+								"col-6 centro de texto",
+								"col-3 centro de texto"
+							],
+							"rows": [
+								[
+									"2",
+									"25 libras.",
+									"{@damage 2d6}"
+								],
+								[
+									"3",
+									"50 libras.",
+									"{@damage 4d6}"
+								],
+								[
+									"5",
+									"250 libras.",
+									"{@damage 6d6}"
+								],
+								[
+									"6",
+									"500 libras.",
+									"{@damage 7d6}"
+								],
+								[
+									"7",
+									"1.000 libras.",
+									"{@damage 8d6}"
+								]
+							]
+						}
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Inertial Armor",
+					"entries": [
+						"Com uma ação, você se envolve em um campo intangível de força mágica. Por 8 horas, sua CA base é 14 + seu modificador de Destreza e você ganha resistência a dano forçado. Este efeito termina se você estiver vestindo ou vestindo uma armadura."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Telekinetic Barrier",
+					"entries": [
+						"Com uma ação, você cria uma parede transparente de energia telecinética, da qual pelo menos uma parte deve estar a até 18 metros de você. A parede tem 12 metros de comprimento, 3 metros de altura e 2,5 centímetros de espessura. A parede dura até que seu {@status concentration} termine. Cada seção de 3 metros da parede tem CA de 10 e 10 pontos de vida."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Grasp",
+					"entries": [
+						"Você tenta agarrar uma criatura com energia telecinética e mantê-la cativa. Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Força ou será {@condition grappled} por você até que seu {@status concentration} termine ou até que o alvo deixe seu alcance, que é de 18 metros para este agarrar.",
+						"O alvo {@condition grappled} pode escapar obtendo sucesso em um teste de Força (Atletismo) ou Destreza (Acrobacia) contestado por sua habilidade psiônica mais seu bônus de proficiência. Quando um alvo tenta escapar dessa forma, você pode gastar pontos psi para aumentar seu teste, respeitando seu limite psi. Você ganha um bônus de +1 por ponto psi gasto.",
+						"Embora um alvo seja {@condition grappled} desta maneira, você cria um dos seguintes efeitos como uma ação:"
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Crush",
+					"entries": [
+						"O alvo sofre {@scaledamage 1d6|1-7|1d6|psi} de dano de concussão por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Move",
+					"entries": [
+						"Você move o alvo até 1,5 metro por ponto psi gasto. Você pode movê-lo no ar e mantê-lo ali. Ele cai se a luta terminar."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Ice",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Você domina o poder do gelo, moldando-o para atender às suas demandas."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você terá resistência a danos de frio.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Ice Spike",
+					"entries": [
+						"Com uma ação, você atira um grão de gelo em uma criatura que você possa ver a até 36 metros de você. O alvo deve fazer um teste de resistência de Destreza. Se falhar no salvamento, o alvo sofre {@scaledamage 1d8|1-7|1d8|psi} de dano de frio por ponto psi gasto e tem sua velocidade reduzida pela metade até o início do seu próximo turno. Em um teste bem-sucedido, o alvo sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Ice Sheet",
+					"entries": [
+						"Como ação, escolha um ponto no chão que você possa ver a até 18 metros de você. O solo em um raio de 6 metros centrado nesse ponto fica coberto de gelo por 10 minutos. É {@quickref difficult terrain||3}, e qualquer criatura que se mova mais de 3 metros sobre ele deve ser bem sucedida em um teste de resistência de Destreza ou cairá {@condition prone}. Se a superfície for inclinada, uma criatura que caia {@condition prone} na área desliza imediatamente para o fundo da encosta."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Frozen Sanctuary",
+					"entries": [
+						"Como uma ação bônus, você se reveste de resiliência gelada. Você ganha 20 pontos de vida temporários."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Frozen Rain",
+					"entries": [
+						"Como ação, escolha um ponto que você possa ver a até 36 metros de você. O ar em uma esfera de 6 metros de raio centrada nesse ponto torna-se mortalmente frio e saturado de umidade. Cada criatura naquela área deve realizar um teste de resistência de Constituição. Se falhar no salvamento, o alvo sofre {@damage 6d6} de dano de frio e sua velocidade é reduzida a 0 até que seu {@status concentration} termine. Em um teste bem-sucedido, o alvo sofre metade do dano.",
+						"Como uma ação, um alvo que tenha sua velocidade reduzida pode encerrar o efeito mais cedo se obtiver sucesso em um teste de Força (Atletismo) com uma CD igual à CD de resistência deste efeito.",
+						"Você pode aumentar o dano deste efeito em {@scaledamage 6d6|5-7|1d6|psi} para cada ponto psi adicional gasto nele."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Ice Barrier",
+					"entries": [
+						"Com uma ação, você cria uma parede de gelo, e pelo menos uma parte dela deve estar a até 18 metros de você. A parede tem 18 metros de comprimento, 4,5 metros de altura e 30 centímetros de espessura. A parede dura até que seu {@status concentration} termine. Cada seção de 3 metros da parede tem CA 12 e 30 pontos de vida. Uma criatura que danifique a parede com um ataque corpo a corpo sofre dano de frio igual ao dano que a criatura causou à parede."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Light and Darkness",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Você reivindica o domínio sobre a luz e as trevas com sua mente."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, a escuridão natural e mágica a até 9 metros de você não afeta sua visão.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Darkness",
+					"entries": [
+						"Com uma ação, você cria uma área de escuridão mágica, que frustra a visão no escuro. Escolha um local que você possa ver a até 18 metros de você. A escuridão mágica irradia daquele ponto em uma esfera com um raio de 3 metros por ponto psi gasto nesta habilidade. A luz produzida por magias de 2º nível ou menos é suprimida nesta área."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Light",
+					"entries": [
+						"Como uma ação, um objeto que você toca irradia luz em um raio de 6 metros e penumbra por mais 6 metros adicionais. A luz dura até que seu {@status concentration} termine. Alternativamente, uma criatura que você toca irradia luz da mesma maneira se falhar em um teste de resistência de Destreza. Enquanto estiver iluminado dessa maneira, ele não pode se esconder e as jogadas de ataque contra ele ganham vantagem."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Shadow Beasts",
+					"entries": [
+						"Como uma ação, você faz com que dois {@creature shadow||shadows} apareçam em espaços desocupados que você pode ver a até 18 metros de você. Os {@creature shadow||shadows} duram até que seu {@status concentration} termine e obedecem aos seus comandos verbais. Em combate, role sua iniciativa e escolha seu comportamento durante seus turnos. Quando este efeito termina, o {@creature shadow||shadows} desaparece. Consulte o Manual dos Monstros para ver o bloco de estatísticas."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Radiant Beam",
+					"entries": [
+						"Com uma ação, você projeta um feixe de luz em uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Destreza. Em caso de falha no salvamento, ele sofre {@damage 6d6} de dano radiante e é {@condition blinded} até que seu {@status concentration} termine. Em um teste bem-sucedido, sofre metade do dano. Um alvo {@condition blinded} pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo em caso de sucesso.",
+						"Você pode aumentar o dano deste efeito em {@scaledamage 6d6|5-7|1d6|psi} para cada ponto psi adicional gasto nele."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Water",
+			"source": "UATheMysticClass",
+			"page": 19,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Sua mente se torna uma só com a água elementar, sintonizando seus pensamentos com seu fluxo e refluxo."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você terá uma velocidade de natação igual à sua velocidade de caminhada e poderá respirar debaixo d'água.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Desiccate",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Constituição, sofrendo {@scaledamage 1d10|1-7|1d10|psi} de dano necrótico por ponto psi gasto nesta habilidade, ou metade do dano em caso de sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Watery Grasp",
+					"entries": [
+						"Como uma ação, você libera uma onda que surge e depois recua até você como a maré crescente. Você cria uma onda em um quadrado de 6 metros por 6 metros. Pelo menos alguma parte da borda do quadrado deve estar a até 1,5 metro de você. Qualquer criatura naquele quadrado deve fazer um teste de resistência de Força. Se falhar na resistência, o alvo sofre {@damage 2d6} de dano de concussão, é derrubado {@condition prone} e é puxado até 3 metros mais perto de você. Em um teste bem-sucedido, o alvo sofre metade do dano. Você pode aumentar o dano desta habilidade em {@scaledamage 2d6|2-7|1d6|psi} por ponto psi adicional gasto nela."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Water Whip",
+					"entries": [
+						"Como uma ação, você libera um jato de água em uma linha de 18 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve fazer um teste de resistência de Força, sofrendo {@damage 3d6} de dano de concussão se falhar na resistência, ou metade do dano se obtiver sucesso. Além disso, você pode mover cada alvo que falhar no teste de resistência para qualquer espaço desocupado que toque a linha. Você pode aumentar o dano desta habilidade em {@scaledamage 3d6|3-7|1d6|psi} por ponto psi adicional gasto nela."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Water Breathing",
+					"entries": [
+						"Com uma ação, você concede a si mesmo e a até dez criaturas voluntárias que você possa ver, a até 18 metros de você, a habilidade de respirar debaixo d'água pelas próximas 24 horas."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Water Sphere",
+					"entries": [
+						"Com uma ação, você faz com que uma esfera de água se forme ao redor de uma criatura. Escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Destreza. Se falhar no salvamento, ele fica preso na esfera de água até que seu {@status concentration} termine. Enquanto o alvo estiver preso, seu deslocamento será reduzido pela metade, ele sofrerá desvantagem nas jogadas de ataque e não poderá ver nada a mais de 3 metros de distância dele. No entanto, as jogadas de ataque contra ele também sofrem desvantagem. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Water",
+					"entries": [
+						"Com uma ação, você faz com que {@creature water elemental} apareça em um espaço desocupado que você possa ver a até 36 metros de você. O elemental dura até que seu {@status concentration} termine e obedece aos seus comandos verbais. Em combate, role sua iniciativa e escolha seu comportamento durante seus turnos. Quando este efeito termina, o elemental desaparece. Veja o Manual dos Monstros para seu bloco de estatísticas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Weather",
+			"source": "UATheMysticClass",
+			"page": 20,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Sua mente alcança o céu, remodelando as tempestades para atender às suas necessidades."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você terá resistência a danos causados por raios e trovões.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Cloud Steps",
+					"entries": [
+						"Como uma ação, você conjura nuvens para criar uma escadaria sólida e translúcida que dura até seu {@status concentration} terminar. As escadas formam uma espiral que preenche uma área de 3 metros por 3 metros e atinge 6 metros para cima por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hungry Lightning",
+					"entries": [
+						"Com uma ação, você ataca uma criatura que você possa ver a até 18 metros de você com gavinhas de relâmpago. O alvo deve fazer um teste de resistência de Destreza, com desvantagem se estiver usando armadura pesada. O alvo sofre {@scaledamage 1d8|1-7|1d8|psi} de dano elétrico por ponto psi gasto em uma falha no salvamento, ou metade do dano em um sucesso."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Clouds",
+					"entries": [
+						"Com uma ação, você cria uma parede de nuvens, e pelo menos uma parte dela deve estar a até 18 metros de você. A parede tem 18 metros de comprimento, 4,5 metros de altura e 30 centímetros de espessura. A parede dura até seu {@status concentration} terminar. As criaturas podem passar por ela sem obstáculos, mas a parede bloqueia a visão."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Whirlwind",
+					"entries": [
+						"Como ação, escolha um ponto que você possa ver a até 18 metros de você. Os ventos uivam em uma esfera de 6 metros de raio centrada naquele ponto. Cada criatura na esfera deve ser bem sucedida em um teste de resistência de Força ou sofrerá {@damage 1d6} de dano de concussão e será movida para um espaço desocupado de sua escolha na esfera. Qualquer objeto solto na esfera é movido para um espaço desocupado de sua escolha dentro dela se o objeto não pesar mais que 45 quilos."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Lightning Leap",
+					"entries": [
+						"Como uma ação, você solta uma linha de relâmpago de 18 metros de comprimento e 1,5 metro de largura. Cada criatura na linha deve fazer um teste de resistência de Destreza, sofrendo {@damage 6d6} de dano elétrico se falhar na resistência, ou metade do dano se obtiver sucesso. Você pode então se teletransportar para um espaço desocupado tocado pela linha.",
+						"Você pode aumentar o dano desta habilidade em {@scaledamage 6d6|5-7|1d6|psi} por ponto psi adicional gasto nela."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wall of Thunder",
+					"entries": [
+						"Com uma ação, você cria uma parede de trovões, pelo menos uma parte da qual deve estar a até 18 metros de você. A parede tem 18 metros de comprimento, 4,5 metros de altura e 30 centímetros de espessura. A parede dura até que seu {@status concentration} termine. Cada pé movido através da parede custa 1 pé extra de movimento. Quando uma criatura se move para o espaço da parede pela primeira vez em um turno ou começa seu turno lá, essa criatura deve ser bem sucedida em um teste de resistência de Força ou sofrerá {@damage 6d6} de dano trovejante, será empurrada em linha reta até 9 metros de distância da parede e será derrubada {@condition prone}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Thunder Clap",
+					"entries": [
+						"Como ação, escolha um ponto que você possa ver a até 18 metros de você. A energia do trovão irrompe em uma esfera de 6 metros de raio centrada naquele ponto. Cada criatura naquela área deve realizar um teste de resistência de Constituição. Se falhar no salvamento, o alvo sofre {@damage 8d6} de dano trovejante e permanece {@condition stunned} até o final do seu próximo turno. Em um teste bem-sucedido, o alvo sofre metade do dano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mastery of Wood and Earth",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Wu Jen",
+			"entries": [
+				"Você sintoniza sua mente para assumir o controle da madeira e da terra."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você recebe um bônus de +1 na CA.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Animate Weapon",
+					"entries": [
+						"Como uma ação, sua mente assume o controle de uma arma corpo a corpo de uma mão que você está segurando. A arma voa em direção a uma criatura que você possa ver a até 9 metros de você e faz um ataque corpo a corpo com uma mão contra ela, usando seu modificador de ataque de disciplina para as jogadas de ataque e dano. Ao acertar, a arma causa seu dano normal, mais um {@scaledamage 1d10|1-7|1d10|psi} de dano de força extra por ponto psi gasto nesta habilidade. A arma retorna ao seu alcance após atacar."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Warp Weapon",
+					"entries": [
+						"Como uma ação, escolha uma arma não mágica empunhada por uma criatura que você possa ver a até 18 metros de você. Aquela criatura deve ser bem sucedida em um teste de resistência de Força, ou a arma escolhida não poderá ser usada para atacar até o final do seu próximo turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Warp Armor",
+					"entries": [
+						"Como uma ação, escolha uma armadura não mágica usada por uma criatura que você possa ver a até 18 metros de você. Aquela criatura deve ser bem sucedida em um teste de resistência de Constituição, ou a CA da criatura se tornará 10 + seu modificador de Destreza até o final do seu próximo turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wall of Wood",
+					"entries": [
+						"Com uma ação, você cria uma parede de madeira, da qual pelo menos uma parte deve estar a até 18 metros de você. A parede tem 18 metros de comprimento, 4,5 metros de altura e 30 centímetros de espessura. A parede dura até que seu {@status concentration} termine. Cada seção de 1,5 metro de largura da parede tem CA 12 e 100 pontos de vida. Quebrar uma seção cria um buraco de 1,5 metro por 1,5 metro nela, mas a parede permanece intacta."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Armored Form",
+					"entries": [
+						"Como uma ação bônus, você ganha resistência a danos de concussão, perfurantes e cortantes, que dura até seu {@status concentration} terminar."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Animate Earth",
+					"entries": [
+						"Com uma ação, você faz com que um {@creature earth elemental} apareça em um espaço desocupado que você possa ver a até 36 metros de você. O elemental dura até que seu {@status concentration} termine e obedece aos seus comandos verbais. Em combate, role sua iniciativa e escolha seu comportamento durante seus turnos. Quando este efeito termina, o elemental desaparece. Veja o Manual dos Monstros para seu bloco de estatísticas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mind Meld",
+			"source": "UATheMysticClass",
+			"page": 27,
+			"type": "T",
+			"entries": [
+				"Como uma ação bônus, você pode se comunicar telepaticamente com uma criatura voluntária que você possa ver a até 36 metros de você. O alvo deve ter Inteligência de pelo menos 2, caso contrário esse talento falha e a ação é desperdiçada.",
+				"Esta comunicação pode ocorrer até o final do turno atual. Você não precisa compartilhar um idioma com o alvo para que ele entenda suas declarações telepáticas, e ele entende você mesmo que lhe falte um idioma. Você também ganha acesso a uma memória à escolha do alvo, obtendo uma recordação perfeita de algo que ele viu ou fez."
+			]
+		},
+		{
+			"name": "Mind Slam",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você escolhe uma criatura que você possa ver a até 18 metros de você. O alvo deve ter sucesso em um teste de resistência de Constituição ou sofrerá {@damage 1d6} de dano de força. Se sofrer algum desses danos e for Grande ou menor, ele será derrubado {@condition prone}.",
+				"O dano do talento aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Mind Thrust",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você escolhe uma criatura que você possa ver a até 36 metros de você. O alvo deve ter sucesso em um teste de resistência de Inteligência ou sofrerá {@damage 1d10} de dano psíquico.",
+				"O dano do talento aumenta em {@damage 1d10} quando você atinge o 5º nível ({@damage 2d10}), 11º nível ({@damage 3d10}) e 17º nível ({@damage 4d10})."
+			]
+		},
+		{
+			"name": "Mystic Charm",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Com uma ação, você engana um humanoide que você possa ver a até 36 metros de você. O alvo deve ter sucesso em um teste de resistência de Carisma ou será {@condition charmed} seu até o final do seu próximo turno."
+			]
+		},
+		{
+			"name": "Mystic Hand",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Você pode usar sua ação para manipular ou mover um objeto a até 9 metros de você. O objeto não pode pesar mais de 4,5 quilos e você não pode afetar um objeto que esteja sendo usado ou carregado por outra criatura. Se o objeto estiver solto, você poderá movê-lo até 9 metros em qualquer direção.",
+				"Esse talento permite que você abra uma porta destrancada, sirva uma caneca de cerveja e assim por diante.",
+				"O objeto cai no chão no final do seu turno se você deixá-lo suspenso no ar."
+			]
+		},
+		{
+			"name": "Nomadic Arrow",
+			"source": "UATheMysticClass",
+			"page": 21,
+			"type": "D",
+			"order": "Nômade",
+			"entries": [
+				"Você imbui uma arma de longo alcance com uma estranha aparência de senciência, permitindo que ela encontre seu alvo com precisão."
+			],
+			"focus": "Enquanto você estiver focado nesta disciplina, qualquer jogada de ataque que você fizer para um ataque com arma de longo alcance ignora a desvantagem. Se a desvantagem normalmente se aplica ao teste, esse teste também não pode se beneficiar da vantagem.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Speed Dart",
+					"entries": [
+						"Como uma ação bônus, você imbui uma arma de longo alcance que você possui com poder psiônico. O próximo ataque que você fizer antes do final do turno atual causará {@scaledamage 1d10|1-7|1d10|psi} de dano psíquico extra por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Seeking Missile",
+					"entries": [
+						"Como reação quando você erra um ataque com arma de longo alcance, você pode repetir a jogada de ataque contra o mesmo alvo."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Faithful Archer",
+					"entries": [
+						"Como uma ação bônus, você imbui uma arma de longo alcance com uma sensibilidade limitada. Até que seu {@status concentration} termine, você pode fazer um ataque extra com a arma no início de cada um de seus turnos (nenhuma ação necessária). Se for uma arma de arremesso, ela retorna ao seu alcance cada vez que você faz qualquer ataque com ela."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Chameleon",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nômade",
+			"entries": [
+				"Você cria uma tela de poder psíquico que distorce sua aparência, permitindo que você se misture ao fundo ou até mesmo fique invisível."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Destreza ({@skill Stealth}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Chameleon",
+					"entries": [
+						"Como uma ação, você pode tentar se esconder mesmo que não atenda aos requisitos necessários para isso. No final do turno atual, você permanecerá escondido apenas se atender aos requisitos normais para se esconder."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Step from Sight",
+					"entries": [
+						"Como uma ação bônus, esconda-se de vista. Você pode escolher uma criatura adicional para cada ponto psi adicional gasto nesta habilidade. Os alvos adicionados devem estar visíveis para você e a até 18 metros de você. Cada alvo gira {@condition invisible} e permanece assim até que seu {@status concentration} termine ou até imediatamente após atingir, danificar ou afetar qualquer criatura com um ataque, uma mágica ou outra habilidade."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Enduring Invisibility",
+					"entries": [
+						"Como uma ação bônus, você vira {@condition invisible} e permanece assim até que seu {@status concentration} termine."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Mind",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nômade",
+			"entries": [
+				"Você envia parte de sua psique para a noosfera, a visão coletiva das mentes e do conhecimento possuído pelos seres vivos."
+			],
+			"focus": "Sempre que você se concentra nesta disciplina, você escolhe uma habilidade ou ferramenta e tem proficiência nela até que seu foco termine. Alternativamente, você ganha a capacidade de ler e escrever em um idioma de sua escolha até que seu foco termine.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Wandering Mind",
+					"entries": [
+						"Você entra em profunda contemplação. Se você se concentrar durante toda a duração desta opção, você ganhará proficiência com até três das seguintes habilidades (uma habilidade para cada 2 pontos psi gastos): {@skill Animal Handling}, {@skill Arcana}, {@skill History}, {@skill Medicine}, {@skill Nature}, {@skill Performance}, {@skill Religion} e {@skill Survival}. O benefício dura 1 hora, sem necessidade de {@status concentration}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Find Creature",
+					"entries": [
+						"Você procura informações sobre uma criatura específica. Se você se concentrar durante toda a duração desta opção, você obterá uma compreensão geral da localização atual da criatura. Você aprende a região, cidade, vila, vila ou distrito onde ela está, identificando uma área entre 1 e 3 milhas de cada lado (a escolha do Mestre). Se a criatura estiver em outro plano de existência, você aprende qual plano."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Item Lore",
+					"entries": [
+						"Você estuda cuidadosamente um item. Se você se concentrar durante toda a duração desta opção enquanto permanece a até 1,5 metro do item, você ganha os benefícios de uma magia de identificação lançada naquele item."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Psychic Speech",
+					"entries": [
+						"Como ação, você sintoniza sua mente com a impressão psíquica de toda linguagem. Por 1 hora, você ganha a capacidade de compreender qualquer idioma que ouça ou tente ler. Além disso, quando você fala, todas as criaturas que conseguem entender um idioma entendem o que você diz, independentemente do idioma que você usa."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Wandering Eye",
+					"entries": [
+						"Com uma ação, você cria um sensor psíquico a até 18 metros de você. O sensor dura até que seu {@status concentration} termine. O sensor é invisível e paira no ar. Você recebe mentalmente informações visuais dele, que possui visão normal e visão no escuro com alcance de 18 metros. O sensor pode olhar em todas as direções. Como ação, você pode mover o sensor até 9 metros em qualquer direção. Não há limite para o quão longe de você o olho pode se mover, mas ele não pode entrar em outro plano de existência. Uma barreira sólida bloqueia o movimento do olho, mas o olho pode passar por uma abertura de até 2,5 cm de diâmetro."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phasing Eye",
+					"entries": [
+						"Como o Olho Errante acima, exceto que o olho pode se mover através de objetos sólidos, mas não pode encerrar seu movimento em um. Se isso acontecer, o efeito termina imediatamente."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nomadic Step",
+			"source": "UATheMysticClass",
+			"page": 22,
+			"type": "D",
+			"order": "Nômade",
+			"entries": [
+				"Você exerce sua mente na área ao seu redor, distorcendo os caminhos intraplanares que você percebe para permitir viagens instantâneas."
+			],
+			"focus": "Após você se teletransportar em seu turno enquanto estiver focado nesta disciplina, sua velocidade de caminhada aumenta em 3 metros até o final do turno, conforme você é impulsionado pela magia de seu teletransporte. Você pode receber esse aumento apenas uma vez por turno.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Step of a Dozen Paces",
+					"entries": [
+						"Se você ainda não se moveu no seu turno, você realiza uma ação bônus para se teletransportar até 6 metros por ponto psi gasto para um espaço desocupado que você possa ver, e sua velocidade é reduzida a 0 até o final do turno."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Nomadic Anchor",
+					"entries": [
+						"Com uma ação, você cria uma âncora de teletransporte invisível e intangível em um cubo de 1,5 metro que você pode ver a até 36 metros de você. Pelas próximas 8 horas, sempre que você usar esta disciplina psiônica para se teletransportar, você poderá se teletransportar para a âncora, mesmo que não possa vê-la, mas ela deve estar dentro do alcance da habilidade de teletransporte."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Defensive Step",
+					"entries": [
+						"Quando você é atingido por um ataque, você pode usar sua reação para ganhar +4 de bônus na CA contra esse ataque, possivelmente transformando-o em um erro. Você então se teletransporta até 3 metros para um espaço desocupado que você possa ver."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "There and Back Again",
+					"entries": [
+						"Como uma ação bônus, você se teletransporta até 6 metros para um espaço desocupado que você possa ver e então se move até metade do seu deslocamento. No final do seu turno, você pode se teletransportar de volta para o local que ocupava antes de se teletransportar, a menos que ele esteja ocupado ou em um plano de existência diferente."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Transposition",
+					"entries": [
+						"Se você ainda não se moveu no seu turno, escolha um aliado que você possa ver a até 18 metros de você. Como uma ação bônus, você e aquela criatura se teletransportam, trocando de lugar, e seu deslocamento é reduzido a 0 até o final do turno. Essa habilidade falha e é desperdiçada se algum de vocês não couber no espaço de destino."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Baleful Transposition",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 36 metros de você. Essa criatura deve fazer um teste de resistência de Sabedoria. Se falhar, você e aquela criatura se teletransportam, trocando de lugar. Essa habilidade falha e é desperdiçada se algum de vocês não couber no espaço de destino."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Phantom Caravan",
+					"entries": [
+						"Com uma ação, você e até seis criaturas voluntárias de sua escolha que você possa ver a até 18 metros de você se teletransportam até 1,6 km para um local que você possa ver. Se não houver um espaço aberto para todos os alvos ocuparem no ponto de chegada, esta habilidade falha e é desperdiçada."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Nomad's Gate",
+					"entries": [
+						"Com uma ação, você cria um cubo de 1,5 metro de luz cinza fraca a até 1,5 metro de você. Você cria um cubo idêntico em qualquer ponto de sua escolha dentro de 1 milha que você visualizou nas últimas 24 horas. Até que seu {@status concentration} termine, qualquer pessoa que entrar em um dos cubos se teletransportará imediatamente para o outro, aparecendo em um espaço desocupado próximo a ele. O teletransporte falha se não houver espaço para a criatura aparecer."
+					]
+				}
+			]
+		},
+		{
+			"name": "Precognition",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Ao analisar informações ao seu redor, desde dicas sutis até fatos aparentemente desconexos, você aprende a tecer uma série de probabilidades em um instante que lhe dá insights extraordinários."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você terá vantagem em testes de iniciativa.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Precognitive Hunch",
+					"entries": [
+						"Como ação bônus, você se abre para receber insights momentâneos que melhoram suas chances de sucesso; até que seu {@status concentration} termine, sempre que você fizer uma jogada de ataque, um teste de resistência ou um teste de habilidade, você rola um {@dice d4} e adiciona-o ao total."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "All-Around Sight",
+					"entries": [
+						"Em resposta a um ataque que atinge você, você usa sua reação para impor desvantagem naquela jogada de ataque, possivelmente fazendo com que ela erre."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 8,
+						"unit": "hr"
+					},
+					"name": "Danger Sense",
+					"entries": [
+						"Como uma ação, você cria um modelo psíquico da realidade em sua mente e o configura para lhe mostrar alguns segundos no futuro. Até que seu {@status concentration} termine, você não pode ser {@status surprised}, as jogadas de ataque contra você não podem ganhar vantagem e você ganha um bônus de +10 na iniciativa."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Victory Before Battle",
+					"entries": [
+						"Ao rolar a iniciativa, você pode usar essa habilidade para conceder a si mesmo e a até cinco criaturas de sua escolha, a até 18 metros de você, um bônus de +10 na iniciativa."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Restoration",
+			"source": "UATheMysticClass",
+			"page": 23,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você utiliza energia psiônica para curar feridas e restaurar a saúde de si mesmo e de outras pessoas."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você pode usar uma ação bônus para tocar uma criatura que tenha 0 pontos de vida e estabilizá-la.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Mend Wounds",
+					"entries": [
+						"Como uma ação, você pode gastar pontos psi para restaurar pontos de vida de uma criatura que você tocar. A criatura recupera {@scaledice 1d8|1-7|1d8|psi} pontos de vida por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Restore Health",
+					"entries": [
+						"Como uma ação, você toca uma criatura e remove uma das seguintes condições dela: {@condition blinded}, {@condition deafened}, {@condition paralyzed} ou {@condition poisoned}. Alternativamente, você remove uma doença da criatura."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Restore Life",
+					"entries": [
+						"Com uma ação, você toca uma criatura que morreu no último minuto. A criatura retorna à vida com 1 ponto de vida. Esta habilidade não pode trazer de volta à vida uma criatura que morreu de velhice, nem pode restaurar uma criatura sem qualquer parte vital do corpo."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Restore Vigor",
+					"entries": [
+						"Como uma ação, você pode tocar uma criatura e escolher uma das seguintes opções: remover quaisquer reduções em um de seus valores de habilidade, remover um efeito que reduza seu ponto de vida máximo ou reduzir seu nível {@condition exhaustion} em um."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psionic Weapon",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Imortal",
+			"entries": [
+				"Você aprendeu como canalizar energia psiônica em seus ataques, conferindo-lhes um poder devastador."
+			],
+			"focus": "Sempre que você se concentrar nesta disciplina, escolha uma arma que você está segurando ou seu ataque desarmado. Quando você ataca com ele enquanto está focado nesta disciplina, seu dano é psíquico e mágico, ao invés do tipo de dano normal. Até atingir o 6º nível como místico, você não adiciona seu modificador de Força ou Destreza às jogadas de dano do ataque psíquico.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 1
+					},
+					"name": "Ethereal Weapon",
+					"entries": [
+						"Como uma ação bônus, você transforma temporariamente uma arma que está segurando ou seu ataque desarmado em pura energia psiônica. O próximo ataque que você fizer com ele antes do final do seu turno ignora a armadura do alvo, não exigindo nenhuma jogada de ataque. Em vez disso, o alvo faz um teste de resistência de Destreza contra esta disciplina. Se falhar na resistência, o alvo sofre o dano normal do ataque e sofre seus efeitos adicionais. Se obtiver sucesso, o alvo sofre metade do dano do ataque, mas não sofre efeitos adicionais que normalmente seriam impostos a um acerto."
+					]
+				},
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Lethal Strike",
+					"entries": [
+						"Como uma ação bônus, você imbui uma arma que está segurando ou seu ataque desarmado com energia psíquica. Na próxima vez que você acertar antes do final do seu turno, ele causará {@scaledamage 1d10|1-7|1d10|psi} de dano psíquico extra por ponto psi gasto."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 10,
+						"unit": "min"
+					},
+					"name": "Augmented Weapon",
+					"entries": [
+						"Como ação bônus, toque em um {@filter simple or martial weapon|items|source=phb|category=basic|type=martial weapon;simple weapon}. Até que seu {@status concentration} termine, essa arma se torna uma arma mágica com um bônus de +3 em suas jogadas de ataque e dano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Assault",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você maneja sua mente como uma arma, liberando salvas de energia psiônica."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha um bônus de +2 nas jogadas de dano com talentos psiônicos que causam dano psíquico.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Psionic Blast",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo sofre {@scaledamage 1d8|1-7|1d8|psi} de dano psíquico por ponto psi gasto nesta habilidade."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Ego Whip",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Se falhar no salvamento, a criatura sofre {@damage 3d8} de dano psíquico e fica cheia de dúvidas, deixando-a capaz de usar sua ação em seu próximo turno apenas para realizar a ação Esquivar, Desengajar ou Esconder-se. Em um teste de resistência bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Id Insinuation",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Se falhar no salvamento, a criatura sofre {@damage 5d8} de dano psíquico e fica furiosa, enquanto seu id corre solto. No seu próximo turno, ele pode usar sua ação apenas para realizar a ação Esquivar ou Atacar. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"name": "Psychic Blast",
+					"entries": [
+						"Com uma ação, você libera energia psíquica devastadora em um cone de 18 metros. Cada criatura naquela área deve fazer um teste de resistência de Inteligência, sofrendo {@damage 8d8} de dano psíquico se falhar na resistência, ou metade do dano se obtiver sucesso. Você pode aumentar o dano em {@scaledamage 8d8|6-7|2d8|psi} se gastar mais 1 ponto psi nesta habilidade."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"name": "Psychic Crush",
+					"entries": [
+						"Com uma ação, você cria um cubo de 6 metros de energia psíquica a até 36 metros de você. Cada criatura naquela área deve realizar um teste de resistência de Inteligência. Se falhar na resistência, o alvo sofre {@damage 8d8} de dano psíquico e fica {@condition stunned} até o final do seu próximo turno. Em um teste bem-sucedido, o alvo sofre metade do dano."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Disruption",
+			"source": "UATheMysticClass",
+			"page": 24,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você cria estática psíquica que perturba a capacidade de outras criaturas pensarem com clareza."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Carisma ({@skill Deception}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Distracting Haze",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. Essa criatura deve fazer um teste de resistência de Inteligência. Se falhar no salvamento, ele sofre {@scaledamage 1d10|1-7|1d10|psi} de dano psíquico por ponto psi gasto e não pode ver nada a mais de 3 metros dele até que seu {@status concentration} termine. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"name": "Daze",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. Essa criatura deve fazer um teste de resistência de Inteligência. Se falhar no salvamento, o alvo será {@condition incapacitated} até o final do seu próximo turno ou até sofrer algum dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Mind Storm",
+					"entries": [
+						"Como ação, escolha um ponto que você possa ver a até 18 metros de você. Cada criatura em uma esfera de 6 metros de raio centrada naquele ponto deve realizar um teste de resistência de Sabedoria. Se falhar na resistência, o alvo sofre {@damage 6d8} de dano psíquico e sofre desvantagem em todos os testes de resistência até o final do seu próximo turno. Em um teste bem-sucedido, a criatura sofre metade do dano. Você pode aumentar o dano em {@scaledamage 6d8|5-7|1d6|psi} por ponto psi adicional gasto nesta habilidade."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Hammer",
+			"source": "UATheMysticClass",
+			"page": 28,
+			"type": "T",
+			"entries": [
+				"Como uma ação, você tenta agarrar uma criatura que você possa ver a até 36 metros de você, com uma mão feita de energia telecinética. O alvo deve ter sucesso em um teste de resistência de Força ou sofrerá {@damage 1d6} de dano de força. Se ele sofrer algum desses danos e for Grande ou menor, você pode movê-lo até 3 metros em linha reta na direção de sua escolha. Você não pode levantar o alvo do chão, a menos que ele já esteja no ar ou debaixo d'água.",
+				"O dano do talento aumenta em {@damage 1d6} quando você atinge o 5º nível ({@damage 2d6}), 11º nível ({@damage 3d6}) e 17º nível ({@damage 4d6})."
+			]
+		},
+		{
+			"name": "Psychic Inquisition",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Você entra na mente de uma criatura para descobrir informações ou plantar ideias nela."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você sabe quando uma criatura que se comunica com você via telepatia está mentindo.",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Hammer of Inquisition",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Se falhar na resistência, ele sofre {@scaledamage 1d10|1-7|1d10|psi} de dano psíquico por ponto psi gasto e sofre desvantagem em seu próximo teste de resistência de Sabedoria antes do final do seu próximo turno. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Forceful Query",
+					"entries": [
+						"Como uma ação, você faz uma pergunta a uma criatura que pode ver e ouvir você a até 9 metros de você. A pergunta deve ser formulada de forma que possa ser respondida com sim ou não, caso contrário essa habilidade falhará. O alvo deve ser bem sucedido em um teste de resistência de Sabedoria ou responderá com uma resposta verdadeira. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Ransack Mind",
+					"entries": [
+						"Enquanto você se concentra nesta habilidade, você sonda a mente de uma criatura. A criatura deve permanecer a até 9 metros de você e você deve ser capaz de vê-la. Se você atingir a duração total da habilidade, o alvo deve fazer três testes de resistência de Inteligência, e você aprende informações com base no número de testes de resistência que falha. Com uma falha no teste de resistência, você aprende as principais memórias das últimas 12 horas. Com duas tentativas de resistência fracassadas, você aprende suas principais memórias das últimas 24 horas. Com três testes de resistência fracassados, você aprende as principais memórias das últimas 48 horas."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "hr"
+					},
+					"name": "Phantom Idea",
+					"entries": [
+						"Enquanto você se concentra nesta habilidade, você sonda a mente de uma criatura. A criatura deve permanecer a até 9 metros de você e você deve ser capaz de vê-la. Se você atingir a duração total da habilidade, o alvo deve fazer três testes de resistência de Inteligência, e você planta uma memória ou uma ideia nela, que dura um número de horas com base no número de testes de resistência em que falha. Você escolhe se a ideia ou memória é trivial (como \"Comi mingau no café da manhã\" ou \"A cerveja é a pior\") ou definidora de personalidade (\"Não consegui salvar minha aldeia dos saqueadores orcs e, portanto, sou um covarde\" ou \"A magia é um flagelo, então renuncio a ela\"). Com uma falha no teste de resistência, a ideia ou memória dura pelas próximas 4 horas. Com dois testes de resistência falhados, dura 24 horas. Com três testes de resistência falhados, dura 48 horas."
+					]
+				}
+			]
+		},
+		{
+			"name": "Psychic Phantoms",
+			"source": "UATheMysticClass",
+			"page": 25,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Seu poder alcança a mente de uma criatura e causa falsas percepções."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem vantagem em testes de Carisma ({@skill Deception}).",
+			"modes": [
+				{
+					"cost": {
+						"min": 1,
+						"max": 7
+					},
+					"name": "Distracting Figment",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Se falhar na resistência, ele sofre {@scaledamage 1d10|1-7|1d10|psi} de dano psíquico por ponto psi gasto e pensa que percebe uma criatura ameaçadora fora de sua vista; até o final do seu próximo turno, ele não pode usar reações e as jogadas de ataque corpo a corpo contra ele têm vantagem. Em um teste bem-sucedido, sofre metade do dano."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Foe",
+					"entries": [
+						"Com uma ação, escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Se falhar, ele percebe uma criatura horrível adjacente a ele até que seu {@status concentration} termine. Durante esse tempo, o alvo não pode reagir e sofre {@damage 1d8} de dano psíquico no início de cada um de seus turnos. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. Você pode aumentar o dano em {@scaledamage 1d8|3-7|1d8|psi} para cada ponto psi adicional gasto na habilidade."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Betrayal",
+					"entries": [
+						"Com uma ação, você planta paranóia delirante na mente de uma criatura. Escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve ter sucesso em um teste de resistência de Inteligência ou, até que seu {@status concentration} termine, ele deve atacar seus aliados com ataques e outros efeitos prejudiciais. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Phantom Riches",
+					"entries": [
+						"Com uma ação, você planta o fantasma de um objeto altamente desejado na mente de uma criatura. Escolha uma criatura que você possa ver a até 18 metros de você. O alvo deve fazer um teste de resistência de Inteligência. Em caso de falha no salvamento, você ganha controle parcial sobre o comportamento do alvo até que seu {@status concentration} termine; o alvo se move como você deseja em cada um de seus turnos, pois pensa que persegue o objeto fantasma que deseja. Se ele não sofreu dano desde seu último turno, ele poderá usar sua ação apenas para admirar o objeto que você criou em sua percepção. O alvo pode repetir o teste de resistência no final de cada um de seus turnos, encerrando o efeito sobre si mesmo se obtiver sucesso."
+					]
+				}
+			]
+		},
+		{
+			"name": "Telepathic Contact",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Desperto",
+			"entries": [
+				"Ao canalizar o poder psiônico, você ganha a habilidade de controlar outras criaturas, substituindo a sua vontade pela delas."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você ganha a habilidade de usar seu recurso de classe Telepatia com até seis criaturas ao mesmo tempo. Se você não possui esse recurso da classe mística, você o ganha enquanto estiver focado nesta disciplina.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Exacting Query",
+					"entries": [
+						"Com uma ação, você escolhe uma criatura com a qual pode se comunicar via telepatia. O alvo deve fazer um teste de resistência de Inteligência. Se falhar, o alvo responde verdadeiramente a uma pergunta feita por telepatia. Em um teste bem sucedido, o alvo não é afetado e você não pode usar esta habilidade nele novamente até terminar um descanso longo. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Occluded Mind",
+					"entries": [
+						"Com uma ação, você escolhe uma criatura com a qual pode se comunicar via telepatia. O alvo deve fazer um teste de resistência de Inteligência. Se falhar, o alvo acredita em uma afirmação de sua escolha pelos próximos 5 minutos que você comunica a ele via telepatia. A declaração pode ter até dez palavras e deve descrever você, uma criatura ou um objeto que o alvo possa ver. Em um teste bem sucedido, o alvo não é afetado e você não pode usar esta habilidade nele novamente até terminar um descanso longo. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"name": "Broken Will",
+					"entries": [
+						"Com uma ação, você escolhe uma criatura com a qual pode se comunicar via telepatia. O alvo deve fazer um teste de resistência de Inteligência. Se falhar, você escolhe o movimento e a ação do alvo no próximo turno. Em um teste bem sucedido, o alvo não é afetado e você não pode usar esta habilidade nele novamente até terminar um descanso longo. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 6,
+						"max": 6
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Grip",
+					"entries": [
+						"Com uma ação, você escolhe uma criatura que você possa ver a até 18 metros de você. O alvo deve ter sucesso em um teste de resistência de Inteligência ou será {@condition paralyzed} até que seu {@status concentration} termine. No final de cada um de seus turnos, ele pode repetir o teste de resistência. Com um sucesso, este efeito termina. Em caso de falha, você pode usar sua reação para forçar o alvo a se mover até metade de sua velocidade, mesmo que seja {@condition paralyzed}."
+					]
+				},
+				{
+					"cost": {
+						"min": 7,
+						"max": 7
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Psychic Domination",
+					"entries": [
+						"Com uma ação, você escolhe uma criatura que você possa ver a até 18 metros de você. O alvo deve ser bem sucedido em um teste de resistência de Inteligência, ou você escolhe as ações e movimentos da criatura em seus turnos até que seu {@status concentration} termine. No final de cada um de seus turnos, ele pode repetir o teste de resistência, encerrando o efeito sobre si mesmo em caso de sucesso. Uma criatura é imune a esta habilidade se for imune a {@condition charmed}."
+					]
+				}
+			]
+		},
+		{
+			"name": "Third Eye",
+			"source": "UATheMysticClass",
+			"page": 26,
+			"type": "D",
+			"order": "Nômade",
+			"entries": [
+				"Você cria um terceiro olho psíquico em sua mente, que você lança no mundo. Ele canaliza pensamentos e conhecimento de volta para você, melhorando muito os seus sentidos."
+			],
+			"focus": "Enquanto estiver focado nesta disciplina, você tem visão no escuro com alcance de 18 metros. Se você já possui visão no escuro com esse alcance ou superior, aumente seu alcance em 3 metros.",
+			"modes": [
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Tremorsense",
+					"entries": [
+						"Como uma ação bônus, você ganha sentido de tremor com um raio de 9 metros, que dura até seu {@status concentration} terminar."
+					]
+				},
+				{
+					"cost": {
+						"min": 2,
+						"max": 2
+					},
+					"name": "Unwavering Eye",
+					"entries": [
+						"Com uma ação bônus, você ganha vantagem em testes de Sabedoria por 1 minuto."
+					]
+				},
+				{
+					"cost": {
+						"min": 3,
+						"max": 3
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Piercing Sight",
+					"entries": [
+						"Como uma ação bônus, você ganha a habilidade de ver através de objetos com até 30 centímetros de espessura a até 9 metros de você. Esta visão dura até que seu {@status concentration} termine."
+					]
+				},
+				{
+					"cost": {
+						"min": 5,
+						"max": 5
+					},
+					"concentration": {
+						"duration": 1,
+						"unit": "min"
+					},
+					"name": "Truesight",
+					"entries": [
+						"Como uma ação bônus, você ganha visão verdadeira com um raio de 9 metros, que dura até seu {@status concentration} terminar."
+					]
+				}
+			]
+		}
+	]
+}

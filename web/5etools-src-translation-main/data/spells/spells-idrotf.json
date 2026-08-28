@@ -1,0 +1,96 @@
+{
+	"spell": [
+		{
+			"name": "Create Magen",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 7,
+			"school": "T",
+			"time": [
+				{
+					"number": 1,
+					"unit": "hour"
+				}
+			],
+			"range": {
+				"type": "point",
+				"distance": {
+					"type": "touch"
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true,
+				"m": {
+					"text": "um frasco de mercúrio no valor de 500 po e uma boneca humana em tamanho real, ambos consumidos pelo feitiço, e um intrincado bastão de cristal no valor de pelo menos 1.500 po que não é consumido",
+					"cost": 50000,
+					"consume": true
+				}
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Ao lançar o feitiço, você coloca um frasco de mercúrio no peito de uma boneca humana em tamanho real cheia de cinzas ou poeira. Você então costura a boneca e pinga seu sangue nela. Ao final da fundição, você bate no boneco com uma haste de cristal, transformando-o em um {@filter magen|bestiary|search=magen|source=IDRotF} vestido com o que o boneco estava vestindo. O tipo de magen é escolhido por você durante o lançamento do feitiço. Consulte {@adventure appendix C|IDRotF|21} para diferentes tipos de magen e suas estatísticas.",
+				"Quando o magen aparece, seu máximo de pontos de vida diminui em uma quantidade igual ao nível de desafio do magen (redução mínima de 1). Somente um feitiço {@spell wish} pode desfazer essa redução ao máximo de seus pontos de vida.",
+				"Qualquer magen que você criar com esta magia obedece aos seus comandos sem questionar."
+			],
+			"areaTags": [
+				"ST"
+			]
+		},
+		{
+			"name": "Frost Fingers",
+			"source": "IDRotF",
+			"page": 318,
+			"level": 1,
+			"school": "V",
+			"time": [
+				{
+					"number": 1,
+					"unit": "action"
+				}
+			],
+			"range": {
+				"type": "cone",
+				"distance": {
+					"type": "feet",
+					"amount": 15
+				}
+			},
+			"components": {
+				"v": true,
+				"s": true
+			},
+			"duration": [
+				{
+					"type": "instant"
+				}
+			],
+			"entries": [
+				"Rajadas de frio congelante das pontas dos dedos em um cone de 4,5 metros. Cada criatura naquela área deve fazer um teste de resistência de Constituição, sofrendo {@damage 2d8} de dano de frio se falhar na resistência, ou metade do dano se obtiver sucesso.",
+				"O frio congela líquidos não mágicos na área que não está sendo usada ou carregada."
+			],
+			"entriesHigherLevel": [
+				{
+					"type": "entries",
+					"name": "At Higher Levels",
+					"entries": [
+						"Quando você lança este feitiço usando um espaço de feitiço de 2º nível ou superior, o dano aumenta em {@damage 1d8} para cada nível do espaço acima do 1º."
+					]
+				}
+			],
+			"damageInflict": [
+				"frio"
+			],
+			"savingThrow": [
+				"constituição"
+			],
+			"areaTags": [
+				"N"
+			]
+		}
+	]
+}

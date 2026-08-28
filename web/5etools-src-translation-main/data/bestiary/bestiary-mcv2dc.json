@@ -1,0 +1,1637 @@
+{
+	"monster": [
+		{
+			"name": "Dream Eater",
+			"source": "MCV2DC",
+			"page": 3,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 77,
+				"formula": "14d8 + 14"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 15,
+			"dex": 20,
+			"con": 13,
+			"int": 12,
+			"wis": 16,
+			"cha": 21,
+			"senses": [
+				"blindsight 120 ft. (blind beyond this radius)"
+			],
+			"passive": 13,
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"psychic"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"restrained"
+			],
+			"languages": [
+				"Deep Speech",
+				"telepathy 120 ft."
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Ghastly Visions",
+					"entries": [
+						"Cada criatura que inicia seu turno até 9 metros do Devorador de Sonhos deve realizar um teste de resistência de {@dc 16} Sabedoria. Se falhar no salvamento, a criatura será {@condition frightened} do comedor de sonhos até o início do próximo turno da criatura. Se o teste de resistência de uma criatura for bem-sucedida, uma criatura ficará imune à característica Visões Medonhas deste devorador de sonhos pelas próximas 24 horas."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"O devorador de sonhos pode se mover através de outras criaturas e objetos como se fossem um terreno difícil. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu giro dentro de um objeto."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O devorador de sonhos tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O devorador de sonhos faz dois ataques de Grito Ensnaring."
+					]
+				},
+				{
+					"name": "Ensnaring Shriek",
+					"entries": [
+						"{@atk ms,rs} {@hit 8} para acertar, alcance 15 pés ou alcance 60 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) de dano psíquico, e se o alvo for uma criatura Média ou menor, o alvo deve ter sucesso em um teste de resistência de Carisma {@dc 16} ou será puxado até 4,5 metros em direção ao comedor de sonhos."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Engulfing Nightmare",
+					"entries": [
+						"O devorador de sonhos tem como alvo uma criatura a até 1,5 metro de si mesmo. O alvo deve ter sucesso em um teste de resistência de {@dc 16} Sabedoria ou será engolfado pelo devorador de sonhos, pois o devorador de sonhos envolve uma criatura em um miasma de seus piores medos.",
+						"Quando o devorador de sonhos engole um alvo, o devorador de sonhos entra em seu espaço e o alvo sofre imediatamente 10 ({@damage 3d6}) de dano psíquico. Um alvo engolfado é {@condition restrained} e {@condition blinded}, e sofre 10 ({@damage 3d6}) de dano psíquico adicional no início de cada turno do comedor de sonhos. Quando o devorador de sonhos se move, o alvo engolfado se move com ele.",
+						"O devorador de sonhos pode ter apenas um alvo engolido por vez. Um engolfado escapa no início de seu turno fazendo um alvo de teste de resistência de {@dc 16} Sabedoria. Se obtiver sucesso, o alvo escapa; o alvo não está mais engolfado e entra em um espaço de sua escolha a até 1,5 metro do devorador de sonhos. Uma criatura a até 4,5 metros do devorador de sonhos também pode usar sua ação para tentar libertar um alvo engolfado. Fazer isso exige que uma criatura use sua ação para fazer um teste de {@dc 16} Carisma ({@skill Persuasion}) para convencer o alvo engolfado de que o pesadelo não é real, com o alvo escapando com sucesso. Uma criatura que faz o teste sofre 10 ({@damage 3d6}) de dano psíquico, independentemente do sucesso ou fracasso do teste, enquanto sua mente não termina no pesadelo."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS",
+				"TP"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"miscTags": [
+				"RCH"
+			],
+			"conditionInflict": [
+				"blinded",
+				"frightened",
+				"restrained"
+			],
+			"savingThrowForced": [
+				"charisma",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Ember",
+			"isNamedCreature": true,
+			"source": "MCV2DC",
+			"page": 5,
+			"size": [
+				"H"
+			],
+			"type": {
+				"type": "dragon",
+				"tags": [
+					"adult chromatic"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"special equipment"
+					]
+				}
+			],
+			"hp": {
+				"average": 270,
+				"formula": "20d12 + 140"
+			},
+			"speed": {
+				"walk": 40,
+				"climb": 40,
+				"fly": 80
+			},
+			"str": 28,
+			"dex": 10,
+			"con": 25,
+			"int": 17,
+			"wis": 14,
+			"cha": 22,
+			"save": {
+				"dex": "+7",
+				"con": "+14",
+				"wis": "+9",
+				"cha": "+13"
+			},
+			"skill": {
+				"perception": "+16",
+				"religion": "+10",
+				"stealth": "+14"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 26,
+			"immune": [
+				"fire"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic"
+			],
+			"cr": "22",
+			"trait": [
+				{
+					"name": "Calescent Aura",
+					"entries": [
+						"No início do turno de Ember, Ember pode forçar qualquer número de criaturas de sua escolha a até 3 metros de si mesmo a fazer um teste de resistência de Constituição {@dc 22}. Se falhar na resistência, uma criatura sofre 7 ({@damage 2d6}) de dano de fogo e fica com {@condition frightened} de Brasa até o início de seu próximo turno."
+					]
+				},
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"Se Ember falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Na batalha, Ember veste uma armadura mágica forjada sob medida para seu uso. Enquanto estiver usando a armadura, Ember adiciona seu modificador de Carisma às jogadas de dano de sua arma (incluídas nas transferências de ataque), e seu CA não pode ser inferior a 20."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ember faz um ataque de mordida e dois ataques de garra."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 16} para acertar, alcance 3 metros, um alvo. {@h}26 ({@damage 2d10 + 15}) de dano perfurante mais 13 ({@damage 2d6 + 6}) de dano de fogo."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 16} para acertar, alcance 5 pés, um alvo. {@h}22 ({@damage 2d6 + 15}) cortando dano."
+					]
+				},
+				{
+					"name": "Firestorm Breath {@recharge 5}",
+					"entries": [
+						"Ember exala chamas e cinzas em um cone de 27 metros. Cada criatura nesta área deve realizar um teste de resistência de {@dc 22} Destreza. Se falhar na resistência, uma criatura sofre 56 ({@damage 16d6}) de dano de fogo e é empurrada até 9 metros de distância de Ember e derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano sem outros efeitos. Se uma criatura por menos de 0 pontos de vida por este efeito, uma criatura morre imediatamente e seu corpo é reduzido a cinzas."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Alter Shape",
+					"entries": [
+						"Ember se transforma magicamente em um abutre ou mago e mantém seu alinhamento, imunidade a danos, pontos de vida e dados de vida, bem como seus valores de Inteligência, Sabedoria e Carisma. Esta transformação termina se Ember for limitada a 0 pontos de vida ou se ele usar outra ação bônus para encerrá-la."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Pursuit",
+					"entries": [
+						"Ember se move até 12 metros em linha reta em direção a uma criatura que ele possa ver. Este movimento ignora ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Searing Bite (Costs 2 Actions)",
+					"entries": [
+						"Ember faz um ataque de morte. Se o ataque ocorrer, causará 7 ({@damage 2d6}) de dano de fogo adicional."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Forest Master",
+			"source": "MCV2DC",
+			"page": 6,
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "celestial",
+				"tags": [
+					"unicorn"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 105,
+				"formula": "14d10 + 28"
+			},
+			"speed": {
+				"walk": 50
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 15,
+			"int": 13,
+			"wis": 19,
+			"cha": 17,
+			"save": {
+				"int": "+4",
+				"wis": "+7"
+			},
+			"skill": {
+				"insight": "+7",
+				"nature": "+4",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 17,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"paralyzed",
+				"poisoned"
+			],
+			"languages": [
+				"Celestial",
+				"Elvish",
+				"Sylvan",
+				"telepathy 60 ft."
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The Forest Master casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"will": [
+						"{@spell druidcraft}",
+						"{@spell fog cloud}",
+						"{@spell guidance}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell goodberry}",
+							"{@spell greater restoration}",
+							"{@spell pass without trace}",
+							"{@spell speak with plants}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (2/Day)",
+					"entries": [
+						"Se o Mestre da Floresta falhar em um teste de resistência, ele pode escolher o sucesso."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"O Mestre da Floresta tem vantagem em testes de resistência contra feitiços e outros efeitos mágicos."
+					]
+				},
+				{
+					"name": "Master of Beasts",
+					"entries": [
+						"O Mestre da Floresta pode compreender e comunicar-se com qualquer Besta, mesmo que a Besta não conheça idiomas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Forest Master faz dois ataques de cascos, dois ataques de Moon Bolt ou um de cada."
+					]
+				},
+				{
+					"name": "Hooves",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 5 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano de concussão."
+					]
+				},
+				{
+					"name": "Moon Bolt",
+					"entries": [
+						"{@atk rs} {@hit 7} para acertar, alcance de 60 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano radiante."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Erupting Briars {@recharge 4}",
+					"entries": [
+						"O Mestre da Floresta toca seu chifre na terra e faz com que uma parede de arbustos de 1,5 metro de altura irrompa em uma linha de 27 metros e 3 metros de largura. Quando uma parede aparece, cada criatura em sua área é empurrada para o espaço desocupado mais próximo à parede e deve realizar um teste de resistência de Destreza {@dc 15}, causando 27 ({@damage 6d8}) de dano perfurante se falhar na resistência ou metade do dano se obtiver sucesso.",
+						"A parede de sarças dura até o início do próximo turno do Mestre da Floresta. A parede bloqueia a linha de visão e conta como terreno difícil para todas as criaturas, exceto o Mestre da Floresta. Na primeira vez que uma criatura entra na área da parede em um turno, essa criatura deve ser bem sucedida em um teste de resistência de Destreza {@dc 15} ou sofrerá 13 ({@damage 3d8}) de dano perfurante."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Misty Escape",
+					"entries": [
+						"Se o Mestre da Floresta sofrer dano de um ataque corpo a corpo, ele, junto com qualquer equipamento que você esteja trabalhando ou carregando, se teletransportará para um espaço desocupado a até 9 metros que ele possa ver."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"CE",
+				"E",
+				"S",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Foresworn",
+			"source": "MCV2DC",
+			"page": 7,
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"L",
+				"G"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "11d8 + 33"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 20,
+			"dex": 14,
+			"con": 17,
+			"int": 12,
+			"wis": 18,
+			"cha": 10,
+			"save": {
+				"str": "+8",
+				"wis": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"necrotic",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The foresworn casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"daily": {
+						"1": [
+							"{@spell wall of force}"
+						],
+						"2e": [
+							"{@spell command}",
+							"{@spell detect evil and good}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Duty-Bound",
+					"entries": [
+						"O renunciado é obrigado a cumprir um dever singular com o que se comprometeu em vida. Embora este deva ser incompleto, sempre que o renunciado por destruído, ele se forma novamente em seu local anterior após 3 ({@dice 1d6}) dias, com todos os seus pontos de vida restaurados."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"Os renegados podem se mover através de outras criaturas e objetos como se fossem terrenos difíceis. Recebe 5 ({@damage 1d10}) de dano de força se terminar seu giro dentro de um objeto."
+					]
+				},
+				{
+					"name": "Unusual Nature",
+					"entries": [
+						"O renunciado não necessita de ar, comida, bebida ou sono."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O Foreworn faz três ataques Spectral Polearm."
+					]
+				},
+				{
+					"name": "Spectral Polearm",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 2d6 + 5}) dano de força."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Phantasmic Battalion {@recharge 5}",
+					"entries": [
+						"O renunciou à convocação de um batalhão de soldados fantasmagóricos em seu auxílio. Os soldados fantasmagóricos preenchem um cubo de 3 metros centrado no renunciado, movem-se com o renunciado quando o renunciado se movem e duram até o início do próximo turno do renunciado. Enquanto os soldados fantasmas estão presentes, a área que eles ocupam é considerada terreno difícil para todas as criaturas, exceto os renegados, e o alcance dos renunciados para ataques com armas corpo a corpo aumenta em 3 metros."
+					]
+				}
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Unusual Nature"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"damageTags": [
+				"O"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"AOE",
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"propenso"
+			],
+			"savingThrowForcedSpell": [
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Irda Seeker",
+			"source": "MCV2DC",
+			"page": 8,
+			"size": [
+				"M"
+			],
+			"type": "giant",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 27,
+				"formula": "5d8 + 5"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 12,
+			"int": 11,
+			"wis": 14,
+			"cha": 16,
+			"save": {
+				"dex": "+4",
+				"cha": "+5"
+			},
+			"skill": {
+				"insight": "+6",
+				"perception": "+6",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 5 ft."
+			],
+			"passive": 16,
+			"languages": [
+				"Common",
+				"Giant",
+				"Sylvan"
+			],
+			"cr": "1",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O buscador usa Aumentar Fisicalidade, se disponível, e faz dois ataques de Lâmina de Cristal."
+					]
+				},
+				{
+					"name": "Crystal Blade",
+					"entries": [
+						"{@atk mw} {@hit 4} para acertar, alcance 5 pés, um alvo. {@h}5 ({@damage 1d6 + 2}) de dano de força, mais 7 ({@damage 2d6}) de dano de força se o buscador para Grande."
+					]
+				},
+				{
+					"name": "Augment Physicality (1/Day)",
+					"entries": [
+						"Por 1 minuto, o buscador aumenta magicamente sua habilidade física e aumenta de tamanho, junto com qualquer coisa que você usa ou carrega. Enquanto continua, o buscador é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o buscador não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível."
+					]
+				},
+				{
+					"name": "Change Shape (1/Day)",
+					"entries": [
+						"O buscador se transforma magicamente para parecer e se sentir como um Humanóide Médio que viu. Qualquer equipamento que o buscador esteja usando ou carregando não é transformado e as estatísticas do buscador não mudam. O buscador reverte à sua forma verdadeira se for limitado a 0 pontos de vida ou se o buscador usar uma ação para consolidar a transformação."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Veil Walk {@recharge 4}",
+					"entries": [
+						"O buscador, junto com qualquer equipamento que você esteja usando ou carregando, vira {@condition invisible} e se teletransporta para um espaço ocupado que pode chegar a até 9 metros de si mesmo. O buscador permanece {@condition invisible} até o início de seu próximo turno ou até imediatamente após o buscador fazer uma jogada de ataque, o que ocorre primeiro."
+					]
+				}
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"GI",
+				"S"
+			],
+			"damageTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Irda Veil Keeper",
+			"source": "MCV2DC",
+			"page": 9,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 49,
+				"formula": "9d8 + 9"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 16,
+			"con": 13,
+			"int": 14,
+			"wis": 17,
+			"cha": 19,
+			"save": {
+				"int": "+4",
+				"wis": "+5",
+				"cha": "+6"
+			},
+			"skill": {
+				"arcana": "+4",
+				"insight": "+7",
+				"perception": "+7"
+			},
+			"senses": [
+				"darkvision 60 ft.",
+				"truesight 5 ft."
+			],
+			"passive": 17,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Giant",
+				"Sylvan"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The veil keeper casts one of the following spells, requiring no material components and using Charisma as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"will": [
+						"{@spell dancing lights}",
+						"{@spell minor illusion}"
+					],
+					"daily": {
+						"1": [
+							"{@spell hallucinatory terrain} (as an action)"
+						],
+						"2e": [
+							"{@spell invisibility}",
+							"{@spell major image}",
+							"{@spell phantasmal force}"
+						]
+					},
+					"ability": "cha",
+					"displayAs": "action"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"A guarda do véu usa Aumentar Fisicalidade, se disponível, e faz dois ataques Mirage Flare."
+					]
+				},
+				{
+					"name": "Mirage Flare",
+					"entries": [
+						"{@atk ms,rs} {@hit 6} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) de dano radiante, e o alvo deve ter sucesso em um teste de resistência de Sabedoria {@dc 14} ou será {@condition charmed} do guardião do véu até o início do próximo turno do guardião do véu. Enquanto {@condition charmed} dessa forma, uma criatura é {@condition incapacitated} pois é assolada por visões hipnóticas e ilusórias."
+					]
+				},
+				{
+					"name": "Augment Physicality (1/Day)",
+					"entries": [
+						"Por 1 minuto, o guarda do véu obscurece magicamente sua localização, aumenta sua habilidade física e aumenta de tamanho, junto com qualquer coisa que você usa ou carrega. Enquanto a guarda do véu aumenta, as jogadas de ataque contra ele têm desvantagem, ele é Grande e faz testes de resistência de Força e Destreza com vantagem. Se o guardião do véu não tiver espaço para se tornar Grande, ele atingirá o tamanho máximo possível no espaço disponível. Esses aumentos terminam se o guardião do véu for {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Change Shape (3/Day)",
+					"entries": [
+						"O guardião do véu se transforma magicamente para parecer um Humanóide Médio que viu. Qualquer equipamento que o guardião do véu esteja usando ou carregando não é transformado e as estatísticas do guardião do véu não mudam. O guardião do véu reverte à sua forma verdadeira se for limitado a 0 pontos de vida ou se o guardião do véu usar uma ação para encerrar a transformação."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Obscuring Mist",
+					"entries": [
+						"Se uma criatura que o guardião do véu possa ver a até 9 metros de si mesmo para alvo de um ataque, o guardião do véu cerca a criatura com neblina ilusória, concedendo à criatura {@quickref Cover||3||half cover} até o início do próximo turno do guardião do véu."
+					]
+				}
+			],
+			"senseTags": [
+				"D",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"GI",
+				"S"
+			],
+			"damageTags": [
+				"R"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"conditionInflict": [
+				"charmed",
+				"incapacitated"
+			],
+			"conditionInflictSpell": [
+				"invisível"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"inteligência"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nevermind Gnome Inventor",
+			"source": "MCV2DC",
+			"page": 10,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"advantageMode": "advérbio"
+			},
+			"str": 8,
+			"dex": 17,
+			"con": 13,
+			"int": 18,
+			"wis": 11,
+			"cha": 14,
+			"save": {
+				"dex": "+5",
+				"int": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"investigation": "+6",
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Gnomish"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Always Thinking Ahead",
+					"entries": [
+						"O inventor tem vantagem nos testes de iniciativa."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O inventor faz dois ataques Flying Fangtrap. Ele pode substituir um desses ataques pelo Thunderscream Gadget, se estiver disponível."
+					]
+				},
+				{
+					"name": "Flying Fangtrap",
+					"entries": [
+						"{@atk mw,rw} {@hit 5} para acertar, alcance 5 pés ou alcance 60 pés, um alvo. {@h}8 ({@damage 1d10 + 3}) dano perfurante, e a criatura deve ter sucesso em um teste de resistência de Destreza {@dc 14} ou terá sua velocidade reduzida a 0 até o início do próximo turno do inventor."
+					]
+				},
+				{
+					"name": "Thunderscream Gadget {@recharge 5}",
+					"entries": [
+						"O inventor produz um dispositivo que emite uma onda sonora estridente em um cone de 9 metros proveniente do inventor. Cada criatura na área deve realizar um teste de resistência de Constituição {@dc 14}, dano 10 ({@damage 3d6}) de dano trovejante se falhar na resistência ou metade desse dano se obtiver sucesso."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Flash Powder",
+					"entries": [
+						"Se o inventor for ferido por uma criatura que ele possa ver a até 4,5 metros de si mesmo, o inventor retaliará tirando pólvora brilhantemente explosiva na criatura. A criatura deve ter sucesso em um teste de resistência de Destreza {@dc 14} ou será {@condition blinded} até o final do próximo turno."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"P",
+				"T"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nevermind Gnome Mastermind",
+			"source": "MCV2DC",
+			"page": 11,
+			"size": [
+				"S"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 82,
+				"formula": "15d6 + 30"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"initiative": {
+				"advantageMode": "advérbio"
+			},
+			"str": 9,
+			"dex": 18,
+			"con": 14,
+			"int": 20,
+			"wis": 11,
+			"cha": 15,
+			"save": {
+				"dex": "+7",
+				"con": "+5",
+				"int": "+8"
+			},
+			"skill": {
+				"arcana": "+8",
+				"investigation": "+8",
+				"perception": "+3"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Common",
+				"Gnomish"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Always Thinking Ahead",
+					"entries": [
+						"O mentor tem vantagem nas jogadas de iniciativa."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"O mentor pode escalar superfícies difíceis, inclusive tetos de cabeça para baixo, sem precisar fazer um teste de habilidade. Esta característica não funciona se o cérebro estiver agarrando criaturas com ambas as suas garras mecânicas."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O cérebro faz dois ataques de Garra Mecânica. O mentor pode substituir um desses ataques por Generate Gadget, se estiver disponível."
+					]
+				},
+				{
+					"name": "Clockwork Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} para acertar, alcance 20 pés, um alvo. {@h}11 ({@damage 2d6 + 4}) dano perfurante, e se o alvo for uma criatura Média ou menor, o alvo é {@condition grappled} (escape {@dc 15}). Até que esta luta termine, o alvo sofre 10 ({@damage 3d6}) de dano perfurante no início de cada turno do mentor. O mentor tem duas garras, cada uma das quais pode agarrar apenas um alvo."
+					]
+				},
+				{
+					"name": "Generate Gadget {@recharge 5}",
+					"entries": [
+						"O cérebro monta rapidamente um dispositivo mecânico, produzindo um dos seguintes efeitos (a escolha do cérebro):"
+					]
+				},
+				{
+					"name": "Chattergrab",
+					"entries": [
+						"Partes deste gadget parecem dentes de metal rangendo. Este dispositivo é lançado em direção a uma criatura que o cérebro pode ver a até 18 metros de si mesmo. A criatura deverá ter sucesso em um teste de resistência de Destreza {@dc 16} ou sofrerá 31 ({@damage 7d8}) de dano perfurante e será {@condition incapacitated} até o início do próximo turno do mentor."
+					]
+				},
+				{
+					"name": "Phasmoball",
+					"entries": [
+						"O cérebro lança este dispositivo a um ponto que o cérebro pode ver a até 9 metros de si mesmo, onde o dispositivo libera uma nuvem de gases que distorce a mente em uma esfera de 3 metros de raio. Cada criatura dentro da esfera deverá ser bem-sucedida em um teste de resistência de Sabedoria {@dc 16} ou sofrerá 11 ({@damage 2d10}) de dano psíquico e será {@condition frightened} do mentor até o início do próximo turno do mentor."
+					]
+				},
+				{
+					"name": "Thunderscream",
+					"entries": [
+						"Este gadget emite uma onda sonora estridente em um cone de 9 metros originada do cérebro. Cada criatura nesta área deve realizar um teste de resistência de Constituição {@dc 16}, dano 21 ({@damage 6d6}) de dano trovejante se falhar na resistência ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"G"
+			],
+			"damageTags": [
+				"P",
+				"T",
+				"Y"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"frightened",
+				"grappled",
+				"incapacitated"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thanoi Hunter",
+			"source": "MCV2DC",
+			"page": 12,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 32,
+				"formula": "5d8 + 10"
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 15,
+			"int": 12,
+			"wis": 16,
+			"cha": 11,
+			"save": {
+				"str": "+6",
+				"con": "+4"
+			},
+			"skill": {
+				"athletics": "+6",
+				"perception": "+5",
+				"survival": "+5"
+			},
+			"passive": 15,
+			"immune": [
+				"cold"
+			],
+			"languages": [
+				"Aquan",
+				"Common"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Hold Breath",
+					"entries": [
+						"O caçador pode prender a respiração por até 10 minutos."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"O caçador tem vantagem em um jogo de ataque contra uma criatura se pelo menos um dos aliados do caçador precisar a até 1,5 metro da criatura e o aliado não estiver {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O caçador faz um ataque de Arpão de Ossos e um ataque de Presa."
+					]
+				},
+				{
+					"name": "Bone Harpoon",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} para acertar, alcance 10 pés ou alcance 20/60 pés, um alvo. {@h}8 ({@damage 1d8 + 4}) dano perfurante. Hit or Miss: O arpão retorna para a mão do caçador."
+					]
+				},
+				{
+					"name": "Tusk",
+					"entries": [
+						"{@atk mw} {@hit 6} para acertar, alcance 5 pés, um alvo. {@h}6 ({@damage 1d4 + 4}) dano cortante."
+					]
+				}
+			],
+			"traitTags": [
+				"Hold Breath",
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AQ",
+				"C"
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"RW"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Traag Draconian",
+			"source": "MCV2DC",
+			"page": 13,
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 21,
+			"dex": 10,
+			"con": 17,
+			"int": 6,
+			"wis": 8,
+			"cha": 9,
+			"save": {
+				"str": "+8",
+				"con": "+6"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Common",
+				"Draconic"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Blood Frenzy",
+					"entries": [
+						"O dragoniano tem vantagem em jogadas de ataque corpo a corpo contra qualquer criatura que não tenha todos os seus pontos de vida."
+					]
+				},
+				{
+					"name": "Controlled Fall",
+					"entries": [
+						"Se o dragoniano cair e não for {@condition incapacitated}, ele subtrai até 15 metros da queda ao calcular o dano da queda."
+					]
+				},
+				{
+					"name": "Death Throes",
+					"entries": [
+						"Se o dragoniano for limitado a 0 pontos de vida, seu corpo irrompe em lama que preenche uma esfera de 3 metros de raio. Cada criatura dentro dessa área deve ser bem sucedida em um teste de resistência de Destreza {@dc 14} ou ficar coberta pela lama por 1 minuto. Enquanto você está coberto pela lama, a localização da criatura é limitada pela metade. Uma criatura pode usar sua ação para raspar a lama de si mesma ou de outra criatura a até 1,5 metro de si mesma."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"O dragoniano faz dois ataques de Garra."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 8} para acertar, alcance 3 metros, um alvo. {@h}14 ({@damage 2d8 + 5}) cortando dano."
+					]
+				},
+				{
+					"name": "Flaming Carnage {@recharge 5}",
+					"entries": [
+						"O dragoniano entrega-se à sua raiva, envolve-se no fogo e avança em sua velocidade. O dragoniano pode entrar nos espaços das criaturas durante esse movimento. Durante esse movimento, quando o dragoniano não entra no espaço de uma criatura, a criatura deve realizar um teste de resistência de {@dc 14} Destreza. Se falhar na resistência, uma criatura sofre 22 ({@damage 4d10}) de dano de fogo e é derrubada {@condition prone}. Se obtiver sucesso, a criatura sofre metade do dano e é empurrada para o espaço mais próximo, fora do caminho do dragoniano. Uma criatura pode ser afetada pela Carnificina Flamejante deste dragoniano apenas uma vez durante um turno."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Violent Retaliation",
+					"entries": [
+						"Se uma criatura a até 3 metros do dragoniano acertá-lo com um ataque, o dragoniano pode realizar um ataque de Garra contra aquela criatura. Se o ataque da Garra for bem-sucedido, ele causará 4 ({@damage 1d8}) de danos cortantes adicionais."
+					]
+				}
+			],
+			"traitTags": [
+				"Death Burst"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"F",
+				"S"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Verminaard",
+			"isNamedCreature": true,
+			"source": "MCV2DC",
+			"page": 15,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"cleric",
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item +2 plate armor}"
+					]
+				}
+			],
+			"hp": {
+				"average": 143,
+				"formula": "22d8 + 44"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 22,
+			"dex": 13,
+			"con": 15,
+			"int": 16,
+			"wis": 18,
+			"cha": 17,
+			"save": {
+				"wis": "+10",
+				"cha": "+9"
+			},
+			"skill": {
+				"perception": "+16",
+				"religion": "+9"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 26,
+			"immune": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"Abyssal",
+				"Common",
+				"Draconic"
+			],
+			"cr": "17",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"Verminaard casts one of the following spells, requiring no material components and using Wisdom as the spellcasting ability (spell save {@dc 18}):"
+					],
+					"will": [
+						"{@spell light}",
+						"{@spell thaumaturgy}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell bane}",
+							"{@spell fear}",
+							"{@spell freedom of movement}",
+							"{@spell greater restoration}",
+							"{@spell hold monster}",
+							"{@spell revivify}"
+						]
+					},
+					"ability": "wis",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Draconic Command",
+					"entries": [
+						"Sempre que um Dragão ou uma criatura com o recurso Devoção Dracônica a até 9 metros de Verminaard faz uma jogada de ataque, a criatura pode rolar um {@dice d4} e adicionar o número rolado à jogada de ataque."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"Se Verminaard falhar em um teste de resistência, ele pode escolher ter sucesso."
+					]
+				},
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Verminaard usa {@item +2 plate armor} e empunhado a maça {@item Nightbringer|MCV2DC}, que lhe concede visão no escuro, bem como imunidade a danos de fogo e às condições {@condition charmed} e {@condition frightened} (incluídas acima)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Verminaard faz dois ataques Nightbringer e usa Malediction."
+					]
+				},
+				{
+					"name": "Nightbringer",
+					"entries": [
+						"{@atk mw} {@hit 15} para acertar, alcance 5 pés, um alvo. {@h}12 ({@damage 1d6 + 9}) de dano de concussão mais 10 ({@damage 4d4}) de dano radiante. Se o alvo for uma criatura, o alvo deverá ter sucesso em um teste de resistência de Constituição {@dc 20} ou será {@condition blinded} até o início do próximo turno de Verminaard."
+					]
+				},
+				{
+					"name": "Malediction",
+					"entries": [
+						"Verminaard pronuncia uma palavra profana, fazendo com que fogo profano desça sobre uma criatura que Verminaard pode ver a até 18 metros de si mesmo. Uma criatura deve realizar um teste de resistência de Destreza {@dc 18}, dano 11 ({@damage 2d10}) de dano necrótico mais 11 ({@damage 2d10}) de dano radiante se falhar na resistência ou metade do dano se obtiver sucesso."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Dragon Queen's Favor (5/Day)",
+					"entries": [
+						"Verminaard ou uma criatura que ele pode ver a até 18 metros de si recupera magicamente 17 ({@dice 2d12 + 4}) pontos de vida."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Tactical Movement",
+					"entries": [
+						"Verminaard se move até sua velocidade ou comanda uma montaria que ele está montando para aumentar sua velocidade. Este movimento não provoca ataques de oportunidade."
+					]
+				},
+				{
+					"name": "Fervent Strike (Costs 2 Actions)",
+					"entries": [
+						"Verminaard faz um ataque Nightbringer. Se este ataque for bem sucedido, ele causará 7 ({@damage 2d6}) de dano de concussão adicional."
+					]
+				},
+				{
+					"name": "Cast a Spell (Costs 3 Actions)",
+					"entries": [
+						"Verminaard usa feitiços."
+					]
+				}
+			],
+			"attachedItems": [
+				"nightbringer|mcv2dc"
+			],
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"C",
+				"DR"
+			],
+			"damageTags": [
+				"B",
+				"N",
+				"R"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"conditionInflictSpell": [
+				"com medo",
+				"paralisado"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"carisma",
+				"destreza",
+				"sabedoria"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}

@@ -1,0 +1,645 @@
+/* ==========================================================================
+   projeto-dnd — Design System Unificado (app.css)
+   Padrão de estilo extraído de css/characters.css (Fichas de Personagem).
+   Carregado por ÚLTIMO em todas as páginas; sobrescreve estilos antigos sem
+   remover nenhuma funcionalidade (não altera estrutura HTML nem JS).
+   ========================================================================== */
+
+:root {
+	/* Cores / Design Tokens */
+	--dnd-primary: #006bc4;
+	--dnd-primary-hover: #00569e;
+	--dnd-primary-soft: rgba(0, 107, 196, .1);
+	--dnd-success: #28a745;
+	--dnd-success-hover: #218838;
+	--dnd-success-soft: #d4edda;
+	--dnd-success-border: #c3e6cb;
+	--dnd-success-text: #155724;
+	--dnd-danger: #dc3545;
+	--dnd-danger-hover: #c82333;
+	--dnd-secondary: #6c757d;
+	--dnd-secondary-hover: #5a6268;
+	--dnd-bg: #fff;
+	--dnd-bg-alt: #f5f5f5;
+	--dnd-bg-soft: #fafafa;
+	--dnd-border: #ddd;
+	--dnd-border-soft: #eee;
+	--dnd-border-input: #ccc;
+	--dnd-text: #333;
+	--dnd-text-muted: #666;
+	--dnd-text-faint: #888;
+	--dnd-text-label: #555;
+	--dnd-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+	--dnd-shadow-hover: 0 4px 12px rgba(0, 0, 0, .15);
+	--dnd-radius: 8px;
+	--dnd-radius-sm: 4px;
+	--dnd-radius-lg: 10px;
+	--dnd-container: 1200px;
+}
+
+/* ==========================================================================
+   Base / Documento
+   ========================================================================== */
+body {
+	background: var(--dnd-bg);
+	color: var(--dnd-text);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Links internos recebem a cor primária do tema */
+a {
+	color: var(--dnd-primary);
+}
+
+a:hover,
+a:focus {
+	color: var(--dnd-primary-hover);
+}
+
+/* ==========================================================================
+   Header de página (page__header / page__title / page__subtitle)
+   Padroniza o cabeçalho de TODAS as páginas no estilo das fichas.
+   ========================================================================== */
+.page__header {
+	border: 0;
+	padding-top: 20px;
+	padding-bottom: 12px;
+	background: transparent;
+}
+
+.page__title {
+	color: var(--dnd-primary);
+	font-family: "Convergence", Roboto, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 1.9em;
+	margin-bottom: 4px !important;
+	letter-spacing: .3px;
+}
+
+.page__subtitle {
+	color: var(--dnd-text-muted);
+	font-size: .95em;
+	margin-bottom: 0 !important;
+	font-weight: 400;
+}
+
+/* Página inicial: título maior */
+.page__title--home {
+	font-size: 2.4em;
+}
+/* ==========================================================================
+   Barra de navegação (page__nav / #navbar)
+   ========================================================================== */
+.page__nav {
+	margin-bottom: 8px;
+}
+
+.page__nav-inner {
+	background: var(--dnd-bg);
+	border-radius: var(--dnd-radius-sm);
+	padding: 4px 0;
+}
+
+.page__nav-inner > li.active > a,
+.page__nav-inner > li.active > a:focus,
+.page__nav-inner > li.active > a:hover {
+	background: var(--dnd-primary);
+	border: 0;
+	border-radius: var(--dnd-radius-sm);
+	color: #fff;
+	box-shadow: var(--dnd-shadow);
+}
+
+.page__nav-inner > li > a {
+	border-radius: var(--dnd-radius-sm);
+	transition: background-color .2s, color .2s;
+	font-weight: 500;
+}
+
+.page__nav-inner > li > a:focus,
+.page__nav-inner > li > a:hover {
+	background: var(--dnd-primary-soft);
+	color: var(--dnd-primary);
+	border-radius: var(--dnd-radius-sm);
+}
+
+/* Botão "Menu" (mobile) */
+.page__btn-toggle-nav {
+	border: 1px solid var(--dnd-border);
+	border-radius: var(--dnd-radius-sm);
+	color: var(--dnd-primary);
+	font-weight: 600;
+	transition: all .2s;
+}
+
+.page__btn-toggle-nav:hover,
+.page__btn-toggle-nav.active {
+	background: var(--dnd-primary);
+	border-color: var(--dnd-primary);
+	color: #fff;
+}
+
+/* Menus suspensos */
+.ve-dropdown-menu {
+	border-radius: var(--dnd-radius-sm);
+	box-shadow: var(--dnd-shadow);
+	border: 1px solid var(--dnd-border-soft);
+}
+
+/* ==========================================================================
+   Cards (padrão da página de fichas — characters__card)
+   ========================================================================== */
+.app-card {
+	background: var(--dnd-bg);
+	border: 1px solid var(--dnd-border);
+	border-radius: var(--dnd-radius);
+	padding: 16px;
+	box-shadow: var(--dnd-shadow);
+	transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.app-card:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--dnd-shadow-hover);
+	border-color: var(--dnd-primary);
+}
+
+.app-card--static {
+	box-shadow: none;
+}
+
+.app-card--static:hover {
+	transform: none;
+	box-shadow: var(--dnd-shadow);
+	border-color: var(--dnd-border);
+}
+
+.app-card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 16px;
+}
+
+/* ==========================================================================
+   Botões (padronizados como characters__btn)
+   ========================================================================== */
+.app-btn,
+.ve-btn {
+	transition: all .2s;
+}
+
+.app-btn {
+	padding: 6px 12px;
+	border: none;
+	border-radius: var(--dnd-radius-sm);
+	cursor: pointer;
+	font-size: .85em;
+}
+
+.app-btn--primary {
+	background: var(--dnd-primary);
+	color: #fff;
+}
+
+.app-btn--primary:hover {
+	background: var(--dnd-primary-hover);
+	color: #fff;
+}
+
+.app-btn--danger {
+	background: var(--dnd-danger);
+	color: #fff;
+}
+
+.app-btn--danger:hover {
+	background: var(--dnd-danger-hover);
+	color: #fff;
+}
+
+.app-btn--secondary {
+	background: var(--dnd-secondary);
+	color: #fff;
+}
+
+.app-btn--secondary:hover {
+	background: var(--dnd-secondary-hover);
+	color: #fff;
+}
+
+.app-btn--success {
+	background: var(--dnd-success);
+	color: #fff;
+}
+
+.app-btn--success:hover {
+	background: var(--dnd-success-hover);
+	color: #fff;
+}
+
+/* Botões 5etools recebem o mesmo arredondamento/suavização */
+.ve-btn-default {
+	border-radius: var(--dnd-radius-sm);
+	border-color: var(--dnd-border);
+	color: var(--dnd-text);
+}
+
+.ve-btn-default:hover,
+.ve-btn-default:focus,
+.ve-btn-default:active,
+.ve-btn-default:active:focus {
+	background: var(--dnd-primary-soft);
+	border-color: var(--dnd-primary);
+	color: var(--dnd-primary);
+}
+
+.ve-btn-primary,
+.ve-btn-info {
+	background: var(--dnd-primary);
+	border-color: var(--dnd-primary);
+	border-radius: var(--dnd-radius-sm);
+}
+
+.ve-btn-primary:hover,
+.ve-btn-info:hover {
+	background: var(--dnd-primary-hover);
+	border-color: var(--dnd-primary-hover);
+}
+/* ==========================================================================
+   Formulários / inputs
+   ========================================================================== */
+.app-form,
+.character__form {
+	background: var(--dnd-bg);
+	border: 1px solid var(--dnd-border);
+	border-radius: var(--dnd-radius);
+	padding: 24px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.app-form-section {
+	margin-bottom: 32px;
+}
+
+.app-section-title,
+.character__section-title {
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--dnd-primary);
+	border-bottom: 2px solid var(--dnd-primary);
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+}
+
+.app-form-row {
+	display: flex;
+	gap: 16px;
+	margin-bottom: 12px;
+	flex-wrap: wrap;
+}
+
+.app-form-group {
+	flex: 1;
+	min-width: 200px;
+}
+
+.app-form-label {
+	display: block;
+	margin-bottom: 4px;
+	font-size: .9em;
+	font-weight: 500;
+	color: var(--dnd-text-label);
+}
+
+.app-form-input,
+.app-form-select,
+.form-control {
+	padding: 8px 12px;
+	border: 1px solid var(--dnd-border-input);
+	border-radius: var(--dnd-radius-sm);
+	font-size: .95em;
+	transition: border-color .2s, box-shadow .2s;
+}
+
+.app-form-input:focus,
+.app-form-select:focus,
+.form-control:focus {
+	outline: none;
+	border-color: var(--dnd-primary);
+	box-shadow: 0 0 0 2px var(--dnd-primary-soft);
+}
+
+/* ==========================================================================
+   Listagens 5etools — padroniza linha/busca no visual do characters
+   ========================================================================== */
+.lst__row {
+	background: var(--dnd-bg);
+	border-bottom: 1px solid var(--dnd-border-soft);
+	transition: background-color .15s, box-shadow .15s;
+}
+
+.lst__row:hover {
+	background: var(--dnd-primary-soft) !important;
+}
+
+.lst__row-inner {
+	padding: 4px 6px;
+}
+
+.lst__search,
+.lst__form-top input[type="search"] {
+	border-radius: var(--dnd-radius-sm);
+}
+
+/* ==========================================================================
+   Estado vazio / mensagens
+   ========================================================================== */
+.app-empty {
+	text-align: center;
+	padding: 60px 20px;
+	color: var(--dnd-text-faint);
+}
+
+.app-empty-icon {
+	font-size: 4em;
+	margin-bottom: 16px;
+	color: #ccc;
+}
+
+.app-empty-title {
+	font-size: 1.4em;
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: var(--dnd-text);
+}
+/* ==========================================================================
+   Página inicial — MENU RADIAL
+   ========================================================================== */
+.home__radial {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 64vh;
+	margin: 12px auto 8px;
+}
+
+/* Círculo central (marca do app) */
+.home__radial-center {
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, var(--dnd-primary), #003e77);
+	color: #fff;
+	box-shadow: 0 0 0 8px rgba(255, 255, 255, .55), var(--dnd-shadow-hover);
+	transition: transform .2s, box-shadow .2s;
+}
+
+.home__radial-center:hover {
+	transform: scale(1.03);
+	box-shadow: 0 0 0 10px rgba(255, 255, 255, .55), 0 8px 24px rgba(0, 0, 0, .2);
+}
+
+.home__radial-center-icn {
+	font-size: 40px;
+	margin-bottom: 6px;
+	line-height: 1;
+}
+
+.home__radial-center-txt {
+	font-size: 1.05em;
+	font-weight: 700;
+	text-align: center;
+	padding: 0 14px;
+	line-height: 1.2;
+}
+
+/* Item do anel (categoria principal) */
+.home__radial-item {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 116px;
+	height: 116px;
+	border-radius: 50%;
+	background: var(--dnd-bg);
+	border: 2px solid var(--dnd-primary);
+	color: var(--dnd-primary);
+	text-decoration: none !important;
+	box-shadow: var(--dnd-shadow);
+	transition: transform .2s, box-shadow .2s, background-color .2s, color .2s;
+	z-index: 1;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.home__radial-item:hover,
+.home__radial-item:focus-visible,
+.home__radial-item.is-open {
+	background: var(--dnd-primary);
+	color: #fff;
+	transform: scale(1.08);
+	box-shadow: var(--dnd-shadow-hover);
+	text-decoration: none;
+}
+
+.home__radial-item .fal,
+.home__radial-item .fas {
+	font-size: 28px;
+	display: block;
+}
+
+.home__radial-item .home__radial-item-lbl {
+	font-size: .8em;
+	font-weight: 600;
+	text-align: center;
+	line-height: 1.15;
+	padding: 6px 8px 0;
+}
+
+/* Painel de sub-links (abre por categoria) */
+.home__radial-panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -46%) scale(.95);
+	width: min(100%, 680px);
+	max-height: 72vh;
+	overflow-y: auto;
+	background: var(--dnd-bg);
+	border: 1px solid var(--dnd-border);
+	border-radius: var(--dnd-radius);
+	box-shadow: 0 12px 48px rgba(0, 0, 0, .18);
+	z-index: 10;
+	padding: 20px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .18s, transform .18s, visibility .18s;
+	pointer-events: none;
+}
+
+.home__radial-panel.is-open {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(-50%, -46%) scale(1);
+	pointer-events: auto;
+}
+
+.home__radial-panel-title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1.15em;
+	font-weight: 700;
+	color: var(--dnd-primary);
+	padding-bottom: 10px;
+	margin-bottom: 14px;
+	border-bottom: 2px solid var(--dnd-primary);
+}
+
+.home__radial-panel-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 10px;
+}
+
+.home__radial-link {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 12px;
+	border: 1px solid var(--dnd-border-soft);
+	border-radius: var(--dnd-radius-sm);
+	background: var(--dnd-bg);
+	color: var(--dnd-text);
+	font-size: .9em;
+	font-weight: 500;
+	text-decoration: none !important;
+	transition: all .15s;
+}
+
+.home__radial-link:hover,
+.home__radial-link:focus {
+	border-color: var(--dnd-primary);
+	box-shadow: var(--dnd-shadow);
+	color: var(--dnd-primary);
+	background: var(--dnd-primary-soft);
+	text-decoration: none;
+}
+
+.home__radial-link .fal,
+.home__radial-link .fas {
+	width: 20px;
+	text-align: center;
+	font-size: 1.05em;
+	color: var(--dnd-primary);
+}
+
+/* Halo quando painel aberto */
+.home__radial.has-open .home__radial-center {
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, .06), 0 0 0 14px rgba(0, 107, 196, .12);
+}
+.home__radial-item[data-radial-pos="0"] { top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(-215px); }
+.home__radial-item[data-radial-pos="1"] { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(60deg) translateY(-215px) rotate(-60deg); }
+.home__radial-item[data-radial-pos="2"] { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(120deg) translateY(-215px) rotate(-120deg); }
+.home__radial-item[data-radial-pos="3"] { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(180deg) translateY(-215px) rotate(-180deg); }
+.home__radial-item[data-radial-pos="4"] { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(240deg) translateY(-215px) rotate(-240deg); }
+.home__radial-item[data-radial-pos="5"] { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(300deg) translateY(-215px) rotate(-300deg); }
+
+.home__radial-item.is-open[data-radial-pos="0"] { transform: translate(-50%, -50%) translateY(-215px) scale(1.08); }
+.home__radial-item.is-open[data-radial-pos="1"] { transform: translate(-50%, -50%) rotate(60deg) translateY(-215px) rotate(-60deg) scale(1.08); }
+.home__radial-item.is-open[data-radial-pos="2"] { transform: translate(-50%, -50%) rotate(120deg) translateY(-215px) rotate(-120deg) scale(1.08); }
+.home__radial-item.is-open[data-radial-pos="3"] { transform: translate(-50%, -50%) rotate(180deg) translateY(-215px) rotate(-180deg) scale(1.08); }
+.home__radial-item.is-open[data-radial-pos="4"] { transform: translate(-50%, -50%) rotate(240deg) translateY(-215px) rotate(-240deg) scale(1.08); }
+.home__radial-item.is-open[data-radial-pos="5"] { transform: translate(-50%, -50%) rotate(300deg) translateY(-215px) rotate(-300deg) scale(1.08); }
+
+/* === Responsivo: radial vira lista vertical === */
+@media (max-width: 768px) {
+	.home__radial {
+		min-height: 0;
+		flex-direction: column;
+		padding: 16px 12px;
+	}
+
+	.home__radial-center {
+		width: 104px;
+		height: 104px;
+		font-size: .85em;
+		margin-bottom: 16px;
+	}
+
+	.home__radial-center-icn {
+		font-size: 28px;
+		margin-bottom: 4px;
+	}
+
+	.home__radial-item,
+	.home__radial-item[data-radial-pos],
+	.home__radial-item.is-open[data-radial-pos] {
+		position: static;
+		transform: none !important;
+		width: 100%;
+		height: auto;
+		min-height: 52px;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		border-radius: var(--dnd-radius-sm);
+		padding: 12px 16px;
+		gap: 12px;
+		margin-bottom: 8px;
+	}
+
+	.home__radial-item .fal,
+	.home__radial-item .fas {
+		font-size: 22px;
+		width: 26px;
+		text-align: center;
+	}
+
+	.home__radial-item .home__radial-item-lbl {
+		padding: 0;
+		font-size: .95em;
+	}
+
+	.home__radial-panel {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(.96);
+		width: calc(100% - 24px);
+		max-height: 78vh;
+	}
+
+	.home__radial-panel.is-open {
+		transform: translate(-50%, -50%) scale(1);
+	}
+
+	.home__radial-panel::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, .35);
+		z-index: -1;
+	}
+}
+
+/* no-JS / acessibilidade: fallback lista simples */
+.home__radial-fallback {
+	display: none;
+}
+
+.no-js .home__radial {
+	display: none;
+}
+
+.no-js .home__radial-fallback {
+	display: block;
+}

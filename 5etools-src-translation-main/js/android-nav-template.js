@@ -10,14 +10,18 @@ import {Capacitor} from "@capacitor/core";
 
 	/**
 	 * Sobrescreve o comportamento padrão do botão voltar do Android.
-	 * Padrão (sem listener): fecha a app. Queremos: voltar na navegação quando
-	 * possível, e, quando não houver histórico, apenas minimizar (ir para o
-	 * background) em vez de fechar.
+	 *
+	 * IMPORTANTE: registrar um listener de `backButton` DESABILITA o comportamento
+	 * padrão do Capacitor (webView.goBack()). Portanto precisamos chamar
+	 * `window.history.back()` manualmente. O método `App.navigateBack()` usado
+	 * anteriormente NÃO existe em @capacitor/app@8.x (nem no JS nem no nativo), então
+	 * a chamada falhava silenciosamente e o botão não fazia nada (bug relatado).
 	 */
 	App.addListener("backButton", ({canGoBack}) => {
 		if (canGoBack || (window.history?.length || 0) > 1) {
-			// Volta na navegação do WebView (hash/rotas incluídos).
-			App.navigateBack();
+			// Volta na navegação do WebView (páginas/hash). Este é o comportamento
+			// oficial recomendado pela documentação do Capacitor App plugin.
+			window.history.back();
 			return;
 		}
 

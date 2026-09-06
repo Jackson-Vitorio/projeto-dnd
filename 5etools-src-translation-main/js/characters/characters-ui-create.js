@@ -468,6 +468,25 @@ export class CharactersUiCreate {
 		});
 		html += '</ul></div>';
 
+		// Inventário & Magias (com navegação rápida)
+		html += '<div class="characters__form-section"><h3 class="characters__form-section-title">Inventário &amp; Magias</h3>';
+		html += '<div class="characters__form-row">';
+		// Inventário
+		html += '<div class="characters__form-group">';
+		html += '<label class="characters__form-label">Itens (um por linha)</label>';
+		html += '<textarea class="characters__sheet-textarea" id="in-inv" placeholder="Ex: Espada Longa">' + this._esc((d.inventory || []).join("\n")) + '</textarea>';
+		html += '<div class="characters__sheet-actions-bar mt-2">';
+		html += '<a href="items.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" target="_blank">📦 Ver Itens</a>';
+		html += '</div></div>';
+		// Magias
+		html += '<div class="characters__form-group">';
+		html += '<label class="characters__form-label">Magias (uma por linha)</label>';
+		html += '<textarea class="characters__sheet-textarea" id="in-spells" placeholder="Ex: Bola de Fogo">' + this._esc((d.spells || []).join("\n")) + '</textarea>';
+		html += '<div class="characters__sheet-actions-bar mt-2">';
+		html += '<a href="spells.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" target="_blank">📜 Ver Magias</a>';
+		html += '</div></div>';
+		html += '</div></div>';
+
 		html += '<button class="characters__btn characters__btn--secondary" id="btn-prev">← Voltar</button> ';
 		html += '<button class="characters__btn characters__btn--success" id="btn-save">💾 Salvar Ficha</button></div>';
 
@@ -475,6 +494,8 @@ export class CharactersUiCreate {
 
 		$form.find("#btn-prev").on("click", () => { this._step = 6; this._render(); });
 		$form.find("#btn-save").on("click", () => {
+			d.inventory = $form.find("#in-inv").val().split("\n").filter(Boolean);
+			d.spells = $form.find("#in-spells").val().split("\n").filter(Boolean);
 			this._finalize();
 			CharactersStore.save(d);
 			if (this._pOnDone) this._pOnDone();

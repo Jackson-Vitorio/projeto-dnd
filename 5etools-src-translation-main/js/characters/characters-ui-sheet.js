@@ -13,12 +13,35 @@ export class CharactersUiSheet {
 		this._pOnBack = opts.pOnBack;
 	}
 
+	/**
+	 * Constrói o URL de um item/magia/talento para abrir na página correspondente.
+	 * Formato esperado no inventário: "source|name" (ex: "PHB|Espada Longa").
+	 * Sem source, abre a página de referência para busca manual.
+	 * @param {"item"|"spell"|"feature"} type
+	 * @param {string} name
+	 * @returns {string} URL
+	 */
+	static _buildEntityUrl(type, name) {
+		const pageMap = {
+			item: "items.html",
+			spell: "spells.html",
+			feature: "optionalfeatures.html",
+		};
+		const page = pageMap[type] || "items.html";
+		const parts = String(name || "").split("|");
+		if (parts.length === 2 && parts[0].trim() && parts[1].trim()) {
+			const [source, entName] = parts.map(p => p.trim());
+			return `${page}#${encodeURIComponent(source)}|${encodeURIComponent(entName)}`;
+		}
+		const hash = encodeURIComponent(String(name || "").trim());
+		return hash ? `${page}#${hash}` : page;
+	}
+
 	pRender() {
 		const char = this._character;
 		const profBonus = calcProfBonus(char.level || 1);
 		const der = this._computeDerived(char);
 
-		const A = String.fromCharCode(38);
 		const esc = this._esc.bind(this);
 
 		let html = '<div class="characters__view">';
@@ -75,12 +98,45 @@ export class CharactersUiSheet {
 		}
 		html += '</div></div>';
 
-		// Inventário
+		// Magias Conhecidas (renderizadas como links clicáveis)
+		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Magias Conhecidas</h4>';
+		html += '<div class="characters__sheet-items">';
+		if (der.spells && der.spells.length) {
+			der.spells.forEach(sp => {
+				if (!sp) return;
+				const url = CharactersUiSheet._buildEntityUrl("spell", sp);
+				html += '<div class="characters__sheet-item"><a href="' + url + '" class="characters__sheet-link" target="_blank">' + esc(sp) + '</a></div>';
+			});
+		} else {
+			html += '<div class="characters__sheet-item">Nenhuma magia</div>';
+		}
+		html += '</div>';
+		html += '<div class="characters__sheet-actions-bar mt-2">';
+		html += '<a href="spells.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" id="btn-add-spell">➕ Adicionar Magia</a>';
+		html += '</div></div>';
+
+		// Inventário (renderizado como links clicáveis)
 		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Inventário</h4>';
 		html += '<div class="characters__sheet-items">';
-		html += '<div class="characters__sheet-item">' + esc((der.inventory && der.inventory.length ? der.inventory.join(", ") : "Vazio")) + '</div>';
+		if (der.inventory && der.inventory.length) {
+			der.inventory.forEach(it => {
+				if (!it) return;
+				const url = CharactersUiSheet._buildEntityUrl("item", it);
+				html += '<div class="characters__sheet-item"><a href="' + url + '" class="characters__sheet-link" target="_blank">' + esc(it) + '</a></div>';
+			});
+		} else {
+			html += '<div class="characters__sheet-item">Vazio</div>';
+		}
 		html += '</div>';
+		// Texto de apoio para salvar (mantém compatibilidade)
 		html += '<textarea class="characters__sheet-textarea mt-2" id="in-inv" placeholder="Anote seus itens (um por linha)...">' + esc((der.inventory || []).join("\n")) + '</textarea>';
+		html += '<div class="characters__sheet-actions-bar mt-2">';
+		html += '<a href="items.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" id="btn-add-item">➕ Adicionar Item</a>';
+		html += '</div></div>';
+
+		// Magias (campo de lista para editar)
+		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Magias (lista)</h4>';
+		html += '<textarea class="characters__sheet-textarea" id="in-spells" placeholder="Anote suas magias (uma por linha)...">' + esc((der.spells || []).join("\n")) + '</textarea>';
 		html += '</div>';
 
 		// Notas
@@ -107,6 +163,7 @@ export class CharactersUiSheet {
 
 		$root.find("#btn-save").on("click", () => {
 			char.inventory = $root.find("#in-inv").val().split("\n").filter(Boolean);
+			char.spells = $root.find("#in-spells").val().split("\n").filter(Boolean);
 			char.notes = $root.find("#in-notes").val();
 			char.updated = Date.now();
 			CharactersStore.save(char);
@@ -120,6 +177,16 @@ export class CharactersUiSheet {
 		});
 
 		$root.find("#btn-print").on("click", () => window.print());
+
+		// Navegação para adicionar itens/magias (abre a tela correspondente)
+		$root.find("#btn-add-item").on("click", (e) => {
+			e.preventDefault();
+			window.location.href = "items.html";
+		});
+		$root.find("#btn-add-spell").on("click", (e) => {
+			e.preventDefault();
+			window.location.href = "spells.html";
+		});
 	}
 
 	_computeDerived(char) {

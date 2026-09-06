@@ -5,6 +5,27 @@
 (function(global) {
 	"use strict";
 
+	// === Links para o compêndio (abre ficha do item/magia/talento em suas páginas) ===
+	// Formato do hash igual ao 5etools: nome_fonte em minúsculas, URL-encodado, partes com "_" (HASH_LIST_SEP).
+	function ptmEnc(str) { return encodeURIComponent(String(str).toLowerCase()).toLowerCase(); }
+	function ptmPartsHash(parts) {
+		return parts
+			.map(function(p) { return ptmEnc(p == null ? "" : String(p).trim()); })
+			.filter(function(p) { return p.length > 0; })
+			.join("_");
+	}
+	function ptmNameSrcHref(page, ent) {
+		var name = (ent && typeof ent === "object") ? ent.name : ent;
+		var src = (ent && typeof ent === "object" && ent.source) ? ent.source : "";
+		return page + "#" + ptmPartsHash([name, src]);
+	}
+	function ptmSpellHref(spell) { return ptmNameSrcHref("spells.html", spell); }
+	function ptmItemHref(item) { return ptmNameSrcHref("items.html", item); }
+	function ptmFeatHref(feat) { return ptmNameSrcHref("feats.html", feat); }
+	function ptmSearchHint() {
+		return '<span class="ptm-hint">Toque no nome de um item, arma, armadura ou magia adicionado para abrir a descrição completa.</span>';
+	}
+
 	// === Constantes ===
 	var ABILITY_ABVS = ["str","dex","con","int","wis","cha"];
 	var ABILITY_NAMES = {str:"Força",dex:"Destreza",con:"Constituição",int:"Inteligência",wis:"Sabedoria",cha:"Carisma"};
@@ -1367,7 +1388,7 @@
 		if (char.spells && char.spells.length) {
 			char.spells.forEach(function(spell, index) {
 				html += '<div class="characters__spell-item">';
-				html += '<span class="characters__spell-name">' + esc(spell.name || spell) + '</span>';
+				html += '<a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a>';
 				if (spell.level !== undefined) {
 					html += '<span class="characters__spell-level">Nv. ' + spell.level + '</span>';
 				}
@@ -1391,6 +1412,7 @@
 		html += '</select>';
 		html += '</div>';
 		html += '<div id="spell-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="spells.html">Abrir lista completa de magias</a>';
 		html += '</div>';
 		
 		$content.html(html);
@@ -1457,7 +1479,7 @@
 		if (char.weapons && char.weapons.length) {
 			char.weapons.forEach(function(weapon, index) {
 				html += '<div class="characters__item">';
-				html += '<span>' + esc(weapon.name || weapon) + '</span>';
+				html += '<a class="ptm-link" href="' + esc(ptmItemHref(weapon)) + '">' + esc(weapon.name || weapon) + '</a>';
 				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-weapon="' + index + '">×</button>';
 				html += '</div>';
 			});
@@ -1472,6 +1494,7 @@
 		html += '<input type="text" class="characters__form-input" id="weapon-search" placeholder="Buscar arma...">';
 		html += '</div>';
 		html += '<div id="weapon-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
 		html += '</div>';
 		
 		// Armaduras
@@ -1480,7 +1503,7 @@
 		if (char.armors && char.armors.length) {
 			char.armors.forEach(function(armor, index) {
 				html += '<div class="characters__item">';
-				html += '<span>' + esc(armor.name || armor) + '</span>';
+				html += '<a class="ptm-link" href="' + esc(ptmItemHref(armor)) + '">' + esc(armor.name || armor) + '</a>';
 				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="' + index + '">×</button>';
 				html += '</div>';
 			});
@@ -1495,11 +1518,13 @@
 		html += '<input type="text" class="characters__form-input" id="armor-search" placeholder="Buscar armadura...">';
 		html += '</div>';
 		html += '<div id="armor-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
 		html += '</div>';
 		
 		// Inventário
 		html += '<div class="characters__summary-box"><div class="characters__summary-title">Inventário</div>';
 		html += '<textarea class="characters__sheet-textarea" id="in-inv" placeholder="Anote seus itens (um por linha)...">' + esc((char.inventory || []).join("\n")) + '</textarea>';
+		html += ptmSearchHint();
 		html += '</div></div>';
 		
 		$content.html(html);
@@ -1603,7 +1628,7 @@
 			char.feats.forEach(function(feat, index) {
 				html += '<div class="characters__feature-item">';
 				html += '<div>';
-				html += '<div class="characters__feature-name">' + esc(feat.name || feat) + '</div>';
+				html += '<div class="characters__feature-name"><a class="ptm-link" href="' + esc(ptmFeatHref(feat)) + '">' + esc(feat.name || feat) + '</a></div>';
 				if (feat.source) html += '<div class="characters__feature-source">' + esc(feat.source) + '</div>';
 				html += '</div>';
 				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-feat="' + index + '">×</button>';
@@ -1620,6 +1645,7 @@
 		html += '<input type="text" class="characters__form-input" id="feat-search" placeholder="Buscar talento...">';
 		html += '</div>';
 		html += '<div id="feat-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="feats.html">Abrir lista completa de talentos</a>';
 		html += '</div>';
 		
 		// Habilidades Especiais

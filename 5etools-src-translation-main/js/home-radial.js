@@ -63,9 +63,12 @@ class HomeRadial {
 	}
 
 	static _bindCloseTriggers () {
-		// Clique fora do radial / no centro fecha
+		// Fecha ao tocar FORA do painel (no dim, no radial ou na página).
+		// Cliques DENTRO do painel (links/título/grade) passam normalmente.
 		document.addEventListener("click", evt => {
-			if (HomeRadial._currentPanel && !evt.target.closest(".home__radial")) HomeRadial.closeAll();
+			if (!HomeRadial._currentPanel) return;
+			if (evt.target.closest(".home__radial-panel")) return;
+			HomeRadial.closeAll();
 		});
 		HomeRadial._radial.querySelector(".home__radial-center")?.addEventListener("click", () => HomeRadial.closeAll());
 	}

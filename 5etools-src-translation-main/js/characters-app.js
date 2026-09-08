@@ -63,7 +63,7 @@
 	var STANDARD_ARRAY = [15,14,13,12,10,8];
 
 	function calcMod(score) { return Math.floor((score - 10) / 2); }
-	function calcProfBonus(level) { return Math.ceil(2 + (level - 1) / 4); }
+	function calcProfBonus(level) { return 2 + Math.floor((level - 1) / 4); }
 	function rollAbilityScore() {
 		var rolls = [0,1,2,3].map(function() { return 1 + Math.floor(Math.random() * 6); });
 		rolls.sort(function(a,b) { return b - a; });
@@ -154,6 +154,8 @@
 	var itemsData = [];
 	var featsData = [];
 	var currentTab = "overview";
+	var sheetReorderActive = false;
+	var sheetDrag = null;
 
 	function createDefaultCharacter() {
 		return {
@@ -307,20 +309,15 @@
 
 	function stepRace($form) {
 		var d = creationData;
-		var seen = {};
-		var races = racesData.filter(function(r) {
-			var key = r.name.toLowerCase();
-			if (seen[key]) return false;
-			seen[key] = true;
-			return true;
-		}).sort(function(a,b) { return a.name.localeCompare(b.name); });
+		var races = racesData; // já ordenado e com tags de fonte (versões repetidas)
 
 		var html = '<div class="characters__form-section"><h3 class="characters__form-section-title">Escolha a Raça</h3>';
 		html += '<div class="characters__form-group"><label class="characters__form-label">Raça</label>';
 		html += '<select class="characters__form-select" id="in-race"><option value="">Selecione...</option>';
+		var curRaceVal = d.race ? (d.race._value || d.race.name) : "";
 		races.forEach(function(r) {
-			var sel = d.race && d.race.name === r.name ? " selected" : "";
-			html += '<option value="' + esc(r.name) + '"' + sel + '>' + esc(r.name) + '</option>';
+			var sel = curRaceVal && curRaceVal === r._value ? " selected" : "";
+			html += '<option value="' + esc(r._value) + '"' + sel + '>' + esc(optionLabel(r)) + '</option>';
 		});
 		html += '</select></div><div id="info-race" class="characters__summary-box"></div>';
 		html += '<button class="characters__btn characters__btn--secondary" id="btn-prev">← Voltar</button> ';
@@ -328,7 +325,7 @@
 		$form.html(html);
 
 		var updateInfo = function() {
-			var race = racesData.find(function(r) { return r.name === $form.find("#in-race").val(); });
+			var race = findByValue(racesData, $form.find("#in-race").val());
 			if (!race) { $form.find("#info-race").empty(); return; }
 			var abils = getRaceAbilities(race);
 			var abilStr = ABILITY_ABVS.filter(function(a) { return abils[a]; }).map(function(a) { return ABILITY_SHORT[a] + " +" + abils[a]; }).join(", ");
@@ -346,12 +343,12 @@
 		};
 
 		$form.find("#in-race").on("change", updateInfo);
-		if (d.race) $form.find("#in-race").val(d.race.name);
+		if (d.race) $form.find("#in-race").val(d.race._value || d.race.name);
 		updateInfo();
 
 		$form.find("#btn-prev").on("click", function() { creationStep = 1; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
-			var race = racesData.find(function(r) { return r.name === $form.find("#in-race").val(); });
+			var race = findByValue(racesData, $form.find("#in-race").val());
 			if (!race) { alert("Selecione uma raça!"); return; }
 			d.race = race;
 			var abils = getRaceAbilities(race);
@@ -363,20 +360,14 @@
 
 	function stepClass($form) {
 		var d = creationData;
-		var seen = {};
-		var classes = classesData.filter(function(c) {
-			var key = c.name.toLowerCase();
-			if (seen[key]) return false;
-			seen[key] = true;
-			return true;
-		}).sort(function(a,b) { return a.name.localeCompare(b.name); });
+		var classes = classesData; // já ordenado e com tags de fonte (versões repetidas)
 
 		var html = '<div class="characters__form-section"><h3 class="characters__form-section-title">Escolha a Classe</h3>';
 		html += '<div class="characters__form-row"><div class="characters__form-group"><label class="characters__form-label">Classe</label>';
 		html += '<select class="characters__form-select" id="in-class"><option value="">Selecione...</option>';
 		classes.forEach(function(c) {
-			var sel = d.className === c.name ? " selected" : "";
-			html += '<option value="' + esc(c.name) + '"' + sel + '>' + esc(c.name) + '</option>';
+			var sel = d.className && d.className === c.name ? " selected" : "";
+			html += '<option value="' + esc(c._value) + '"' + sel + '>' + esc(optionLabel(c)) + '</option>';
 		});
 		html += '</select></div>';
 		html += '<div class="characters__form-group"><label class="characters__form-label">Nível</label>';
@@ -392,7 +383,7 @@
 		$form.html(html);
 
 		var updateInfo = function() {
-			var cls = classesData.find(function(c) { return c.name === $form.find("#in-class").val(); });
+			var cls = findByValue(classesData, $form.find("#in-class").val());
 			if (!cls) { $form.find("#info-class").empty(); return; }
 			var hd = CLASS_HIT_DICE[cls.name] || 8;
 			var saves = (CLASS_SAVES[cls.name] || []).map(function(s) { return ABILITY_NAMES[s]; }).join(", ");
@@ -405,13 +396,16 @@
 		};
 
 		$form.find("#in-class").on("change", updateInfo);
-		if (d.className) $form.find("#in-class").val(d.className);
+		if (d.className) $form.find("#in-class").val(d._classValue || d.className);
 		updateInfo();
 
 		$form.find("#btn-prev").on("click", function() { creationStep = 2; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
-			var clsName = $form.find("#in-class").val();
-			if (!clsName) { alert("Selecione uma classe!"); return; }
+			var clsVal = $form.find("#in-class").val();
+			var cls = findByValue(classesData, clsVal);
+			if (!cls) { alert("Selecione uma classe!"); return; }
+			var clsName = cls.name;
+			d._classValue = cls._value || cls.name;
 			d.level = parseInt($form.find("#in-level").val()) || 1;
 			d.className = clsName;
 			var hd = CLASS_HIT_DICE[clsName] || 8;
@@ -439,7 +433,9 @@
 
 		// Atualizar seletor de subclasses quando classe mudar
 		$form.find("#in-class").on("change", function() {
-			var clsName = $form.find("#in-class").val();
+			var clsValRaw = $form.find("#in-class").val();
+			var clsFound = findByValue(classesData, clsValRaw);
+			var clsName = clsFound ? clsFound.name : clsValRaw;
 			var $subclassGroup = $form.find("#subclass-group");
 			var $subclassSelect = $form.find("#in-subclass");
 			
@@ -470,23 +466,23 @@
 				return sc._classNameEN === clsName;
 			});
 			
-			// Remover duplicatas
-			var seen = {};
-			classSubclasses = classSubclasses.filter(function(sc) {
-				var key = (sc.name || "").toLowerCase();
-				if (seen[key]) return false;
-				seen[key] = true;
-				return true;
+			// Manter TODAS as versões; duplicatas (mesmo nome, fontes diferentes)
+			// recebem a sigla da fonte e valor único "Nome|FONTE"
+			classSubclasses.sort(function(a, b) {
+				return String(a.name).localeCompare(String(b.name)) || srcRank(a.source || "") - srcRank(b.source || "");
 			});
 			
 			// Popular dropdown
 			$subclassSelect.empty();
 			$subclassSelect.append('<option value="">Selecione...</option>');
 			classSubclasses.forEach(function(sc) {
-				// Usar nome como ID se não houver ID próprio
-				var subclassId = sc.id || sc.name;
+				var isDup = classSubclasses.filter(function(o) {
+					return (o.name || "").toLowerCase() === (sc.name || "").toLowerCase();
+				}).length > 1;
+				var subclassId = isDup ? (sc.name + "|" + (sc.source || "")) : sc.name;
+				var label = isDup ? (sc.name + " [" + sc.source + "]") : sc.name;
 				var sel = d.subclass === subclassId ? " selected" : "";
-				$subclassSelect.append('<option value="' + esc(subclassId) + '"' + sel + '>' + esc(sc.name) + '</option>');
+				$subclassSelect.append('<option value="' + esc(subclassId) + '"' + sel + '>' + esc(label) + '</option>');
 			});
 			
 			// Mostrar grupo
@@ -495,7 +491,9 @@
 		
 		// Atualizar subclasse quando nível mudar
 		$form.find("#in-level").on("change", function() {
-			var clsName = $form.find("#in-class").val();
+			var clsValRaw = $form.find("#in-class").val();
+			var clsFound = findByValue(classesData, clsValRaw);
+			var clsName = clsFound ? clsFound.name : clsValRaw;
 			var $subclassGroup = $form.find("#subclass-group");
 			var $subclassSelect = $form.find("#in-subclass");
 			
@@ -515,20 +513,16 @@
 
 	function stepBackground($form) {
 		var d = creationData;
-		var seen = {};
-		var bgs = backgroundsData.filter(function(b) {
-			var key = b.name.toLowerCase();
-			if (seen[key]) return false;
-			seen[key] = true;
-			return true;
-		}).sort(function(a,b) { return a.name.localeCompare(b.name); });
+		// Já ordenado e com tags de fonte (versões repetidas, ex.: Acolyte [PHB] / Acolyte [XPHB])
+		var bgs = backgroundsData;
 
 		var html = '<div class="characters__form-section"><h3 class="characters__form-section-title">Escolha o Antecedente</h3>';
 		html += '<div class="characters__form-group"><label class="characters__form-label">Antecedente</label>';
 		html += '<select class="characters__form-select" id="in-bg"><option value="">Selecione...</option>';
 		bgs.forEach(function(b) {
-			var sel = d.background === b.name ? " selected" : "";
-			html += '<option value="' + esc(b.name) + '"' + sel + '>' + esc(b.name) + '</option>';
+			var cur = d._bgValue || d.background || "";
+			var sel = cur === b._value ? " selected" : "";
+			html += '<option value="' + esc(b._value) + '"' + sel + '>' + esc(optionLabel(b)) + '</option>';
 		});
 		html += '</select></div><div id="info-bg" class="characters__summary-box"></div>';
 		html += '<button class="characters__btn characters__btn--secondary" id="btn-prev">← Voltar</button> ';
@@ -536,7 +530,7 @@
 		$form.html(html);
 
 		var updateInfo = function() {
-			var bg = backgroundsData.find(function(b) { return b.name === $form.find("#in-bg").val(); });
+			var bg = findByValue(backgroundsData, $form.find("#in-bg").val());
 			if (!bg) { $form.find("#info-bg").empty(); return; }
 			var info = '<div class="characters__summary-title">' + esc(bg.name) + '</div>';
 			var entries = bg.entries ? bg.entries.map(function(e) {
@@ -548,12 +542,15 @@
 		};
 
 		$form.find("#in-bg").on("change", updateInfo);
-		if (d.background) $form.find("#in-bg").val(d.background);
+		if (d.background) $form.find("#in-bg").val(d._bgValue || d.background);
 		updateInfo();
 
 		$form.find("#btn-prev").on("click", function() { creationStep = 3; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
-			var bgName = $form.find("#in-bg").val();
+			var bgVal = $form.find("#in-bg").val();
+			var bgObj = findByValue(backgroundsData, bgVal);
+			var bgName = bgObj ? bgObj.name : bgVal;
+			d._bgValue = bgVal;
 			if (!bgName) { alert("Selecione um antecedente!"); return; }
 			d.background = bgName;
 			creationStep = 5;
@@ -623,7 +620,7 @@
 				});
 			};
 			
-			// Atribuir valor
+			// Atribuir valor (e sincronizar com `scores` imediatamente)
 			$valuesBox.on("click", ".characters__dice", function(e) {
 				var $dice = $(e.target);
 				var val = parseInt($dice.data("value"));
@@ -634,6 +631,7 @@
 					var abv = ABILITY_ABVS[i];
 					if (tempScores[abv] === 0) {
 						tempScores[abv] = val;
+						scores[abv] = val;
 						break;
 					}
 				}
@@ -641,9 +639,6 @@
 			});
 			
 			renderGrid();
-			
-			// Salvar quando sair
-			ABILITY_ABVS.forEach(function(a) { scores[a] = tempScores[a] || 8; });
 		};
 		
 		var renderRoll = function() {
@@ -685,7 +680,7 @@
 				});
 			};
 			
-			// Atribuir dado
+			// Atribuir dado (e sincronizar com `scores` imediatamente)
 			$diceBox.on("click", ".characters__dice", function(e) {
 				var $dice = $(e.target);
 				var val = parseInt($dice.data("value"));
@@ -696,6 +691,7 @@
 					var abv = ABILITY_ABVS[i];
 					if (tempScores[abv] === 0) {
 						tempScores[abv] = val;
+						scores[abv] = val;
 						break;
 					}
 				}
@@ -708,15 +704,13 @@
 			$content.find("#btn-reroll-abilities").on("click", function() {
 				rolls = [0,1,2,3,4,5].map(function() { return rollAbilityScore(); }).sort(function(a,b) { return b - a; });
 				tempScores = {str:0,dex:0,con:0,int:0,wis:0,cha:0};
+				ABILITY_ABVS.forEach(function(a) { scores[a] = 8; });
 				$diceBox.empty();
 				rolls.forEach(function(val) {
 					$diceBox.append('<div class="characters__dice" data-value="' + val + '">' + val + '</div>');
 				});
 				renderGrid();
 			});
-			
-			// Salvar quando sair
-			ABILITY_ABVS.forEach(function(a) { scores[a] = tempScores[a] || 8; });
 		};
 		
 		var renderBuy = function() {
@@ -816,7 +810,7 @@
 
 	function getBgSkillKeys() {
 		if (!creationData.background) return [];
-		var bg = backgroundsData.find(function(b) { return b.name === creationData.background; });
+		var bg = findByValue(backgroundsData, creationData._bgValue || creationData.background);
 		if (!bg || !bg.skillProficiencies) return [];
 		var keys = [];
 		bg.skillProficiencies.forEach(function(p) {
@@ -938,7 +932,7 @@
 		html += '<li><b>Raça:</b> ' + esc(der.race ? der.race.name : "—") + '</li>';
 		html += '<li><b>Classe:</b> ' + esc(der.className) + ' Nv. ' + der.level + '</li>';
 		if (d.subclass) {
-			var subc = subclassesData.find(function(s) { return s.id === d.subclass; });
+			var subc = findSubclassByKey(d.subclass);
 			html += '<li><b>Subclasse:</b> ' + (subc ? esc(subc.name) : "—") + '</li>';
 		}
 		html += '<li><b>Antecedente:</b> ' + esc(der.background || "—") + '</li>';
@@ -1011,11 +1005,17 @@
 		var d = creationData;
 		var hd = CLASS_HIT_DICE[d.className] || 8;
 		var conMod = calcMod((d.scores.con || 8) + (d.rawScores.con || 0));
-		d.hp.max = hd + conMod;
+		var level = d.level || 1;
+		// PV: máximo no 1º nível + média (metade do dado + 1 + CON) nos níveis seguintes
+		d.hp.max = hd + conMod + (level - 1) * (Math.floor(hd / 2) + 1 + conMod);
 		d.hp.current = d.hp.max;
 		d.ac = 10 + calcMod((d.scores.dex || 8) + (d.rawScores.dex || 0));
 		d.initiative = calcMod((d.scores.dex || 8) + (d.rawScores.dex || 0));
 		d.speed = d.race ? (d.race.speed && d.race.speed.walk ? d.race.speed.walk : 30) : 30;
+		// Espaços de magia automáticos conforme classe/subclasse/nível
+		d.spellSlots = calculateSpellSlots(d);
+		d.spellAttackBonus = calculateSpellAttackBonus(d);
+		d.spellDC = 8 + d.spellAttackBonus;
 		d.updated = Date.now();
 	}
 
@@ -1196,169 +1196,14 @@
 		renderList();
 	}
 
-	// Sistema de abas
+	// Sistema de módulos (compatibilidade com o antigo sistema de abas)
 	window.renderSheetTab = function(tabName) {
-		var char = currentChar;
-		var $content = $root.find("#sheet-content");
-		if (!$content.length) return;
-		
-		currentTab = tabName;
-		
-		// Atualizar abas ativas
-		$root.find(".characters__tab").removeClass("active");
-		$root.find(".characters__tab[data-tab='" + tabName + "']").addClass("active");
-		
-		switch (tabName) {
-			case "overview": renderOverviewTab($content, char); break;
-			case "abilities": renderAbilitiesTab($content, char); break;
-			case "skills": renderSkillsTab($content, char); break;
-			case "spells": renderSpellsTab($content, char); break;
-			case "equipment": renderEquipmentTab($content, char); break;
-			case "features": renderFeaturesTab($content, char); break;
-		}
+		currentTab = tabName || currentTab;
+		if ($root.find("#sheet-modules").length) renderModules();
 	};
 	
-	function renderOverviewTab($content, char) {
-		var html = '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Informações Pessoais</h4>';
-		html += '<div class="characters__sheet-items">';
-		html += '<div class="characters__sheet-item"><b>Raça:</b> ' + esc(char.race ? char.race.name : "—") + '</div>';
-		html += '<div class="characters__sheet-item"><b>Classe:</b> ' + esc(char.className) + ' Nv. ' + (char.level || 1) + '</div>';
-		html += '<div class="characters__sheet-item"><b>Antecedente:</b> ' + esc(char.background || "—") + '</div>';
-		html += '<div class="characters__sheet-item"><b>Alinhamento:</b> ' + esc(char.alignment || "Neutro") + '</div>';
-		html += '<div class="characters__sheet-item"><b>Jogador:</b> ' + esc(char.playerName || "—") + '</div>';
-		html += '<div class="characters__sheet-item"><b>Experiência:</b> ' + (char.experience || 0) + ' XP</div>';
-		html += '</div></div>';
-		
-		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Combate</h4>';
-		html += '<div class="characters__sheet-items">';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.hp ? char.hp.max || 0 : 0) + '</span> PV Máximo</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.hp ? char.hp.current || 0 : 0) + '</span> PV Atual</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.ac || 10) + '</span> CA</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.initiative >= 0 ? "+" : "") + (char.initiative || 0) + '</span> Iniciativa</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.speed || 30) + '</span> Deslocamento</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (char.passivePerception || 10) + '</span> Percepção Passiva</div>';
-		html += '</div></div>';
-		
-		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Moedas</h4>';
-		html += '<div class="characters__form-row">';
-		html += '<div class="characters__form-group"><label>Platina (pp)</label>';
-		html += '<input type="number" class="characters__form-input coin-input" data-coin="platinum" value="' + (char.coins ? char.coins.platinum || 0 : 0) + '" min="0"></div>';
-		html += '<div class="characters__form-group"><label>Ouro (po)</label>';
-		html += '<input type="number" class="characters__form-input coin-input" data-coin="gold" value="' + (char.coins ? char.coins.gold || 0 : 0) + '" min="0"></div>';
-		html += '</div>';
-		html += '<div class="characters__form-row">';
-		html += '<div class="characters__form-group"><label>Prata (pe)</label>';
-		html += '<input type="number" class="characters__form-input coin-input" data-coin="silver" value="' + (char.coins ? char.coins.silver || 0 : 0) + '" min="0"></div>';
-		html += '<div class="characters__form-group"><label>Cobre (pc)</label>';
-		html += '<input type="number" class="characters__form-input coin-input" data-coin="copper" value="' + (char.coins ? char.coins.copper || 0 : 0) + '" min="0"></div>';
-		html += '</div>';
-		html += '<div class="characters__form-row">';
-		html += '<div class="characters__form-group"><label>Électrum (pe)</label>';
-		html += '<input type="number" class="characters__form-input coin-input" data-coin="electrum" value="' + (char.coins ? char.coins.electrum || 0 : 0) + '" min="0"></div>';
-		html += '</div>';
-		html += '</div>';
-		
-		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Status</h4>';
-		html += '<div class="characters__sheet-items">';
-		html += '<div class="characters__sheet-item">';
-		html += '<label><input type="checkbox" class="inspiration-checkbox" ' + (char.inspiration ? "checked" : "") + '> Inspiração</label>';
-		html += '</div>';
-		html += '<div class="characters__sheet-item"><b>Death Saves:</b></div>';
-		html += '<div class="characters__sheet-item">Sucessos: ';
-		for (var i = 1; i <= 3; i++) {
-			html += '<input type="checkbox" class="death-save-success" data-index="' + i + '" ' + (char.deathSaves && char.deathSaves.successes >= i ? "checked" : "") + '> ';
-		}
-		html += '</div>';
-		html += '<div class="characters__sheet-item">Falhas: ';
-		for (var i = 1; i <= 3; i++) {
-			html += '<input type="checkbox" class="death-save-failure" data-index="' + i + '" ' + (char.deathSaves && char.deathSaves.failures >= i ? "checked" : "") + '> ';
-		}
-		html += '</div>';
-		html += '</div></div>';
-		
-		$content.html(html);
-		
-		// Event listeners para moedas
-		$content.find(".coin-input").on("change", function() {
-			var coinType = $(this).data("coin");
-			var value = parseInt($(this).val()) || 0;
-			if (!char.coins) char.coins = {};
-			char.coins[coinType] = value;
-		});
-		
-		// Event listener para inspiração
-		$content.find(".inspiration-checkbox").on("change", function() {
-			char.inspiration = $(this).is(":checked");
-		});
-		
-		// Event listeners para death saves
-		$content.find(".death-save-success").on("change", function() {
-			var index = parseInt($(this).data("index"));
-			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
-			char.deathSaves.successes = $(this).is(":checked") ? index : 0;
-			// Atualizar checkboxes
-			$content.find(".death-save-success").each(function(i) {
-				$(this).prop("checked", i < char.deathSaves.successes);
-			});
-		});
-		
-		$content.find(".death-save-failure").on("change", function() {
-			var index = parseInt($(this).data("index"));
-			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
-			char.deathSaves.failures = $(this).is(":checked") ? index : 0;
-			// Atualizar checkboxes
-			$content.find(".death-save-failure").each(function(i) {
-				$(this).prop("checked", i < char.deathSaves.failures);
-			});
-		});
-	};
 	
-	function renderAbilitiesTab($content, char) {
-		var html = '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Atributos</h4>';
-		html += '<div class="characters__sheet-stats">';
-		ABILITY_ABVS.forEach(function(a) {
-			var total = (char.scores[a] || 8) + (char.rawScores[a] || 0);
-			var mod = calcMod(total);
-			html += '<div class="characters__stat">';
-			html += '<div class="characters__stat-name">' + ABILITY_SHORT[a] + '</div>';
-			html += '<div class="characters__stat-value">' + total + '</div>';
-			html += '<div class="characters__stat-mod">' + (mod >= 0 ? "+" : "") + mod + '</div>';
-			html += '</div>';
-		});
-		html += '</div></div>';
-		$content.html(html);
-	}
 	
-	function renderSkillsTab($content, char) {
-		var profBonus = calcProfBonus(char.level || 1);
-		var html = '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Perícias</h4>';
-		html += '<div class="characters__sheet-items">';
-		var skillKeys = Object.keys(char.skills || {});
-		if (skillKeys.length) {
-			skillKeys.forEach(function(k) {
-				var skill = SKILLS.find(function(s) { return s.name === SKILL_KEY_TO_PT[k]; });
-				var abil = skill ? skill.abil : "str";
-				var v = char.skills[k];
-				var total = calcMod((char.scores[abil] || 8) + (char.rawScores[abil] || 0)) + (v === 1 ? profBonus : v === 2 ? profBonus * 2 : 0);
-				html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">+' + total + '</span> ' + (SKILL_KEY_TO_PT[k] || k) + (v === 2 ? " ★" : "") + '</div>';
-			});
-		} else {
-			html += '<div class="characters__sheet-item">Nenhuma perícia selecionada</div>';
-		}
-		html += '</div></div>';
-		
-		// Outras proficiências
-		if (char.otherProficiencies && char.otherProficiencies.length) {
-			html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Outras Proficiências</h4>';
-			html += '<div class="characters__sheet-items">';
-			char.otherProficiencies.forEach(function(prof) {
-				html += '<div class="characters__sheet-item">' + esc(prof) + '</div>';
-			});
-			html += '</div></div>';
-		}
-		
-		$content.html(html);
-	}
 	
 	function renderSpellsTab($content, char) {
 		var html = '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Magias</h4>';
@@ -1554,10 +1399,10 @@
 			
 			filtered.forEach(function(weapon) {
 				var $item = $('<div class="characters__search-item">');
-				$item.html('<b>' + esc(weapon.name) + '</b> (' + esc(weapon.weaponCategory || "Arma") + ')');
+				$item.html('<b>' + esc(optionLabel(weapon)) + '</b> (' + esc(weapon.weaponCategory || "Arma") + ')');
 				$item.on("click", function() {
 					if (!char.weapons) char.weapons = [];
-					char.weapons.push({name: weapon.name, type: weapon.weaponCategory});
+					char.weapons.push({name: weapon.name, source: weapon.source || "", type: String(weapon.type || "").split("|")[0] === "R" ? "ranged" : "melee"});
 					renderEquipmentTab($content, char);
 				});
 				$weaponResults.append($item);
@@ -1586,7 +1431,8 @@
 			
 			var filtered = itemsData.filter(function(item) {
 				var nameMatch = item.name.toLowerCase().indexOf(query) >= 0;
-				var isArmor = item.type === "LA" || item.type === "MA" || item.type === "HA" || item.type === "S";
+				var baseType = String(item.type || "").split("|")[0];
+				var isArmor = baseType === "LA" || baseType === "MA" || baseType === "HA" || baseType === "S";
 				return nameMatch && isArmor;
 			}).slice(0, 10);
 			
@@ -1598,10 +1444,12 @@
 			
 			filtered.forEach(function(armor) {
 				var $item = $('<div class="characters__search-item">');
-				$item.html('<b>' + esc(armor.name) + '</b> (' + esc(armor.type || "Armadura") + ')');
+				var baseType = String(armor.type || "").split("|")[0];
+				var typeLabel = {LA: "Armadura leve", MA: "Armadura média", HA: "Armadura pesada", S: "Escudo"}[baseType] || "Armadura";
+				$item.html('<b>' + esc(optionLabel(armor)) + '</b> (' + esc(typeLabel) + ')');
 				$item.on("click", function() {
 					if (!char.armors) char.armors = [];
-					char.armors.push({name: armor.name, type: armor.type, ac: armor.ac});
+					char.armors.push({name: armor.name, source: armor.source || "", type: baseType, ac: armor.ac});
 					renderEquipmentTab($content, char);
 				});
 				$armorResults.append($item);
@@ -1724,133 +1572,753 @@
 		});
 	}
 
-	function renderSheet() {
-		try {
-			var char = currentChar;
-			if (!char) {
-				console.error("[Characters] Nenhum personagem selecionado");
-				return;
-			}
-			console.log("[Characters] Renderizando ficha:", char.name);
-			
-			var profBonus = calcProfBonus(char.level || 1);
 
-			var html = '<div class="characters__view">';
-			html += '<button class="characters__btn characters__btn--secondary characters__btn-back" id="btn-back">← Voltar</button>';
-			html += '<div class="characters__sheet">';
-		
-		// Botão de exportar
-		html += '<div class="characters__form-row">';
-		html += '<button class="characters__btn characters__btn--info" id="btn-export-sheet">📥 Exportar .cah</button>';
-		html += '</div>';
+// === FICHA POR MÓDULOS REORGANIZÁVEIS ===
+	var SHEET_MODULE_DEFAULT_ORDER = ["abilities", "combat", "skills", "attacks", "spells", "features", "equipment", "notes"];
+	var SHEET_MODULE_DEFS = null;
 
-		// Abas de navegação
-		html += '<div class="characters__tabs">';
-		html += '<button class="characters__tab active" data-tab="overview">Visão Geral</button>';
-		html += '<button class="characters__tab" data-tab="abilities">Atributos</button>';
-		html += '<button class="characters__tab" data-tab="skills">Perícias</button>';
-		html += '<button class="characters__tab" data-tab="spells">Magias</button>';
-		html += '<button class="characters__tab" data-tab="equipment">Equipamentos</button>';
-		html += '<button class="characters__tab" data-tab="features">Características</button>';
-		html += '</div>';
-
-		// Header
-		html += '<div class="characters__sheet-header">';
+	function buildSheetHeader(char) {
+		var sub = findSubclassName(char);
+		var html = '<div class="characters__sheet-header">';
 		html += '<div class="characters__sheet-avatar">' + esc((char.name || "?").charAt(0).toUpperCase()) + '</div>';
 		html += '<div>';
 		html += '<h2 class="characters__sheet-name">' + esc(char.name) + '</h2>';
-		html += '<div class="characters__sheet-detail">' + esc(char.race ? char.race.name : "—") + ' • ' + esc(char.className) + ' Nv. ' + (char.level || 1) + ' • ' + esc(char.background || "—") + '</div>';
+		html += '<div class="characters__sheet-detail">' + esc(char.race ? char.race.name : "—") + (sub ? " • " + esc(sub) : "") + ' • ' + esc(char.className || "—") + ' • Nv. ' + (char.level || 1) + ' • ' + esc(char.background || "—") + '</div>';
 		html += '<div class="characters__sheet-detail">' + esc(char.alignment || "Neutro") + ' • Jogador: ' + esc(char.playerName || "—") + '</div>';
 		html += '</div></div>';
+		return html;
+	}
 
-		// Conteúdo das abas
-		html += '<div id="sheet-content"></div>';
+	function findSubclassName(char) {
+		if (!char || !char.subclass) return "";
+		var sc = findSubclassByKey(char.subclass);
+		return sc ? sc.name : String(char.subclass);
+	}
 
-		// Botões de ação
-		html += '<div class="characters__form-row">';
-		html += '<button class="characters__btn characters__btn--primary" id="btn-save">💾 Salvar</button>';
-		html += '<button class="characters__btn characters__btn--danger" id="btn-delete">Excluir</button>';
-		html += '<button class="characters__btn characters__btn--secondary" id="btn-print">🖨️ Imprimir</button>';
-		html += '</div>';
-		html += '</div>'; // Fechar .characters__sheet
-		html += '</div>'; // Fechar .characters__view
+	function sheetToast(type, content) {
+		var types = {success: "characters__toast--success", info: "characters__toast--info", danger: "characters__toast--danger"};
+		var $old = $(document).find(".characters__toast");
+		if ($old.length) $old.remove();
+		var $t = $('<div class="characters__toast ' + (types[type] || types.info) + '">' + esc(content) + '</div>');
+		$(document.body).append($t);
+		setTimeout(function() { $t.remove(); }, 2000);
+	}
 
-		// INSERIR O HTML NO DOM
-		$root.html(html);
-		
-		console.log("[Characters] HTML inserido no DOM");
+	function rollD20WithBonus(bonus, label) {
+		var r = 1 + Math.floor(Math.random() * 20);
+		var total = r + (bonus || 0);
+		var msg = (label || "Rolagem") + ": 🎲 " + r + (bonus ? " + " + bonus : "") + " = " + total;
+		var type = "info";
+		if (r === 20) { msg += " — NATURAL 20!"; type = "success"; }
+		if (r === 1) { msg += " — natural 1..."; type = "danger"; }
+		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: type, content: msg});
+		else sheetToast(type, msg);
+	}
 
-		$root.find("#btn-back").on("click", function() {
-			currentView = "list";
-			currentChar = null;
-			renderList();
+	function getSheetOrder(char) {
+		var ids = (char && Array.isArray(char.sheetOrder)) ? char.sheetOrder.slice() : [];
+		ids = ids.filter(function(id) { return id && SHEET_MODULE_DEFS[id]; });
+		SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) { if (ids.indexOf(id) === -1) ids.push(id); });
+		return ids;
+	}
+
+	function saveSheetOrder(char, ids) {
+		char.sheetOrder = ids.slice();
+		CharactersStore.save(char);
+	}
+function sheetOrderIds() {
+		var ids = [];
+		$root.find("#sheet-modules").children(".characters__module").each(function() { ids.push($(this).data("module")); });
+		return ids;
+	}
+
+	function renderModules() {
+		var char = currentChar;
+		if (!char) return;
+		var $container = $root.find("#sheet-modules");
+		if (!$container.length) return;
+		$container.empty();
+		getSheetOrder(char).forEach(function(id) {
+			var def = SHEET_MODULE_DEFS[id];
+			var $module = $('<section class="characters__module" data-module="' + id + '"></section>');
+			$module.append(
+				'<header class="characters__module-head">' +
+				'<span class="characters__module-handle" title="Arraste para reordenar" aria-label="Reordenar módulo">⋮⋮</span>' +
+				'<span class="characters__module-icon">' + def.icon + '</span>' +
+				'<h4 class="characters__module-title">' + def.title + '</h4>' +
+				'</header>'
+			);
+			var $body = $('<div class="characters__module-body"></div>');
+			$module.append($body);
+			$container.append($module);
+			def.render($body, char);
 		});
+		$root.find("#sheet-modules").toggleClass("is-reorder", sheetReorderActive);
+		bindModuleDrag();
+	}
 
-		$root.find("#btn-save").on("click", function() {
-			var inv = $root.find("#in-inv");
-			if (inv.length) char.inventory = inv.val().split("\n").filter(Boolean);
-			
-			// Salvar moedas
-			var coins = {};
-			$root.find(".coin-input").each(function() {
-				var coinType = $(this).data("coin");
-				coins[coinType] = parseInt($(this).val()) || 0;
+	function bindModuleDrag() {
+		$root.find("#sheet-modules").find(".characters__module-handle").each(function() {
+			var $h = $(this);
+			$h.off(".mdrag");
+			$h.on("mousedown.mdrag touchstart.mdrag", function(evt) {
+				evt.preventDefault();
+				beginModuleDrag($h.closest(".characters__module"));
 			});
-			char.coins = coins;
-			
-			// Salvar inspiração
-			var inspiration = $root.find(".inspiration-checkbox");
-			if (inspiration.length) char.inspiration = inspiration.is(":checked");
-			
-			// Salvar death saves
-			var successes = $root.find(".death-save-success:checked").length;
-			var failures = $root.find(".death-save-failure:checked").length;
-			char.deathSaves = {successes: successes, failures: failures};
-			
-			// Calcular valores derivados
+		});
+	}
+
+	function beginModuleDrag($module) {
+		var startOrder = sheetOrderIds().join("|");
+		sheetDrag = { active: true, $el: $module, moved: false, startOrder: startOrder };
+		$module.addClass("is-dragging");
+		$(document).on("mousemove.mdrag touchmove.mdrag", function(evt) {
+			if (!sheetDrag) return;
+			sheetDrag.moved = true;
+			var pointer = evt.originalEvent.touches ? evt.originalEvent.touches[0] : evt;
+			moveModuleDrag(pointer.clientY);
+		});
+		$(document).one("mouseup.mdrag touchend.mdrag", function() {
+			$(document).off(".mdrag");
+			endModuleDrag();
+		});
+	}
+
+	function moveModuleDrag(clientY) {
+		if (!sheetDrag || !sheetDrag.active) return;
+		var $container = $root.find("#sheet-modules");
+		var $el = sheetDrag.$el;
+		var beforeEl = null;
+		$container.children(".characters__module").not(".is-dragging").each(function() {
+			var r = this.getBoundingClientRect();
+			if (clientY < r.top + r.height / 2) { beforeEl = this; return false; }
+		});
+		if (beforeEl) $container[0].insertBefore($el[0], beforeEl);
+		else $container.append($el);
+	}
+
+	function endModuleDrag() {
+		if (!sheetDrag) return;
+		sheetDrag.$el.removeClass("is-dragging");
+		var newIds = sheetOrderIds();
+		var changed = (newIds.join("|") !== sheetDrag.startOrder);
+		if (changed && currentChar) {
+			saveSheetOrder(currentChar, newIds);
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Ordem das seções atualizada!"});
+			else sheetToast("success", "Ordem das seções atualizada!");
+		}
+		sheetDrag = null;
+	}
+
+	function resetSheetOrder() {
+		if (!currentChar) return;
+		saveSheetOrder(currentChar, SHEET_MODULE_DEFAULT_ORDER.slice());
+		renderModules();
+		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Ordem padrão restaurada!"});
+		else sheetToast("success", "Ordem padrão restaurada!");
+	}
+
+	function toggleSheetReorder() {
+		sheetReorderActive = !sheetReorderActive;
+		$root.find("#btn-reorder").toggleClass("active", sheetReorderActive);
+		$root.find("#sheet-modules").toggleClass("is-reorder", sheetReorderActive);
+		$root.find("#reorder-hint").toggle(sheetReorderActive);
+	}
+function renderModuleAbilities($body, char) {
+		var html = '<div class="characters__sheet-stats">';
+		ABILITY_ABVS.forEach(function(a) {
+			var total = (char.scores[a] || 8) + (char.rawScores[a] || 0);
+			var mod = calcMod(total);
+			html += '<div class="characters__stat characters__stat--roll">';
+			html += '<div class="characters__stat-name">' + ABILITY_NAMES[a] + '</div>';
+			html += '<div class="characters__stat-value">' + total + '</div>';
+			html += '<div class="characters__stat-mod">' + (mod >= 0 ? "+" : "") + mod + '</div>';
+			html += '<div class="characters__stat-roll" data-d20="' + mod + '" data-label="' + ABILITY_NAMES[a] + '" title="Rolar d20 + modificador">🎲</div>';
+			html += '</div>';
+		});
+		html += '</div>';
+		$body.html(html);
+		$body.find(".characters__stat-roll").on("click", function(e) {
+			e.stopPropagation();
+			rollD20WithBonus(parseInt($(this).data("d20"), 10), $(this).data("label"));
+		});
+	}
+
+	// Calcula a CA a partir das armaduras registradas (melhor armadura + escudos)
+	function computeArmorAC(char, dexMod) {
+		var armors = char.armors || [];
+		if (!armors.length) return null;
+		var best = null;
+		var hasShield = false;
+		armors.forEach(function(a) {
+			if (!a) return;
+			var t = String(a.type || "").split("|")[0];
+			if (t === "S") { hasShield = true; return; }
+			var base = (a.ac != null) ? a.ac : 10;
+			var v = (t === "LA") ? base + dexMod : (t === "MA" ? base + Math.min(2, dexMod) : base);
+			if (best == null || v > best) best = v;
+		});
+		if (best == null && !hasShield) return null;
+		var total = (best != null) ? best : 10 + dexMod;
+		if (hasShield) total += 2;
+		return total;
+	}
+
+	function renderModuleCombat($body, char) {
+		var profBonus = calcProfBonus(char.level || 1);
+		var con = (char.scores.con || 8) + (char.rawScores.con || 0);
+		var dex = (char.scores.dex || 8) + (char.rawScores.dex || 0);
+		var hd = CLASS_HIT_DICE[char.className] || 8;
+		var hpMax = (char.hp && char.hp.max) ? char.hp.max : (hd + calcMod(con));
+		var hpCur = (char.hp && char.hp.current != null) ? char.hp.current : hpMax;
+		var hpTemp = (char.hp && char.hp.temp) ? char.hp.temp : 0;
+		var armorAC = computeArmorAC(char, calcMod(dex));
+		var ac = (armorAC != null) ? armorAC : ((char.ac != null) ? char.ac : (10 + calcMod(dex)));
+		var init = (char.initiative != null) ? char.initiative : calcMod(dex);
+		var speed = (char.speed != null) ? char.speed : 30;
+		var passPer = calculatePassivePerception(char);
+
+		var html = '<div class="characters__sheet-items">';
+		html += '<div class="characters__sheet-item characters__sheet-item--big"><span class="characters__sheet-item-value">' + ac + '</span> Classe de Armadura</div>';
+		html += '<div class="characters__sheet-item characters__sheet-item--big"><span class="characters__sheet-item-value">' + hpCur + '/' + hpMax + '</span> Pontos de Vida</div>';
+		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + (init >= 0 ? "+" : "") + init + '</span> Iniciativa</div>';
+		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + speed + ' pés</span> Deslocamento</div>';
+		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">+' + profBonus + '</span> Proficiência</div>';
+		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + passPer + '</span> Percepção Passiva</div>';
+		html += '<div class="characters__sheet-item characters__sheet-item--level"><label class="characters__level-editor">Nível <input type="number" class="characters__form-input characters__hp-input" id="in-sheet-level" min="1" max="20" value="' + (char.level || 1) + '"></label></div>';
+		html += '</div>';
+
+		html += '<div class="characters__hp-editors">';
+		html += '<label>PV Atual <input type="number" class="characters__form-input characters__hp-input" id="in-hp-current" value="' + hpCur + '" min="0"></label>';
+		html += '<label>PV Temporário <input type="number" class="characters__form-input characters__hp-input" id="in-hp-temp" value="' + hpTemp + '" min="0"></label>';
+		html += '</div>';
+
+		html += '<div class="characters__status-row">';
+		html += '<label class="characters__status-check"><input type="checkbox" class="inspiration-checkbox" ' + (char.inspiration ? "checked" : "") + '> Inspiração</label>';
+		html += '<div class="characters__status-deathsaves"><span class="characters__ds-label">Death Saves</span>';
+		html += '<span class="characters__ds">Sucessos: ';
+		for (var i = 1; i <= 3; i++) html += '<input type="checkbox" class="death-save-success" data-index="' + i + '" ' + (char.deathSaves && char.deathSaves.successes >= i ? "checked" : "") + '> ';
+		html += '</span>';
+		html += '<span class="characters__ds">Falhas: ';
+		for (var j = 1; j <= 3; j++) html += '<input type="checkbox" class="death-save-failure" data-index="' + j + '" ' + (char.deathSaves && char.deathSaves.failures >= j ? "checked" : "") + '> ';
+		html += '</span>';
+		html += '</div></div>';
+
+		$body.html(html);
+
+		// Alterar o nível recalcula PV, espaços de magia, CD e bônus de ataque
+		$body.find("#in-sheet-level").on("change", function() {
+			var oldLevel = char.level || 1;
+			var lv = parseInt($(this).val(), 10) || 1;
+			lv = Math.min(20, Math.max(1, lv));
+			$(this).val(lv);
+			if (lv === oldLevel) return;
+			char.level = lv;
+			var hd2 = CLASS_HIT_DICE[char.className] || 8;
+			var conMod2 = calcMod((char.scores.con || 8) + (char.rawScores.con || 0));
+			if (!char.hp) char.hp = {};
+			char.hp.max = hd2 + conMod2 + (lv - 1) * (Math.floor(hd2 / 2) + 1 + conMod2);
+			char.hp.current = char.hp.max;
 			char.spellSlots = calculateSpellSlots(char);
 			char.spellAttackBonus = calculateSpellAttackBonus(char);
-			char.spellDC = calculateSpellDC(char);
-			char.passivePerception = calculatePassivePerception(char);
-			
+			char.spellDC = 8 + char.spellAttackBonus;
 			char.updated = Date.now();
 			CharactersStore.save(char);
-			if (global.JqueryUtil && global.JqueryUtil.doToast) {
-				global.JqueryUtil.doToast({type: "success", content: "Ficha salva!"});
-			} else {
-				alert("Ficha salva!");
-			}
+			renderModules();
+			var msg = "Nível " + lv + " — PV, espaços de magia e CD recalculados!";
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msg});
+			else sheetToast("success", msg);
 		});
 
-		$root.find("#btn-delete").on("click", function() {
-			if (!confirm("Excluir esta ficha?")) return;
-			CharactersStore.remove(char.id);
-			currentView = "list";
-			currentChar = null;
-			renderList();
+		$body.find(".death-save-success").on("change", function() {
+			var index = parseInt($(this).data("index"), 10);
+			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
+			char.deathSaves.successes = $(this).is(":checked") ? index : 0;
+			$body.find(".death-save-success").each(function(i) { $(this).prop("checked", i < char.deathSaves.successes); });
+		});
+		$body.find(".death-save-failure").on("change", function() {
+			var index = parseInt($(this).data("index"), 10);
+			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
+			char.deathSaves.failures = $(this).is(":checked") ? index : 0;
+			$body.find(".death-save-failure").each(function(i) { $(this).prop("checked", i < char.deathSaves.failures); });
+		});
+	}
+function renderModuleSkills($body, char) {
+		var profBonus = calcProfBonus(char.level || 1);
+		var saves = char.savingThrows || [];
+		var html = '<div class="characters__subtitle">Testes de Resistência</div>';
+		html += '<div class="characters__sheet-items">';
+		ABILITY_ABVS.forEach(function(a) {
+			var total = (char.scores[a] || 8) + (char.rawScores[a] || 0);
+			var prof = saves.indexOf(a) >= 0;
+			var mod = calcMod(total) + (prof ? profBonus : 0);
+			html += '<div class="characters__sheet-item characters__sheet-item--roll" data-d20="' + mod + '" data-label="Resist. ' + ABILITY_NAMES[a] + '">';
+			html += '<span class="characters__sheet-item-value">' + (mod >= 0 ? "+" : "") + mod + '</span> ' + (prof ? "★ " : "") + ABILITY_NAMES[a];
+			html += '<span class="characters__roll-btn">🎲</span></div>';
+		});
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Perícias</div>';
+		html += '<div class="characters__sheet-items">';
+		// TODAS as perícias ficam visíveis e roláveis (mesmo sem proficiência)
+		Object.keys(SKILL_KEY_TO_PT).forEach(function(k) {
+			var skill = SKILLS.find(function(s) { return s.name === SKILL_KEY_TO_PT[k]; });
+			var abil = skill ? skill.abil : "str";
+			var v = (char.skills && char.skills[k]) || 0;
+			var total = calcMod((char.scores[abil] || 8) + (char.rawScores[abil] || 0)) + (v === 1 ? profBonus : v === 2 ? profBonus * 2 : 0);
+			var stars = v === 2 ? " ★★" : v === 1 ? " ★" : "";
+			html += '<div class="characters__sheet-item characters__sheet-item--roll" data-d20="' + total + '" data-label="' + (SKILL_KEY_TO_PT[k] || k) + '">';
+			html += '<span class="characters__sheet-item-value">+' + total + '</span> ' + (SKILL_KEY_TO_PT[k] || k) + stars;
+			html += '<span class="characters__roll-btn">🎲</span></div>';
+		});
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Percepção Passiva</div>';
+		html += '<div class="characters__sheet-items"><div class="characters__sheet-item"><span class="characters__sheet-item-value">' + calculatePassivePerception(char) + '</span> Percepção Passiva</div></div>';
+
+		if (char.otherProficiencies && char.otherProficiencies.length) {
+			html += '<div class="characters__subtitle">Outras Proficiências</div>';
+			html += '<div class="characters__sheet-items">';
+			char.otherProficiencies.forEach(function(prof) { html += '<div class="characters__sheet-item">' + esc(prof) + '</div>'; });
+			html += '</div>';
+		}
+
+		$body.html(html);
+		$body.find(".characters__sheet-item--roll").on("click", function() {
+			rollD20WithBonus(parseInt($(this).data("d20"), 10), $(this).data("label"));
+		});
+	}
+
+	function renderModuleAttacks($body, char) {
+		var profBonus = calcProfBonus(char.level || 1);
+		var strMod = calcMod((char.scores.str || 8) + (char.rawScores.str || 0));
+		var dexMod = calcMod((char.scores.dex || 8) + (char.rawScores.dex || 0));
+		var weapons = char.weapons || [];
+
+		var html = '<div class="characters__subtitle">Armas</div>';
+		html += '<div class="characters__attacks-list">';
+		if (weapons.length) {
+			weapons.forEach(function(w) {
+				var it = itemsData.find(function(i) { return i.name === (w && w.name); });
+				var baseType = it ? String(it.type || "").split("|")[0] : "";
+				var props = (it && it.property) || [];
+				var isRanged = (w && w.type && /ranged/i.test(String(w.type))) || props.indexOf("A") >= 0 || baseType === "R";
+				var finesse = props.indexOf("F") >= 0;
+				var abilMod = isRanged ? dexMod : (finesse ? Math.max(strMod, dexMod) : strMod);
+				var hit = profBonus + abilMod;
+				var dmg = (it && it.dmg1) ? (it.dmg1 + (abilMod >= 0 ? "+" : "") + abilMod) : "—";
+				var dmgType = (it && it.dmgType) ? " " + it.dmgType : "";
+				html += '<div class="characters__attack-item">';
+				html += '<div class="characters__attack-name"><a class="ptm-link" href="' + esc(ptmItemHref(w)) + '">' + esc(w.name || w) + '</a></div>';
+				html += '<div class="characters__attack-stats">';
+				html += '<span class="characters__attack-hit">+' + hit + ' acertar</span>';
+				html += '<span class="characters__attack-dmg">Dano ' + esc(dmg) + dmgType + '</span>';
+				html += '</div></div>';
+			});
+		} else {
+			html += '<div class="characters__sheet-item">Nenhuma arma adicionada — use o módulo Equipamentos.</div>';
+		}
+		html += '</div>';
+
+		var customs = char.attacks || [];
+		html += '<div class="characters__subtitle">Ações & Ataques personalizados</div>';
+		html += '<div class="characters__attacks-list">';
+		if (customs.length) {
+			customs.forEach(function(atk, index) {
+				html += '<div class="characters__attack-item">';
+				html += '<div class="characters__attack-name">' + esc(atk.name || "Ação") + '</div>';
+				html += '<div class="characters__attack-stats">';
+				if (atk.hit) html += '<span class="characters__attack-hit">' + esc(atk.hit) + ' acertar</span>';
+				if (atk.dmg) html += '<span class="characters__attack-dmg">Dano ' + esc(atk.dmg) + '</span>';
+				html += '</div>';
+				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-attack="' + index + '">×</button>';
+				html += '</div>';
+			});
+		}
+		html += '<div class="characters__attack-add">';
+		html += '<input type="text" class="characters__form-input" id="atk-name" placeholder="Nome (ex: Rajada de Tiros)">';
+		html += '<input type="text" class="characters__form-input" id="atk-hit" placeholder="Bônus (ex: +6)">';
+		html += '<input type="text" class="characters__form-input" id="atk-dmg" placeholder="Dano (ex: 1d8+3)">';
+		html += '<button class="characters__btn characters__btn--primary" id="btn-add-attack">+ Adicionar</button>';
+		html += '</div></div>';
+
+		$body.html(html);
+		$body.find("#btn-add-attack").on("click", function() {
+			var name = $body.find("#atk-name").val().trim();
+			if (!name) return;
+			if (!char.attacks) char.attacks = [];
+			char.attacks.push({name: name, hit: $body.find("#atk-hit").val().trim(), dmg: $body.find("#atk-dmg").val().trim()});
+			renderModuleAttacks($body, char);
+		});
+		$body.on("click", "[data-remove-attack]", function() {
+			var index = parseInt($(this).data("remove-attack"), 10);
+			if (char.attacks && char.attacks[index]) { char.attacks.splice(index, 1); renderModuleAttacks($body, char); }
+		});
+	}
+function spellAbilityName(char) {
+		var m = {"Wizard":"Inteligência","Sorcerer":"Carisma","Cleric":"Sabedoria","Druid":"Sabedoria","Bard":"Carisma","Warlock":"Carisma","Paladin":"Carisma","Ranger":"Sabedoria","Artificer":"Inteligência"};
+		return m[char.className] || "Inteligência";
+	}
+
+	function renderModuleSpells($body, char) {
+		var html = '<div class="characters__subtitle">Conjuração</div>';
+		html += '<div class="characters__sheet-items">';
+		html += '<div class="characters__sheet-item"><b>Atributo de conjuração:</b> ' + spellAbilityName(char) + '</div>';
+		html += '<div class="characters__sheet-item"><b>CD de Magia:</b> ' + (char.spellDC || calculateSpellDC(char)) + '</div>';
+		html += '<div class="characters__sheet-item"><b>Bônus de Ataque Mágico:</b> +' + (char.spellAttackBonus || calculateSpellAttackBonus(char)) + '</div>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Espaços de Magia</div>';
+		html += '<div class="characters__slots-grid">';
+		for (var i = 1; i <= 9; i++) {
+			var slots = char.spellSlots && char.spellSlots[i] ? char.spellSlots[i] : 0;
+			html += '<div class="characters__slot"><div class="characters__slot-level">Nv. ' + i + '</div><div class="characters__slot-value">' + slots + '</div></div>';
+		}
+		html += '</div>';
+
+		var allSpells = char.spells || [];
+		html += '<div class="characters__subtitle">Truques</div>';
+		html += '<div class="characters__spells-list">';
+		var cantrips = allSpells.filter(function(s) { return s.level === 0; });
+		if (cantrips.length) {
+			cantrips.forEach(function(spell) {
+				html += '<div class="characters__spell-item"><a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a></div>';
+			});
+		} else html += '<div class="characters__spell-item">Nenhum truque adicionado</div>';
+		html += '</div>';
+
+		for (var lv = 1; lv <= 9; lv++) {
+			var list = allSpells.filter(function(s) { return s.level === lv; });
+			if (!list.length) continue;
+			html += '<div class="characters__subtitle">Nível ' + lv + ' (' + list.length + ')</div>';
+			html += '<div class="characters__spells-list">';
+			list.forEach(function(spell) {
+				var realIndex = allSpells.indexOf(spell);
+				html += '<div class="characters__spell-item">';
+				html += '<a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a>';
+				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-spell="' + realIndex + '">×</button>';
+				html += '</div>';
+			});
+			html += '</div>';
+		}
+
+		html += '<div class="characters__subtitle">Adicionar Magia</div>';
+		html += '<div class="characters__form-row">';
+		html += '<input type="text" class="characters__form-input" id="spell-search" placeholder="Buscar magia...">';
+		html += '<select class="characters__form-select" id="spell-level-filter"><option value="-1">Todos os níveis</option>';
+		for (var s2 = 0; s2 <= 9; s2++) html += '<option value="' + s2 + '">' + (s2 === 0 ? "Truques" : "Nível " + s2) + '</option>';
+		html += '</select></div>';
+		html += '<div id="spell-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="spells.html">Abrir lista completa de magias</a>';
+
+		$body.html(html);
+
+		var $searchInput = $body.find("#spell-search");
+		var $levelFilter = $body.find("#spell-level-filter");
+		var $results = $body.find("#spell-search-results");
+		var searchSpells = function() {
+			var query = $searchInput.val().toLowerCase().trim();
+			var levelFilter = parseInt($levelFilter.val(), 10);
+			if (query.length < 2) { $results.empty(); return; }
+			var filtered = spellsData.filter(function(spell) {
+				return spell.name.toLowerCase().indexOf(query) >= 0 && (levelFilter === -1 || spell.level === levelFilter);
+			}).slice(0, 20);
+			$results.empty();
+			if (!filtered.length) { $results.html('<div class="characters__search-item">Nenhuma magia encontrada</div>'); return; }
+			filtered.forEach(function(spell) {
+				var $item = $('<div class="characters__search-item">');
+				$item.html('<b>' + esc(spell.name) + '</b> (' + (spell.level === 0 ? "Truque" : "Nv. " + spell.level) + ') - ' + esc(spell.school || ""));
+				$item.on("click", function() {
+					if (!char.spells) char.spells = [];
+					char.spells.push({name: spell.name, level: spell.level, school: spell.school});
+					renderModuleSpells($body, char);
+				});
+				$results.append($item);
+			});
+		};
+		$searchInput.on("input", searchSpells);
+		$levelFilter.on("change", searchSpells);
+		$body.on("click", "[data-remove-spell]", function() {
+			var index = parseInt($(this).data("remove-spell"), 10);
+			if (char.spells && char.spells[index]) { char.spells.splice(index, 1); renderModuleSpells($body, char); }
+		});
+	}
+function renderModuleFeatures($body, char) {
+		var html = '<div class="characters__subtitle">Talentos (Feats)</div>';
+		html += '<div class="characters__features-list">';
+		if (char.feats && char.feats.length) {
+			char.feats.forEach(function(feat, index) {
+				html += '<div class="characters__feature-item">';
+				html += '<div><div class="characters__feature-name"><a class="ptm-link" href="' + esc(ptmFeatHref(feat)) + '">' + esc(feat.name || feat) + '</a></div>';
+				if (feat.source) html += '<div class="characters__feature-source">' + esc(feat.source) + '</div>';
+				html += '</div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-feat="' + index + '">×</button>';
+				html += '</div>';
+			});
+		} else html += '<div class="characters__feature-item">Nenhum talento</div>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Adicionar Talento</div>';
+		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="feat-search" placeholder="Buscar talento..."></div>';
+		html += '<div id="feat-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="feats.html">Abrir lista completa de talentos</a>';
+
+		html += '<div class="characters__subtitle">Habilidades Especiais</div>';
+		html += '<div class="characters__features-list">';
+		if (char.specialAbilities && char.specialAbilities.length) {
+			char.specialAbilities.forEach(function(ability) {
+				html += '<div class="characters__feature-item"><div><div class="characters__feature-name">' + esc(ability.name || ability) + '</div>';
+				if (ability.description) html += '<div class="characters__feature-desc">' + esc(ability.description) + '</div>';
+				html += '</div></div>';
+			});
+		} else html += '<div class="characters__feature-item">Nenhuma habilidade especial</div>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Características Selecionáveis</div>';
+		html += '<div class="characters__features-list">';
+		if (char.selectableFeatures && char.selectableFeatures.length) {
+			char.selectableFeatures.forEach(function(feature) {
+				html += '<div class="characters__feature-item"><div><div class="characters__feature-name">' + esc(feature.name || feature) + '</div>';
+				if (feature.type) html += '<div class="characters__feature-type">' + esc(feature.type) + '</div>';
+				html += '</div></div>';
+			});
+		} else html += '<div class="characters__feature-item">Nenhuma característica selecionável</div>';
+		html += '</div>';
+
+		$body.html(html);
+		var $featSearch = $body.find("#feat-search");
+		var $featResults = $body.find("#feat-search-results");
+		$featSearch.on("input", function() {
+			var query = $(this).val().toLowerCase().trim();
+			if (query.length < 2) { $featResults.empty(); return; }
+			var filtered = featsData.filter(function(feat) { return feat.name.toLowerCase().indexOf(query) >= 0; }).slice(0, 10);
+			$featResults.empty();
+			if (!filtered.length) { $featResults.html('<div class="characters__search-item">Nenhum talento encontrado</div>'); return; }
+			filtered.forEach(function(feat) {
+				var $item = $('<div class="characters__search-item">');
+				$item.html('<b>' + esc(feat.name) + '</b>' + (feat.source ? ' (' + esc(feat.source) + ')' : ""));
+				$item.on("click", function() {
+					if (!char.feats) char.feats = [];
+					char.feats.push({name: feat.name, source: feat.source});
+					renderModuleFeatures($body, char);
+				});
+				$featResults.append($item);
+			});
+		});
+		$body.on("click", "[data-remove-feat]", function() {
+			var index = parseInt($(this).data("remove-feat"), 10);
+			if (char.feats && char.feats[index]) { char.feats.splice(index, 1); renderModuleFeatures($body, char); }
+		});
+	}
+function appendCoinsModule($body, char) {
+		var html = '<div class="characters__subtitle">Moedas</div>';
+		html += '<div class="characters__form-row">';
+		var coinsDef = [["platinum","Platina (pp)"],["gold","Ouro (po)"],["electrum","Électrum (pe)"],["silver","Prata (pe)"],["copper","Cobre (pc)"]];
+		coinsDef.forEach(function(c) {
+			var val = char.coins ? (char.coins[c[0]] || 0) : 0;
+			html += '<div class="characters__form-group characters__coin-group"><label>' + c[1] + '</label>';
+			html += '<input type="number" class="characters__form-input coin-input" data-coin="' + c[0] + '" value="' + val + '" min="0"></div>';
+		});
+		html += '</div>';
+		$body.append(html);
+		$body.find(".coin-input").on("change", function() {
+			var type = $(this).data("coin");
+			if (!char.coins) char.coins = {};
+			char.coins[type] = parseInt($(this).val(), 10) || 0;
+		});
+	}
+
+	function refreshAttacksModule() {
+		var $body = $root.find('[data-module="attacks"] .characters__module-body');
+		if ($body.length && currentChar && SHEET_MODULE_DEFS) SHEET_MODULE_DEFS.attacks.render($body, currentChar);
+	}
+
+	function renderModuleEquipment($body, char) {
+		var html = '<div class="characters__subtitle">Armas</div>';
+		html += '<div class="characters__items-list" id="weapons-list">';
+		if (char.weapons && char.weapons.length) {
+			char.weapons.forEach(function(weapon, index) {
+				html += '<div class="characters__item"><a class="ptm-link" href="' + esc(ptmItemHref(weapon)) + '">' + esc(weapon.name || weapon) + '</a>';
+				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-weapon="' + index + '">×</button></div>';
+			});
+		} else html += '<div class="characters__item">Nenhuma arma equipada</div>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Adicionar Arma</div>';
+		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="weapon-search" placeholder="Buscar arma..."></div>';
+		html += '<div id="weapon-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
+
+		html += '<div class="characters__subtitle">Armaduras</div>';
+		html += '<div class="characters__items-list" id="armors-list">';
+		if (char.armors && char.armors.length) {
+			char.armors.forEach(function(armor, index) {
+				html += '<div class="characters__item"><a class="ptm-link" href="' + esc(ptmItemHref(armor)) + '">' + esc(armor.name || armor) + '</a>';
+				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="' + index + '">×</button></div>';
+			});
+		} else html += '<div class="characters__item">Nenhuma armadura equipada</div>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Adicionar Armadura</div>';
+		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="armor-search" placeholder="Buscar armadura..."></div>';
+		html += '<div id="armor-search-results" class="characters__search-results mt-2"></div>';
+		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
+
+		html += '<div class="characters__subtitle">Inventário</div>';
+		html += '<textarea class="characters__sheet-textarea" id="in-inv" placeholder="Anote seus itens (um por linha)...">' + esc((char.inventory || []).join("\n")) + '</textarea>';
+		html += ptmSearchHint();
+
+		$body.html(html);
+
+		var $weaponSearch = $body.find("#weapon-search");
+		var $weaponResults = $body.find("#weapon-search-results");
+		$weaponSearch.on("input", function() {
+			var query = $(this).val().toLowerCase().trim();
+			if (query.length < 2) { $weaponResults.empty(); return; }
+			var filtered = itemsData.filter(function(item) {
+				var baseType = String(item.type || "").split("|")[0];
+				return item.name.toLowerCase().indexOf(query) >= 0 && (item.type === "W" || baseType === "M" || baseType === "R");
+			}).slice(0, 10);
+			$weaponResults.empty();
+			if (!filtered.length) { $weaponResults.html('<div class="characters__search-item">Nenhuma arma encontrada</div>'); return; }
+			filtered.forEach(function(weapon) {
+				var $item = $('<div class="characters__search-item">');
+				$item.html('<b>' + esc(optionLabel(weapon)) + '</b> (' + esc(weapon.weaponCategory || "Arma") + ')');
+				$item.on("click", function() {
+					if (!char.weapons) char.weapons = [];
+					char.weapons.push({name: weapon.name, source: weapon.source || "", type: String(weapon.type || "").split("|")[0] === "R" ? "ranged" : "melee"});
+					renderModuleEquipment($body, char);
+					refreshAttacksModule();
+				});
+				$weaponResults.append($item);
+			});
+		});
+		$body.on("click", "[data-remove-weapon]", function() {
+			var index = parseInt($(this).data("remove-weapon"), 10);
+			if (char.weapons && char.weapons[index]) { char.weapons.splice(index, 1); renderModuleEquipment($body, char); refreshAttacksModule(); }
 		});
 
-		$root.find("#btn-print").on("click", function() { window.print(); });
-		
-		$root.find("#btn-export-sheet").on("click", function() {
-			exportToCah(char);
+		var $armorSearch = $body.find("#armor-search");
+		var $armorResults = $body.find("#armor-search-results");
+		$armorSearch.on("input", function() {
+			var query = $(this).val().toLowerCase().trim();
+			if (query.length < 2) { $armorResults.empty(); return; }
+			var filtered = itemsData.filter(function(item) {
+				var baseType = String(item.type || "").split("|")[0];
+				return item.name.toLowerCase().indexOf(query) >= 0 && ["LA","MA","HA","S"].indexOf(baseType) >= 0;
+			}).slice(0, 10);
+			$armorResults.empty();
+			if (!filtered.length) { $armorResults.html('<div class="characters__search-item">Nenhuma armadura encontrada</div>'); return; }
+			filtered.forEach(function(armor) {
+				var $item = $('<div class="characters__search-item">');
+				var baseType = String(armor.type || "").split("|")[0];
+				var typeLabel = {LA: "Armadura leve", MA: "Armadura média", HA: "Armadura pesada", S: "Escudo"}[baseType] || "Armadura";
+				$item.html('<b>' + esc(optionLabel(armor)) + '</b> (' + esc(typeLabel) + ')');
+				$item.on("click", function() {
+					if (!char.armors) char.armors = [];
+					char.armors.push({name: armor.name, source: armor.source || "", type: baseType, ac: armor.ac});
+					renderModuleEquipment($body, char);
+				});
+				$armorResults.append($item);
+			});
 		});
-		
-		// Sistema de abas
-		$root.find(".characters__tab").on("click", function() {
-			var tab = $(this).data("tab");
-			window.renderSheetTab(tab);
+		$body.on("click", "[data-remove-armor]", function() {
+			var index = parseInt($(this).data("remove-armor"), 10);
+			if (char.armors && char.armors[index]) { char.armors.splice(index, 1); renderModuleEquipment($body, char); }
 		});
-		
-		// Renderizar primeira aba
-		window.renderSheetTab("overview");
+
+		appendCoinsModule($body, char);
+	}
+function renderModuleNotes($body, char) {
+		var html = '<textarea class="characters__sheet-textarea" id="in-notes" placeholder="História, anotações, ideias...">' + esc(char.notes || "") + '</textarea>';
+		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm mt-2" id="btn-save-notes">💾 Salvar notas</button>';
+		$body.html(html);
+		$body.find("#btn-save-notes").on("click", function() {
+			char.notes = $body.find("#in-notes").val();
+			CharactersStore.save(char);
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Notas salvas!"});
+			else sheetToast("success", "Notas salvas!");
+		});
+	}
+
+	SHEET_MODULE_DEFS = {
+		abilities: {title: "Atributos", icon: "🎲", render: renderModuleAbilities},
+		combat: {title: "Combate", icon: "⚔️", render: renderModuleCombat},
+		skills: {title: "Perícias & Resistências", icon: "🛡️", render: renderModuleSkills},
+		attacks: {title: "Ataques & Ações", icon: "🗡️", render: renderModuleAttacks},
+		spells: {title: "Magias", icon: "🔮", render: renderModuleSpells},
+		features: {title: "Características", icon: "⭐", render: renderModuleFeatures},
+		equipment: {title: "Equipamentos", icon: "🎒", render: renderModuleEquipment},
+		notes: {title: "Notas", icon: "📝", render: renderModuleNotes}
+	};
+	// === Export/Import ===
+function renderSheet() {
+		try {
+			var char = currentChar;
+			if (!char) { console.error("[Characters] Nenhum personagem selecionado"); return; }
+			console.log("[Characters] Renderizando ficha:", char.name);
+
+			var html = '<div class="characters__view">';
+			html += '<div class="characters__sheet-toolbar">';
+			html += '<button class="characters__btn characters__btn--secondary characters__btn-back" id="btn-back">← Voltar</button>';
+			html += '<button class="characters__btn characters__btn--secondary" id="btn-export-sheet">📥 Exportar .cah</button>';
+			html += '<button class="characters__btn characters__btn--secondary" id="btn-reorder">⋯ Reorganizar</button>';
+			html += '<button class="characters__btn characters__btn--secondary" id="btn-reset-order">⟲ Ordem padrão</button>';
+			html += '<span class="characters__toolbar-spacer"></span>';
+			html += '<button class="characters__btn characters__btn--secondary" id="btn-print" title="Imprimir">🖨️</button>';
+			html += '<button class="characters__btn characters__btn--danger" id="btn-delete">Excluir</button>';
+			html += '<button class="characters__btn characters__btn--primary" id="btn-save">💾 Salvar</button>';
+			html += '</div>';
+			html += '<div class="characters__reorder-hint" id="reorder-hint" style="display:none">Toque e arraste o ícone ⋮⋮ no topo de cada seção para reordená-la.</div>';
+			html += '<div class="characters__sheet">';
+			html += buildSheetHeader(char);
+			html += '<div id="sheet-modules" class="characters__modules"></div>';
+			html += '</div>'; // .characters__sheet
+			html += '</div>'; // .characters__view
+
+			$root.html(html);
+
+			$root.find("#btn-back").on("click", function() { currentView = "list"; currentChar = null; renderList(); });
+			$root.find("#btn-save").on("click", function() {
+				var inv = $root.find("#in-inv");
+				if (inv.length) char.inventory = inv.val().split("\n").filter(Boolean);
+				var notes = $root.find("#in-notes");
+				if (notes.length) char.notes = notes.val();
+				var hpCur = $root.find("#in-hp-current");
+				if (hpCur.length) { if (!char.hp) char.hp = {}; char.hp.current = parseInt(hpCur.val(), 10) || 0; }
+				var hpTemp = $root.find("#in-hp-temp");
+				if (hpTemp.length) { if (!char.hp) char.hp = {}; char.hp.temp = parseInt(hpTemp.val(), 10) || 0; }
+				var coins = {};
+				$root.find(".coin-input").each(function() { var t = $(this).data("coin"); coins[t] = parseInt($(this).val(), 10) || 0; });
+				char.coins = coins;
+				var inspiration = $root.find(".inspiration-checkbox");
+				if (inspiration.length) char.inspiration = inspiration.is(":checked");
+				var successes = $root.find(".death-save-success:checked").length;
+				var failures = $root.find(".death-save-failure:checked").length;
+				char.deathSaves = {successes: successes, failures: failures};
+				char.spellSlots = calculateSpellSlots(char);
+				char.spellAttackBonus = calculateSpellAttackBonus(char);
+				char.spellDC = calculateSpellDC(char);
+				char.passivePerception = calculatePassivePerception(char);
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Ficha salva!"});
+				else sheetToast("success", "Ficha salva!");
+			});
+			$root.find("#btn-delete").on("click", function() {
+				if (!confirm("Excluir esta ficha?")) return;
+				CharactersStore.remove(char.id);
+				currentView = "list"; currentChar = null; renderList();
+			});
+			$root.find("#btn-print").on("click", function() { window.print(); });
+			$root.find("#btn-export-sheet").on("click", function() { exportToCah(char); });
+			$root.find("#btn-reorder").on("click", toggleSheetReorder);
+			$root.find("#btn-reset-order").on("click", resetSheetOrder);
+			renderModules();
 		} catch (err) {
 			console.error("[Characters] Erro ao renderizar ficha:", err);
 			alert("Erro ao renderizar ficha: " + err.message);
 		}
 	}
-
-	// === Export/Import ===
 	function exportToCah(charData) {
 		var d = charData || creationData;
 		var cah = {
@@ -2013,33 +2481,75 @@
 	}
 
 	// === Cálculos automáticos ===
-	function calculateSpellSlots(char) {
-		var slots = {};
-		var level = char.level || 1;
-		var className = char.className;
-		
-		var slotTable = {
-			"Wizard": [0,2,3,4,4,4,4,4,4,4,4],
-			"Sorcerer": [0,2,3,4,4,4,4,4,4,4,4],
-			"Cleric": [0,2,3,4,4,4,4,4,4,4,4],
-			"Druid": [0,2,3,4,4,4,4,4,4,4,4],
-			"Bard": [0,2,3,3,3,3,3,3,3,3,3],
-			"Warlock": [0,1,2,2,2,2,2,2,2,2,2],
-			"Paladin": [0,0,2,3,3,3,3,3,3,3,3],
-			"Ranger": [0,0,2,3,3,3,3,3,3,3,3],
-			"Artificer": [0,2,2,3,3,3,3,3,3,3,3],
-			"Fighter": [0,0,0,0,0,0,0,0,0,0,0],
-			"Rogue": [0,0,0,0,0,0,0,0,0,0,0],
-			"Monk": [0,0,0,0,0,0,0,0,0,0,0],
-			"Barbarian": [0,0,0,0,0,0,0,0,0,0,0]
-		};
-		
-		var classSlots = slotTable[className] || slotTable["Fighter"] || [0,0,0,0,0,0,0,0,0,0,0];
-		
-		for (var i = 1; i <= 9; i++) {
-			slots[i] = i < classSlots.length ? classSlots[i] : 0;
+	// Tabelas de espaços de magia por nível de personagem (1-20).
+	// Cada array tem as posições 0..8 = espaços de magia de 1º a 9º nível.
+	var SPELL_SLOT_TABLES = {
+		// Conjuradores completos (Bardo, Clérigo, Druida, Feiticeiro, Mago)
+		full: {
+			1:[2,0,0,0,0,0,0,0,0], 2:[3,0,0,0,0,0,0,0,0], 3:[4,2,0,0,0,0,0,0,0],
+			4:[4,3,0,0,0,0,0,0,0], 5:[4,3,2,0,0,0,0,0,0], 6:[4,3,3,0,0,0,0,0,0],
+			7:[4,3,3,1,0,0,0,0,0], 8:[4,3,3,2,0,0,0,0,0], 9:[4,3,3,3,1,0,0,0,0],
+			10:[4,3,3,3,2,0,0,0,0], 11:[4,3,3,3,2,1,0,0,0], 12:[4,3,3,3,2,1,0,0,0],
+			13:[4,3,3,3,2,1,1,0,0], 14:[4,3,3,3,2,1,1,0,0], 15:[4,3,3,3,2,1,1,1,0],
+			16:[4,3,3,3,2,1,1,1,0], 17:[4,3,3,3,2,1,1,1,1], 18:[4,3,3,3,3,1,1,1,1],
+			19:[4,3,3,3,3,2,1,1,1], 20:[4,3,3,3,3,2,2,1,1]
+		},
+		// Meios conjuradores (Paladino, Patrulheiro) — começam no 2º nível
+		half: {
+			1:[0,0,0,0,0,0,0,0,0], 2:[2,0,0,0,0,0,0,0,0], 3:[3,0,0,0,0,0,0,0,0],
+			4:[3,0,0,0,0,0,0,0,0], 5:[4,2,0,0,0,0,0,0,0], 6:[4,2,0,0,0,0,0,0,0],
+			7:[4,3,0,0,0,0,0,0,0], 8:[4,3,0,0,0,0,0,0,0], 9:[4,3,2,0,0,0,0,0,0],
+			10:[4,3,2,0,0,0,0,0,0], 11:[4,3,3,0,0,0,0,0,0], 12:[4,3,3,0,0,0,0,0,0],
+			13:[4,3,3,1,0,0,0,0,0], 14:[4,3,3,1,0,0,0,0,0], 15:[4,3,3,2,0,0,0,0,0],
+			16:[4,3,3,2,0,0,0,0,0], 17:[4,3,3,3,1,0,0,0,0], 18:[4,3,3,3,1,0,0,0,0],
+			19:[4,3,3,3,2,0,0,0,0], 20:[4,3,3,3,2,0,0,0,0]
+		},
+		// Artífice — meio conjurador arredondado para cima (já conjura no 1º nível)
+		artificer: {
+			1:[2,0,0,0,0,0,0,0,0], 2:[2,0,0,0,0,0,0,0,0], 3:[3,0,0,0,0,0,0,0,0],
+			4:[3,0,0,0,0,0,0,0,0], 5:[4,2,0,0,0,0,0,0,0], 6:[4,2,0,0,0,0,0,0,0],
+			7:[4,3,0,0,0,0,0,0,0], 8:[4,3,0,0,0,0,0,0,0], 9:[4,3,2,0,0,0,0,0,0],
+			10:[4,3,2,0,0,0,0,0,0], 11:[4,3,3,0,0,0,0,0,0], 12:[4,3,3,0,0,0,0,0,0],
+			13:[4,3,3,1,0,0,0,0,0], 14:[4,3,3,1,0,0,0,0,0], 15:[4,3,3,2,0,0,0,0,0],
+			16:[4,3,3,2,0,0,0,0,0], 17:[4,3,3,3,1,0,0,0,0], 18:[4,3,3,3,1,0,0,0,0],
+			19:[4,3,3,3,2,0,0,0,0], 20:[4,3,3,3,2,0,0,0,0]
+		},
+		// Um terço (Cavaleiro Arcano/Guerreiro, Trapaceiro Arcano/Ladino) — a partir do 3º nível
+		third: {
+			1:[0,0,0,0,0,0,0,0,0], 2:[0,0,0,0,0,0,0,0,0], 3:[2,0,0,0,0,0,0,0,0],
+			4:[3,0,0,0,0,0,0,0,0], 5:[3,0,0,0,0,0,0,0,0], 6:[3,0,0,0,0,0,0,0,0],
+			7:[4,2,0,0,0,0,0,0,0], 8:[4,2,0,0,0,0,0,0,0], 9:[4,2,0,0,0,0,0,0,0],
+			10:[4,3,0,0,0,0,0,0,0], 11:[4,3,0,0,0,0,0,0,0], 12:[4,3,0,0,0,0,0,0,0],
+			13:[4,3,2,0,0,0,0,0,0], 14:[4,3,2,0,0,0,0,0,0], 15:[4,3,2,0,0,0,0,0,0],
+			16:[4,3,3,0,0,0,0,0,0], 17:[4,3,3,0,0,0,0,0,0], 18:[4,3,3,0,0,0,0,0,0],
+			19:[4,3,3,1,0,0,0,0,0], 20:[4,3,3,1,0,0,0,0,0]
 		}
-		
+	};
+
+	function calculateSpellSlots(char) {
+		var slots = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+		var level = Math.min(20, Math.max(1, char.level || 1));
+		var className = char.className;
+		var subclass = String(char.subclass || "").toLowerCase();
+
+		if (className === "Warlock") {
+			// Magia de Pacto: todos os espaços ficam no mesmo nível de magia
+			var count = level >= 17 ? 4 : level >= 11 ? 3 : level >= 2 ? 2 : 1;
+			var pactLv = level >= 9 ? 5 : level >= 7 ? 4 : level >= 5 ? 3 : level >= 3 ? 2 : 1;
+			slots[pactLv] = count;
+			return slots;
+		}
+
+		var kind = null;
+		if (["Bard","Cleric","Druid","Sorcerer","Wizard"].indexOf(className) >= 0) kind = "full";
+		else if (["Paladin","Ranger"].indexOf(className) >= 0) kind = "half";
+		else if (className === "Artificer") kind = "artificer";
+		else if (className === "Fighter" && subclass.indexOf("eldritch knight") >= 0) kind = "third";
+		else if (className === "Rogue" && subclass.indexOf("arcane trickster") >= 0) kind = "third";
+		if (!kind) return slots;
+
+		var table = SPELL_SLOT_TABLES[kind][level] || [];
+		for (var i = 0; i < table.length; i++) slots[i + 1] = table[i];
 		return slots;
 	}
 	
@@ -2092,11 +2602,19 @@
 	}
 
 	function loadItems() {
-		return fetch("data/items.json")
-			.then(function(r) { return r.json(); })
-			.then(function(json) {
-				return (json.item || []).filter(function(i) { return i.name; });
-			});
+		return Promise.all([
+			fetch("data/items.json").then(function(r) { return r.json(); }),
+			// Itens básicos (armas, armaduras e equipamento adventício)
+			fetch("data/items-base.json").then(function(r) { return r.json(); }).catch(function() { return {}; })
+		]).then(function(results) {
+			var items = (results[0].item || []).filter(function(i) { return i && i.name; });
+			var base = (results[1].baseitem || []).filter(function(i) { return i && i.name; });
+			var all = items.concat(base);
+			// Versões repetidas (mesmo nome, fontes diferentes) ficam na lista
+			// e recebem a sigla da fonte nos resultados (ex.: Longsword [PHB] / [XPHB])
+			all.sort(function(a, b) { return a.name.localeCompare(b.name) || srcRank(a.source || "") - srcRank(b.source || ""); });
+			return tagWithSource(all);
+		});
 	}
 
 	function loadFeats() {
@@ -2107,38 +2625,58 @@
 			});
 	}
 
+	// === Versionamento por fonte ===
+	// Quando existe mais de uma versão do mesmo nome (ex.: Artificer [TCE] e
+	// Artificer [ERLW]/Eberron), TODAS são mantidas e o select exibe a sigla.
+	function srcRank(src) {
+		var order = ["PHB","MPMM","XPHB","VGM","MTF","AAG","ERLW","MOT","GGR","FTD","TCE","XGE","SCC","VRGR","WBtW","DSotDQ"];
+		var ix = order.indexOf(src);
+		return ix >= 0 ? ix : order.length;
+	}
+	function tagWithSource(list) {
+		var counts = {};
+		list.forEach(function(it) { var k = (it.name || "").toLowerCase(); counts[k] = (counts[k] || 0) + 1; });
+		list.forEach(function(it) {
+			var k = (it.name || "").toLowerCase();
+			it._dup = counts[k] > 1;
+			it._value = it._dup ? (it.name + "|" + it.source) : it.name;
+		});
+		return list;
+	}
+	function optionLabel(it) { return it._dup ? (it.name + " [" + it.source + "]") : it.name; }
+	function findByValue(list, val) {
+		if (!val) return null;
+		var s = String(val);
+		var ix = s.indexOf("|");
+		if (ix >= 0) {
+			var nm = s.slice(0, ix), src = s.slice(ix + 1);
+			return list.find(function(it) { return it.name === nm && it.source === src; }) || null;
+		}
+		return list.find(function(it) { return it.name === s; }) || null;
+	}
+	function findSubclassByKey(val) {
+		if (!val) return null;
+		var s = String(val);
+		return subclassesData.find(function(sc) {
+			return sc.id === s || sc.name === s || ((sc.name || "") + "|" + (sc.source || "")) === s;
+		}) || null;
+	}
+
 	function loadRaces() {
 		return fetch("data/races.json").then(function(r) { return r.json(); }).then(function(json) {
-			var races = json.race || [];
-			var seen = {};
-			var unique = [];
-			races.forEach(function(r) {
-				var key = r.name.toLowerCase();
-				if (!seen[key] && (r.source === "PHB" || r.source === "MPMM")) {
-					seen[key] = true;
-					unique.push(r);
-				}
-			});
-			if (!unique.length) {
-				races.forEach(function(r) {
-					var key = r.name.toLowerCase();
-					if (!seen[key]) { seen[key] = true; unique.push(r); }
-				});
-			}
-			return unique;
+			// Todas as raças de todas as fontes; versões com mesmo nome ficam
+			// repetidas no select com a sigla da fonte (ex.: "Elf [PHB]").
+			var races = (json.race || []).filter(function(r) { return r && r.name && r.source; });
+			races.sort(function(a, b) { return a.name.localeCompare(b.name) || (srcRank(a.source) - srcRank(b.source)) || String(a.source).localeCompare(String(b.source)); });
+			return tagWithSource(races);
 		});
 	}
 
 	function loadBackgrounds() {
 		return fetch("data/backgrounds.json").then(function(r) { return r.json(); }).then(function(json) {
-			var bgs = json.background || [];
-			var seen = {};
-			var unique = [];
-			bgs.forEach(function(b) {
-				var key = b.name.toLowerCase();
-				if (!seen[key] && b.source === "PHB") { seen[key] = true; unique.push(b); }
-			});
-			return unique.length ? unique : bgs;
+			var bgs = (json.background || []).filter(function(b) { return b && b.name && b.source; });
+			bgs.sort(function(a, b) { return a.name.localeCompare(b.name) || (srcRank(a.source) - srcRank(b.source)) || String(a.source).localeCompare(String(b.source)); });
+			return tagWithSource(bgs);
 		});
 	}
 
@@ -2153,7 +2691,7 @@
 						if (!c || !c.name || !c.source) return false;
 						var name = c.name.toLowerCase();
 						// Aceitar apenas sources oficiais e excluir classes não-jogador
-						var validSource = ["PHB","TCE","XGE","ERLW","WGE","SCC","TWB"].indexOf(c.source) >= 0;
+						var validSource = ["PHB","TCE","XGE","ERLW","WGE","SCC","TWB","XPHB","MTF","MOT","GGR","FTD","AAG","VRGR","AI","TDCSR","BMT","WBtW","DSotDQ","SatO","HWCS"].indexOf(c.source) >= 0;
 						var notSidekick = name.indexOf("sidekick") < 0;
 						var notMystic = name.indexOf("mystic") < 0;
 						var notExpert = name.indexOf("expert") < 0;
@@ -2164,13 +2702,9 @@
 			return Promise.all(promises).then(function(results) {
 				var classes = [];
 				results.forEach(function(arr) { classes = classes.concat(arr); });
-				var seen = {};
-				var unique = [];
-				classes.forEach(function(c) {
-					var key = c.name.toLowerCase();
-					if (!seen[key]) { seen[key] = true; unique.push(c); }
-				});
-				return unique.sort(function(a,b) { return a.name.localeCompare(b.name); });
+				// Mantém versões distintas (ex.: Artificer [TCE] e Artificer [ERLW])
+				classes.sort(function(a, b) { return a.name.localeCompare(b.name) || (srcRank(a.source) - srcRank(b.source)) || String(a.source).localeCompare(String(b.source)); });
+				return tagWithSource(classes);
 			});
 		});
 	}
@@ -2184,7 +2718,7 @@
 					// Aceitar subclasses de várias fontes
 					return (json.subclass || []).filter(function(sc) { 
 						if (!sc || !sc.name || !sc.source) return false;
-						return ["PHB","TCE","XGE","ERLW","WGE","SCC","TWB"].indexOf(sc.source) >= 0;
+						return ["PHB","TCE","XGE","ERLW","WGE","SCC","TWB","XPHB","MTF","MOT","GGR","FTD","AAG","VRGR","AI","TDCSR","BMT","WBtW","DSotDQ","SatO","HWCS"].indexOf(sc.source) >= 0;
 					}).map(function(sc) {
 						// Normalizar className para inglês
 						var classNameMap = {
@@ -2211,11 +2745,12 @@
 				var subclasses = [];
 				results.forEach(function(arr) { subclasses = subclasses.concat(arr); });
 				
-				// Remover duplicatas globais
+				// Duplicatas: mesmo nome na MESMA classe em fontes diferentes
+				// é mantido (recebe tag com a fonte no dropdown); resto é único.
 				var seen = {};
 				var unique = [];
 				subclasses.forEach(function(sc) {
-					var key = ((sc._classNameEN || sc.className || "") + "_" + (sc.name || "").toLowerCase()).toLowerCase();
+					var key = ((sc._classNameEN || sc.className || "") + "_" + (sc.name || "").toLowerCase() + "_" + (sc.source || "")).toLowerCase();
 					if (!seen[key]) { seen[key] = true; unique.push(sc); }
 				});
 				

@@ -318,3 +318,33 @@ body #characters-main{padding-top:0}
 /* Perícias: duas colunas contínuas; título do atributo ocupa a linha inteira */
 .characters__skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:start}
 .characters__skills-cols .characters__ability-group{grid-column:1 / -1}
+
+/* ============================================================
+   Blocos de INFORMAÇÃO: borda/cartão para diferenciar cada parte
+   ============================================================ */
+.characters__info-card{border:1px solid #d7e0ea;border-left:4px solid #006bc4;border-radius:8px;background:#fbfcff;padding:10px 12px 12px;margin:10px 0}
+.characters__info-card:first-child{margin-top:0}
+.characters__info-card .characters__summary-title{color:#003e77;font-size:1.04em;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #e4ebf3}
+.characters__info-card .characters__feature-details{border-bottom:1px dashed #e4ebf3;border-radius:0;padding:6px 0;background:transparent}
+.characters__info-card .characters__feature-details:last-child{border-bottom:none}
+.characters__info-card .characters__feature-details>summary{color:#1f2a37}
+.characters__info-card .characters__feat-lvl{margin:10px 0 4px;padding-bottom:3px;border-bottom:1px solid #e4ebf3}
+.characters__info-card .characters__prof-line{color:#374151}
+.characters__info-card .characters__feature-item{border-bottom:1px dashed #e4ebf3;background:transparent}
+
+/* Testes contra morte em destaque quando o PV chega a 0 */
+.characters__status-deathsaves{background:#fdf3f3;border:1px solid #f0c9c9;border-radius:8px;padding:8px 10px;width:100%;margin-top:6px}
+.characters__status-deathsaves .characters__ds-label{color:#a3242d}
+.characters__status-deathsaves .characters__ds input{transform:scale(1.4)}
+
+/* Botões de PV (+1 / −1) */
+.characters__sheet-item--hp{display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.characters__hp-mini-wrap{display:inline-flex;gap:6px;margin-left:auto}
+.characters__hp-mini{width:32px;height:32px;min-width:32px;border-radius:50%;border:1.5px solid #d7e0ea;background:#fff;font-size:1.25em;font-weight:700;line-height:1;padding:0;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .08s}
+.characters__hp-mini--minus{color:#c62828;border-color:#e8b8b8}
+.characters__hp-mini--plus{color:#2e7d32;border-color:#b9d6bd}
+.characters__hp-mini:active{transform:scale(.9)}
+
+/* Lista de classes no popup de subir de nível */
+.characters__levelup-classes{display:flex;flex-direction:column;gap:6px;margin:8px 0}
+.characters__levelup-classes .characters__btn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:10px 12px;font-size:.95em}

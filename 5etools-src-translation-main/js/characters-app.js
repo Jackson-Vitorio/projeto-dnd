@@ -192,6 +192,7 @@
 			notes:"", personality:"", ideals:"", bonds:"", flaws:"",
 			advantages:[], disadvantages:[], companion:null,
 			passivePerception:10, created:Date.now(), updated:Date.now(),
+			languages:[], fightingStyle:null, choices:{}, takenChoices:[], // escolhas (nível + criação)
 			classes: [] // <-- novo: lista de classes (suporta multiclasse desde a criação)
 		};
 	}
@@ -277,7 +278,7 @@
 	}
 
 	function renderCreation() {
-		var steps = ["Básico","Raça","Classe","Antecedente","Atributos","Perícias","Finalizar"];
+		var steps = ["Básico","Raça","Classe","Antecedente","Idiomas & Itens","Atributos","Perícias","Finalizar"];
 		var html = '<div class="characters__view"><div class="characters__steps">';
 		steps.forEach(function(s, ix) {
 			var n = ix + 1;
@@ -293,9 +294,10 @@
 			case 2: stepRace($form); break;
 			case 3: stepClass($form); break;
 			case 4: stepBackground($form); break;
-			case 5: stepAbilities($form); break;
-			case 6: stepSkills($form); break;
-			case 7: stepFinish($form); break;
+			case 5: stepLangGear($form); break;
+			case 6: stepAbilities($form); break;
+			case 7: stepSkills($form); break;
+			case 8: stepFinish($form); break;
 		}
 	}
 
@@ -891,6 +893,190 @@
 		});
 	}
 
+	// === ETAPA 5: IDIOMAS, FERRAMENTAS & EQUIPAMENTO INICIAL ===
+	var LANG_KEY_TO_PT = {
+		common: "Comum", dwarvish: "Anão", elvish: "Élfico", giant: "Gigante",
+		gnomish: "Gnômico", goblin: "Goblin", halfling: "Halfling", orc: "Orc",
+		abyssal: "Abissal", celestial: "Celestial", infernal: "Infernal",
+		primordial: "Primordial", sylvan: "Silvestre", undercommon: "Subterrâneo",
+		draconic: "Dracônico", auran: "Primordial (Áurico)", aquan: "Primordial (Aquan)",
+		ignan: "Primordial (Ignan)", terran: "Primordial (Terran)", deep: "Subterrâneo (Profundo)"
+	};
+	var LANG_STANDARD = ["Comum","Anão","Élfico","Gigante","Gnômico","Goblin","Halfling","Orc","Dracônico","Abissal","Celestial","Infernal","Primordial","Silvestre","Subterrâneo"];
+	// Equipamento inicial por classe (PHB 2014); grupos com escolha + itens fixos
+	var CLASS_STARTERS = {
+		Barbarian: {auto: ["Pacote do Explorador", "4 azagaias"], groups: [
+			{q: "Arma principal", opts: ["Machado grande (greataxe)", "Qualquer arma marcial corpo a corpo"]},
+			{q: "Armas secundárias", opts: ["2 machadinhas (handaxe)", "Qualquer arma simples"]}
+		]},
+		Bard: {auto: ["Armadura de couro", "Alaúde (ou qualquer instrumento musical)"], groups: [
+			{q: "Arma principal", opts: ["Rapieira", "Espada longa", "Qualquer arma simples"]},
+			{q: "Pacote", opts: ["Pacote do Diplomata", "Pacote do Artista"]}
+		]},
+		Cleric: {auto: ["Escudo", "Símbolo sagrado"], groups: [
+			{q: "Arma principal", opts: ["Maça", "Marreta de guerra (se proficiente)"]},
+			{q: "Armadura", opts: ["Cota de escamas (scale mail)", "Armadura de couro", "Cota de malha (se proficiente)"]},
+			{q: "Arma à distância", opts: ["Besta leve + 20 virotes", "Qualquer arma simples"]},
+			{q: "Pacote", opts: ["Pacote do Sacerdote", "Pacote do Explorador"]}
+		]},
+		Druid: {auto: ["Armadura de couro", "Pacote do Explorador", "Foco druídico"], groups: [
+			{q: "Escudo ou arma", opts: ["Escudo de madeira", "Qualquer arma simples"]},
+			{q: "Arma corpo a corpo", opts: ["Cimitarra", "Qualquer arma simples corpo a corpo"]}
+		]},
+		Fighter: {auto: [], groups: [
+			{q: "Armadura", opts: ["Cota de malha", "Armadura de couro + arco longo + 20 flechas"]},
+			{q: "Armas marciais", opts: ["1 arma marcial + escudo", "2 armas marciais"]},
+			{q: "Arma à distância", opts: ["Besta leve + 20 virotes", "2 machadinhas"]},
+			{q: "Pacote", opts: ["Pacote de Masmorra", "Pacote do Explorador"]}
+		]},
+		Monk: {auto: ["10 dardos (darts)"], groups: [
+			{q: "Arma", opts: ["Espada curta", "Qualquer arma simples"]},
+			{q: "Pacote", opts: ["Pacote de Masmorra", "Pacote do Explorador"]}
+		]},
+		Paladin: {auto: ["Cota de malha", "Símbolo sagrado"], groups: [
+			{q: "Armas marciais", opts: ["1 arma marcial + escudo", "2 armas marciais"]},
+			{q: "Arma à distância", opts: ["5 azagaias", "Qualquer arma simples corpo a corpo"]},
+			{q: "Pacote", opts: ["Pacote do Sacerdote", "Pacote do Explorador"]}
+		]},
+		Ranger: {auto: ["Arco longo + 20 flechas"], groups: [
+			{q: "Armadura", opts: ["Cota de escamas (scale mail)", "Armadura de couro"]},
+			{q: "Armas corpo a corpo", opts: ["2 espadas curtas", "2 armas simples corpo a corpo"]},
+			{q: "Pacote", opts: ["Pacote de Masmorra", "Pacote do Explorador"]}
+		]},
+		Rogue: {auto: ["Armadura de couro", "2 adagas", "Ferramentas de ladrão"], groups: [
+			{q: "Arma principal", opts: ["Rapieira", "Espada curta"]},
+			{q: "Arma à distância", opts: ["Arco curto + 20 flechas", "Espada curta"]},
+			{q: "Pacote", opts: ["Pacote do Ladrão (burglar)", "Pacote de Masmorra", "Pacote do Explorador"]}
+		]},
+		Sorcerer: {auto: ["2 adagas"], groups: [
+			{q: "Arma à distância", opts: ["Besta leve + 20 virotes", "Qualquer arma simples"]},
+			{q: "Componentes", opts: ["Bolsa de componentes", "Foco arcano"]},
+			{q: "Pacote", opts: ["Pacote de Masmorra", "Pacote do Explorador"]}
+		]},
+		Warlock: {auto: ["Armadura de couro", "Qualquer arma simples", "2 adagas"], groups: [
+			{q: "Arma à distância", opts: ["Besta leve + 20 virotes", "Qualquer arma simples"]},
+			{q: "Componentes", opts: ["Bolsa de componentes", "Foco arcano"]},
+			{q: "Pacote", opts: ["Pacote Acadêmico", "Pacote de Masmorra"]}
+		]},
+		Wizard: {auto: ["Livro de magias"], groups: [
+			{q: "Arma", opts: ["Bordão", "Adaga"]},
+			{q: "Componentes", opts: ["Bolsa de componentes", "Foco arcano"]},
+			{q: "Pacote", opts: ["Pacote Acadêmico", "Pacote do Explorador"]}
+		]},
+		Artificer: {auto: ["Ferramentas de ladrão", "Pacote de Masmorra"], groups: [
+			{q: "Armas", opts: ["2 armas simples", "Besta leve + 20 virotes"]},
+			{q: "Armadura", opts: ["Armadura de couro batido (studded)", "Cota de escamas (scale mail)"]}
+		]}
+	};
+	// Idiomas fixos + quantidade de escolhas de raça/antecedente
+	function computeLangNeeds(d) {
+		var fixed = [], choices = 0;
+		function parse(list) {
+			(list || []).forEach(function(p) {
+				if (!p) return;
+				Object.keys(p).forEach(function(k) {
+					if (k === "anyStandard" || k === "any" || k === "other" || k === "choose" || k === "exotic") {
+						choices += (typeof p[k] === "number" ? p[k] : 1);
+					} else if (p[k]) {
+						var pt = LANG_KEY_TO_PT[k];
+						if (pt && fixed.indexOf(pt) < 0) fixed.push(pt);
+					}
+				});
+			});
+		}
+		// Raça (base + subraça/variante quando aplicável)
+		try {
+			var robj = getRaceObj(d);
+			parse(robj && robj.languageProficiencies);
+			if ((!robj || !robj.languageProficiencies || !robj.languageProficiencies.length) && d.race) parse(d.race.languageProficiencies);
+		} catch (e) { if (d.race) parse(d.race.languageProficiencies); }
+		// Antecedente
+		var bg = findByValue(backgroundsData, d._bgValue || d.background);
+		parse(bg && bg.languageProficiencies);
+		// Idiomas secretos de classe
+		if (d.className === "Druid" && fixed.indexOf("Druídico") < 0) fixed.push("Druídico");
+		if (d.className === "Rogue" && fixed.indexOf("Ladino (Gíria dos Ladrões)") < 0) fixed.push("Ladino (Gíria dos Ladrões)");
+		return {fixed: fixed, choices: choices};
+	}
+	function stepLangGear($form) {
+		var d = creationData;
+		var langs = computeLangNeeds(d);
+		var prevChoices = d._langChoices || [];
+		var prevGear = d._starterGear || [];
+		var html = '<div class="characters__form-section"><h3 class="characters__form-section-title">Idiomas</h3>';
+		html += '<div class="characters__summary-box">';
+		html += '<div class="characters__summary-title">Idiomas concedidos</div>';
+		html += '<div>' + esc(langs.fixed.length ? langs.fixed.join(", ") : "Nenhum idioma fixo.") + '</div>';
+		html += '</div>';
+		var totalChoices = langs.choices;
+		if (totalChoices > 0) {
+			html += '<div class="characters__summary-box"><div class="characters__summary-title">' + totalChoices + ' idioma' + (totalChoices > 1 ? 's' : '') + ' à sua escolha</div>';
+			for (var li = 0; li < totalChoices; li++) {
+				html += '<div class="characters__form-group"><label class="characters__form-label">Escolha ' + (li + 1) + '</label>';
+				html += '<select class="characters__form-select lang-pick"><option value="">Selecione...</option>';
+				LANG_STANDARD.forEach(function(l) { html += '<option value="' + esc(l) + '">' + esc(l) + '</option>'; });
+				html += '</select></div>';
+			}
+			html += '</div>';
+		}
+		html += '</div>';
+		// --- Equipamento inicial ---
+		var st = CLASS_STARTERS[d.className];
+		html += '<div class="characters__form-section"><h3 class="characters__form-section-title">Equipamento Inicial de ' + esc(d.className || "—") + '</h3>';
+		if (st) {
+			html += '<div class="characters__summary-box"><div class="characters__summary-title">Itens fixos</div>';
+			html += '<div>' + esc(st.auto.length ? st.auto.join(", ") : "—") + '</div></div>';
+			st.groups.forEach(function(g, gi) {
+				html += '<div class="characters__form-group"><label class="characters__form-label">' + esc(g.q) + '</label>';
+				html += '<select class="characters__form-select gear-pick" data-gi="' + gi + '"><option value="">Selecione...</option>';
+				g.opts.forEach(function(o, oi) {
+					var sel = prevGear[gi] === oi ? " selected" : "";
+					html += '<option value="' + oi + '"' + sel + '>' + esc(o) + '</option>';
+				});
+				html += '</select></div>';
+			});
+		} else {
+			html += '<div class="characters__summary-box"><div>Configure o equipamento manualmente na ficha.</div></div>';
+		}
+		html += '</div>';
+		html += '<div class="characters__form-row">';
+		html += '<button class="characters__btn characters__btn--secondary" id="btn-prev">← Voltar</button> ';
+		html += '<button class="characters__btn characters__btn--primary" id="btn-next">Próximo →</button></div>';
+		$form.html(html);
+		// pré-selecionar idiomas anteriores
+		$form.find(".lang-pick").each(function(ix) { if (prevChoices[ix]) $(this).val(prevChoices[ix]); });
+		$form.find("#btn-prev").on("click", function() { creationStep = 4; renderCreation(); });
+		$form.find("#btn-next").on("click", function() {
+			// Idiomas
+			var picks = [], dup = false;
+			$form.find(".lang-pick").each(function() {
+				var v = $(this).val();
+				if (!v || picks.indexOf(v) >= 0) dup = true;
+				else picks.push(v);
+			});
+			if (totalChoices > 0) {
+				if (dup || picks.length !== totalChoices) { alert("Escolha " + totalChoices + " idioma(s), sem repetir."); return; }
+				d._langChoices = picks;
+				d.languages = langs.fixed.concat(picks);
+			} else {
+				d._langChoices = [];
+				d.languages = langs.fixed.slice();
+			}
+			// Equipamento
+			d._starterGear = [];
+			var missing = false;
+			$form.find(".gear-pick").each(function() {
+				var v = $(this).val();
+				if (v === "") { missing = true; return; }
+				var gi = parseInt($(this).data("gi"), 10);
+				d._starterGear.push(st.groups[gi].opts[parseInt(v, 10)]);
+			});
+			if (missing) { alert("Escolha uma opção em cada grupo de equipamento!"); return; }
+			creationStep = 6;
+			renderCreation();
+		});
+	}
+
 	function stepAbilities($form) {
 		var d = creationData;
 		var method = d.method || "standard";
@@ -1124,7 +1310,7 @@
 			else if (method === "buy") renderBuy();
 		});
 
-		$form.find("#btn-prev").on("click", function() { creationStep = 3; renderCreation(); });
+		$form.find("#btn-prev").on("click", function() { creationStep = 5; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
 			// Salvar valores
 			ABILITY_ABVS.forEach(function(a) { d.scores[a] = scores[a] || 8; });
@@ -1136,7 +1322,7 @@
 			d.ac = 10 + calcMod((d.scores.dex || 8) + (d.rawScores.dex || 0));
 			d.initiative = calcMod((d.scores.dex || 8) + (d.rawScores.dex || 0));
 			d.speed = resolveRaceSpeed(d);
-			creationStep = 6;
+			creationStep = 7;
 			renderCreation();
 		});
 	}
@@ -1241,7 +1427,7 @@
 			}
 		});
 
-		$form.find("#btn-prev").on("click", function() { creationStep = 5; renderCreation(); });
+		$form.find("#btn-prev").on("click", function() { creationStep = 6; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
 			finalizeCharacter();
 			CharactersStore.save(d);
@@ -1300,8 +1486,8 @@
 		html += '</div>';
 		$form.html(html);
 
-		$form.find("#btn-prev").on("click", function() { creationStep = 6; renderCreation(); });
-		
+		$form.find("#btn-prev").on("click", function() { creationStep = 7; renderCreation(); });
+
 		$form.find("#btn-save").on("click", function() {
 			finalizeCharacter();
 			CharactersStore.save(d);
@@ -1354,6 +1540,11 @@
 		d.spellAttackBonus = calculateSpellAttackBonus(d);
 		d.spellDC = 8 + d.spellAttackBonus;
 		d.passivePerception = calculatePassivePerception(d);
+		// Equipamento inicial escolhido na etapa Idiomas & Itens (uma única vez)
+		if (d._starterGear && !d._gearApplied) {
+			d.inventory = d._starterGear.slice().concat(d.inventory || []);
+			d._gearApplied = true;
+		}
 		d.updated = Date.now();
 	}
 
@@ -1950,9 +2141,17 @@
 	}
 
 	function findSubclassName(char) {
-		if (!char || !char.subclass) return "";
-		var sc = findSubclassByKey(char.subclass);
-		return sc ? sc.name : String(char.subclass);
+		var key = (char && char.classes && char.classes.length && char.classes[0].subclass) || (char && char.subclass);
+		if (!key) return "";
+		var sc = findSubclassByKey(key);
+		return sc ? sc.name : String(key);
+	}
+	// Fonte da classe (para casar as características com a fonte correta)
+	function classSourceFor(char, clsEntry) {
+		if (!clsEntry) return char.classSource || null;
+		if (char.classes && char.classes[0] === clsEntry && char.classSource) return char.classSource;
+		var all = classesData.filter(function(x) { return x.name === clsEntry.name; });
+		return all.length ? all[0].source : null;
 	}
 
 	function sheetToast(type, content) {
@@ -2051,8 +2250,6 @@ function sheetOrderIds() {
 				$coins.each(function() { coins[$(this).data("coin")] = parseInt($(this).val(), 10) || 0; });
 				char.coins = coins;
 			}
-			var $hpCur = $root.find("#in-hp-current");
-			if ($hpCur.length) { if (!char.hp) char.hp = {}; char.hp.current = parseInt($hpCur.val(), 10) || 0; }
 			var $hpTemp = $root.find("#in-hp-temp");
 			if ($hpTemp.length) { if (!char.hp) char.hp = {}; char.hp.temp = parseInt($hpTemp.val(), 10) || 0; }
 			autoSaveSheet(char);
@@ -2081,6 +2278,7 @@ function sheetOrderIds() {
 			closeRestMenu();
 			closeConditionsPanel();
 			closeMulticlassDialog();
+			closeSubclassDialog();
 			closeActionsMenu();
 			closeDetail();
 			return true;
@@ -2235,8 +2433,6 @@ function closeRestMenu(){$('#rest-overlay').remove();}
 			html += '<option value="'+cn+'" '+(ok?'':'disabled style="color:#aaa"')+'>'+cn+' — exige '+abilName+' ≥ '+req.min+' ('+abilScore+')</option>';
 		});
 		html += '</select></div>';
-		html += '<div class="characters__form-group" id="mc-subgroup" style="display:none"><label class="characters__form-label">Subclasse</label>';
-		html += '<select class="characters__form-select" id="mc-subclass"><option value="">Nenhuma</option></select></div>';
 		html += '<div class="characters__detail-actions">';
 		html += '<button class="characters__btn characters__btn--primary" id="mc-confirm">Adicionar</button>';
 		html += '<button class="characters__btn characters__btn--secondary" id="mc-cancel">Cancelar</button>';
@@ -2245,23 +2441,24 @@ function closeRestMenu(){$('#rest-overlay').remove();}
 		var $ov = $('#multiclass-overlay');
 		$ov.on('click', function(e){ if(e.target===$ov[0]) closeMulticlassDialog(); });
 		$ov.find('#mc-cancel').on('click', closeMulticlassDialog);
-		$ov.find('#mc-class').on('change', function(){
-			var cn = $(this).val();
-			var $sg = $ov.find('#mc-subgroup'); var $ss = $ov.find('#mc-subclass');
-			var scs = subclassesData.filter(function(sc){ return sc._classNameEN === cn; });
-			$ss.empty(); $ss.append('<option value="">Nenhuma</option>');
-			scs.forEach(function(sc){ $ss.append('<option value="'+sc.name+'">'+sc.name+'</option>'); });
-			$sg.toggle(scs.length>0);
-		});
 		$ov.find('#mc-confirm').on('click', function(){
 			var cn = $ov.find('#mc-class').val();
-			var sc = $ov.find('#mc-subclass').val() || "";
 			var req = MULTICLASS_REQ[cn];
 			if (effAbility(char, req.abil) < req.min) { sheetToast("info","Não cumpre o requisito de "+ABILITY_NAMES[req.abil]+"."); return; }
 			if (!char.classes || !char.classes.length) {
 				char.classes = [{name:char.className||"", subclass:char.subclass||"", level:char.level||1}];
 			}
-			char.classes.push({name:cn, subclass:sc, level:1});
+			// Nova classe começa no nível 1 — a subclasse só é escolhida quando
+			// ESSA classe atingir o nível de desbloqueio (SUBCLASS_LEVELS, ex.: 3).
+			char.classes.push({name:cn, subclass:"", level:1});
+			// 1º nível da nova classe concede o dado de vida COMPLETO + CON
+			// (regra de multiclasse). Sem isso a ficha ficava com PV a menos.
+			var hdNew = CLASS_HIT_DICE[cn] || 8;
+			var conM = calcMod((char.scores.con||8)+(char.rawScores.con||0));
+			var hpGain = hdNew + conM;
+			if (!char.hp) char.hp = {};
+			char.hp.max = (char.hp.max || 0) + hpGain;
+			char.hp.current = Math.min(char.hp.max, (char.hp.current != null ? char.hp.current : char.hp.max) + hpGain);
 			char.level = totalLevel(char);
 			char.spellSlots = calculateSpellSlots(char);
 			char.spellAttackBonus = calculateSpellAttackBonus(char);
@@ -2270,12 +2467,23 @@ function closeRestMenu(){$('#rest-overlay').remove();}
 			CharactersStore.save(char);
 			closeMulticlassDialog();
 			renderModules();
-			var clsAllMC = classesData.filter(function(x) { return x.name === cn; });
-			var srcMC = clsAllMC.length ? clsAllMC[0].source : null;
-			var gainedMC = gainedFeaturesForLevel(cn, srcMC, sc, 1);
-			if (gainedMC.length) showGainedFeaturesPopup("Multiclasse: " + cn + " — Habilidades Ganhas", gainedMC);
-			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:"success",content:"Multiclasse: +1 nível em "+cn+"!"});
-			else sheetToast("success","Multiclasse adicionada!");
+			// Escolhas de nível 1 da nova classe (ex.: expertise do ladino,
+			// estilo de luta do guerreiro) são pedidas na hora certa
+			var pendMC = getLevelChoices(cn, 1);
+			var gainedMC = (function() {
+				var clsAllMC = classesData.filter(function(x) { return x.name === cn; });
+				var srcMC = clsAllMC.length ? clsAllMC[0].source : null;
+				return gainedFeaturesForLevel(cn, srcMC, "", 1);
+			})();
+			if (pendMC.length) {
+				runChoiceQueue(char, pendMC, function() {
+					if (gainedMC.length) showGainedFeaturesPopup("Multiclasse: " + cn + " — Habilidades Ganhas", gainedMC);
+				});
+			} else if (gainedMC.length) {
+				showGainedFeaturesPopup("Multiclasse: " + cn + " — Habilidades Ganhas", gainedMC);
+			}
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:"success",content:"Multiclasse: +1 nível em "+cn+" (+"+hpGain+" PV máx)!"});
+			else sheetToast("success","Multiclasse adicionada (+"+hpGain+" PV máx)!");
 		});
 	}
 	function closeMulticlassDialog() { $('#multiclass-overlay').remove(); }
@@ -2321,25 +2529,98 @@ function renderModuleAbilities($body, char) {
 			openActionsMenu(char, $(this));
 		});
 	}
-function openLevelUpDialog(char) {
+// === Subclasse: escolher/alterar em qualquer nível ===
+	function subclassesForClass(clsName) {
+		return subclassesData.filter(function(sc) { return (sc._classNameEN || sc.className) === clsName; })
+			.sort(function(a, b) {
+				return String(a.name).localeCompare(String(b.name)) ||
+					srcRank(a.source || "") - srcRank(b.source || "");
+			});
+	}
+
+	function closeSubclassDialog() { $('#subclass-overlay').remove(); }
+
+	function openSubclassDialog(char, clsEntry, onDone) {
+		closeSubclassDialog();
+		var classes = charClasses(char);
+		var target = clsEntry || classes[0];
+		if (!target) { sheetToast("info", "Nenhuma classe para definir subclasse."); return; }
+		var list = subclassesForClass(target.name);
+		if (!list.length) { sheetToast("info", "Esta classe não possui subclasses cadastradas."); return; }
+		var subLevel = SUBCLASS_LEVELS[target.name] || 3;
+		var html = '<div class="characters__detail-overlay" id="subclass-overlay"><div class="characters__detail">';
+		html += '<div class="characters__detail-title">Subclasse — ' + esc(target.name) + ' (Nv. ' + (target.level || 1) + ')</div>';
+		html += '<div class="characters__form-group"><label class="characters__form-label">Escolha a subclasse</label>';
+		html += '<select class="characters__form-select" id="subclass-pick"><option value="">Selecione...</option>';
+		list.forEach(function(sc) {
+			var dup = list.filter(function(o) { return (o.name || "").toLowerCase() === (sc.name || "").toLowerCase(); }).length > 1;
+			var val = dup ? (sc.name + "|" + sc.source) : sc.name;
+			var label = dup ? (sc.name + " [" + sc.source + "]") : sc.name;
+			var sel = (target.subclass === val || target.subclass === sc.name) ? " selected" : "";
+			html += '<option value="' + esc(val) + '"' + sel + '>' + esc(label) + '</option>';
+		});
+		html += '</select></div>';
+		html += '<div class="characters__rest-info">A subclasse desta classe é escolhida a partir do nível ' + subLevel +
+			'. Escolher aqui também permite trocar a subclasse depois.</div>';
+		html += '<div class="characters__detail-actions">';
+		html += '<button class="characters__btn characters__btn--primary" id="subclass-ok">Confirmar</button>';
+		html += '<button class="characters__btn characters__btn--secondary" id="subclass-cancel">Cancelar</button>';
+		html += '</div></div></div>';
+		$(document.body).append(html);
+		var $ov = $('#subclass-overlay');
+		$ov.on('click', function(e) { if (e.target === $ov[0]) closeSubclassDialog(); });
+		$ov.find('#subclass-cancel').on('click', closeSubclassDialog);
+		$ov.find('#subclass-ok').on('click', function() {
+			var val = $ov.find('#subclass-pick').val();
+			if (!val) { sheetToast("info", "Selecione uma subclasse."); return; }
+			target.subclass = val;
+			// campo legado (usado no cabeçalho/exportação) para a classe principal
+			if (char.classes && char.classes[0] === target) char.subclass = val;
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			closeSubclassDialog();
+			var sc = findSubclassByKey(val);
+			var msg = "Subclasse definida: " + (sc ? sc.name : val);
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msg});
+			else sheetToast("success", msg);
+			renderSheetHeader(char);
+			renderModules();
+			if (typeof onDone === "function") onDone(sc);
+		});
+	}
+
+	function openLevelUpDialog(char) {
 	closeLevelUpDialog();
 	var total = totalLevel(char);
 	if (total >= 20) { sheetToast("info","Nível máximo (20) atingido."); return; }
-	var clsList = charClasses(char).map(function(c){return c.name+" "+c.level;}).join(", ");
+	var classes = charClasses(char);
 	var html = '<div class="characters__detail-overlay" id="levelup-overlay"><div class="characters__detail">';
 	html += '<div class="characters__detail-title">Subir de Nível</div>';
-	html += '<div class="characters__detail-auto">Nível atual: <b>' + total + '/20</b></div>';
-	if (clsList) html += '<div class="characters__rest-info"><b>Classes:</b> ' + esc(clsList) + '</div>';
+	html += '<div class="characters__detail-auto">Nível total: <b>' + total + '/20</b></div>';
+	html += '<div class="characters__rest-info">Escolha em qual classe subir de nível:</div>';
+	html += '<div class="characters__levelup-classes">';
+	classes.forEach(function(c, ix) {
+		var sc = subObjFromKey(c.subclass, c.name);
+		var subLevel = SUBCLASS_LEVELS[c.name] || 3;
+		var needsSub = ((c.level || 1) + 1) >= subLevel && !c.subclass;
+		html += '<button class="characters__btn characters__btn--secondary" data-lu-class="' + ix + '">' +
+			esc(c.name) + ' — Nv. ' + (c.level || 1) + ' → ' + ((c.level || 1) + 1) +
+			'<span class="characters__feature-source">' + (sc ? esc(sc.name) : (needsSub ? "escolher subclasse no próximo nível" : "sem subclasse")) + '</span></button>';
+	});
+	html += '</div>';
 	html += '<div class="characters__detail-actions">';
-	html += '<button class="characters__btn characters__btn--primary" id="lu-normal">Up Normal (mesma classe)</button>';
-	html += '<button class="characters__btn characters__btn--secondary" id="lu-multiclass">+ Multiclasse</button>';
+	html += '<button class="characters__btn characters__btn--primary" id="lu-multiclass">+ Multiclasse</button>';
 	html += '<button class="characters__btn characters__btn--secondary" id="lu-cancel">Cancelar</button>';
 	html += '</div></div></div>';
 	$(document.body).append(html);
 	var $ov = $('#levelup-overlay');
 	$ov.on('click', function(e){ if(e.target===$ov[0]) closeLevelUpDialog(); });
 	$ov.find('#lu-cancel').on('click', closeLevelUpDialog);
-	$ov.find('#lu-normal').on('click', function(){ closeLevelUpDialog(); doLevelUp(char); });
+	$ov.find('[data-lu-class]').on('click', function() {
+		var ix = parseInt($(this).data('lu-class'), 10) || 0;
+		closeLevelUpDialog();
+		doLevelUp(char, ix);
+	});
 	$ov.find('#lu-multiclass').on('click', function(){ closeLevelUpDialog(); openMulticlassDialog(char); });
 }
 function closeLevelUpDialog() { $('#levelup-overlay').remove(); }
@@ -2349,9 +2630,304 @@ function getPrimaryClassName(char) {
 	if (char.classes && char.classes.length) return char.classes[0].name;
 	return char.className || "";
 }
-function doLevelUp(char) {
-	function computePre(char) {
-		var hd = CLASS_HIT_DICE[char.className] || 8;
+// === ESCOLHAS AO SUBIR DE NÍVEL (regras PHB 2014) ===
+// ASI (talento ou +2), Expertise (bardo/ladino), Estilo de Luta (guerreiro/
+// paladino/ranger), Dádiva do Pacto (bruxo), Metamagia (feiticeiro) e
+// Segredos Mágicos (bardo). A subclasse continua regida por SUBCLASS_LEVELS.
+var ASI_LEVELS = [4, 8, 12, 16, 19];
+var ASI_EXTRA = {Fighter: [6, 14], Rogue: [10]};
+var EXPERTISE_LEVELS = {Bard: [3, 10], Rogue: [1, 6]};
+var STYLE_LEVELS = {Fighter: [1], Paladin: [2], Ranger: [2]};
+var PACT_LEVELS = {Warlock: [3]};
+var METAMAGIC_LEVELS = {Sorcerer: [3, 10, 17]};
+var SECRETS_LEVELS = {Bard: [10, 14, 18]};
+var FIGHTING_STYLES = [
+	{name: "Archery", pt: "Arqueirismo — +2 para acertar ataques à distância"},
+	{name: "Defense", pt: "Defesa — +1 CA enquanto estiver usando armadura"},
+	{name: "Dueling", pt: "Duelismo — +2 de dano com arma de uma mão (sem outras armas)"},
+	{name: "Great Weapon Fighting", pt: "Luta com Arma Grande — relança 1s no dano de arma pesada com duas mãos"},
+	{name: "Protection", pt: "Proteção — reação: desvantagem no ataque contra um aliado próximo"},
+	{name: "Two-Weapon Fighting", pt: "Luta com Duas Armas — adiciona o mod. de atributo ao dano da segunda arma"}
+];
+var PACT_BOONS = [
+	{name: "Pact of the Blade", pt: "Pacto da Lâmina — invoca uma arma mágica do pacto"},
+	{name: "Pact of the Chain", pt: "Pacto da Corrente — ganha um familiar"},
+	{name: "Pact of the Tome", pt: "Pacto do Tomo — livro de pactos com 3 truques de qualquer classe"}
+];
+var METAMAGIC_OPTIONS = [
+	{name: "Careful Spell", pt: "Feitiço Cuidadoso — aliados na área podem passar no teste de resistência"},
+	{name: "Distant Spell", pt: "Feitiço Distante — dobra o alcance da magia"},
+	{name: "Empowered Spell", pt: "Feitiço Potencializado — relança até N dados de dano baixos"},
+	{name: "Extended Spell", pt: "Feitiço Estendido — dobra a duração"},
+	{name: "Heightened Spell", pt: "Feitiço Elevado — alvo tem desvantagem no teste contra a magia"},
+	{name: "Quickened Spell", pt: "Feitiço Acelerado — conjura em 1 ação bônus"},
+	{name: "Subtle Spell", pt: "Feitiço Sutil — sem componentes verbais/somáticos"},
+	{name: "Twinned Spell", pt: "Feitiço Gêmeo — mira um segundo alvo"}
+];
+function getLevelChoices(clsName, level) {
+	var out = [];
+	function add(type, title, subtitle) {
+		out.push({key: clsName + ":" + type + ":" + level, type: type, clsName: clsName, level: level, title: title, subtitle: subtitle});
+	}
+	var lv = level;
+	if (ASI_LEVELS.indexOf(lv) >= 0 || (ASI_EXTRA[clsName] || []).indexOf(lv) >= 0) {
+		add("asi", "Incremento no Valor de Atributo", "Escolha um talento ou distribua +2 pontos de atributo (+2 em um atributo, ou +1 em dois).");
+	}
+	if ((EXPERTISE_LEVELS[clsName] || []).indexOf(lv) >= 0) {
+		add("expertise2", "Especialização (Expertise)", "Escolha 2 perícias em que você é proficiente para dobrar o bônus de proficiência.");
+	}
+	if ((STYLE_LEVELS[clsName] || []).indexOf(lv) >= 0) {
+		add("style", "Estilo de Luta", "Escolha um estilo de luta.");
+	}
+	if ((PACT_LEVELS[clsName] || []).indexOf(lv) >= 0) {
+		add("pact", "Dádiva do Pacto", "Escolha o formato do seu pacto com o patrono.");
+	}
+	if ((METAMAGIC_LEVELS[clsName] || []).indexOf(lv) >= 0) {
+		add("metamagic2", "Metamagia", "Escolha 2 opções de metamagia.");
+	}
+	if ((SECRETS_LEVELS[clsName] || []).indexOf(lv) >= 0) {
+		add("secretspells2", "Segredos Mágicos", "Escolha 2 magias de qualquer classe para o seu repertório.");
+	}
+	return out;
+}
+function markChoiceTaken(char, key) {
+	if (!char.takenChoices) char.takenChoices = [];
+	if (char.takenChoices.indexOf(key) < 0) char.takenChoices.push(key);
+}
+// Executa a fila de escolhas uma a uma; chama onDone quando todas forem respondidas
+function runChoiceQueue(char, queue, onDone) {
+	if (!queue || !queue.length) { if (typeof onDone === "function") onDone(); return; }
+	var ch = queue.shift();
+	showLevelChoiceDialog(char, ch, function(result) {
+		applyLevelChoice(char, ch, result);
+		runChoiceQueue(char, queue, onDone);
+	});
+}
+function applyLevelChoice(char, ch, res) {
+	if (!char.takenChoices) char.takenChoices = [];
+	if (char.takenChoices.indexOf(ch.key) < 0) char.takenChoices.push(ch.key);
+	if (!char.choices) char.choices = {};
+	var rt = res ? res.type : null;
+	if (rt === "asi-points") {
+		markChoiceTaken(char, ch.clsName + ":asi:" + ch.level);
+		ABILITY_ABVS.forEach(function(a) {
+			var n = (res && res.points && res.points[a]) || 0;
+			if (n) char.scores[a] = (char.scores[a] || 8) + n;
+		});
+		char.choices.asi = char.choices.asi || [];
+		char.choices.asi.push({level: ch.level, points: res.points});
+	} else if (rt === "asi-feat") {
+		markChoiceTaken(char, ch.clsName + ":asi:" + ch.level);
+		if (!char.feats) char.feats = [];
+		char.feats.push({name: res.name, source: res.source || "PHB"});
+	} else if (rt === "expertise2") {
+		(res.picks || []).forEach(function(k) { if (char.skills) char.skills[k] = 2; });
+	} else if (rt === "style") {
+		char.fightingStyle = res.name;
+	} else if (rt === "pact") {
+		char.choices.pact = res.name;
+	} else if (rt === "metamagic2") {
+		char.choices.metamagic = (char.choices.metamagic || []).concat(res.picks || []);
+	} else if (rt === "secretspells2") {
+		(res.spells || []).forEach(function(s) {
+			if (!char.spells) char.spells = [];
+			char.spells.push({name: s.name, level: s.level, school: s.school});
+		});
+	}
+	if (!char.hp) char.hp = {};
+	char.updated = Date.now();
+	CharactersStore.save(char);
+	renderSheetHeader(char);
+	renderModules();
+}
+// Diálogo genérico de escolha de nível
+function closeLevelChoiceDialog() { $('#choices-overlay').remove(); }
+function showLevelChoiceDialog(char, ch, onDone) {
+	closeLevelChoiceDialog();
+	var html = '<div class="characters__detail-overlay" id="choices-overlay"><div class="characters__detail">';
+	html += '<div class="characters__detail-title">' + esc(ch.title) + '</div>';
+	html += '<div class="characters__rest-info">' + esc(ch.subtitle) + (ch.clsName ? ' <b>(' + esc(ch.clsName) + ' — Nv. ' + ch.level + ')</b>' : '') + '</div>';
+	html += '<div id="choices-body"></div>';
+	html += '<div class="characters__detail-actions">';
+	html += '<button class="characters__btn characters__btn--primary" id="choices-ok">Confirmar</button>';
+	html += '<button class="characters__btn characters__btn--secondary" id="choices-cancel">Cancelar</button>';
+	html += '</div></div></div>';
+	$(document.body).append(html);
+	var $ov = $('#choices-overlay');
+	$ov.on('click', function(e) { if (e.target === $ov[0]) closeLevelChoiceDialog(); });
+	$ov.find('#choices-cancel').on('click', closeLevelChoiceDialog);
+	var $body = $ov.find('#choices-body');
+	function validateAndDone(res) { closeLevelChoiceDialog(); onDone(res); }
+	// --- ASI: talento ou pontos ---
+	if (ch.type === "asi") {
+		var mode = "points";
+		var body = '<div class="characters__tabs">';
+		body += '<button class="characters__tab active" data-asi-mode="points">Pontos de Atributo</button>';
+		body += '<button class="characters__tab" data-asi-mode="feat">Escolher Talento</button></div>';
+		body += '<div id="asi-points"></div><div id="asi-feat" style="display:none"></div>';
+		$body.html(body);
+		function renderPoints() {
+			var h = '<div class="characters__skills-grid">';
+			ABILITY_ABVS.forEach(function(a) {
+				h += '<div class="characters__skill-item"><label>' + ABILITY_NAMES[a] + '</label>' +
+					'<input type="number" class="characters__form-input asi-step" data-abil="' + a + '" value="0" min="0" max="2" style="width:64px"></div>';
+			});
+			h += '</div><div class="characters__rest-info">Total distribuído: <b id="asi-total">0</b> / 2</div>';
+			$ov.find('#asi-points').html(h);
+			$ov.on('change input', '.asi-step', function() {
+				var v = parseInt($(this).val(), 10) || 0;
+				if (v < 0) v = 0; if (v > 2) v = 2; $(this).val(v);
+				var t = 0; $ov.find('.asi-step').each(function() { t += (parseInt($(this).val(), 10) || 0); });
+				$ov.find('#asi-total').text(t);
+			});
+		}
+		function renderFeat() {
+			var seen = {}, list = [];
+			featsData.forEach(function(f) {
+				if (!f || !f.name) return;
+				var k = f.name.toLowerCase();
+				if (!seen[k]) { seen[k] = {srcs: [f.source || "PHB"], first: f}; list.push(f); }
+				else if (seen[k].srcs.indexOf(f.source) < 0) seen[k].srcs.push(f.source);
+			});
+			list.sort(function(a, b) { return a.name.localeCompare(b.name); });
+			var h = '<select class="characters__form-select" id="asi-feat-pick"><option value="">Selecione um talento...</option>';
+			list.forEach(function(f) {
+				var dup = seen[f.name.toLowerCase()].srcs.length > 1;
+				h += '<option value="' + esc(f.name + (dup ? "|" + f.source : "")) + '">' + esc(f.name + (dup ? " [" + f.source + "]" : "")) + '</option>';
+			});
+			h += '</select>';
+			$ov.find('#asi-feat').html(h);
+		}
+		renderPoints();
+		$ov.on('click', '[data-asi-mode]', function() {
+			mode = $(this).data('asi-mode');
+			$ov.find('[data-asi-mode]').removeClass('active');
+			$(this).addClass('active');
+			$ov.find('#asi-points').toggle(mode === 'points');
+			$ov.find('#asi-feat').toggle(mode === 'feat');
+			if (mode === 'feat' && !$ov.find('#asi-feat').children().length) renderFeat();
+		});
+		$ov.find('#choices-ok').on('click', function() {
+			if (mode === 'points') {
+				var points = {}, total = 0;
+				$ov.find('.asi-step').each(function() {
+					var n = parseInt($(this).val(), 10) || 0;
+					if (n) points[$(this).data('abil')] = n;
+					total += n;
+				});
+				if (total !== 2) { sheetToast("info", "Distribua exatamente 2 pontos (+2 em um atributo, ou +1 em dois)."); return; }
+				validateAndDone({type: 'asi-points', points: points});
+			} else {
+				var val = $ov.find('#asi-feat-pick').val();
+				if (!val) { sheetToast("info", "Selecione um talento."); return; }
+				var nm = val, src = "PHB", ix = val.indexOf("|");
+				if (ix >= 0) { nm = val.slice(0, ix); src = val.slice(ix + 1); }
+				validateAndDone({type: 'asi-feat', name: nm, source: src});
+			}
+		});
+		return;
+	}
+	// --- Expertise: 2 perícias proficientes ---
+	if (ch.type === "expertise2") {
+		var prof = [];
+		Object.keys(SKILL_KEY_TO_PT).forEach(function(k) {
+			if ((char.skills && char.skills[k]) === 1) prof.push(k);
+		});
+		if (!prof.length) {
+			sheetToast("info", "Nenhuma perícia proficiente para especializar. Escolha registrada como pendente.");
+			closeLevelChoiceDialog(); markChoiceTaken(char, ch.key); onDone(null); return;
+		}
+		var h = '<div class="characters__skills-grid">';
+		prof.forEach(function(k) {
+			h += '<div class="characters__skill-item"><label>' + esc(SKILL_KEY_TO_PT[k]) + '</label>' +
+				'<input type="checkbox" class="expertise-cb" data-key="' + k + '"></div>';
+		});
+		h += '</div><div class="characters__rest-info">Escolhidas: <b id="exp-count">0</b> / 2</div>';
+		$body.html(h);
+		$ov.on('change', '.expertise-cb', function() {
+			if ($ov.find('.expertise-cb:checked').length > 2) $(this).prop('checked', false);
+			$ov.find('#exp-count').text($ov.find('.expertise-cb:checked').length);
+		});
+		$ov.find('#choices-ok').on('click', function() {
+			var picks = [];
+			$ov.find('.expertise-cb:checked').each(function() { picks.push($(this).data('key')); });
+			if (picks.length !== 2) { sheetToast("info", "Escolha exatamente 2 perícias."); return; }
+			validateAndDone({type: 'expertise2', picks: picks});
+		});
+		return;
+	}
+	doShowPickDialog($ov, $body, ch, validateAndDone);
+}
+// Parte 2 do diálogo: rádio (estilo de luta/dádiva do pacto) e selects duplos (metamagia/segredos)
+function doShowPickDialog($ov, $body, ch, validateAndDone) {
+	// --- Estilo de Luta / Dádiva do Pacto (rádio) ---
+	if (ch.type === "style" || ch.type === "pact") {
+		var opts = ch.type === "style" ? FIGHTING_STYLES : PACT_BOONS;
+		var h = '<div class="characters__skills-grid">';
+		opts.forEach(function(o, i) {
+			h += '<div class="characters__skill-item"><label>' + esc(o.name) + '</label>' +
+				'<input type="radio" name="choice-pick" value="' + i + '"' + (i === 0 ? " checked" : "") + '></div>' +
+				'<div class="characters__feature-desc" style="grid-column:1/-1">' + esc(o.pt) + '</div>';
+		});
+		h += '</div>';
+		$body.html(h);
+		$ov.find('#choices-ok').on('click', function() {
+			var i = parseInt($ov.find('input[name="choice-pick"]:checked').val(), 10) || 0;
+			validateAndDone({type: ch.type, name: opts[i].name});
+		});
+		return;
+	}
+	// --- Metamagia / Segredos Mágicos: 2 selects ---
+	if (ch.type === "metamagic2" || ch.type === "secretspells2") {
+		var h2 = '<div class="characters__form-group"><label class="characters__form-label">Opção 1</label>' +
+			'<select class="characters__form-select mm-pick" id="mm-1"><option value="">Selecione...</option></select></div>' +
+			'<div class="characters__form-group"><label class="characters__form-label">Opção 2</label>' +
+			'<select class="characters__form-select mm-pick" id="mm-2"><option value="">Selecione...</option></select></div>';
+		$body.html(h2);
+		function fillSelects() {
+			var vals = {};
+			$ov.find('.mm-pick').each(function() { if ($(this).val()) vals[$(this).val()] = true; });
+			$ov.find('.mm-pick').each(function() {
+				var $s = $(this), cur = $s.val();
+				$s.empty().append('<option value="">Selecione...</option>');
+				var list;
+				if (ch.type === "metamagic2") {
+					list = METAMAGIC_OPTIONS.map(function(o) { return {v: o.name, l: o.name + " — " + o.pt}; });
+				} else {
+					var seen = {};
+					list = spellsData.filter(function(s) { return s && s.name && !seen[s.name.toLowerCase()] && (seen[s.name.toLowerCase()] = true); })
+						.sort(function(a, b) { return a.name.localeCompare(b.name); })
+						.map(function(s) {
+							return {v: s.name + "|" + (s.level != null ? s.level : "") + "|" + (s.school || ""),
+								l: s.name + (s.level != null ? (s.level === 0 ? " (truque)" : " (Nv. " + s.level + ")") : "")};
+						});
+				}
+				list.forEach(function(o) { if (!vals[o.v] || o.v === cur) $s.append('<option value="' + esc(o.v) + '">' + esc(o.l) + '</option>'); });
+				$s.val(cur);
+			});
+		}
+		fillSelects();
+		$ov.on('change', '.mm-pick', fillSelects);
+		$ov.find('#choices-ok').on('click', function() {
+			var picks = [];
+			$ov.find('.mm-pick').each(function() { if ($(this).val()) picks.push($(this).val()); });
+			if (picks.length !== 2) { sheetToast("info", "Escolha 2 opções."); return; }
+			if (ch.type === "metamagic2") validateAndDone({type: 'metamagic2', picks: picks});
+			else {
+				var sp = picks.map(function(v) {
+					var p = v.split("|");
+					return {name: p[0], level: p[1] !== "" ? parseInt(p[1], 10) : 0, school: p[2] || ""};
+				});
+				validateAndDone({type: 'secretspells2', spells: sp});
+			}
+		});
+		return;
+	}
+}
+function doLevelUp(char, classIdx) {
+	classIdx = (typeof classIdx === "number" && classIdx >= 0) ? classIdx : 0;
+	function computePre(char, clsName) {
+		var hd = CLASS_HIT_DICE[clsName] || 8;
 		var conM = calcMod((char.scores.con||8)+(char.rawScores.con||0));
 		var pre = {
 			level: char.level || 1,
@@ -2371,7 +2947,7 @@ function doLevelUp(char) {
 		return pre;
 	}
 		function computePost(char) {
-		var hd = CLASS_HIT_DICE[getPrimaryClassName(char)] || 8;
+		var hd = CLASS_HIT_DICE[clsName] || 8;
 		var conM = calcMod((char.scores.con||8)+(char.rawScores.con||0));
 		var post = {
 			level: char.level || 1,
@@ -2405,19 +2981,22 @@ function doLevelUp(char) {
 		return parts.join('; ') || 'sem mudança nos slots de magia';
 	}
 
-		var pre = computePre(char);
-	if (!char.classes || !char.classes.length) {
+		if (!char.classes || !char.classes.length) {
 		char.classes = [{name: char.className || "", subclass: char.subclass || "", level: char.level || 1}];
-	} else {
-		char.classes[0].level = (char.classes[0].level||1) + 1;
 	}
+	if (classIdx >= char.classes.length) classIdx = 0;
+	var clsEntry = char.classes[classIdx];
+	var clsName = clsEntry.name || char.className || "";
+	var clsSrc = classSourceFor(char, clsEntry);
+	var pre = computePre(char, clsName);
+	clsEntry.level = (clsEntry.level || 1) + 1;
 	char.level = totalLevel(char);
-	var clsName = getPrimaryClassName(char);
 	var hd = CLASS_HIT_DICE[clsName] || 8;
 	var conM = calcMod((char.scores.con||8)+(char.rawScores.con||0));
 	if (!char.hp) char.hp = {};
 	if (!ovHas(char,"hp.max")) {
-		char.hp.max = hpMaxAuto(char);
+		var hpBase = char.hp.max || (hd + conM);
+		char.hp.max = hpBase + Math.floor(hd / 2) + 1 + conM;
 		char.hp.current = char.hp.max;
 	}
 	char.spellSlots = calculateSpellSlots(char);
@@ -2449,9 +3028,8 @@ function doLevelUp(char) {
 	}
 	if (changed.length === 0) changed.push('Sem mudanças');
 
-	// Habilidades ganhas no novo nível da classe primária (classe + subclasse)
-	var pc = (char.classes && char.classes.length) ? char.classes[0] : null;
-	var gained = pc ? gainedFeaturesForLevel(pc.name, char.classSource, pc.subclass, pc.level || post.level) : [];
+	// Habilidades ganhas no novo nível da classe que subiu (classe + subclasse)
+	var gained = gainedFeaturesForLevel(clsName, clsSrc, clsEntry.subclass, clsEntry.level);
 	if (gained.length) changed.push('Novas habilidades: ' + gained.map(function(f) { return f.name; }).join(', '));
 
 	renderSheetHeader(char);
@@ -2459,10 +3037,31 @@ function doLevelUp(char) {
 	var title = "Nível " + post.level + " — Alterações";
 	var listHtml = changed.map(function(s){ return '<li>' + s + '</li>'; }).join('');
 	var numHtml = '<div class="characters__summary-title">Alterações Numéricas</div><ul class="characters__summary-list">' + listHtml + '</ul>';
-	showGainedFeaturesPopup(title, gained, numHtml);
 
-	if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:"success",content:"Subiu para o nível " + post.level + "!"});
-	else sheetToast("success","Subiu para o nível " + post.level + "!");
+	// Sem subclasse e já no nível exigido pela classe: pedir a escolha agora
+	var subLevel = SUBCLASS_LEVELS[clsName] || 3;
+	var pendingChoices = getLevelChoices(clsName, clsEntry.level);
+	var gainedFinal = gained;
+	var finishLevelUp = function() {
+		showGainedFeaturesPopup(title, gainedFinal, numHtml);
+		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:"success",content:"Subiu para o nível " + post.level + "!"});
+		else sheetToast("success","Subiu para o nível " + post.level + "!");
+	};
+	var runPending = function() {
+		if (!pendingChoices.length) { finishLevelUp(); return; }
+		runChoiceQueue(char, pendingChoices, finishLevelUp);
+	};
+	if (clsEntry.level >= subLevel && !clsEntry.subclass) {
+		sheetToast("info", "Nível " + clsEntry.level + " de " + clsName + ": escolha a subclasse!");
+		openSubclassDialog(char, clsEntry, function() {
+			gainedFinal = gainedFeaturesForLevel(clsName, clsSrc, clsEntry.subclass, clsEntry.level);
+			renderSheetHeader(char);
+			renderModules();
+			runPending();
+		});
+		return;
+	}
+	runPending();
 }
 
 function openActionsMenu(char, $trigger) {
@@ -2523,6 +3122,8 @@ function openActionsMenu(char, $trigger) {
 		if (best == null && !hasShield) return null;
 		var total = (best != null) ? best : 10 + dexMod;
 		if (hasShield) total += 2;
+		// Estilo de Luta: Defesa (+1 CA com armadura equipada)
+		if (char.fightingStyle === "Defense") total += 1;
 		return total;
 	}
 
@@ -2543,16 +3144,17 @@ function renderModuleCombat($body, char) {
 
 		var html = '<div class="characters__sheet-items">';
 		html += '<div class="characters__sheet-item characters__sheet-item--big"><span class="characters__sheet-item-value">' + ovSpan(char, "ac", ac, "plain") + '</span> Classe de Armadura</div>';
-		html += '<div class="characters__sheet-item characters__sheet-item--big"><span class="characters__sheet-item-value">' + hpCur + '/' + ovSpan(char, "hp.max", hpMax, "plain") + '</span> Pontos de Vida</div>';
+		html += '<div class="characters__sheet-item characters__sheet-item--big characters__sheet-item--hp"><span class="characters__sheet-item-value"><span class="characters__ov" data-detail="hp.current">' + hpCur + '</span>/' + ovSpan(char, "hp.max", hpMax, "plain") + '</span> Pontos de Vida';
+		html += '<span class="characters__hp-mini-wrap"><button type="button" class="characters__hp-mini characters__hp-mini--minus" id="btn-hp-minus" title="Perder 1 PV">−</button><button type="button" class="characters__hp-mini characters__hp-mini--plus" id="btn-hp-plus" title="Recuperar 1 PV">+</button></span></div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "initiative", init, "mod") + '</span> Iniciativa</div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "speed", speed, "plain") + ' pés</span> Deslocamento</div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "prof", profBonus, "hit") + '</span> Proficiência</div>';
+		if (char.fightingStyle) html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">Estilo</span> ' + esc(char.fightingStyle) + '</div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "pp", passPer, "plain") + '</span> Percepção Passiva</div>';
 		html += '<div class="characters__sheet-item characters__sheet-item--level"><label class="characters__level-editor">Nível <input type="number" class="characters__form-input characters__hp-input" id="in-sheet-level" min="1" max="20" value="' + (char.level || 1) + '"></label></div>';
 		html += '</div>';
 
 		html += '<div class="characters__hp-editors">';
-		html += '<label>PV Atual <input type="number" class="characters__form-input characters__hp-input" id="in-hp-current" value="' + hpCur + '" min="0"></label>';
 		html += '<label>PV Temporário <input type="number" class="characters__form-input characters__hp-input" id="in-hp-temp" value="' + hpTemp + '" min="0"></label>';
 		html += '</div>';
 
@@ -2572,6 +3174,30 @@ function renderModuleCombat($body, char) {
 
 		$body.html(html);
 
+		// PV: aplica o novo valor e re-renderiza (assim os testes contra morte
+		// aparecem/somem conforme o PV chega a 0 ou volta acima de 0)
+		var applyHp = function(newCur) {
+			if (!char.hp) char.hp = {};
+			var max = char.hp.max || 1;
+			newCur = Math.max(0, Math.min(max, newCur));
+			char.hp.current = newCur;
+			if (newCur > 0) char.deathSaves = {failures: 0, successes: 0};
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			renderModuleCombat($body, char);
+		};
+		$body.find("#btn-hp-plus").on("click", function() {
+			applyHp(((char.hp && char.hp.current != null) ? char.hp.current : 0) + 1);
+		});
+		$body.find("#btn-hp-minus").on("click", function() {
+			applyHp(((char.hp && char.hp.current != null) ? char.hp.current : 0) - 1);
+		});
+		$body.find("#in-hp-temp").on("change", function() {
+			if (!char.hp) char.hp = {};
+			char.hp.temp = parseInt($(this).val(), 10) || 0;
+			CharactersStore.save(char);
+		});
+
 		// Alterar o nível recalcula PV, espaços de magia, CD e bônus de ataque
 		$body.find("#in-sheet-level").on("change", function() {
 			var oldLevel = char.level || 1;
@@ -2580,10 +3206,8 @@ function renderModuleCombat($body, char) {
 			$(this).val(lv);
 			if (lv === oldLevel) return;
 			char.level = lv;
-			var hd2 = CLASS_HIT_DICE[char.className] || 8;
-			var conMod2 = calcMod((char.scores.con || 8) + (char.rawScores.con || 0));
 			if (!char.hp) char.hp = {};
-			var newMax = hd2 + conMod2 + (lv - 1) * (Math.floor(hd2 / 2) + 1 + conMod2);
+			var newMax = hpMaxAuto(char);
 			if (!ovHas(char, "hp.max")) { char.hp.max = newMax; char.hp.current = newMax; }
 			char.spellSlots = calculateSpellSlots(char);
 			char.spellAttackBonus = calculateSpellAttackBonus(char);
@@ -2601,12 +3225,32 @@ function renderModuleCombat($body, char) {
 			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
 			char.deathSaves.successes = $(this).is(":checked") ? index : 0;
 			$body.find(".death-save-success").each(function(i) { $(this).prop("checked", i < char.deathSaves.successes); });
+			// 3 sucessos: o personagem se estabiliza e volta com 1 PV
+			if (char.deathSaves.successes >= 3) {
+				if (!char.hp) char.hp = {};
+				char.hp.current = 1;
+				char.deathSaves = {failures: 0, successes: 0};
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				renderModuleCombat($body, char);
+				var msgOk = "Estabilizado! Você recupera 1 PV.";
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msgOk});
+				else sheetToast("success", msgOk);
+				return;
+			}
+			CharactersStore.save(char);
 		});
 		$body.find(".death-save-failure").on("change", function() {
 			var index = parseInt($(this).data("index"), 10);
 			if (!char.deathSaves) char.deathSaves = {failures: 0, successes: 0};
 			char.deathSaves.failures = $(this).is(":checked") ? index : 0;
 			$body.find(".death-save-failure").each(function(i) { $(this).prop("checked", i < char.deathSaves.failures); });
+			CharactersStore.save(char);
+			if (char.deathSaves.failures >= 3) {
+				var msgBad = "Três falhas nos testes contra morte: o personagem morreu.";
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "danger", content: msgBad});
+				else sheetToast("danger", msgBad);
+			}
 		});
 	}
 // Atributo de cada perícia (agrupamento por atributo na ficha)
@@ -2648,8 +3292,8 @@ function renderModuleCombat($body, char) {
 		});
 		html += '</div>';
 
-		html += '<div class="characters__subtitle">Percepção Passiva</div>';
-		html += '<div class="characters__sheet-items"><div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "pp", calculatePassivePerception(char), "plain") + '</span> Percepção Passiva</div></div>';
+		html += '<div class="characters__subtitle">Idiomas</div>';
+		html += '<div class="characters__sheet-items"><div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ((char.languages && char.languages.length) ? esc(char.languages.join(", ")) : "—") + '</span> Idiomas</div></div>';
 
 		if (char.otherProficiencies && char.otherProficiencies.length) {
 			html += '<div class="characters__subtitle">Outras Proficiências</div>';
@@ -2814,7 +3458,7 @@ function spellAbilityName(char) {
 		});
 	}
 function renderModuleFeatures($body, char) {
-	var html = '<div class="characters__summary-box"><div class="characters__summary-title">Informações (Raça • Antecedente • Classe)</div><div class="characters__info-scroll">' + buildInfoContent(char) + '</div></div>';
+	var html = '<div class="characters__summary-box characters__info-card"><div class="characters__summary-title">Informações (Raça • Antecedente • Classe)</div><div class="characters__info-scroll">' + buildInfoContent(char) + '</div></div>';
 	html += '<div class="characters__subtitle">Talentos (Feats)</div>';
 		html += '<div class="characters__features-list">';
 		if (char.feats && char.feats.length) {
@@ -3387,10 +4031,13 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		var abilMod = isRanged ? dexMod : (finesse ? Math.max(strMod, dexMod) : strMod);
 		var pb = profBonusEff(char);
 		var dmgBase = (it && it.dmg1) ? it.dmg1 : null;
+		var hit = pb + abilMod;
+		// Estilo de Luta: Arqueirismo (+2 para acertar à distância)
+		if (char.fightingStyle === "Archery" && isRanged) hit += 2;
 		return {
 			it: it, isRanged: isRanged, finesse: finesse, abilMod: abilMod,
 			abilName: isRanged ? "DES" : (finesse ? "FOR/DES" : "FOR"),
-			pb: pb, hit: pb + abilMod,
+			pb: pb, hit: hit,
 			dmgBase: dmgBase,
 			dmgStr: dmgBase ? (dmgBase + (abilMod >= 0 ? "+" : "") + abilMod) : "—",
 			dmgType: (it && it.dmgType) ? " " + it.dmgType : ""
@@ -3406,11 +4053,23 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		else txt = String(v);
 		return '<span class="characters__ov ' + (baseCls || "") + (has ? " " + OVR_CLASS : "") + '" data-detail="' + key + '">' + txt + '</span>';
 	}
+	// PV máximo correto em multiclasse: soma o HP de CADA classe.
+	// 1º nível da classe = dado de vida completo + CON; demais = média (⌊d/2⌋+1) + CON.
 	function hpMaxAuto(char) {
-		var hd = CLASS_HIT_DICE[char.className] || 8;
 		var conM = calcMod(effAbility(char, "con"));
-		var lv = char.level || 1;
-		return hd + conM + (lv - 1) * (Math.floor(hd / 2) + 1 + conM);
+		var list = charClasses(char);
+		if (!list.length) {
+			var hd0 = CLASS_HIT_DICE[char.className] || 8;
+			var lv0 = char.level || 1;
+			return hd0 + conM + (lv0 - 1) * (Math.floor(hd0 / 2) + 1 + conM);
+		}
+		var total = 0;
+		list.forEach(function(c) {
+			var hd = CLASS_HIT_DICE[c.name] || 8;
+			var lv = c.level || 1;
+			total += hd + conM + (lv - 1) * (Math.floor(hd / 2) + 1 + conM);
+		});
+		return total;
 	}
 	function acAuto(char) {
 		var dexM = calcMod(effAbility(char, "dex"));
@@ -3458,14 +4117,55 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		if (key === "hp.max") return {
 			title: "Pontos de Vida Máximos", numeric: true,
 			parts: function(char) {
-				var hd = CLASS_HIT_DICE[char.className] || 8;
 				var conM = calcMod(effAbility(char, "con"));
-				var lv = char.level || 1;
-				var arr = [{label: "Dado de vida 1º nível (d" + hd + " + CON)", txt: fmtSigned(hd + conM)}];
-				if (lv > 1) arr.push({label: "Níveis 2–" + lv + " (média por nível)", txt: "+" + ((lv - 1) * (Math.floor(hd / 2) + 1 + conM))});
+				var list = charClasses(char);
+				var arr = [];
+				var multi = list.length > 1 || (list.length === 1 && char.className && list[0].name !== char.className);
+				if (multi) {
+					list.forEach(function(c) {
+						var hd = CLASS_HIT_DICE[c.name] || 8;
+						var lv = c.level || 1;
+						var per = Math.floor(hd / 2) + 1 + conM;
+						arr.push({label: c.name + " — Nv. " + lv + " (d" + hd + " + CON)", txt: String(hd + conM) + (lv > 1 ? " + " + (lv - 1) + "×" + per : "")});
+					});
+				} else {
+					var hd1 = CLASS_HIT_DICE[char.className] || 8;
+					var lv1 = char.level || 1;
+					arr.push({label: "Dado de vida 1º nível (d" + hd1 + " + CON)", txt: fmtSigned(hd1 + conM)});
+					if (lv1 > 1) arr.push({label: "Níveis 2–" + lv1 + " (média por nível)", txt: "+" + ((lv1 - 1) * (Math.floor(hd1 / 2) + 1 + conM))});
+				}
 				return arr;
 			},
-			auto: function(char) { return hpMaxAuto(char); }
+			auto: function(char) { return hpMaxAuto(char); },
+			get: function(char) { return (char.hp && char.hp.max != null) ? char.hp.max : hpMaxAuto(char); },
+			set: function(char, v) {
+				// Grava em char.hp.max (e limpa qualquer override antigo) para que
+				// os futuros level-ups continuem somando PV corretamente.
+				if (!char.hp) char.hp = {};
+				if (char.overrides && char.overrides["hp.max"] != null) delete char.overrides["hp.max"];
+				char.hp.max = (v != null) ? v : hpMaxAuto(char);
+				if (char.hp.current != null && char.hp.current > char.hp.max) char.hp.current = char.hp.max;
+				char.updated = Date.now();
+				CharactersStore.save(char);
+			}
+		};
+		if (key === "hp.current") return {
+			title: "Pontos de Vida Atuais", numeric: true,
+			hint: "Use os botões − e + ao lado do valor na ficha para ajustar de 1 em 1; digite aqui um valor exato.",
+			parts: function(char) {
+				var max2 = (char.hp && char.hp.max) || 0;
+				return [{label: "PV máximos", txt: String(max2)}];
+			},
+			auto: function(char) { return (char.hp && char.hp.current != null) ? char.hp.current : ((char.hp && char.hp.max) || 0); },
+			get: function(char) { return (char.hp && char.hp.current != null) ? char.hp.current : 0; },
+			set: function(char, v) {
+				if (!char.hp) char.hp = {};
+				var max = char.hp.max || 0;
+				char.hp.current = Math.max(0, Math.min(max, (v != null) ? v : (char.hp.current || 0)));
+				if (char.hp.current > 0) char.deathSaves = {failures: 0, successes: 0};
+				char.updated = Date.now();
+				CharactersStore.save(char);
+			}
 		};
 		if (key === "ac") return {
 			title: "Classe de Armadura (CA)", numeric: true,
@@ -4090,7 +4790,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		var race = getRaceObj(char);
 		var subObj = getSubraceObj(char);
 		if (race || subObj) {
-			h += '<div class="characters__summary-box">';
+			h += '<div class="characters__summary-box characters__info-card">';
 			var raceTitle = race ? esc(race.name) : "";
 			if (race && char.race && char.race._collapsedLabel) raceTitle += " (" + esc(char.race._collapsedLabel) + ")";
 			else if (char.raceSubraceName) raceTitle += " (" + esc(char.raceSubraceName) + ")";
@@ -4115,7 +4815,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		// --- Antecedente ---
 		var bg = getBgObj(char);
 		if (bg) {
-			h += '<div class="characters__summary-box">';
+			h += '<div class="characters__summary-box characters__info-card">';
 			h += '<div class="characters__summary-title">Antecedente: ' + esc(bg.name) + '</div>';
 			(bg.entries || []).forEach(function(e) { h += featureEntryHtml(e); });
 			var bgSk = [];
@@ -4130,7 +4830,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		// --- Classes & Subclasses: características por nível ---
 		var classes = charClasses(char);
 		if (classes.length) {
-			h += '<div class="characters__summary-box">';
+			h += '<div class="characters__summary-box characters__info-card">';
 			h += '<div class="characters__summary-title">Habilidades de Classe</div>';
 			classes.forEach(function(c, ix) {
 				var clsSrc = (ix === 0 && char.classSource) ? char.classSource : null;
@@ -4170,19 +4870,38 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			if (v >= 1) skParts.push((SKILL_KEY_TO_PT[k] || k) + (v === 2 ? " (expertise)" : ""));
 		});
 		if (skParts.length) profLines.push('<div class="characters__prof-line"><b>Perícias escolhidas:</b> ' + esc(skParts.join(", ")) + '</div>');
+		if (char.languages && char.languages.length) profLines.push('<div class="characters__prof-line"><b>Idiomas:</b> ' + esc(char.languages.join(", ")) + '</div>');
 		if (profLines.length) {
-			h += '<div class="characters__summary-box">';
+			h += '<div class="characters__summary-box characters__info-card">';
 			h += '<div class="characters__summary-title">Proficiências & Idiomas</div>' + profLines.join("");
 			h += '</div>';
 		}
 		// --- Talentos manuais ---
 		if (char.feats && char.feats.length) {
-			h += '<div class="characters__summary-box">';
+			h += '<div class="characters__summary-box characters__info-card">';
 			h += '<div class="characters__summary-title">Talentos</div>';
 			char.feats.forEach(function(f) {
 				h += '<div class="characters__feature-item"><div class="characters__feature-name">' + esc(f.name || f) + '</div>' +
 					(f.source ? '<div class="characters__feature-source">' + esc(f.source) + '</div>' : "") + '</div>';
 			});
+			h += '</div>';
+		}
+		// --- Escolhas de nível (estilo de luta, pacto, metamagia, ASI) ---
+		var choiceBits = [];
+		if (char.fightingStyle) choiceBits.push('<div class="characters__feature-item"><div class="characters__feature-name">Estilo de Luta: ' + esc(char.fightingStyle) + '</div></div>');
+		if (char.choices && char.choices.pact) choiceBits.push('<div class="characters__feature-item"><div class="characters__feature-name">Dádiva do Pacto: ' + esc(char.choices.pact) + '</div></div>');
+		if (char.choices && char.choices.metamagic && char.choices.metamagic.length) {
+			choiceBits.push('<div class="characters__feature-item"><div class="characters__feature-name">Metamagia:</div><div class="characters__feature-desc">' + esc(char.choices.metamagic.join(", ")) + '</div></div>');
+		}
+		if (char.choices && char.choices.asi && char.choices.asi.length) {
+			char.choices.asi.forEach(function(a) {
+				var pts = Object.keys(a.points || {}).map(function(k) { return (ABILITY_NAMES[k] || k) + " +" + a.points[k]; }).join(", ");
+				choiceBits.push('<div class="characters__feature-item"><div class="characters__feature-name">Incremento de Atributo (Nv. ' + a.level + ')</div><div class="characters__feature-desc">' + esc(pts || "—") + '</div></div>');
+			});
+		}
+		if (choiceBits.length) {
+			h += '<div class="characters__summary-box characters__info-card">';
+			h += '<div class="characters__summary-title">Escolhas de Nível</div>' + choiceBits.join("");
 			h += '</div>';
 		}
 		return h || '<div class="characters__detail-auto">Sem informações registradas.</div>';

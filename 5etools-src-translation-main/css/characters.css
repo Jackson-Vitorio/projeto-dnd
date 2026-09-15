@@ -146,20 +146,15 @@
 .characters__toast--danger{background:#c7363f}
 @keyframes charToastIn{from{opacity:0;transform:translateX(-50%) translateY(-8px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
 @media(max-width:768px){
-	.characters__sheet-toolbar{position:sticky;top:0;z-index:30;background:#f4f6f9;padding:6px 0;box-shadow:0 1px 0 rgba(0,0,0,.05)}
 	.characters__module-head{padding:12px 12px}
-	.characters__module-body{padding:12px}
 }
 /* === Ocultar/Mostrar abas na toolbar da ficha === */
-.characters__visibility-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 4px}
-.characters__visibility-bar .characters__form-label{display:inline-block;font-weight:600;color:#003e77;margin-right:4px;font-size:.92em;text-transform:none;letter-spacing:0}
-.characters__vis-toggle{display:inline-flex;align-items:center;gap:4px;border:1px solid #d6dade;border-radius:6px;background:#fff;padding:5px 10px;cursor:pointer;font-size:.78em;font-weight:500;color:#374151;user-select:none;-webkit-tap-highlight-color:transparent;transition:background .12s,border-color .12s}
-.characters__vis-toggle:hover{background:#f2f5f9;border-color:#b7c3d0}
-.characters__vis-toggle.is-on{background:#e5efff;border-color:#006bc4;color:#003e77}
-.characters__vis-toggle input{accent-color:#006bc4;width:auto;height:auto}
-.characters__vis-label{white-space:nowrap}
-.characters__vis-row{display:flex;flex-wrap:wrap;gap:6px;align-items:flex-start}
-.characters__vis-title{font-size:.86em;font-weight:700;color:#003e77;margin-right:4px;text-transform:none;letter-spacing:0}
+/* === Seções da ficha: título clicável (mostrar/ocultar) === */
+.characters__module-head{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.characters__module-head:active{background:#eef3f9}
+.characters__module-caret{margin-left:auto;font-size:1.1em;color:#7d8896;flex-shrink:0;padding:0 4px}
+.characters__module.is-collapsed{background:#fafbfc}
+.characters__module.is-collapsed .characters__module-head{border-bottom:none}
 /* Forçar criação vertical (apenas no formulário de criação) */
 .characters__form .characters__form-row{flex-direction:column;align-items:stretch}
 .characters__form .characters__form-group{min-width:100%;flex:1 1 100%}
@@ -223,3 +218,103 @@
 .characters__feature-tag{display:inline-block;background:#006bc4;color:#fff;font-size:.65em;padding:1px 6px;border-radius:8px;margin-left:4px;vertical-align:middle}
 .characters__prof-line{font-size:.9em;color:#444;margin-bottom:4px}
 .characters__feature-source{color:#888;font-size:.8em}
+
+/* ============================================================
+   FICHA: fonte maior, menos vertical, sem bordas vazias
+   ============================================================ */
+.characters__sheet{font-size:1.06em}
+.characters__module-body{padding:14px 12px;font-size:1.04em;line-height:1.42}
+.characters__module-title{font-size:1.08em}
+.characters__subtitle{font-size:.95em;margin:16px 0 8px}
+.characters__subtitle:first-child{margin-top:0}
+
+/* Itens: sem "caixas vazias" — separador discreto em vez de borda */
+.characters__sheet-item{border:none;background:transparent;border-radius:0;padding:5px 6px;font-size:1em;border-bottom:1px solid #f0f2f5}
+.characters__sheet-item:last-child{border-bottom:none}
+.characters__sheet-item--roll:hover{background:#f2f8ff;border-color:#cfe3fb}
+.characters__sheet-item-value{min-width:34px;font-size:1.06em;font-weight:700}
+.characters__summary-box{background:transparent;border:none;border-radius:0;padding:0;margin:14px 0}
+.characters__summary-title{font-weight:700;color:#003e77;font-size:1.02em;margin-bottom:8px}
+.characters__attack-item{border:none;border-left:3px solid #006bc4;border-radius:0 6px 6px 0;background:#fafbfc;padding:8px 10px}
+.characters__feature-item{border:none;background:transparent;border-bottom:1px solid #f0f2f5;border-radius:0;padding:6px 2px}
+.characters__feature-item:last-child{border-bottom:none}
+.characters__feature-details{border:none;background:transparent;border-radius:0;padding:3px 0;margin:0 0 2px}
+.characters__feature-details>summary{font-size:.98em}
+
+/* Resistências e itens em 2 colunas */
+.characters__sheet-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:0 12px}
+.characters__slots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(54px,1fr));gap:6px;margin:6px 0 4px}
+.characters__slot{border:none;background:#f4f6f9;border-radius:6px;padding:6px 4px;text-align:center}
+.characters__slot-level{font-size:.78em;font-weight:700;color:#667085}
+.characters__slot-value{font-size:1.15em;font-weight:700;color:#1f2a37}
+
+/* Perícias agrupadas por atributo, em duas colunas */
+.characters__ability-group{font-weight:700;color:#006bc4;font-size:.88em;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 4px}
+.characters__ability-group:first-child{margin-top:0}
+.characters__skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+
+/* Magias em duas colunas por nível */
+.characters__spells-list{display:grid;grid-template-columns:1fr 1fr;gap:0 12px;margin:4px 0}
+.characters__spell-item{display:flex;align-items:center;gap:6px;padding:5px 6px;font-size:1em;border-bottom:1px solid #f0f2f5}
+.characters__spell-item:last-child{border-bottom:none}
+.characters__spell-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Itens/armas/armaduras em duas colunas */
+.characters__items-list{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.characters__item{display:flex;align-items:center;gap:6px;padding:5px 6px;border-bottom:1px solid #f0f2f5}
+.characters__item:last-child{border-bottom:none}
+
+/* Combate: status em duas colunas quando couber */
+.characters__status-row{gap:8px 18px;font-size:1em}
+
+/* Rolagem por toque: chevron discreto em vez de emoji */
+.characters__roll-btn{font-size:1.15em;color:#9aa5b1;opacity:.9;margin-left:auto}
+.characters__stat-roll{font-size:.72em;font-weight:600;color:#9aa5b1;text-transform:uppercase;letter-spacing:.03em;top:2px;right:6px}
+.characters__stat-roll:hover{color:#006bc4}
+@media(max-width:420px){
+	.characters__skills-cols,.characters__spells-list,.characters__items-list{grid-template-columns:1fr 1fr;gap:0 8px}
+	.characters__sheet-item,.characters__spell-item{font-size:.97em}
+}
+
+/* Ataques em grade (evita empilhar tudo) */
+.characters__attacks-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));gap:8px}
+
+/* Sem scroll aninhado: a seção "Informações" cresce junto com a ficha */
+.characters__module-body .characters__info-scroll{max-height:none;overflow:visible}
+
+/* Moldura da ficha: sem bordas/caixas vazias */
+.characters__sheet{border:none;box-shadow:none;background:transparent;padding:4px 0}
+.characters__modules{gap:10px}
+.characters__module{border:1px solid #e9edf2;box-shadow:none}
+.characters__module-head{padding:11px 12px}
+.characters__module-body{padding:12px 10px 14px}
+
+/* ============================================================
+   Ficha em LARGURA TOTAL (sem espaço morto nas laterais)
+   ============================================================ */
+.characters__view--sheet{max-width:none;width:100%;margin:0;padding:2px 4px 12px}
+.viewport-wrapper .container--main{padding-left:6px;padding-right:6px;max-width:none}
+body #characters-main{padding-top:0}
+.characters__sheet-header{gap:12px;align-items:center;margin-bottom:16px}
+.characters__sheet-header-main{flex:1;min-width:0}
+.characters__sheet-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.characters__sheet-actions .characters__btn{font-size:.8em;padding:5px 10px}
+@media(max-width:768px){
+	.viewport-wrapper .container--main{padding-left:4px;padding-right:4px}
+	.characters__view--sheet{padding:0 2px 10px}
+	.characters__sheet-avatar{width:76px;height:76px;font-size:1.7em}
+}
+/* Em telas largas, seções lado a lado para aproveitar o espaço */
+@media(min-width:900px){
+	.characters__modules{display:grid;grid-template-columns:repeat(auto-fill,minmax(430px,1fr));align-items:start}
+}
+
+/* Espaços de magia: duas linhas, número grande com o nível pequeno embaixo */
+.characters__slots-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
+.characters__slot{padding:8px 4px;background:#f4f6f9;border-radius:6px;text-align:center}
+.characters__slot-value{font-size:1.5em;font-weight:700;line-height:1.1;color:#1f2a37}
+.characters__slot-level{font-size:.68em;font-weight:600;color:#667085;margin-top:2px}
+
+/* Perícias: duas colunas contínuas; título do atributo ocupa a linha inteira */
+.characters__skills-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:start}
+.characters__skills-cols .characters__ability-group{grid-column:1 / -1}

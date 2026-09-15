@@ -1930,10 +1930,16 @@
 		if (char.className && char.classSource && variantCount(classesData, char.className) > 1) clsTxt += " (" + char.classSource + ")";
 		var html = '<div class="characters__sheet-header">';
 		html += '<div class="characters__sheet-avatar">' + esc((char.name || "?").charAt(0).toUpperCase()) + '</div>';
-		html += '<div>';
+		html += '<div class="characters__sheet-header-main">';
 		html += '<h2 class="characters__sheet-name">' + esc(char.name) + '</h2>';
 		html += '<div class="characters__sheet-detail">' + esc(raceTxt) + (sub ? " • " + esc(sub) : "") + ' • ' + esc(clsTxt) + ' • Nv. ' + (char.level || 1) + ' • ' + esc(char.background || "—") + '</div>';
 		html += '<div class="characters__sheet-detail">' + esc(char.alignment || "Neutro") + ' • Jogador: ' + esc(char.playerName || "—") + '</div>';
+		html += '<div class="characters__sheet-actions">';
+		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-export-sheet">Exportar .cah</button>';
+		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-print" title="Imprimir">Imprimir</button>';
+		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-reorder">Reorganizar</button>';
+		html += '<button class="characters__btn characters__btn--danger characters__btn--sm" id="btn-delete">Excluir</button>';
+		html += '</div>';
 		html += '</div></div>';
 		return html;
 	}
@@ -1961,7 +1967,7 @@
 	function rollD20WithBonus(bonus, label) {
 		var r = 1 + Math.floor(Math.random() * 20);
 		var total = r + (bonus || 0);
-		var msg = (label || "Rolagem") + ": 🎲 " + r + (bonus ? " + " + bonus : "") + " = " + total;
+		var msg = (label || "Rolagem") + ": " + r + (bonus ? " + " + bonus : "") + " = " + total;
 		var type = "info";
 		if (r === 20) { msg += " — NATURAL 20!"; type = "success"; }
 		if (r === 1) { msg += " — natural 1..."; type = "danger"; }
@@ -1975,10 +1981,7 @@
 		SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) { if (ids.indexOf(id) === -1) ids.push(id); });
 		// Filtra aba de magias: só aparece se for classe conjuradora
 		if (!isAnyCaster(char)) ids = ids.filter(function(id){ return id !== "spells"; });
-		// Filtra módulos ocultos pelo usuário
-		if (char && Array.isArray(char.hiddenModules)) {
-			ids = ids.filter(function(id){ return char.hiddenModules.indexOf(id) < 0; });
-		}
+		// Seções ocultas continuam na lista: são exibidas colapsadas (toque no título alterna)
 		return ids;
 	}
 
@@ -1992,58 +1995,125 @@ function sheetOrderIds() {
 		return ids;
 	}
 
-	// === Ocultar/Mostrar seções da ficha ===
-	// Barra com um toggle por módulo, na mesma área onde fica "Reorganizar".
-	function buildVisibilityBar(char) {
-		var hidden = (char && Array.isArray(char.hiddenModules)) ? char.hiddenModules : [];
-		var html = '<div class="characters__visibility-bar" id="visibility-bar">';
-		html += '<span class="characters__vis-title">Seções visíveis:</span>';
-		SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) {
-			var def = SHEET_MODULE_DEFS[id];
-			if (!def) return;
-			// Magias: só faz sentido para conjuradores (o módulo é filtrado de qualquer forma)
-			var forcedHidden = (id === "spells" && !isAnyCaster(char));
-			var isHidden = hidden.indexOf(id) >= 0;
-			var on = !isHidden && !forcedHidden;
-			html += '<label class="characters__vis-toggle' + (on ? " is-on" : "") + '" data-vis="' + id + '"' +
-				(forcedHidden ? ' title="Disponível apenas para classes conjuradoras"' : '') + '>';
-			html += '<input type="checkbox"' + (on ? " checked" : "") + (forcedHidden ? " disabled" : "") + '> ';
-			html += '<span class="characters__vis-label">' + def.icon + ' ' + def.title + '</span>';
-			html += '</label>';
-		});
-		html += '</div>';
-		return html;
+	// === Ocultar/mostrar seções: toque no título da seção ===
+	function isModuleCollapsed(char, id) {
+		return !!(char && Array.isArray(char.hiddenModules) && char.hiddenModules.indexOf(id) >= 0);
 	}
 
-	function updateVisibilityBar(char) {
-		var $bar = $root.find("#visibility-bar");
-		if (!$bar.length) return;
-		var hidden = (char && Array.isArray(char.hiddenModules)) ? char.hiddenModules : [];
-		$bar.find(".characters__vis-toggle").each(function() {
-			var id = $(this).data("vis");
-			var forcedHidden = (id === "spells" && !isAnyCaster(char));
-			var on = hidden.indexOf(id) < 0 && !forcedHidden;
-			$(this).toggleClass("is-on", on);
-			$(this).find("input").prop("checked", on).prop("disabled", forcedHidden);
+	function bindModuleCollapse() {
+		$root.find("#sheet-modules").find(".characters__module-head").each(function() {
+			var $head = $(this);
+			$head.off(".mcol");
+			$head.on("click.mcol", function(evt) {
+				// Clique no handle de arrastar não colapsa
+				if ($(evt.target).closest(".characters__module-handle").length) return;
+				var $module = $head.closest(".characters__module");
+				toggleModuleCollapsed(currentChar, $module.data("module"));
+			});
 		});
 	}
 
-	function toggleModuleVisibility(char, id) {
-		if (!SHEET_MODULE_DEFS[id]) return;
+	function toggleModuleCollapsed(char, id) {
+		if (!char || !SHEET_MODULE_DEFS[id]) return;
 		if (!Array.isArray(char.hiddenModules)) char.hiddenModules = [];
 		var ix = char.hiddenModules.indexOf(id);
-		if (ix >= 0) char.hiddenModules.splice(ix, 1);
-		else char.hiddenModules.push(id);
+		var collapsed = ix < 0;
+		if (collapsed) char.hiddenModules.push(id);
+		else char.hiddenModules.splice(ix, 1);
 		char.updated = Date.now();
 		CharactersStore.save(char);
-		renderModules();
-		updateVisibilityBar(char);
-		var def = SHEET_MODULE_DEFS[id];
-		var msg = (char.hiddenModules.indexOf(id) >= 0)
-			? ("Seção \"" + def.title + "\" ocultada.")
-			: ("Seção \"" + def.title + "\" exibida.");
-		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msg});
-		else sheetToast("success", msg);
+		var $module = $root.find("#sheet-modules").find('.characters__module[data-module="' + id + '"]');
+		$module.toggleClass("is-collapsed", collapsed);
+		$module.find(".characters__module-body").stop(true, true).toggle(!collapsed);
+		$module.find(".characters__module-caret").text(collapsed ? "▸" : "▾");
+	}
+
+	// === Salvamento automático ===
+	function autoSaveSheet(char) {
+		if (!char) return;
+		char.updated = Date.now();
+		CharactersStore.save(char);
+	}
+
+	function bindAutoSave(char) {
+		$root.off(".autosave");
+		var flush = function() {
+			// Campos sem handler próprio (inventário, notas, inspiração)
+			var $inv = $root.find("#in-inv");
+			if ($inv.length) char.inventory = $inv.val().split("\n").filter(Boolean);
+			var $notes = $root.find("#in-notes");
+			if ($notes.length) char.notes = $notes.val();
+			var $insp = $root.find(".inspiration-checkbox");
+			if ($insp.length) char.inspiration = $insp.is(":checked");
+			var $coins = $root.find(".coin-input");
+			if ($coins.length) {
+				var coins = {};
+				$coins.each(function() { coins[$(this).data("coin")] = parseInt($(this).val(), 10) || 0; });
+				char.coins = coins;
+			}
+			var $hpCur = $root.find("#in-hp-current");
+			if ($hpCur.length) { if (!char.hp) char.hp = {}; char.hp.current = parseInt($hpCur.val(), 10) || 0; }
+			var $hpTemp = $root.find("#in-hp-temp");
+			if ($hpTemp.length) { if (!char.hp) char.hp = {}; char.hp.temp = parseInt($hpTemp.val(), 10) || 0; }
+			autoSaveSheet(char);
+		};
+		// Qualquer campo alterado na ficha
+		$root.on("change.autosave", "#sheet-modules input, #sheet-modules select, #sheet-modules textarea", flush);
+		// Digitação (notas/inventário) com debounce
+		var tmr = null;
+		$root.on("input.autosave", "#in-notes, #in-inv", function() {
+			clearTimeout(tmr);
+			tmr = setTimeout(flush, 700);
+		});
+		// Alterações feitas por clique (adicionar/remover arma, magia, talento, descanso...)
+		$root.on("click.autosave", "#sheet-modules button, #sheet-modules .characters__search-item, .characters__cond-btn", function() {
+			setTimeout(function() { autoSaveSheet(char); }, 0);
+		});
+	}
+
+	// === Voltar pelo botão do celular (Android) ===
+	function handleBackNavigation() {
+		// 1) Fecha qualquer popup aberto
+		if ($(".characters__detail-overlay, #actions-menu").length) {
+			closeCharInfo();
+			closeLevelUpDialog();
+			closeLevelUpSummary();
+			closeRestMenu();
+			closeConditionsPanel();
+			closeMulticlassDialog();
+			closeActionsMenu();
+			closeDetail();
+			return true;
+		}
+		// 2) Ficha -> lista de fichas
+		if (currentView === "sheet") { currentView = "list"; currentChar = null; renderList(); return true; }
+		// 3) Criação -> passo anterior (ou lista)
+		if (currentView === "create") {
+			if (creationStep > 1) { creationStep--; renderCreation(); }
+			else { currentView = "list"; renderList(); }
+			return true;
+		}
+		return false; // deixa o app fechar
+	}
+
+	function initBackNavigation() {
+		if (initBackNavigation._done) return;
+		initBackNavigation._done = true;
+		var Cap = global.Capacitor;
+		var CapApp = Cap && Cap.Plugins ? Cap.Plugins.App : null;
+		if (CapApp && CapApp.addListener) {
+			CapApp.addListener("backButton", function() {
+				if (!handleBackNavigation() && CapApp.exitApp) CapApp.exitApp();
+			});
+		}
+		// Fallback Cordova-style
+		document.addEventListener("backbutton", function(e) {
+			if (handleBackNavigation() && e.preventDefault) e.preventDefault();
+		}, false);
+		// Fallback navegador (histórico)
+		window.addEventListener("popstate", function() {
+			if (handleBackNavigation()) history.pushState({chSheet: true}, "");
+		});
 	}
 
 	function renderModules() {
@@ -2054,23 +2124,24 @@ function sheetOrderIds() {
 		$container.empty();
 		getSheetOrder(char).forEach(function(id) {
 			var def = SHEET_MODULE_DEFS[id];
-			var $module = $('<section class="characters__module" data-module="' + id + '"></section>');
+			var collapsed = isModuleCollapsed(char, id);
+			var $module = $('<section class="characters__module' + (collapsed ? " is-collapsed" : "") + '" data-module="' + id + '"></section>');
 			$module.append(
-				'<header class="characters__module-head">' +
+				'<header class="characters__module-head" role="button" tabindex="0" title="Toque para mostrar ou ocultar esta seção">' +
 				'<span class="characters__module-handle" title="Arraste para reordenar" aria-label="Reordenar módulo">⋮⋮</span>' +
-				'<span class="characters__module-icon">' + def.icon + '</span>' +
 				'<h4 class="characters__module-title">' + def.title + '</h4>' +
+				'<span class="characters__module-caret">' + (collapsed ? "▸" : "▾") + '</span>' +
 				'</header>'
 			);
 			var $body = $('<div class="characters__module-body"></div>');
+			if (collapsed) $body.hide();
 			$module.append($body);
 			$container.append($module);
 			def.render($body, char);
 		});
 		$root.find("#sheet-modules").toggleClass("is-reorder", sheetReorderActive);
 		bindModuleDrag();
-		// Mantém a barra de visibilidade coerente (ex.: magias só para conjuradores)
-		updateVisibilityBar(char);
+		bindModuleCollapse();
 	}
 
 	function bindModuleDrag() {
@@ -2221,9 +2292,9 @@ function renderModuleAbilities($body, char) {
 			html += '</div>';
 		}
 		html += '<div class="characters__stats-toolbar">';
-		html += '<button class="characters__btn characters__btn--secondary" id="btn-levelup" title="Subir de nível">⬆️ Nível</button>';
-		html += '<button class="characters__btn characters__btn--secondary" id="btn-charinfo" title="Informações">ℹ️ Info</button>';
-		html += '<button class="characters__btn characters__btn--secondary" id="btn-rest" title="Descanso & condições">🛏️ Descanso</button>';
+		html += '<button class="characters__btn characters__btn--secondary" id="btn-levelup" title="Subir de nível">Nível</button>';
+		html += '<button class="characters__btn characters__btn--secondary" id="btn-charinfo" title="Informações">Info</button>';
+		html += '<button class="characters__btn characters__btn--secondary" id="btn-rest" title="Descanso & condições">Descanso</button>';
 		html += '</div>';
 		html += '<div class="characters__sheet-stats">';
 		ABILITY_ABVS.forEach(function(a) {
@@ -2233,7 +2304,7 @@ function renderModuleAbilities($body, char) {
 			html += '<div class="characters__stat-name">' + ABILITY_NAMES[a] + '</div>';
 			html += '<div class="characters__stat-value">' + ovSpan(char, "ab:" + a, (char.scores[a] || 8) + (char.rawScores[a] || 0), "plain") + '</div>';
 			html += '<div class="characters__stat-mod">' + (mod >= 0 ? "+" : "") + mod + '</div>';
-			html += '<div class="characters__stat-roll" data-d20="' + mod + '" data-label="' + ABILITY_NAMES[a] + '" title="Rolar d20 + modificador">🎲</div>';
+			html += '<div class="characters__stat-roll" data-d20="' + mod + '" data-label="' + ABILITY_NAMES[a] + '" title="Rolar d20 + modificador">rolar</div>';
 			html += '</div>';
 		});
 		html += '</div>';
@@ -2381,13 +2452,13 @@ function doLevelUp(char) {
 	// Habilidades ganhas no novo nível da classe primária (classe + subclasse)
 	var pc = (char.classes && char.classes.length) ? char.classes[0] : null;
 	var gained = pc ? gainedFeaturesForLevel(pc.name, char.classSource, pc.subclass, pc.level || post.level) : [];
-	if (gained.length) changed.push('✨ Novas habilidades: ' + gained.map(function(f) { return f.name; }).join(', '));
+	if (gained.length) changed.push('Novas habilidades: ' + gained.map(function(f) { return f.name; }).join(', '));
 
 	renderSheetHeader(char);
 	renderModules();
 	var title = "Nível " + post.level + " — Alterações";
 	var listHtml = changed.map(function(s){ return '<li>' + s + '</li>'; }).join('');
-	var numHtml = '<div class="characters__summary-title">📊 Alterações Numéricas</div><ul class="characters__summary-list">' + listHtml + '</ul>';
+	var numHtml = '<div class="characters__summary-title">Alterações Numéricas</div><ul class="characters__summary-list">' + listHtml + '</ul>';
 	showGainedFeaturesPopup(title, gained, numHtml);
 
 	if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:"success",content:"Subiu para o nível " + post.level + "!"});
@@ -2397,9 +2468,9 @@ function doLevelUp(char) {
 function openActionsMenu(char, $trigger) {
 	closeActionsMenu();
 		var html = '<div class="characters__actions-menu" id="actions-menu">';
-		html += '<button class="characters__actions-item" id="act-short-rest">🛏️ Descanso Curto</button>';
-		html += '<button class="characters__actions-item" id="act-long-rest">🌙 Descanso Longo</button>';
-		html += '<button class="characters__actions-item" id="act-conditions">⚠️ Adicionar Condição</button>';
+		html += '<button class="characters__actions-item" id="act-short-rest">Descanso Curto</button>';
+		html += '<button class="characters__actions-item" id="act-long-rest">Descanso Longo</button>';
+		html += '<button class="characters__actions-item" id="act-conditions">Adicionar Condição</button>';
 		html += '</div>';
 		$(document.body).append(html);
 		var $m = $('#actions-menu');
@@ -2538,7 +2609,13 @@ function renderModuleCombat($body, char) {
 			$body.find(".death-save-failure").each(function(i) { $(this).prop("checked", i < char.deathSaves.failures); });
 		});
 	}
-function renderModuleSkills($body, char) {
+// Atributo de cada perícia (agrupamento por atributo na ficha)
+	var SKILL_KEY_TO_ABIL = {};
+	Object.keys(SKILL_KEY_TO_PT).forEach(function(k) {
+		var sk = SKILLS.find(function(x) { return x.name === SKILL_KEY_TO_PT[k]; });
+		SKILL_KEY_TO_ABIL[k] = sk ? sk.abil : "str";
+	});
+	function renderModuleSkills($body, char) {
 		var profBonus = calcProfBonus(char.level || 1);
 		var saves = char.savingThrows || [];
 		var html = '<div class="characters__subtitle">Testes de Resistência</div>';
@@ -2548,20 +2625,26 @@ function renderModuleSkills($body, char) {
 			var mod = saveTotalEff(char, a);
 			html += '<div class="characters__sheet-item characters__sheet-item--roll" data-d20="' + mod + '" data-label="Resist. ' + ABILITY_NAMES[a] + '">';
 			html += '' + ovSpan(char, "save:" + a, mod, "mod", "characters__sheet-item-value") + ' ' + (prof ? "★ " : "") + ABILITY_NAMES[a];
-			html += '<span class="characters__roll-btn">🎲</span></div>';
+			html += '<span class="characters__roll-btn">›</span></div>';
 		});
 		html += '</div>';
 
 		html += '<div class="characters__subtitle">Perícias</div>';
-		html += '<div class="characters__sheet-items">';
-		// TODAS as perícias ficam visíveis e roláveis (mesmo sem proficiência)
-		Object.keys(SKILL_KEY_TO_PT).forEach(function(k) {
-			var v = (char.skills && char.skills[k]) || 0;
-			var total = skillTotalEff(char, k);
-			var stars = v === 2 ? " ★★" : v === 1 ? " ★" : "";
-			html += '<div class="characters__sheet-item characters__sheet-item--roll" data-d20="' + total + '" data-label="' + (SKILL_KEY_TO_PT[k] || k) + '">';
-			html += '' + ovSpan(char, "skill:" + k, total, "mod", "characters__sheet-item-value") + ' ' + (SKILL_KEY_TO_PT[k] || k) + stars;
-			html += '<span class="characters__roll-btn">🎲</span></div>';
+		html += '<div class="characters__skills-cols">';
+		// TODAS as perícias ficam visíveis e roláveis (mesmo sem proficiência),
+		// agrupadas pelo atributo do teste, com as perícias em duas colunas.
+		ABILITY_ABVS.forEach(function(a) {
+			var keys = Object.keys(SKILL_KEY_TO_PT).filter(function(k) { return SKILL_KEY_TO_ABIL[k] === a; });
+			if (!keys.length) return;
+			html += '<div class="characters__ability-group">' + ABILITY_NAMES[a] + '</div>';
+			keys.forEach(function(k) {
+				var v = (char.skills && char.skills[k]) || 0;
+				var total = skillTotalEff(char, k);
+				var stars = v === 2 ? " ★★" : v === 1 ? " ★" : "";
+				html += '<div class="characters__sheet-item characters__sheet-item--roll" data-d20="' + total + '" data-label="' + (SKILL_KEY_TO_PT[k] || k) + '">';
+				html += '' + ovSpan(char, "skill:" + k, total, "mod", "characters__sheet-item-value") + ' ' + (SKILL_KEY_TO_PT[k] || k) + stars;
+				html += '<span class="characters__roll-btn">›</span></div>';
+			});
 		});
 		html += '</div>';
 
@@ -2658,7 +2741,8 @@ function spellAbilityName(char) {
 		html += '<div class="characters__slots-grid">';
 		for (var i = 1; i <= 9; i++) {
 			var slots = char.spellSlots && char.spellSlots[i] ? char.spellSlots[i] : 0;
-			html += '<div class="characters__slot"><div class="characters__slot-level">Nv. ' + i + '</div><div class="characters__slot-value">' + ovSpan(char, "slot:" + i, slots, "plain") + '</div></div>';
+			html += '<div class="characters__slot"><div class="characters__slot-value">' + ovSpan(char, "slot:" + i, slots, "plain") + '</div>' +
+				'<div class="characters__slot-level">' + i + 'º nível</div></div>';
 		}
 		html += '</div>';
 
@@ -2730,7 +2814,7 @@ function spellAbilityName(char) {
 		});
 	}
 function renderModuleFeatures($body, char) {
-	var html = '<div class="characters__summary-box"><div class="characters__summary-title">📚 Informações (Raça • Antecedente • Classe)</div><div class="characters__info-scroll">' + buildInfoContent(char) + '</div></div>';
+	var html = '<div class="characters__summary-box"><div class="characters__summary-title">Informações (Raça • Antecedente • Classe)</div><div class="characters__info-scroll">' + buildInfoContent(char) + '</div></div>';
 	html += '<div class="characters__subtitle">Talentos (Feats)</div>';
 		html += '<div class="characters__features-list">';
 		if (char.feats && char.feats.length) {
@@ -2916,26 +3000,20 @@ function appendCoinsModule($body, char) {
 		appendCoinsModule($body, char);
 	}
 function renderModuleNotes($body, char) {
-		var html = '<textarea class="characters__sheet-textarea" id="in-notes" placeholder="História, anotações, ideias...">' + esc(char.notes || "") + '</textarea>';
-		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm mt-2" id="btn-save-notes">💾 Salvar notas</button>';
+		var html = '<div class="characters__subtitle">Anotações (salvas automaticamente)</div>';
+		html += '<textarea class="characters__sheet-textarea" id="in-notes" placeholder="História, anotações, ideias...">' + esc(char.notes || "") + '</textarea>';
 		$body.html(html);
-		$body.find("#btn-save-notes").on("click", function() {
-			char.notes = $body.find("#in-notes").val();
-			CharactersStore.save(char);
-			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Notas salvas!"});
-			else sheetToast("success", "Notas salvas!");
-		});
 	}
 
 	SHEET_MODULE_DEFS = {
-		abilities: {title: "Atributos", icon: "🎲", render: renderModuleAbilities},
-		combat: {title: "Combate", icon: "⚔️", render: renderModuleCombat},
-		skills: {title: "Perícias & Resistências", icon: "🛡️", render: renderModuleSkills},
-		attacks: {title: "Ataques & Ações", icon: "🗡️", render: renderModuleAttacks},
-		spells: {title: "Magias", icon: "🔮", render: renderModuleSpells},
-		features: {title: "Características", icon: "⭐", render: renderModuleFeatures},
-		equipment: {title: "Equipamentos", icon: "🎒", render: renderModuleEquipment},
-		notes: {title: "Notas", icon: "📝", render: renderModuleNotes}
+		abilities: {title: "Atributos", render: renderModuleAbilities},
+		combat: {title: "Combate", render: renderModuleCombat},
+		skills: {title: "Perícias & Resistências", render: renderModuleSkills},
+		attacks: {title: "Ataques & Ações", render: renderModuleAttacks},
+		spells: {title: "Magias", render: renderModuleSpells},
+		features: {title: "Características", render: renderModuleFeatures},
+		equipment: {title: "Equipamentos", render: renderModuleEquipment},
+		notes: {title: "Notas", render: renderModuleNotes}
 	};
 	// === Export/Import ===
 function renderSheet() {
@@ -2944,19 +3022,9 @@ function renderSheet() {
 			if (!char) { console.error("[Characters] Nenhum personagem selecionado"); return; }
 			console.log("[Characters] Renderizando ficha:", char.name);
 
-			var html = '<div class="characters__view">';
-			html += '<div class="characters__sheet-toolbar">';
-			html += '<button class="characters__btn characters__btn--secondary characters__btn-back" id="btn-back">← Voltar</button>';
-			html += '<button class="characters__btn characters__btn--secondary" id="btn-export-sheet">📥 Exportar .cah</button>';
-			html += '<button class="characters__btn characters__btn--secondary" id="btn-reorder">⋯ Reorganizar</button>';
-			html += '<button class="characters__btn characters__btn--secondary" id="btn-reset-order">⟲ Ordem padrão</button>';
-			html += '<span class="characters__toolbar-spacer"></span>';
-			html += '<button class="characters__btn characters__btn--secondary" id="btn-print" title="Imprimir">🖨️</button>';
-			html += '<button class="characters__btn characters__btn--danger" id="btn-delete">Excluir</button>';
-			html += '<button class="characters__btn characters__btn--primary" id="btn-save">💾 Salvar</button>';
-			html += '</div>';
-			html += '<div class="characters__reorder-hint" id="reorder-hint" style="display:none">Toque e arraste o ícone ⋮⋮ no topo de cada seção para reordená-la.</div>';
-			html += buildVisibilityBar(char);
+			var html = '<div class="characters__view characters__view--sheet">';
+			html += '<div class="characters__reorder-hint" id="reorder-hint" style="display:none">Toque e arraste o ícone ⋮⋮ no topo de cada seção para reordená-la. Toque no nome de uma seção para mostrá-la ou ocultá-la. ' +
+				'<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-reset-order">Ordem padrão</button></div>';
 			html += '<div class="characters__sheet">';
 			html += buildSheetHeader(char);
 			html += '<div id="sheet-modules" class="characters__modules"></div>';
@@ -2966,47 +3034,22 @@ function renderSheet() {
 			$root.html(html);
 			initDetailSystem();
 
-			$root.find("#btn-back").on("click", function() { currentView = "list"; currentChar = null; renderList(); });
-			$root.find("#btn-save").on("click", function() {
-				var inv = $root.find("#in-inv");
-				if (inv.length) char.inventory = inv.val().split("\n").filter(Boolean);
-				var notes = $root.find("#in-notes");
-				if (notes.length) char.notes = notes.val();
-				var hpCur = $root.find("#in-hp-current");
-				if (hpCur.length) { if (!char.hp) char.hp = {}; char.hp.current = parseInt(hpCur.val(), 10) || 0; }
-				var hpTemp = $root.find("#in-hp-temp");
-				if (hpTemp.length) { if (!char.hp) char.hp = {}; char.hp.temp = parseInt(hpTemp.val(), 10) || 0; }
-				var coins = {};
-				$root.find(".coin-input").each(function() { var t = $(this).data("coin"); coins[t] = parseInt($(this).val(), 10) || 0; });
-				char.coins = coins;
-				var inspiration = $root.find(".inspiration-checkbox");
-				if (inspiration.length) char.inspiration = inspiration.is(":checked");
-				var successes = $root.find(".death-save-success:checked").length;
-				var failures = $root.find(".death-save-failure:checked").length;
-				char.deathSaves = {successes: successes, failures: failures};
-				char.spellSlots = calculateSpellSlots(char);
-				char.spellAttackBonus = calculateSpellAttackBonus(char);
-				char.spellDC = calculateSpellDC(char);
-				char.passivePerception = calculatePassivePerception(char);
-				char.updated = Date.now();
-				CharactersStore.save(char);
-				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Ficha salva!"});
-				else sheetToast("success", "Ficha salva!");
-			});
-			$root.find("#btn-delete").on("click", function() {
+			// Ações da ficha: no cabeçalho, ao lado do avatar.
+			// Delegação em $root para sobreviver à recriação do cabeçalho.
+			$root.off(".sheetact");
+			$root.on("click.sheetact", "#btn-export-sheet", function() { exportToCah(char); });
+			$root.on("click.sheetact", "#btn-print", function() { window.print(); });
+			$root.on("click.sheetact", "#btn-reorder", toggleSheetReorder);
+			$root.on("click.sheetact", "#btn-reset-order", resetSheetOrder);
+			$root.on("click.sheetact", "#btn-delete", function() {
 				if (!confirm("Excluir esta ficha?")) return;
 				CharactersStore.remove(char.id);
 				currentView = "list"; currentChar = null; renderList();
 			});
-			$root.find("#btn-print").on("click", function() { window.print(); });
-			$root.find("#btn-export-sheet").on("click", function() { exportToCah(char); });
-			$root.find("#btn-reorder").on("click", toggleSheetReorder);
-			$root.find("#btn-reset-order").on("click", resetSheetOrder);
-			// Ocultar/mostrar seções: um toggle por módulo
-			$root.find("#visibility-bar").on("change", "input[type=checkbox]", function() {
-				var id = $(this).closest(".characters__vis-toggle").data("vis");
-				toggleModuleVisibility(char, id);
-			});
+			// Salvamento automático: qualquer alteração na ficha é gravada
+			bindAutoSave(char);
+			// Botão físico/gesto de voltar do celular
+			initBackNavigation();
 			renderModules();
 		} catch (err) {
 			console.error("[Characters] Erro ao renderizar ficha:", err);
@@ -4051,7 +4094,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			var raceTitle = race ? esc(race.name) : "";
 			if (race && char.race && char.race._collapsedLabel) raceTitle += " (" + esc(char.race._collapsedLabel) + ")";
 			else if (char.raceSubraceName) raceTitle += " (" + esc(char.raceSubraceName) + ")";
-			h += '<div class="characters__summary-title">🏰 Raça' + (raceTitle ? ": " + raceTitle : "") + '</div>';
+			h += '<div class="characters__summary-title">Raça' + (raceTitle ? ": " + raceTitle : "") + '</div>';
 			var traits = [];
 			if (race && race.entries) traits = traits.concat(race.entries);
 			if (subObj) {
@@ -4073,7 +4116,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		var bg = getBgObj(char);
 		if (bg) {
 			h += '<div class="characters__summary-box">';
-			h += '<div class="characters__summary-title">📜 Antecedente: ' + esc(bg.name) + '</div>';
+			h += '<div class="characters__summary-title">Antecedente: ' + esc(bg.name) + '</div>';
 			(bg.entries || []).forEach(function(e) { h += featureEntryHtml(e); });
 			var bgSk = [];
 			(bg.skillProficiencies || []).forEach(function(p) {
@@ -4088,7 +4131,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		var classes = charClasses(char);
 		if (classes.length) {
 			h += '<div class="characters__summary-box">';
-			h += '<div class="characters__summary-title">⚔️ Habilidades de Classe</div>';
+			h += '<div class="characters__summary-title">Habilidades de Classe</div>';
 			classes.forEach(function(c, ix) {
 				var clsSrc = (ix === 0 && char.classSource) ? char.classSource : null;
 				var clsAll = classesData.filter(function(x) { return x.name === c.name; });
@@ -4129,13 +4172,13 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		if (skParts.length) profLines.push('<div class="characters__prof-line"><b>Perícias escolhidas:</b> ' + esc(skParts.join(", ")) + '</div>');
 		if (profLines.length) {
 			h += '<div class="characters__summary-box">';
-			h += '<div class="characters__summary-title">🎯 Proficiências & Idiomas</div>' + profLines.join("");
+			h += '<div class="characters__summary-title">Proficiências & Idiomas</div>' + profLines.join("");
 			h += '</div>';
 		}
 		// --- Talentos manuais ---
 		if (char.feats && char.feats.length) {
 			h += '<div class="characters__summary-box">';
-			h += '<div class="characters__summary-title">⭐ Talentos</div>';
+			h += '<div class="characters__summary-title">Talentos</div>';
 			char.feats.forEach(function(f) {
 				h += '<div class="characters__feature-item"><div class="characters__feature-name">' + esc(f.name || f) + '</div>' +
 					(f.source ? '<div class="characters__feature-source">' + esc(f.source) + '</div>' : "") + '</div>';
@@ -4149,7 +4192,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		closeLevelUpSummary();
 		var listHtml = "";
 		if (gained && gained.length) {
-			listHtml += '<div class="characters__summary-title">✨ Novas Habilidades</div>';
+			listHtml += '<div class="characters__summary-title">Novas Habilidades</div>';
 			gained.forEach(function(f) {
 				listHtml += '<div class="characters__feature-item">';
 				listHtml += '<div class="characters__feature-name">' + esc(f.name) +

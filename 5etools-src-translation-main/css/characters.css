@@ -126,7 +126,6 @@
 .characters__coin-group{min-width:128px;flex:0 1 auto}
 .characters__coin-group label{font-size:.78em;margin-bottom:2px}
 .characters__btn.active{outline:2px solid #006bc4;outline-offset:1px}
-.characters__toast{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:2000;padding:10px 18px;border-radius:8px;color:#fff;font-size:.92em;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:90vw;text-align:center;animation:charToastIn .18s ease}
 .characters__toast--success{background:#1a7f37}
 .characters__toast--info{background:#006bc4}
 .characters__toast--danger{background:#c7363f}
@@ -348,3 +347,182 @@ body #characters-main{padding-top:0}
 /* Lista de classes no popup de subir de nível */
 .characters__levelup-classes{display:flex;flex-direction:column;gap:6px;margin:8px 0}
 .characters__levelup-classes .characters__btn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:10px 12px;font-size:.95em}
+/* Editor inline de informações (segurar) */
+.characters__info-editable { cursor: pointer; border-bottom: 1px dotted #999; padding: 0 2px; }
+.characters__info-editable:focus { outline: 1px solid #006bc4; }
+.characters__edit-input { width: auto; padding: 4px 8px; font-size: .9em; min-width: 120px; }
+#hpdice-overlay .characters__btn { margin: 4px 4px 0 0; }
+
+/* Barra de ações da ficha e destaques de item */
+.characters__sheet-actions-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.characters__item-name { font-weight: 600; color: #f0f0f0; }
+.characters__weapon-dmg { font-weight: 400; color: #9ab; font-size: .88em; margin-left: 4px; }
+
+/* === Equipamento: abas (tabs) === */
+.characters__tabs {
+display: flex;
+gap: 4px;
+margin-bottom: 8px;
+border-bottom: 2px solid #e0e0e0;
+padding: 0;
+list-style: none;
+}
+.characters__tab-item {
+padding: 8px 16px;
+border-radius: 6px 6px 0 0;
+cursor: pointer;
+font-size: .85em;
+font-weight: 500;
+color: #666;
+background: #f0f0f0;
+border: 1px solid #ddd;
+border-bottom: none;
+transition: all .2s;
+}
+.characters__tab-item:hover { background: #e9ecef; }
+.characters__tab-item.active {
+background: #006bc4;
+color: #fff;
+border-color: #006bc4;
+}
+.characters__tab-content { display: none; }
+.characters__tab-content#tab-equipped,
+.characters__tab-content#tab-weapons,
+.characters__tab-content#tab-inventory { display: none; }
+#tab-equipped[style*="block"],
+#tab-weapons[style*="block"],
+#tab-inventory[style*="block"] { display: block !important; }
+
+/* === Itens equipados === */
+.characters__sheet-item--equipped {
+position: relative;
+display: flex;
+align-items: center;
+gap: 6px;
+padding: 6px 8px;
+border: 1px solid #e0e0e0;
+border-radius: 4px;
+background: #f8f9fa;
+margin-bottom: 4px;
+}
+.characters__equipped-badge {
+font-size: .7em;
+font-weight: 600;
+color: #28a745;
+background: #e6f4ea;
+border: 1px solid #28a745;
+border-radius: 3px;
+padding: 2px 8px;
+opacity: 0;
+transition: all .2s;
+transform: scale(0.5);
+}
+.characters__sheet-item--equipped:hover .characters__equipped-badge,
+.characters__equipped-badge--active {
+opacity: 1;
+transform: scale(1);
+}
+.characters__btn--unequip {
+border-radius: 3px;
+padding: 2px 8px;
+font-size: .8em;
+}
+
+/* === Inventário: armas e itens === */
+.characters__sheet-item--weapon,
+.characters__sheet-item--inventory {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 6px;
+padding: 6px 8px;
+border: 1px solid #e0e0e0;
+border-radius: 4px;
+background: #fafafa;
+margin-bottom: 4px;
+}
+.characters__weapon-dmg {
+font-size: .8em;
+color: #666;
+margin-left: 8px;
+}
+.characters__weapon-mod {
+width: 100px;
+padding: 2px 6px;
+font-size: .8em;
+margin: 0 6px;
+}
+.characters__item-qty {
+font-size: .75em;
+color: #999;
+margin-left: 4px;
+}
+
+/* === Detalhamento de CA === */
+.characters__ac-breakdown {
+margin-top: 8px;
+padding: 6px 10px;
+background: #f8f9fa;
+border: 1px solid #ddd;
+border-radius: 4px;
+font-size: .85em;
+}
+.characters__ac-line { display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.characters__ac-label { color: #666; font-weight: 500; }
+.characters__ac-components {
+display: flex;
+flex-wrap: wrap;
+gap: 2px 6px;
+font-size: .8em;
+color: #888;
+}
+
+/* === Popups de detalhe (compatível com overlay existente) === */
+#itemeditor-overlay .characters__detail,
+#itemdetail-overlay .characters__detail {
+max-width: 520px;
+max-height: 90vh;
+overflow-y: auto;
+}
+
+/* === Dropdown de adicionar item === */
+.characters__action-menu {
+position: fixed;
+z-index: 5000;
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 6px;
+box-shadow: 0 4px 12px rgba(0,0,0,.15);
+padding: 4px;
+min-width: 200px;
+}
+.characters__actions-item {
+display: block;
+width: 100%;
+text-align: left;
+padding: 8px 12px;
+border: none;
+background: transparent;
+cursor: pointer;
+font-size: .85em;
+}
+.characters__actions-item:hover { background: #f0f0f0; }
+
+/* === Barra de ações === */
+.characters__actions-bar { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* === Ataques & Ações: arma em duas linhas + popup === */
+.characters__attacks-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:16px 0 14px}
+.characters__attacks-head .characters__subtitle{margin:0}
+.characters__attack-item2{cursor:pointer;border:1px solid #dfe3ea;border-radius:7px;background:#ffffff;padding:8px 12px;margin-bottom:8px}
+.characters__attack-item2:active{background:#f3f6fb}
+.characters__attack-l1{display:flex;align-items:baseline;gap:8px}
+.characters__attack-l1 .characters__attack-name{flex:1;font-size:1.02em;font-weight:700;color:#1c2430}
+.characters__attack-src{font-size:.75em;color:#7a8494;font-weight:400}
+.characters__attack-hit2{font-weight:800;color:#0b5ed7;font-size:1.05em}
+.characters__attack-l2{display:flex;align-items:baseline;gap:8px;margin-top:3px;font-size:.8em;color:#5b6572}
+.characters__attack-props{flex:1}
+.characters__attack-dmg2{white-space:nowrap}
+.characters__attack-mode-row{display:flex;align-items:center;gap:8px;margin:10px 0 8px}
+.characters__toast{position:fixed;left:50%;bottom:22px;top:auto;transform:translateX(-50%);z-index:4000;padding:14px 22px;border-radius:10px;color:#fff;font-size:1.02em;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:92vw;text-align:center;animation:charToastIn .18s ease}
+.characters__toast{cursor:pointer}

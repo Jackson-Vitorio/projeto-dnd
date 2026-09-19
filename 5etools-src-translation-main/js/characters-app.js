@@ -186,7 +186,7 @@
 			alignment:"Neutro", playerName:"", experience:0,
 			spells:[], spellSlots:{}, spellAttackBonus:0, spellDC:0,
 			features:[], feats:[], specialAbilities:[], selectableFeatures:[],
-			equipment:[], weapons:[], armors:[], inventory:[],
+			equipment:[], weapons:[{name:"Ataque Desarmado", dmg1:"1", dmgType:"Contundente", modifier:"str", equipped:true, isDefault:true}], armors:[], inventory:[],
 			coins:{gold:0,silver:0,copper:0,platinum:0,electrum:0},
 			conditions:[], inspiration:false, deathSaves:{failures:0,successes:0},
 			notes:"", personality:"", ideals:"", bonds:"", flaws:"",
@@ -1009,12 +1009,14 @@
 		html += '<div>' + esc(langs.fixed.length ? langs.fixed.join(", ") : "Nenhum idioma fixo.") + '</div>';
 		html += '</div>';
 		var totalChoices = langs.choices;
+		var fixedSet = {};
+		langs.fixed.forEach(function(l) { fixedSet[l] = true; });
 		if (totalChoices > 0) {
 			html += '<div class="characters__summary-box"><div class="characters__summary-title">' + totalChoices + ' idioma' + (totalChoices > 1 ? 's' : '') + ' à sua escolha</div>';
 			for (var li = 0; li < totalChoices; li++) {
 				html += '<div class="characters__form-group"><label class="characters__form-label">Escolha ' + (li + 1) + '</label>';
-				html += '<select class="characters__form-select lang-pick"><option value="">Selecione...</option>';
-				LANG_STANDARD.forEach(function(l) { html += '<option value="' + esc(l) + '">' + esc(l) + '</option>'; });
+				html += '<select class="characters__form-select lang-pick" data-fixed="' + esc(langs.fixed.join(",")) + '"><option value="">Selecione...</option>';
+				LANG_STANDARD.forEach(function(l) { html += '<option value="' + esc(l) + '"' + (fixedSet[l] ? ' disabled' : '') + '>' + esc(l) + '</option>'; });
 				html += '</select></div>';
 			}
 			html += '</div>';
@@ -1045,12 +1047,27 @@
 		$form.html(html);
 		// pré-selecionar idiomas anteriores
 		$form.find(".lang-pick").each(function(ix) { if (prevChoices[ix]) $(this).val(prevChoices[ix]); });
+		// impedir idiomas repetidos: desabilita fixos + já escolhidos entre os selects
+		function refreshLangDisabled() {
+			var chosen = {};
+			langs.fixed.forEach(function(l) { chosen[l] = true; });
+			$form.find(".lang-pick").each(function() { var v = this.value; if (v) chosen[v] = true; });
+			$form.find(".lang-pick").each(function() {
+				var own = this.value; // não desabilitar a própria seleção (jQuery .val() ignora option disabled)
+				$(this).find("option").each(function() {
+					var $o = $(this); var v = this.value;
+					$o.prop("disabled", v && chosen[v] && v !== own);
+				});
+			});
+		}
+		refreshLangDisabled();
+		$form.on("change", ".lang-pick", refreshLangDisabled);
 		$form.find("#btn-prev").on("click", function() { creationStep = 4; renderCreation(); });
 		$form.find("#btn-next").on("click", function() {
 			// Idiomas
 			var picks = [], dup = false;
 			$form.find(".lang-pick").each(function() {
-				var v = $(this).val();
+				var v = this.value; // leitura nativa: imune a options disabled
 				if (!v || picks.indexOf(v) >= 0) dup = true;
 				else picks.push(v);
 			});
@@ -2103,7 +2120,7 @@
 
 
 // === FICHA POR MÓDULOS REORGANIZÁVEIS ===
-	var SHEET_MODULE_DEFAULT_ORDER = ["abilities", "combat", "skills", "attacks", "spells", "features", "equipment", "notes"];
+	var SHEET_MODULE_DEFAULT_ORDER = ["notes", "abilities", "combat", "skills", "attacks", "spells", "features", "equipment"];
 	var SHEET_MODULE_DEFS = null;
 
 	function buildSheetHeader(char) {
@@ -2127,7 +2144,7 @@
 		html += '<div class="characters__sheet-detail">' + esc(char.alignment || "Neutro") + ' • Jogador: ' + esc(char.playerName || "—") + '</div>';
 		html += '<div class="characters__sheet-actions">';
 		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-export-sheet">Exportar .cah</button>';
-		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-print" title="Imprimir">Imprimir</button>';
+		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-print" title="Histórico de Rolagens">Histórico</button>';
 		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-reorder">Reorganizar</button>';
 		html += '<button class="characters__btn characters__btn--danger characters__btn--sm" id="btn-delete">Excluir</button>';
 		html += '</div>';
@@ -2163,6 +2180,21 @@
 		setTimeout(function() { $t.remove(); }, 2000);
 	}
 
+	// Resultado de rolagem: popup persistente (só some ao tocar) + histórico da ficha
+	function pushRollHistory(char, msg, type) {
+		if (!char.rollHistory) char.rollHistory = [];
+		char.rollHistory.unshift({t: Date.now(), msg: msg, type: type || "info"});
+		if (char.rollHistory.length > 100) char.rollHistory.length = 100;
+		CharactersStore.save(char);
+	}
+	function showRollResult(type, content) {
+		$(".characters__toast").remove();
+		pushRollHistory(currentChar, content, type);
+		var types = {success: "characters__toast--success", info: "characters__toast--info", danger: "characters__toast--danger"};
+		var $t = $('<div class="characters__toast ' + (types[type] || types.info) + '" title="Toque para fechar">' + esc(content) + '</div>');
+		$t.on("click", function() { $t.remove(); });
+		$(document.body).append($t);
+	}
 	function rollD20WithBonus(bonus, label) {
 		var r = 1 + Math.floor(Math.random() * 20);
 		var total = r + (bonus || 0);
@@ -2170,14 +2202,44 @@
 		var type = "info";
 		if (r === 20) { msg += " — NATURAL 20!"; type = "success"; }
 		if (r === 1) { msg += " — natural 1..."; type = "danger"; }
-		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: type, content: msg});
-		else sheetToast(type, msg);
+		showRollResult(type, msg);
+	}
+	function openRollHistoryPopup(char) {
+		$("#rollhist-overlay").remove();
+		var list = (char && char.rollHistory) || [];
+		var h = '<div class="characters__detail-overlay" id="rollhist-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Histórico de Rolagens</div>';
+		h += '<div class="characters__detail-body" style="max-height:360px;overflow:auto">';
+		if (!list.length) h += '<div style="color:#667085;font-size:.9em">Nenhuma rolagem ainda.</div>';
+		list.forEach(function(r, ix) {
+			var d = new Date(r.t);
+			var hh = ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+			var col = r.type === "success" ? "#2e9e5b" : (r.type === "danger" ? "#d9534f" : "#7ab7ff");
+			h += '<div class="characters__detail-part" style="border-left:3px solid ' + col + ';margin-bottom:6px"><span style="color:#667085">' + hh + '</span><span>' + esc(r.msg) + '</span></div>';
+		});
+		h += '</div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--danger" id="rh-clear">Limpar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="rh-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#rollhist-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#rh-close").on("click", function() { $ov.remove(); });
+		$ov.find("#rh-clear").on("click", function() { char.rollHistory = []; CharactersStore.save(char); $ov.remove(); openRollHistoryPopup(char); });
 	}
 
+	// Garante ataque desarmado padrão em fichas antigas (sem duplicar)
+	function ensureDefaultUnarmed(char) {
+		if (!char || !Array.isArray(char.weapons)) return;
+		var has = char.weapons.some(function(w) { return w && (w.isDefault || /desarmado/i.test(w.name || "")); });
+		if (!has) char.weapons.unshift({name:"Ataque Desarmado", dmg1:"1", dmgType:"Contundente", modifier:"str", equipped:true, isDefault:true});
+	}
 	function getSheetOrder(char) {
+		ensureDefaultUnarmed(char);
 		var ids = (char && Array.isArray(char.sheetOrder)) ? char.sheetOrder.slice() : [];
 		ids = ids.filter(function(id) { return id && SHEET_MODULE_DEFS[id]; });
-		SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) { if (ids.indexOf(id) === -1) ids.push(id); });
+		if (!ids.length) ids = SHEET_MODULE_DEFAULT_ORDER.slice();
+		else SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) { if (ids.indexOf(id) === -1) ids.push(id); });
 		// Filtra aba de magias: só aparece se for classe conjuradora
 		if (!isAnyCaster(char)) ids = ids.filter(function(id){ return id !== "spells"; });
 		// Seções ocultas continuam na lista: são exibidas colapsadas (toque no título alterna)
@@ -2413,9 +2475,49 @@ function sheetOrderIds() {
 	var CONDITION_KEYS = Object.keys(CONDITION_NAMES).sort();
 	function openConditionsPanel(char){closeConditionsPanel();var cur=char.conditions||[];var h='<div class="characters__detail-overlay" id="conditions-overlay"><div class="characters__detail">';h+='<div class="characters__detail-title">Condições & Doenças</div>';h+='<div class="characters__conditions-grid">';CONDITION_KEYS.forEach(function(k){var a=cur.indexOf(k)>=0;h+='<button type="button" class="characters__cond-btn'+(a?' is-active':'')+'" data-cond="'+k+'">'+CONDITION_NAMES[k]+'</button>';});h+='</div>';h+='<div class="characters__detail-actions"><button class="characters__btn characters__btn--primary" id="conds-ok">OK</button></div>';h+='</div></div>';$(document.body).append(h);var $ov=$('#conditions-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeConditionsPanel();});$ov.find('.characters__cond-btn').on('click',function(){$(this).toggleClass('is-active');});$ov.find('#conds-ok').on('click',function(){var s=[];$ov.find('.characters__cond-btn.is-active').each(function(){s.push($(this).data('cond'));});char.conditions=s;closeConditionsPanel();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Condições atualizadas!'});else sheetToast('success','Condições atualizadas!');});}
 	function closeConditionsPanel(){$('#conditions-overlay').remove();}
-	function openCharInfo(char){char=char||currentChar;closeCharInfo();var h='<div class="characters__detail-overlay" id="charinfo-overlay"><div class="characters__detail characters__detail--wide">';h+='<div class="characters__detail-title">Informações</div>';h+='<div class="characters__info-scroll">'+(char?buildInfoContent(char):'<div class="characters__detail-auto">Sem personagem selecionado.</div>')+'</div>';h+='<div class="characters__detail-actions"><button class="characters__btn characters__btn--primary" id="charinfo-ok">Fechar</button></div>';h+='</div></div>';$(document.body).append(h);var $ov=$('#charinfo-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeCharInfo();});$ov.find('#charinfo-ok').on('click',closeCharInfo);}
+	function bindInfoEditable($ov, char) {
+		var hold = 0;
+		$ov.off('.edit').on('mousedown.edit touchstart.edit', '.characters__info-editable', function(e) {
+			e.preventDefault();
+			var $s = $(e.currentTarget);
+			if ($s.data('editing')) return;
+			$s.data('pending', true);
+			hold = window.setTimeout(function() { startEdit($s); }, 600);
+		});
+		$ov.on('mouseup.edit mouseleave.edit touchend.edit', '.characters__info-editable', function(e) {
+			var $s = $(e.currentTarget);
+			if ($s.data('pending')) { clearTimeout(hold); $s.removeData('pending'); }
+		});
+		function startEdit($s) {
+			$s.removeData('pending');
+			$s.data('editing', true);
+			var key = $s.data('edit');
+			var old = $s.text();
+			var $in = $('<input type="text" class="characters__form-input characters__edit-input">').val(old);
+			$s.html($in);
+			$in.focus(); $in[0].select();
+			var committed = false;
+			function revert() { $s.removeData('editing'); $s.text(old); }
+			function commit() {
+				if (committed) return; committed = true;
+				$s.removeData('editing');
+				var val = $in.val().trim();
+				if (key === 'languages') { char.languages = val ? val.split(/\s*,\s*/).filter(Boolean) : []; }
+				else { try { char[key] = isNaN(val) ? val : parseFloat(val); } catch (e) {} }
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				$s.text(val);
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:'Informação atualizada!'});
+				else sheetToast('success','Informação atualizada!');
+			}
+			$in.off('blur.edit');
+			$in.on('keydown', function(ev) { if (ev.key === 'Enter') { $in.off('blur.edit'); commit(); } if (ev.key === 'Escape') { $in.off('blur.edit'); revert(); } });
+			$in.on('blur.edit', commit);
+		}
+	}
+		function openCharInfo(char){char=char||currentChar;closeCharInfo();var h='<div class="characters__detail-overlay" id="charinfo-overlay"><div class="characters__detail characters__detail--wide">';h+='<div class="characters__detail-title">Informações</div>';h+='<div class="characters__info-scroll">'+(char?buildInfoContent(char):'<div class="characters__detail-auto">Sem personagem selecionado.</div>')+'</div>';h+='<div class="characters__detail-actions"><button class="characters__btn characters__btn--primary" id="charinfo-ok">Fechar</button></div>';h+='</div></div>';$(document.body).append(h);var $ov=$('#charinfo-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeCharInfo();});bindInfoEditable($ov, char);$ov.find('#charinfo-ok').on('click',closeCharInfo);}
 	function closeCharInfo(){$('#charinfo-overlay').remove();}
-	function openRestMenu(char){closeRestMenu();var h='<div class="characters__detail-overlay" id="rest-overlay"><div class="characters__detail">';h+='<div class="characters__detail-title">Descanso & Recuperação</div>';h+='<div class="characters__rest-info"><b>Descanso Curto (1h):</b> gaste dados de vida para recuperar PV; recupera algumas habilidades.</div>';h+='<div class="characters__rest-info"><b>Descanso Longo (8h):</b> recupera todo PV, metade dos dados de vida, espaços de magia e habilidades.</div>';h+='<div class="characters__detail-actions">';h+='<button class="characters__btn characters__btn--secondary" id="rest-short">Descanso Curto</button>';h+='<button class="characters__btn characters__btn--primary" id="rest-long">Descanso Longo</button>';h+='</div></div></div>';$(document.body).append(h);var $ov=$('#rest-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeRestMenu();});$ov.find('#rest-short').on('click',function(){var hd=CLASS_HIT_DICE[char.className]||8;var conM=calcMod((char.scores.con||8)+(char.rawScores.con||0));var max=char.hp&&char.hp.max?char.hp.max:(hd+conM);var cur=char.hp&&char.hp.current!=null?char.hp.current:max;if(!char.hp)char.hp={};char.hp.current=Math.min(max,cur+Math.floor(hd/2)+1+conM);char.deathSaves={failures:0,successes:0};closeRestMenu();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Descanso curto! PV recuperado.'});else sheetToast('success','Descanso curto! PV recuperado.');});$ov.find('#rest-long').on('click',function(){if(!char.hp)char.hp={};char.hp.current=char.hp.max||char.hp.current;char.hp.temp=0;char.deathSaves={failures:0,successes:0};if(char.conditions&&char.conditions.indexOf('Exhaustion')>=0)char.conditions=char.conditions.filter(function(c){return c!=='Exhaustion';});closeRestMenu();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado.'});else sheetToast('success','Descanso longo! PV total restaurado.');});}
+	function openRestMenu(char){closeRestMenu();var h='<div class="characters__detail-overlay" id="rest-overlay"><div class="characters__detail">';h+='<div class="characters__detail-title">Descanso & Recuperação</div>';h+='<div class="characters__rest-info"><b>Descanso Curto (1h):</b> gaste dados de vida para recuperar PV; recupera algumas habilidades.</div>';h+='<div class="characters__rest-info"><b>Descanso Longo (8h):</b> recupera todo PV, metade dos dados de vida, espaços de magia e habilidades.</div>';h+='<div class="characters__detail-actions">';h+='<button class="characters__btn characters__btn--secondary" id="rest-short">Descanso Curto</button>';h+='<button class="characters__btn characters__btn--primary" id="rest-long">Descanso Longo</button>';h+='</div></div></div>';$(document.body).append(h);var $ov=$('#rest-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeRestMenu();});$ov.find('#rest-short').on('click',function(){closeRestMenu();openShortRestPopup(char,function(total){char.deathSaves={failures:0,successes:0};renderModules();var msg=total>0?('Descanso curto! '+total+' PV recuperados.'):'Descanso curto concluido.';if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:msg});else sheetToast('success',msg);});});$ov.find('#rest-long').on('click',function(){if(!char.hp)char.hp={};char.hp.current=char.hp.max||char.hp.current;char.hp.temp=0;char.deathSaves={failures:0,successes:0};if(char.conditions&&char.conditions.indexOf('Exhaustion')>=0)char.conditions=char.conditions.filter(function(c){return c!=='Exhaustion';});closeRestMenu();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado.'});else sheetToast('success','Descanso longo! PV total restaurado.');});}
 function closeRestMenu(){$('#rest-overlay').remove();}
 	function openMulticlassDialog(char) {
 		closeMulticlassDialog();
@@ -2994,12 +3096,8 @@ function doLevelUp(char, classIdx) {
 	var hd = CLASS_HIT_DICE[clsName] || 8;
 	var conM = calcMod((char.scores.con||8)+(char.rawScores.con||0));
 	if (!char.hp) char.hp = {};
-	if (!ovHas(char,"hp.max")) {
-		var hpBase = char.hp.max || (hd + conM);
-		char.hp.max = hpBase + Math.floor(hd / 2) + 1 + conM;
-		char.hp.current = char.hp.max;
-	}
-	char.spellSlots = calculateSpellSlots(char);
+	function levelUpTail() {
+		char.spellSlots = calculateSpellSlots(char);
 	char.spellAttackBonus = calculateSpellAttackBonus(char);
 	char.spellDC = 8 + char.spellAttackBonus;
 	char.passivePerception = calculatePassivePerception(char);
@@ -3062,6 +3160,13 @@ function doLevelUp(char, classIdx) {
 		return;
 	}
 	runPending();
+	}
+	// Dado de vida: ao subir de nível, perguntar média x rolagem (PV não sobrescrito)
+	if (!ovHas(char, "hp.max")) {
+		openHpDiceRollPopup(char, hd, conM, levelUpTail, true);
+	} else {
+		levelUpTail();
+	}
 }
 
 function openActionsMenu(char, $trigger) {
@@ -3082,27 +3187,118 @@ function openActionsMenu(char, $trigger) {
 		setTimeout(function(){ $(document).on('click.actionsmenu', function(){ close(); }); }, 0);
 	}
 	function closeActionsMenu() { $('#actions-menu').remove(); $(document).off('.actionsmenu'); }
-	function doShortRest(char) {
+	function openHpDiceRollPopup(char, hd, conM, onDone, defaultAvg) {
+		closeHpDicePopup();
+		var avg = Math.floor(hd / 2) + 1 + conM;
+		var h = '<div class="characters__detail-overlay" id="hpdice-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Dado de Vida (d' + hd + ')</div>';
+		h += '<div class="characters__rest-info">Bônus de CON: ' + (conM >= 0 ? '+' : '') + conM + '.</div>';
+		h += '<div class="characters__rest-info">Média garantida: <b>' + avg + '</b> PV.</div>';
+		h += '<div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="hp-avg">Usar Média (' + avg + ')</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="hp-roll">Rolagem d' + hd + '</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="hp-cancel">Cancelar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		function doHeal(amount) {
+			if (!char.hp) char.hp = {};
+			var prevMax = char.hp.max || (hd + conM);
+			var cur = (char.hp.current != null) ? char.hp.current : prevMax;
+			var wasMax = (char.hp.current == null) || cur >= prevMax;
+			char.hp.max = prevMax + amount;
+			char.hp.current = wasMax ? char.hp.max : Math.min(char.hp.max, cur + amount);
+			char.updated = Date.now();
+			CharactersStore.save(char);
+		}
+		function finish() { closeHpDicePopup(); onDone && onDone(); }
+		var $ov = $('#hpdice-overlay');
+		$ov.on('click', function(e) { if (e.target === $ov[0]) onCancel(); });
+		$ov.find('#hp-avg').on('click', function() { doHeal(avg); finish(); });
+		$ov.find('#hp-roll').on('click', function() { doHeal((Math.floor(Math.random() * hd) + 1) + conM); finish(); });
+		function onCancel() { if (defaultAvg) { doHeal(avg); } finish(); }
+		$ov.find('#hp-cancel').on('click', onCancel);
+	}
+	function closeHpDicePopup() { $('#hpdice-overlay').remove(); }
+	// Descanso curto (PHB): gastar qualquer nº de Dados de Vida, rolando cada um
+	// (dN + mod CON) e recuperando o total. Máximo de dados = nível - já gastos.
+	function openShortRestPopup(char, onDone) {
+		closeHpDicePopup();
 		var hd = CLASS_HIT_DICE[char.className] || 8;
 		var conM = calcMod((char.scores.con || 8) + (char.rawScores.con || 0));
-		var max = char.hp && char.hp.max ? char.hp.max : (hd + conM);
-		var cur = char.hp && char.hp.current != null ? char.hp.current : max;
-		if (!char.hp) char.hp = {};
-		char.hp.current = Math.min(max, cur + Math.floor(hd/2) + 1 + conM);
-		char.deathSaves = {failures:0,successes:0};
-		renderModules();
-		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:'Descanso curto! PV recuperado.'});
-		else sheetToast('success','Descanso curto! PV recuperado.');
+		var level = 1;
+		(char.classes || []).forEach(function(c) { level += c.level || 0; });
+		if (!level && char.level) level = char.level;
+		if (!char.hdUsed) char.hdUsed = 0;
+		var rolls = [];
+		var h = '<div class="characters__detail-overlay" id="hpdice-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Descanso Curto — Dados de Vida (d' + hd + ')</div>';
+		h += '<div class="characters__rest-info">Bônus de CON: ' + (conM >= 0 ? '+' : '') + conM + '</div>';
+		h += '<div class="characters__rest-info" id="hd-left"></div>';
+		h += '<div class="characters__rest-info" id="hd-rolls"></div>';
+		h += '<div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="hd-roll">Rolar d' + hd + '</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="hd-done">Concluir</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="hd-cancel">Cancelar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $('#hpdice-overlay');
+		function refresh() {
+			var left = Math.max(0, level - char.hdUsed);
+			$ov.find('#hd-left').html('Dados de vida disponíveis: <b>' + left + '</b>/' + level);
+			$ov.find('#hd-rolls').html(rolls.length ? 'Rolagens: ' + rolls.join(' + ') + ' = <b>' + rolls.reduce(function(a,b){return a+b;},0) + ' PV</b>' : 'Nenhuma rolagem ainda.');
+			$ov.find('#hd-roll').prop('disabled', left <= 0);
+		}
+		function finish(cancelled) {
+			closeHpDicePopup();
+			if (cancelled) return;
+			var total = rolls.reduce(function(a,b){return a+b;},0);
+			if (total > 0) {
+				if (!char.hp) char.hp = {};
+				var max = char.hp.max || (hd + conM);
+				var cur = (char.hp.current != null) ? char.hp.current : max;
+				char.hp.current = Math.min(max, cur + total);
+				char.updated = Date.now();
+				CharactersStore.save(char);
+			}
+			onDone && onDone(total);
+		}
+		$ov.on('click', function(e) { if (e.target === $ov[0]) finish(true); });
+		$ov.find('#hd-roll').on('click', function() {
+			if (char.hdUsed >= level) return;
+			var r = Math.floor(Math.random() * hd) + 1;
+			char.hdUsed++;
+			rolls.push(r + conM);
+			refresh();
+		});
+		$ov.find('#hd-done').on('click', function() { finish(false); });
+		$ov.find('#hd-cancel').on('click', function() { finish(true); });
+		refresh();
 	}
+	function doShortRest(char) {
+		openShortRestPopup(char, function(total) {
+			char.deathSaves = {failures:0,successes:0};
+			renderModules();
+			var msg = total > 0 ? ('Descanso curto! ' + total + ' PV recuperados.') : 'Descanso curto concluído.';
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:msg});
+			else sheetToast('success',msg);
+		});
+	}
+
 	function doLongRest(char) {
 		if (!char.hp) char.hp = {};
 		char.hp.current = char.hp.max || char.hp.current;
 		char.hp.temp = 0;
 		char.deathSaves = {failures:0,successes:0};
+		// Recupera metade do máximo de Dados de Vida (mínimo 1)
+		var level = 1;
+		(char.classes || []).forEach(function(c) { level += c.level || 0; });
+		if (!level && char.level) level = char.level;
+		if (!char.hdUsed) char.hdUsed = 0;
+		char.hdUsed = Math.max(0, level - Math.max(1, Math.floor(level / 2)));
 		if (char.conditions && char.conditions.indexOf('Exhaustion') >= 0) char.conditions = char.conditions.filter(function(c){return c!=='Exhaustion';});
 		renderModules();
-		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado.'});
-		else sheetToast('success','Descanso longo! PV total restaurado.');
+		if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado e dados de vida recuperados.'});
+		else sheetToast('success','Descanso longo! PV total restaurado e dados de vida recuperados.');
 	}
 
 	// Calcula a CA a partir das armaduras registradas (melhor armadura + escudos)
@@ -3158,6 +3354,15 @@ function renderModuleCombat($body, char) {
 		html += '<label>PV Temporário <input type="number" class="characters__form-input characters__hp-input" id="in-hp-temp" value="' + hpTemp + '" min="0"></label>';
 		html += '</div>';
 
+		// Dados de Vida: contador com atualização ao vivo
+		var level = 1;
+		(charClasses(char) || []).forEach(function(c) { level += (c.level || 1) - 1; });
+		if (char.level && !(char.classes && char.classes.length)) level = char.level;
+		var hdLeft = Math.max(0, level - (char.hdUsed || 0));
+		html += '<div class="characters__hp-editors" id="hd-counter-row">';
+		html += '<label>Dados de Vida (d' + hd + '): <b id="hd-counter" style="color:' + (hdLeft > 0 ? "#2e9e5b" : "#d9534f") + '">' + hdLeft + '</b>/' + level + ' disponíveis</label>';
+		html += '</div>';
+
 		html += '<div class="characters__status-row">';
 		html += '<label class="characters__status-check"><input type="checkbox" class="inspiration-checkbox" ' + (char.inspiration ? "checked" : "") + '> Inspiração</label>';
 		if (hpDead) {
@@ -3171,6 +3376,26 @@ function renderModuleCombat($body, char) {
 		html += '</div>';
 		}
 		html += '</div>';
+
+		// Dados de Vida: atualização ao vivo em toda a ficha (contador + popups abertos)
+		function refreshHdEverywhere() {
+			var lvl = 1;
+			(charClasses(char) || []).forEach(function(c) { lvl += (c.level || 1) - 1; });
+			if (char.level && !(char.classes && char.classes.length)) lvl = char.level;
+			var left = Math.max(0, lvl - (char.hdUsed || 0));
+			$("#hd-counter").text(left).css("color", left > 0 ? "#2e9e5b" : "#d9534f");
+			var $lbl = $("#hd-left");
+			if ($lbl.length) $lbl.html('Dados de vida disponíveis: <b>' + left + '</b>/' + lvl);
+			var $rollBtn = $("#hd-roll");
+			if ($rollBtn.length) $rollBtn.prop("disabled", left <= 0);
+		}
+		var _origSave = CharactersStore.save.bind(CharactersStore);
+		CharactersStore.save = function(c) {
+			var r = _origSave(c);
+			if (c === char) refreshHdEverywhere();
+			return r;
+		};
+		refreshHdEverywhere();
 
 		$body.html(html);
 
@@ -3293,7 +3518,7 @@ function renderModuleCombat($body, char) {
 		html += '</div>';
 
 		html += '<div class="characters__subtitle">Idiomas</div>';
-		html += '<div class="characters__sheet-items"><div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ((char.languages && char.languages.length) ? esc(char.languages.join(", ")) : "—") + '</span> Idiomas</div></div>';
+		html += '<div class="characters__sheet-items"><div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ((char.languages && char.languages.length) ? esc(char.languages.join(", ")) : "—") + '</span></div></div>';
 
 		if (char.otherProficiencies && char.otherProficiencies.length) {
 			html += '<div class="characters__subtitle">Outras Proficiências</div>';
@@ -3310,33 +3535,64 @@ function renderModuleCombat($body, char) {
 	}
 
 	function renderModuleAttacks($body, char) {
-		var profBonus = calcProfBonus(char.level || 1);
-		var strMod = calcMod((char.scores.str || 8) + (char.rawScores.str || 0));
-		var dexMod = calcMod((char.scores.dex || 8) + (char.rawScores.dex || 0));
+		var PROP_PT = {V:"versátil", F:"acuidade", T:"pesada", "2H":"duas mãos", L:"leve", A:"munição", RLD:"recarga", S:"especial", H:"pesada"};
+		var DMG_PT = {P:"perfurante", B:"contundente", S:"cortante", F:"fogo", C:"frio", L:"elétrico", N:"necrótico", T:"trovejante", Y:"psíquico", I:"ácido", O:"veneno"};
+		function dmgTypePt(w, it) {
+			var raw = (w && w.dmgType) || (it && it.dmgType) || "";
+			if (DMG_PT[raw]) return DMG_PT[raw];
+			return String(raw || "").toLowerCase();
+		}
+		function propList(w, it) {
+			var out = [];
+			var props = (w && w.property) || (it && it.property) || [];
+			props.forEach(function(p) { var lbl = PROP_PT[p] || (p === "SIL" ? "prata" : (p === "LD" ? "carregada" : (p === "T" || p === "2H" ? "duas mãos" : null))); if (lbl && out.indexOf(lbl) < 0) out.push(lbl); });
+			if (w && w.twoHand && out.indexOf("duas mãos") < 0) out.push("duas mãos");
+			if (w && w.reload && out.indexOf("recarga") < 0) out.push("recarga");
+			if (w && w.silver && out.indexOf("prata") < 0) out.push("prata");
+			return out;
+		}
+		function weaponBonus(w, it) {
+			var b = 0;
+			var m = String((w && w.bonusWeapon) || (it && it.bonusWeapon) || "").match(/\d+/);
+			if (m) b += parseInt(m[0], 10);
+			if (w && typeof w.magic === "number") b += w.magic;
+			return b;
+		}
 		var weapons = char.weapons || [];
-
-		var html = '<div class="characters__subtitle">Armas</div>';
+		var html = '<div class="characters__attacks-head">';
+		html += '<div class="characters__subtitle" style="margin:0">Armas</div>';
+		html += '<button class="characters__btn characters__btn--sm characters__btn--primary" id="btn-add-weapon-popup">+ Adicionar</button>';
+		html += '</div>';
 		html += '<div class="characters__attacks-list">';
 		if (weapons.length) {
 			weapons.forEach(function(w, wIdx) {
 				var ws = computeWeaponStats(char, w);
+				var it = ws.it || null;
 				var wKey = "atk:" + wIdx + ":";
-				html += '<div class="characters__attack-item">';
-				html += '<div class="characters__attack-name"><a class="ptm-link" href="' + esc(ptmItemHref(w)) + '">' + esc(w.name || w) + '</a></div>';
-				html += '<div class="characters__attack-stats">';
-				html += '<span class="characters__attack-hit">' + ovSpan(char, wKey + "hit", ws.hit, "hit") + ' acertar</span>';
-				html += '<span class="characters__attack-dmg">Dano ' + ovSpan(char, wKey + "dmg", ws.dmgStr, "plain") + esc(ws.dmgType) + '</span>';
+				var bonus = weaponBonus(w, it);
+				var hitTotal = ws.hit + bonus;
+				var props = propList(w, it);
+				var dmgBase = w.dmg1 || ws.dmgBase || "1d4";
+				var dmgType = dmgTypePt(w, it);
+				var tot = ws.abilMod + bonus;
+				var dmgLine = dmgBase + " " + dmgType + (tot !== 0 ? (tot > 0 ? " +" + tot : " −" + Math.abs(tot)) : "");
+				var srcTag = (w.source || (it && it.source)) ? ' <span class="characters__attack-src">[' + esc(w.source || it.source) + ']</span>' : '';
+				html += '<div class="characters__attack-item2" data-weapon-idx="' + wIdx + '">';
+				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + esc(w.name || w) + srcTag + '</span>';
+				html += '<span class="characters__attack-hit2">' + ovSpan(char, wKey + "hit", hitTotal, "hit") + '</span></div>';
+				html += '<div class="characters__attack-l2">';
+				html += '<span class="characters__attack-props">' + esc(props.length ? props.join(", ") : "—") + '</span>';
+				html += '<span class="characters__attack-dmg2">' + ovSpan(char, wKey + "dmg", dmgLine, "plain") + '</span>';
 				html += '</div></div>';
 			});
 		} else {
-			html += '<div class="characters__sheet-item">Nenhuma arma adicionada — use o módulo Equipamentos.</div>';
+			html += '<div class="characters__sheet-item">Nenhuma arma adicionada — use o botão + Adicionar.</div>';
 		}
 		html += '</div>';
-
 		var customs = char.attacks || [];
-		html += '<div class="characters__subtitle">Ações & Ataques personalizados</div>';
-		html += '<div class="characters__attacks-list">';
 		if (customs.length) {
+			html += '<div class="characters__subtitle">Ações personalizadas</div>';
+			html += '<div class="characters__attacks-list">';
 			customs.forEach(function(atk, index) {
 				html += '<div class="characters__attack-item">';
 				html += '<div class="characters__attack-name">' + esc(atk.name || "Ação") + '</div>';
@@ -3347,25 +3603,432 @@ function renderModuleCombat($body, char) {
 				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-attack="' + index + '">×</button>';
 				html += '</div>';
 			});
+			html += '</div>';
 		}
-		html += '<div class="characters__attack-add">';
-		html += '<input type="text" class="characters__form-input" id="atk-name" placeholder="Nome (ex: Rajada de Tiros)">';
-		html += '<input type="text" class="characters__form-input" id="atk-hit" placeholder="Bônus (ex: +6)">';
-		html += '<input type="text" class="characters__form-input" id="atk-dmg" placeholder="Dano (ex: 1d8+3)">';
-		html += '<button class="characters__btn characters__btn--primary" id="btn-add-attack">+ Adicionar</button>';
-		html += '</div></div>';
-
 		$body.html(html);
-		$body.find("#btn-add-attack").on("click", function() {
-			var name = $body.find("#atk-name").val().trim();
-			if (!name) return;
-			if (!char.attacks) char.attacks = [];
-			char.attacks.push({name: name, hit: $body.find("#atk-hit").val().trim(), dmg: $body.find("#atk-dmg").val().trim()});
-			renderModuleAttacks($body, char);
+		// Popup "Adicionar arma": oficial ou personalizada
+		$body.find("#btn-add-weapon-popup").on("click", function() {
+			$("#addweapon-overlay").remove();
+			var h2 = '<div class="characters__detail-overlay" id="addweapon-overlay"><div class="characters__detail">';
+			h2 += '<div class="characters__detail-title">Adicionar Arma</div>';
+			h2 += '<div class="characters__detail-actions" style="flex-direction:column;gap:8px">';
+			h2 += '<button class="characters__btn characters__btn--primary" id="aw-official">Arma Oficial (lista)</button>';
+			h2 += '<button class="characters__btn characters__btn--secondary" id="aw-custom">Criar Arma Personalizada</button>';
+			h2 += '<button class="characters__btn characters__btn--secondary" id="aw-close">Fechar</button>';
+			h2 += '</div></div></div>';
+			$(document.body).append(h2);
+			var $ov2 = $("#addweapon-overlay");
+			$ov2.on("click", function(e) { if (e.target === this) $ov2.remove(); });
+			$ov2.find("#aw-close").on("click", function() { $ov2.remove(); });
+			$ov2.find("#aw-official").on("click", function() {
+				$ov2.remove();
+				openOfficialWeaponPicker(char, function() { renderModuleAttacks($body, char); });
+			});
+			$ov2.find("#aw-custom").on("click", function() {
+				$ov2.remove();
+				openCustomWeaponCreator(char, null, function() { renderModuleAttacks($body, char); });
+			});
+		});
+		// Clique na arma: popup de detalhes com Atacar / Dano
+		$body.find(".characters__attack-item2").on("click", function(e) {
+			if ($(e.target).closest(".characters__ov").length) return;
+			var wIdx = parseInt($(this).data("weapon-idx"), 10);
+			var w = (char.weapons || [])[wIdx];
+			if (w) openWeaponDetailPopup($body, char, w, wIdx);
 		});
 		$body.on("click", "[data-remove-attack]", function() {
 			var index = parseInt($(this).data("remove-attack"), 10);
 			if (char.attacks && char.attacks[index]) { char.attacks.splice(index, 1); renderModuleAttacks($body, char); }
+		});
+	}
+	// ==== Popup de detalhes da arma (Atacar / Dano + modo + edição segurando) ====
+	function closeWeaponDetailPopup() { $("#weapondetail-overlay").remove(); }
+	function openWeaponDetailPopup($body, char, w, wIdx) {
+		closeWeaponDetailPopup();
+		var it = null;
+		itemsData.forEach(function(i) { if (i && i.name === (w.name || w)) it = i; });
+		var ws = computeWeaponStats(char, w);
+		var bonus = 0;
+		var mm = String(w.bonusWeapon || (it && it.bonusWeapon) || "").match(/\d+/);
+		if (mm) bonus += parseInt(mm[0], 10);
+		if (typeof w.magic === "number") bonus += w.magic;
+		var RAR = {none:"Comum", uncommon:"Incomum", rare:"Raro", "very rare":"Muito Raro", legendary:"Lendário", artifact:"Artefato"};
+		var rarityPt = w.rarityPt || (it && (RAR[it.rarity] || it.rarity)) || w.rarity || "Comum";
+		var dmgBase = w.dmg1 || (it && it.dmg1) || "—";
+		var dmgVers = w.dmg2 || (it && it.dmg2) || "";
+		var dmgType = w.dmgType || (it && it.dmgType) || "";
+		var rangeTxt = "—";
+		var rr = it && it.range;
+		if (rr) rangeTxt = (rr.distance ? (rr.distance + " pés") : String(rr));
+		if (w.range) rangeTxt = w.range;
+		var weight = (w.weight != null ? w.weight : (it && it.weight)) || "—";
+		var value = (w.value != null ? w.value : (it && it.value)) || "—";
+		var source = w.source || (it && it.source) || "—";
+		var desc = (it && it.entries) ? it.entries.join("\n") : (w.desc || "Sem descrição.");
+		var magicTxt = (it && (it.bonusWeapon || it.bonusSpellAttack)) ? ("Bônus de arma: " + (it.bonusWeapon || "") + (it.bonusSpellAttack ? " | Bônus de magia: " + it.bonusSpellAttack : "")) : "—";
+		var flags = [];
+		if (w.twoHand) flags.push("Duas mãos");
+		if (w.reload) flags.push("Recarga");
+		if (w.silver) flags.push("Prata");
+		var attMode = "normal";
+		var h = '<div style="z-index:9000 !important;" <div class="characters__detail-overlay" id="weapondetail-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">' + esc(w.name || w) + '</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(source) + '</div>';
+		h += '<div class="characters__detail-row"><b>Raridade:</b> ' + esc(rarityPt) + '</div>';
+		h += '<div class="characters__detail-row"><b>Dano base:</b> ' + esc(dmgBase + (dmgVers ? " / " + dmgVers : "")) + ' ' + esc(dmgType) + '</div>';
+		h += '<div class="characters__detail-row"><b>Alcance:</b> ' + esc(rangeTxt) + '</div>';
+		h += '<div class="characters__detail-row"><b>Peso:</b> ' + esc(String(weight)) + '</div>';
+		h += '<div class="characters__detail-row"><b>Valor:</b> ' + esc(String(value)) + '</div>';
+		h += '<div class="characters__detail-row"><b>Bônus de acerto:</b> +' + (ws.hit + bonus) + ' (';
+		h += '<span style="color:#7ab7ff">prof +' + ws.pb + '</span> + <span style="color:#7ab7ff">' + esc(ws.abilName) + ' ' + fmtSigned(ws.abilMod) + '</span>';
+		if (char.fightingStyle === "Archery" && ws.isRanged) h += ' + <span style="color:#7ab7ff">Arqueirismo +2</span>';
+		if (bonus) h += ' + <span style="color:#f0a30a">mágico +' + bonus + '</span>';
+		h += ')</div>';
+		h += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Dados de dano extra:</b><div id="wd-extra-dmg"></div></div>';
+		h += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Efeitos mágicos:</b><div id="wd-magic-fx"></div></div>';
+		if (w.attunement) h += '<div class="characters__detail-row"><b>Sintonização:</b> Requer sintonização</div>';
+		if (flags.length) h += '<div class="characters__detail-row"><b>Características:</b> ' + esc(flags.join(", ")) + '</div>';
+		h += '<div class="characters__detail-row" style="margin-top:8px"><b>Descrição:</b><div style="white-space:pre-wrap;margin-top:4px;font-size:.9em">' + esc(desc) + '</div></div>';
+		h += '</div>';
+		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:6px">';
+		h += '<select class="characters__form-select" id="wd-mode" style="width:100%">';
+		h += '<option value="normal">Normal</option><option value="adv">Vantagem</option><option value="dis">Desvantagem</option>';
+		h += '</select>';
+		h += '<div style="display:flex;gap:8px;width:100%">';
+		h += '<button class="characters__btn characters__btn--primary" id="wd-attack" style="flex:1">Atacar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="wd-btn-dmg" style="flex:1">Dano</button>';
+		h += '</div>';
+		h += '<button class="characters__btn characters__btn--secondary" id="wd-edit">✎ Editar arma</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="wd-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#weapondetail-overlay");
+		$ov.on("click", function(e) { if (e.target === this) closeWeaponDetailPopup(); });
+		$ov.find("#wd-close").on("click", closeWeaponDetailPopup);
+		$ov.find("#wd-mode").on("change", function() { attMode = this.value; });
+		function extraDmg() { if (!w.extraDmg) w.extraDmg = []; return w.extraDmg; }
+		function extraFx() { if (!w.magicFx) w.magicFx = []; return w.magicFx; }
+		function renderExtraDmg() {
+			var $box = $ov.find("#wd-extra-dmg").empty();
+			extraDmg().forEach(function(d) {
+				var lbl = (d.count || 1) + "d" + d.face + (d.flat ? (d.flat > 0 ? "+" : "") + d.flat : "") + (d.dmgType ? " " + d.dmgType : "");
+				$box.append('<div style="font-size:.9em;margin-top:4px">' + esc(lbl) + '</div>');
+			});
+			if (!extraDmg().length) $box.html('<div style="font-size:.85em;color:#667085">Nenhum</div>');
+		}
+		function renderExtraFx() {
+			var $box = $ov.find("#wd-magic-fx").empty();
+			extraFx().forEach(function(fx) {
+				$box.append('<div style="font-size:.9em;margin-top:4px">' + esc(fx) + '</div>');
+			});
+			if (!extraFx().length) $box.html('<div style="font-size:.85em;color:#667085">Nenhum</div>');
+		}
+		renderExtraDmg();
+		renderExtraFx();
+		$ov.find("#wd-attack").on("click", function() {
+			var b = ws.hit + bonus;
+			if (attMode === "normal") { rollD20WithBonus(b, "Ataque — " + (w.name || w)); return; }
+			var r1 = 1 + Math.floor(Math.random() * 20), r2 = 1 + Math.floor(Math.random() * 20);
+			var keep = (attMode === "adv") ? Math.max(r1, r2) : Math.min(r1, r2);
+			var total = keep + b;
+			var msg = "Ataque — " + (w.name || w) + " [" + (attMode === "adv" ? "Vantagem" : "Desvantagem") + "]: " + r1 + " / " + r2 + " → " + keep + " + " + b + " = " + total;
+			var type = "info";
+			if (keep === 20) { msg += " — NATURAL 20!"; type = "success"; }
+			if (keep === 1) { msg += " — natural 1..."; type = "danger"; }
+			showRollResult(type, msg);
+		});
+		$ov.find("#wd-btn-dmg").on("click", function() {
+			var tot = 0, parts = [];
+			var expr = String(dmgBase === "—" ? "1d4" : dmgBase);
+			var mD = expr.match(/(\d+)d(\d+)/);
+			if (mD) {
+				var n = parseInt(mD[1], 10), f = parseInt(mD[2], 10), acc = [];
+				for (var i = 0; i < n; i++) { var r = 1 + Math.floor(Math.random() * f); acc.push(r); tot += r; }
+				parts.push(mD[1] + "d" + mD[2] + " [" + acc.join("+") + "]");
+			}
+			var mFlat = expr.match(/([+-]\s*\d+)\s*$/);
+			if (mFlat) { var fl = parseInt(mFlat[1].replace(/\s/g, ""), 10); tot += fl; parts.push((fl >= 0 ? "+" : "") + fl); }
+			if (ws.abilMod) { tot += ws.abilMod; parts.push((ws.abilMod > 0 ? "+" : "") + ws.abilMod + " " + ws.abilName); }
+			if (bonus) { tot += bonus; parts.push("+" + bonus + " mágico"); }
+			extraDmg().forEach(function(d) {
+				var acc = [], sub = 0;
+				for (var i = 0; i < (d.count || 1); i++) { var r = 1 + Math.floor(Math.random() * d.face); acc.push(r); sub += r; }
+				if (d.flat) sub += d.flat;
+				tot += sub;
+				parts.push((d.count || 1) + "d" + d.face + (d.flat ? (d.flat > 0 ? "+" : "") + d.flat : "") + (d.dmgType ? " " + d.dmgType : "") + " [" + sub + "]");
+			});
+			showRollResult("info", "Dano — " + (w.name || w) + ": " + tot + (parts.length ? " (" + parts.join(" ") + ")" : ""));
+		});
+		$ov.find("#wd-edit").on("click", function() {
+			closeWeaponDetailPopup();
+			openCustomWeaponCreator(char, w, function() { renderModuleAttacks($body, char); });
+		});
+	}
+	// ==== Popup: adicionar dano extra (tipo de dano + dados + fixo) ====
+	function openExtraDmgPopup($parentOv, w, onDone) {
+		$("#extradmg-overlay").remove();
+		var DMGS = ["Perfurante", "Cortante", "Contundente", "Fogo", "Frio", "Elétrico", "Necrótico", "Psíquico", "Veneno", "Trovejante", "Ácido", "Radiante", "Força"];
+		var FACES = [4, 6, 8, 10, 12, 20];
+		var h = '<div class="characters__detail-overlay" id="extradmg-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Dano Extra</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Tipo de dano</label>';
+		h += '<select class="characters__form-select" id="ed-type">';
+		DMGS.forEach(function(t) { h += '<option value="' + t + '">' + t + '</option>'; });
+		h += '</select></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Tipo de dado</label>';
+		h += '<select class="characters__form-select" id="ed-face">';
+		FACES.forEach(function(f) { h += '<option value="' + f + '">d' + f + '</option>'; });
+		h += '</select></div>';
+		h += '<div class="characters__form-row">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Quantos dados</label>';
+		h += '<input type="number" class="characters__form-input" id="ed-count" value="1" min="1" max="20"></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Dano fixo</label>';
+		h += '<input type="number" class="characters__form-input" id="ed-flat" value="0"></div>';
+		h += '</div></div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="ed-add">Adicionar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="ed-cancel">Cancelar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#extradmg-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#ed-cancel").on("click", function() { $ov.remove(); });
+		$ov.find("#ed-add").on("click", function() {
+			if (!w.extraDmg) w.extraDmg = [];
+			w.extraDmg.push({
+				count: parseInt($ov.find("#ed-count").val(), 10) || 1,
+				face: parseInt($ov.find("#ed-face").val(), 10) || 6,
+				flat: parseInt($ov.find("#ed-flat").val(), 10) || 0,
+				dmgType: $ov.find("#ed-type").val()
+			});
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			$ov.remove();
+			onDone && onDone();
+		});
+	}
+	// ==== Popup: adicionar efeito mágico ====
+	function openMagicFxPopup($parentOv, w, onDone) {
+		$("#magicfx-overlay").remove();
+		var h = '<div class="characters__detail-overlay" id="magicfx-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Efeito Mágico</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Descrição do efeito</label>';
+		h += '<textarea class="characters__form-input" id="fx-desc" rows="3" placeholder="ex: Ao acertar, o alvo recebe 1d6 de fogo extra"></textarea></div>';
+		h += '</div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="fx-add">Adicionar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="fx-cancel">Cancelar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#magicfx-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#fx-cancel").on("click", function() { $ov.remove(); });
+		$ov.find("#fx-add").on("click", function() {
+			var txt = $ov.find("#fx-desc").val().trim();
+			if (!txt) { alert("Descreva o efeito!"); return; }
+			if (!w.magicFx) w.magicFx = [];
+			w.magicFx.push(txt);
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			$ov.remove();
+			onDone && onDone();
+		});
+	}
+
+	// ==== Popup: escolher arma oficial da lista ====
+	function openOfficialWeaponPicker(char, onDone) {
+		$("#wpicker-overlay").remove();
+		var h = '<div class="characters__detail-overlay" id="wpicker-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Arma Oficial</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<input type="text" class="characters__form-input" id="wp-search" placeholder="Buscar arma...">';
+		h += '<div id="wp-results" style="max-height:300px;overflow:auto;margin-top:8px"></div>';
+		h += '</div><div class="characters__detail-actions"><button class="characters__btn characters__btn--secondary" id="wp-close">Fechar</button></div>';
+		h += '</div></div>';
+		$(document.body).append(h);
+		var $ov = $("#wpicker-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#wp-close").on("click", function() { $ov.remove(); });
+		var $res = $ov.find("#wp-results");
+		function list(query) {
+			var q = (query || "").toLowerCase().trim();
+			var isWeapon = function(i) {
+				var t = String(i.type || "").split("|")[0];
+				return t === "M" || t === "R" || i.type === "W" || i.weaponCategory;
+			};
+			var base;
+			if (q.length >= 2) {
+				base = itemsData.filter(function(i) { return isWeapon(i) && i.name.toLowerCase().indexOf(q) >= 0; });
+			} else {
+				base = itemsData.filter(function(i) { return isWeapon(i) && (i.dmg1 || i.baseItem); }).slice(0, 25);
+			}
+			$res.empty();
+			if (!base.length) { $res.html('<div class="characters__search-item">Nenhuma arma encontrada</div>'); return; }
+			base.slice(0, 40).forEach(function(w) {
+				var $it = $('<div class="characters__search-item">');
+				$it.html('<b>' + esc(w.name) + '</b> [' + esc(w.source || "—") + '] ' + esc(w.dmg1 ? (w.dmg1 + " " + (w.dmgType || "")) : ""));
+				$it.on("click", function() {
+					if (!char.weapons) char.weapons = [];
+					char.weapons.push({
+						name: w.name, source: w.source || "",
+						type: (String(w.type || "").split("|")[0] === "R") ? "ranged" : "melee",
+						dmg1: w.dmg1 || "", dmg2: w.dmg2 || "", dmgType: w.dmgType || "",
+						property: w.property || [], weight: w.weight, rarity: w.rarity,
+						bonusWeapon: w.bonusWeapon || "", value: w.value
+					});
+					char.updated = Date.now();
+					CharactersStore.save(char);
+					$ov.remove();
+					if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: w.name + " adicionada."});
+					onDone && onDone();
+				});
+				$res.append($it);
+			});
+		}
+		$ov.find("#wp-search").on("input", function() { list($(this).val()); });
+		list("");
+	}
+	// ==== Popup: criar/editar arma personalizada ====
+	function openCustomWeaponCreator(char, existing, onDone) {
+		$("#wcustom-overlay").remove();
+		var w = existing || {};
+		var DMG_OPTS = ["Perfurante", "Cortante", "Contundente", "Fogo", "Frio", "Elétrico", "Necrótico", "Psíquico", "Veneno", "Trovejante", "Ácido", "Radiante", "Força"];
+		var h = '<div class="characters__detail-overlay" id="wcustom-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">' + (existing ? "Editar Arma" : "Nova Arma Personalizada") + '</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Nome *</label>';
+		h += '<input type="text" class="characters__form-input" id="wc-name" value="' + esc(w.name || "") + '" placeholder="ex: Espada Longa">';
+		h += '</div>';
+		h += '<div class="characters__form-row">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Dano base (dados)</label>';
+		h += '<div style="display:flex;gap:6px;align-items:center">';
+		h += '<input type="number" class="characters__form-input" id="wc-dcount" value="' + (w._dcount || 1) + '" min="1" max="20" style="width:70px">';
+		h += '<span>d</span>';
+		h += '<select class="characters__form-select" id="wc-dface" style="width:auto">';
+		[4, 6, 8, 10, 12, 20].forEach(function(f) { h += '<option value="' + f + '"' + ((w._dface || 8) === f ? " selected" : "") + '>d' + f + '</option>'; });
+		h += '</select>';
+		h += '<span>+</span>';
+		h += '<input type="number" class="characters__form-input" id="wc-dflat" value="' + (w._dflat || 0) + '" style="width:70px">';
+		h += '</div></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Tipo de dano</label>';
+		h += '<select class="characters__form-select" id="wc-dmgtype">';
+		DMG_OPTS.forEach(function(t) { h += '<option value="' + t + '"' + ((w.dmgType || "") === t ? " selected" : "") + '>' + t + '</option>'; });
+		h += '</select></div></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Dados de dano extra</label>';
+		h += '<div id="wc-extra-list"></div>';
+		h += '<button class="characters__btn characters__btn--sm characters__btn--secondary" id="wc-add-extra" type="button" style="margin-top:4px">+ Adicionar dano extra</button>';
+		h += '</div>';
+		h += '<div class="characters__form-row">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Alcance</label>';
+		h += '<input type="text" class="characters__form-input" id="wc-range" value="' + esc(w.range || "") + '" placeholder="ex: 1,5 m"></div>';
+		h += '</div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Características</label>';
+		h += '<div id="wc-props" style="display:flex;flex-wrap:wrap;gap:8px;font-size:.88em">';
+		var ALL_PROPS = [
+			["A", "Alcance (Ammunition)"], ["F", "Acuidade (Finesse)"], ["H", "Pesada (Heavy)"],
+			["L", "Leve (Light)"], ["LD", "Carregada (Loading)"], ["M", "Munição"],
+			["R", "Alcance (Range)"], ["S", "Arremesso (Thrown)"], ["T", "Duas Mãos (Two-Handed)"],
+			["V", "Versátil (Versatile)"], ["2H", "Duas Mãos"], ["RLD", "Recarga (Reload)"],
+			["SIL", "Prata (Silvered)"], ["SP", "Especial (Special)"], ["MMM", "Metal Midas"],
+			["FRS", "Estilhaçadora"], ["BRF", "Perfurante (Brutal)"], ["TSS", "Atordoante"],
+			["HVP", "Alta Velocidade"], ["RNG", "Longa Distância"], ["EXT", "Extra Dano"],
+			["CRB", "Explosiva"], ["FLG", "Flamejante"], ["FRZ", "Congelante"],
+			["SHK", "Chocante"], ["CPS", "Sanguessuga"], ["DRT", "Verde-Veneno"]
+		];
+		ALL_PROPS.forEach(function(p) {
+			var on = (w.property || []).indexOf(p[0]) >= 0;
+			h += '<label style="display:flex;align-items:center;gap:4px"><input type="checkbox" class="wc-prop" value="' + p[0] + '"' + (on ? " checked" : "") + '> ' + p[1] + '</label>';
+		});
+		h += '</div></div>';
+		h += '<div class="characters__form-group"><label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="wc-attune"' + (w.attunement ? " checked" : "") + '> Requer sintonização</label></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Descrição</label>';
+		h += '<textarea class="characters__form-input" id="wc-desc" rows="3" placeholder="Detalhes da arma...">' + esc(w.desc || "") + '</textarea></div>';
+		h += '</div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="wc-save">Salvar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="wc-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#wcustom-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#wc-close").on("click", function() { $ov.remove(); });
+		// Lista de danos extras (igual ao formato do popup de dano extra)
+		var extras = JSON.parse(JSON.stringify(w.extraDmg || []));
+		function renderExtras() {
+			var $box = $ov.find("#wc-extra-list").empty();
+			extras.forEach(function(d, ix) {
+				var lbl = (d.count || 1) + "d" + d.face + (d.flat ? (d.flat > 0 ? "+" : "") + d.flat : "") + (d.dmgType ? " " + d.dmgType : "");
+				var $row = $('<div style="display:flex;align-items:center;gap:6px;margin-top:4px;font-size:.9em"><span style="flex:1">' + esc(lbl) + '</span><button class="characters__btn characters__btn--sm characters__btn--secondary" type="button" title="Remover">×</button></div>');
+				$row.find("button").on("click", function() { extras.splice(ix, 1); renderExtras(); });
+				$box.append($row);
+			});
+			if (!extras.length) $box.html('<div style="font-size:.85em;color:#667085">Nenhum</div>');
+		}
+		$ov.find("#wc-add-extra").on("click", function() {
+			var dmgs = ["Perfurante", "Cortante", "Contundente", "Fogo", "Frio", "Elétrico", "Necrótico", "Psíquico", "Veneno", "Trovejante", "Ácido", "Radiante", "Força"];
+			var faces = [4, 6, 8, 10, 12, 20];
+			var h2 = '<div class="characters__detail-overlay" id="wc-extra-add"><div class="characters__detail">';
+			h2 += '<div class="characters__detail-title">Dano Extra</div><div class="characters__detail-body">';
+			h2 += '<div class="characters__form-group"><label class="characters__form-label">Tipo de dano</label><select class="characters__form-select" id="ed-type">';
+			dmgs.forEach(function(t) { h2 += '<option value="' + t + '">' + t + '</option>'; });
+			h2 += '</select></div>';
+			h2 += '<div class="characters__form-group"><label class="characters__form-label">Tipo de dado</label><select class="characters__form-select" id="ed-face">';
+			faces.forEach(function(f) { h2 += '<option value="' + f + '">d' + f + '</option>'; });
+			h2 += '</select></div>';
+			h2 += '<div class="characters__form-row">';
+			h2 += '<div class="characters__form-group"><label class="characters__form-label">Quantos dados</label><input type="number" class="characters__form-input" id="ed-count" value="1" min="1" max="20"></div>';
+			h2 += '<div class="characters__form-group"><label class="characters__form-label">Dano fixo</label><input type="number" class="characters__form-input" id="ed-flat" value="0"></div>';
+			h2 += '</div></div><div class="characters__detail-actions">';
+			h2 += '<button class="characters__btn characters__btn--primary" id="ed-add">Adicionar</button>';
+			h2 += '<button class="characters__btn characters__btn--secondary" id="ed-cancel">Cancelar</button>';
+			h2 += '</div></div></div>';
+			$(document.body).append(h2);
+			var $ov2 = $("#wc-extra-add");
+			$ov2.on("click", function(e) { if (e.target === this) $ov2.remove(); });
+			$ov2.find("#ed-cancel").on("click", function() { $ov2.remove(); });
+			$ov2.find("#ed-add").on("click", function() {
+				extras.push({
+					count: parseInt($ov2.find("#ed-count").val(), 10) || 1,
+					face: parseInt($ov2.find("#ed-face").val(), 10) || 6,
+					flat: parseInt($ov2.find("#ed-flat").val(), 10) || 0,
+					dmgType: $ov2.find("#ed-type").val()
+				});
+				$ov2.remove();
+				renderExtras();
+			});
+		});
+		renderExtras();
+		$ov.find("#wc-save").on("click", function() {
+			var name = $ov.find("#wc-name").val().trim();
+			if (!name) { alert("Informe o nome da arma!"); return; }
+			var dc = parseInt($ov.find("#wc-dcount").val(), 10) || 1;
+			var df = parseInt($ov.find("#wc-dface").val(), 10) || 8;
+			var dfl = parseInt($ov.find("#wc-dflat").val(), 10) || 0;
+			var data = {
+				name: name,
+				dmg1: dc + "d" + df + (dfl ? (dfl > 0 ? "+" : "") + dfl : ""),
+				_dcount: dc, _dface: df, _dflat: dfl,
+				dmgType: $ov.find("#wc-dmgtype").val(),
+				extraDmg: extras,
+				range: $ov.find("#wc-range").val().trim(),
+				property: $ov.find(".wc-prop:checked").map(function() { return $(this).val(); }).get(),
+				attunement: $ov.find("#wc-attune").is(":checked"),
+				desc: $ov.find("#wc-desc").val().trim(),
+				source: existing ? (w.source || "Personalizado") : "Personalizado",
+				custom: true
+			};
+			if (existing) {
+				var ix = (char.weapons || []).indexOf(existing);
+				if (ix >= 0) char.weapons[ix] = Object.assign({}, existing, data);
+			} else {
+				if (!char.weapons) char.weapons = [];
+				char.weapons.push(Object.assign({type: "melee"}, data));
+			}
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			$ov.remove();
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Arma salva: " + name});
+			onDone && onDone();
 		});
 	}
 function spellAbilityName(char) {
@@ -3548,22 +4211,8 @@ function appendCoinsModule($body, char) {
 	}
 
 	function renderModuleEquipment($body, char) {
-		var html = '<div class="characters__subtitle">Armas</div>';
-		html += '<div class="characters__items-list" id="weapons-list">';
-		if (char.weapons && char.weapons.length) {
-			char.weapons.forEach(function(weapon, index) {
-				html += '<div class="characters__item"><a class="ptm-link" href="' + esc(ptmItemHref(weapon)) + '">' + esc(weapon.name || weapon) + '</a>';
-				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-weapon="' + index + '">×</button></div>';
-			});
-		} else html += '<div class="characters__item">Nenhuma arma equipada</div>';
-		html += '</div>';
-
-		html += '<div class="characters__subtitle">Adicionar Arma</div>';
-		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="weapon-search" placeholder="Buscar arma..."></div>';
-		html += '<div id="weapon-search-results" class="characters__search-results mt-2"></div>';
-		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
-
-		html += '<div class="characters__subtitle">Armaduras</div>';
+		// Armas agora são gerenciadas apenas no módulo "Ataques & Ações"
+		var html = '<div class="characters__subtitle">Armaduras</div>';
 		html += '<div class="characters__items-list" id="armors-list">';
 		if (char.armors && char.armors.length) {
 			char.armors.forEach(function(armor, index) {
@@ -3583,34 +4232,6 @@ function appendCoinsModule($body, char) {
 		html += ptmSearchHint();
 
 		$body.html(html);
-
-		var $weaponSearch = $body.find("#weapon-search");
-		var $weaponResults = $body.find("#weapon-search-results");
-		$weaponSearch.on("input", function() {
-			var query = $(this).val().toLowerCase().trim();
-			if (query.length < 2) { $weaponResults.empty(); return; }
-			var filtered = itemsData.filter(function(item) {
-				var baseType = String(item.type || "").split("|")[0];
-				return item.name.toLowerCase().indexOf(query) >= 0 && (item.type === "W" || baseType === "M" || baseType === "R");
-			}).slice(0, 10);
-			$weaponResults.empty();
-			if (!filtered.length) { $weaponResults.html('<div class="characters__search-item">Nenhuma arma encontrada</div>'); return; }
-			filtered.forEach(function(weapon) {
-				var $item = $('<div class="characters__search-item">');
-				$item.html('<b>' + esc(optionLabel(weapon)) + '</b> (' + esc(weapon.weaponCategory || "Arma") + ')');
-				$item.on("click", function() {
-					if (!char.weapons) char.weapons = [];
-					char.weapons.push({name: weapon.name, source: weapon.source || "", type: String(weapon.type || "").split("|")[0] === "R" ? "ranged" : "melee"});
-					renderModuleEquipment($body, char);
-					refreshAttacksModule();
-				});
-				$weaponResults.append($item);
-			});
-		});
-		$body.on("click", "[data-remove-weapon]", function() {
-			var index = parseInt($(this).data("remove-weapon"), 10);
-			if (char.weapons && char.weapons[index]) { char.weapons.splice(index, 1); renderModuleEquipment($body, char); refreshAttacksModule(); }
-		});
 
 		var $armorSearch = $body.find("#armor-search");
 		var $armorResults = $body.find("#armor-search-results");
@@ -3682,7 +4303,7 @@ function renderSheet() {
 			// Delegação em $root para sobreviver à recriação do cabeçalho.
 			$root.off(".sheetact");
 			$root.on("click.sheetact", "#btn-export-sheet", function() { exportToCah(char); });
-			$root.on("click.sheetact", "#btn-print", function() { window.print(); });
+			$root.on("click.sheetact", "#btn-print", function() { openRollHistoryPopup(char); });
 			$root.on("click.sheetact", "#btn-reorder", toggleSheetReorder);
 			$root.on("click.sheetact", "#btn-reset-order", resetSheetOrder);
 			$root.on("click.sheetact", "#btn-delete", function() {
@@ -4870,7 +5491,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			if (v >= 1) skParts.push((SKILL_KEY_TO_PT[k] || k) + (v === 2 ? " (expertise)" : ""));
 		});
 		if (skParts.length) profLines.push('<div class="characters__prof-line"><b>Perícias escolhidas:</b> ' + esc(skParts.join(", ")) + '</div>');
-		if (char.languages && char.languages.length) profLines.push('<div class="characters__prof-line"><b>Idiomas:</b> ' + esc(char.languages.join(", ")) + '</div>');
+		if (char.languages && char.languages.length) profLines.push('<div class="characters__prof-line"><b>Idiomas:</b> <span class="characters__info-editable" data-edit="languages">' + esc(char.languages.join(", ")) + '</span></div>');
 		if (profLines.length) {
 			h += '<div class="characters__summary-box characters__info-card">';
 			h += '<div class="characters__summary-title">Proficiências & Idiomas</div>' + profLines.join("");

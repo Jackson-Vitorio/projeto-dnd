@@ -5,6 +5,7 @@ import {
 	calcMod, calcProfBonus
 } from "./characters-consts.js";
 import {CharactersStore} from "./characters-store.js";
+import {openItemEditorPopup, closeItemEditorPopup, RARITY_LABEL, RARITY_COLORS, PROPERTY_LABELS, MODIFIER_OPTIONS, DMG_TYPE_OPTIONS} from "./char-item-editor.js";
 
 export class CharactersUiSheet {
 	constructor(opts) {
@@ -115,23 +116,29 @@ export class CharactersUiSheet {
 		html += '<a href="spells.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" id="btn-add-spell">➕ Adicionar Magia</a>';
 		html += '</div></div>';
 
-		// Inventário (renderizado como links clicáveis)
-		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Inventário</h4>';
-		html += '<div class="characters__sheet-items">';
-		if (der.inventory && der.inventory.length) {
-			der.inventory.forEach(it => {
-				if (!it) return;
-				const url = CharactersUiSheet._buildEntityUrl("item", it);
-				html += '<div class="characters__sheet-item"><a href="' + url + '" class="characters__sheet-link" target="_blank">' + esc(it) + '</a></div>';
-			});
-		} else {
-			html += '<div class="characters__sheet-item">Vazio</div>';
-		}
+				// === Inventário & Equipamento (tabs: Equipado / Armas / Inventário) ===
+		html += '<div class="characters__sheet-section"><h4 class="characters__sheet-section-title">Equipamento</h4>';
+		html += '<ul class="characters__tabs" id="inv-tabs">';
+		html += '<li class="characters__tab-item active" data-tab="equipped">Equipado</li>';
+		html += '<li class="characters__tab-item" data-tab="weapons">Armas</li>';
+		html += '<li class="characters__tab-item" data-tab="inventory">Inventário</li>';
+		html += '</ul>';
+
+		// Conteúdo das tabs (preenchido dinamicamente via JS)
+		html += '<div class="characters__tab-content" id="tab-equipped" style="display:block">';
+		html += '<div class="characters__sheet-items" id="sheet-equipped"></div>';
+		html += '<div class="characters__ac-breakdown" id="ac-breakdown"></div>';
 		html += '</div>';
-		// Texto de apoio para salvar (mantém compatibilidade)
-		html += '<textarea class="characters__sheet-textarea mt-2" id="in-inv" placeholder="Anote seus itens (um por linha)...">' + esc((der.inventory || []).join("\n")) + '</textarea>';
-		html += '<div class="characters__sheet-actions-bar mt-2">';
-		html += '<a href="items.html" class="characters__btn characters__btn--secondary characters__btn--sm characters__btn--outline" id="btn-add-item">➕ Adicionar Item</a>';
+		html += '<div class="characters__tab-content" id="tab-weapons" style="display:none">';
+		html += '<div class="characters__sheet-items" id="sheet-weapons"></div>';
+		html += '</div>';
+		html += '<div class="characters__tab-content" id="tab-inventory" style="display:none">';
+		html += '<div class="characters__sheet-items" id="sheet-inventory"></div>';
+		html += '</div>';
+
+		// Barra de ações: dropdown "Adicionar Item"
+		html += '<div class="characters__actions-bar mt-2" style="display:flex;gap:8px;flex-wrap:wrap">';
+		html += '<button class="characters__btn characters__btn--primary characters__btn--sm" id="btn-add-item-main">➕ Adicionar Item</button>';
 		html += '</div></div>';
 
 		// Magias (campo de lista para editar)
@@ -161,8 +168,7 @@ export class CharactersUiSheet {
 			if (this._pOnBack) this._pOnBack();
 		});
 
-		$root.find("#btn-save").on("click", () => {
-			char.inventory = $root.find("#in-inv").val().split("\n").filter(Boolean);
+				$root.find("#btn-save").on("click", () => {
 			char.spells = $root.find("#in-spells").val().split("\n").filter(Boolean);
 			char.notes = $root.find("#in-notes").val();
 			char.updated = Date.now();
@@ -178,26 +184,285 @@ export class CharactersUiSheet {
 
 		$root.find("#btn-print").on("click", () => window.print());
 
-		// Navegação para adicionar itens/magias (abre a tela correspondente)
-		$root.find("#btn-add-item").on("click", (e) => {
+		// --- Navegação de tabs de equipamento ---
+		$root.find(".characters__tab-item").on("click", (e) => {
 			e.preventDefault();
-			window.location.href = "items.html";
+			const tab = $(e.currentTarget).data("tab");
+			$root.find(".characters__tab-item").removeClass("active");
+			$(e.currentTarget).addClass("active");
+			$root.find(".characters__tab-content").hide();
+			$root.find("#tab-" + tab).show();
 		});
-		$root.find("#btn-add-spell").on("click", (e) => {
+
+		// --- Dropdown "Adicionar Item" ---
+		$root.find("#btn-add-item-main").off("click").on("click", (e) => {
 			e.preventDefault();
-			window.location.href = "spells.html";
+			closeAddItemMenu();
+			let menu = '<div class="characters__action-menu" id="additem-menu">';
+			menu += '<button class="characters__actions-item" data-add="official">📖 Escolher Item Oficial</button>';
+			menu += '<button class="characters__actions-item" data-add="create">➕ Criar Novo Item</button>';
+			menu += '</div>';
+			$(document.body).append(menu);
+			let $m = $("#additem-menu");
+			let r = $root.find("#btn-add-item-main")[0].getBoundingClientRect();
+			$m.css({ position: "fixed", left: r.left + "px", top: (r.bottom + 4) + "px" });
+			$m.find('[data-add="official"]').on("click", () => {
+				$m.remove();
+				window.location.href = "items.html";
+			});
+			$m.find('[data-add="create"]').on("click", () => {
+				$m.remove();
+				this._openItemEditor({ mode: "create" });
+			});
+			$(document).off(".additem").on("click.additem", function (ev) {
+				if (!$(ev.target).closest("#additem-menu").length && ev.target !== $root.find("#btn-add-item-main")[0]) {
+					$m.remove();
+				}
+			});
 		});
+
+		// Renderiza equipamentos, armas e inventário dinamicamente
+		this._renderEquipado(der);
+		this._renderArmas(der);
+		this._renderInventario(der);
 	}
 
-	_computeDerived(char) {
+		_computeDerived(char) {
 		const result = JSON.parse(JSON.stringify(char));
 		const hd = CLASS_HIT_DICE[result.className] || 8;
 		const conMod = calcMod((result.scores.con || 8) + (result.rawScores.con || 0));
 		result.hp.max = hd + conMod;
 		result.hp.current = result.hp.current || result.hp.max;
-		result.ac = 10 + calcMod((result.scores.dex || 8) + (result.rawScores.dex || 0));
 		result.initiative = calcMod((result.scores.dex || 8) + (result.rawScores.dex || 0));
+
+		// Calcula CA com bônus de armaduras, escudos e estilos de luta
+		const acInfo = this._computeAC(char, result);
+		result.ac = acInfo.total;
+		result.acBreakdown = acInfo.breakdown;
+
 		return result;
+		}
+
+	/**
+	 * Calcula a CA total considerando armaduras, escudos, estilo de luta e bônus feitiço.
+	 * PHB p.7: CA = armadura + DEX (limitado) + escudo + estilo.
+	 */
+	_computeAC(char, der) {
+		const dexModRaw = calcMod((char.scores.dex || 8) + (char.rawScores.dex || 0));
+		const breakdown = [];
+		let armorBase = 10;
+		let maxDex = Infinity;
+		let shieldBonus = 0;
+
+		const equipped = [
+			...(char.equipment || []),
+			...(char.armors || []),
+		].filter(it => it && it.equipped && it.armor);
+
+		equipped.forEach(it => {
+			if (it.type === "S") {
+				shieldBonus = (it.ac != null) ? Number(it.ac) : 2;
+				breakdown.push({ label: it.name + " (escudo)", value: shieldBonus });
+			} else if (["LA", "MA", "HA"].includes(it.type)) {
+				armorBase = Number(it.ac) || 10;
+				maxDex = (it.maxDex != null) ? Number(it.maxDex) : Infinity;
+				breakdown.push({ label: it.name + (it.stealth ? " ⚠" : ""), value: 0, color: "#006bc4", raw: true });
+			}
+		});
+
+		const dexContrib = Math.min(dexModRaw, maxDex);
+		breakdown.push({ label: "Destreza", value: dexContrib });
+
+		let styleBonus = 0;
+		if (char.fightingStyle === "Defense") {
+			styleBonus = 1;
+			breakdown.push({ label: "Estilo de Luta (Defesa)", value: 1, color: "#006bc4" });
+		}
+
+		let magicBonus = 0;
+		if (der && der.acBonus) {
+			magicBonus = Number(der.acBonus);
+			if (magicBonus) breakdown.push({ label: "Bônus Mágico", value: magicBonus, color: "#cc33ff" });
+		}
+
+		const total = armorBase + dexContrib + shieldBonus + styleBonus + magicBonus;
+		return { total: total, breakdown: breakdown };
+		}
+
+	_renderEquipado(der) {
+		const $container = this._$root.find("#sheet-equipped");
+		const equipped = [
+			...(this._character.equipment || []),
+			...(this._character.armors || []),
+		].filter(it => it && it.equipped);
+
+		$container.empty();
+		if (!equipped.length) {
+			$container.append('<div class="characters__sheet-item">Nenhum item equipado</div>');
+		} else {
+			equipped.forEach(it => $container.append(this._renderEquipItem(it)));
+		}
+
+		const $ac = this._$root.find("#ac-breakdown");
+		const bc = der.acBreakdown || [];
+		let acHtml = '<div class="characters__ac-line"><span class="characters__ac-label">CA:</span> <b>' + der.ac + '</b>';
+		if (bc.length) {
+			acHtml += ' <span class="characters__ac-components">(' + bc.map(c => {
+				const cls = c.color ? ' style="color:' + c.color + '" ' : '';
+				const v = c.value >= 0 ? "+" + c.value : c.value;
+				return '<span ' + cls + '>' + esc(c.label) + (c.value !== 0 ? ' (' + v + ')' : '') + '</span>';
+			}).join(" + ") + ')';
+		}
+		acHtml += '</div>';
+		$ac.html(acHtml);
+	}
+
+	_renderEquipItem(item) {
+		const self = this;
+		const $el = $(
+			'<div class="characters__sheet-item characters__sheet-item--equipped" data-itemid="' + esc(item._id || item.id || "") + '">' +
+			'<span class="characters__equipped-badge">Equipado</span>' +
+			'<span class="characters__item-name">' + esc(item.name || item.id) + '</span>' +
+			'<button class="characters__btn characters__btn--sm characters__btn--outline characters__btn--unequip" style="margin-left:auto" title="Desequipar">✕</button>' +
+			'</div>'
+		);
+
+		let pressTimer = null;
+		$(document).off("mouseup.itemhold").on("mouseup.itemhold", () => { if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; } });
+		$el.on("mousedown", function (e) {
+			e.preventDefault();
+			pressTimer = setTimeout(function () { $(this).find(".characters__equipped-badge").toggleClass("characters__equipped-badge--active"); }.bind(this), 600);
+		}).on("mouseup", function () { if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; } });
+
+		$el.on("click", function (e) { e.stopPropagation(); self._openItemPopup(item); });
+		$el.find(".characters__btn--unequip").on("click", function (e) { e.stopPropagation(); self._unequipItem(item); });
+		return $el;
+	}
+
+	/** Renderiza a aba de armas (com modificador de dano configurável). */
+	_renderArmas(der) {
+		const $container = this._$root.find("#sheet-weapons");
+		const weps = (this._character.weapons || []).filter(w => w && w.name);
+		$container.empty();
+		if (!weps.length) { $container.append('<div class="characters__sheet-item">Nenhuma arma equipada</div>'); return; }
+		const self = this;
+		weps.forEach(w => {
+			const modType = w.modifier === "dex"
+				? calcMod((this._character.scores.dex || 8) + (this._character.rawScores.dex || 0))
+				: calcMod((this._character.scores.str || 8) + (this._character.rawScores.str || 0));
+			const dmg = w.dmg1 || "1d4";
+			const fullDmg = modType > 0 ? dmg + "+" + modType : dmg;
+			const versatile = w.dmg2 ? " / " + w.dmg2 + (modType > 0 ? "+" + modType : "") : "";
+
+			const $el = $(
+				'<div class="characters__sheet-item characters__sheet-item--weapon" data-itemid="' + esc(w._id || w.id || "") + '">' +
+				'<span class="characters__item-name">' + esc(w.name || "") + ' <span class="characters__weapon-dmg">' + esc(fullDmg + versatile) + '</span></span>' +
+				'<select class="characters__weapon-mod" title="Modificador de dano">' +
+				MODIFIER_OPTIONS.map(m => '<option value="' + m.value + '" ' + (m.value === (w.modifier || "str") ? "selected" : "") + '>' + m.label + '</option>').join("") +
+				'</select>' +
+				'<button class="characters__btn characters__btn--sm characters__btn--outline" title="Editar">✎</button>' +
+				'</div>'
+			);
+			$el.find(".characters__weapon-mod").on("change", function () { w.modifier = $(this).val(); self._saveItem(w); });
+			$el.find('button[title="Editar"]').on("click", function (e) { e.stopPropagation(); self._openItemEditor({ mode: "edit", item: w, itemType: "weapon" }); });
+			$el.on("click", function (e) { e.stopPropagation(); self._openItemPopup(w); });
+			$container.append($el);
+		});
+	}
+
+	/** Renderiza a aba de inventário geral (consumíveis, itens diversos). */
+	_renderInventario(der) {
+		const $container = this._$root.find("#sheet-inventory");
+		const inv = [...(this._character.inventory || [])]
+			.filter(it => it && !it.equipped && !it.weapon && !it.armor && !(["LA", "MA", "HA", "S"].includes(it.type)));
+		$container.empty();
+		if (!inv.length) { $container.append('<div class="characters__sheet-item">Inventário vazio</div>'); return; }
+		const self = this;
+		inv.forEach(it => {
+			const qty = it.quantity ? ' <span class="characters__item-qty">x' + it.quantity + '</span>' : "";
+			const $el = $(
+				'<div class="characters__sheet-item characters__sheet-item--inventory" data-itemid="' + esc(it._id || it.id || "") + '">' +
+				'<span class="characters__item-name">' + esc(it.name || it.id) + qty + '</span>' +
+				'<button class="characters__btn characters__btn--sm characters__btn--outline" title="Editar">✎</button>' +
+				'</div>'
+			);
+			$el.on("click", function (e) { e.stopPropagation(); self._openItemPopup(it); });
+			$el.find('button[title="Editar"]').on("click", function (e) { e.stopPropagation(); self._openItemEditor({ mode: "edit", item: it, itemType: "other" }); });
+			$container.append($el);
+		});
+	}
+
+	/** Popup de detalhes do item (com botão Editar no topo). */
+	_openItemPopup(item) {
+		closeItemDetailPopup();
+		const detect = (it) => it.weapon ? "weapon" : (it.armor && it.type === "S" ? "shield" : (it.armor ? "armor" : (it.type === "consumable" ? "consumable" : "other")));
+		const lbl = { weapon: "Arma", armor: "Armadura", shield: "Escudo", consumable: "Consumível", other: "Outro" };
+		const self = this;
+		let h = '<div class="characters__detail-overlay" id="itemdetail-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">' + esc(item.name || item.id || "Item") + '</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__detail-row"><b>Raridade:</b> <span style="color:' + (RARITY_COLORS[item.rarity] || "#999") + '">' + esc(RARITY_LABEL[item.rarity] || item.rarity || "Comum") + '</span></div>';
+		h += '<div class="characters__detail-row"><b>Tipo:</b> ' + esc(lbl[detect(item)] || "Outro") + '</div>';
+		if (item.weight) h += '<div class="characters__detail-row"><b>Peso:</b> ' + esc(String(item.weight)) + ' kg</div>';
+		if (item.value) h += '<div class="characters__detail-row"><b>Valor:</b> ' + esc(String(item.value)) + ' gp</div>';
+		if (item.attunement) h += '<div class="characters__detail-row"><b>Requer Atunhamento:</b> Sim</div>';
+		if (item.dmg1) h += '<div class="characters__detail-row"><b>Dano:</b> ' + esc(item.dmg1 + (item.dmg2 ? " / " + item.dmg2 : "")) + " " + esc(item.dmgType || "") + '</div>';
+		if (item.range) h += '<div class="characters__detail-row"><b>Alcance:</b> ' + esc(item.range) + '</div>';
+		if (item.property && item.property.length) h += '<div class="characters__detail-row"><b>Propriedades:</b> ' + esc(item.property.map(p => PROPERTY_LABELS[p] || p).join(", ")) + '</div>';
+		if (item.ac != null && item.armor) h += '<div class="characters__detail-row"><b>CA:</b> +' + esc(String(item.ac)) + '</div>';
+		if (item.entries && item.entries.length) h += '<div class="characters__detail-row"><b>Descrição:</b><div style="margin-top:6px">' + esc(item.entries.join("\n")) + '</div></div>';
+		h += '</div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--secondary" id="item-edit">✎ Editar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="item-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+
+		const $ov = $("#itemdetail-overlay");
+		$ov.on("click", function (e) { if (e.target === this) closeItemDetailPopup(); });
+		$ov.find("#item-edit").on("click", () => { closeItemDetailPopup(); self._openItemEditor({ mode: "edit", item, itemType: detect(item) }); });
+		$ov.find("#item-close").on("click", closeItemDetailPopup);
+	}
+
+	closeItemDetailPopup() { $("#itemdetail-overlay").remove(); }
+	closeAddItemMenu() { $("#additem-menu").remove(); }
+
+	_openItemEditor(opts) {
+		openItemEditorPopup(opts, (savedItem, itemType) => { this._saveItem(savedItem); this._refreshEquipment(); });
+	}
+
+	_saveItem(item) {
+		const char = this._character;
+		if (item.weapon) {
+			if (!char.weapons) char.weapons = [];
+			const ex = char.weapons.find(w => w._id === item._id);
+			if (ex) Object.assign(ex, item); else char.weapons.push(item);
+			if (!char.equipment) char.equipment = [];
+			if (!char.equipment.find(w => w._id === item._id)) char.equipment.push({ ...item, equipped: false });
+		} else if (item.armor || item.type === "S") {
+			if (!char.equipment) char.equipment = [];
+			const ex = char.equipment.find(w => w._id === item._id);
+			if (ex) Object.assign(ex, item); else char.equipment.push({ ...item, equipped: false });
+		} else {
+			if (!char.inventory) char.inventory = [];
+			const ex = char.inventory.find(w => w._id === item._id);
+			if (ex) Object.assign(ex, item); else char.inventory.push(item);
+		}
+		CharactersStore.save(char);
+	}
+
+	_unequipItem(item) {
+		const eq = this._character.equipment || [];
+		const ix = eq.findIndex(it => (it._id || it.id) === (item._id || item.id));
+		if (ix >= 0) eq[ix].equipped = false;
+		CharactersStore.save(this._character);
+		this._refreshEquipment();
+	}
+
+	_refreshEquipment() {
+		const der = this._computeDerived(this._character);
+		this._renderEquipado(der);
+		this._renderArmas(der);
+		this._renderInventario(der);
 	}
 
 	_esc(str) {

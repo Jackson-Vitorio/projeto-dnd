@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probe botão</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/characters.css">
+<style>body{padding:8px}pre{font:12px monospace;white-space:pre-wrap}</style>
+</head><body>
+<div id="a"><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="0">×</button></div>
+<div id="b" style="display:flex;gap:8px;margin-top:6px"><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="0">×</button></div>
+<div id="c" class="characters__attack-item2 characters__armor-card" style="margin-top:6px"><div class="characters__armor-lines"><div class="characters__attack-l1"><span class="characters__attack-name">Couro Batido</span><span class="characters__attack-hit2">CA 12</span></div><div class="characters__attack-l2"><span class="characters__attack-props">Armadura leve</span><span class="characters__attack-dmg2">equipada</span></div></div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="1" title="Remover">×</button></div>
+<pre id="out"></pre>
+<script>
+(function(){
+  function w(id, i){
+    var el = document.querySelectorAll('#' + id + ' button')[i];
+    var r = el.getBoundingClientRect(); var cs = getComputedStyle(el);
+    return '#' + id + '[' + i + '] w=' + Math.round(r.width) + ' h=' + Math.round(r.height)
+      + ' disp=' + cs.display + ' font=' + cs.fontSize + ' pad=' + cs.padding
+      + ' minW=' + cs.minWidth + ' width=' + cs.width + ' flex=' + cs.flex;
+  }
+  document.getElementById('out').textContent = [
+    'viewport=' + document.documentElement.clientWidth,
+    w('a', 0), w('b', 0), w('c', 0)
+  ].join('\n');
+})();
+</script>
+</body></html>

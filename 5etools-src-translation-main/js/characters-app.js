@@ -185,7 +185,7 @@
 			ac:10, initiative:0, speed:30, speedModifiers:{walk:0,climb:0,fly:0,swim:0,burrow:0},
 			alignment:"Neutro", playerName:"", experience:0,
 			spells:[], spellSlots:{}, spellAttackBonus:0, spellDC:0,
-			features:[], feats:[], specialAbilities:[], selectableFeatures:[],
+			features:[], feats:[], specialAbilities:[], selectableFeatures:[], abilityUses:{},
 			equipment:[], weapons:[{name:"Ataque Desarmado", dmg1:"1", dmgType:"Contundente", modifier:"str", equipped:true, isDefault:true}], armors:[], inventory:[],
 			coins:{gold:0,silver:0,copper:0,platinum:0,electrum:0},
 			conditions:[], inspiration:false, deathSaves:{failures:0,successes:0},
@@ -243,6 +243,7 @@
 
 		html += '</div></div>';
 		$root.html(html);
+		if (history.replaceState) history.replaceState({chList: true}, "", "?list=1");
 
 		$root.find("#btn-new, #btn-new-empty").on("click", startCreation);
 		$root.find(".characters__card").on("click", function(e) {
@@ -511,7 +512,7 @@
 			var info = '<div class="characters__summary-title">' + esc(race.name) + '</div>';
 			if (variantCount(races, race.name) > 1 && race.source) info += '<div><b>Fonte:</b> ' + esc(race.source) + '</div>';
 			if (sub && (sub.label || sub.name)) info += '<div><b>Subraça:</b> ' + esc(sub.label || sub.name) + '</div>';
-			info += '<div><b>Tamanho:</b> ' + sizeName + ' | <b>Deslocamento:</b> ' + speed + ' pés</div>';
+			info += '<div><b>Tamanho:</b> ' + sizeName + ' | <b>Deslocamento:</b> ' + fmtDistM(speed) + '</div>';
 			if (abilStr) info += '<div><b>Bônus:</b> ' + abilStr + '</div>';
 			if (entries.length) info += '<div class="mt-2">' + entries.join("<br>") + '</div>';
 			$form.find("#info-race").html(info);
@@ -1274,9 +1275,9 @@
 					html += '<div class="characters__ability-mod">' + (mod >= 0 ? "+" : "") + mod + '</div>';
 					if (racial) html += '<div class="characters__ability-mod" style="color:#28a745">Raça +' + racial + '</div>';
 					html += '<div class="characters__ability-controls">';
-					html += '<button class="characters__btn characters__btn--sm" data-action="down" data-ability="' + abv + '">-</button>';
+					html += '<button class="characters__hp-mini characters__hp-mini--minus" data-action="down" data-ability="' + abv + '">−</button>';
 					html += '<span>' + scores[abv] + '</span>';
-					html += '<button class="characters__btn characters__btn--sm" data-action="up" data-ability="' + abv + '">+</button>';
+					html += '<button class="characters__hp-mini characters__hp-mini--plus" data-action="up" data-ability="' + abv + '">+</button>';
 					html += '</div>';
 					html += '</div>';
 					
@@ -1285,7 +1286,7 @@
 				$content.find("#points-left").text(points);
 			};
 			
-			$grid.on("click", ".characters__btn[data-action='up']", function() {
+			$grid.on("click", ".characters__hp-mini[data-action='up']", function() {
 				var abv = $(this).data("ability");
 				var cost = POINT_BUY_COSTS[scores[abv] + 1] || 0;
 				if (cost > 0 && points >= cost && scores[abv] < 15) {
@@ -1295,7 +1296,7 @@
 				}
 			});
 			
-			$grid.on("click", ".characters__btn[data-action='down']", function() {
+			$grid.on("click", ".characters__hp-mini[data-action='down']", function() {
 				var abv = $(this).data("ability");
 				var cost = POINT_BUY_COSTS[scores[abv]] || 0;
 				if (cost > 0 && scores[abv] > 8) {
@@ -1474,7 +1475,7 @@
 		html += '<li><b>Antecedente:</b> ' + esc(der.background || "—") + '</li>';
 		html += '<li><b>PV Máx:</b> ' + der.hp.max + ' | <b>CA:</b> ' + der.ac + ' | <b>Iniciativa:</b> ' + (der.initiative >= 0 ? "+" : "") + der.initiative + '</li>';
 		html += '<li><b>Bônus de Proficiência:</b> +' + profBonus + '</li>';
-		html += '<li><b>Deslocamento:</b> ' + der.speed + ' pés</li>';
+		html += '<li><b>Deslocamento:</b> ' + fmtDistM(der.speed) + '</li>';
 		html += '</ul></div>';
 
 		html += '<div class="characters__summary-box"><div class="characters__summary-title">Atributos</div><ul class="characters__summary-list">';
@@ -1728,8 +1729,10 @@
 			}
 			console.log("[Characters] Abrindo ficha:", char.name, char.id);
 			currentView = "sheet";
+			window.__CHAR_SHEET_OPEN__ = true;
 			currentChar = char;
 			renderSheet();
+		if (history.pushState) history.pushState({chSheet: true}, "", "?sheet=1");
 		} catch (err) {
 			console.error("[Characters] Erro ao abrir ficha:", err);
 			alert("Erro ao abrir ficha: " + err.message);
@@ -2120,7 +2123,7 @@
 
 
 // === FICHA POR MÓDULOS REORGANIZÁVEIS ===
-	var SHEET_MODULE_DEFAULT_ORDER = ["notes", "abilities", "combat", "skills", "attacks", "spells", "features", "equipment"];
+	var SHEET_MODULE_DEFAULT_ORDER = ["notes", "abilities", "combat", "skills", "attacks", "spells", "features", "uses", "equipment"];
 	var SHEET_MODULE_DEFS = null;
 
 	function buildSheetHeader(char) {
@@ -2140,10 +2143,9 @@
 		html += '<div class="characters__sheet-avatar">' + esc((char.name || "?").charAt(0).toUpperCase()) + '</div>';
 		html += '<div class="characters__sheet-header-main">';
 		html += '<h2 class="characters__sheet-name">' + esc(char.name) + '</h2>';
-		html += '<div class="characters__sheet-detail">' + esc(raceTxt) + (sub ? " • " + esc(sub) : "") + ' • ' + esc(clsTxt) + ' • Nv. ' + (char.level || 1) + ' • ' + esc(char.background || "—") + '</div>';
+		html += '<div class="characters__sheet-detail">' + esc(raceTxt) + (sub ? " • " + esc(sub) : "") + ' • ' + esc(clsTxt) + ' • Nv. <input type="number" class="characters__form-input characters__level-header-input" id="in-header-level" min="1" max="20" value="' + (char.level || 1) + '" title="Alterar nível (recalcula PV, espaços de magia e CD)"> • ' + esc(char.background || "—") + '</div>';
 		html += '<div class="characters__sheet-detail">' + esc(char.alignment || "Neutro") + ' • Jogador: ' + esc(char.playerName || "—") + '</div>';
 		html += '<div class="characters__sheet-actions">';
-		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-export-sheet">Exportar .cah</button>';
 		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-print" title="Histórico de Rolagens">Histórico</button>';
 		html += '<button class="characters__btn characters__btn--secondary characters__btn--sm" id="btn-reorder">Reorganizar</button>';
 		html += '<button class="characters__btn characters__btn--danger characters__btn--sm" id="btn-delete">Excluir</button>';
@@ -2155,6 +2157,29 @@
 	function renderSheetHeader(char) {
 		var $hdr = $root.find(".characters__sheet-header");
 		if ($hdr.length) $hdr.replaceWith(buildSheetHeader(char));
+	}
+	// Nível no cabeçalho da ficha: altera o nível e recalcula PV, espaços de magia e CD
+	function bindHeaderLevel(char) {
+		$root.off("change.levelhdr").on("change.levelhdr", "#in-header-level", function() {
+			var oldLevel = char.level || 1;
+			var lv = parseInt($(this).val(), 10) || 1;
+			lv = Math.min(20, Math.max(1, lv));
+			$(this).val(lv);
+			if (lv === oldLevel) return;
+			char.level = lv;
+			if (!char.hp) char.hp = {};
+			var newMax = hpMaxAuto(char);
+			if (!ovHas(char, "hp.max")) { char.hp.max = newMax; char.hp.current = newMax; }
+			char.spellSlots = calculateSpellSlots(char);
+			char.spellAttackBonus = calculateSpellAttackBonus(char);
+			char.spellDC = 8 + char.spellAttackBonus;
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			renderModules();
+			var msg = "Nível " + lv + " — PV, espaços de magia e CD recalculados!";
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msg});
+			else sheetToast("success", msg);
+		});
 	}
 
 	function findSubclassName(char) {
@@ -2242,6 +2267,8 @@
 		else SHEET_MODULE_DEFAULT_ORDER.forEach(function(id) { if (ids.indexOf(id) === -1) ids.push(id); });
 		// Filtra aba de magias: só aparece se for classe conjuradora
 		if (!isAnyCaster(char)) ids = ids.filter(function(id){ return id !== "spells"; });
+		// Características & Usos: só quando houver recursos/características com uso relevante
+		if (!hasUsesModuleContent(char)) ids = ids.filter(function(id){ return id !== "uses"; });
 		// Seções ocultas continuam na lista: são exibidas colapsadas (toque no título alterna)
 		return ids;
 	}
@@ -2312,8 +2339,6 @@ function sheetOrderIds() {
 				$coins.each(function() { coins[$(this).data("coin")] = parseInt($(this).val(), 10) || 0; });
 				char.coins = coins;
 			}
-			var $hpTemp = $root.find("#in-hp-temp");
-			if ($hpTemp.length) { if (!char.hp) char.hp = {}; char.hp.temp = parseInt($hpTemp.val(), 10) || 0; }
 			autoSaveSheet(char);
 		};
 		// Qualquer campo alterado na ficha
@@ -2346,7 +2371,7 @@ function sheetOrderIds() {
 			return true;
 		}
 		// 2) Ficha -> lista de fichas
-		if (currentView === "sheet") { currentView = "list"; currentChar = null; renderList(); return true; }
+		if (currentView === "sheet") { currentView = "list"; currentChar = null; window.__CHAR_SHEET_OPEN__ = false; renderList(); return true; }
 		// 3) Criação -> passo anterior (ou lista)
 		if (currentView === "create") {
 			if (creationStep > 1) { creationStep--; renderCreation(); }
@@ -2359,13 +2384,9 @@ function sheetOrderIds() {
 	function initBackNavigation() {
 		if (initBackNavigation._done) return;
 		initBackNavigation._done = true;
-		var Cap = global.Capacitor;
-		var CapApp = Cap && Cap.Plugins ? Cap.Plugins.App : null;
-		if (CapApp && CapApp.addListener) {
-			CapApp.addListener("backButton", function() {
-				if (!handleBackNavigation() && CapApp.exitApp) CapApp.exitApp();
-			});
-		}
+		// Capacitor backButton é gerenciado pelo android-nav.js, que delega para
+		// handleBackNavigation() quando window.__CHAR_SHEET_OPEN__ é verdadeiro.
+		// Não registramos nosso próprio listener de Capacitor para evitar duplicidade.
 		// Fallback Cordova-style
 		document.addEventListener("backbutton", function(e) {
 			if (handleBackNavigation() && e.preventDefault) e.preventDefault();
@@ -2517,7 +2538,7 @@ function sheetOrderIds() {
 	}
 		function openCharInfo(char){char=char||currentChar;closeCharInfo();var h='<div class="characters__detail-overlay" id="charinfo-overlay"><div class="characters__detail characters__detail--wide">';h+='<div class="characters__detail-title">Informações</div>';h+='<div class="characters__info-scroll">'+(char?buildInfoContent(char):'<div class="characters__detail-auto">Sem personagem selecionado.</div>')+'</div>';h+='<div class="characters__detail-actions"><button class="characters__btn characters__btn--primary" id="charinfo-ok">Fechar</button></div>';h+='</div></div>';$(document.body).append(h);var $ov=$('#charinfo-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeCharInfo();});bindInfoEditable($ov, char);$ov.find('#charinfo-ok').on('click',closeCharInfo);}
 	function closeCharInfo(){$('#charinfo-overlay').remove();}
-	function openRestMenu(char){closeRestMenu();var h='<div class="characters__detail-overlay" id="rest-overlay"><div class="characters__detail">';h+='<div class="characters__detail-title">Descanso & Recuperação</div>';h+='<div class="characters__rest-info"><b>Descanso Curto (1h):</b> gaste dados de vida para recuperar PV; recupera algumas habilidades.</div>';h+='<div class="characters__rest-info"><b>Descanso Longo (8h):</b> recupera todo PV, metade dos dados de vida, espaços de magia e habilidades.</div>';h+='<div class="characters__detail-actions">';h+='<button class="characters__btn characters__btn--secondary" id="rest-short">Descanso Curto</button>';h+='<button class="characters__btn characters__btn--primary" id="rest-long">Descanso Longo</button>';h+='</div></div></div>';$(document.body).append(h);var $ov=$('#rest-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeRestMenu();});$ov.find('#rest-short').on('click',function(){closeRestMenu();openShortRestPopup(char,function(total){char.deathSaves={failures:0,successes:0};renderModules();var msg=total>0?('Descanso curto! '+total+' PV recuperados.'):'Descanso curto concluido.';if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:msg});else sheetToast('success',msg);});});$ov.find('#rest-long').on('click',function(){if(!char.hp)char.hp={};char.hp.current=char.hp.max||char.hp.current;char.hp.temp=0;char.deathSaves={failures:0,successes:0};if(char.conditions&&char.conditions.indexOf('Exhaustion')>=0)char.conditions=char.conditions.filter(function(c){return c!=='Exhaustion';});closeRestMenu();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado.'});else sheetToast('success','Descanso longo! PV total restaurado.');});}
+	function openRestMenu(char){closeRestMenu();var h='<div class="characters__detail-overlay" id="rest-overlay"><div class="characters__detail">';h+='<div class="characters__detail-title">Descanso & Recuperação</div>';h+='<div class="characters__rest-info"><b>Descanso Curto (1h):</b> gaste dados de vida para recuperar PV; recupera algumas habilidades.</div>';h+='<div class="characters__rest-info"><b>Descanso Longo (8h):</b> recupera todo PV, metade dos dados de vida, espaços de magia e habilidades.</div>';h+='<div class="characters__detail-actions">';h+='<button class="characters__btn characters__btn--secondary" id="rest-short">Descanso Curto</button>';h+='<button class="characters__btn characters__btn--primary" id="rest-long">Descanso Longo</button>';h+='</div></div></div>';$(document.body).append(h);var $ov=$('#rest-overlay');$ov.on('click',function(e){if(e.target===$ov[0])closeRestMenu();});$ov.find('#rest-short').on('click',function(){closeRestMenu();openShortRestPopup(char,function(total){char.deathSaves={failures:0,successes:0};var _ru=restoreAbilityUses(char,'short');renderModules();var msg=total>0?('Descanso curto! '+total+' PV recuperados.'+(_ru?' (+'+_ru+' recurso(s) recarregado(s))':'')):'Descanso curto concluido.';if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:msg});else sheetToast('success',msg);});});$ov.find('#rest-long').on('click',function(){if(!char.hp)char.hp={};char.hp.current=char.hp.max||char.hp.current;char.hp.temp=0;char.deathSaves={failures:0,successes:0};restoreAbilityUses(char,'long');if(char.conditions&&char.conditions.indexOf('Exhaustion')>=0)char.conditions=char.conditions.filter(function(c){return c!=='Exhaustion';});closeRestMenu();renderModules();if(global.JqueryUtil&&global.JqueryUtil.doToast)global.JqueryUtil.doToast({type:'success',content:'Descanso longo! PV total restaurado.'});else sheetToast('success','Descanso longo! PV total restaurado.');});}
 function closeRestMenu(){$('#rest-overlay').remove();}
 	function openMulticlassDialog(char) {
 		closeMulticlassDialog();
@@ -3277,6 +3298,7 @@ function openActionsMenu(char, $trigger) {
 	function doShortRest(char) {
 		openShortRestPopup(char, function(total) {
 			char.deathSaves = {failures:0,successes:0};
+			restoreAbilityUses(char, 'short');
 			renderModules();
 			var msg = total > 0 ? ('Descanso curto! ' + total + ' PV recuperados.') : 'Descanso curto concluído.';
 			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type:'success',content:msg});
@@ -3289,6 +3311,7 @@ function openActionsMenu(char, $trigger) {
 		char.hp.current = char.hp.max || char.hp.current;
 		char.hp.temp = 0;
 		char.deathSaves = {failures:0,successes:0};
+		restoreAbilityUses(char, 'long');
 		// Recupera metade do máximo de Dados de Vida (mínimo 1)
 		var level = 1;
 		(char.classes || []).forEach(function(c) { level += c.level || 0; });
@@ -3301,14 +3324,15 @@ function openActionsMenu(char, $trigger) {
 		else sheetToast('success','Descanso longo! PV total restaurado e dados de vida recuperados.');
 	}
 
-	// Calcula a CA a partir das armaduras registradas (melhor armadura + escudos)
+	// Calcula a CA a partir das armaduras EQUIPADAS (melhor armadura + escudos).
+	// Armaduras com equipped === false são ignoradas (mas continuam salvas).
 	function computeArmorAC(char, dexMod) {
 		var armors = char.armors || [];
 		if (!armors.length) return null;
 		var best = null;
 		var hasShield = false;
 		armors.forEach(function(a) {
-			if (!a) return;
+			if (!a || a.equipped === false) return;
 			var t = String(a.type || "").split("|")[0];
 			if (t === "S") { hasShield = true; return; }
 			var base = (a.ac != null) ? a.ac : 10;
@@ -3322,6 +3346,264 @@ function openActionsMenu(char, $trigger) {
 		if (char.fightingStyle === "Defense") total += 1;
 		return total;
 	}
+	// CA final exibida na ficha: armaduras equipadas > CA manual > 10 + DES,
+	// respeitando um ajuste manual (override) definido pelo jogador.
+	function computeTotalAC(char) {
+		var dex = ((char.scores && char.scores.dex) || 10) + ((char.rawScores && char.rawScores.dex) || 0);
+		var dexMod = calcMod(dex);
+		var armorAC = computeArmorAC(char, dexMod);
+		var auto = (armorAC != null) ? armorAC : ((char.ac != null) ? char.ac : (10 + dexMod));
+		return ovGet(char, "ac", auto);
+	}
+
+	// ==== Popup: como adicionar armadura (lista oficial / personalizada) ====
+	function openArmorAddMenu($body, char) {
+		$("#armoradd-overlay").remove();
+		var h = '<div class="characters__detail-overlay" id="armoradd-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Adicionar Armadura</div>';
+		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:8px;align-items:stretch">';
+		h += '<button class="characters__btn characters__btn--primary" id="aa-official">Da lista oficial</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="aa-custom">Personalizada</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="aa-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#armoradd-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#aa-close").on("click", function() { $ov.remove(); });
+		$ov.find("#aa-official").on("click", function() {
+			$ov.remove();
+			openOfficialArmorPicker(char, function() { saveArmors(char, $body); });
+		});
+		$ov.find("#aa-custom").on("click", function() {
+			$ov.remove();
+			openCustomArmorCreator(char, null, function() { saveArmors(char, $body); });
+		});
+	}
+
+	// ==== Popup: escolher armadura oficial da lista ====
+	function openOfficialArmorPicker(char, onDone) {
+		$("#apicker-overlay").remove();
+		var h = '<div class="characters__detail-overlay" id="apicker-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">Armadura Oficial</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<input type="text" class="characters__form-input" id="ap-search" placeholder="Buscar armadura...">';
+		h += '<div id="ap-results" style="max-height:300px;overflow:auto;margin-top:8px"></div>';
+		h += '</div><div class="characters__detail-actions"><button class="characters__btn characters__btn--secondary" id="ap-close">Fechar</button></div>';
+		h += '</div></div>';
+		$(document.body).append(h);
+		var $ov = $("#apicker-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#ap-close").on("click", function() { $ov.remove(); });
+		var $res = $ov.find("#ap-results");
+		function isArmorItem(i) {
+			var t = String(i.type || "").split("|")[0];
+			return t === "LA" || t === "MA" || t === "HA" || t === "S";
+		}
+		function list(query) {
+			var q = (query || "").toLowerCase().trim();
+			var base = (q.length >= 2)
+				? itemsData.filter(function(i) { return isArmorItem(i) && i.name.toLowerCase().indexOf(q) >= 0; })
+				: itemsData.filter(isArmorItem).slice(0, 25);
+			$res.empty();
+			if (!base.length) { $res.html('<div class="characters__search-item">Nenhuma armadura encontrada</div>'); return; }
+			base.slice(0, 40).forEach(function(ar) {
+				var t = String(ar.type || "").split("|")[0];
+				var $it = $('<div class="characters__search-item">');
+				$it.html('<b>' + esc(ar.name) + '</b> [' + esc(ar.source || "—") + '] CA ' + esc(String(ar.ac != null ? ar.ac : "—")) + ' — ' + esc(armorTypePt(null, ar)));
+				$it.on("click", function() {
+					if (!char.armors) char.armors = [];
+					var novo = {name: ar.name, source: ar.source || "", type: t, ac: ar.ac, equipped: true, attunement: !!ar.reqAttune};
+					char.armors.push(novo);
+					equipOnly(char, novo);
+					$ov.remove();
+					if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: ar.name + " adicionada"});
+					onDone && onDone();
+				});
+				$res.append($it);
+			});
+		}
+		$ov.find("#ap-search").on("input", function() { list($(this).val()); });
+		list("");
+	}
+
+	// ==== Popup: criar/editar armadura personalizada ====
+	function openCustomArmorCreator(char, existing, onDone) {
+		$("#acustom-overlay").remove();
+		var a = existing || {};
+		var h = '<div class="characters__detail-overlay" id="acustom-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">' + (existing ? 'Editar Armadura' : 'Nova Armadura/Escudo') + '</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Nome *</label>';
+		h += '<input type="text" class="characters__form-input" id="ac-name" value="' + esc(a.name || '') + '" placeholder="ex: Cota de Malha"></div>';
+		h += '<div class="characters__form-row">';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Tipo</label><select class="characters__form-select" id="ac-type">';
+		[["LA","Armadura leve"],["MA","Armadura média"],["HA","Armadura pesada"],["S","Escudo"]].forEach(function(t) {
+			h += '<option value="' + t[0] + '"' + ((a.type === t[0]) ? ' selected' : '') + '>' + t[1] + '</option>';
+		});
+		h += '</select></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">CA base</label>';
+		h += '<input type="number" class="characters__form-input" id="ac-ac" value="' + (a.ac != null ? a.ac : 14) + '" min="1" max="30"></div>';
+		h += '</div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Raridade</label><select class="characters__form-select" id="ac-rarity">';
+		["Comum","Incomum","Raro","Muito Raro","Lendário","Artefato"].forEach(function(r) {
+			h += '<option value="' + r + '"' + (((a.rarityPt || a.rarity) === r) ? ' selected' : '') + '>' + r + '</option>';
+		});
+		h += '</select></div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Descrição</label>';
+		h += '<textarea class="characters__form-input" id="ac-desc" rows="3" placeholder="Detalhes...">' + esc(a.desc || '') + '</textarea></div>';
+		h += '<div class="characters__form-group"><label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="ac-attune"' + (a.attunement ? ' checked' : '') + '> Requer sintonização</label></div>';
+		h += '<div class="characters__form-group"><label style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="ac-eq"' + ((a.equipped !== false) ? ' checked' : '') + '> Equipada</label></div>';
+		h += '</div><div class="characters__detail-actions">';
+		h += '<button class="characters__btn characters__btn--primary" id="ac-save">Salvar</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="ac-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#acustom-overlay");
+		$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+		$ov.find("#ac-close").on("click", function() { $ov.remove(); });
+		$ov.find("#ac-save").on("click", function() {
+			var name = $ov.find("#ac-name").val().trim();
+			if (!name) { alert("Informe o nome!"); return; }
+			var data = {
+				name: name,
+				type: $ov.find("#ac-type").val(),
+				ac: parseInt($ov.find("#ac-ac").val(), 10) || 10,
+				rarityPt: $ov.find("#ac-rarity").val(),
+				attunement: $ov.find("#ac-attune").is(":checked"),
+				equipped: $ov.find("#ac-eq").is(":checked"),
+				desc: $ov.find("#ac-desc").val().trim(),
+				source: (existing && a.source) ? a.source : "Personalizado",
+				custom: true
+			};
+			if (!char.armors) char.armors = [];
+			var saved = null;
+			if (existing && char.armors.indexOf(existing) >= 0) {
+				// Mantém a mesma referência (evita popups com objeto obsoleto)
+				$.extend(existing, data);
+				saved = existing;
+			} else {
+				saved = data;
+				char.armors.push(saved);
+			}
+			if (saved.equipped) equipOnly(char, saved);
+			else normalizeArmors(char);
+			$ov.remove();
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			onDone && onDone();
+		});
+	}
+
+	// Re-renderiza o módulo Combate (usado após equipar/desequipar armadura)
+	function refreshCombatModule() {
+		var $b = $root.find('[data-module="combat"] .characters__module-body');
+		if ($b.length && currentChar && SHEET_MODULE_DEFS) SHEET_MODULE_DEFS.combat.render($b, currentChar);
+	}
+	// ==== Armaduras: helpers de UI (mesmo padrão das armas) ====
+	var ARMOR_TYPE_PT = {LA: "Armadura leve", MA: "Armadura média", HA: "Armadura pesada", S: "Escudo"};
+	function armorTypePt(a, it) {
+		var t = String((a && a.type) || (it && it.type) || "").split("|")[0];
+		return ARMOR_TYPE_PT[t] || "Armadura";
+	}
+	function armorDexHint(a, it) {
+		var t = String((a && a.type) || (it && it.type) || "").split("|")[0];
+		if (t === "LA") return "soma DES";
+		if (t === "MA") return "soma DES (máx. +2)";
+		if (t === "HA") return "sem DES";
+		return "não soma DES";
+	}
+	// Persiste a lista de armaduras e atualiza tudo que depende de CA
+	function saveArmors(char, $body) {
+		char.updated = Date.now();
+		CharactersStore.save(char);
+		refreshCombatModule();
+		if ($body) renderModuleEquipment($body, char);
+	}
+	// Evita duas armaduras corporais equipadas ao mesmo tempo (escudos são independentes)
+	function normalizeArmors(char) {
+		var seenBody = false;
+		(char.armors || []).forEach(function(a) {
+			var t = String(a.type || "").split("|")[0];
+			if (t === "S") return;
+			if (a.equipped === false) return;
+			if (seenBody) a.equipped = false; else seenBody = true;
+		});
+	}
+	// Equipa `target` e desequipa as outras armaduras corporais (mantém escudos)
+	function equipOnly(char, target) {
+		if (!target) return;
+		target.equipped = true;
+		var isShield = String(target.type || "").split("|")[0] === "S";
+		if (isShield) return;
+		(char.armors || []).forEach(function(a) {
+			if (a === target) return;
+			if (String(a.type || "").split("|")[0] === "S") return;
+			a.equipped = false;
+		});
+	}
+	// ==== Popup de detalhes da armadura: Equipar/Desequipar, Editar, Remover ====
+	function closeArmorDetailPopup() { $("#armordetail-overlay").remove(); }
+	function openArmorDetailPopup($body, char, a, aIdx) {
+		closeArmorDetailPopup();
+		var it = null;
+		itemsData.forEach(function(i) { if (i && i.name === (a.name || a)) it = i; });
+		var source = a.source || (it && it.source) || "—";
+		var desc = (it && it.entries) ? it.entries.join("\n") : (a.desc || "Sem descrição.");
+		var acTxt = (a.ac != null ? a.ac : (it && it.ac != null ? it.ac : "—"));
+		var RAR = {none:"Comum", uncommon:"Incomum", rare:"Raro", "very rare":"Muito Raro", legendary:"Lendário", artifact:"Artefato"};
+		var rarityPt = a.rarityPt || (it && (RAR[it.rarity] || it.rarity)) || a.rarity || "Comum";
+		var isEq = (a.equipped !== false);
+		var totalAC = computeTotalAC(char);
+		var h = '<div class="characters__detail-overlay" id="armordetail-overlay"><div class="characters__detail">';
+		h += '<div class="characters__detail-title">' + esc(a.name || a) + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</div>';
+		h += '<div class="characters__detail-body">';
+		h += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(source) + '</div>';
+		h += '<div class="characters__detail-row"><b>Tipo:</b> ' + esc(armorTypePt(a, it)) + ' (' + esc(armorDexHint(a, it)) + ')</div>';
+		h += '<div class="characters__detail-row"><b>CA base:</b> ' + esc(String(acTxt)) + '</div>';
+		h += '<div class="characters__detail-row"><b>Raridade:</b> ' + esc(rarityPt) + '</div>';
+		if (a.attunement || (it && it.reqAttune)) h += '<div class="characters__detail-row"><b>Sintonização:</b> requerida</div>';
+		var restr = [];
+		if (it && it.stealthDisadvantage) restr.push("desvantagem em Furtividade");
+		if (it && it.strengthRequirement) restr.push("FOR " + it.strengthRequirement + " necessária");
+		if (restr.length) h += '<div class="characters__detail-row"><b>Restrições:</b> ' + esc(restr.join(" • ")) + '</div>';
+		if (a.magicFx && a.magicFx.length) {
+			h += '<div class="characters__detail-row" style="align-items:flex-start"><b>Efeitos mágicos:</b><div>';
+			a.magicFx.forEach(function(fx) { h += '<div style="font-size:.9em;margin-top:4px">' + esc(fx) + '</div>'; });
+			h += '</div></div>';
+		}
+		h += '<div class="characters__detail-row"><b>CA atual do personagem:</b> ' + (totalAC != null ? esc(String(totalAC)) : '—') + '</div>';
+		h += '<div class="characters__detail-row" style="align-items:flex-start"><b>Descrição:</b><div style="white-space:pre-wrap;margin-top:4px;font-size:.9em">' + esc(desc) + '</div></div>';
+		h += '</div>';
+		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:6px;align-items:stretch">';
+		h += '<button class="characters__btn ' + (isEq ? 'characters__btn--secondary' : 'characters__btn--primary') + '" id="ad-equip">' + (isEq ? 'Desequipar' : 'Equipar') + '</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="ad-edit">✎ Editar armadura</button>';
+		h += '<button class="characters__btn characters__btn--danger" id="ad-remove">Remover</button>';
+		h += '<button class="characters__btn characters__btn--secondary" id="ad-close">Fechar</button>';
+		h += '</div></div></div>';
+		$(document.body).append(h);
+		var $ov = $("#armordetail-overlay");
+		$ov.on("click", function(e) { if (e.target === this) closeArmorDetailPopup(); });
+		$ov.find("#ad-close").on("click", closeArmorDetailPopup);
+		// Equipa a nova armadura e desequipa as demais (um "conjunto" por vez)
+		$ov.find("#ad-equip").on("click", function() {
+			if (isEq) a.equipped = false;
+			else equipOnly(char, a);
+			saveArmors(char, $body);
+			closeArmorDetailPopup();
+		});
+		$ov.find("#ad-remove").on("click", function() {
+			if (!confirm('Remover "' + (a.name || "armadura") + '"?')) return;
+			var ix = (char.armors || []).indexOf(a);
+			if (ix < 0) ix = aIdx;
+			if (ix >= 0) char.armors.splice(ix, 1);
+			saveArmors(char, $body);
+			closeArmorDetailPopup();
+		});
+		$ov.find("#ad-edit").on("click", function() {
+			closeArmorDetailPopup();
+			openCustomArmorCreator(char, a, function() { saveArmors(char, $body); });
+		});
+	}
 
 function renderModuleCombat($body, char) {
 	var profBonus = calcProfBonus(char.level || 1);
@@ -3330,12 +3612,11 @@ function renderModuleCombat($body, char) {
 		var hd = CLASS_HIT_DICE[char.className] || 8;
 		var hpMax = (char.hp && char.hp.max) ? char.hp.max : (hd + calcMod(con));
 		var hpCur = (char.hp && char.hp.current != null) ? char.hp.current : hpMax;
-		var hpTemp = (char.hp && char.hp.temp) ? char.hp.temp : 0;
 		var hpDead = (hpCur <= 0);
-		var armorAC = computeArmorAC(char, calcMod(dex));
-		var ac = (armorAC != null) ? armorAC : ((char.ac != null) ? char.ac : (10 + calcMod(dex)));
+		var ac = computeTotalAC(char);
 		var init = (char.initiative != null) ? char.initiative : calcMod(dex);
 		var speed = (char.speed != null) ? char.speed : 30;
+		var speedM = Math.round(speed * 0.3 * 10) / 10;
 		var passPer = calculatePassivePerception(char);
 
 		var html = '<div class="characters__sheet-items">';
@@ -3343,26 +3624,13 @@ function renderModuleCombat($body, char) {
 		html += '<div class="characters__sheet-item characters__sheet-item--big characters__sheet-item--hp"><span class="characters__sheet-item-value"><span class="characters__ov" data-detail="hp.current">' + hpCur + '</span>/' + ovSpan(char, "hp.max", hpMax, "plain") + '</span> Pontos de Vida';
 		html += '<span class="characters__hp-mini-wrap"><button type="button" class="characters__hp-mini characters__hp-mini--minus" id="btn-hp-minus" title="Perder 1 PV">−</button><button type="button" class="characters__hp-mini characters__hp-mini--plus" id="btn-hp-plus" title="Recuperar 1 PV">+</button></span></div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "initiative", init, "mod") + '</span> Iniciativa</div>';
-		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "speed", speed, "plain") + ' pés</span> Deslocamento</div>';
+		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "speed", speedM, "plain") + ' m</span> Deslocamento</div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "prof", profBonus, "hit") + '</span> Proficiência</div>';
 		if (char.fightingStyle) html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">Estilo</span> ' + esc(char.fightingStyle) + '</div>';
 		html += '<div class="characters__sheet-item"><span class="characters__sheet-item-value">' + ovSpan(char, "pp", passPer, "plain") + '</span> Percepção Passiva</div>';
-		html += '<div class="characters__sheet-item characters__sheet-item--level"><label class="characters__level-editor">Nível <input type="number" class="characters__form-input characters__hp-input" id="in-sheet-level" min="1" max="20" value="' + (char.level || 1) + '"></label></div>';
 		html += '</div>';
 
-		html += '<div class="characters__hp-editors">';
-		html += '<label>PV Temporário <input type="number" class="characters__form-input characters__hp-input" id="in-hp-temp" value="' + hpTemp + '" min="0"></label>';
-		html += '</div>';
-
-		// Dados de Vida: contador com atualização ao vivo
-		var level = 1;
-		(charClasses(char) || []).forEach(function(c) { level += (c.level || 1) - 1; });
-		if (char.level && !(char.classes && char.classes.length)) level = char.level;
-		var hdLeft = Math.max(0, level - (char.hdUsed || 0));
-		html += '<div class="characters__hp-editors" id="hd-counter-row">';
-		html += '<label>Dados de Vida (d' + hd + '): <b id="hd-counter" style="color:' + (hdLeft > 0 ? "#2e9e5b" : "#d9534f") + '">' + hdLeft + '</b>/' + level + ' disponíveis</label>';
-		html += '</div>';
-
+		// Estado de combate: inspiração + testes contra morte (exibidos apenas com PV <= 0)
 		html += '<div class="characters__status-row">';
 		html += '<label class="characters__status-check"><input type="checkbox" class="inspiration-checkbox" ' + (char.inspiration ? "checked" : "") + '> Inspiração</label>';
 		if (hpDead) {
@@ -3376,26 +3644,6 @@ function renderModuleCombat($body, char) {
 		html += '</div>';
 		}
 		html += '</div>';
-
-		// Dados de Vida: atualização ao vivo em toda a ficha (contador + popups abertos)
-		function refreshHdEverywhere() {
-			var lvl = 1;
-			(charClasses(char) || []).forEach(function(c) { lvl += (c.level || 1) - 1; });
-			if (char.level && !(char.classes && char.classes.length)) lvl = char.level;
-			var left = Math.max(0, lvl - (char.hdUsed || 0));
-			$("#hd-counter").text(left).css("color", left > 0 ? "#2e9e5b" : "#d9534f");
-			var $lbl = $("#hd-left");
-			if ($lbl.length) $lbl.html('Dados de vida disponíveis: <b>' + left + '</b>/' + lvl);
-			var $rollBtn = $("#hd-roll");
-			if ($rollBtn.length) $rollBtn.prop("disabled", left <= 0);
-		}
-		var _origSave = CharactersStore.save.bind(CharactersStore);
-		CharactersStore.save = function(c) {
-			var r = _origSave(c);
-			if (c === char) refreshHdEverywhere();
-			return r;
-		};
-		refreshHdEverywhere();
 
 		$body.html(html);
 
@@ -3417,33 +3665,9 @@ function renderModuleCombat($body, char) {
 		$body.find("#btn-hp-minus").on("click", function() {
 			applyHp(((char.hp && char.hp.current != null) ? char.hp.current : 0) - 1);
 		});
-		$body.find("#in-hp-temp").on("change", function() {
-			if (!char.hp) char.hp = {};
-			char.hp.temp = parseInt($(this).val(), 10) || 0;
-			CharactersStore.save(char);
-		});
 
 		// Alterar o nível recalcula PV, espaços de magia, CD e bônus de ataque
-		$body.find("#in-sheet-level").on("change", function() {
-			var oldLevel = char.level || 1;
-			var lv = parseInt($(this).val(), 10) || 1;
-			lv = Math.min(20, Math.max(1, lv));
-			$(this).val(lv);
-			if (lv === oldLevel) return;
-			char.level = lv;
-			if (!char.hp) char.hp = {};
-			var newMax = hpMaxAuto(char);
-			if (!ovHas(char, "hp.max")) { char.hp.max = newMax; char.hp.current = newMax; }
-			char.spellSlots = calculateSpellSlots(char);
-			char.spellAttackBonus = calculateSpellAttackBonus(char);
-			char.spellDC = 8 + char.spellAttackBonus;
-			char.updated = Date.now();
-			CharactersStore.save(char);
-			renderModules();
-			var msg = "Nível " + lv + " — PV, espaços de magia e CD recalculados!";
-			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msg});
-			else sheetToast("success", msg);
-		});
+		// (binding movido para o cabeçalho da ficha: #in-header-level, ver bindHeaderLevel)
 
 		$body.find(".death-save-success").on("change", function() {
 			var index = parseInt($(this).data("index"), 10);
@@ -3659,7 +3883,7 @@ function renderModuleCombat($body, char) {
 		var dmgType = w.dmgType || (it && it.dmgType) || "";
 		var rangeTxt = "—";
 		var rr = it && it.range;
-		if (rr) rangeTxt = (rr.distance ? (rr.distance + " pés") : String(rr));
+		if (rr) rangeTxt = (rr.distance ? fmtDistM(rr.distance) : String(rr));
 		if (w.range) rangeTxt = w.range;
 		var weight = (w.weight != null ? w.weight : (it && it.weight)) || "—";
 		var value = (w.value != null ? w.value : (it && it.value)) || "—";
@@ -3680,11 +3904,12 @@ function renderModuleCombat($body, char) {
 		h += '<div class="characters__detail-row"><b>Alcance:</b> ' + esc(rangeTxt) + '</div>';
 		h += '<div class="characters__detail-row"><b>Peso:</b> ' + esc(String(weight)) + '</div>';
 		h += '<div class="characters__detail-row"><b>Valor:</b> ' + esc(String(value)) + '</div>';
-		h += '<div class="characters__detail-row"><b>Bônus de acerto:</b> +' + (ws.hit + bonus) + ' (';
+		h += '<div class="characters__detail-row"><b>Bônus de acerto:</b> +<span id="wd-hit-num">' + (ws.hit + bonus) + ' (';
+		h += '<span id="wd-hit-parts">';
 		h += '<span style="color:#7ab7ff">prof +' + ws.pb + '</span> + <span style="color:#7ab7ff">' + esc(ws.abilName) + ' ' + fmtSigned(ws.abilMod) + '</span>';
 		if (char.fightingStyle === "Archery" && ws.isRanged) h += ' + <span style="color:#7ab7ff">Arqueirismo +2</span>';
 		if (bonus) h += ' + <span style="color:#f0a30a">mágico +' + bonus + '</span>';
-		h += ')</div>';
+		h += ')</span></div>';
 		h += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Dados de dano extra:</b><div id="wd-extra-dmg"></div></div>';
 		h += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Efeitos mágicos:</b><div id="wd-magic-fx"></div></div>';
 		if (w.attunement) h += '<div class="characters__detail-row"><b>Sintonização:</b> Requer sintonização</div>';
@@ -3692,6 +3917,10 @@ function renderModuleCombat($body, char) {
 		h += '<div class="characters__detail-row" style="margin-top:8px"><b>Descrição:</b><div style="white-space:pre-wrap;margin-top:4px;font-size:.9em">' + esc(desc) + '</div></div>';
 		h += '</div>';
 		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:6px">';
+		h += '<select class="characters__form-select" id="wd-abil" style="width:100%" title="Atributo usado no acerto e no dano">';
+		var WD_ABILS = [["", "Atributo: automático"], ["str", "Força"], ["dex", "Destreza"], ["con", "Constituição"], ["int", "Inteligência"], ["wis", "Sabedoria"], ["cha", "Carisma"]];
+		WD_ABILS.forEach(function(a) { h += '<option value="' + a[0] + '"' + ((w.abilOverride || "") === a[0] ? " selected" : "") + '>' + a[1] + '</option>'; });
+		h += '</select>';
 		h += '<select class="characters__form-select" id="wd-mode" style="width:100%">';
 		h += '<option value="normal">Normal</option><option value="adv">Vantagem</option><option value="dis">Desvantagem</option>';
 		h += '</select>';
@@ -3707,6 +3936,20 @@ function renderModuleCombat($body, char) {
 		$ov.on("click", function(e) { if (e.target === this) closeWeaponDetailPopup(); });
 		$ov.find("#wd-close").on("click", closeWeaponDetailPopup);
 		$ov.find("#wd-mode").on("change", function() { attMode = this.value; });
+		// Troca o atributo usado no acerto/dano (salva e reflete na ficha)
+		$ov.find("#wd-abil").on("change", function() {
+			var v = this.value;
+			if (v) w.abilOverride = v; else delete w.abilOverride;
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			ws = computeWeaponStats(char, w);
+			// Atualiza os números exibidos no popup
+			$ov.find("#wd-hit-num").html(String(ws.hit + bonus));
+			$ov.find("#wd-hit-parts").html('<span style="color:#7ab7ff">prof +' + ws.pb + '</span> + <span style="color:#7ab7ff">' + esc(ws.abilName) + ' ' + fmtSigned(ws.abilMod) + '</span>'
+				+ (char.fightingStyle === "Archery" && ws.isRanged ? ' + <span style="color:#7ab7ff">Arqueirismo +2</span>' : '')
+				+ (bonus ? ' + <span style="color:#f0a30a">mágico +' + bonus + '</span>' : ''));
+			renderModuleAttacks($body, char);
+		});
 		function extraDmg() { if (!w.extraDmg) w.extraDmg = []; return w.extraDmg; }
 		function extraFx() { if (!w.magicFx) w.magicFx = []; return w.magicFx; }
 		function renderExtraDmg() {
@@ -3923,6 +4166,11 @@ function renderModuleCombat($body, char) {
 		h += '<div class="characters__form-group"><label class="characters__form-label">Alcance</label>';
 		h += '<input type="text" class="characters__form-input" id="wc-range" value="' + esc(w.range || "") + '" placeholder="ex: 1,5 m"></div>';
 		h += '</div>';
+		h += '<div class="characters__form-group"><label class="characters__form-label">Atributo de ataque/dano</label>';
+		h += '<select class="characters__form-select" id="wc-abil">';
+		var WC_ABILS = [["", "Automático (FOR/DES)"], ["str", "Força"], ["dex", "Destreza"], ["con", "Constituição"], ["int", "Inteligência"], ["wis", "Sabedoria"], ["cha", "Carisma"]];
+		WC_ABILS.forEach(function(a) { h += '<option value="' + a[0] + '"' + ((w.abilOverride || "") === a[0] ? " selected" : "") + '>' + a[1] + '</option>'; });
+		h += '</select></div>';
 		h += '<div class="characters__form-group"><label class="characters__form-label">Características</label>';
 		h += '<div id="wc-props" style="display:flex;flex-wrap:wrap;gap:8px;font-size:.88em">';
 		var ALL_PROPS = [
@@ -4009,6 +4257,7 @@ function renderModuleCombat($body, char) {
 				dmg1: dc + "d" + df + (dfl ? (dfl > 0 ? "+" : "") + dfl : ""),
 				_dcount: dc, _dface: df, _dflat: dfl,
 				dmgType: $ov.find("#wc-dmgtype").val(),
+				abilOverride: $ov.find("#wc-abil").val() || undefined,
 				extraDmg: extras,
 				range: $ov.find("#wc-range").val().trim(),
 				property: $ov.find(".wc-prop:checked").map(function() { return $(this).val(); }).get(),
@@ -4037,6 +4286,91 @@ function spellAbilityName(char) {
 	}
 
 	function renderModuleSpells($body, char) {
+		if (!char.spellSlotsUsed) char.spellSlotsUsed = {};
+		function slotsTotal(lv) {
+			var base = (char.spellSlots && char.spellSlots[lv]) ? char.spellSlots[lv] : 0;
+			return ovGet(char, "slot:" + lv, base);
+		}
+		function slotsUsed(lv) { return (char.spellSlotsUsed && char.spellSlotsUsed[lv]) || 0; }
+		// Normaliza: o usado nunca pode ficar acima do total (ex.: personagem
+		// baixou de nível e o total de espaços diminuiu)
+		for (var nLv = 1; nLv <= 9; nLv++) {
+			if (slotsUsed(nLv) > slotsTotal(nLv)) char.spellSlotsUsed[nLv] = slotsTotal(nLv);
+		}
+		function slotsAvail(lv) { return Math.max(0, slotsTotal(lv) - slotsUsed(lv)); }
+		// Níveis >= base da magia que ainda têm espaço disponível
+		function castableLevels(spell) {
+			var out = [];
+			for (var l = Math.max(1, spell.level || 1); l <= 9; l++) if (slotsAvail(l) > 0) out.push(l);
+			return out;
+		}
+		// Nível de conjuração selecionado: só aceita níveis com espaço disponível
+		function pickCastLevel(spell) {
+			if (!spell || !spell.level) return 0;
+			var base = Math.max(1, spell.level);
+			if (spell.castLevel >= base && spell.castLevel <= 9 && slotsAvail(spell.castLevel) > 0) return spell.castLevel;
+			var lvls = castableLevels(spell);
+			return lvls.length ? lvls[0] : base;
+		}
+		function stepCastLevel(spell, dir) {
+			var base = Math.max(1, spell.level || 1);
+			var cur = pickCastLevel(spell);
+			for (var l = cur + dir; l >= base && l <= 9; l += dir) {
+				if (slotsAvail(l) > 0) { spell.castLevel = l; return true; }
+			}
+			return false;
+		}
+		// Usar magia: gasta 1 espaço do nível escolhido (truques não gastam)
+		function useSpell(realIndex) {
+			var spell = (char.spells || [])[realIndex];
+			if (!spell) return;
+			var lv = pickCastLevel(spell);
+			if (spell.level > 0) {
+				if (slotsAvail(lv) <= 0) {
+					var msgNo = "Sem espaços de magia disponíveis no nível " + lv + ".";
+					if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "danger", content: msgNo});
+					else sheetToast("danger", msgNo);
+					return;
+				}
+				char.spellSlotsUsed[lv] = slotsUsed(lv) + 1;
+			}
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			var slotTxt;
+			if (spell.level > 0) {
+				var rest = slotsAvail(lv);
+				slotTxt = " — nível " + lv + ", resta" + (rest === 1 ? "" : "m") + " " + rest + " espaço" + (rest === 1 ? "" : "s");
+			} else slotTxt = " — truque (não gasta espaço)";
+			showRollResult("info", "Magia usada: " + (spell.name || "?") + slotTxt + " • CD " + calculateSpellDC(char) + " • Ataque +" + calculateSpellAttackBonus(char));
+			renderModuleSpells($body, char);
+		}
+		// Card de magia no estilo das armas: stepper de nível + "Usar magia"
+		function spellCardHtml(spell, realIndex) {
+			var isLeveled = !!(spell.level && spell.level > 0);
+			var lvSel = pickCastLevel(spell);
+			var anySlots = castableLevels(spell).length > 0;
+			var av = isLeveled ? slotsAvail(lvSel) : 0;
+			var lvlLine = isLeveled ? ("Nv. " + spell.level) : "Truque";
+			if (spell.school) lvlLine += " • " + spell.school;
+			if (spell.source) lvlLine += " [" + spell.source + "]";
+			var h = '<div class="characters__attack-item2 characters__spell-card' + (spell.prepared ? " is-prepared" : "") + '" data-spell-idx="' + realIndex + '">';
+			h += '<div class="characters__attack-l1"><span class="characters__attack-name"><a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a></span>';
+			if (spell.prepared) h += '<span class="characters__spell-prepared">✓ Preparada</span>';
+			h += '<button type="button" class="characters__btn characters__btn--danger characters__btn--sm" data-remove-spell="' + realIndex + '" title="Remover magia">×</button>';
+			h += '</div>';
+			h += '<div class="characters__attack-l2"><span class="characters__attack-props">' + esc(lvlLine) + '</span></div>';
+			h += '<div class="characters__spell-cast">';
+			if (isLeveled) {
+				h += '<span class="characters__spell-slotpick">';
+				h += '<button type="button" class="characters__hp-mini characters__hp-mini--minus" data-cast-step="-1" data-spell-idx="' + realIndex + '" title="Conjurar em nível menor"' + (anySlots ? "" : " disabled") + '>−</button>';
+				h += '<span class="characters__spell-slotpick-label' + (av > 0 ? "" : " is-empty") + '">Nv. ' + lvSel + '<small>' + (av > 0 ? av + " espaço" + (av > 1 ? "s" : "") : "sem espaços") + '</small></span>';
+				h += '<button type="button" class="characters__hp-mini characters__hp-mini--plus" data-cast-step="1" data-spell-idx="' + realIndex + '" title="Conjurar em nível maior"' + (anySlots ? "" : " disabled") + '>+</button>';
+				h += '</span>';
+			}
+			h += '<button type="button" class="characters__btn characters__btn--primary characters__btn--sm characters__spell-castbtn" data-use-spell="' + realIndex + '"' + ((isLeveled && !anySlots) ? ' disabled title="Sem espaços de magia disponíveis"' : "") + '>Usar magia</button>';
+			h += '</div></div>';
+			return h;
+		}
 		var html = '<div class="characters__subtitle">Conjuração</div>';
 		html += '<div class="characters__sheet-items">';
 		html += '<div class="characters__sheet-item"><b>Atributo de conjuração:</b> ' + spellAbilityName(char) + '</div>';
@@ -4044,22 +4378,24 @@ function spellAbilityName(char) {
 		html += '<div class="characters__sheet-item"><b>Bônus de Ataque Mágico:</b> ' + ovSpan(char, "spellAB", calculateSpellAttackBonus(char), "hit") + '</div>';
 		html += '</div>';
 
-		html += '<div class="characters__subtitle">Espaços de Magia</div>';
+		html += '<div class="characters__subtitle">Espaços de Magia <button type="button" class="characters__btn characters__btn--secondary characters__btn--sm characters__slots-rest" id="btn-rest-slots" title="Repouso longo: restaura todos os espaços de magia">⤾ Repouso</button></div>';
 		html += '<div class="characters__slots-grid">';
 		for (var i = 1; i <= 9; i++) {
-			var slots = char.spellSlots && char.spellSlots[i] ? char.spellSlots[i] : 0;
-			html += '<div class="characters__slot"><div class="characters__slot-value">' + ovSpan(char, "slot:" + i, slots, "plain") + '</div>' +
-				'<div class="characters__slot-level">' + i + 'º nível</div></div>';
+			var slots = slotsTotal(i);
+			var used = slotsUsed(i);
+			html += '<div class="characters__slot' + (used ? " has-used" : "") + '"><div class="characters__slot-value">' + ovSpan(char, "slot:" + i, slots, "plain") + '</div>' +
+				'<div class="characters__slot-level">' + i + 'º nível</div>' +
+				(used ? '<div class="characters__slot-used">−' + used + ' usados</div>' : '') + '</div>';
 		}
 		html += '</div>';
 
 		var allSpells = char.spells || [];
 		html += '<div class="characters__subtitle">Truques</div>';
-		html += '<div class="characters__spells-list">';
+		html += '<div class="characters__spells-cards">';
 		var cantrips = allSpells.filter(function(s) { return s.level === 0; });
 		if (cantrips.length) {
 			cantrips.forEach(function(spell) {
-				html += '<div class="characters__spell-item"><a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a></div>';
+				html += spellCardHtml(spell, allSpells.indexOf(spell));
 			});
 		} else html += '<div class="characters__spell-item">Nenhum truque adicionado</div>';
 		html += '</div>';
@@ -4068,13 +4404,9 @@ function spellAbilityName(char) {
 			var list = allSpells.filter(function(s) { return s.level === lv; });
 			if (!list.length) continue;
 			html += '<div class="characters__subtitle">Nível ' + lv + ' (' + list.length + ')</div>';
-			html += '<div class="characters__spells-list">';
+			html += '<div class="characters__spells-cards">';
 			list.forEach(function(spell) {
-				var realIndex = allSpells.indexOf(spell);
-				html += '<div class="characters__spell-item">';
-				html += '<a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a>';
-				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-spell="' + realIndex + '">×</button>';
-				html += '</div>';
+				html += spellCardHtml(spell, allSpells.indexOf(spell));
 			});
 			html += '</div>';
 		}
@@ -4090,6 +4422,61 @@ function spellAbilityName(char) {
 
 		$body.html(html);
 
+		$body.off(".spellmod");
+		// Repouso: restaura todos os espaços de magia
+		$body.on("click.spellmod", "#btn-rest-slots", function() {
+			char.spellSlotsUsed = {};
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			var msgR = "Repouso: todos os espaços de magia restaurados.";
+			if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: msgR});
+			else sheetToast("success", msgR);
+			renderModuleSpells($body, char);
+		});
+		// −/+ do nível de conjuração: só entre níveis com espaços disponíveis
+		$body.on("click.spellmod", "[data-cast-step]", function() {
+			var idx = parseInt($(this).data("spell-idx"), 10);
+			var sp = (char.spells || [])[idx];
+			if (!sp) return;
+			var dir = parseInt($(this).data("cast-step"), 10);
+			if (!stepCastLevel(sp, dir)) {
+				var msgS = dir > 0 ? "Nenhum nível maior com espaços disponíveis." : "Já está no nível base da magia (sem espaços disponíveis abaixo).";
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "info", content: msgS});
+				else sheetToast("info", msgS);
+				return;
+			}
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			renderModuleSpells($body, char);
+		});
+		// Usar magia: gasta 1 espaço do nível escolhido
+		$body.on("click.spellmod", "[data-use-spell]", function() {
+			useSpell(parseInt($(this).data("use-spell"), 10));
+		});
+		// Segurar na magia alterna a tag verde "Preparada"
+		var holdTimer = null, holdSuppress = false;
+		$body.on("mousedown.spellhold touchstart.spellhold", ".characters__spell-card", function(e) {
+			if ($(e.target).closest("button, a, .characters__ov").length) return;
+			var idx = parseInt($(this).data("spell-idx"), 10);
+			clearTimeout(holdTimer);
+			holdTimer = setTimeout(function() {
+				holdSuppress = true;
+				setTimeout(function() { holdSuppress = false; }, 500);
+				var sp = (char.spells || [])[idx];
+				if (!sp) return;
+				sp.prepared = !sp.prepared;
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				var msgP = (sp.prepared ? '"' + (sp.name || "Magia") + '" marcada como Preparada.' : '"' + (sp.name || "Magia") + '" não preparada.');
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: sp.prepared ? "success" : "info", content: msgP});
+				else sheetToast(sp.prepared ? "success" : "info", msgP);
+				renderModuleSpells($body, char);
+			}, 550);
+		});
+		$body.on("mousemove.spellhold touchmove.spellhold touchend.spellhold touchcancel.spellhold mouseup.spellhold", function() { clearTimeout(holdTimer); });
+		$body.on("click.spellhold", ".characters__spell-card a.ptm-link", function(e) {
+			if (holdSuppress) { e.preventDefault(); e.stopPropagation(); return false; }
+		});
 		var $searchInput = $body.find("#spell-search");
 		var $levelFilter = $body.find("#spell-level-filter");
 		var $results = $body.find("#spell-search-results");
@@ -4107,7 +4494,7 @@ function spellAbilityName(char) {
 				$item.html('<b>' + esc(spell.name) + '</b> (' + (spell.level === 0 ? "Truque" : "Nv. " + spell.level) + ') - ' + esc(spell.school || ""));
 				$item.on("click", function() {
 					if (!char.spells) char.spells = [];
-					char.spells.push({name: spell.name, level: spell.level, school: spell.school});
+					char.spells.push({name: spell.name, level: spell.level, school: spell.school, source: spell.source});
 					renderModuleSpells($body, char);
 				});
 				$results.append($item);
@@ -4115,7 +4502,7 @@ function spellAbilityName(char) {
 		};
 		$searchInput.on("input", searchSpells);
 		$levelFilter.on("change", searchSpells);
-		$body.on("click", "[data-remove-spell]", function() {
+		$body.on("click.spellmod", "[data-remove-spell]", function() {
 			var index = parseInt($(this).data("remove-spell"), 10);
 			if (char.spells && char.spells[index]) { char.spells.splice(index, 1); renderModuleSpells($body, char); }
 		});
@@ -4189,7 +4576,7 @@ function renderModuleFeatures($body, char) {
 	}
 function appendCoinsModule($body, char) {
 		var html = '<div class="characters__subtitle">Moedas</div>';
-		html += '<div class="characters__form-row">';
+		html += '<div class="characters__coins-grid">';
 		var coinsDef = [["platinum","Platina (pp)"],["gold","Ouro (po)"],["electrum","Électrum (pe)"],["silver","Prata (pe)"],["copper","Cobre (pc)"]];
 		coinsDef.forEach(function(c) {
 			var val = char.coins ? (char.coins[c[0]] || 0) : 0;
@@ -4211,21 +4598,31 @@ function appendCoinsModule($body, char) {
 	}
 
 	function renderModuleEquipment($body, char) {
-		// Armas agora são gerenciadas apenas no módulo "Ataques & Ações"
-		var html = '<div class="characters__subtitle">Armaduras</div>';
-		html += '<div class="characters__items-list" id="armors-list">';
+		// Armas agora são gerenciadas apenas no módulo "Ataques & Ações".
+		// Armaduras no mesmo padrão das armas: 2 linhas (nome+CA / tipo+status), clique abre popup.
+		var ARMOR_PT2 = {LA: "Armadura leve", MA: "Armadura média", HA: "Armadura pesada", S: "Escudo"};
+		function armorTypeShort(a) { return ARMOR_PT2[String((a && a.type) || "").split("|")[0]] || "Armadura"; }
+		var html = '<div class="characters__attacks-head">';
+		html += '<div class="characters__subtitle" style="margin:0">Armaduras</div>';
+		html += '<button class="characters__btn characters__btn--sm characters__btn--primary" id="btn-add-armor-popup">+ Adicionar</button>';
+		html += '</div>';
+		html += '<div class="characters__attacks-list">';
 		if (char.armors && char.armors.length) {
 			char.armors.forEach(function(armor, index) {
-				html += '<div class="characters__item"><a class="ptm-link" href="' + esc(ptmItemHref(armor)) + '">' + esc(armor.name || armor) + '</a>';
-				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="' + index + '">×</button></div>';
+				var isEq = (armor.equipped !== false);
+				var srcTag2 = armor.source ? ' <span class="characters__attack-src">[' + esc(armor.source) + ']</span>' : '';
+				html += '<div class="characters__attack-item2 characters__armor-card" data-armor-idx="' + index + '">';
+				html += '<div class="characters__armor-lines">';
+				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + esc(armor.name || armor) + srcTag2 + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</span>';
+				html += '<span class="characters__attack-hit2">CA ' + esc(String(armor.ac != null ? armor.ac : "—")) + '</span></div>';
+				html += '<div class="characters__attack-l2">';
+				html += '<span class="characters__attack-props">' + esc(armorTypeShort(armor) + (armor.attunement ? ", sintonização" : "")) + '</span>';
+				html += '<span class="characters__attack-dmg2">' + (isEq ? 'equipada' : 'na mochila') + '</span>';
+				html += '</div></div>';
+				html += '<button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="' + index + '" title="Remover">×</button></div>';
 			});
-		} else html += '<div class="characters__item">Nenhuma armadura equipada</div>';
+		} else html += '<div class="characters__sheet-item">Nenhuma armadura — use o botão + Adicionar.</div>';
 		html += '</div>';
-
-		html += '<div class="characters__subtitle">Adicionar Armadura</div>';
-		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="armor-search" placeholder="Buscar armadura..."></div>';
-		html += '<div id="armor-search-results" class="characters__search-results mt-2"></div>';
-		html += '<a class="ptm-link ptm-open-list" href="items.html">Abrir lista completa de itens</a>';
 
 		html += '<div class="characters__subtitle">Inventário</div>';
 		html += '<textarea class="characters__sheet-textarea" id="in-inv" placeholder="Anote seus itens (um por linha)...">' + esc((char.inventory || []).join("\n")) + '</textarea>';
@@ -4233,33 +4630,29 @@ function appendCoinsModule($body, char) {
 
 		$body.html(html);
 
-		var $armorSearch = $body.find("#armor-search");
-		var $armorResults = $body.find("#armor-search-results");
-		$armorSearch.on("input", function() {
-			var query = $(this).val().toLowerCase().trim();
-			if (query.length < 2) { $armorResults.empty(); return; }
-			var filtered = itemsData.filter(function(item) {
-				var baseType = String(item.type || "").split("|")[0];
-				return item.name.toLowerCase().indexOf(query) >= 0 && ["LA","MA","HA","S"].indexOf(baseType) >= 0;
-			}).slice(0, 10);
-			$armorResults.empty();
-			if (!filtered.length) { $armorResults.html('<div class="characters__search-item">Nenhuma armadura encontrada</div>'); return; }
-			filtered.forEach(function(armor) {
-				var $item = $('<div class="characters__search-item">');
-				var baseType = String(armor.type || "").split("|")[0];
-				var typeLabel = {LA: "Armadura leve", MA: "Armadura média", HA: "Armadura pesada", S: "Escudo"}[baseType] || "Armadura";
-				$item.html('<b>' + esc(optionLabel(armor)) + '</b> (' + esc(typeLabel) + ')');
-				$item.on("click", function() {
-					if (!char.armors) char.armors = [];
-					char.armors.push({name: armor.name, source: armor.source || "", type: baseType, ac: armor.ac});
-					renderModuleEquipment($body, char);
-				});
-				$armorResults.append($item);
-			});
+		// Handlers delegados com namespace: evita acumular duplicatas a cada re-render
+		// (o módulo é re-renderizado ao equipar/desequipar, e duplicatas fariam o
+		// toggle de equipar disparar duas vezes, voltando ao estado anterior).
+		$body.off("click.armors").on("click.armors", "[data-remove-armor]", function(e) {
+			e.stopPropagation();
+			var index = parseInt($(this).attr("data-remove-armor"), 10);
+			if (!char.armors || !char.armors[index]) return;
+			if (!confirm("Remover \"" + (char.armors[index].name || "armadura") + "\"?")) return;
+			char.armors.splice(index, 1);
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			refreshCombatModule();
+			renderModuleEquipment($body, char);
 		});
-		$body.on("click", "[data-remove-armor]", function() {
-			var index = parseInt($(this).data("remove-armor"), 10);
-			if (char.armors && char.armors[index]) { char.armors.splice(index, 1); renderModuleEquipment($body, char); }
+		$body.on("click.armors", "[data-armor-idx]", function(e) {
+			if ($(e.target).closest("[data-remove-armor]").length) return;
+			var idx = parseInt($(this).attr("data-armor-idx"), 10);
+			var armor = (char.armors || [])[idx];
+			if (!armor) return;
+			openArmorDetailPopup($body, char, armor, idx);
+		});
+		$body.on("click.armors", "#btn-add-armor-popup", function() {
+			openArmorAddMenu($body, char);
 		});
 
 		appendCoinsModule($body, char);
@@ -4270,6 +4663,453 @@ function renderModuleNotes($body, char) {
 		$body.html(html);
 	}
 
+// === CARACTERÍSTICAS & USOS (início) ===
+// Agrupa características por classe/subclasse, extrai "usos" do texto das
+// entries (parser próprio, em texto puro — não altera o motor de tradução) e
+// calcula recursos de classe com regras dedicadas (fúria, inspiração,
+// metamagia, espaços de pacto etc.).
+
+var USES_RESTORE_LABEL = {long: "descanso longo", short: "descanso curto", turn: "turno", unlimited: "livre"};
+
+// Texto normalizado (minúsculas, sem acentos) para comparações.
+function usesNorm(s) {
+	var t = String(s == null ? "" : s).toLowerCase();
+	try { t = t.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); } catch (e) {}
+	return t;
+}
+
+// Gatilho de recarga a partir de uma frase ("descanso longo", "short rest"...).
+function usesRestoreFromPhrase(p) {
+	var t = usesNorm(p);
+	if (/(descanso longo|long rest|por dia|per day|diari|daily|\bdia\b|amanhecer|dawn)/.test(t)) return "long";
+	if (/(descanso curto|short rest|curto)/.test(t)) return "short";
+	if (/(turno|turn|rodada|round)/.test(t)) return "turn";
+	if (/(indefinid|unlimited|ilimitad|infinit|a vontade|at will)/.test(t)) return "unlimited";
+	return null;
+}
+
+// Parser de usos em texto simples: "1/descanso longo", "5 por dia",
+// "2 vezes por descanso curto", "recarrega após um descanso longo".
+function parseUsesFromText(text) {
+	var raw = String(text == null ? "" : text).replace(/\s+/g, " ").trim();
+	if (!raw) return null;
+	var t = usesNorm(raw);
+	if (/(indefinid|unlimited|ilimitad|infinit)/.test(t)) {
+		return {max: Infinity, restore: usesRestoreFromPhrase(t) || "unlimited", label: "indefinidas"};
+	}
+	var m = /(\d+)\s*\/\s*([a-z][a-z\s]{2,30})/.exec(t);
+	if (m) return {max: parseInt(m[1], 10), restore: usesRestoreFromPhrase(m[2]), label: m[1] + "/" + m[2].trim()};
+	var m2 = /(\d+)\s*(?:vez(?:es)?\s*)?(?:por|per|a cada|each)\s*([a-z][a-z\s]{2,30})/.exec(t);
+	if (m2) return {max: parseInt(m2[1], 10), restore: usesRestoreFromPhrase(m2[2]), label: m2[1] + " por " + m2[2].trim()};
+	var m2b = /(\d+)\s*(?:usos?|uses?|vez(?:es)?)\b/.exec(t);
+	if (m2b) return {max: parseInt(m2b[1], 10), restore: usesRestoreFromPhrase(t), label: m2b[1] + " usos"};
+	// "3 pontos de sorte" só conta quando o texto também diz quando recarrega
+	// (evita confundir com "pontos de dano").
+	var m2c = /(\d+)\s*(?:pontos?|points?|cargas?|charges?|doses?)\b/.exec(t);
+	if (m2c) {
+		var rest2c = usesRestoreFromPhrase(t);
+		if (rest2c) return {max: parseInt(m2c[1], 10), restore: rest2c, label: m2c[1] + " usos"};
+	}
+	var m3 = /(recarrega|recupera|regains?|recharges?)[^.]{0,40}?(descanso (?:longo|curto)|long rest|short rest)/.exec(t);
+	if (m3) return {max: null, restore: usesRestoreFromPhrase(m3[2]), label: "recarrega em " + m3[2]};
+	return null;
+}
+
+// Máximos dinâmicos a partir do texto ("modificador de Carisma", "seu nível"...).
+function usesAbilityFromWord(w) {
+	var map = {forca: "str", strength: "str", destreza: "dex", dexterity: "dex", constituicao: "con", constitution: "con",
+		inteligencia: "int", intelligence: "int", sabedoria: "wis", wisdom: "wis", carisma: "cha", charisma: "cha"};
+	var t = usesNorm(w);
+	var keys = Object.keys(map);
+	for (var i = 0; i < keys.length; i++) { if (t.indexOf(keys[i]) >= 0) return map[keys[i]]; }
+	return null;
+}
+function usesDynamicMax(text, ctx) {
+	var t = usesNorm(text);
+	var abil = usesAbilityFromWord(t);
+	if (abil && /(modificador|modifier)/.test(t)) return Math.max(1, ctx.mod(abil));
+	if (/(bonus de proficiencia|proficiency bonus)/.test(t)) return Math.max(1, ctx.prof());
+	if (/(seu nivel|your level)/.test(t)) return Math.max(1, ctx.level);
+	return null;
+}
+// === Regras customizadas por classe ===
+// Cada regra: {re: nome da característica, label, restore ("long"/"short"/fn), max(ctx), note(ctx)}
+// `ctx` traz {level (da classe), mod(abil), prof()} — ver usesCtx().
+var USE_RULES_BY_CLASS = {
+	Barbarian: [{
+		re: /^(furia|rage)$/, label: "Fúria", restore: "long",
+		max: function(c) { return c.level >= 20 ? Infinity : c.level >= 17 ? 6 : c.level >= 12 ? 5 : c.level >= 6 ? 4 : c.level >= 3 ? 3 : 2; },
+		note: function(c) { return "Bônus de dano +" + (c.level >= 16 ? 4 : c.level >= 9 ? 3 : 2) + "; resistência a dano físico."; }
+	}],
+	Bard: [{
+		re: /^(inspiracao bardica|bardic inspiration)$/, label: "Inspiração Bárdica",
+		restore: function(c) { return c.level >= 5 ? "short" : "long"; },
+		max: function(c) { return Math.max(1, c.mod("cha")); },
+		note: function(c) { return "Dado d" + (c.level >= 15 ? 12 : c.level >= 10 ? 10 : c.level >= 5 ? 8 : 6) + " (mod. de Carisma)."; }
+	}],
+	Cleric: [{
+		re: /^(canalizar divindade|channel divinity)$/, label: "Canalizar Divindade", restore: "short",
+		max: function(c) { return c.level >= 18 ? 3 : c.level >= 6 ? 2 : 1; },
+		note: function() { return "Recarrega em descanso curto ou longo."; }
+	}],
+	Druid: [{
+		re: /^(forma selvagem|wild shape)$/, label: "Forma Selvagem", restore: "short",
+		max: function(c) { return c.level >= 20 ? Infinity : 2; },
+		note: function() { return "Recarrega em descanso curto ou longo."; }
+	}],
+	Fighter: [
+		{re: /^(segundo folego|second wind)$/, label: "Segundo Fôlego", restore: "short", max: function() { return 1; },
+			note: function() { return "Recupera 1d10 + nível de guerreiro de PV."; }},
+		{re: /^(surto de acao|action surge)$/, label: "Surto de Ação", restore: "short",
+			max: function(c) { return c.level >= 17 ? 2 : 1; }, note: function() { return "Ação adicional no turno."; }},
+		{re: /^(indomavel|indomitable)$/, label: "Indomável", restore: "long",
+			max: function(c) { return c.level >= 17 ? 3 : c.level >= 13 ? 2 : 1; }, note: function() { return "Refaz uma salvaguarda falha."; }},
+		{re: /^(dados de superioridade|superiority dice)$/, label: "Dados de Superioridade", restore: "short",
+			max: function(c) { return c.level >= 15 ? 6 : c.level >= 7 ? 5 : 4; },
+			note: function(c) { return "Dado d" + (c.level >= 18 ? 12 : c.level >= 10 ? 10 : 8) + "."; }}
+	],
+	Monk: [{
+		re: /^(ki|pontos de ki|pontos de foco|ki points|focus points)$/, label: "Pontos de Ki", restore: "short",
+		max: function(c) { return Math.max(1, c.level); },
+		note: function() { return "Igual ao nível de monge; recarrega em curto ou longo."; }
+	}],
+	Paladin: [
+		{re: /^(canalizar divindade|channel divinity)$/, label: "Canalizar Divindade", restore: "short", max: function() { return 1; }},
+		{re: /^(senso divino|divine sense)$/, label: "Senso Divino", restore: "long",
+			max: function(c) { return Math.max(1, 1 + c.mod("cha")); }, note: function() { return "Detecta celestiais, corruptores e mortos-vivos."; }},
+		{re: /^(impor as maos|lay on hands)$/, label: "Impor as Mãos", restore: "long",
+			max: function(c) { return Math.max(1, 5 * c.level); }, note: function() { return "Reserva de PV para curar."; }}
+	],
+	Sorcerer: [{
+		re: /^(fonte de magia|font of magic|pontos de feiticaria|sorcery points)$/, label: "Pontos de Feitiçaria",
+		restore: "long", metamagic: true,
+		max: function(c) { return Math.max(1, c.level); },
+		note: function() { return "Igual ao nível de feiticeiro; Metamagia consome pontos."; }
+	}],
+	Warlock: [
+		{re: /^(magia de pacto|pact magic|espacos de pacto)$/, label: "Espaços de Pacto", restore: "short", pactBoon: true,
+			max: function(c) { return warlockPactSlots(c.level).count; },
+			note: function(c) { var s = warlockPactSlots(c.level); return s.count + " espaço(s) de " + s.level + "º nível (descanso curto ou longo)."; }},
+		{re: /^(arcano mistico|mystic arcanum)/, label: "Arcano Místico", restore: "long", max: function() { return 1; }}
+	],
+	Wizard: [{re: /^(recuperacao arcana|arcane recovery)$/, label: "Recuperação Arcana", restore: "long", max: function() { return 1; }}],
+	Artificer: [
+		{re: /^(genio relampago|flash of genius)$/, label: "Gênio Relâmpago", restore: "long",
+			max: function(c) { return Math.max(1, c.mod("int")); },
+			note: function() { return "Igual ao mod. de Inteligência; soma em teste/salvaguarda." ; }},
+		{re: /^(item armazenador de magia|spell-storing item)$/, label: "Item Armazenador de Magia", restore: "long",
+			max: function(c) { return Math.max(2, 2 * c.mod("int")); },
+			note: function() { return "Usos = 2× mod. de Inteligência (mín. 2); guarda um feitiço de 1º/2º nível." }},
+		{re: /^(jato arcano|arcano jolt|arcane jolt)$/, label: "Jato Arcano", restore: "long",
+			max: function(c) { return Math.max(1, c.mod("int")); },
+			note: function() { return "Igual ao mod. de Inteligência; dano extra ou cura." }}
+	],
+	Rogue: [{re: /^(golpe de sorte|stroke of luck)$/, label: "Golpe de Sorte", restore: "short", max: function() { return 1; }}]
+};
+
+// Espaços de pacto do bruxo por nível: [quantidade, nível do espaço].
+function warlockPactSlots(level) {
+	var count = [0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4];
+	var slotLv = [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
+	var lv = Math.max(1, Math.min(20, parseInt(level, 10) || 1));
+	return {count: count[lv], level: slotLv[lv]};
+}
+
+// Custo em pontos de feitiçaria de cada opção de Metamagia.
+function metamagicCost(name) {
+	var t = usesNorm(name);
+	if (/(intensificad|heightened)/.test(t)) return 3;
+	if (/(cuidados|careful|acelerad|quickened|buscador|seeking)/.test(t)) return 2;
+	return 1; // sutil, distante, duplicada, potencializada, transmutada
+}
+
+// Chave estável do contador (não depende do idioma do texto exibido).
+function abilityUseKey(kind, clsName, name) {
+	return kind + "|" + usesNorm(clsName) + "|" + usesNorm(name);
+}
+
+// Contexto de cálculo: nível da classe, modificadores e proficiência.
+function usesCtx(char, clsName, subObj, level) {
+	return {
+		char: char, clsName: clsName, subObj: subObj, level: level || 1,
+		mod: function(abil) { return calcMod((char.scores && char.scores[abil] || 8) + (char.rawScores && char.rawScores[abil] || 0)); },
+		prof: function() { return calcProfBonus(level || char.level || 1); }
+	};
+}
+// Busca as entries de um talento no catálogo (os talentos salvos só têm nome/fonte).
+function featEntriesFor(f) {
+	var list = (typeof featsData !== "undefined" && featsData) ? featsData : [];
+	var cands = list.filter(function(x) { return x && usesNorm(x.name) === usesNorm(f.name); });
+	if (!cands.length) return null;
+	var hit = f.source ? cands.filter(function(x) { return x.source === f.source; })[0] : null;
+	return (hit || cands[0]).entries || null;
+}
+
+// Descrição textual de uma característica já adicionada à mão (sem entries).
+function manualEntries(o) {
+	if (!o) return [];
+	if (o.entries) return o.entries;
+	if (o.description) return [String(o.description)];
+	return [];
+}
+
+// Monta o descritor de uso de uma característica: regra de classe ou parser do texto.
+function describeUseForFeature(feat, kind, ctx) {
+	var rules = USE_RULES_BY_CLASS[ctx.clsName] || [];
+	var txt = entriesToPlain(feat.entries, 0);
+	var rule = null;
+	for (var i = 0; i < rules.length; i++) { if (rules[i].re.test(usesNorm(feat.name))) { rule = rules[i]; break; } }
+	var parsed = rule
+		? {max: rule.max(ctx), restore: (typeof rule.restore === "function" ? rule.restore(ctx) : rule.restore), label: rule.label}
+		: parseUsesFromText(txt);
+	if (!parsed) return null;
+	var max = parsed.max;
+	if (max == null) max = usesDynamicMax(txt, ctx);
+	if (max == null) return null; // não há como calcular: fica fora do módulo
+	var d = {
+		key: abilityUseKey(kind, ctx.clsName, feat.name),
+		name: (rule && rule.label) ? rule.label : feat.name,
+		kind: kind,
+		tag: kind === "subclass" ? "subclasse" : kind === "special" ? "habilidade" : kind === "feat" ? "talento" : kind === "race" ? "raça" : kind === "subrace" ? "sub-raça" : "classe",
+		max: max, restore: parsed.restore || null,
+		note: (rule && rule.note) ? rule.note(ctx) : ""
+	};
+	if (ctx.char && ctx.char.choices) {
+		if (rule && rule.metamagic && Array.isArray(ctx.char.choices.metamagic) && ctx.char.choices.metamagic.length) {
+			d.options = ctx.char.choices.metamagic.map(function(m) { return {name: m, cost: metamagicCost(m)}; });
+		}
+		if (rule && rule.pactBoon && ctx.char.choices.pact) d.note = (d.note ? d.note + " " : "") + "Dádiva do Pacto: " + ctx.char.choices.pact + ".";
+	}
+	return d;
+}
+
+// Resolve o objeto da raça salva no personagem a partir de racesData (escopo de topo).
+// Simplificação de getRaceObj(): cobre raça direta, variante recolhida "Base (Rótulo)" e subraça salva como raça.
+function raceObjectForUses(char) {
+	if (!char.race || !char.race.name) return null;
+	var name = char.race.name;
+	var src = char.raceSource || char.race.source || null;
+	var direct = racesData.filter(function(r) { return r.name === name; });
+	var hit = (src ? direct.filter(function(r) { return r.source === src; })[0] : null) || direct[0];
+	if (hit) return hit;
+	// Variante recolhida: "Base (Rótulo)" — busca a subraça que combine com a raça base e o rótulo.
+	var m = /^(.*?)\s*\((.+)\)$/.exec(name);
+	if (m) {
+		var subs = subracesData.filter(function(s) {
+			return s.raceName === m[1] && (usesNorm(s.name) === usesNorm(m[2]) || usesNorm(s.label || "") === usesNorm(m[2]));
+		});
+		if (subs.length) return $.extend({}, subs[0], {name: m[1], source: subs[0].source});
+	}
+	return null;
+}
+// Objeto da subraça salva separadamente (char.raceSubrace / char.raceSubraceName).
+function subraceObjectForUses(char, raceObj) {
+	if (char.raceSubrace && typeof char.raceSubrace === "object" && char.raceSubrace.name) return char.raceSubrace;
+	if (!char.raceSubraceName) return null;
+	var raceName = raceObj ? raceObj.name : (char.race ? char.race.name : "");
+	var subs = subracesData.filter(function(s) {
+		return s.name === char.raceSubraceName && (!raceName || s.raceName === raceName || !s.raceName);
+	});
+	return subs[0] || null;
+}
+// Grupos exibidos no módulo: raça, sub-raça, classe, subclasse (tag própria), habilidades e talentos.
+function usesGroupsFor(char) {
+	var groups = [];
+	// Raça e sub-raça: traços com usos detectados pelo parser (ex.: "1/descanso longo").
+	var raceObj = raceObjectForUses(char);
+	var subraceObj = subraceObjectForUses(char, raceObj);
+	function pushRaceItems(obj, kind, arr) {
+		if (!obj || !Array.isArray(obj.entries)) return;
+		obj.entries.forEach(function(e) {
+			if (!e || !e.name || !e.entries) return;
+			var ctx = usesCtx(char, raceObj ? raceObj.name : "", null, char.level || 1);
+			var d = describeUseForFeature({name: e.name, entries: e.entries}, kind, ctx);
+			if (d) arr.push(d);
+		});
+	}
+	if (raceObj || subraceObj) {
+		var raceItems = [], subraceItems = [];
+		pushRaceItems(raceObj, "race", raceItems);
+		pushRaceItems(subraceObj, "subrace", subraceItems);
+		if (raceItems.length) groups.push({key: "race|" + (raceObj ? raceObj.name : (char.race ? char.race.name : "")), title: (raceObj ? raceObj.name : (char.race ? char.race.name : "Raça")) + " — raça", tag: "raça", items: raceItems});
+		if (subraceItems.length) groups.push({key: "subrace|" + subraceObj.name, title: subraceObj.name + " — sub-raça", tag: "sub-raça", items: subraceItems});
+	}
+	var classes = charClasses(char);
+	classes.forEach(function(c) {
+		var clsAll = (typeof classesData !== "undefined" && classesData) ? classesData.filter(function(x) { return x.name === c.name; }) : [];
+		var srcKey = (classes[0] === c && char.classSource) ? char.classSource : (c.source || null);
+		var cls = (srcKey && clsAll.filter(function(x) { return x.source === srcKey; })[0]) || clsAll[0];
+		var subObj = subObjFromKey(c.subclass, c.name);
+		var ctx = usesCtx(char, c.name, subObj, c.level || 1);
+		var clsItems = [], subItems = [];
+		classFeaturesFor(c.name, cls ? cls.source : srcKey, c.level || 1, subObj).forEach(function(f) {
+			var d = describeUseForFeature(f.feat, f.kind, ctx);
+			if (!d) return;
+			(f.kind === "subclass" ? subItems : clsItems).push(d);
+		});
+		// Subclasse sempre ganha um grupo próprio (tudo que tem a tag fica junto).
+		if (clsItems.length) groups.push({key: "cls|" + c.name, title: c.name + " — Nv. " + (c.level || 1), tag: "classe", items: clsItems});
+		if (subItems.length) groups.push({key: "sub|" + c.name + "|" + (subObj ? subObj.name : ""), title: (subObj ? subObj.name : "Subclasse") + " (" + c.name + ")", tag: "subclasse", items: subItems});
+	});
+	// Habilidades especiais adicionadas à mão na ficha
+	var special = [];
+	(char.specialAbilities || []).forEach(function(a) {
+		var obj = (a && typeof a === "object") ? a : {name: a};
+		var d = describeUseForFeature({name: obj.name, entries: manualEntries(obj)}, "special", usesCtx(char, "", null, char.level || 1));
+		if (d) special.push(d);
+	});
+	if (special.length) groups.push({key: "special", title: "Habilidades Especiais", tag: "habilidade", items: special});
+	// Talentos (entries buscadas no catálogo quando disponível)
+	var talents = [];
+	(char.feats || []).forEach(function(f) {
+		var obj = (f && typeof f === "object") ? f : {name: f};
+		var entries = manualEntries(obj) || [];
+		if (!entries.length) entries = featEntriesFor(obj) || [];
+		var d = describeUseForFeature({name: obj.name, entries: entries}, "feat", usesCtx(char, "", null, char.level || 1));
+		if (d) talents.push(d);
+	});
+	if (talents.length) groups.push({key: "feats", title: "Talentos", tag: "talento", items: talents});
+	return groups;
+}
+
+// O módulo só aparece quando há ao menos um recurso/uso relevante.
+function hasUsesModuleContent(char) {
+	try { return usesGroupsFor(char).length > 0; } catch (e) { return false; }
+}
+// --- Contadores: leitura/escrita do estado (char.abilityUses) ---
+function usesMaxOf(it, rec) {
+	return (rec && rec.maxOverride != null) ? rec.maxOverride : it.max;
+}
+function usesIndexByKey(char) {
+	var map = {};
+	usesGroupsFor(char).forEach(function(g) { g.items.forEach(function(it) { map[it.key] = it; }); });
+	return map;
+}
+// Ajusta o gasto dentro dos limites quando o máximo muda (nível, itens...).
+function normalizeAbilityUses(char) {
+	if (!char.abilityUses || typeof char.abilityUses !== "object") { char.abilityUses = {}; return; }
+	var index = usesIndexByKey(char);
+	Object.keys(char.abilityUses).forEach(function(k) {
+		var rec = char.abilityUses[k];
+		if (!rec || typeof rec !== "object") return;
+		var it = index[k];
+		if (!it) return; // dados ainda não carregados: não mexe no que não pode recalcular
+		var max = usesMaxOf(it, rec);
+		if (isFinite(max) && (rec.used || 0) > max) rec.used = max;
+		if (!(rec.used > 0)) rec.used = 0;
+	});
+}
+function usesItemHtml(it, char) {
+	var rec = (char.abilityUses && char.abilityUses[it.key]) || {};
+	var max = usesMaxOf(it, rec);
+	var maxTxt = isFinite(max) ? String(max) : "∞";
+	var used = Math.max(0, rec.used || 0);
+	var remaining = isFinite(max) ? Math.max(0, max - used) : Infinity;
+	var remTxt = (remaining === Infinity) ? "∞" : String(remaining);
+	var h = '<div class="characters__use-item' + (used > 0 ? " is-spent" : "") + '" data-use-item="' + esc(it.key) + '">';
+	h += '<div class="characters__use-head"><span class="characters__use-name">' + esc(it.name) + '</span>';
+	if (it.tag) h += ' <span class="characters__feature-tag">' + esc(it.tag) + '</span>';
+	if (it.restore) h += ' <span class="characters__use-restore">↻ ' + esc(USES_RESTORE_LABEL[it.restore] || it.restore) + '</span>';
+	h += '</div>';
+	h += '<div class="characters__use-row">';
+	h += '<button class="characters__hp-mini characters__hp-mini--minus" data-use-minus="' + esc(it.key) + '" title="Gastar um uso">−</button>';
+	h += '<button class="characters__use-count" data-use-max="' + esc(it.key) + '" title="Toque para ajustar o máximo">' + esc(remTxt + " / " + maxTxt) + '</button>';
+	h += '<button class="characters__hp-mini characters__hp-mini--plus" data-use-plus="' + esc(it.key) + '" title="Recuperar um uso">+</button>';
+	h += '</div>';
+	if (it.note) h += '<div class="characters__use-note">' + esc(it.note) + '</div>';
+	if (it.options && it.options.length) {
+		h += '<div class="characters__use-options">';
+		it.options.forEach(function(op, ix) {
+			h += '<button class="characters__use-opt" data-use-opt="' + esc(it.key) + '" data-use-opt-ix="' + ix + '" title="Gasta pontos de feitiçaria">' + esc(op.name) + ' <b>' + op.cost + '</b></button>';
+		});
+		h += '</div>';
+	}
+	return h + '</div>';
+}
+function renderModuleUses($body, char) {
+	if (!char.abilityUses || typeof char.abilityUses !== "object") char.abilityUses = {};
+	normalizeAbilityUses(char);
+	var groups = usesGroupsFor(char);
+	var html = '<div class="characters__uses-hint">Os contadores recarregam sozinhos no descanso (curto/longo) conforme a característica. Toque no contador para ajustar o máximo.</div>';
+	groups.forEach(function(g) {
+		html += '<div class="characters__uses-group" data-uses-group="' + esc(g.key) + '">';
+		html += '<div class="characters__uses-group-head"><span class="characters__uses-group-title">' + esc(g.title) + '</span>';
+		html += '<span class="characters__feature-tag">' + esc(g.tag) + '</span></div>';
+		g.items.forEach(function(it) { html += usesItemHtml(it, char); });
+		html += '</div>';
+	});
+	$body.html(html);
+	$body.off("click.uses");
+	function commit() { char.updated = Date.now(); CharactersStore.save(char); renderModuleUses($body, char); }
+	$body.on("click.uses", "[data-use-minus]", function() {
+		var it = usesIndexByKey(char)[$(this).attr("data-use-minus")];
+		if (!it) return;
+		var rec = char.abilityUses[it.key] = char.abilityUses[it.key] || {};
+		var max = usesMaxOf(it, rec);
+		var used = rec.used || 0;
+		if (isFinite(max) && max - used <= 0) { sheetToast("info", "Sem usos disponíveis: " + it.name + "."); return; }
+		rec.used = used + 1;
+		commit();
+	});
+	$body.on("click.uses", "[data-use-plus]", function() {
+		var it = usesIndexByKey(char)[$(this).attr("data-use-plus")];
+		if (!it) return;
+		var rec = char.abilityUses[it.key] = char.abilityUses[it.key] || {};
+		if (!(rec.used > 0)) return;
+		rec.used = rec.used - 1;
+		commit();
+	});
+	$body.on("click.uses", "[data-use-opt]", function() {
+		var it = usesIndexByKey(char)[$(this).attr("data-use-opt")];
+		if (!it || !it.options) return;
+		var op = it.options[parseInt($(this).attr("data-use-opt-ix"), 10)];
+		if (!op) return;
+		var rec = char.abilityUses[it.key] = char.abilityUses[it.key] || {};
+		var max = usesMaxOf(it, rec);
+		var used = rec.used || 0;
+		var remaining = isFinite(max) ? max - used : Infinity;
+		if (remaining < op.cost) { sheetToast("info", "Pontos insuficientes para " + op.name + " (custo " + op.cost + ")."); return; }
+		rec.used = used + op.cost;
+		commit();
+	});
+	$body.on("click.uses", "[data-use-max]", function() {
+		var it = usesIndexByKey(char)[$(this).attr("data-use-max")];
+		if (!it) return;
+		var rec = char.abilityUses[it.key] = char.abilityUses[it.key] || {};
+		var auto = isFinite(it.max) ? String(it.max) : "∞";
+		var cur = usesMaxOf(it, rec);
+		var resp = window.prompt('Máximo de usos de "' + it.name + '" (vazio = automático ' + auto + '):', isFinite(cur) ? String(cur) : "");
+		if (resp == null) return;
+		resp = String(resp).trim();
+		if (!resp) { delete rec.maxOverride; }
+		else {
+			var n = parseInt(resp, 10);
+			if (isNaN(n) || n < 0) { sheetToast("info", "Valor inválido."); return; }
+			rec.maxOverride = n;
+			if ((rec.used || 0) > n) rec.used = n;
+		}
+		commit();
+	});
+}
+// Restaura os contadores conforme o descanso: 'short' zera os de descanso curto,
+// 'long' zera todos (curto e longo). Retorna quantos contadores mudaram.
+function restoreAbilityUses(char, type) {
+	if (!char.abilityUses || typeof char.abilityUses !== "object") char.abilityUses = {};
+	var n = 0;
+	usesGroupsFor(char).forEach(function(g) {
+		g.items.forEach(function(it) {
+			var mode = it.restore;
+			if (!mode) return;
+			var applies = (mode === type) || (type === "long" && mode === "short");
+			if (!applies) return;
+			var rec = char.abilityUses[it.key];
+			if (rec && rec.used) { rec.used = 0; n++; }
+		});
+	});
+	if (n) { char.updated = Date.now(); CharactersStore.save(char); }
+	return n;
+}
+// === CARACTERÍSTICAS & USOS (fim) ===
 	SHEET_MODULE_DEFS = {
 		abilities: {title: "Atributos", render: renderModuleAbilities},
 		combat: {title: "Combate", render: renderModuleCombat},
@@ -4277,6 +5117,7 @@ function renderModuleNotes($body, char) {
 		attacks: {title: "Ataques & Ações", render: renderModuleAttacks},
 		spells: {title: "Magias", render: renderModuleSpells},
 		features: {title: "Características", render: renderModuleFeatures},
+		uses: {title: "Características & Usos", render: renderModuleUses},
 		equipment: {title: "Equipamentos", render: renderModuleEquipment},
 		notes: {title: "Notas", render: renderModuleNotes}
 	};
@@ -4302,7 +5143,6 @@ function renderSheet() {
 			// Ações da ficha: no cabeçalho, ao lado do avatar.
 			// Delegação em $root para sobreviver à recriação do cabeçalho.
 			$root.off(".sheetact");
-			$root.on("click.sheetact", "#btn-export-sheet", function() { exportToCah(char); });
 			$root.on("click.sheetact", "#btn-print", function() { openRollHistoryPopup(char); });
 			$root.on("click.sheetact", "#btn-reorder", toggleSheetReorder);
 			$root.on("click.sheetact", "#btn-reset-order", resetSheetOrder);
@@ -4313,6 +5153,8 @@ function renderSheet() {
 			});
 			// Salvamento automático: qualquer alteração na ficha é gravada
 			bindAutoSave(char);
+			// Nível editável no cabeçalho (movido da aba Combate)
+			bindHeaderLevel(char);
 			// Botão físico/gesto de voltar do celular
 			initBackNavigation();
 			renderModules();
@@ -4616,6 +5458,16 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 	var detailClickGuard = false;
 	function guardDetailClick() { if (!detailClickGuard) return false; detailClickGuard = false; return true; }
 	function fmtSigned(n) { return (n >= 0 ? "+" : "") + n; }
+	// Converte distância em pés para metros (1 ft = 0,3 m; 5 ft = 1,5 m) — exibe em PT
+	function fmtDistM(ft) {
+		var n = Number(ft);
+		if (isNaN(n)) return String(ft);
+		var m = n * 0.3;
+		// Arredonda para 1 casa decimal e remove trailing ".0"
+		m = Math.round(m * 10) / 10;
+		var txt = (m % 1 === 0) ? String(m) : String(m).replace(".", ",");
+		return txt + " m";
+	}
 	function ovHas(char, key) { return !!(char.overrides && char.overrides[key] != null); }
 	function ovGet(char, key, autoVal) { return ovHas(char, key) ? char.overrides[key] : autoVal; }
 	function ovSet(char, key, val) {
@@ -4649,7 +5501,13 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		var finesse = props.indexOf("F") >= 0;
 		var strMod = calcMod(effAbility(char, "str"));
 		var dexMod = calcMod(effAbility(char, "dex"));
-		var abilMod = isRanged ? dexMod : (finesse ? Math.max(strMod, dexMod) : strMod);
+		// Override do usuário: permite usar qualquer atributo principal no acerto/dano
+		var ABIL_NAMES = {str: "FOR", dex: "DES", con: "CON", int: "INT", wis: "SAB", cha: "CAR"};
+		var abilOverride = w && w.abilOverride && ABIL_NAMES[w.abilOverride] ? w.abilOverride : null;
+		var abilKey = abilOverride || (isRanged ? "dex" : (finesse ? "str" : "str"));
+		var abilMod = (abilKey === "dex") ? dexMod : calcMod(effAbility(char, abilKey));
+		// Finesse sem override mantém o melhor entre FOR e DES (regra canônica)
+		if (!abilOverride && finesse) abilMod = Math.max(strMod, dexMod);
 		var pb = profBonusEff(char);
 		var dmgBase = (it && it.dmg1) ? it.dmg1 : null;
 		var hit = pb + abilMod;
@@ -4657,7 +5515,8 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		if (char.fightingStyle === "Archery" && isRanged) hit += 2;
 		return {
 			it: it, isRanged: isRanged, finesse: finesse, abilMod: abilMod,
-			abilName: isRanged ? "DES" : (finesse ? "FOR/DES" : "FOR"),
+			abilKey: abilKey, abilOverride: !!abilOverride,
+			abilName: abilOverride ? ABIL_NAMES[abilKey] : (isRanged ? "DES" : (finesse ? "FOR/DES" : "FOR")),
 			pb: pb, hit: hit,
 			dmgBase: dmgBase,
 			dmgStr: dmgBase ? (dmgBase + (abilMod >= 0 ? "+" : "") + abilMod) : "—",
@@ -4793,8 +5652,20 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			parts: function(char) {
 				var dexM = calcMod(effAbility(char, "dex"));
 				var armor = computeArmorAC(char, dexM);
-				if (armor != null) return [{label: "Armadura/escudo equipados", txt: String(armor)}];
-				return [{label: "Base", txt: "10"}, {label: "Mod. DES", txt: fmtSigned(dexM)}];
+				if (armor == null) return [{label: "Base", txt: "10"}, {label: "Mod. DES", txt: fmtSigned(dexM)}];
+				var out = [];
+				(char.armors || []).forEach(function(a) {
+					if (!a || a.equipped === false) return;
+					var t = String(a.type || "").split("|")[0];
+					var lbl = (t === "S" ? "Escudo" : "Armadura") + ": " + (a.name || "?");
+					var val = (a.ac != null) ? String(a.ac) : "—";
+					if (t === "LA") val += " + DES " + fmtSigned(dexM);
+					else if (t === "MA") val += " + DES " + fmtSigned(Math.min(2, dexM));
+					out.push({label: lbl, txt: val});
+				});
+				if (char.fightingStyle === "Defense") out.push({label: "Estilo de Luta: Defesa", txt: "+1"});
+				out.push({label: "Total (melhor armadura + escudo)", txt: String(armor)});
+				return out;
 			},
 			auto: function(char) { return acAuto(char); }
 		};
@@ -5692,6 +6563,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			console.log("[Characters] Iniciando...");
 			console.log("[Characters] jQuery version:", $.fn.jquery);
 			
+	initBackNavigation();
 			Promise.all([loadRaces(), loadBackgrounds(), loadClasses(), loadSubclasses(), loadSpells(), loadItems(), loadFeats()])
 				.then(function(results) {
 					console.log("[Characters] Dados carregados com sucesso");
@@ -5715,6 +6587,8 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 					console.log("[Characters] Subclasses:", subclassesData.map(function(s) { return s.name + " (" + s.className + " -> " + s._classNameEN + ")"; }));
 					$root.find(".initial-message").remove();
 					renderList();
+					// Ficha já aberta: re-renderiza para incluir módulos que dependem dos dados carregados (ex.: Características & Usos)
+					if (window.__CHAR_SHEET_OPEN__ && $root.find("#sheet-modules").length) renderModules();
 				})
 				.catch(function(err) {
 					console.error("[Characters] Erro ao carregar dados:", err);

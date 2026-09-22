@@ -71,6 +71,12 @@ class HomeRadial {
 			HomeRadial.closeAll();
 		});
 		HomeRadial._radial.querySelector(".home__radial-center")?.addEventListener("click", () => HomeRadial.closeAll());
+		// Atalho "Fichas" no centro: navega para a ficha de personagem
+		// (o clique normal do <a> navega; aqui apenas fechamos os painéis).
+		HomeRadial._radial.querySelector(".home__radial-center-fichas")?.addEventListener("click", evt => {
+			evt.stopPropagation();
+			HomeRadial.closeAll();
+		});
 	}
 
 	static _bindActions () {

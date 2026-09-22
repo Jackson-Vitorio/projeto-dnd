@@ -66,6 +66,8 @@
 .characters__sheet-avatar{width:96px;height:96px;border-radius:50%;background:#006bc4;display:flex;align-items:center;justify-content:center;font-size:2em;color:#fff;font-weight:700;flex-shrink:0}
 .characters__sheet-name{font-size:1.8em;font-weight:700;margin:0 0 4px;color:#333}
 .characters__sheet-detail{color:#555;font-size:.95em;margin-bottom:2px}
+/* Input de nível inline no cabeçalho da ficha */
+.characters__level-header-input{width:3.4em;min-width:3.4em;padding:0 4px;text-align:center;font-size:1em;font-weight:700;height:1.7em;line-height:1.7em;border-radius:6px;display:inline-block;vertical-align:middle}
 .characters__sheet-stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px}
 .characters__stat{text-align:center;border:1px solid #ddd;border-radius:8px;padding:12px 8px;background:#fafafa}
 .characters__stat-name{font-size:.8em;font-weight:600;text-transform:uppercase;color:#666}
@@ -184,6 +186,11 @@
 .characters__detail-manual{color:#c77700;font-weight:600;margin-top:6px}
 .characters__detail-input{margin-top:12px}
 .characters__detail-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+/* Corpo dos popups de detalhe (armas e armaduras) */
+.characters__detail-body{display:flex;flex-direction:column;gap:6px;color:#1f2a37;font-size:.95em}
+.characters__detail-row{display:flex;gap:8px;align-items:baseline;line-height:1.45}
+.characters__detail-row > b{flex:0 0 auto;color:#3b4657}
+.characters__detail-row > div{min-width:0}
 
 
 /* === CRIACAO EM COLUNA VERTICAL === */
@@ -257,6 +264,21 @@
 .characters__spell-item{display:flex;align-items:center;gap:6px;padding:5px 6px;font-size:1em;border-bottom:1px solid #f0f2f5}
 .characters__spell-item:last-child{border-bottom:none}
 .characters__spell-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Cards de magia no módulo (estilo armas): stepper de nível + Usar magia */
+.characters__spells-cards{display:flex;flex-direction:column;gap:8px;margin:4px 0 10px}
+.characters__spell-card{position:relative}
+.characters__spell-card.is-prepared{border-left:3px solid #2e7d32}
+.characters__spell-prepared{font-size:.72em;font-weight:700;color:#fff;background:#2e7d32;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.characters__spell-cast{display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+.characters__spell-slotpick{display:inline-flex;align-items:center;gap:6px}
+.characters__spell-slotpick-label{min-width:70px;text-align:center;font-weight:700;font-size:.9em;color:#1f2a37;display:flex;flex-direction:column;line-height:1.15}
+.characters__spell-slotpick-label small{font-weight:600;font-size:.8em;color:#667085}
+.characters__spell-slotpick-label.is-empty small{color:#c62828}
+.characters__spell-castbtn{margin-left:auto}
+.characters__slots-rest{vertical-align:middle;margin-left:8px;font-size:.75em;padding:2px 8px}
+.characters__slot-used{font-size:.66em;font-weight:600;color:#b45309;margin-top:1px}
+.characters__slot.has-used .characters__slot-value{color:#b45309}
 
 /* Itens/armas/armaduras em duas colunas */
 .characters__items-list{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
@@ -351,12 +373,165 @@ body #characters-main{padding-top:0}
 .characters__info-editable { cursor: pointer; border-bottom: 1px dotted #999; padding: 0 2px; }
 .characters__info-editable:focus { outline: 1px solid #006bc4; }
 .characters__edit-input { width: auto; padding: 4px 8px; font-size: .9em; min-width: 120px; }
+
+/* ============================================================
+   MODO ESCURO (ve-night-mode) — Fichas de Personagem
+   Paleta baseada no tema do site: bg #1c1c1c/#222, alt #383838,
+   borda #555, fonte #bbb, accent #d29a38 (dourado) e #7db6e8 (link).
+   ============================================================ */
+.ve-night-mode .characters__view{color:#bbb}
+.ve-night-mode .characters__list-title{color:#d29a38}
+.ve-night-mode .characters__card{background:#222;border-color:#555;box-shadow:0 2px 4px rgba(0,0,0,.4)}
+.ve-night-mode .characters__card:hover{border-color:#d29a38;box-shadow:0 4px 12px rgba(0,0,0,.6)}
+.ve-night-mode .characters__card-name{color:#eee}
+.ve-night-mode .characters__card-info{color:#999}
+.ve-night-mode .characters__card-level{background:#d29a38;color:#1c1c1c}
+.ve-night-mode .characters__empty{color:#888}
+.ve-night-mode .characters__empty-icon{color:#555}
+.ve-night-mode .characters__form{background:#222;border-color:#555}
+.ve-night-mode .characters__form-section-title{color:#d29a38;border-bottom-color:#d29a38}
+.ve-night-mode .characters__form-label{color:#999}
+.ve-night-mode .characters__form-input,.ve-night-mode .characters__form-select{background:#222;border-color:#555;color:#bbb}
+.ve-night-mode .characters__form-input:focus,.ve-night-mode .characters__form-select:focus{border-color:#d29a38;box-shadow:0 0 0 2px rgba(210,154,56,.15)}
+.ve-night-mode .characters__form-select{background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")}
+.ve-night-mode .characters__step{background:#222;border-color:#555;color:#bbb}
+.ve-night-mode .characters__step.is-active{background:#d29a38;border-color:#d29a38;color:#1c1c1c}
+.ve-night-mode .characters__abilities .characters__ability{background:#222;border-color:#555}
+.ve-night-mode .characters__ability-name{color:#999}
+.ve-night-mode .characters__ability-score{color:#eee;border-bottom-color:#555}
+.ve-night-mode .characters__ability-mod{color:#7db6e8}
+/* Módulos da ficha */
+.ve-night-mode .characters__module{background:#222;border-color:#444;box-shadow:0 1px 3px rgba(0,0,0,.5)}
+.ve-night-mode .characters__module-head{background:#2a2a2a;border-bottom-color:#444}
+.ve-night-mode .characters__module-head:active{background:#333}
+.ve-night-mode .characters__module-handle{color:#666}
+.ve-night-mode .characters__module-handle:hover{background:#383838;color:#d29a38}
+.ve-night-mode .characters__module-title{color:#d29a38}
+.ve-night-mode .characters__module.is-collapsed{background:#1e1e1e}
+.ve-night-mode .characters__module.is-dragging{border-color:#d29a38;box-shadow:0 8px 28px rgba(210,154,56,.2)}
+.ve-night-mode .characters__modules.is-reorder .characters__module{border-color:#d29a38}
+.ve-night-mode .characters__modules.is-reorder .characters__module-handle{background:#3a3020;color:#d29a38}
+.ve-night-mode .characters__reorder-hint{background:#2a2416;border-color:#d29a38;color:#e8cf9e}
+.ve-night-mode .characters__subtitle{color:#999}
+.ve-night-mode .characters__sheet-item{background:#222;border-color:#444}
+.ve-night-mode .characters__sheet-item-value{color:#eee}
+.ve-night-mode .characters__sheet-item--roll:hover{border-color:#d29a38;background:#2a2519}
+.ve-night-mode .characters__sheet-textarea{background:#222;border-color:#555;color:#bbb}
+/* Ataques */
+.ve-night-mode .characters__attack-item,.ve-night-mode .characters__attack-item2{background:#1e1e1e;border-color:#444}
+.ve-night-mode .characters__attack-name{color:#eee}
+.ve-night-mode .characters__attack-stats{color:#999}
+.ve-night-mode .characters__attack-hit{color:#7db6e8}
+.ve-night-mode .characters__attack-dmg,.ve-night-mode .characters__attack-dmg2{color:#ccc}
+.ve-night-mode .characters__attack-props{color:#888}
+.ve-night-mode .characters__attack-src{color:#777}
+/* Perícias, slots, moedas */
+.ve-night-mode .characters__slot{background:#1e1e1e}
+.ve-night-mode .characters__slot-value{color:#eee}
+.ve-night-mode .characters__slot-level{color:#888}
+.ve-night-mode .characters__slot.has-used .characters__slot-value{color:#e0a800}
+.ve-night-mode .characters__slot-used{color:#e0a800}
+/* Cards de magia (módulo Magias) */
+.ve-night-mode .characters__spell-card.is-prepared{border-left-color:#81c784}
+.ve-night-mode .characters__spell-prepared{background:#2e7d32;color:#eafff0}
+.ve-night-mode .characters__spell-slotpick-label{color:#eee}
+.ve-night-mode .characters__spell-slotpick-label small{color:#999}
+.ve-night-mode .characters__spell-slotpick-label.is-empty small{color:#e57373}
+.ve-night-mode .characters__slots-rest{background:#222;border-color:#555;color:#bbb}
+.ve-night-mode .characters__coin-group label{color:#999}
+/* Botões +/− padrão (PV, usos, atributos) */
+.ve-night-mode .characters__hp-mini{background:#222;border-color:#555}
+.ve-night-mode .characters__hp-mini--minus{color:#e57373;border-color:#6e3a3a}
+.ve-night-mode .characters__hp-mini--plus{color:#81c784;border-color:#3a5e3c}
+.ve-night-mode .characters__status-check{color:#ccc}
+.ve-night-mode .characters__ds{color:#999}
+.ve-night-mode .characters__ds-label{color:#888}
+.ve-night-mode .characters__status-deathsaves{background:#2a1e1e;border-color:#5e3a3a}
+.ve-night-mode .characters__status-deathsaves .characters__ds-label{color:#e08a90}
+/* Ações, condições, toasts */
+.ve-night-mode .characters__actions-menu{background:#222;border-color:#444}
+.ve-night-mode .characters__actions-item{color:#ccc}
+.ve-night-mode .characters__actions-item:hover{background:#333}
+.ve-night-mode .characters__cond-btn{background:#222;border-color:#444;color:#ccc}
+.ve-night-mode .characters__cond-btn:hover{background:#333}
+.ve-night-mode .characters__cond-btn.is-active{background:#a83240;border-color:#a83240;color:#fff}
+.ve-night-mode .characters__cond-badge{background:#3a3020;color:#e8cf9e;border-color:#6e5a2e}
+.ve-night-mode .characters__toast--success{background:#1f6b32}
+.ve-night-mode .characters__toast--info{background:#0f5a9e}
+.ve-night-mode .characters__toast--danger{background:#a83240}
+/* Info cards / resumos / usos */
+.ve-night-mode .characters__info-card{background:#1e1e1e;border-color:#444;border-left-color:#d29a38}
+.ve-night-mode .characters__info-card .characters__summary-title{color:#d29a38;border-bottom-color:#444}
+.ve-night-mode .characters__info-card .characters__prof-line{color:#bbb}
+.ve-night-mode .characters__summary-box{background:#222;border-color:#444}
+.ve-night-mode .characters__summary-title{color:#d29a38}
+.ve-night-mode .characters__feature-item,.ve-night-mode .characters__feature-details{background:#1e1e1e;border-color:#444}
+.ve-night-mode .characters__feature-item>summary,.ve-night-mode .characters__feature-details>summary{color:#ddd}
+.ve-night-mode .characters__feat-lvl{color:#d29a38;border-bottom-color:#444}
+.ve-night-mode .characters__rest-info{color:#999;border-bottom-color:#3a3a3a}
+.ve-night-mode .characters__uses-hint{background:#1e1e1e;border-color:#3a3a3a;color:#999}
+.ve-night-mode .characters__uses-hint::before{color:#7db6e8}
+.ve-night-mode .characters__uses-group{background:#1e1e1e;border-color:#444;box-shadow:none}
+.ve-night-mode .characters__uses-group-head{border-bottom-color:#3a3a3a}
+.ve-night-mode .characters__uses-group-title{color:#eee}
+.ve-night-mode .characters__uses-group-title::before{color:#777}
+.ve-night-mode .characters__use-item{background:#222;border-color:#444}
+.ve-night-mode .characters__use-item:hover{box-shadow:0 2px 6px rgba(0,0,0,.5)}
+.ve-night-mode .characters__use-item.is-spent{background:#2a2216;border-color:#6e5a2e}
+.ve-night-mode .characters__use-item.is-spent .characters__use-name{color:#e8cf9e}
+.ve-night-mode .characters__use-name{color:#ddd}
+.ve-night-mode .characters__use-restore{background:#2a2a2a;color:#999}
+.ve-night-mode .characters__use-count{background:#1a1a1a;border-color:#555;color:#eee}
+.ve-night-mode .characters__use-item.is-spent .characters__use-count{color:#e8cf9e;border-color:#6e5a2e;background:#241f14}
+.ve-night-mode .characters__use-note{color:#888}
+.ve-night-mode .characters__use-opt{background:#232a3d;border-color:#3d4c73;color:#a9bfe8}
+.ve-night-mode .characters__use-opt:hover{background:#2b3550}
+.ve-night-mode .characters__use-opt b{color:#d7e4ff}
+.ve-night-mode .characters__feature-tag{color:#a9c4ea;background:#232c40;border-color:#3d5178}
+/* Popups e overlays */
+.ve-night-mode .characters__detail{background:#222;border-color:#555;color:#bbb}
+.ve-night-mode .characters__detail-title{color:#d29a38;border-bottom-color:#444}
+.ve-night-mode .characters__detail-row{color:#bbb;border-bottom-color:#3a3a3a}
+.ve-night-mode .characters__detail-row b{color:#ddd}
+.ve-night-mode .characters__detail-overlay{background:rgba(0,0,0,.65)}
+.ve-night-mode .characters__search-item{background:#222;border-color:#444;color:#ccc}
+.ve-night-mode .characters__search-item:hover{background:#333}
+/* Busca (armas/armaduras/magias) e itens */
+.ve-night-mode .characters__search-results{background:#222}
+.ve-night-mode .characters__level-header-input{background:#222;border-color:#555;color:#eee}
+.ve-night-mode .characters__card a,.ve-night-mode .characters__item a{color:#7db6e8}
+.ve-night-mode .characters__item{border-color:#444;background:#1e1e1e;color:#ccc}
+.ve-night-mode .characters__subvariant-label{color:#c2b493}
+.ve-night-mode .characters__subvariant{border-color:#555;background:#2a2722;color:#ccc}
 #hpdice-overlay .characters__btn { margin: 4px 4px 0 0; }
 
 /* Barra de ações da ficha e destaques de item */
 .characters__sheet-actions-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-.characters__item-name { font-weight: 600; color: #f0f0f0; }
-.characters__weapon-dmg { font-weight: 400; color: #9ab; font-size: .88em; margin-left: 4px; }
+.characters__item-name { font-weight: 600; color: #1f2a37; }
+.characters__weapon-dmg { font-weight: 400; color: #5b6572; font-size: .88em; margin-left: 4px; }
+
+/* Resultados de busca clicáveis (magias, armas, armaduras, talentos) */
+.characters__search-results {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin-top: 6px;
+}
+.characters__search-item {
+	display: block;
+	padding: 8px 10px;
+	border: 1px solid #dfe3ea;
+	border-radius: 7px;
+	background: #fff;
+	color: #1f2a37;
+	font-size: .9em;
+	line-height: 1.35;
+	cursor: pointer;
+	transition: background .15s, border-color .15s;
+}
+.characters__search-item:hover { background: #f3f6fb; border-color: #b9c6d8; }
+.characters__search-item:active { background: #e8eef7; }
+.characters__search-item b { color: #12325c; }
 
 /* === Equipamento: abas (tabs) === */
 .characters__tabs {
@@ -421,6 +596,14 @@ transform: scale(0.5);
 .characters__equipped-badge--active {
 opacity: 1;
 transform: scale(1);
+}
+/* Badge sempre visível nos cards de ataque/armadura e nos títulos de popup */
+.characters__attack-item2 .characters__equipped-badge,
+.characters__detail-title .characters__equipped-badge {
+opacity: 1;
+transform: scale(1);
+vertical-align: middle;
+margin-left: 4px;
 }
 .characters__btn--unequip {
 border-radius: 3px;
@@ -514,15 +697,58 @@ font-size: .85em;
 /* === Ataques & Ações: arma em duas linhas + popup === */
 .characters__attacks-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:16px 0 14px}
 .characters__attacks-head .characters__subtitle{margin:0}
-.characters__attack-item2{cursor:pointer;border:1px solid #dfe3ea;border-radius:7px;background:#ffffff;padding:8px 12px;margin-bottom:8px}
+.characters__attack-item2{cursor:pointer;border:1px solid #dfe3ea;border-radius:7px;background:#ffffff;padding:6px 10px;margin-bottom:8px}
 .characters__attack-item2:active{background:#f3f6fb}
 .characters__attack-l1{display:flex;align-items:baseline;gap:8px}
 .characters__attack-l1 .characters__attack-name{flex:1;font-size:1.02em;font-weight:700;color:#1c2430}
 .characters__attack-src{font-size:.75em;color:#7a8494;font-weight:400}
 .characters__attack-hit2{font-weight:800;color:#0b5ed7;font-size:1.05em}
-.characters__attack-l2{display:flex;align-items:baseline;gap:8px;margin-top:3px;font-size:.8em;color:#5b6572}
+.characters__attack-l2{display:flex;align-items:baseline;gap:6px;margin-top:3px;font-size:.8em;color:#5b6572}
 .characters__attack-props{flex:1}
 .characters__attack-dmg2{white-space:nowrap}
+/* Card de armadura: 2 linhas + botão remover à direita */
+.characters__attack-item2.characters__armor-card{display:flex;align-items:center;gap:8px;grid-column:1 / -1}
+.characters__armor-lines{flex:1;min-width:80px;overflow-wrap:anywhere;word-break:normal}
+.characters__armor-card .characters__attack-name{min-width:0;white-space:normal;overflow-wrap:anywhere;word-break:normal}
+.characters__armor-card button[data-remove-armor]{
+	flex:0 0 auto;
+	padding:4px 10px;
+	font-size:.75em;
+	min-height:1.4em;
+}
+/* Moedas em grid 5 colunas (como espaços de magia) */
+.characters__coins-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0 8px;margin:4px 0 6px}
+.characters__coins-grid .characters__coin-group{min-width:0}
 .characters__attack-mode-row{display:flex;align-items:center;gap:8px;margin:10px 0 8px}
 .characters__toast{position:fixed;left:50%;bottom:22px;top:auto;transform:translateX(-50%);z-index:4000;padding:14px 22px;border-radius:10px;color:#fff;font-size:1.02em;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:92vw;text-align:center;animation:charToastIn .18s ease}
 .characters__toast{cursor:pointer}
+/* ============================================================
+   Módulo "Características & Usos": grupos por classe/subclasse e
+   contadores de usos com recarga por descanso.
+   ============================================================ */
+.characters__uses-hint{font-size:.8em;color:#6b7280;margin:2px 0 10px;padding:8px 10px;border:1px dashed #dbe3ee;border-radius:8px;background:#f8fafc;display:flex;align-items:center;gap:8px}
+.characters__uses-hint::before{content:"↻";font-size:1.2em;color:#2563eb;font-weight:700}
+.characters__uses-group{margin:0 0 14px;padding:10px;border:1px solid #e4ebf3;border-radius:10px;background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%);box-shadow:0 1px 2px rgba(16,24,40,.04)}
+.characters__uses-group-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;border-bottom:2px solid #eef2f7;padding-bottom:6px;margin-bottom:8px}
+.characters__uses-group-title{font-weight:800;color:#1f2a37;font-size:.95em;letter-spacing:.01em;display:flex;align-items:center;gap:6px}
+.characters__uses-group-title::before{content:"⚔";font-size:.9em;color:#94a3b8}
+.characters__feature-tag{font-size:.7em;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#1d4ed8;background:#e0eaff;border:1px solid #c7d7f5;border-radius:999px;padding:2px 8px}
+.characters__use-item{border:1px solid #e4ebf3;border-radius:10px;background:#fff;padding:9px 12px;margin-bottom:8px;transition:box-shadow .12s,border-color .12s,background .12s}
+.characters__use-item:hover{box-shadow:0 2px 6px rgba(16,24,40,.07)}
+.characters__use-item.is-spent{background:#fff7ed;border-color:#fdba74}
+.characters__use-item.is-spent .characters__use-name{color:#9a3412}
+.characters__use-head{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.characters__use-name{font-weight:700;color:#1c2430;flex:1;min-width:0}
+.characters__use-restore{font-size:.72em;color:#7a8494;background:#f1f5f9;border-radius:999px;padding:2px 7px;white-space:nowrap}
+.characters__use-row{display:flex;align-items:center;gap:10px;margin-top:8px}
+.characters__use-count{min-width:72px;text-align:center;padding:4px 10px;border:1.5px solid #cbd5e1;border-radius:8px;background:#fff;font-weight:800;color:#1f2a37;cursor:pointer;font-size:.95em;line-height:1.2;letter-spacing:.02em}
+.characters__use-count:active{transform:scale(.97)}
+.characters__use-item.is-spent .characters__use-count{color:#b45309;border-color:#fdba74;background:#fffbeb}
+.characters__use-note{font-size:.78em;color:#5b6572;margin-top:6px}
+.characters__use-options{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.characters__use-opt{border:1px solid #c7d2fe;background:#eef2ff;color:#3730a3;border-radius:14px;padding:3px 9px;font-size:.75em;cursor:pointer;transition:background .1s}
+.characters__use-opt:hover{background:#e0e7ff}
+.characters__use-opt:active{background:#c7d2fe}
+.characters__use-opt b{color:#1e1b4b}
+@media print{.characters__use-row,.characters__use-options{display:none !important}}
+

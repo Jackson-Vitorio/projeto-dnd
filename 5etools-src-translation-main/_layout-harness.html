@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harness de layout</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/characters.css">
+<style>body{padding:8px}</style>
+</head><body>
+<div class="characters__sheet">
+  <div class="characters__view characters__view--sheet">
+    <div class="characters__sheet">
+      <div id="sheet-modules" class="characters__modules">
+        <section class="characters__module" data-module="equipment">
+          <header class="characters__module-head"><span class="characters__module-handle">⋮⋮</span><h4 class="characters__module-title">Equipamentos</h4><span class="characters__module-caret">▾</span></header>
+          <div class="characters__module-body"><div class="characters__attacks-head"><div class="characters__subtitle" style="margin:0">Armaduras</div><button class="characters__btn characters__btn--sm characters__btn--primary" id="btn-add-armor-popup">+ Adicionar</button></div><div class="characters__attacks-list"><div class="characters__attack-item2 characters__armor-card" data-armor-idx="0"><div class="characters__armor-lines"><div class="characters__attack-l1"><span class="characters__attack-name">Couro Batido <span class="characters__attack-src">[PHB]</span> <span class="characters__equipped-badge">Equipada</span></span><span class="characters__attack-hit2">CA 12</span></div><div class="characters__attack-l2"><span class="characters__attack-props">Armadura leve</span><span class="characters__attack-dmg2">equipada</span></div></div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="0" title="Remover">×</button></div><div class="characters__attack-item2 characters__armor-card" data-armor-idx="1"><div class="characters__armor-lines"><div class="characters__attack-l1"><span class="characters__attack-name">Cota de Malha <span class="characters__attack-src">[PHB]</span></span><span class="characters__attack-hit2">CA 16</span></div><div class="characters__attack-l2"><span class="characters__attack-props">Armadura pesada</span><span class="characters__attack-dmg2">na mochila</span></div></div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="1" title="Remover">×</button></div><div class="characters__attack-item2 characters__armor-card" data-armor-idx="2"><div class="characters__armor-lines"><div class="characters__attack-l1"><span class="characters__attack-name">Escudo <span class="characters__equipped-badge">Equipada</span></span><span class="characters__attack-hit2">CA 2</span></div><div class="characters__attack-l2"><span class="characters__attack-props">Escudo, sintonização</span><span class="characters__attack-dmg2">equipada</span></div></div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-armor="2" title="Remover">×</button></div></div><div class="characters__subtitle">Inventário</div><textarea class="characters__sheet-textarea" id="in-inv" placeholder="Anote seus itens (um por linha)...">Corda de cânhamo (15 m)
+Tocha</textarea><a class="ptm-link ptm-open-list" href="items.html">Ver lista de itens</a></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+window.onerror = function(m, s, l){ document.title = 'ERR:' + m + ' @linha ' + l; };
+(function(){
+  if (location.hash.indexOf('measure') === -1) return; // sem #measure: mantém a UI para screenshot
+  function info(sel, label){
+    var el = document.querySelector(sel);
+    if (!el) return label + ': NAO ENCONTRADO';
+    var r = el.getBoundingClientRect();
+    var cs = getComputedStyle(el);
+    return label + ' w=' + Math.round(r.width) + ' h=' + Math.round(r.height)
+      + ' display=' + cs.display + ' dir=' + cs.flexDirection
+      + ' flex=' + cs.flexGrow + '/' + cs.flexShrink + '/' + cs.flexBasis
+      + ' minW=' + cs.minWidth + ' width=' + cs.width
+      + ' break=' + cs.wordBreak + ' wrap=' + cs.overflowWrap;
+  }
+  function rulesFor(sel){
+    var el = document.querySelector(sel);
+    if (!el) return [sel + ': NAO ENCONTRADO'];
+    var out = [];
+    for (var i = 0; i < document.styleSheets.length; i++) {
+      var ss = document.styleSheets[i];
+      var file = (ss.href || 'inline').split('/').pop();
+      var rules;
+      try { rules = ss.cssRules; } catch (e) { out.push(file + ': ACESSO NEGADO'); continue; }
+      for (var j = 0; j < rules.length; j++) {
+        var r = rules[j];
+        if (!r.selectorText) continue;
+        try { if (!el.matches(r.selectorText)) continue; } catch (e) { continue; }
+        out.push(file + ' | ' + r.selectorText + ' {' + (r.style.cssText || '') + '}');
+      }
+    }
+    return out;
+  }
+  var out = [info('.characters__attacks-list','ATTACKS_LIST'), info('.characters__attack-item2','CARD'),
+    info('.characters__armor-lines','ARMOR_LINES'), info('.characters__attack-l1','L1'),
+    info('.characters__attack-l1 .characters__attack-name','NAME'), info('.characters__attack-hit2','HIT2'),
+    info('.characters__armor-card button[data-remove-armor]','BTN_REMOVE')];
+  var btn = document.querySelector('.characters__armor-card button[data-remove-armor]');
+  if (btn) {
+    var r = btn.getBoundingClientRect(); var cs = getComputedStyle(btn);
+    out.push('BTN_DET w=' + Math.round(r.width) + ' h=' + Math.round(r.height)
+      + ' font=' + cs.fontSize + ' padding=' + cs.padding + ' box=' + cs.boxSizing
+      + ' basis=' + cs.flexBasis + ' cardScrollW=' + btn.parentElement.scrollWidth
+      + ' cardClientW=' + btn.parentElement.clientWidth
+      + ' pos=' + cs.position + ' minW=' + cs.minWidth + ' maxW=' + cs.maxWidth
+      + ' align=' + cs.alignSelf + ' ws=' + cs.whiteSpace + ' ls=' + cs.letterSpacing);
+  } else { out.push('BTN_DET: NAO ENCONTRADO'); }
+  out = out.concat(['', '--- REGRAS BTN_REMOVE ---'], rulesFor('.characters__armor-card button[data-remove-armor]'));
+  var pre = document.createElement('pre');
+  pre.style.cssText = 'font:12px monospace;white-space:pre-wrap;padding:6px';
+  pre.textContent = 'BODY w=' + Math.round(document.body.getBoundingClientRect().width) + '\n\n' + out.join('\n');
+  document.body.innerHTML = '';
+  document.body.appendChild(pre);
+})();
+</script>
+</body></html>

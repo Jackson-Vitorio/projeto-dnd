@@ -256,7 +256,7 @@ Parser.getAbilityModifier = function (abilityScore) {
 	return `${modifier}`;
 };
 
-Parser.getSpeedString = (ent, {isMetric = false, isSkipZeroWalk = false, isLongForm = false, styleHint = null} = {}) => {
+Parser.getSpeedString = (ent, {isMetric = true, isSkipZeroWalk = false, isLongForm = false, styleHint = null} = {}) => {
 	if (ent.speed == null) return "\u2014";
 
 	styleHint ||= VetoolsConfig.get("styleSwitcher", "style");
@@ -4078,11 +4078,11 @@ Parser.metric = {
 
 	getMetricUnit ({originalUnit, isShortForm = false, isPlural = true}) {
 		switch (originalUnit) {
-			case "in.": case "in": case Parser.UNT_INCHES: return isShortForm ? "cm" : `centimeter`[isPlural ? "toPlural" : "toString"]();
-			case "ft.": case "ft": case Parser.UNT_FEET: return isShortForm ? "m" : `meter`[isPlural ? "toPlural" : "toString"]();
-			case "yd.": case "yd": case Parser.UNT_YARDS: return isShortForm ? "m" : `meter`[isPlural ? "toPlural" : "toString"]();
-			case "mi.": case "mi": case Parser.UNT_MILES: return isShortForm ? "km" : `kilometre`[isPlural ? "toPlural" : "toString"]();
-			case "lb.": case "lb": case Parser.UNT_LBS: return isShortForm ? "kg" : `kilogram`[isPlural ? "toPlural" : "toString"]();
+			case "in.": case "in": case Parser.UNT_INCHES: return isShortForm ? "cm" : (isPlural ? "centímetros" : "centímetro");
+			case "ft.": case "ft": case Parser.UNT_FEET: return isShortForm ? "m" : (isPlural ? "metros" : "metro");
+			case "yd.": case "yd": case Parser.UNT_YARDS: return isShortForm ? "m" : (isPlural ? "metros" : "metro");
+			case "mi.": case "mi": case Parser.UNT_MILES: return isShortForm ? "km" : (isPlural ? "quilômetros" : "quilômetro");
+			case "lb.": case "lb": case Parser.UNT_LBS: return isShortForm ? "kg" : (isPlural ? "quilogramas" : "quilograma");
 			default: return originalUnit;
 		}
 	},

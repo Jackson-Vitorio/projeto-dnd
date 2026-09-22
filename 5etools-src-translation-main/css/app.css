@@ -427,6 +427,36 @@ a:focus {
 	line-height: 1.2;
 }
 
+/* Atalho "Fichas" no centro do radial (abre Fichas de Personagem) */
+.home__radial-center-fichas {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	margin-top: 5px;
+	padding: 2px 10px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, .18);
+	border: 1px solid rgba(255, 255, 255, .35);
+	color: #fff;
+	font-size: calc(var(--home-hub) * 0.105);
+	font-weight: 700;
+	letter-spacing: .02em;
+	text-decoration: none;
+	transition: background .15s, transform .15s;
+}
+
+.home__radial-center-fichas:hover,
+.home__radial-center-fichas:focus {
+	background: rgba(255, 255, 255, .32);
+	color: #fff;
+	text-decoration: none;
+	transform: scale(1.05);
+}
+
+.home__radial-center-fichas:active {
+	transform: scale(.96);
+}
+
 /* Item do anel (categoria principal) */
 .home__radial-item {
 	--i: 0;
@@ -696,7 +726,9 @@ a:focus {
 	.characters__sheet-actions-bar {
 		flex-direction: column;
 	}
-	.characters__btn--sm {
+	/* Escopado à barra de ações: sem isto, TODOS os botões --sm do app
+	   (ex.: × de remover armadura/arma/magia) ficavam largura total no celular */
+	.characters__sheet-actions-bar .characters__btn--sm {
 		width: 100%;
 	}
 }

@@ -212,12 +212,23 @@
 				border-top-color: transparent;
 			}
 
+			background-color: vars-night.$rgb-form-control-bg--night;
+			border-color: vars-night.$rgb-border-grey--night;
+			color: vars-night.$rgb-font--night;
+
+			&::placeholder {
+				color: vars-night.$rgb-font--muted-night;
+			}
+
 			&:focus {
-				border-color: #66afe9;
+				border-color: #888;
 			}
 		}
 
 		&submit {
+			background-color: vars-night.$rgb-form-control-bg--night;
+			border-color: vars-night.$rgb-border-grey--night;
+			color: vars-night.$rgb-font--night;
 			border-top-color: vars-night.$rgb-border-grey--night;
 
 			@media screen and (width > #{vars.$width-screen-md}) {

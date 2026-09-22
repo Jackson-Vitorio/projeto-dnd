@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>E2E Características &amp; Usos</title></head>
+<body>
+<pre id="out">waiting</pre>
+<iframe id="f" src="statgen.html" style="width:420px;height:900px"></iframe>
+<script>
+(function () {
+  var out = [];
+  function finish(st) { out.push('status=' + st); document.getElementById('out').textContent = out.join('\n'); }
+  // Semeia uma ficha de bárbaro (mesma origem => localStorage compartilhado com o iframe)
+  try {
+    var ch = {
+      id: 'char_e2e', name: 'Korg E2E', className: 'Barbarian', level: 5,
+      classes: [{ name: 'Barbarian', subclass: '', level: 5 }],
+      scores: { str: 16, dex: 14, con: 14, int: 8, wis: 12, cha: 10 },
+      rawScores: { str: 0, dex: 0, con: 0, int: 0, wis: 0, cha: 0 },
+      method: 'standard', skills: {}, savingThrows: [], otherProficiencies: [],
+      hp: { max: 50, current: 50, temp: 0 }, ac: 14, initiative: 2, speed: 30,
+      alignment: 'Neutro', playerName: '', experience: 0,
+      spells: [], spellSlots: {}, spellAttackBonus: 0, spellDC: 0,
+      features: [], feats: [], specialAbilities: [], selectableFeatures: [],
+      abilityUses: {}, equipment: [], weapons: [], armors: [], inventory: [],
+      coins: { gold: 0, silver: 0, copper: 0, platinum: 0, electrum: 0 },
+      conditions: [], inspiration: false, deathSaves: { failures: 0, successes: 0 },
+      notes: '', personality: '', ideals: '', bonds: '', flaws: '', languages: [],
+      fightingStyle: null, choices: {}, takenChoices: [], passivePerception: 10,
+      created: Date.now(), updated: Date.now()
+    };
+    localStorage.setItem('5etools_characters', JSON.stringify([ch]));
+    out.push('seed=ok');
+  } catch (e) { out.push('seed=erro ' + e.message); }
+
+  var f = document.getElementById('f');
+  function openSheet() {
+    var d = f.contentDocument;
+    if (!d) { finish('sem contentDocument'); return; }
+    var cards = d.querySelectorAll('.characters__card');
+    out.push('cards=' + cards.length);
+    if (!cards.length) { setTimeout(openSheet, 1500); return; }
+    cards[0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    setTimeout(afterOpen, 2500);
+  }
+  function afterOpen() {
+    var d = f.contentDocument;
+    var mods = [];
+    d.querySelectorAll('.characters__module').forEach(function (m) { mods.push(m.getAttribute('data-module')); });
+    out.push('modulos=' + mods.join(','));
+    var usesMod = d.querySelector('.characters__module[data-module="uses"]');
+    out.push('modulo_uses=' + (usesMod ? 'PRESENTE' : 'AUSENTE'));
+    if (!usesMod) { finish('sem modulo de usos'); return; }
+    var g = [];
+    usesMod.querySelectorAll('.characters__uses-group-title').forEach(function (x) { g.push(x.textContent); });
+    out.push('grupos=' + g.join(' | '));
+    var c = [];
+    usesMod.querySelectorAll('.characters__use-count').forEach(function (x) { c.push(x.textContent); });
+    out.push('contadores=' + c.join(' | '));
+    var minus = usesMod.querySelector('[data-use-minus]');
+    if (!minus) { finish('sem botao gastar'); return; }
+    minus.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    setTimeout(function () {
+      var d2 = f.contentDocument;
+      var c2 = [];
+      d2.querySelectorAll('.characters__module[data-module="uses"] .characters__use-count').forEach(function (x) { c2.push(x.textContent); });
+      out.push('apos_gastar=' + c2.join(' | '));
+      var spent = d2.querySelectorAll('.characters__module[data-module="uses"] .characters__use-item.is-spent').length;
+      out.push('itens_gastos=' + spent);
+      var saved = localStorage.getItem('5etools_characters') || '';
+      out.push('persistiu_abilityUses=' + (/abilityUses/.test(saved) && /"used":1/.test(saved) ? 'sim' : 'nao'));
+      // Agora o descanso longo deve recarregar a Fúria automaticamente
+      var btnRest = d2.querySelector('#btn-rest');
+      out.push('btn_descanso=' + (btnRest ? 'ok' : 'AUSENTE'));
+      if (!btnRest) { finish('sem botao de descanso'); return; }
+      btnRest.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      setTimeout(function () {
+        var d3 = f.contentDocument;
+        var restLong = d3.querySelector('#act-long-rest') || d3.querySelector('#rest-long');
+        out.push('menu_descanso=' + (restLong ? 'aberto (' + restLong.id + ')' : 'fechado'));
+        if (!restLong) { finish('menu de descanso nao abriu'); return; }
+        restLong.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        setTimeout(function () {
+          var d4 = f.contentDocument;
+          var c4 = [];
+          d4.querySelectorAll('.characters__module[data-module="uses"] .characters__use-count').forEach(function (x) { c4.push(x.textContent); });
+          out.push('apos_descanso_longo=' + c4.join(' | '));
+          var saved2 = localStorage.getItem('5etools_characters') || '';
+          out.push('usos_zerados_persistido=' + (!/"used":1/.test(saved2) ? 'sim' : 'nao'));
+          finish('ok');
+        }, 1500);
+      }, 1000);
+    }, 1200);
+  }
+  f.onload = function () { setTimeout(openSheet, 3000); };
+  setTimeout(function () { if (out.indexOf('status=ok') < 0) finish('timeout'); }, 45000);
+})();
+</script>
+</body></html>

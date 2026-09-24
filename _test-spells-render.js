@@ -65,17 +65,18 @@ fn($stub(), char);
 
 const checks = [
   ['cards de magia presentes', (captured.match(/characters__spell-card/g) || []).length === 3],
-  ['stepper +/- nos 2 cards de nível (2 botões cada = 4)', (captured.match(/data-cast-step=/g) || []).length === 4],
-  ['truque sem stepper', !captured.includes('data-cast-step="0"')],
-  ['botao Usar magia em todos os cards', (captured.match(/data-use-spell=/g) || []).length === 3],
+  ['card SEM stepper (controles vivem no popup)', (captured.match(/data-cast-step=/g) || []).length === 0],
+  ['card SEM botao Usar magia (vive no popup)', (captured.match(/data-use-spell=/g) || []).length === 0],
+  ['card com dica "detalhes ▸"', captured.includes('detalhes ▸')],
+  ['menu + Adicionar (padrao armas)', captured.includes('btn-add-spell-popup') && src.includes('Magia Oficial (lista)') && src.includes('Criar Magia Personalizada')],
   ['tag Preparada verde na magia certa', (captured.match(/characters__spell-prepared/g) || []).length === 1 && captured.includes('Preparada')],
   ['is-prepared apenas 1x', (captured.match(/is-prepared/g) || []).length === 1],
-  ['espacos disponiveis no label', captured.includes('4 espaços') || captured.includes('1 espaço') || captured.includes('2 espaços')],
+  ['espacos disponiveis apenas no popup (fonte)', src.includes('sem espaços') && /av \+ " espa/.test(src)],
   ['grid de espacos com total', captured.includes('characters__slots-grid') && captured.includes('4') && captured.includes('2')],
   ['botao repouso presente', captured.includes('id="btn-rest-slots"')],
   ['conjuração com CD e ataque', captured.includes('CD de Magia') && captured.includes('Bônus de Ataque Mágico')],
-  ['busca de magia presente', captured.includes('id="spell-search"')],
-  ['botoes remover presentes', (captured.match(/data-remove-spell=/g) || []).length === 3],
+  ['lista completa link presente', captured.includes('spells.html')],
+  ['botoes remover ausentes do card', (captured.match(/data-remove-spell=/g) || []).length === 0],
   ['hold para preparar (mousedown+touchstart)', captured.includes('mousedown.spellhold') === false], // binding é via JS, não HTML — checado abaixo
   ['tags balanceadas', (captured.match(/<div/g) || []).length === (captured.match(/<\/div>/g) || []).length],
 ];
@@ -92,9 +93,9 @@ const charNoSlots = {
 };
 captured = '';
 fn($stub(), charNoSlots);
-checks.push(['sem espacos -> Usar magia desabilitado', captured.includes('data-use-spell="0"') && captured.includes('disabled')]);
-checks.push(['sem espacos -> stepper desabilitado', /data-cast-step="-1"[^>]*disabled/.test(captured)]);
-checks.push(['sem espacos -> label "sem espaços"', captured.includes('sem espaços')]);
+checks.push(['sem espacos -> card ainda renderiza', captured.includes('characters__spell-card') && captured.includes('Bola de Fogo')]);
+checks.push(['sem espacos -> popup desabilita sd-use', /anySlots \? "" : ' disabled/.test(src)]);
+checks.push(['sem espacos -> stepper desabilitado no popup', (src.match(/anySlots \? "" : " disabled"/g) || []).length >= 2]);
 
 // Nível usado maior que o total é normalizado
 const charClamp = {
@@ -110,6 +111,26 @@ const charEmpty = {spells: [], spellSlots: {}, spellSlotsUsed: {}};
 captured = '';
 fn($stub(), charEmpty);
 checks.push(['estado vazio com dica', captured.includes('Nenhum truque')]);
+
+// ==== Popups: detalhe de magia, armas e talentos ====
+checks.push(
+  ['popup detalhe de magia definido', /function openSpellDetailPopup\(/.test(src)],
+  ['popup detalhe: Usar magia/stepper/apagar', src.includes('id="sd-use"') && src.includes('id="sd-step-minus"') && src.includes('id="sd-step-plus"') && src.includes('id="sd-remove"')],
+  ['popup detalhe: nome oficial vira link', /openSpellDetailPopup[\s\S]{0,1200}ptmSpellHref/.test(src)],
+  ['add magia: picker oficial', src.includes('openOfficialSpellPicker') && src.includes('id="sp-search"')],
+  ['add magia: criador personalizado', src.includes('openCustomSpellCreator') && src.includes('id="sc-name"')],
+  ['arma: excluir arma no popup', src.includes('id="wd-remove"') && src.includes('Excluir arma')],
+  ['arma: efeitos magicos adicionar/editar/remover', src.includes('id="wd-add-fx"') && src.includes('data-fx-edit') && src.includes('data-fx-del')],
+  ['arma: openMagicFxPopup com char/fxIdx', /function openMagicFxPopup\(\$parentOv, char, w, fxIdx, onDone\)/.test(src)],
+  ['arma: nome oficial vira link', src.includes('function weaponNameHtml')],
+  ['clique no nome (link) nao abre popup (arma/armadura)', src.includes('closest(".characters__ov, a")') && src.includes('closest("[data-remove-armor], a")')],
+  ['armadura: nome oficial vira link', src.includes('function armorNameHtml')],
+  ['talentos: botao + Adicionar (source)', src.includes('id="btn-add-feat-popup"') && src.includes('Talento Oficial (lista)') && src.includes('Criar Talento Personalizado')],
+  ['talentos: popup de detalhe', src.includes('function openFeatDetailPopup') && src.includes('id="featdetail-overlay"')],
+  ['talentos: picker oficial + criador', src.includes('function openFeatPicker') && src.includes('function openCustomFeatCreator')],
+  ['talentos: hold para preparar', /mousedown\.feathold touchstart\.feathold/.test(src)],
+  ['talentos: cards padrao armas no render', src.includes('characters__feat-card') && src.includes('data-feat-idx')],
+);
 
 let ok = 0; const fail = [];
 checks.forEach(([n, v]) => { if (v) ok++; else fail.push(n); });

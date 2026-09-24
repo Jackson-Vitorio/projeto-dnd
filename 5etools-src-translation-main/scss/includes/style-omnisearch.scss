@@ -209,30 +209,38 @@
 
 		&input {
 			@media screen and (width > #{vars.$width-screen-md}) {
-				border-top-color: transparent;
+				border-top-color: transparent !important;
 			}
 
-			background-color: vars-night.$rgb-form-control-bg--night;
-			border-color: vars-night.$rgb-border-grey--night;
+			background-color: vars-night.$rgb-form-control-bg--night !important;
+			border: 1px solid vars-night.$rgb-border-grey--night !important;
+			border-color: vars-night.$rgb-border-grey--night !important;
 			color: vars-night.$rgb-font--night;
+			outline: none;
+			box-shadow: none !important;
 
 			&::placeholder {
 				color: vars-night.$rgb-font--muted-night;
 			}
 
-			&:focus {
-				border-color: #888;
+			&:focus,
+			&:hover {
+				border-color: #888 !important;
+				outline: none;
+				box-shadow: none !important;
 			}
 		}
 
 		&submit {
 			background-color: vars-night.$rgb-form-control-bg--night;
-			border-color: vars-night.$rgb-border-grey--night;
+			border: 1px solid vars-night.$rgb-border-grey--night !important;
+			border-color: vars-night.$rgb-border-grey--night !important;
 			color: vars-night.$rgb-font--night;
-			border-top-color: vars-night.$rgb-border-grey--night;
+			border-top-color: vars-night.$rgb-border-grey--night !important;
+			box-shadow: none !important;
 
 			@media screen and (width > #{vars.$width-screen-md}) {
-				border-top-color: transparent;
+				border-top-color: transparent !important;
 			}
 
 			&.btn-default:active:focus,

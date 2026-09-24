@@ -366,6 +366,16 @@ body #characters-main{padding-top:0}
 .characters__hp-mini--plus{color:#2e7d32;border-color:#b9d6bd}
 .characters__hp-mini:active{transform:scale(.9)}
 
+/* Efeitos mágicos editáveis (popup de arma) */
+.characters__fx-row{display:flex;align-items:flex-start;gap:8px;font-size:.9em;margin-top:4px;background:#f7f9fc;border:1px solid #e3e9f0;border-radius:6px;padding:4px 8px}
+.characters__fx-text{flex:1;min-width:0;white-space:pre-wrap;word-break:break-word}
+.characters__fx-actions{display:inline-flex;gap:4px;flex-shrink:0}
+html.ve-night-mode .characters__fx-row{background:#1e1e1e;border-color:#444;color:#bbb}
+/* Stepper de nível de magia dentro do popup de detalhe */
+.characters__detail .characters__spell-cast{display:flex;gap:8px;align-items:center;width:100%}
+.characters__detail .characters__spell-slotpick{display:inline-flex;gap:6px;align-items:center}
+.characters__detail .characters__spell-castbtn{flex:1}
+
 /* Lista de classes no popup de subir de nível */
 .characters__levelup-classes{display:flex;flex-direction:column;gap:6px;margin:8px 0}
 .characters__levelup-classes .characters__btn{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:10px 12px;font-size:.95em}
@@ -379,130 +389,132 @@ body #characters-main{padding-top:0}
    Paleta baseada no tema do site: bg #1c1c1c/#222, alt #383838,
    borda #555, fonte #bbb, accent #d29a38 (dourado) e #7db6e8 (link).
    ============================================================ */
-.ve-night-mode .characters__view{color:#bbb}
-.ve-night-mode .characters__list-title{color:#d29a38}
-.ve-night-mode .characters__card{background:#222;border-color:#555;box-shadow:0 2px 4px rgba(0,0,0,.4)}
-.ve-night-mode .characters__card:hover{border-color:#d29a38;box-shadow:0 4px 12px rgba(0,0,0,.6)}
-.ve-night-mode .characters__card-name{color:#eee}
-.ve-night-mode .characters__card-info{color:#999}
-.ve-night-mode .characters__card-level{background:#d29a38;color:#1c1c1c}
-.ve-night-mode .characters__empty{color:#888}
-.ve-night-mode .characters__empty-icon{color:#555}
-.ve-night-mode .characters__form{background:#222;border-color:#555}
-.ve-night-mode .characters__form-section-title{color:#d29a38;border-bottom-color:#d29a38}
-.ve-night-mode .characters__form-label{color:#999}
-.ve-night-mode .characters__form-input,.ve-night-mode .characters__form-select{background:#222;border-color:#555;color:#bbb}
-.ve-night-mode .characters__form-input:focus,.ve-night-mode .characters__form-select:focus{border-color:#d29a38;box-shadow:0 0 0 2px rgba(210,154,56,.15)}
-.ve-night-mode .characters__form-select{background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")}
-.ve-night-mode .characters__step{background:#222;border-color:#555;color:#bbb}
-.ve-night-mode .characters__step.is-active{background:#d29a38;border-color:#d29a38;color:#1c1c1c}
-.ve-night-mode .characters__abilities .characters__ability{background:#222;border-color:#555}
-.ve-night-mode .characters__ability-name{color:#999}
-.ve-night-mode .characters__ability-score{color:#eee;border-bottom-color:#555}
-.ve-night-mode .characters__ability-mod{color:#7db6e8}
+html.ve-night-mode .characters__view{color:#bbb}
+html.ve-night-mode .characters__list-title{color:#d29a38}
+html.ve-night-mode .characters__card{background:#222;border-color:#555;box-shadow:0 2px 4px rgba(0,0,0,.4)}
+html.ve-night-mode .characters__card:hover{border-color:#d29a38;box-shadow:0 4px 12px rgba(0,0,0,.6)}
+html.ve-night-mode .characters__card-name{color:#eee}
+html.ve-night-mode .characters__card-info{color:#999}
+html.ve-night-mode .characters__card-level{background:#d29a38;color:#1c1c1c}
+html.ve-night-mode .characters__empty{color:#888}
+html.ve-night-mode .characters__empty-icon{color:#555}
+html.ve-night-mode .characters__form{background:#222;border-color:#555}
+html.ve-night-mode .characters__form-section-title{color:#d29a38;border-bottom-color:#d29a38}
+html.ve-night-mode .characters__form-label{color:#999}
+html.ve-night-mode .characters__form-input,html.ve-night-mode .characters__form-select{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__form-input:focus,html.ve-night-mode .characters__form-select:focus{border-color:#d29a38;box-shadow:0 0 0 2px rgba(210,154,56,.15)}
+html.ve-night-mode .characters__form-select{background-color:#222;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 12px center;background-size:14px}
+/* Selects nativos e pequenos (bônus à escolha, raça, classe etc.): 1 seta só */
+html.ve-night-mode select.characters__form-select,html.ve-night-mode .characters__flex-item select,html.ve-night-mode .characters__weapon-mod{background-color:#222;border-color:#555;color:#bbb;background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");background-repeat:no-repeat;background-position:right 8px center;background-size:12px}
+html.ve-night-mode .characters__step{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__step.is-active{background:#d29a38;border-color:#d29a38;color:#1c1c1c}
+html.ve-night-mode .characters__abilities .characters__ability{background:#222;border-color:#555}
+html.ve-night-mode .characters__ability-name{color:#999}
+html.ve-night-mode .characters__ability-score{color:#eee;border-bottom-color:#555}
+html.ve-night-mode .characters__ability-mod{color:#7db6e8}
 /* Módulos da ficha */
-.ve-night-mode .characters__module{background:#222;border-color:#444;box-shadow:0 1px 3px rgba(0,0,0,.5)}
-.ve-night-mode .characters__module-head{background:#2a2a2a;border-bottom-color:#444}
-.ve-night-mode .characters__module-head:active{background:#333}
-.ve-night-mode .characters__module-handle{color:#666}
-.ve-night-mode .characters__module-handle:hover{background:#383838;color:#d29a38}
-.ve-night-mode .characters__module-title{color:#d29a38}
-.ve-night-mode .characters__module.is-collapsed{background:#1e1e1e}
-.ve-night-mode .characters__module.is-dragging{border-color:#d29a38;box-shadow:0 8px 28px rgba(210,154,56,.2)}
-.ve-night-mode .characters__modules.is-reorder .characters__module{border-color:#d29a38}
-.ve-night-mode .characters__modules.is-reorder .characters__module-handle{background:#3a3020;color:#d29a38}
-.ve-night-mode .characters__reorder-hint{background:#2a2416;border-color:#d29a38;color:#e8cf9e}
-.ve-night-mode .characters__subtitle{color:#999}
-.ve-night-mode .characters__sheet-item{background:#222;border-color:#444}
-.ve-night-mode .characters__sheet-item-value{color:#eee}
-.ve-night-mode .characters__sheet-item--roll:hover{border-color:#d29a38;background:#2a2519}
-.ve-night-mode .characters__sheet-textarea{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__module{background:#222;border-color:#444;box-shadow:0 1px 3px rgba(0,0,0,.5)}
+html.ve-night-mode .characters__module-head{background:#2a2a2a;border-bottom-color:#444}
+html.ve-night-mode .characters__module-head:active{background:#333}
+html.ve-night-mode .characters__module-handle{color:#666}
+html.ve-night-mode .characters__module-handle:hover{background:#383838;color:#d29a38}
+html.ve-night-mode .characters__module-title{color:#d29a38}
+html.ve-night-mode .characters__module.is-collapsed{background:#1e1e1e}
+html.ve-night-mode .characters__module.is-dragging{border-color:#d29a38;box-shadow:0 8px 28px rgba(210,154,56,.2)}
+html.ve-night-mode .characters__modules.is-reorder .characters__module{border-color:#d29a38}
+html.ve-night-mode .characters__modules.is-reorder .characters__module-handle{background:#3a3020;color:#d29a38}
+html.ve-night-mode .characters__reorder-hint{background:#2a2416;border-color:#d29a38;color:#e8cf9e}
+html.ve-night-mode .characters__subtitle{color:#999}
+html.ve-night-mode .characters__sheet-item{background:#222;border-color:#444}
+html.ve-night-mode .characters__sheet-item-value{color:#eee}
+html.ve-night-mode .characters__sheet-item--roll:hover{border-color:#d29a38;background:#2a2519}
+html.ve-night-mode .characters__sheet-textarea{background:#222;border-color:#555;color:#bbb}
 /* Ataques */
-.ve-night-mode .characters__attack-item,.ve-night-mode .characters__attack-item2{background:#1e1e1e;border-color:#444}
-.ve-night-mode .characters__attack-name{color:#eee}
-.ve-night-mode .characters__attack-stats{color:#999}
-.ve-night-mode .characters__attack-hit{color:#7db6e8}
-.ve-night-mode .characters__attack-dmg,.ve-night-mode .characters__attack-dmg2{color:#ccc}
-.ve-night-mode .characters__attack-props{color:#888}
-.ve-night-mode .characters__attack-src{color:#777}
+html.ve-night-mode .characters__attack-item,html.ve-night-mode .characters__attack-item2{background:#1e1e1e;border-color:#444}
+html.ve-night-mode .characters__attack-name{color:#eee}
+html.ve-night-mode .characters__attack-stats{color:#999}
+html.ve-night-mode .characters__attack-hit{color:#7db6e8}
+html.ve-night-mode .characters__attack-dmg,html.ve-night-mode .characters__attack-dmg2{color:#ccc}
+html.ve-night-mode .characters__attack-props{color:#888}
+html.ve-night-mode .characters__attack-src{color:#777}
 /* Perícias, slots, moedas */
-.ve-night-mode .characters__slot{background:#1e1e1e}
-.ve-night-mode .characters__slot-value{color:#eee}
-.ve-night-mode .characters__slot-level{color:#888}
-.ve-night-mode .characters__slot.has-used .characters__slot-value{color:#e0a800}
-.ve-night-mode .characters__slot-used{color:#e0a800}
+html.ve-night-mode .characters__slot{background:#1e1e1e}
+html.ve-night-mode .characters__slot-value{color:#eee}
+html.ve-night-mode .characters__slot-level{color:#888}
+html.ve-night-mode .characters__slot.has-used .characters__slot-value{color:#e0a800}
+html.ve-night-mode .characters__slot-used{color:#e0a800}
 /* Cards de magia (módulo Magias) */
-.ve-night-mode .characters__spell-card.is-prepared{border-left-color:#81c784}
-.ve-night-mode .characters__spell-prepared{background:#2e7d32;color:#eafff0}
-.ve-night-mode .characters__spell-slotpick-label{color:#eee}
-.ve-night-mode .characters__spell-slotpick-label small{color:#999}
-.ve-night-mode .characters__spell-slotpick-label.is-empty small{color:#e57373}
-.ve-night-mode .characters__slots-rest{background:#222;border-color:#555;color:#bbb}
-.ve-night-mode .characters__coin-group label{color:#999}
+html.ve-night-mode .characters__spell-card.is-prepared{border-left-color:#81c784}
+html.ve-night-mode .characters__spell-prepared{background:#2e7d32;color:#eafff0}
+html.ve-night-mode .characters__spell-slotpick-label{color:#eee}
+html.ve-night-mode .characters__spell-slotpick-label small{color:#999}
+html.ve-night-mode .characters__spell-slotpick-label.is-empty small{color:#e57373}
+html.ve-night-mode .characters__slots-rest{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__coin-group label{color:#999}
 /* Botões +/− padrão (PV, usos, atributos) */
-.ve-night-mode .characters__hp-mini{background:#222;border-color:#555}
-.ve-night-mode .characters__hp-mini--minus{color:#e57373;border-color:#6e3a3a}
-.ve-night-mode .characters__hp-mini--plus{color:#81c784;border-color:#3a5e3c}
-.ve-night-mode .characters__status-check{color:#ccc}
-.ve-night-mode .characters__ds{color:#999}
-.ve-night-mode .characters__ds-label{color:#888}
-.ve-night-mode .characters__status-deathsaves{background:#2a1e1e;border-color:#5e3a3a}
-.ve-night-mode .characters__status-deathsaves .characters__ds-label{color:#e08a90}
+html.ve-night-mode .characters__hp-mini{background:#222;border-color:#555}
+html.ve-night-mode .characters__hp-mini--minus{color:#e57373;border-color:#6e3a3a}
+html.ve-night-mode .characters__hp-mini--plus{color:#81c784;border-color:#3a5e3c}
+html.ve-night-mode .characters__status-check{color:#ccc}
+html.ve-night-mode .characters__ds{color:#999}
+html.ve-night-mode .characters__ds-label{color:#888}
+html.ve-night-mode .characters__status-deathsaves{background:#2a1e1e;border-color:#5e3a3a}
+html.ve-night-mode .characters__status-deathsaves .characters__ds-label{color:#e08a90}
 /* Ações, condições, toasts */
-.ve-night-mode .characters__actions-menu{background:#222;border-color:#444}
-.ve-night-mode .characters__actions-item{color:#ccc}
-.ve-night-mode .characters__actions-item:hover{background:#333}
-.ve-night-mode .characters__cond-btn{background:#222;border-color:#444;color:#ccc}
-.ve-night-mode .characters__cond-btn:hover{background:#333}
-.ve-night-mode .characters__cond-btn.is-active{background:#a83240;border-color:#a83240;color:#fff}
-.ve-night-mode .characters__cond-badge{background:#3a3020;color:#e8cf9e;border-color:#6e5a2e}
-.ve-night-mode .characters__toast--success{background:#1f6b32}
-.ve-night-mode .characters__toast--info{background:#0f5a9e}
-.ve-night-mode .characters__toast--danger{background:#a83240}
+html.ve-night-mode .characters__actions-menu{background:#222;border-color:#444}
+html.ve-night-mode .characters__actions-item{color:#ccc}
+html.ve-night-mode .characters__actions-item:hover{background:#333}
+html.ve-night-mode .characters__cond-btn{background:#222;border-color:#444;color:#ccc}
+html.ve-night-mode .characters__cond-btn:hover{background:#333}
+html.ve-night-mode .characters__cond-btn.is-active{background:#a83240;border-color:#a83240;color:#fff}
+html.ve-night-mode .characters__cond-badge{background:#3a3020;color:#e8cf9e;border-color:#6e5a2e}
+html.ve-night-mode .characters__toast--success{background:#1f6b32}
+html.ve-night-mode .characters__toast--info{background:#0f5a9e}
+html.ve-night-mode .characters__toast--danger{background:#a83240}
 /* Info cards / resumos / usos */
-.ve-night-mode .characters__info-card{background:#1e1e1e;border-color:#444;border-left-color:#d29a38}
-.ve-night-mode .characters__info-card .characters__summary-title{color:#d29a38;border-bottom-color:#444}
-.ve-night-mode .characters__info-card .characters__prof-line{color:#bbb}
-.ve-night-mode .characters__summary-box{background:#222;border-color:#444}
-.ve-night-mode .characters__summary-title{color:#d29a38}
-.ve-night-mode .characters__feature-item,.ve-night-mode .characters__feature-details{background:#1e1e1e;border-color:#444}
-.ve-night-mode .characters__feature-item>summary,.ve-night-mode .characters__feature-details>summary{color:#ddd}
-.ve-night-mode .characters__feat-lvl{color:#d29a38;border-bottom-color:#444}
-.ve-night-mode .characters__rest-info{color:#999;border-bottom-color:#3a3a3a}
-.ve-night-mode .characters__uses-hint{background:#1e1e1e;border-color:#3a3a3a;color:#999}
-.ve-night-mode .characters__uses-hint::before{color:#7db6e8}
-.ve-night-mode .characters__uses-group{background:#1e1e1e;border-color:#444;box-shadow:none}
-.ve-night-mode .characters__uses-group-head{border-bottom-color:#3a3a3a}
-.ve-night-mode .characters__uses-group-title{color:#eee}
-.ve-night-mode .characters__uses-group-title::before{color:#777}
-.ve-night-mode .characters__use-item{background:#222;border-color:#444}
-.ve-night-mode .characters__use-item:hover{box-shadow:0 2px 6px rgba(0,0,0,.5)}
-.ve-night-mode .characters__use-item.is-spent{background:#2a2216;border-color:#6e5a2e}
-.ve-night-mode .characters__use-item.is-spent .characters__use-name{color:#e8cf9e}
-.ve-night-mode .characters__use-name{color:#ddd}
-.ve-night-mode .characters__use-restore{background:#2a2a2a;color:#999}
-.ve-night-mode .characters__use-count{background:#1a1a1a;border-color:#555;color:#eee}
-.ve-night-mode .characters__use-item.is-spent .characters__use-count{color:#e8cf9e;border-color:#6e5a2e;background:#241f14}
-.ve-night-mode .characters__use-note{color:#888}
-.ve-night-mode .characters__use-opt{background:#232a3d;border-color:#3d4c73;color:#a9bfe8}
-.ve-night-mode .characters__use-opt:hover{background:#2b3550}
-.ve-night-mode .characters__use-opt b{color:#d7e4ff}
-.ve-night-mode .characters__feature-tag{color:#a9c4ea;background:#232c40;border-color:#3d5178}
+html.ve-night-mode .characters__info-card{background:#1e1e1e;border-color:#444;border-left-color:#d29a38}
+html.ve-night-mode .characters__info-card .characters__summary-title{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__info-card .characters__prof-line{color:#bbb}
+html.ve-night-mode .characters__summary-box{background:#222;border-color:#444}
+html.ve-night-mode .characters__summary-title{color:#d29a38}
+html.ve-night-mode .characters__feature-item,html.ve-night-mode .characters__feature-details{background:#1e1e1e;border-color:#444}
+html.ve-night-mode .characters__feature-item>summary,html.ve-night-mode .characters__feature-details>summary{color:#ddd}
+html.ve-night-mode .characters__feat-lvl{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__rest-info{color:#999;border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__uses-hint{background:#1e1e1e;border-color:#3a3a3a;color:#999}
+html.ve-night-mode .characters__uses-hint::before{color:#7db6e8}
+html.ve-night-mode .characters__uses-group{background:#1e1e1e;border-color:#444;box-shadow:none}
+html.ve-night-mode .characters__uses-group-head{border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__uses-group-title{color:#eee}
+html.ve-night-mode .characters__uses-group-title::before{color:#777}
+html.ve-night-mode .characters__use-item{background:#222;border-color:#444}
+html.ve-night-mode .characters__use-item:hover{box-shadow:0 2px 6px rgba(0,0,0,.5)}
+html.ve-night-mode .characters__use-item.is-spent{background:#2a2216;border-color:#6e5a2e}
+html.ve-night-mode .characters__use-item.is-spent .characters__use-name{color:#e8cf9e}
+html.ve-night-mode .characters__use-name{color:#ddd}
+html.ve-night-mode .characters__use-restore{background:#2a2a2a;color:#999}
+html.ve-night-mode .characters__use-count{background:#1a1a1a;border-color:#555;color:#eee}
+html.ve-night-mode .characters__use-item.is-spent .characters__use-count{color:#e8cf9e;border-color:#6e5a2e;background:#241f14}
+html.ve-night-mode .characters__use-note{color:#888}
+html.ve-night-mode .characters__use-opt{background:#232a3d;border-color:#3d4c73;color:#a9bfe8}
+html.ve-night-mode .characters__use-opt:hover{background:#2b3550}
+html.ve-night-mode .characters__use-opt b{color:#d7e4ff}
+html.ve-night-mode .characters__feature-tag{color:#a9c4ea;background:#232c40;border-color:#3d5178}
 /* Popups e overlays */
-.ve-night-mode .characters__detail{background:#222;border-color:#555;color:#bbb}
-.ve-night-mode .characters__detail-title{color:#d29a38;border-bottom-color:#444}
-.ve-night-mode .characters__detail-row{color:#bbb;border-bottom-color:#3a3a3a}
-.ve-night-mode .characters__detail-row b{color:#ddd}
-.ve-night-mode .characters__detail-overlay{background:rgba(0,0,0,.65)}
-.ve-night-mode .characters__search-item{background:#222;border-color:#444;color:#ccc}
-.ve-night-mode .characters__search-item:hover{background:#333}
+html.ve-night-mode .characters__detail{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__detail-title{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__detail-row{color:#bbb;border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__detail-row b{color:#ddd}
+html.ve-night-mode .characters__detail-overlay{background:rgba(0,0,0,.65)}
+html.ve-night-mode .characters__search-item{background:#222;border-color:#444;color:#ccc}
+html.ve-night-mode .characters__search-item:hover{background:#333}
 /* Busca (armas/armaduras/magias) e itens */
-.ve-night-mode .characters__search-results{background:#222}
-.ve-night-mode .characters__level-header-input{background:#222;border-color:#555;color:#eee}
-.ve-night-mode .characters__card a,.ve-night-mode .characters__item a{color:#7db6e8}
-.ve-night-mode .characters__item{border-color:#444;background:#1e1e1e;color:#ccc}
-.ve-night-mode .characters__subvariant-label{color:#c2b493}
-.ve-night-mode .characters__subvariant{border-color:#555;background:#2a2722;color:#ccc}
+html.ve-night-mode .characters__search-results{background:#222}
+html.ve-night-mode .characters__level-header-input{background:#222;border-color:#555;color:#eee}
+html.ve-night-mode .characters__card a,html.ve-night-mode .characters__item a{color:#7db6e8}
+html.ve-night-mode .characters__item{border-color:#444;background:#1e1e1e;color:#ccc}
+html.ve-night-mode .characters__subvariant-label{color:#c2b493}
+html.ve-night-mode .characters__subvariant{border-color:#555;background:#2a2722;color:#ccc}
 #hpdice-overlay .characters__btn { margin: 4px 4px 0 0; }
 
 /* Barra de ações da ficha e destaques de item */
@@ -534,6 +546,14 @@ body #characters-main{padding-top:0}
 .characters__search-item b { color: #12325c; }
 
 /* === Equipamento: abas (tabs) === */
+html.ve-night-mode .characters__search-item:active{background:#3a4a5c}
+html.ve-night-mode .characters__search-item b{color:#9cc3ee}
+html.ve-night-mode .characters__view{background:#1c1c1c}
+html.ve-night-mode .characters__sheet{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__tabs{border-bottom-color:#444}
+html.ve-night-mode .characters__tab-item{background:#2a2a2a;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__tab-item:hover{background:#333}
+html.ve-night-mode .characters__tab-item.active{background:#006bc4;border-color:#006bc4;color:#fff}
 .characters__tabs {
 display: flex;
 gap: 4px;
@@ -751,4 +771,229 @@ font-size: .85em;
 .characters__use-opt:active{background:#c7d2fe}
 .characters__use-opt b{color:#1e1b4b}
 @media print{.characters__use-row,.characters__use-options{display:none !important}}
+
+/* ============================================================
+   MODO ESCURO — CORREÇÕES FINAIS
+   Regras declaradas DEPOIS do bloco acima (criação, perícias,
+   ataques, usos etc.) venciam as regras escuras por ordem de
+   cascata. Este bloco é o último do arquivo e restabelece o tema.
+   ============================================================ */
+/* Navegação superior (pílulas do site) */
+html.ve-night-mode .page__nav-inner{background:#222}
+html.ve-night-mode .page__nav-inner>li>a{color:#ccc}
+html.ve-night-mode .page__nav-inner>li>a:focus,html.ve-night-mode .page__nav-inner>li>a:hover{background:#383838;color:#fff}
+html.ve-night-mode .page__nav-inner>li.active>a,html.ve-night-mode .page__nav-inner>li.active>a:focus,html.ve-night-mode .page__nav-inner>li.active>a:hover{background:#006bc4;color:#fff}
+/* Etapas da criação e botões Padrão/Rolagem/Compra */
+html.ve-night-mode .characters__steps .characters__step{background:#2a2a2a;color:#bbb}
+html.ve-night-mode .characters__steps .characters__step.active,html.ve-night-mode .characters__steps .characters__step.is-active{background:#006bc4;border-color:#006bc4;color:#fff}
+html.ve-night-mode .characters__steps .characters__step.completed{background:#2a2416;color:#e8cf9e}
+html.ve-night-mode .characters__method-tabs{border-color:#444}
+html.ve-night-mode .characters__method-tab{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__method-tab:hover,html.ve-night-mode .characters__method-tab:focus{background:#2a2519;border-color:#d29a38;color:#d29a38}
+html.ve-night-mode .characters__method-tab.active{background:#d29a38;border-color:#d29a38;color:#1c1c1c}
+/* Perícias (criação e ficha) */
+html.ve-night-mode .characters__skills-grid,html.ve-night-mode .characters__skills-cols{border-color:#444}
+html.ve-night-mode .characters__skill-item{background:#1e1e1e;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__skill-item label{color:#bbb}
+html.ve-night-mode .characters__skill-item input[type=checkbox],html.ve-night-mode .characters__skill-item input[type=radio]{accent-color:#d29a38}
+html.ve-night-mode .characters__ability-group{color:#d29a38}
+/* Caixas de atributo (criação e ficha) */
+html.ve-night-mode .characters__abilities .characters__ability{background:#222;border-color:#555}
+html.ve-night-mode .characters__ability-name{color:#999}
+html.ve-night-mode .characters__ability-score{color:#eee;border-bottom-color:#555}
+html.ve-night-mode .characters__ability-mod{color:#7db6e8}
+html.ve-night-mode .characters__ability .characters__ability-mod[style]{color:#7ddc8f !important}
+html.ve-night-mode .characters__pointbuy-row{background:#1e1e1e;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__pointbuy-row label{color:#bbb}
+html.ve-night-mode .characters__dice{color:#7db6e8;border-color:#7db6e8}
+/* Resumos de informação (raça/classe/antecedente) */
+html.ve-night-mode .characters__summary-box{background:transparent;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__summary-title{color:#d29a38}
+html.ve-night-mode .characters__info-card{background:#1e1e1e;border-color:#444;border-left-color:#d29a38}
+html.ve-night-mode .characters__info-card .characters__summary-title{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__info-card .characters__feature-details,html.ve-night-mode .characters__info-card .characters__feature-item{border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__info-card .characters__feature-details>summary{color:#ddd}
+html.ve-night-mode .characters__info-card .characters__prof-line{color:#bbb}
+/* Cabeçalho da ficha (avatar/nome/detalhes) */
+html.ve-night-mode .characters__sheet-name{color:#eee}
+html.ve-night-mode .characters__sheet-detail{color:#999}
+html.ve-night-mode .characters__sheet-actions .characters__btn{box-shadow:none}
+@media print{.characters__use-row,.characters__use-options{display:none !important}}
+/* --- Parte 2/3: ataques, armas, armaduras, itens, espaços e abas --- */
+/* Ataques & Ações (ficha) */
+html.ve-night-mode .characters__attack-item{background:#1e1e1e;border-color:#444;border-left-color:#006bc4}
+html.ve-night-mode .characters__attack-item2{background:#1e1e1e;border-color:#444}
+html.ve-night-mode .characters__attack-item2:active{background:#2a2a2a}
+html.ve-night-mode .characters__attack-name,html.ve-night-mode .characters__attack-l1 .characters__attack-name{color:#eee}
+html.ve-night-mode .characters__attack-src{color:#8a95a3}
+html.ve-night-mode .characters__attack-hit,html.ve-night-mode .characters__attack-hit2{color:#7db6e8}
+html.ve-night-mode .characters__attack-stats,html.ve-night-mode .characters__attack-l2{color:#9aa5b1}
+html.ve-night-mode .characters__attack-dmg,html.ve-night-mode .characters__attack-dmg2{color:#ccc}
+html.ve-night-mode .characters__attack-props{color:#888}
+/* Armas, itens e inventário */
+html.ve-night-mode .characters__item-name{color:#eee}
+html.ve-night-mode .characters__weapon-dmg{color:#9aa5b1}
+html.ve-night-mode .characters__item-qty{color:#888}
+html.ve-night-mode .characters__sheet-item{border-bottom-color:#333}
+html.ve-night-mode .characters__sheet-item--equipped,html.ve-night-mode .characters__sheet-item--weapon,html.ve-night-mode .characters__sheet-item--inventory{background:#1e1e1e;border-color:#444;color:#ccc}
+html.ve-night-mode .characters__sheet-item--equipped:hover,html.ve-night-mode .characters__sheet-item--weapon:hover,html.ve-night-mode .characters__sheet-item--inventory:hover{background:#262626}
+html.ve-night-mode .characters__equipped-badge{background:#22331f;border-color:#3f6b3a;color:#8fd98a}
+html.ve-night-mode .characters__item{border-bottom-color:#333}
+html.ve-night-mode .characters__weapon-mod{background:#222;border-color:#555;color:#bbb}
+/* Espaços de magia e moedas */
+html.ve-night-mode .characters__slot{background:#2a2a2a}
+html.ve-night-mode .characters__slot-value{color:#eee}
+html.ve-night-mode .characters__slot-level{color:#999}
+html.ve-night-mode .characters__coin-group input,html.ve-night-mode .characters__coins-grid input{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__coin-group label{color:#999}
+/* Abas (Equipamento: equipado/armas/inventário) */
+html.ve-night-mode .characters__tabs{border-bottom-color:#444}
+html.ve-night-mode .characters__tab-item{background:#222;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__tab-item:hover{background:#333}
+html.ve-night-mode .characters__tab-item.active{background:#006bc4;border-color:#006bc4;color:#fff}
+/* Detalhamento de CA e botões +/− (PV, usos, atributos) */
+html.ve-night-mode .characters__ac-breakdown{background:#1e1e1e;border-color:#444;color:#bbb}
+html.ve-night-mode .characters__ac-label{color:#999}
+html.ve-night-mode .characters__ac-components{color:#888}
+html.ve-night-mode .characters__hp-mini{background:#222;border-color:#555}
+html.ve-night-mode .characters__hp-mini--minus{color:#e57373;border-color:#6e3a3a}
+html.ve-night-mode .characters__hp-mini--plus{color:#81c784;border-color:#3a5e3c}
+/* Menu de ações e resultados de busca */
+html.ve-night-mode .characters__action-menu{background:#222;border-color:#444;box-shadow:0 6px 18px rgba(0,0,0,.6)}
+html.ve-night-mode .characters__actions-item{color:#ccc}
+html.ve-night-mode .characters__actions-item:hover{background:#333}
+html.ve-night-mode .characters__search-item{background:#1e1e1e;border-color:#444;color:#ccc}
+html.ve-night-mode .characters__search-item:hover{background:#2a2a2a;border-color:#d29a38}
+html.ve-night-mode .characters__search-item:active{background:#333}
+html.ve-night-mode .characters__search-item b{color:#e8cf9e}
+html.ve-night-mode .characters__search-results{color:#bbb}
+html.ve-night-mode .characters__levelup-classes .characters__btn{background:#222;border:1px solid #555;color:#ccc}
+html.ve-night-mode .characters__levelup-classes .characters__btn:hover{border-color:#d29a38;color:#d29a38}
+/* --- Parte 3/3: módulos, características & usos, status e popups --- */
+/* Módulos da ficha e botões do site */
+html.ve-night-mode .characters__module{border:1px solid #444;box-shadow:none}
+html.ve-night-mode .characters__module-head{border-bottom-color:#444}
+html.ve-night-mode .characters__module.is-collapsed{background:#1e1e1e}
+html.ve-night-mode .characters__feature-item,html.ve-night-mode .characters__feature-details{border-bottom-color:#333}
+html.ve-night-mode .characters__feature-item>summary,html.ve-night-mode .characters__feature-details>summary{color:#ddd}
+html.ve-night-mode .characters__feature-body{color:#bbb}
+html.ve-night-mode .characters__prof-line{color:#bbb}
+html.ve-night-mode .characters__feat-lvl{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__btn--outline{border-color:#555;color:#bbb}
+html.ve-night-mode .characters__btn--outline:hover,html.ve-night-mode .characters__btn--outline:focus{background:#333;border-color:#d29a38;color:#d29a38}
+html.ve-night-mode .characters__sheet-link{color:#7db6e8}
+html.ve-night-mode .ptm-link{color:#7db6e8}
+html.ve-night-mode .ptm-hint{color:#999}
+/* Características & Usos */
+html.ve-night-mode .characters__uses-hint{background:#1e1e1e;border-color:#3a3a3a;color:#999}
+html.ve-night-mode .characters__uses-hint::before{color:#7db6e8}
+html.ve-night-mode .characters__uses-group{background:#1e1e1e;border-color:#444;box-shadow:none}
+html.ve-night-mode .characters__uses-group-head{border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__uses-group-title{color:#eee}
+html.ve-night-mode .characters__uses-group-title::before{color:#777}
+html.ve-night-mode .characters__feature-tag{color:#a9c4ea;background:#232c40;border-color:#3d5178}
+html.ve-night-mode .characters__use-item{background:#222;border-color:#444}
+html.ve-night-mode .characters__use-item:hover{box-shadow:none;border-color:#555}
+html.ve-night-mode .characters__use-item.is-spent{background:#2a2216;border-color:#6e5a2e}
+html.ve-night-mode .characters__use-item.is-spent .characters__use-name{color:#e8cf9e}
+html.ve-night-mode .characters__use-name{color:#ddd}
+html.ve-night-mode .characters__use-restore{background:#2a2a2a;color:#999}
+html.ve-night-mode .characters__use-count{background:#1a1a1a;border-color:#555;color:#eee}
+html.ve-night-mode .characters__use-item.is-spent .characters__use-count{background:#241f14;border-color:#6e5a2e;color:#e8cf9e}
+html.ve-night-mode .characters__use-note{color:#888}
+html.ve-night-mode .characters__use-opt{background:#232a3d;border-color:#3d4c73;color:#a9bfe8}
+html.ve-night-mode .characters__use-opt:hover{background:#2b3550}
+html.ve-night-mode .characters__use-opt:active{background:#33415f}
+html.ve-night-mode .characters__use-opt b{color:#d7e4ff}
+/* Testes contra morte e status */
+html.ve-night-mode .characters__status-deathsaves{background:#2a1e1e;border-color:#5e3a3a}
+html.ve-night-mode .characters__status-deathsaves .characters__ds-label{color:#e08a90}
+html.ve-night-mode .characters__status-check{color:#ccc}
+html.ve-night-mode .characters__ds,html.ve-night-mode .characters__ds-label{color:#999}
+/* Popups de detalhe / overlays */
+html.ve-night-mode .characters__detail{background:#222;border-color:#555;color:#bbb}
+html.ve-night-mode .characters__detail-title{color:#d29a38;border-bottom-color:#444}
+html.ve-night-mode .characters__detail-part,html.ve-night-mode .characters__detail-part span{color:#bbb;border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__detail-body{color:#bbb}
+html.ve-night-mode .characters__detail-row{color:#bbb;border-bottom-color:#3a3a3a}
+html.ve-night-mode .characters__detail-row>b,html.ve-night-mode .characters__detail-row b{color:#ddd}
+html.ve-night-mode .characters__detail-auto{color:#999}
+html.ve-night-mode .characters__detail--wide{background:#222}
+html.ve-night-mode .characters__sheet-textarea{background:#222;border-color:#555;color:#bbb}
+/* Subraças / bônus à escolha / caixa de flex */
+html.ve-night-mode .characters__subvariant{background:#2a2722;border-color:#555;color:#ccc}
+html.ve-night-mode .characters__subvariant.is-checked{background:#3a3323;border-color:#d29a38;color:#e8cf9e}
+html.ve-night-mode .characters__subvariant-label{color:#c2b493}
+html.ve-night-mode .characters__flex-box{background:#252320;border-color:#555;color:#ccc}
+html.ve-night-mode .characters__flex-item{color:#ccc}
+html.ve-night-mode .characters__flex-hint{color:#9c8f76}
+html.ve-night-mode .characters__version-list,html.ve-night-mode .characters__subvariant-list{color:#bbb}
+/* Fim da parte 3/3 — fim das correções noturnas */
+
+/* ==========================================================================
+   MODO ESCURO — parte 4/4: lacunas do app REAL (js/characters-app.js)
+   A página de fichas roda o bundle standalone js/characters-app.js, que usa
+   nomes de classe próprios (ex.: .characters__tab, .characters__stat). Estes
+   elementos ficavam claros porque:
+     - .characters__tab não tem regra de base: um <button> sem background é
+       desenhado pelo navegador com o cinza do sistema (claro);
+     - os quadrados de atributo da ficha (.characters__stat) têm fundo claro
+       (#fafafa) definido só no tema claro e não tinham contraparte noturna.
+   Medido no DOM real (Firefox, tema escuro forçado):
+     .characters__tab  -> bg rgb(233,233,237)  color rgb(187,187,187)
+     .characters__stat -> bg rgb(250,250,250)  (valor rgb(51,51,51))
+   ========================================================================== */
+
+/* Abas de método do passo "Atributos" (Padrão / Rolagem / Comprar Pontos) */
+html.ve-night-mode .characters__tabs{border-bottom-color:#444}
+html.ve-night-mode .characters__tab{background:#222;border:1px solid #555;border-bottom:none;border-radius:6px 6px 0 0;color:#bbb;padding:8px 16px;font-size:.85em;font-weight:500;font-family:inherit;cursor:pointer;transition:all .2s}
+html.ve-night-mode .characters__tab:hover{background:#2a2519;border-color:#d29a38;color:#d29a38}
+html.ve-night-mode .characters__tab.active{background:#d29a38;border-color:#d29a38;color:#1c1c1c}
+
+/* Quadrados de atributo da ficha (fundo escuro, letras e números claros) */
+html.ve-night-mode .characters__stat{background:#222;border-color:#555}
+html.ve-night-mode .characters__stat-name{color:#999}
+html.ve-night-mode .characters__stat-value{color:#eee}
+html.ve-night-mode .characters__stat-mod{color:#7db6e8}
+html.ve-night-mode .characters__stat-roll{color:#9aa5b1}
+html.ve-night-mode .characters__stat-roll:hover{color:#d29a38}
+html.ve-night-mode .characters__stat--roll:hover{background:#2a2a2a;border-color:#666}
+
+/* Demais lacunas de contraste do app real (linhas claras / âmbar apagado) */
+html.ve-night-mode .characters__steps .characters__step .characters__step-number{background:rgba(255,255,255,.12)}
+html.ve-night-mode .characters__steps .characters__step.active .characters__step-number{background:rgba(255,255,255,.25)}
+html.ve-night-mode .characters__spell-item{border-bottom-color:#333}
+html.ve-night-mode .characters__ov{border-bottom-color:#666}
+html.ve-night-mode .characters__info-editable{border-bottom-color:#666}
+html.ve-night-mode .characters__detail-manual,html.ve-night-mode .characters__val-ov,html.ve-night-mode .characters__detail-part--manual span{color:#e0a83c}
+
+/* ==========================================================================
+   MODO ESCURO — parte 5/5: magias (filtro por classe/raça + card de detalhes)
+   - .characters__form-check: caixa "Somente magias disponíveis para ..."
+   - .characters__spell-access: linha que informa por que a magia está (ou não)
+     disponível para o personagem na lista de magias oficiais
+   - .characters__spell-desc / --block: descrição completa da magia (entries)
+   ========================================================================== */
+html.ve-night-mode .characters__form-check{display:flex;align-items:center;gap:8px;background:#262626;border:1px solid #444;border-radius:6px;padding:8px 10px;font-size:.85em;color:#ccc;cursor:pointer}
+html.ve-night-mode .characters__form-check b{color:#d29a38}
+html.ve-night-mode .characters__form-check input[type=checkbox]{accent-color:#d29a38;width:16px;height:16px;flex:0 0 auto}
+html.ve-night-mode .characters__spell-filterinfo{margin-top:6px;font-size:.8em;color:#999;line-height:1.35}
+html.ve-night-mode .characters__spell-access{margin-top:3px;font-size:.78em;color:#8fbf8f;line-height:1.3}
+html.ve-night-mode .characters__spell-access.is-locked{color:#c98f8f}
+html.ve-night-mode .characters__detail-row--block{flex-direction:column;align-items:stretch}
+html.ve-night-mode .characters__spell-desc{margin-top:4px;font-size:.9em;line-height:1.45;color:#c9c9c9;max-height:340px;overflow:auto}
+html.ve-night-mode .characters__spell-desc ul{margin:4px 0 4px 18px;padding:0}
+html.ve-night-mode .characters__spell-desc table{border-collapse:collapse;font-size:.92em;margin:4px 0}
+html.ve-night-mode .characters__spell-desc th,html.ve-night-mode .characters__spell-desc td{border:1px solid #444;padding:2px 6px;text-align:left}
+
+/* Descrições renderizadas a partir das tags 5etools */
+.characters__spell-desc{margin-top:4px;font-size:.9em;line-height:1.45;color:#1f2a37;max-height:340px;overflow:auto}
+.characters__spell-desc ul{margin:4px 0 4px 18px;padding:0}
+.characters__spell-desc table{border-collapse:collapse;font-size:.92em;margin:4px 0}
+.characters__spell-desc th,.characters__spell-desc td{border:1px solid #ddd;padding:2px 6px;text-align:left}
+.characters__condition-link{color:var(--dnd-primary,#006bc4);text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer}
+.characters__condition-link:hover,.characters__condition-link:focus-visible{text-decoration:underline;outline:none}
+html.ve-night-mode .characters__spell-desc{color:#c9c9c9}
+html.ve-night-mode .characters__spell-desc th,html.ve-night-mode .characters__spell-desc td{border-color:#444}
+html.ve-night-mode .characters__condition-link{color:#7db6e8}
 

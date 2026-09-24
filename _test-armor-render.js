@@ -31,11 +31,14 @@ const factory = eval('(function (stubs) {' +
   'var esc = stubs.esc, $ = stubs.$, itemsData = stubs.itemsData, currentChar = null,' +
   ' SHEET_MODULE_DEFS = null, ptmSearchHint = stubs.ptmSearchHint, appendCoinsModule = stubs.appendCoinsModule,' +
   ' openArmorDetailPopup = stubs.openArmorDetailPopup, openArmorAddMenu = stubs.openArmorAddMenu,' +
-  ' refreshCombatModule = stubs.refreshCombatModule, CharactersStore = stubs.CharactersStore;' +
+  ' refreshCombatModule = stubs.refreshCombatModule, CharactersStore = stubs.CharactersStore,' +
+  ' ptmItemHref = stubs.ptmItemHref;' +
+  extractFn('armorNameHtml') +
   extractFn('renderModuleEquipment') + '\nreturn renderModuleEquipment;})');
 const ctx = {
   esc, $: $stub, itemsData: [], currentChar: null, SHEET_MODULE_DEFS: null,
   ptmSearchHint: () => '<a class="ptm-link">itens</a>',
+  ptmItemHref: () => 'items.html#x',
   appendCoinsModule: () => {},
   openArmorDetailPopup: () => {}, openArmorAddMenu: () => {},
   refreshCombatModule: () => {}, CharactersStore: {save: () => {}},

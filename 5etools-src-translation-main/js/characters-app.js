@@ -169,6 +169,7 @@
 	var subclassFeaturesData = []; // features de subclasse: idem + subclassShortName/subclassSource
 	var selectedSubclass = null;
 	var spellsData = [];
+	var spellAccessIndex = null; // índice "magia -> classes/subclasses/raças/talentos" (gendata-spell-source-lookup.json)
 	var itemsData = [];
 	var featsData = [];
 	var currentTab = "overview";
@@ -2052,7 +2053,7 @@
 			char.specialAbilities.forEach(function(ability) {
 				html += '<div class="characters__feature-item">';
 				html += '<div class="characters__feature-name">' + esc(ability.name || ability) + '</div>';
-				if (ability.description) html += '<div class="characters__feature-desc">' + esc(ability.description) + '</div>';
+				if (ability.description) html += '<div class="characters__feature-desc">' + tagToHtml(ability.description) + '</div>';
 				html += '</div>';
 			});
 		} else {
@@ -3548,14 +3549,14 @@ function openActionsMenu(char, $trigger) {
 		var it = null;
 		itemsData.forEach(function(i) { if (i && i.name === (a.name || a)) it = i; });
 		var source = a.source || (it && it.source) || "—";
-		var desc = (it && it.entries) ? it.entries.join("\n") : (a.desc || "Sem descrição.");
+		var descHtml = (it && it.entries) ? entriesToHtml(it.entries, 0) : tagToHtml(a.desc || "Sem descrição.");
 		var acTxt = (a.ac != null ? a.ac : (it && it.ac != null ? it.ac : "—"));
 		var RAR = {none:"Comum", uncommon:"Incomum", rare:"Raro", "very rare":"Muito Raro", legendary:"Lendário", artifact:"Artefato"};
 		var rarityPt = a.rarityPt || (it && (RAR[it.rarity] || it.rarity)) || a.rarity || "Comum";
 		var isEq = (a.equipped !== false);
 		var totalAC = computeTotalAC(char);
 		var h = '<div class="characters__detail-overlay" id="armordetail-overlay"><div class="characters__detail">';
-		h += '<div class="characters__detail-title">' + esc(a.name || a) + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</div>';
+		h += '<div class="characters__detail-title"><a class="ptm-link" href="' + esc(ptmItemHref({name: (a.name || a), source: (a.source || (it && it.source) || "")})) + '">' + esc(a.name || a) + '</a>' + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</div>';
 		h += '<div class="characters__detail-body">';
 		h += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(source) + '</div>';
 		h += '<div class="characters__detail-row"><b>Tipo:</b> ' + esc(armorTypePt(a, it)) + ' (' + esc(armorDexHint(a, it)) + ')</div>';
@@ -3568,11 +3569,11 @@ function openActionsMenu(char, $trigger) {
 		if (restr.length) h += '<div class="characters__detail-row"><b>Restrições:</b> ' + esc(restr.join(" • ")) + '</div>';
 		if (a.magicFx && a.magicFx.length) {
 			h += '<div class="characters__detail-row" style="align-items:flex-start"><b>Efeitos mágicos:</b><div>';
-			a.magicFx.forEach(function(fx) { h += '<div style="font-size:.9em;margin-top:4px">' + esc(fx) + '</div>'; });
+			a.magicFx.forEach(function(fx) { h += '<div style="font-size:.9em;margin-top:4px">' + tagToHtml(fx) + '</div>'; });
 			h += '</div></div>';
 		}
 		h += '<div class="characters__detail-row"><b>CA atual do personagem:</b> ' + (totalAC != null ? esc(String(totalAC)) : '—') + '</div>';
-		h += '<div class="characters__detail-row" style="align-items:flex-start"><b>Descrição:</b><div style="white-space:pre-wrap;margin-top:4px;font-size:.9em">' + esc(desc) + '</div></div>';
+		h += '<div class="characters__detail-row" style="align-items:flex-start"><b>Descrição:</b><div class="characters__spell-desc">' + descHtml + '</div></div>';
 		h += '</div>';
 		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:6px;align-items:stretch">';
 		h += '<button class="characters__btn ' + (isEq ? 'characters__btn--secondary' : 'characters__btn--primary') + '" id="ad-equip">' + (isEq ? 'Desequipar' : 'Equipar') + '</button>';
@@ -3758,6 +3759,13 @@ function renderModuleCombat($body, char) {
 		});
 	}
 
+	// Nome da arma como link quando é oficial (fonte conhecida e não personalizada)
+	function weaponNameHtml(w, it) {
+		var nm = esc((w && w.name) || w);
+		var src = (w && w.source) || (it && it.source) || "";
+		if (src && !(w && w.custom)) return '<a class="ptm-link" href="' + esc(ptmItemHref({name: (w && w.name) || w, source: src})) + '">' + nm + '</a>';
+		return nm;
+	}
 	function renderModuleAttacks($body, char) {
 		var PROP_PT = {V:"versátil", F:"acuidade", T:"pesada", "2H":"duas mãos", L:"leve", A:"munição", RLD:"recarga", S:"especial", H:"pesada"};
 		var DMG_PT = {P:"perfurante", B:"contundente", S:"cortante", F:"fogo", C:"frio", L:"elétrico", N:"necrótico", T:"trovejante", Y:"psíquico", I:"ácido", O:"veneno"};
@@ -3802,7 +3810,7 @@ function renderModuleCombat($body, char) {
 				var dmgLine = dmgBase + " " + dmgType + (tot !== 0 ? (tot > 0 ? " +" + tot : " −" + Math.abs(tot)) : "");
 				var srcTag = (w.source || (it && it.source)) ? ' <span class="characters__attack-src">[' + esc(w.source || it.source) + ']</span>' : '';
 				html += '<div class="characters__attack-item2" data-weapon-idx="' + wIdx + '">';
-				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + esc(w.name || w) + srcTag + '</span>';
+				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + weaponNameHtml(w, it) + srcTag + '</span>';
 				html += '<span class="characters__attack-hit2">' + ovSpan(char, wKey + "hit", hitTotal, "hit") + '</span></div>';
 				html += '<div class="characters__attack-l2">';
 				html += '<span class="characters__attack-props">' + esc(props.length ? props.join(", ") : "—") + '</span>';
@@ -3854,8 +3862,9 @@ function renderModuleCombat($body, char) {
 			});
 		});
 		// Clique na arma: popup de detalhes com Atacar / Dano
+		// (clique no NOME oficial abre a página do item — não abre o popup)
 		$body.find(".characters__attack-item2").on("click", function(e) {
-			if ($(e.target).closest(".characters__ov").length) return;
+			if ($(e.target).closest(".characters__ov, a").length) return;
 			var wIdx = parseInt($(this).data("weapon-idx"), 10);
 			var w = (char.weapons || [])[wIdx];
 			if (w) openWeaponDetailPopup($body, char, w, wIdx);
@@ -3888,15 +3897,15 @@ function renderModuleCombat($body, char) {
 		var weight = (w.weight != null ? w.weight : (it && it.weight)) || "—";
 		var value = (w.value != null ? w.value : (it && it.value)) || "—";
 		var source = w.source || (it && it.source) || "—";
-		var desc = (it && it.entries) ? it.entries.join("\n") : (w.desc || "Sem descrição.");
+		var desc = (it && it.entries) ? entriesToHtml(it.entries, 0) : tagToHtml(w.desc || "Sem descrição.");
 		var magicTxt = (it && (it.bonusWeapon || it.bonusSpellAttack)) ? ("Bônus de arma: " + (it.bonusWeapon || "") + (it.bonusSpellAttack ? " | Bônus de magia: " + it.bonusSpellAttack : "")) : "—";
 		var flags = [];
 		if (w.twoHand) flags.push("Duas mãos");
 		if (w.reload) flags.push("Recarga");
 		if (w.silver) flags.push("Prata");
-		var attMode = "normal";
+		var wIsCustom = !!w.custom;
 		var h = '<div style="z-index:9000 !important;" <div class="characters__detail-overlay" id="weapondetail-overlay"><div class="characters__detail">';
-		h += '<div class="characters__detail-title">' + esc(w.name || w) + '</div>';
+		h += '<div class="characters__detail-title">' + (wIsCustom ? esc(w.name || w) : '<a class="ptm-link" href="' + esc(ptmItemHref({name: (w.name || w), source: source})) + '">' + esc(w.name || w) + '</a>') + '</div>';
 		h += '<div class="characters__detail-body">';
 		h += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(source) + '</div>';
 		h += '<div class="characters__detail-row"><b>Raridade:</b> ' + esc(rarityPt) + '</div>';
@@ -3914,7 +3923,7 @@ function renderModuleCombat($body, char) {
 		h += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Efeitos mágicos:</b><div id="wd-magic-fx"></div></div>';
 		if (w.attunement) h += '<div class="characters__detail-row"><b>Sintonização:</b> Requer sintonização</div>';
 		if (flags.length) h += '<div class="characters__detail-row"><b>Características:</b> ' + esc(flags.join(", ")) + '</div>';
-		h += '<div class="characters__detail-row" style="margin-top:8px"><b>Descrição:</b><div style="white-space:pre-wrap;margin-top:4px;font-size:.9em">' + esc(desc) + '</div></div>';
+		h += '<div class="characters__detail-row" style="margin-top:8px"><b>Descrição:</b><div class="characters__spell-desc">' + desc + '</div></div>';
 		h += '</div>';
 		h += '<div class="characters__detail-actions" style="flex-direction:column;gap:6px">';
 		h += '<select class="characters__form-select" id="wd-abil" style="width:100%" title="Atributo usado no acerto e no dano">';
@@ -3929,6 +3938,7 @@ function renderModuleCombat($body, char) {
 		h += '<button class="characters__btn characters__btn--secondary" id="wd-btn-dmg" style="flex:1">Dano</button>';
 		h += '</div>';
 		h += '<button class="characters__btn characters__btn--secondary" id="wd-edit">✎ Editar arma</button>';
+		h += '<button class="characters__btn characters__btn--danger" id="wd-remove">🗑 Excluir arma</button>';
 		h += '<button class="characters__btn characters__btn--secondary" id="wd-close">Fechar</button>';
 		h += '</div></div></div>';
 		$(document.body).append(h);
@@ -3962,13 +3972,52 @@ function renderModuleCombat($body, char) {
 		}
 		function renderExtraFx() {
 			var $box = $ov.find("#wd-magic-fx").empty();
-			extraFx().forEach(function(fx) {
-				$box.append('<div style="font-size:.9em;margin-top:4px">' + esc(fx) + '</div>');
+			extraFx().forEach(function(fx, i) {
+				$box.append('<div class="characters__fx-row"><span class="characters__fx-text">' + tagToHtml(fx) + '</span>' +
+					'<span class="characters__fx-actions">' +
+					'<button type="button" class="characters__btn characters__btn--sm characters__btn--secondary" data-fx-edit="' + i + '" title="Editar efeito">✎</button>' +
+					'<button type="button" class="characters__btn characters__btn--sm characters__btn--danger" data-fx-del="' + i + '" title="Remover efeito">×</button>' +
+					'</span></div>');
 			});
-			if (!extraFx().length) $box.html('<div style="font-size:.85em;color:#667085">Nenhum</div>');
+			if (!extraFx().length) $box.append('<div style="font-size:.85em;color:#667085">Nenhum</div>');
+			$box.append('<button type="button" class="characters__btn characters__btn--sm characters__btn--secondary" id="wd-add-fx" style="margin-top:6px">+ Adicionar efeito mágico</button>');
 		}
 		renderExtraDmg();
 		renderExtraFx();
+		// Efeitos mágicos: adicionar / editar / remover (delegado no popup)
+		$ov.on("click", "#wd-add-fx", function() {
+			openMagicFxPopup($ov, char, w, -1, function() {
+				renderExtraFx();
+				renderModuleAttacks($body, char);
+			});
+		});
+		$ov.on("click", "[data-fx-edit]", function() {
+			var fi = parseInt($(this).attr("data-fx-edit"), 10);
+			openMagicFxPopup($ov, char, w, fi, function() {
+				renderExtraFx();
+				renderModuleAttacks($body, char);
+			});
+		});
+		$ov.on("click", "[data-fx-del]", function() {
+			var fi = parseInt($(this).attr("data-fx-del"), 10);
+			if (!w.magicFx || !w.magicFx[fi]) return;
+			w.magicFx.splice(fi, 1);
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			renderExtraFx();
+			renderModuleAttacks($body, char);
+		});
+		// Excluir arma
+		$ov.find("#wd-remove").on("click", function() {
+			if (!confirm('Excluir "' + (w.name || "arma") + '"?')) return;
+			var ix = (char.weapons || []).indexOf(w);
+			if (ix >= 0) char.weapons.splice(ix, 1);
+			char.updated = Date.now();
+			CharactersStore.save(char);
+			closeWeaponDetailPopup();
+			renderModuleAttacks($body, char);
+			refreshCombatModule && refreshCombatModule();
+		});
 		$ov.find("#wd-attack").on("click", function() {
 			var b = ws.hit + bonus;
 			if (attMode === "normal") { rollD20WithBonus(b, "Ataque — " + (w.name || w)); return; }
@@ -4008,7 +4057,6 @@ function renderModuleCombat($body, char) {
 			openCustomWeaponCreator(char, w, function() { renderModuleAttacks($body, char); });
 		});
 	}
-	// ==== Popup: adicionar dano extra (tipo de dano + dados + fixo) ====
 	function openExtraDmgPopup($parentOv, w, onDone) {
 		$("#extradmg-overlay").remove();
 		var DMGS = ["Perfurante", "Cortante", "Contundente", "Fogo", "Frio", "Elétrico", "Necrótico", "Psíquico", "Veneno", "Trovejante", "Ácido", "Radiante", "Força"];
@@ -4051,14 +4099,15 @@ function renderModuleCombat($body, char) {
 			onDone && onDone();
 		});
 	}
-	// ==== Popup: adicionar efeito mágico ====
-	function openMagicFxPopup($parentOv, w, onDone) {
+	// ==== Popup: adicionar/editar efeito mágico (fxIdx < 0 = novo) ====
+	function openMagicFxPopup($parentOv, char, w, fxIdx, onDone) {
 		$("#magicfx-overlay").remove();
+		var editing = fxIdx >= 0 && w.magicFx && w.magicFx[fxIdx];
 		var h = '<div class="characters__detail-overlay" id="magicfx-overlay"><div class="characters__detail">';
-		h += '<div class="characters__detail-title">Efeito Mágico</div>';
+		h += '<div class="characters__detail-title">' + (editing ? "Editar" : "Adicionar") + ' Efeito Mágico</div>';
 		h += '<div class="characters__detail-body">';
 		h += '<div class="characters__form-group"><label class="characters__form-label">Descrição do efeito</label>';
-		h += '<textarea class="characters__form-input" id="fx-desc" rows="3" placeholder="ex: Ao acertar, o alvo recebe 1d6 de fogo extra"></textarea></div>';
+		h += '<textarea class="characters__form-input" id="fx-desc" rows="3" placeholder="ex: Ao acertar, o alvo recebe 1d6 de fogo extra">' + esc(editing ? (w.magicFx[fxIdx] || "") : "") + '</textarea></div>';
 		h += '</div><div class="characters__detail-actions">';
 		h += '<button class="characters__btn characters__btn--primary" id="fx-add">Adicionar</button>';
 		h += '<button class="characters__btn characters__btn--secondary" id="fx-cancel">Cancelar</button>';
@@ -4070,8 +4119,8 @@ function renderModuleCombat($body, char) {
 		$ov.find("#fx-add").on("click", function() {
 			var txt = $ov.find("#fx-desc").val().trim();
 			if (!txt) { alert("Descreva o efeito!"); return; }
-			if (!w.magicFx) w.magicFx = [];
-			w.magicFx.push(txt);
+			if (fxIdx >= 0 && w.magicFx && w.magicFx[fxIdx]) w.magicFx[fxIdx] = txt;
+			else { if (!w.magicFx) w.magicFx = []; w.magicFx.push(txt); }
 			char.updated = Date.now();
 			CharactersStore.save(char);
 			$ov.remove();
@@ -4285,6 +4334,390 @@ function spellAbilityName(char) {
 		return m[char.className] || "Inteligência";
 	}
 
+	// ==========================================================================
+	// MAGIAS — acesso por classe / subclasse / raça / talento / antecedente
+	// Dados de data/generated/gendata-spell-source-lookup.json (gerado pelo
+	// 5etools), no formato:
+	//   lookup[FONTE_DA_MAGIA][nome da magia] = {
+	//     class:       { fonteDaClasse: { "Wizard": true, ... } }
+	//     classVariant:{ fonteDaClasse: { "Bard": {definedInSources:[...]} } }
+	//     subclass:    { fonteClasse: { Classe: { fonteSub: { SubCurta: {name:"Nome completo"} } } } }
+	//     race:        { fonteRaca: { "Elf (Drow)": {baseName:"Elf",...} | true } }
+	//     feat / background / optionalfeature: { fonte: { "Nome": true | {...} } }
+	//   }
+	// O índice é preservado por nome + fonte da magia. Isso é necessário porque
+	// uma versão PHB e uma versão XPHB com o mesmo nome podem ter classes,
+	// subclasses, raças ou talentos de acesso diferentes.
+	// ==========================================================================
+	var CLASS_PT_NAMES = {Artificer:"Artífice", Barbarian:"Bárbaro", Bard:"Bardo", Cleric:"Clérigo", Druid:"Druida", Fighter:"Guerreiro", Monk:"Monge", Paladin:"Paladino", Ranger:"Patrulheiro", Rogue:"Ladino", Sorcerer:"Feiticeiro", Warlock:"Bruxo", Wizard:"Mago"};
+	function classLabelPt(name) { return CLASS_PT_NAMES[name] || name; }
+	// A ficha guarda a classe em inglês ("Wizard"); saves antigos podem ter PT
+	// ("Mago") — normalizamos para o inglês usado no dado de acesso.
+	function classEnName(name) {
+		var s = String(name == null ? "" : name).trim();
+		if (!s) return "";
+		if (CLASS_PT_NAMES[s]) return s;
+		var found = null;
+		Object.keys(CLASS_PT_NAMES).forEach(function(en) {
+			if (String(CLASS_PT_NAMES[en]).toLowerCase() === s.toLowerCase()) found = en;
+		});
+		return found || s;
+	}
+	// Bloco { fonte: { "Nome": valor } } -> mapa nome(minúsculo) -> nome original.
+	// sourceMap guarda em quais fontes aquele acesso foi concedido.
+	function collectAccessNames(block, out, sourceMap) {
+		if (!block || typeof block !== "object") return;
+		Object.keys(block).forEach(function(srcKey) {
+			var byName = block[srcKey];
+			if (!byName || typeof byName !== "object") return;
+			Object.keys(byName).forEach(function(nm) {
+				var key = String(nm).toLowerCase();
+				out[key] = nm;
+				if (sourceMap) {
+					var sources = sourceMap[key] || (sourceMap[key] = {});
+					sources[String(srcKey).toLowerCase()] = true;
+				}
+			});
+		});
+	}
+	// Subclasses: profundidade fixa [fonteClasse][Classe][fonteSub][SubCurta].
+	// As fontes são guardadas para não misturar subclasses de PHB com XPHB.
+	function collectAccessSubclasses(block, out, sourcePairs) {
+		if (!block || typeof block !== "object") return;
+		function addPair(key, classSrc, subSrc) {
+			var sources = sourcePairs[key] || (sourcePairs[key] = {});
+			sources[String(classSrc).toLowerCase() + "|" + String(subSrc).toLowerCase()] = true;
+		}
+		Object.keys(block).forEach(function(clsSrc) {
+			var byCls = block[clsSrc] || {};
+			Object.keys(byCls).forEach(function(clsName) {
+				var bySubSrc = byCls[clsName] || {};
+				Object.keys(bySubSrc).forEach(function(subSrc) {
+					var bySub = bySubSrc[subSrc] || {};
+					Object.keys(bySub).forEach(function(subKey) {
+						var meta = bySub[subKey] || {};
+						var full = meta.name || subKey;
+						var cls = String(clsName).toLowerCase();
+						var shortKey = cls + "|" + String(subKey).toLowerCase();
+						var fullKey = cls + "|" + String(full).toLowerCase();
+						out[shortKey] = full;
+						out[fullKey] = full;
+						if (sourcePairs) {
+							addPair(shortKey, clsSrc, subSrc);
+							addPair(fullKey, clsSrc, subSrc);
+						}
+					});
+				});
+			});
+		});
+	}
+	function newSpellAccess() {
+		return {classes:{}, classSources:{}, subclasses:{}, subclassSources:{}, races:{}, raceSources:{}, feats:{}, featSources:{}, backgrounds:{}, backgroundSources:{}, features:{}, featureSources:{}};
+	}
+	function collectSpellAccess(entry, acc) {
+		if (!entry || typeof entry !== "object") return;
+		collectAccessNames(entry.class, acc.classes, acc.classSources);
+		collectAccessNames(entry.classVariant, acc.classes, acc.classSources);
+		collectAccessSubclasses(entry.subclass, acc.subclasses, acc.subclassSources);
+		collectAccessNames(entry.race, acc.races, acc.raceSources);
+		collectAccessNames(entry.feat, acc.feats, acc.featSources);
+		collectAccessNames(entry.background, acc.backgrounds, acc.backgroundSources);
+		collectAccessNames(entry.optionalfeature, acc.features, acc.featureSources);
+	}
+	function buildSpellAccessIndex(json) {
+		var index = {bySource:{}, byName:{}};
+		Object.keys(json || {}).forEach(function(srcKey) {
+			var byName = json[srcKey];
+			if (!byName || typeof byName !== "object") return;
+			var sourceKey = String(srcKey).toLowerCase();
+			index.bySource[sourceKey] = index.bySource[sourceKey] || {};
+			Object.keys(byName).forEach(function(nameLc) {
+				var nameKey = String(nameLc).toLowerCase();
+				var acc = newSpellAccess();
+				collectSpellAccess(byName[nameLc], acc);
+				index.bySource[sourceKey][nameKey] = acc;
+				var merged = index.byName[nameKey] || (index.byName[nameKey] = newSpellAccess());
+				collectSpellAccess(byName[nameLc], merged);
+			});
+		});
+		return index;
+	}
+	function loadSpellAccessIndex() {
+		return fetch("data/generated/gendata-spell-source-lookup.json")
+			.then(function(r) { return r.json(); })
+			.then(function(json) { return buildSpellAccessIndex(json); })
+			.catch(function() { return null; });
+	}
+	function uniqueList(arr) {
+		var seen = {}, out = [];
+		(arr || []).forEach(function(v) { if (v && !seen[v]) { seen[v] = true; out.push(v); } });
+		return out;
+	}
+	// Lista curta: "A, B (+3)" — evita linhas gigantes no seletor de magias
+	function shortList(arr, n) {
+		arr = arr || [];
+		if (!arr.length) return "";
+		var head = arr.slice(0, n).join(", ");
+		return arr.length > n ? head + " (+" + (arr.length - n) + ")" : head;
+	}
+	// Resumo de quem pode usar a magia (usado quando ela NÃO serve ao personagem)
+	function accessSummary(info) {
+		if (!info) return "sem restrição de classe/raça";
+		var parts = [];
+		if (info.classes.length) parts.push("classes: " + shortList(info.classes, 6));
+		if (info.subclasses.length) parts.push("subclasses: " + shortList(info.subclasses, 3));
+		if (info.races.length) parts.push("raças: " + shortList(info.races, 3));
+		if (!parts.length && info.others.length) parts.push("outras fontes: " + shortList(info.others, 4));
+		return parts.join(" • ") || "sem restrição de classe/raça";
+	}
+
+	// Nomes de raça/sub-raça que identificam o personagem (ex.: "Elf" e "Drow")
+	function raceMatchNamesFor(char) {
+		var out = [];
+		var raceObj = raceObjectForUses(char);
+		var subraceObj = subraceObjectForUses(char, raceObj);
+		if (raceObj && raceObj.name) out.push(raceObj.name);
+		if (char.race) {
+			if (char.race.name) out.push(char.race.name);
+			if (char.race.label) out.push(char.race.label);
+			if (char.race._collapsedLabel) out.push(char.race._collapsedLabel);
+		}
+		if (char.raceSubraceName) out.push(char.raceSubraceName);
+		if (char.raceSubrace && typeof char.raceSubrace === "object") {
+			if (char.raceSubrace.name) out.push(char.raceSubrace.name);
+			if (char.raceSubrace.label) out.push(char.raceSubrace.label);
+		}
+		if (subraceObj) {
+			if (subraceObj.name) out.push(subraceObj.name);
+			if (subraceObj.label) out.push(subraceObj.label);
+		}
+		return uniqueList(out);
+	}
+	// Perfil de acesso do personagem (chaves minúsculas): classes em inglês,
+	// subclasses "classe|subclasse", raças e talentos/antecedentes/habilidades.
+	function charSpellProfile(char) {
+		var prof = {classes:{}, classSources:{}, subclasses:{}, subclassSources:{}, races:{}, raceSources:{}, feats:{}, featSources:{}, backgrounds:{}, backgroundSources:{}, features:{}, featureSources:{}};
+		function add(map, v) { if (v != null && String(v).trim() !== "") map[String(v).trim().toLowerCase()] = true; }
+		function addSource(map, key, source) {
+			key = String(key || "").toLowerCase();
+			if (!key) return;
+			var sources = map[key] || (map[key] = {});
+			if (source != null && String(source).trim() !== "") sources[String(source).toLowerCase()] = true;
+		}
+		charClasses(char).forEach(function(c, classIx) {
+			var en = classEnName(c.name);
+			if (!en) return;
+			add(prof.classes, en);
+			var clsKey = String(en).toLowerCase();
+			var classSource = c.source || c.classSource || (classIx === 0 ? char.classSource : null);
+			addSource(prof.classSources, clsKey, classSource);
+			var raw = String(c.subclass || "").split("|")[0];
+			if (raw) add(prof.subclasses, clsKey + "|" + raw);
+			var sub = subObjFromKey(c.subclass, en);
+			if (sub) {
+				if (sub.name) add(prof.subclasses, clsKey + "|" + sub.name);
+				if (sub.shortName) add(prof.subclasses, clsKey + "|" + sub.shortName);
+			}
+			[raw, sub && sub.name, sub && sub.shortName].filter(Boolean).forEach(function(name) {
+				var explicitSubSource = String(c.subclass || "").indexOf("|") >= 0;
+				var subSource = explicitSubSource ? ((sub && sub.source) || String(c.subclass || "").split("|")[1] || "") : "";
+				if (classSource && subSource) addSource(prof.subclassSources, clsKey + "|" + name, classSource + "|" + subSource);
+			});
+		});
+		raceMatchNamesFor(char).forEach(function(n) {
+			add(prof.races, n);
+			addSource(prof.raceSources, n, char.raceSource || (char.race && char.race.source));
+		});
+		(char.feats || []).forEach(function(f) { if (f && f.name) { add(prof.feats, f.name); addSource(prof.featSources, f.name, f.source); } });
+		if (char.background) { add(prof.backgrounds, char.background); addSource(prof.backgroundSources, char.background, char.bgSource); }
+		(char.selectableFeatures || []).forEach(function(f) { if (f && f.name) { add(prof.features, f.name); addSource(prof.featureSources, f.name, f.source); } });
+		(char.features || []).forEach(function(f) { if (f && f.name) { add(prof.features, f.name); addSource(prof.featureSources, f.name, f.source); } });
+		return prof;
+	}
+	// "Elf (Drow)" só bate com o personagem se a raça base bate E um dos rótulos
+	// do parêntese (ex.: "Drow") corresponde à sub-raça/variante escolhida.
+	function raceLookupMatchesProfile(lookupName, prof) {
+		var s = String(lookupName == null ? "" : lookupName).toLowerCase().trim();
+		if (!s) return false;
+		if (prof.races[s]) return true;
+		var m = /^(.+?)\s*\(([^)]+)\)$/.exec(s);
+		if (!m) return false;
+		var base = m[1].trim();
+		if (!prof.races[base]) return false;
+		var tokens = m[2].split(";").map(function(t) { return t.trim(); }).filter(function(t) { return t && t !== "variant"; });
+		if (!tokens.length) return true;
+		var keys = Object.keys(prof.races);
+		return tokens.some(function(t) {
+			if (prof.races[t]) return true;
+			if (t.length < 3) return false;
+			return keys.some(function(r) { return r.length > 2 && (t.indexOf(r) >= 0 || r.indexOf(t) >= 0); });
+		});
+	}
+	// O nome só é suficiente para fichas antigas. Quando a fonte foi salva,
+	// exigimos que a fonte do acesso seja compatível com a do personagem.
+	function accessSourceMatches(accessSources, accessKey, profileSources, profileKey) {
+		var allowed = accessSources && accessSources[accessKey];
+		if (!allowed || !Object.keys(allowed).length) return true;
+		var profile = profileSources && profileSources[profileKey || accessKey];
+		if (!profile || !Object.keys(profile).length) return true;
+		return Object.keys(allowed).some(function(source) { return profile[source]; });
+	}
+	function raceAccessSourceMatches(lookupName, prof, accessSources) {
+		var allowed = accessSources && accessSources[String(lookupName || "").toLowerCase()];
+		if (!allowed || !Object.keys(allowed).length) return true;
+		var profileSources = prof.raceSources || {};
+		var haveSource = Object.keys(profileSources).some(function(key) { return Object.keys(profileSources[key] || {}).length; });
+		if (!haveSource) return true;
+		return Object.keys(allowed).some(function(source) {
+			return Object.keys(profileSources).some(function(key) { return profileSources[key] && profileSources[key][source]; });
+		});
+	}
+	// Quem pode usar a magia (para o card de detalhes e para a lista de adicionar).
+	// Uma entrada oficial com fonte é resolvida exatamente; o fallback por nome
+	// existe apenas para fichas antigas salvas sem `source`.
+	function spellAccessEntry(spell, source) {
+		if (!spellAccessIndex) return null;
+		if (spell && typeof spell === "object") {
+			source = spell.source;
+			spell = spell.name;
+		}
+		var nameKey = String(spell == null ? "" : spell).toLowerCase();
+		var sourceKey = String(source == null ? "" : source).toLowerCase();
+		var bySource = spellAccessIndex.bySource && spellAccessIndex.bySource[sourceKey];
+		if (sourceKey) return bySource ? bySource[nameKey] || null : null;
+		return (spellAccessIndex.byName || spellAccessIndex)[nameKey] || null;
+	}
+	function spellAccessInfo(spell, source) {
+		var acc = spellAccessEntry(spell, source);
+		if (!acc) return null;
+		var classes = uniqueList(Object.keys(acc.classes).map(function(k) { return classLabelPt(acc.classes[k]); }));
+		var subclasses = uniqueList(Object.keys(acc.subclasses).map(function(k) { return acc.subclasses[k]; }));
+		var races = uniqueList(Object.keys(acc.races).map(function(k) { return acc.races[k]; }));
+		var others = uniqueList(Object.keys(acc.feats).map(function(k) { return acc.feats[k]; })
+			.concat(Object.keys(acc.backgrounds).map(function(k) { return acc.backgrounds[k]; }))
+			.concat(Object.keys(acc.features).map(function(k) { return acc.features[k]; })));
+		return {classes: classes.sort(), subclasses: subclasses.sort(), races: races.sort(), others: others.sort(), raw: acc};
+	}
+	// A magia está disponível para o personagem? Sem índice/entrada => liberada.
+	function spellAvailableForChar(char, spell, prof) {
+		if (!spellAccessIndex) return {ok:true, why:[], info:null};
+		var info = spellAccessInfo(spell);
+		if (!info) return {ok:true, why:[], info:null};
+		prof = prof || charSpellProfile(char);
+		var acc = info.raw, why = [];
+		var byCls = uniqueList(Object.keys(acc.classes).filter(function(k) {
+			return prof.classes[k] && accessSourceMatches(acc.classSources, k, prof.classSources, k);
+		}).map(function(k) { return classLabelPt(acc.classes[k]); }));
+		if (byCls.length) why.push("classe: " + byCls.join(", "));
+		var bySub = uniqueList(Object.keys(acc.subclasses).filter(function(k) {
+			if (!prof.subclasses[k]) return false;
+			var allowed = acc.subclassSources && acc.subclassSources[k];
+			if (!allowed || !Object.keys(allowed).length) return true;
+			var profile = prof.subclassSources && prof.subclassSources[k];
+			return !profile || !Object.keys(profile).length || Object.keys(allowed).some(function(pair) { return profile[pair]; });
+		}).map(function(k) { return acc.subclasses[k]; }));
+		if (bySub.length) why.push("subclasse: " + bySub.join(", "));
+		var byRace = uniqueList(Object.keys(acc.races).filter(function(k) {
+			return raceLookupMatchesProfile(k, prof) && raceAccessSourceMatches(k, prof, acc.raceSources);
+		}).map(function(k) { return acc.races[k]; }));
+		if (byRace.length) why.push("raça: " + byRace.join(", "));
+		var byFeat = uniqueList(Object.keys(acc.feats).filter(function(k) {
+			return prof.feats[k] && accessSourceMatches(acc.featSources, k, prof.featSources, k);
+		}).map(function(k) { return acc.feats[k]; }));
+		if (byFeat.length) why.push("talento: " + byFeat.join(", "));
+		var byBg = uniqueList(Object.keys(acc.backgrounds).filter(function(k) {
+			return prof.backgrounds[k] && accessSourceMatches(acc.backgroundSources, k, prof.backgroundSources, k);
+		}).map(function(k) { return acc.backgrounds[k]; }));
+		if (byBg.length) why.push("antecedente: " + byBg.join(", "));
+		var byFt = uniqueList(Object.keys(acc.features).filter(function(k) {
+			return prof.features[k] && accessSourceMatches(acc.featureSources, k, prof.featureSources, k);
+		}).map(function(k) { return acc.features[k]; }));
+		if (byFt.length) why.push("habilidade: " + byFt.join(", "));
+		return {ok: why.length > 0, why: why, info: info};
+	}
+
+	// --- Formatação PT dos campos da magia (tempo, alcance, componentes, duração)
+	function spellUnitPt(unit, n) {
+		var m = {action:["ação","ações"], bonus:["ação bônus","ações bônus"], reaction:["reação","reações"], round:["rodada","rodadas"], minute:["minuto","minutos"], hour:["hora","horas"], day:["dia","dias"], year:["ano","anos"], special:["especial","especiais"], instant:["instantânea","instantâneas"]};
+		var u = m[String(unit == null ? "" : unit).toLowerCase()];
+		if (!u) return String(unit == null ? "" : unit);
+		return (n === 1 || n == null) ? u[0] : u[1];
+	}
+	function spellTimeToPt(time) {
+		if (!time) return "";
+		var arr = Array.isArray(time) ? time : [time];
+		return arr.map(function(t) {
+			if (typeof t === "string") return t;
+			if (!t) return "";
+			var n = t.number != null ? t.number : 1;
+			var txt = n + " " + spellUnitPt(t.unit, n);
+			if (t.condition) txt += " (" + t.condition + ")";
+			return txt;
+		}).filter(Boolean).join(" ou ");
+	}
+	function spellDistanceToPt(dist) {
+		if (!dist) return "";
+		var t = String(dist.type || "");
+		if (t === "self") return "pessoal";
+		if (t === "touch") return "toque";
+		if (t === "sight") return "visão";
+		if (t === "unlimited") return "ilimitado";
+		if (dist.amount == null) return t || "—";
+		if (t === "miles") return dist.amount + (dist.amount === 1 ? " milha" : " milhas") + " (" + fmtDistM(dist.amount * 5280) + ")";
+		if (t === "feet") return fmtDistM(dist.amount);
+		return dist.amount + " " + t;
+	}
+	var SPELL_AREA_PT = {sphere:"esfera", cone:"cone", cube:"cubo", line:"linha", radius:"raio", hemisphere:"hemisfério", cylinder:"cilindro", emanation:"emanação"};
+	function spellRangeToPt(range) {
+		if (!range) return "";
+		var type = String(range.type || "point");
+		var d = spellDistanceToPt(range.distance);
+		if (type === "special") return "especial";
+		if (type === "point") return d || "—";
+		var area = SPELL_AREA_PT[type] || type;
+		return (d ? d + " de " : "") + area;
+	}
+	function spellComponentsToPt(comp, meta) {
+		if (!comp && !(meta && meta.ritual)) return "";
+		var parts = [];
+		["v", "s", "m", "r"].forEach(function(k) { if (comp && comp[k]) parts.push(k.toUpperCase()); });
+		if (comp && comp.m) {
+			var m = comp.m, mt = "";
+			if (typeof m === "string") mt = m;
+			else if (typeof m === "object") {
+				mt = m.text ? (typeof m.text === "string" ? m.text : entriesToPlain(m.text, 0)) : "";
+				var extra = [];
+				if (m.cost) extra.push(m.cost);
+				if (m.consume) extra.push("consumida na conjuração");
+				if (extra.length) mt += (mt ? " — " : "") + extra.join(", ");
+			}
+			var ix = parts.indexOf("M");
+			var mTxt = "M" + (mt ? " (" + mt + ")" : "");
+			if (ix >= 0) parts[ix] = mTxt; else parts.push(mTxt);
+		}
+		var txt = parts.join(", ");
+		if (meta && meta.ritual) txt += (txt ? " • " : "") + "Ritual";
+		return txt;
+	}
+	function spellDurationToPt(duration) {
+		if (!duration) return "";
+		var arr = Array.isArray(duration) ? duration : [duration];
+		return arr.map(function(d) {
+			if (typeof d === "string") return d;
+			if (!d) return "";
+			var txt = "";
+			if (d.type === "instant") txt = "Instantânea";
+			else if (d.type === "permanent") txt = "Permanente";
+			else if (d.type === "special") txt = "Especial";
+			else if (d.type === "timed" && d.duration) {
+				var n = d.duration.amount != null ? d.duration.amount : 1;
+				txt = n + " " + spellUnitPt(d.duration.type, n);
+			} else if (d.type === "timed") txt = "Tempo determinado";
+			if (d.concentration) txt += (txt ? " " : "") + "(concentração)";
+			return txt;
+		}).filter(Boolean).join(" ou ");
+	}
+
 	function renderModuleSpells($body, char) {
 		if (!char.spellSlotsUsed) char.spellSlotsUsed = {};
 		function slotsTotal(lv) {
@@ -4344,34 +4777,26 @@ function spellAbilityName(char) {
 			showRollResult("info", "Magia usada: " + (spell.name || "?") + slotTxt + " • CD " + calculateSpellDC(char) + " • Ataque +" + calculateSpellAttackBonus(char));
 			renderModuleSpells($body, char);
 		}
-		// Card de magia no estilo das armas: stepper de nível + "Usar magia"
+		// Card de magia: nome + nível + tag — clique abre o popup de detalhes
 		function spellCardHtml(spell, realIndex) {
-			var isLeveled = !!(spell.level && spell.level > 0);
-			var lvSel = pickCastLevel(spell);
-			var anySlots = castableLevels(spell).length > 0;
-			var av = isLeveled ? slotsAvail(lvSel) : 0;
-			var lvlLine = isLeveled ? ("Nv. " + spell.level) : "Truque";
-			if (spell.school) lvlLine += " • " + spell.school;
+			var lvlLine = (spell.level && spell.level > 0) ? ("Nv. " + spell.level) : "Truque";
 			if (spell.source) lvlLine += " [" + spell.source + "]";
 			var h = '<div class="characters__attack-item2 characters__spell-card' + (spell.prepared ? " is-prepared" : "") + '" data-spell-idx="' + realIndex + '">';
 			h += '<div class="characters__attack-l1"><span class="characters__attack-name"><a class="characters__spell-name ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a></span>';
 			if (spell.prepared) h += '<span class="characters__spell-prepared">✓ Preparada</span>';
-			h += '<button type="button" class="characters__btn characters__btn--danger characters__btn--sm" data-remove-spell="' + realIndex + '" title="Remover magia">×</button>';
 			h += '</div>';
-			h += '<div class="characters__attack-l2"><span class="characters__attack-props">' + esc(lvlLine) + '</span></div>';
-			h += '<div class="characters__spell-cast">';
-			if (isLeveled) {
-				h += '<span class="characters__spell-slotpick">';
-				h += '<button type="button" class="characters__hp-mini characters__hp-mini--minus" data-cast-step="-1" data-spell-idx="' + realIndex + '" title="Conjurar em nível menor"' + (anySlots ? "" : " disabled") + '>−</button>';
-				h += '<span class="characters__spell-slotpick-label' + (av > 0 ? "" : " is-empty") + '">Nv. ' + lvSel + '<small>' + (av > 0 ? av + " espaço" + (av > 1 ? "s" : "") : "sem espaços") + '</small></span>';
-				h += '<button type="button" class="characters__hp-mini characters__hp-mini--plus" data-cast-step="1" data-spell-idx="' + realIndex + '" title="Conjurar em nível maior"' + (anySlots ? "" : " disabled") + '>+</button>';
-				h += '</span>';
-			}
-			h += '<button type="button" class="characters__btn characters__btn--primary characters__btn--sm characters__spell-castbtn" data-use-spell="' + realIndex + '"' + ((isLeveled && !anySlots) ? ' disabled title="Sem espaços de magia disponíveis"' : "") + '>Usar magia</button>';
-			h += '</div></div>';
+			h += '<div class="characters__attack-l2"><span class="characters__attack-props">' + esc(lvlLine) + '</span>';
+			h += '<span class="characters__attack-dmg2" title="Clique para ver os detalhes">detalhes ▸</span></div>';
+			h += '</div>';
 			return h;
 		}
-		var html = '<div class="characters__subtitle">Conjuração</div>';
+		// Adicionar magia: menu igual ao de armas (oficial ou personalizada)
+		var html = '<div class="characters__attacks-head">';
+		html += '<div class="characters__subtitle" style="margin:0">Magias</div>';
+		html += '<button class="characters__btn characters__btn--sm characters__btn--primary" id="btn-add-spell-popup">+ Adicionar</button>';
+		html += '</div>';
+
+		html += '<div class="characters__subtitle">Conjuração</div>';
 		html += '<div class="characters__sheet-items">';
 		html += '<div class="characters__sheet-item"><b>Atributo de conjuração:</b> ' + spellAbilityName(char) + '</div>';
 		html += '<div class="characters__sheet-item"><b>CD de Magia:</b> ' + ovSpan(char, "spellDC", calculateSpellDC(char), "plain") + '</div>';
@@ -4411,14 +4836,7 @@ function spellAbilityName(char) {
 			html += '</div>';
 		}
 
-		html += '<div class="characters__subtitle">Adicionar Magia</div>';
-		html += '<div class="characters__form-row">';
-		html += '<input type="text" class="characters__form-input" id="spell-search" placeholder="Buscar magia...">';
-		html += '<select class="characters__form-select" id="spell-level-filter"><option value="-1">Todos os níveis</option>';
-		for (var s2 = 0; s2 <= 9; s2++) html += '<option value="' + s2 + '">' + (s2 === 0 ? "Truques" : "Nível " + s2) + '</option>';
-		html += '</select></div>';
-		html += '<div id="spell-search-results" class="characters__search-results mt-2"></div>';
-		html += '<a class="ptm-link ptm-open-list" href="spells.html">Abrir lista completa de magias</a>';
+		html += '<a class="ptm-link ptm-open-list" href="spells.html" style="display:block;margin-top:6px">Abrir lista completa de magias</a>';
 
 		$body.html(html);
 
@@ -4434,7 +4852,8 @@ function spellAbilityName(char) {
 			renderModuleSpells($body, char);
 		});
 		// −/+ do nível de conjuração: só entre níveis com espaços disponíveis
-		$body.on("click.spellmod", "[data-cast-step]", function() {
+		$body.on("click.spellmod", "[data-cast-step]", function(e) {
+			e.stopPropagation();
 			var idx = parseInt($(this).data("spell-idx"), 10);
 			var sp = (char.spells || [])[idx];
 			if (!sp) return;
@@ -4450,8 +4869,24 @@ function spellAbilityName(char) {
 			renderModuleSpells($body, char);
 		});
 		// Usar magia: gasta 1 espaço do nível escolhido
-		$body.on("click.spellmod", "[data-use-spell]", function() {
+		$body.on("click.spellmod", "[data-use-spell]", function(e) {
+			e.stopPropagation();
 			useSpell(parseInt($(this).data("use-spell"), 10));
+		});
+		// Remover magia (do card)
+		$body.on("click.spellmod", "[data-remove-spell]", function(e) {
+			e.stopPropagation();
+			var index = parseInt($(this).data("remove-spell"), 10);
+			if (char.spells && char.spells[index]) { char.spells.splice(index, 1); renderModuleSpells($body, char); }
+		});
+		// Card de magia: clique abre popup de detalhes (Usar magia / nível / apagar);
+		// o clique no NOME abre a página oficial da magia.
+		$body.on("click.spellmod", ".characters__spell-card", function(e) {
+			if (holdSuppress) return;
+			if ($(e.target).closest("a, button, .characters__ov").length) return;
+			var idx = parseInt($(this).data("spell-idx"), 10);
+			var sp = (char.spells || [])[idx];
+			if (sp) openSpellDetailPopup($body, char, sp, idx);
 		});
 		// Segurar na magia alterna a tag verde "Preparada"
 		var holdTimer = null, holdSuppress = false;
@@ -4477,6 +4912,119 @@ function spellAbilityName(char) {
 		$body.on("click.spellhold", ".characters__spell-card a.ptm-link", function(e) {
 			if (holdSuppress) { e.preventDefault(); e.stopPropagation(); return false; }
 		});
+		// Menu "+ Adicionar" (padrão armas: oficial ou personalizada)
+		$body.on("click.spellmod", "#btn-add-spell-popup", function() {
+			$("#spelladd-overlay").remove();
+			var hM = '<div class="characters__detail-overlay" id="spelladd-overlay"><div class="characters__detail">';
+			hM += '<div class="characters__detail-title">Adicionar Magia</div>';
+			hM += '<div class="characters__detail-actions" style="flex-direction:column;gap:8px">';
+			hM += '<button class="characters__btn characters__btn--primary" id="sa-official">Magia Oficial (lista)</button>';
+			hM += '<button class="characters__btn characters__btn--secondary" id="sa-custom">Criar Magia Personalizada</button>';
+			hM += '<button class="characters__btn characters__btn--secondary" id="sa-close">Fechar</button>';
+			hM += '</div></div></div>';
+			$(document.body).append(hM);
+			var $m = $("#spelladd-overlay");
+			$m.on("click", function(e) { if (e.target === this) $m.remove(); });
+			$m.find("#sa-close").on("click", function() { $m.remove(); });
+			$m.find("#sa-official").on("click", function() {
+				$m.remove();
+				openOfficialSpellPicker(char, function() { renderModuleSpells($body, char); });
+			});
+			$m.find("#sa-custom").on("click", function() {
+				$m.remove();
+				openCustomSpellCreator(char, function() { renderModuleSpells($body, char); });
+			});
+		});
+		// ==== Popup: escolher magia oficial (lista com busca + filtro de nível) ====
+		function openOfficialSpellPicker(char, onDone) {
+			$("#spicker-overlay").remove();
+			var prof = charSpellProfile(char);
+			var profLabels = uniqueList(charClasses(char).map(function(c) { return classLabelPt(classEnName(c.name)); }));
+			var scopeLabels = uniqueList(profLabels.concat(raceMatchNamesFor(char)));
+			var scopeTxt = scopeLabels.join(", ") || "este personagem";
+			// O filtro só entra ligado se houver classe/raça para filtrar (senão a
+			// lista ficaria vazia) e se o índice de acesso foi carregado.
+			var hasFilterData = !!spellAccessIndex && scopeLabels.length > 0;
+			var hP = '<div class="characters__detail-overlay" id="spicker-overlay"><div class="characters__detail">';
+			hP += '<div class="characters__detail-title">Magia Oficial</div>';
+			hP += '<div class="characters__detail-body">';
+			if (hasFilterData) {
+				hP += '<label class="characters__form-check" title="Mostra apenas as magias que a classe, subclasse, raça, talento ou antecedente do personagem permite"><input type="checkbox" id="sp-only-mine" checked> <span>Somente magias disponíveis para <b>' + esc(scopeTxt) + '</b></span></label>';
+			} else {
+				hP += '<div class="characters__spell-filterinfo">' + (spellAccessIndex
+					? 'Personagem sem classe/raça definida — mostrando todas as magias.'
+					: 'Filtro de classe/raça indisponível (dados não carregados) — mostrando todas as magias.') + '</div>';
+			}
+			hP += '<input type="text" class="characters__form-input" id="sp-search" placeholder="Buscar magia...">';
+			hP += '<select class="characters__form-select" id="sp-level" style="margin-top:6px"><option value="-1">Todos os níveis</option>';
+			for (var s3 = 0; s3 <= 9; s3++) hP += '<option value="' + s3 + '">' + (s3 === 0 ? "Truques" : "Nível " + s3) + '</option>';
+			hP += '</select>';
+			hP += '<div class="characters__spell-filterinfo" id="sp-info"></div>';
+			hP += '<div id="sp-results" style="max-height:300px;overflow:auto;margin-top:8px"></div>';
+			hP += '</div><div class="characters__detail-actions"><button class="characters__btn characters__btn--secondary" id="sp-close">Fechar</button></div>';
+			hP += '</div></div>';
+			$(document.body).append(hP);
+			var $ov = $("#spicker-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#sp-close").on("click", function() { $ov.remove(); });
+			var $res = $ov.find("#sp-results");
+			var $info = $ov.find("#sp-info");
+			function onlyMine() { return hasFilterData && $ov.find("#sp-only-mine").is(":checked"); }
+			function list() {
+				var q = $ov.find("#sp-search").val().toLowerCase().trim();
+				var lvl = parseInt($ov.find("#sp-level").val(), 10);
+				var mine = onlyMine();
+				var pool = spellsData.filter(function(sp) {
+					if (lvl !== -1 && sp.level !== lvl) return false;
+					if (q.length >= 2 && sp.name.toLowerCase().indexOf(q) < 0) return false;
+					return true;
+				});
+				// Cada magia recebe o veredito de acesso (classe/subclasse/raça/talento/...)
+				var tagged = pool.map(function(sp) {
+					var av = spellAvailableForChar(char, sp, prof);
+					return {sp: sp, ok: av.ok, why: av.why, info: av.info};
+				});
+				var shown = mine ? tagged.filter(function(t) { return t.ok; }) : tagged;
+				shown.sort(function(a, b) {
+					return (a.sp.level - b.sp.level) || String(a.sp.name).localeCompare(String(b.sp.name)) || String(a.sp.source || "").localeCompare(String(b.sp.source || ""));
+				});
+				var total = shown.length;
+				var limit = q.length >= 2 ? 60 : 30;
+				$info.html(mine
+					? (total ? total + (total === 1 ? " magia disponível" : " magias disponíveis") + " para " + esc(scopeTxt) : "Nenhuma magia disponível")
+					: (total + (total === 1 ? " magia" : " magias") + " (todas as fontes; as indisponíveis estão marcadas)"));
+				$res.empty();
+				if (!total) {
+					$res.html('<div class="characters__search-item">Nenhuma magia encontrada' + (mine ? ' — desmarque "Somente magias disponíveis" para ver a lista completa' : "") + '</div>');
+					return;
+				}
+				shown.slice(0, limit).forEach(function(t) {
+					var sp = t.sp;
+					var access;
+					if (t.why && t.why.length) access = t.why.join(" • ");
+					else if (t.info) access = (t.ok ? "outras fontes: " : "restrita a ") + accessSummary(t.info);
+					else access = "sem restrição de classe/raça";
+					var $it = $('<div class="characters__search-item">');
+					$it.html('<b>' + esc(sp.name) + '</b> (' + (sp.level === 0 ? "Truque" : "Nv. " + sp.level) + ') [' + esc(sp.source || "—") + ']' +
+						'<div class="characters__spell-access' + (t.ok ? "" : " is-locked") + '">' + (t.ok ? "✓ " : "✕ não disponível — ") + esc(access) + '</div>');
+					$it.on("click", function() {
+						if (!char.spells) char.spells = [];
+						char.spells.push({name: sp.name, level: sp.level, school: sp.school, source: sp.source});
+						char.updated = Date.now();
+						CharactersStore.save(char);
+						$ov.remove();
+						if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: sp.name + " adicionada."});
+						onDone && onDone();
+					});
+					$res.append($it);
+				});
+			}
+			$ov.find("#sp-search").on("input", list);
+			$ov.find("#sp-level").on("change", list);
+			$ov.find("#sp-only-mine").on("change", list);
+			list();
+		}
+		// Escolha rápida (legacy) ainda funciona, mas o fluxo principal é o menu acima
 		var $searchInput = $body.find("#spell-search");
 		var $levelFilter = $body.find("#spell-level-filter");
 		var $results = $body.find("#spell-search-results");
@@ -4506,33 +5054,174 @@ function spellAbilityName(char) {
 			var index = parseInt($(this).data("remove-spell"), 10);
 			if (char.spells && char.spells[index]) { char.spells.splice(index, 1); renderModuleSpells($body, char); }
 		});
+		// ==== Popup: criar magia personalizada ====
+		function openCustomSpellCreator(char, onDone) {
+			$("#spcustom-overlay").remove();
+			var hC = '<div class="characters__detail-overlay" id="spcustom-overlay"><div class="characters__detail">';
+			hC += '<div class="characters__detail-title">Nova Magia Personalizada</div>';
+			hC += '<div class="characters__detail-body">';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Nome *</label>';
+			hC += '<input type="text" class="characters__form-input" id="sc-name" placeholder="ex: Bolha Arcana"></div>';
+			hC += '<div class="characters__form-row">';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Nível</label><select class="characters__form-select" id="sc-level">';
+			for (var s4 = 0; s4 <= 9; s4++) hC += '<option value="' + s4 + '">' + (s4 === 0 ? "Truque" : "Nível " + s4) + '</option>';
+			hC += '</select></div>';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Escola</label><select class="characters__form-select" id="sc-school">';
+			[["V", "Evocação"], ["C", "Conjuração"], ["I", "Ilusão"], ["N", "Necromancia"], ["T", "Transmutação"], ["A", "Abjuração"], ["D", "Adivinhação"], ["P", "Encantamento"]].forEach(function(sc) {
+				hC += '<option value="' + sc[0] + '">' + sc[1] + '</option>';
+			});
+			hC += '</select></div></div>';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Descrição / efeito</label>';
+			hC += '<textarea class="characters__form-input" id="sc-desc" rows="5" placeholder="Descreva o efeito da magia..."></textarea></div>';
+			hC += '</div><div class="characters__detail-actions">';
+			hC += '<button class="characters__btn characters__btn--primary" id="sc-save">Salvar</button>';
+			hC += '<button class="characters__btn characters__btn--secondary" id="sc-cancel">Cancelar</button>';
+			hC += '</div></div></div>';
+			$(document.body).append(hC);
+			var $ov = $("#spcustom-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#sc-cancel").on("click", function() { $ov.remove(); });
+			$ov.find("#sc-save").on("click", function() {
+				var name = $ov.find("#sc-name").val().trim();
+				if (!name) { alert("Informe o nome da magia!"); return; }
+				if (!char.spells) char.spells = [];
+				char.spells.push({
+					name: name,
+					level: parseInt($ov.find("#sc-level").val(), 10) || 0,
+					school: $ov.find("#sc-school").val(),
+					source: "Personalizado",
+					custom: true,
+					desc: $ov.find("#sc-desc").val().trim()
+				});
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				$ov.remove();
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Magia salva: " + name});
+				onDone && onDone();
+			});
+		}
+		// ==== Popup de detalhe da magia: Usar magia + nível do espaço + apagar ====
+		function openSpellDetailPopup($body, char, spell, realIndex) {
+			$("#spelldetail-overlay").remove();
+			var isLeveled = !!(spell.level && spell.level > 0);
+			var lvSel = pickCastLevel(spell);
+			var av = isLeveled ? slotsAvail(lvSel) : 0;
+			var anySlots = castableLevels(spell).length > 0;
+			var SCHOOL_PT = {V:"Evocação",C:"Conjuração",I:"Ilusão",N:"Necromancia",T:"Transmutação",A:"Abjuração",D:"Adivinhação",P:"Encantamento"};
+			var school = SCHOOL_PT[spell.school] || spell.school || "—";
+			var full = null;
+			spellsData.forEach(function(sp) { if (sp && sp.name === spell.name && (!spell.source || !sp.source || sp.source === spell.source)) full = full || sp; });
+			function row(label, value) {
+				if (value == null || value === "") return "";
+				return '<div class="characters__detail-row"><b>' + esc(label) + ':</b> <div>' + value + '</div></div>';
+			}
+			var titleHtml = (spell.custom || !spell.source)
+				? esc(spell.name || spell)
+				: '<a class="ptm-link" href="' + esc(ptmSpellHref(spell)) + '">' + esc(spell.name || spell) + '</a>';
+			var h = '<div class="characters__detail-overlay" id="spelldetail-overlay"><div class="characters__detail">';
+			h += '<div class="characters__detail-title">' + titleHtml + (spell.prepared ? ' <span class="characters__spell-prepared">✓ Preparada</span>' : '') + '</div>';
+			h += '<div class="characters__detail-body">';
+			h += '<div class="characters__detail-row"><b>Nível:</b> ' + (isLeveled ? spell.level : "Truque") + ' &nbsp; <b>Escola:</b> ' + esc(school) + '</div>';
+			if (spell.source) h += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(spell.source) + '</div>';
+			// Campos completos da magia oficial (tempo, alcance, componentes, duração)
+			if (full) {
+				var tTxt = spellTimeToPt(full.time);
+				var rTxt = spellRangeToPt(full.range);
+				var cTxt = spellComponentsToPt(full.components, full.meta);
+				var dTxt = spellDurationToPt(full.duration);
+				h += row("Tempo de Conjuração", esc(tTxt));
+				h += row("Alcance", esc(rTxt));
+				h += row("Componentes", esc(cTxt));
+				h += row("Duração", esc(dTxt));
+			}
+			// Quem pode usar a magia (classe / subclasse / raça / outras fontes)
+			var access = spellAccessInfo(spell);
+			if (access) {
+				if (access.classes.length) h += row("Classes", esc(access.classes.join(", ")));
+				if (access.subclasses.length) h += row("Subclasses", esc(access.subclasses.join(", ")));
+				if (access.races.length) h += row("Raças", esc(access.races.join(", ")));
+				if (access.others.length) h += row("Talentos/Antecedentes", esc(access.others.slice(0, 14).join(", ")));
+			}
+			// Descrição: entries completos (listas, tabelas e tags) quando houver
+			var descHtml = full ? entriesToHtml(full.entries, 0) : tagToHtml(spell.desc || "");
+			if (descHtml) h += '<div class="characters__detail-row characters__detail-row--block"><b>Descrição:</b><div class="characters__spell-desc">' + descHtml + '</div></div>';
+			if (full && full.entriesHigherLevel) {
+				var upHtml = entriesToHtml(full.entriesHigherLevel, 0);
+				if (upHtml) h += '<div class="characters__detail-row characters__detail-row--block"><b>Em Níveis Superiores:</b><div class="characters__spell-desc">' + upHtml + '</div></div>';
+			}
+			h += '</div><div class="characters__detail-actions" style="flex-direction:column;gap:6px">';
+			if (isLeveled) {
+				h += '<div class="characters__spell-cast"><span class="characters__spell-slotpick">';
+				h += '<button type="button" class="characters__hp-mini characters__hp-mini--minus" id="sd-step-minus"' + (anySlots ? "" : " disabled") + ' title="Conjurar em nível menor">−</button>';
+				h += '<span class="characters__spell-slotpick-label' + (av > 0 ? "" : " is-empty") + '" id="sd-slot-label">Nv. ' + lvSel + '<small>' + (av > 0 ? av + " espaço" + (av > 1 ? "s" : "") : "sem espaços") + '</small></span>';
+				h += '<button type="button" class="characters__hp-mini characters__hp-mini--plus" id="sd-step-plus"' + (anySlots ? "" : " disabled") + ' title="Conjurar em nível maior">+</button>';
+				h += '<button type="button" class="characters__btn characters__btn--primary characters__spell-castbtn" id="sd-use"' + (anySlots ? "" : ' disabled title="Sem espaços de magia disponíveis"') + '>Usar magia</button>';
+				h += '</span></div>';
+			} else {
+				h += '<button type="button" class="characters__btn characters__btn--primary" id="sd-use">Usar magia (truque)</button>';
+			}
+			h += '<button type="button" class="characters__btn characters__btn--danger" id="sd-remove">🗑 Apagar magia</button>';
+			h += '<button type="button" class="characters__btn characters__btn--secondary" id="sd-close">Fechar</button>';
+			h += '</div></div></div>';
+			$(document.body).append(h);
+			var $ov = $("#spelldetail-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#sd-close").on("click", function() { $ov.remove(); });
+			$ov.find("#sd-step-minus").on("click", function() {
+				if (!stepCastLevel(spell, -1)) { sheetToast("info", "Já está no nível base da magia (sem espaços abaixo)."); return; }
+				char.updated = Date.now(); CharactersStore.save(char); $ov.remove();
+				openSpellDetailPopup($body, char, spell, realIndex);
+			});
+			$ov.find("#sd-step-plus").on("click", function() {
+				if (!stepCastLevel(spell, 1)) { sheetToast("info", "Nenhum nível maior com espaços disponíveis."); return; }
+				char.updated = Date.now(); CharactersStore.save(char); $ov.remove();
+				openSpellDetailPopup($body, char, spell, realIndex);
+			});
+			$ov.find("#sd-use").on("click", function() { useSpell(realIndex); $ov.remove(); });
+			$ov.find("#sd-remove").on("click", function() {
+				if (!confirm('Apagar "' + (spell.name || "magia") + '"?')) return;
+				if (char.spells && char.spells[realIndex]) char.spells.splice(realIndex, 1);
+				char.updated = Date.now(); CharactersStore.save(char);
+				$ov.remove();
+				renderModuleSpells($body, char);
+			});
+		}
 	}
 function renderModuleFeatures($body, char) {
 	var html = '<div class="characters__summary-box characters__info-card"><div class="characters__summary-title">Informações (Raça • Antecedente • Classe)</div><div class="characters__info-scroll">' + buildInfoContent(char) + '</div></div>';
-	html += '<div class="characters__subtitle">Talentos (Feats)</div>';
-		html += '<div class="characters__features-list">';
-		if (char.feats && char.feats.length) {
-			char.feats.forEach(function(feat, index) {
-				html += '<div class="characters__feature-item">';
-				html += '<div><div class="characters__feature-name"><a class="ptm-link" href="' + esc(ptmFeatHref(feat)) + '">' + esc(feat.name || feat) + '</a></div>';
-				if (feat.source) html += '<div class="characters__feature-source">' + esc(feat.source) + '</div>';
-				html += '</div><button class="characters__btn characters__btn--danger characters__btn--sm" data-remove-feat="' + index + '">×</button>';
-				html += '</div>';
-			});
-		} else html += '<div class="characters__feature-item">Nenhum talento</div>';
-		html += '</div>';
-
-		html += '<div class="characters__subtitle">Adicionar Talento</div>';
-		html += '<div class="characters__form-row"><input type="text" class="characters__form-input" id="feat-search" placeholder="Buscar talento..."></div>';
-		html += '<div id="feat-search-results" class="characters__search-results mt-2"></div>';
-		html += '<a class="ptm-link ptm-open-list" href="feats.html">Abrir lista completa de talentos</a>';
+	// Talentos no mesmo padrão das armas: + Adicionar (oficial/personalizado),
+	// cards que abrem popup de detalhe; segurar alterna "Preparado";
+	// nome oficial navega para a página do talento.
+	html += '<div class="characters__attacks-head">';
+	html += '<div class="characters__subtitle" style="margin:0">Talentos (Feats)</div>';
+	html += '<button class="characters__btn characters__btn--sm characters__btn--primary" id="btn-add-feat-popup">+ Adicionar</button>';
+	html += '</div>';
+	html += '<div class="characters__attacks-list">';
+	if (char.feats && char.feats.length) {
+		char.feats.forEach(function(feat, index) {
+			var isCustomFeat = !!feat.custom;
+			var featNameHtml = (isCustomFeat || !feat.source)
+				? esc(feat.name || feat)
+				: '<a class="ptm-link" href="' + esc(ptmFeatHref(feat)) + '">' + esc(feat.name || feat) + '</a>';
+			var srcTagF = feat.source ? ' <span class="characters__attack-src">[' + esc(feat.source) + ']</span>' : '';
+			html += '<div class="characters__attack-item2 characters__feat-card' + (feat.prepared ? " is-prepared" : "") + '" data-feat-idx="' + index + '">';
+			html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + featNameHtml + srcTagF;
+			if (feat.prepared) html += ' <span class="characters__spell-prepared">✓ Preparado</span>';
+			html += '</span></div>';
+			html += '<div class="characters__attack-l2"><span class="characters__attack-props">' + (isCustomFeat ? "Personalizado" : "Talento") + '</span>';
+			html += '<span class="characters__attack-dmg2" title="Clique para ver os detalhes">detalhes ▸</span></div>';
+			html += '</div>';
+		});
+	} else html += '<div class="characters__sheet-item">Nenhum talento — use o botão + Adicionar.</div>';
+	html += '</div>';
+	html += '<a class="ptm-link ptm-open-list" href="feats.html">Abrir lista completa de talentos</a>';
 
 		html += '<div class="characters__subtitle">Habilidades Especiais</div>';
 		html += '<div class="characters__features-list">';
 		if (char.specialAbilities && char.specialAbilities.length) {
 			char.specialAbilities.forEach(function(ability) {
 				html += '<div class="characters__feature-item"><div><div class="characters__feature-name">' + esc(ability.name || ability) + '</div>';
-				if (ability.description) html += '<div class="characters__feature-desc">' + esc(ability.description) + '</div>';
+				if (ability.description) html += '<div class="characters__feature-desc">' + tagToHtml(ability.description) + '</div>';
 				html += '</div></div>';
 			});
 		} else html += '<div class="characters__feature-item">Nenhuma habilidade especial</div>';
@@ -4550,29 +5239,164 @@ function renderModuleFeatures($body, char) {
 		html += '</div>';
 
 		$body.html(html);
-		var $featSearch = $body.find("#feat-search");
-		var $featResults = $body.find("#feat-search-results");
-		$featSearch.on("input", function() {
-			var query = $(this).val().toLowerCase().trim();
-			if (query.length < 2) { $featResults.empty(); return; }
-			var filtered = featsData.filter(function(feat) { return feat.name.toLowerCase().indexOf(query) >= 0; }).slice(0, 10);
-			$featResults.empty();
-			if (!filtered.length) { $featResults.html('<div class="characters__search-item">Nenhum talento encontrado</div>'); return; }
-			filtered.forEach(function(feat) {
-				var $item = $('<div class="characters__search-item">');
-				$item.html('<b>' + esc(feat.name) + '</b>' + (feat.source ? ' (' + esc(feat.source) + ')' : ""));
-				$item.on("click", function() {
-					if (!char.feats) char.feats = [];
-					char.feats.push({name: feat.name, source: feat.source});
-					renderModuleFeatures($body, char);
+		// Menu "+ Adicionar" (padrão armas: oficial ou personalizado)
+		$body.on("click.feats", "#btn-add-feat-popup", function() {
+			$("#featadd-overlay").remove();
+			var hM = '<div class="characters__detail-overlay" id="featadd-overlay"><div class="characters__detail">';
+			hM += '<div class="characters__detail-title">Adicionar Talento</div>';
+			hM += '<div class="characters__detail-actions" style="flex-direction:column;gap:8px">';
+			hM += '<button class="characters__btn characters__btn--primary" id="fa-official">Talento Oficial (lista)</button>';
+			hM += '<button class="characters__btn characters__btn--secondary" id="fa-custom">Criar Talento Personalizado</button>';
+			hM += '<button class="characters__btn characters__btn--secondary" id="fa-close">Fechar</button>';
+			hM += '</div></div></div>';
+			$(document.body).append(hM);
+			var $m = $("#featadd-overlay");
+			$m.on("click", function(e) { if (e.target === this) $m.remove(); });
+			$m.find("#fa-close").on("click", function() { $m.remove(); });
+			$m.find("#fa-official").on("click", function() { $m.remove(); openFeatPicker(); });
+			$m.find("#fa-custom").on("click", function() { $m.remove(); openCustomFeatCreator(null); });
+		});
+		// Clique no card abre o popup de detalhe (clique no NOME oficial navega)
+		$body.on("click.feats", ".characters__feat-card", function(e) {
+			if (featHoldSuppress) return;
+			if ($(e.target).closest("a, .characters__ov").length) return;
+			var idx = parseInt($(this).attr("data-feat-idx"), 10);
+			var ft = (char.feats || [])[idx];
+			if (ft) openFeatDetailPopup(ft, idx);
+		});
+		// Segurar no card alterna a tag verde "Preparado"
+		var featHoldTimer = null, featHoldSuppress = false;
+		$body.on("mousedown.feathold touchstart.feathold", ".characters__feat-card", function(e) {
+			if ($(e.target).closest("button, a, .characters__ov").length) return;
+			var idx = parseInt($(this).attr("data-feat-idx"), 10);
+			clearTimeout(featHoldTimer);
+			featHoldTimer = setTimeout(function() {
+				featHoldSuppress = true;
+				setTimeout(function() { featHoldSuppress = false; }, 500);
+				var ft = (char.feats || [])[idx];
+				if (!ft) return;
+				ft.prepared = !ft.prepared;
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				var msgP = (ft.prepared ? '"' + (ft.name || "Talento") + '" marcado como Preparado.' : '"' + (ft.name || "Talento") + '" não preparado.');
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: ft.prepared ? "success" : "info", content: msgP});
+				else sheetToast(ft.prepared ? "success" : "info", msgP);
+				renderModuleFeatures($body, char);
+			}, 550);
+		});
+		$body.on("mousemove.feathold touchmove.feathold touchend.feathold touchcancel.feathold mouseup.feathold", function() { clearTimeout(featHoldTimer); });
+		// ==== Popups de talento ====
+		// Popup: escolher talento oficial da lista
+		function openFeatPicker() {
+			$("#featpicker-overlay").remove();
+			var hP = '<div class="characters__detail-overlay" id="featpicker-overlay"><div class="characters__detail">';
+			hP += '<div class="characters__detail-title">Talento Oficial</div>';
+			hP += '<div class="characters__detail-body">';
+			hP += '<input type="text" class="characters__form-input" id="fp-search" placeholder="Buscar talento...">';
+			hP += '<div id="fp-results" style="max-height:300px;overflow:auto;margin-top:8px"></div>';
+			hP += '</div><div class="characters__detail-actions"><button class="characters__btn characters__btn--secondary" id="fp-close">Fechar</button></div>';
+			hP += '</div></div>';
+			$(document.body).append(hP);
+			var $ov = $("#featpicker-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#fp-close").on("click", function() { $ov.remove(); });
+			var $res = $ov.find("#fp-results");
+			function list(query) {
+				var q = (query || "").toLowerCase().trim();
+				var base;
+				if (q.length >= 2) base = featsData.filter(function(f) { return f.name.toLowerCase().indexOf(q) >= 0; });
+				else base = featsData.slice(0, 25);
+				$res.empty();
+				if (!base.length) { $res.html('<div class="characters__search-item">Nenhum talento encontrado</div>'); return; }
+				base.slice(0, 40).forEach(function(f) {
+					var $it = $('<div class="characters__search-item">');
+					$it.html('<b>' + esc(f.name) + '</b>' + (f.source ? ' [' + esc(f.source) + ']' : ''));
+					$it.on("click", function() {
+						if (!char.feats) char.feats = [];
+						char.feats.push({name: f.name, source: f.source});
+						char.updated = Date.now();
+						CharactersStore.save(char);
+						$ov.remove();
+						if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: f.name + " adicionado."});
+						renderModuleFeatures($body, char);
+					});
+					$res.append($it);
 				});
-				$featResults.append($item);
+			}
+			$ov.find("#fp-search").on("input", function() { list($(this).val()); });
+			list("");
+		}
+		// Popup: criar/editar talento personalizado
+		function openCustomFeatCreator(existing) {
+			$("#featcustom-overlay").remove();
+			var f = existing || {};
+			var hC = '<div class="characters__detail-overlay" id="featcustom-overlay"><div class="characters__detail">';
+			hC += '<div class="characters__detail-title">' + (existing ? "Editar Talento" : "Novo Talento Personalizado") + '</div>';
+			hC += '<div class="characters__detail-body">';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Nome *</label>';
+			hC += '<input type="text" class="characters__form-input" id="fc-name" value="' + esc(f.name || "") + '" placeholder="ex: Iniciado Arcano"></div>';
+			hC += '<div class="characters__form-group"><label class="characters__form-label">Descrição / benefícios</label>';
+			hC += '<textarea class="characters__form-input" id="fc-desc" rows="5" placeholder="Descreva o que o talento concede...">' + esc(f.desc || "") + '</textarea></div>';
+			hC += '</div><div class="characters__detail-actions">';
+			hC += '<button class="characters__btn characters__btn--primary" id="fc-save">Salvar</button>';
+			hC += '<button class="characters__btn characters__btn--secondary" id="fc-close">Cancelar</button>';
+			hC += '</div></div></div>';
+			$(document.body).append(hC);
+			var $ov = $("#featcustom-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#fc-close").on("click", function() { $ov.remove(); });
+			$ov.find("#fc-save").on("click", function() {
+				var name = $ov.find("#fc-name").val().trim();
+				if (!name) { alert("Informe o nome do talento!"); return; }
+				var data = {name: name, desc: $ov.find("#fc-desc").val().trim(), custom: true, source: existing ? (f.source || "Personalizado") : "Personalizado"};
+				if (existing) {
+					var ix = (char.feats || []).indexOf(existing);
+					if (ix >= 0) char.feats[ix] = Object.assign({}, existing, data);
+				} else {
+					if (!char.feats) char.feats = [];
+					char.feats.push(data);
+				}
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				$ov.remove();
+				if (global.JqueryUtil && global.JqueryUtil.doToast) global.JqueryUtil.doToast({type: "success", content: "Talento salvo: " + name});
+				renderModuleFeatures($body, char);
 			});
-		});
-		$body.on("click", "[data-remove-feat]", function() {
-			var index = parseInt($(this).data("remove-feat"), 10);
-			if (char.feats && char.feats[index]) { char.feats.splice(index, 1); renderModuleFeatures($body, char); }
-		});
+		}
+		// Popup: detalhe do talento (descrição oficial + editar/apagar)
+		function openFeatDetailPopup(feat, fIdx) {
+			$("#featdetail-overlay").remove();
+			var full = null;
+			featsData.forEach(function(f) { if (f && f.name === feat.name && (!feat.source || !f.source || f.source === feat.source)) full = full || f; });
+			var descHtml = full ? entriesToHtml(full.entries, 0) : tagToHtml(feat.desc || "Sem descrição.");
+			var isCustom = !!feat.custom || (!full && !!feat.desc);
+			var titleHtml = (isCustom || !feat.source)
+				? esc(feat.name || feat)
+				: '<a class="ptm-link" href="' + esc(ptmFeatHref(feat)) + '">' + esc(feat.name || feat) + '</a>';
+			var hD = '<div class="characters__detail-overlay" id="featdetail-overlay"><div class="characters__detail">';
+			hD += '<div class="characters__detail-title">' + titleHtml + (feat.prepared ? ' <span class="characters__spell-prepared">✓ Preparado</span>' : '') + '</div>';
+			hD += '<div class="characters__detail-body">';
+			if (feat.source) hD += '<div class="characters__detail-row"><b>Fonte:</b> ' + esc(feat.source) + '</div>';
+			hD += '<div class="characters__detail-row" style="flex-direction:column;align-items:stretch"><b>Descrição:</b><div class="characters__spell-desc">' + descHtml + '</div></div>';
+			hD += '</div><div class="characters__detail-actions" style="flex-direction:column;gap:6px">';
+			if (isCustom) hD += '<button class="characters__btn characters__btn--secondary" id="ft-edit">✎ Editar talento</button>';
+			hD += '<button class="characters__btn characters__btn--danger" id="ft-remove">🗑 Apagar talento</button>';
+			hD += '<button class="characters__btn characters__btn--secondary" id="ft-close">Fechar</button>';
+			hD += '</div></div></div>';
+			$(document.body).append(hD);
+			var $ov = $("#featdetail-overlay");
+			$ov.on("click", function(e) { if (e.target === this) $ov.remove(); });
+			$ov.find("#ft-close").on("click", function() { $ov.remove(); });
+			$ov.find("#ft-edit").on("click", function() { $ov.remove(); openCustomFeatCreator(feat); });
+			$ov.find("#ft-remove").on("click", function() {
+				if (!confirm('Apagar "' + (feat.name || "talento") + '"?')) return;
+				if (char.feats && char.feats[fIdx]) char.feats.splice(fIdx, 1);
+				char.updated = Date.now();
+				CharactersStore.save(char);
+				$ov.remove();
+				renderModuleFeatures($body, char);
+			});
+		}
 	}
 function appendCoinsModule($body, char) {
 		var html = '<div class="characters__subtitle">Moedas</div>';
@@ -4597,6 +5421,13 @@ function appendCoinsModule($body, char) {
 		if ($body.length && currentChar && SHEET_MODULE_DEFS) SHEET_MODULE_DEFS.attacks.render($body, currentChar);
 	}
 
+	// Nome da armadura como link quando é oficial (fonte conhecida e não personalizada)
+	function armorNameHtml(a) {
+		var nm = esc((a && a.name) || a);
+		var src = (a && a.source) || "";
+		if (src && !(a && a.custom)) return '<a class="ptm-link" href="' + esc(ptmItemHref({name: (a && a.name) || a, source: src})) + '">' + nm + '</a>';
+		return nm;
+	}
 	function renderModuleEquipment($body, char) {
 		// Armas agora são gerenciadas apenas no módulo "Ataques & Ações".
 		// Armaduras no mesmo padrão das armas: 2 linhas (nome+CA / tipo+status), clique abre popup.
@@ -4613,7 +5444,7 @@ function appendCoinsModule($body, char) {
 				var srcTag2 = armor.source ? ' <span class="characters__attack-src">[' + esc(armor.source) + ']</span>' : '';
 				html += '<div class="characters__attack-item2 characters__armor-card" data-armor-idx="' + index + '">';
 				html += '<div class="characters__armor-lines">';
-				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + esc(armor.name || armor) + srcTag2 + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</span>';
+				html += '<div class="characters__attack-l1"><span class="characters__attack-name">' + armorNameHtml(armor) + srcTag2 + (isEq ? ' <span class="characters__equipped-badge">Equipada</span>' : '') + '</span>';
 				html += '<span class="characters__attack-hit2">CA ' + esc(String(armor.ac != null ? armor.ac : "—")) + '</span></div>';
 				html += '<div class="characters__attack-l2">';
 				html += '<span class="characters__attack-props">' + esc(armorTypeShort(armor) + (armor.attunement ? ", sintonização" : "")) + '</span>';
@@ -4645,7 +5476,7 @@ function appendCoinsModule($body, char) {
 			renderModuleEquipment($body, char);
 		});
 		$body.on("click.armors", "[data-armor-idx]", function(e) {
-			if ($(e.target).closest("[data-remove-armor]").length) return;
+			if ($(e.target).closest("[data-remove-armor], a").length) return;
 			var idx = parseInt($(this).attr("data-armor-idx"), 10);
 			var armor = (char.armors || [])[idx];
 			if (!armor) return;
@@ -6033,33 +6864,191 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		return fixed.join("; ");
 	}
 
-	// {@tipo texto|opções} → HTML legível (dados já traduzidos no projeto)
-	function tagToHtml(s) {
-		var out = String(s == null ? "" : s);
-		out = out.replace(/\{\{[^}]*\}\}/g, "");
-		out = out.replace(/\{@([a-zA-Z]+)\s+([^}]*)\}/g, function(all, type, rest) {
-			var parts = rest.split("|");
-			var t0 = parts[0] || "";
-			switch (type) {
-				case "i": case "italic": case "note": case "noteIndent": return "<i>" + esc(t0) + "</i>";
-				case "b": case "bold": return "<b>" + esc(t0) + "</b>";
-				case "dc": return "<b>CD " + esc(t0) + "</b>";
-				case "dice": case "damage": case "d20": return "<b>" + esc(t0) + "</b>";
-				default: return esc(t0);
-			}
+	// Tags 5etools: o conteúdo vem traduzido no JSON, mas a marcação interna
+	// ({@condition ...}, {@damage ...}) deve virar HTML legível e seguro.
+	var CONDITION_LINK_ALIASES = {
+		blind:"Blinded", blindness:"Blinded", charm:"Charmed", charmed:"Charmed",
+		deaf:"Deafened", deafness:"Deafened", exhaustion:"Exhaustion", fright:"Frightened",
+		frightened:"Frightened", grapple:"Grappled", grappled:"Grappled", incapacitated:"Incapacitated",
+		invisible:"Invisible", paralysis:"Paralyzed", paralyzed:"Paralyzed", petrified:"Petrified",
+		poison:"Poisoned", poisoned:"Poisoned", prone:"Prone", restrained:"Restrained",
+		stunned:"Stunned", surprised:"Surprised", concentration:"Concentration", unconscious:"Unconscious"
+	};
+	var CONDITION_LINK_LABELS = {
+		Blinded:"Cego", Charmed:"Encantado", Deafened:"Surdo", Exhaustion:"Exaustão",
+		Frightened:"Assustado", Grappled:"Agarrada", Incapacitated:"Incapacitado", Invisible:"Invisível",
+		Paralyzed:"Paralisado", Petrified:"Petrificado", Poisoned:"Envenenado", Prone:"Caída",
+		Restrained:"Contida", Stunned:"Atordoado", Surprised:"Surpreso", Concentration:"Concentração", Unconscious:"Inconsciente"
+	};
+	var CONDITION_LINK_FORMS = {
+		blind:"cego", blindness:"cegueira", deaf:"surdo", deafness:"surdez", charm:"encanto",
+		charmed:"encantado", fright:"medo", frightened:"assustado", grapple:"agarrar", grappled:"agarrada",
+		paralysis:"paralisia", paralyzed:"paralisado", poison:"veneno", poisoned:"envenenado", surprised:"surpreso",
+		concentration:"concentração", concentrating:"concentração"
+	};
+	var TAG_SKILL_PT = {
+		Acrobatics:"Acrobacia", "Animal Handling":"Adestrar Animais", Arcana:"Arcanismo", Athletics:"Atletismo",
+		Deception:"Enganação", History:"História", Insight:"Intuição", Intimidation:"Intimidação", Investigation:"Investigação",
+		Medicine:"Medicina", Nature:"Natureza", Perception:"Percepção", Performance:"Atuação", Persuasion:"Persuasão",
+		Religion:"Religião", "Sleight of Hand":"Prestidigitação", Stealth:"Furtividade", Survival:"Sobrevivência"
+	};
+	var TAG_SOURCE_CODES = {phb:1,xphb:1,dmg:1,xdmg:1,scag:1,tce:1,xge:1,scc:1,mot:1,aag:1,mtf:1,vgm:1,erlw:1,ftd:1,mpmm:1,ggr:1,dsotdq:1,idrotf:1,toa:1,gos:1,oow:1,oota:1,wdmm:1,vrgr:1,egw:1,cm:1};
+	function tagParts(rest) {
+		var raw = String(rest == null ? "" : rest), out = [""], depth = 0;
+		for (var i = 0; i < raw.length; i++) {
+			var ch = raw.charAt(i);
+			if (ch === "{") depth++;
+			else if (ch === "}" && depth > 0) depth--;
+			else if (ch === "|" && depth === 0) { out.push(""); continue; }
+			out[out.length - 1] += ch;
+		}
+		return out.map(function(p) { return p.trim(); });
+	}
+	function tagSourceLooksValid(value) {
+		var s = String(value == null ? "" : value).trim();
+		if (!s) return false;
+		return /^[A-Z][A-Za-z0-9-]*$/.test(s) || !!TAG_SOURCE_CODES[s.toLowerCase()];
+	}
+	function conditionCanonicalName(name) {
+		var raw = String(name == null ? "" : name).trim();
+		var alias = CONDITION_LINK_ALIASES[raw.toLowerCase()];
+		if (alias) return alias;
+		var found = "";
+		Object.keys(CONDITION_LINK_LABELS).some(function(k) {
+			if (k.toLowerCase() === raw.toLowerCase()) { found = k; return true; }
+			return false;
 		});
+		return found || raw;
+	}
+	function conditionTagInfo(parts, type) {
+		parts = parts || [];
+		var canonical = conditionCanonicalName(parts[0]);
+		var defaultSource = type === "disease" ? "DMG" : "PHB";
+		var source = parts[1] && (parts.length >= 3 || tagSourceLooksValid(parts[1])) ? parts[1] : defaultSource;
+		var display = parts.length >= 3 ? parts[2] : (parts[1] && !tagSourceLooksValid(parts[1]) ? parts[1] : "");
+		if (display) display = CONDITION_LINK_FORMS[display.toLowerCase()] || display;
+		else display = CONDITION_LINK_LABELS[canonical] || canonical;
+		return {name: canonical, source: source, display: display};
+	}
+	var TAG_DISPLAY_THIRD = {action:1, background:1, boon:1, charoption:1, class:1, condition:1, creature:1, cult:1, deck:1, disease:1, facility:1, feat:1, hazard:1, item:1, itemMastery:1, itemProperty:1, language:1, object:1, optfeature:1, psionic:1, race:1, recipe:1, reward:1, vehicle:1, vehupgrade:1};
+	var TAG_DISPLAY_FOURTH = {card:1, deity:1};
+	var TAG_DISPLAY_FIFTH = {subclass:1};
+	var TAG_DISPLAY_SIXTH = {classFeature:1, subclassFeature:1};
+	function tagSignedNumber(value) {
+		var n = Number(value);
+		return !isNaN(n) ? (n >= 0 ? "+" : "") + String(n) : String(value || "");
+	}
+	function tagDisplayText(type, parts) {
+		parts = parts || [];
+		if (type === "condition" || type === "status" || type === "disease") return conditionTagInfo(parts, type).display;
+		var first = parts[0] || "";
+		if (type === "damage" || type === "dice" || type === "autodice") {
+			return (parts[1] || first).replace(/;+/g, "/").replace(/#\$prompt_number[^\$]*\$#/g, "(n)");
+		}
+		if (type === "d20" || type === "hit" || type === "initiative") return parts[1] || tagSignedNumber(first);
+		if (type === "scaledamage" || type === "scaledice") return parts[4] || parts[2] || first;
+		if (type === "quickref") return parts[4] || first;
+		if (type === "chance") return parts[1] || first + "%";
+		if (type === "recharge") {
+			var n = parseInt(parts[0] || "6", 10);
+			return "Recarga " + n + (n < 6 ? "–6" : "");
+		}
+		if (type === "unit") {
+			var amount = Number(parts[0]);
+			return !isNaN(amount) ? (amount !== 1 ? (parts[2] || parts[1] + "s") : parts[1]) : (parts[1] || first);
+		}
+		if (type === "dc") return parts[1] || first;
+		if (type === "dcYourSpellSave") return parts[1] || first || "CD de conjuração";
+		if (type === "skill") return parts[2] || TAG_SKILL_PT[first] || first;
+		if (type === "h") return "Acerto:";
+		if (type === "m") return "Erro:";
+		if (type === "ability" || type === "savingThrow" || type === "skillCheck" || type === "hitYourSpellAttack") return parts[1] || first;
+		if (TAG_DISPLAY_SIXTH[type]) return parts[5] || first;
+		if (TAG_DISPLAY_FIFTH[type]) return parts[4] || first;
+		if (TAG_DISPLAY_FOURTH[type]) return parts[3] || first;
+		if (TAG_DISPLAY_THIRD[type]) return parts[2] || first;
+		return first;
+	}
+	function renderTagText(value, htmlMode) {
+		return renderTaggedText(value == null ? "" : value, htmlMode);
+	}
+	function renderTagValue(type, parts, htmlMode) {
+		if (type === "condition" || type === "status" || type === "disease") {
+			var info = conditionTagInfo(parts, type);
+			if (!htmlMode) return info.display;
+			return '<a class="characters__condition-link" data-condition-name="' + esc(info.name) + '" href="' + esc(ptmNameSrcHref("conditionsdiseases.html", {name: info.name, source: info.source})) + '" title="Abrir detalhes da condição">' + renderTagText(info.display, true) + "</a>";
+		}
+		var text = tagDisplayText(type, parts);
+		if (type === "5etools" || type === "5etoolsImg") {
+			var page = parts[1] || "";
+			if (!htmlMode) return text;
+			if (page && /^[\w-]+\.html(?:[?#][^#]*)?$/.test(page)) {
+				var href5 = page + (parts[2] ? "#" + parts[2] : "");
+				return '<a class="ptm-link" href="' + esc(href5) + '">' + renderTagText(text, true) + "</a>";
+			}
+			return renderTagText(text, true);
+		}
+		if (type === "link") {
+			if (!htmlMode) return text;
+			var url = parts[1] || text;
+			if (!/^(https?:|mailto:)/i.test(url)) url = "http://" + url;
+			return '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + renderTagText(text, true) + "</a>";
+		}
+		if (!htmlMode) return renderTagText(text, false);
+		switch (type) {
+			case "i": case "italic": case "note": case "noteIndent": return "<i>" + renderTagText(text, true) + "</i>";
+			case "b": case "bold": return "<b>" + renderTagText(text, true) + "</b>";
+			case "h": case "m": return "<i>" + esc(text) + "</i> ";
+			case "dc": return "<b>CD " + esc(text) + "</b>";
+			case "recharge": return "<i>(" + esc(text) + ")</i>";
+			case "tip": return '<span title="' + esc(parts[1] || "") + '">' + renderTagText(text, true) + "</span>";
+			case "help": return '<span title="' + esc(parts[1] || "") + '">' + renderTagText(text, true) + "</span>";
+			case "highlight": return '<mark>' + renderTagText(text, true) + "</mark>";
+			case "color": return '<span style="color:' + esc(parts[1] || "inherit") + '">' + renderTagText(text, true) + "</span>";
+			case "dice": case "damage": case "autodice": case "d20": case "hit": case "initiative": case "scaledamage": case "scaledice": case "chance": return "<b>" + esc(text) + "</b>";
+			case "skill": case "savingThrow": case "skillCheck": case "hitYourSpellAttack": return "<i>" + renderTagText(text, true) + "</i>";
+			default: return renderTagText(text, true);
+		}
+	}
+	function renderTaggedText(s, htmlMode) {
+		var raw = String(s == null ? "" : s).replace(/\{\{[^}]*\}\}/g, "");
+		var out = "", last = 0;
+		function renderNested(value) { return renderTaggedText(value, htmlMode); }
+		// Tags podem conter outras tags (ex.: {@note See {@adventure ...}}).
+		// Percorre o texto e localiza o fechamento correspondente por profundidade.
+		for (var i = 0; i < raw.length; i++) {
+			if (raw.charAt(i) !== "{" || raw.charAt(i + 1) !== "@") continue;
+			var typeStart = i + 2, j = typeStart, depth = 1;
+			while (j < raw.length && depth > 0) {
+				if (raw.charAt(j) === "{") depth++;
+				else if (raw.charAt(j) === "}") depth--;
+				j++;
+			}
+			if (depth !== 0) continue;
+			var inner = raw.slice(typeStart, j - 1).trim(), match = /^([a-zA-Z0-9][a-zA-Z0-9]*)(?:\s+([\s\S]*))?$/.exec(inner);
+			if (!match) continue;
+			out += htmlMode ? esc(raw.slice(last, i)) : raw.slice(last, i);
+			var type = match[1], rest = match[2] || "";
+			if (type === "condition" || type === "status" || type === "disease") {
+				out += renderTagValue(type, tagParts(rest), htmlMode);
+			} else {
+				//(tags de estilo/efeito preservam o conteúdo interno; demais tags
+				// usam o texto de exibição calculado pelo formatador).
+				var display = tagDisplayText(type, tagParts(rest));
+				if (htmlMode) {
+					if (type === "i" || type === "italic" || type === "note" || type === "noteIndent" || type === "b" || type === "bold" || type === "h" || type === "m" || type === "tip" || type === "help" || type === "highlight" || type === "color") out += renderTagValue(type, tagParts(rest), true).replace(esc(display), renderNested(display));
+					else out += renderTagValue(type, tagParts(rest), true);
+				} else out += renderTagValue(type, tagParts(rest), false);
+			}
+			last = j;
+			i = j - 1;
+		}
+		out += htmlMode ? esc(raw.slice(last)) : raw.slice(last);
 		return out;
 	}
-	function stripTags(s) {
-		var out = String(s == null ? "" : s);
-		out = out.replace(/\{\{[^}]*\}\}/g, "");
-		out = out.replace(/\{@([a-zA-Z]+)\s+([^}]*)\}/g, function(all, type, rest) {
-			var parts = rest.split("|");
-			if (type === "dc") return "CD " + (parts[0] || "");
-			return parts[0] || "";
-		});
-		return out.trim();
-	}
+	function tagToHtml(s) { return renderTaggedText(s, true); }
+	function tagToPlain(s) { return renderTaggedText(s, false); }
+	function stripTags(s) { return tagToPlain(s).trim(); }
 	// Renderiza o array de entries (strings e objetos: entries/list/item/table/quote/refs)
 	function entriesToHtml(entries, depth) {
 		depth = depth || 0;
@@ -6071,14 +7060,14 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 		if (typeof entries !== "object") return "";
 		var o = entries;
 		if (o.type === "entries" || o.type === "entry") {
-			var head = o.name ? "<b>" + esc(tagToHtml(o.name)) + ":</b> " : "";
+			var head = o.name ? "<b>" + tagToHtml(o.name) + ":</b> " : "";
 			return (head + entriesToHtml(o.entries, depth + 1)).trim();
 		}
 		if (o.type === "list") {
 			var items = (o.items || []).map(function(it) {
 				if (typeof it === "string") return "<li>" + tagToHtml(it) + "</li>";
 				if (it && typeof it === "object" && (it.type === "item" || it.entry || it.name)) {
-					var nm = it.name ? "<b>" + esc(tagToHtml(it.name)) + "</b> " : "";
+					var nm = it.name ? "<b>" + tagToHtml(it.name) + "</b> " : "";
 					var bd = it.entry ? tagToHtml(it.entry) : entriesToHtml(it.entries, depth + 1);
 					return "<li>" + nm + bd + "</li>";
 				}
@@ -6088,19 +7077,19 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			return items ? '<ul style="margin:4px 0 4px 18px;padding:0">' + items + "</ul>" : "";
 		}
 		if (o.type === "item") {
-			var nm2 = o.name ? "<b>" + esc(tagToHtml(o.name)) + "</b> " : "";
+			var nm2 = o.name ? "<b>" + tagToHtml(o.name) + "</b> " : "";
 			return nm2 + (o.entry ? tagToHtml(o.entry) : entriesToHtml(o.entries, depth + 1));
 		}
 		if (o.type === "table") {
 			var lines = [];
-			if (o.caption) lines.push("<b>" + esc(stripTags(o.caption)) + "</b>");
+			if (o.caption) lines.push("<b>" + tagToHtml(o.caption) + "</b>");
 			(o.rows || []).forEach(function(row) {
 				if (Array.isArray(row)) {
-					var cells = row.map(function(c) { return typeof c === "string" ? stripTags(c) : entriesToPlain(c, depth + 1); });
-					lines.push(esc(cells.filter(Boolean).join(" — ")));
+					var cells = row.map(function(c) { return typeof c === "string" ? tagToHtml(c) : entriesToHtml(c, depth + 1); });
+					lines.push(cells.filter(Boolean).join(" — "));
 				} else if (row && typeof row === "object") {
-					var txt = entriesToPlain(row, depth + 1);
-					if (txt) lines.push(esc(txt));
+					var txt = entriesToHtml(row, depth + 1);
+					if (txt) lines.push(txt);
 				}
 			});
 			return lines.filter(Boolean).join("<br>");
@@ -6114,7 +7103,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			if (ref) return "<b>" + esc(ref.name) + ":</b> " + entriesToHtml(ref.entries, depth + 1);
 			return esc(stripTags(refKey || ""));
 		}
-		var nm3 = o.name ? "<b>" + esc(tagToHtml(o.name)) + "</b> " : "";
+		var nm3 = o.name ? "<b>" + tagToHtml(o.name) + "</b> " : "";
 		var body3 = o.entry ? tagToHtml(o.entry) : (o.text ? tagToHtml(o.text) : entriesToHtml(o.entries, depth + 1));
 		if (!nm3 && !body3) return "";
 		return nm3 + body3;
@@ -6267,7 +7256,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			var t = typeof e === "string" ? tagToHtml(e) : "";
 			return t ? '<div class="characters__feature-desc">' + t + '</div>' : "";
 		}
-		var name = e.name ? esc(tagToHtml(e.name)) : "";
+		var name = e.name ? tagToHtml(e.name) : "";
 		var body = entriesToHtml(e.entries || e.entry || e.text, 1);
 		if (!name && !body) return "";
 		if (!body) return '<div class="characters__feature-name">' + name + '</div>';
@@ -6564,7 +7553,7 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 			console.log("[Characters] jQuery version:", $.fn.jquery);
 			
 	initBackNavigation();
-			Promise.all([loadRaces(), loadBackgrounds(), loadClasses(), loadSubclasses(), loadSpells(), loadItems(), loadFeats()])
+			Promise.all([loadRaces(), loadBackgrounds(), loadClasses(), loadSubclasses(), loadSpells(), loadItems(), loadFeats(), loadSpellAccessIndex()])
 				.then(function(results) {
 					console.log("[Characters] Dados carregados com sucesso");
 					racesData = results[0];
@@ -6574,6 +7563,9 @@ var SPELL_ABIL_MAP = {"Wizard":"int","Sorcerer":"cha","Cleric":"wis","Druid":"wi
 					spellsData = results[4];
 					itemsData = results[5];
 					featsData = results[6];
+					spellAccessIndex = results[7];
+					var accessNames = spellAccessIndex.byName ? Object.keys(spellAccessIndex.byName).length : 0;
+					console.log("[Characters] Índice de acesso das magias (classe/raça):", spellAccessIndex ? accessNames + " magias" : "indisponível");
 					console.log("[Characters] Estatísticas:", {
 						races: racesData.length,
 						backgrounds: backgroundsData.length,

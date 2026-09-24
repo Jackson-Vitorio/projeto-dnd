@@ -37,6 +37,42 @@
 	--dnd-container: 1200px;
 }
 
+/* --------------------------------------------------------------------------
+   MODO ESCURO (ve-night-mode)
+   main.css redefine apenas os tokens --rgb-*; como app.css carrega por
+   último e declara os --dnd-* como claros, a barra de navegação do topo
+   (page__nav-inner) e o fundo do body ficavam BRANCOS no tema escuro.
+   Aqui os --dnd-* ganham os valores noturnos equivalentes.
+   -------------------------------------------------------------------------- */
+:root.ve-night-mode {
+	--dnd-bg: #222;
+	--dnd-bg-alt: #383838;
+	--dnd-bg-soft: #1e1e1e;
+	--dnd-border: #555;
+	--dnd-border-soft: #444;
+	--dnd-border-input: #555;
+	--dnd-text: #bbb;
+	--dnd-text-muted: #999;
+	--dnd-text-faint: #888;
+	--dnd-text-label: #999;
+	--dnd-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+	--dnd-shadow-hover: 0 4px 12px rgba(0, 0, 0, .65);
+}
+
+/* Controles nativos: sem color-scheme o checkbox/radio continuam com fundo
+   branco no tema escuro. Isto é só aparência, não altera estrutura nem JS. */
+html.ve-night-mode input[type=checkbox],
+html.ve-night-mode input[type=radio],
+html.ve-night-mode select,
+html.ve-night-mode input[type=number],
+html.ve-night-mode input[type=text],
+html.ve-night-mode input[type=search],
+html.ve-night-mode textarea,
+html.ve-night-mode button {
+	color-scheme: dark;
+	accent-color: #d29a38;
+}
+
 /* ==========================================================================
    Base / Documento
    ========================================================================== */
@@ -121,6 +157,44 @@ a:focus {
 	background: var(--dnd-primary-soft);
 	color: var(--dnd-primary);
 	border-radius: var(--dnd-radius-sm);
+}
+
+/* Navegação no tema escuro: pílulas escuras legíveis (evita barra clara) */
+html.ve-night-mode .page__nav-inner {
+	background: #222;
+}
+
+html.ve-night-mode .page__nav-inner > li > a {
+	color: #ccc;
+}
+
+html.ve-night-mode .page__nav-inner > li > a:focus,
+html.ve-night-mode .page__nav-inner > li > a:hover {
+	background: #383838;
+	color: #fff;
+}
+
+html.ve-night-mode .page__nav-inner > li.active > a,
+html.ve-night-mode .page__nav-inner > li.active > a:focus,
+html.ve-night-mode .page__nav-inner > li.active > a:hover {
+	background: var(--dnd-primary);
+	color: #fff;
+}
+
+html.ve-night-mode .page__title {
+	color: #d0d0d0;
+}
+
+html.ve-night-mode .page__subtitle {
+	color: #999;
+}
+
+/* Único conflito real do main.css (arquivo gerado): o realce de busca declara
+   background com !important no tema claro e venceria o tema escuro. Repetimos
+   aqui, com seletor mais específico e !important, para o escuro valer. */
+html.ve-night-mode .ve-highlight {
+	background-color: #cc0 !important;
+	color: #222;
 }
 
 /* Botão "Menu" (mobile) */

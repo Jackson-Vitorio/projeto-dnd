@@ -18,17 +18,11 @@ class StyleSwitcher {
 	static _WIDE_ID = "style-switch__wide";
 
 	static _STYLES = [
-		this._STYLE_DAY,
 		this._STYLE_NIGHT,
-		this._STYLE_NIGHT_ALT,
-		this._STYLE_NIGHT_CLEAN,
 	];
 
 	static _STYLE_TO_DISPLAY_NAME = {
-		[this._STYLE_DAY]: "Day Mode",
-		[this._STYLE_NIGHT]: "Night Mode",
-		[this._STYLE_NIGHT_ALT]: "Night Mode (Classic)",
-		[this._STYLE_NIGHT_CLEAN]: "Night Mode (Clean)",
+		[this._STYLE_NIGHT]: "Modo Escuro",
 	};
 
 	static _STYLE_CLASSES = [
@@ -41,6 +35,7 @@ class StyleSwitcher {
 	/* -------------------------------------------- */
 
 	static getSelStyle () {
+		// Tema único: o seletor (se algum dia voltar à UI) oferece apenas "Modo Escuro".
 		const selStyle = e_({
 			tag: "select",
 			clazz: "form-control input-xs",
@@ -73,15 +68,12 @@ class StyleSwitcher {
 	/* -------------------------------------------- */
 
 	constructor () {
-		this.currentStylesheet = StyleSwitcher._STYLE_DAY;
-
-		// If the user has never manually specified a style, always load the default from their OS
-		const isManualMode = StyleSwitcher.storage.getItem(StyleSwitcher._STORAGE_IS_MANUAL_MODE);
-		if (isManualMode) {
-			this._setActiveDayNight(StyleSwitcher.storage.getItem(StyleSwitcher._STORAGE_DAY_NIGHT) || StyleSwitcher._getDefaultStyleDayNight());
-		} else {
-			this._setActiveDayNight(StyleSwitcher._getDefaultStyleDayNight());
-		}
+		/* TEMA ÚNICO (escuro): este app não possui modo claro. O estilo é
+		   sempre forçado para "night", ignorando preferência do sistema
+		   (prefers-color-scheme) e qualquer escolha antiga salva no navegador.
+		   As demais constantes de estilo permanecem apenas por compatibilidade. */
+		this.currentStylesheet = StyleSwitcher._STYLE_NIGHT;
+		this._setActiveDayNight(StyleSwitcher._STYLE_NIGHT);
 
 		this._setActiveWide(StyleSwitcher.storage.getItem(StyleSwitcher._STORAGE_WIDE) === "true");
 	}
@@ -99,6 +91,10 @@ class StyleSwitcher {
 
 	// region Night Mode
 	_setActiveDayNight (style) {
+		/* Sanitização: só existe modo escuro. Qualquer chamada (inclusive de
+		   código legado/botões) resulta no tema escuro aplicado. */
+		style = StyleSwitcher._STYLE_NIGHT;
+
 		this.currentStylesheet = style;
 
 		this.constructor._STYLE_CLASSES
@@ -140,21 +136,13 @@ class StyleSwitcher {
 	}
 
 	static _getDefaultStyleDayNight () {
-		if (window.matchMedia("(prefers-color-scheme: dark)").matches) return StyleSwitcher._STYLE_NIGHT;
-		return StyleSwitcher._STYLE_DAY;
+		// Tema único: o padrão é sempre o modo escuro.
+		return StyleSwitcher._STYLE_NIGHT;
 	}
 
-	cycleDayNightMode (direction) {
-		const ixCur = this.constructor._STYLES.indexOf(this.currentStylesheet);
-		const ixNxt = ixCur === 0
-			? this.constructor._STYLES.length - 1
-			: ixCur === this.constructor._STYLES.length - 1
-				? 0
-				: ixCur + direction;
-		const newStyle = this.constructor._STYLES[ixNxt];
-
-		this._setActiveDayNight(newStyle);
-		StyleSwitcher.storage.setItem(StyleSwitcher._STORAGE_IS_MANUAL_MODE, true);
+	cycleDayNightMode () {
+		// Sem alternância de tema: reforça o modo escuro (não há como sair dele).
+		this._setActiveDayNight(StyleSwitcher._STYLE_NIGHT);
 	}
 	// endregion
 

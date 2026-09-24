@@ -6,16 +6,7 @@ const settingsGroupStyleSwitcher = new ConfigSettingsGroup({
 	groupId: "styleSwitcher",
 	name: "Appearance",
 	configSettings: [
-		new (
-			class extends ConfigSettingExternal {
-				_configId = "theme";
-				_name = "Theme";
-				_help = "The color theme to be applied.";
-				_isRowLabel = true;
-
-				_getEleExternal () { return StyleSwitcher.getSelStyle(); }
-			}
-		)(),
+		/* Sem opção de tema: o app é somente modo escuro (ver js/styleswitch.js). */
 		new ConfigSettingEnum({
 			configId: "style",
 			name: `<span>Style <span class="ve-small">(see also: <a href="https://2014.5e.tools" rel="noopener noreferrer" target="_blank">2014.5e.tools</a>)</span></span>`,
